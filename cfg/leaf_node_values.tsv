@@ -1,0 +1,12 @@
+property	value_type	value_quote	default
+title	string	STR	
+subtitle	string	STR	
+description	string	STR	
+tracks	array	ARR	
+alignment	stack, overlay	["stack", "overlay"]	stack
+views	array	ARR	
+arrangement	parallel, serial, vertical, horizontal	["parallel", "serial", "vertical", "horizontal"]	
+zoomLimits	array	ARR	
+yOffset	number	NUM	
+xOffset	number	NUM	
+static	true, false		
