@@ -1,0 +1,408 @@
+{
+  "title": "SARS-CoV-2",
+  "subtitle": "Data Source: WashU Virus Genome Browser, NCBI, GISAID",
+  "assembly": [
+    [
+      "NC_045512.2",
+      29903
+    ]
+  ],
+  "layout": "linear",
+  "spacing": 50,
+  "views": [
+    {
+      "alignment": "overlay",
+      "title": "NC_045512.2 Genes",
+      "data": {
+        "type": "csv",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/NC_045512.2-Genes.csv",
+        "chromosomeField": "Accession",
+        "genomicFields": [
+          "Start",
+          "Stop"
+        ]
+      },
+      "tracks": [
+        {
+          "mark": "rect",
+          "color": {
+            "value": "#0072B2"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        },
+        {
+          "mark": "rule",
+          "color": {
+            "value": "white"
+          },
+          "opacity": {
+            "value": 0.6
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "style": {
+            "linePattern": {
+              "type": "triangleRight",
+              "size": 10
+            }
+          }
+        },
+        {
+          "mark": "text",
+          "text": {
+            "field": "Gene symbol",
+            "type": "nominal"
+          },
+          "color": {
+            "value": "black"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 3
+          },
+          "visibility": [
+            {
+              "target": "mark",
+              "measure": "width",
+              "threshold": "|xe-x|",
+              "operation": "LTET",
+              "transitionPadding": 30
+            }
+          ]
+        },
+        {
+          "mark": "brush",
+          "x": {
+            "linkingId": "detail"
+          }
+        }
+      ],
+      "x": {
+        "field": "Start",
+        "type": "genomic"
+      },
+      "xe": {
+        "field": "Stop",
+        "type": "genomic"
+      },
+      "width": 800,
+      "height": 30,
+      "static": true,
+      "layout": "linear",
+      "xDomain": {
+        "interval": [
+          1,
+          29903
+        ]
+      }
+    },
+    {
+      "centerRadius": 0,
+      "xDomain": {
+        "interval": [
+          1,
+          29903
+        ]
+      },
+      "linkingId": "detail",
+      "alignment": "stack",
+      "tracks": [
+        {
+          "alignment": "overlay",
+          "title": "S Protein Annotation",
+          "data": {
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/sars-cov-2_Sprot_annot_sorted.bed",
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ]
+          },
+          "tracks": [
+            {
+              "mark": "rect",
+              "color": {
+                "field": "Protein",
+                "type": "nominal",
+                "domain": [
+                  "receptor-binding domain (RBD)",
+                  "receptor-binding motif (RBM)",
+                  "S1/S2 cleavage site",
+                  "heptad repeat 1 (HR1)",
+                  "heptad repeat 2 (HR2)"
+                ]
+              },
+              "xe": {
+                "field": "Stop",
+                "type": "genomic"
+              }
+            },
+            {
+              "mark": "text",
+              "text": {
+                "field": "Protein",
+                "type": "nominal"
+              },
+              "color": {
+                "value": "#333"
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "style": {
+                "textAnchor": "end"
+              }
+            }
+          ],
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          },
+          "row": {
+            "field": "Protein",
+            "type": "nominal",
+            "domain": [
+              "receptor-binding domain (RBD)",
+              "receptor-binding motif (RBM)",
+              "S1/S2 cleavage site",
+              "heptad repeat 1 (HR1)",
+              "heptad repeat 2 (HR2)"
+            ]
+          },
+          "width": 392,
+          "height": 56
+        },
+        {
+          "alignment": "overlay",
+          "title": "NC_045512.2 Genes",
+          "data": {
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/NC_045512.2-Genes.csv",
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start",
+              "Stop"
+            ]
+          },
+          "tracks": [
+            {
+              "mark": "rect",
+              "color": {
+                "value": "#0072B2"
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 2
+              }
+            },
+            {
+              "mark": "rule",
+              "color": {
+                "value": "white"
+              },
+              "opacity": {
+                "value": 0.6
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "style": {
+                "linePattern": {
+                  "type": "triangleRight",
+                  "size": 10
+                }
+              }
+            },
+            {
+              "mark": "text",
+              "text": {
+                "field": "Gene symbol",
+                "type": "nominal"
+              },
+              "color": {
+                "value": "black"
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "visibility": [
+                {
+                  "target": "mark",
+                  "measure": "width",
+                  "threshold": "|xe-x|",
+                  "operation": "LTET",
+                  "transitionPadding": 30
+                }
+              ]
+            }
+          ],
+          "x": {
+            "field": "Start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "Stop",
+            "type": "genomic"
+          },
+          "width": 392,
+          "height": 21
+        },
+        {
+          "title": "NC_045512.2 Sequence",
+          "alignment": "overlay",
+          "data": {
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=NC_045512_2-multivec",
+            "type": "multivec",
+            "row": "base",
+            "column": "position",
+            "value": "count",
+            "categories": [
+              "A",
+              "T",
+              "G",
+              "C"
+            ],
+            "start": "start",
+            "end": "end"
+          },
+          "tracks": [
+            {
+              "mark": "bar",
+              "y": {
+                "field": "count",
+                "type": "quantitative",
+                "axis": "none"
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "count",
+                  "oneOf": [
+                    0
+                  ],
+                  "not": true
+                }
+              ],
+              "mark": "text",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "size": {
+                "value": 24
+              },
+              "color": {
+                "value": "white"
+              },
+              "visibility": [
+                {
+                  "operation": "less-than",
+                  "measure": "width",
+                  "threshold": "|xe-x|",
+                  "transitionPadding": 30,
+                  "target": "mark"
+                },
+                {
+                  "operation": "LT",
+                  "measure": "zoomLevel",
+                  "threshold": 40,
+                  "target": "track"
+                }
+              ]
+            }
+          ],
+          "x": {
+            "field": "position",
+            "type": "genomic"
+          },
+          "color": {
+            "field": "base",
+            "type": "nominal",
+            "domain": [
+              "A",
+              "T",
+              "G",
+              "C"
+            ],
+            "legend": true
+          },
+          "text": {
+            "field": "base",
+            "type": "nominal"
+          },
+          "style": {
+            "inlineLegend": true
+          },
+          "width": 392,
+          "height": 28
+        },
+        {
+          "title": "TRS-L-Dependent Recombination Events",
+          "data": {
+            "type": "csv",
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/COVID/TRS-L-dependent_recombinationEvents_sorted.bed",
+            "chromosomeField": "Accession",
+            "genomicFields": [
+              "Start1",
+              "Stop1",
+              "Start2",
+              "Stop2"
+            ],
+            "sampleLength": 100
+          },
+          "mark": "withinLink",
+          "x": {
+            "field": "Start1",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "Stop1",
+            "type": "genomic"
+          },
+          "x1": {
+            "field": "Start2",
+            "type": "genomic"
+          },
+          "x1e": {
+            "field": "Stop2",
+            "type": "genomic"
+          },
+          "stroke": {
+            "value": "#0072B2"
+          },
+          "color": {
+            "value": "#0072B2"
+          },
+          "opacity": {
+            "value": 0.1
+          },
+          "width": 392,
+          "height": 280
+        }
+      ]
+    }
+  ]
+}

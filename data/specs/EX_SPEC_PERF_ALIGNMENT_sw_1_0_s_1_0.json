@@ -1,0 +1,212 @@
+{
+  "zoomLimits": [
+    1,
+    396
+  ],
+  "xDomain": {
+    "interval": [
+      350,
+      396
+    ]
+  },
+  "assembly": "unknown",
+  "title": "Smoother Zoom",
+  "subtitle": "Rather than redrawing every element at every frame, we can scale existing elements",
+  "views": [
+    {
+      "tracks": [
+        {
+          "alignment": "overlay",
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.fasta.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "tracks": [
+            {
+              "mark": "rect"
+            },
+            {
+              "mark": "text",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "color": {
+                "value": "black"
+              },
+              "size": {
+                "value": 12
+              },
+              "visibility": [
+                {
+                  "measure": "zoomLevel",
+                  "target": "track",
+                  "threshold": 10,
+                  "operation": "LT",
+                  "transitionPadding": 100
+                }
+              ]
+            }
+          ],
+          "x": {
+            "field": "pos",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "row": {
+            "field": "name",
+            "type": "nominal",
+            "legend": false
+          },
+          "color": {
+            "field": "base",
+            "type": "nominal",
+            "range": [
+              "#d60000",
+              "#018700",
+              "#b500ff",
+              "#05acc6",
+              "#97ff00",
+              "#ffa52f",
+              "#ff8ec8",
+              "#79525e",
+              "#00fdcf",
+              "#afa5ff",
+              "#93ac83",
+              "#9a6900",
+              "#366962",
+              "#d3008c",
+              "#fdf490",
+              "#c86e66",
+              "#9ee2ff",
+              "#00c846",
+              "#a877ac",
+              "#b8ba01"
+            ],
+            "legend": false
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "text": {
+            "field": "base",
+            "type": "nominal"
+          },
+          "width": 800,
+          "height": 400,
+          "title": "New Approach: Stretching Tiles",
+          "experimental": {
+            "stretchGraphics": true
+          }
+        }
+      ]
+    },
+    {
+      "tracks": [
+        {
+          "alignment": "overlay",
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.fasta.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "tracks": [
+            {
+              "mark": "rect"
+            },
+            {
+              "mark": "text",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "color": {
+                "value": "black"
+              },
+              "size": {
+                "value": 12
+              },
+              "visibility": [
+                {
+                  "measure": "zoomLevel",
+                  "target": "track",
+                  "threshold": 10,
+                  "operation": "LT",
+                  "transitionPadding": 100
+                }
+              ]
+            }
+          ],
+          "x": {
+            "field": "pos",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "row": {
+            "field": "name",
+            "type": "nominal",
+            "legend": false
+          },
+          "color": {
+            "field": "base",
+            "type": "nominal",
+            "range": [
+              "#d60000",
+              "#018700",
+              "#b500ff",
+              "#05acc6",
+              "#97ff00",
+              "#ffa52f",
+              "#ff8ec8",
+              "#79525e",
+              "#00fdcf",
+              "#afa5ff",
+              "#93ac83",
+              "#9a6900",
+              "#366962",
+              "#d3008c",
+              "#fdf490",
+              "#c86e66",
+              "#9ee2ff",
+              "#00c846",
+              "#a877ac",
+              "#b8ba01"
+            ],
+            "legend": false
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "text": {
+            "field": "base",
+            "type": "nominal"
+          },
+          "width": 800,
+          "height": 400,
+          "title": "Original Approach"
+        }
+      ]
+    }
+  ]
+}

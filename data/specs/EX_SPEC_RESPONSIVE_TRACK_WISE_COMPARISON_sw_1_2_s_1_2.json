@@ -1,0 +1,1669 @@
+{
+  "spacing": 30,
+  "responsiveSpec": [
+    {
+      "selectivity": [
+        {
+          "measure": "height",
+          "operation": "LT",
+          "threshold": 1000,
+          "target": "container"
+        }
+      ],
+      "spec": {
+        "spacing": 0,
+        "views": [
+          {
+            "xDomain": {
+              "chromosome": "chr12",
+              "interval": [
+                10140000,
+                10210000
+              ]
+            },
+            "linkingId": "1",
+            "tracks": [
+              {
+                "alignment": "overlay",
+                "id": "1-gene",
+                "data": {
+                  "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                  "type": "beddb",
+                  "genomicFields": [
+                    {
+                      "index": 1,
+                      "name": "start"
+                    },
+                    {
+                      "index": 2,
+                      "name": "end"
+                    }
+                  ],
+                  "valueFields": [
+                    {
+                      "index": 5,
+                      "name": "strand",
+                      "type": "nominal"
+                    },
+                    {
+                      "index": 3,
+                      "name": "name",
+                      "type": "nominal"
+                    }
+                  ],
+                  "exonIntervalFields": [
+                    {
+                      "index": 12,
+                      "name": "start"
+                    },
+                    {
+                      "index": 13,
+                      "name": "end"
+                    }
+                  ]
+                },
+                "tracks": [
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "+"
+                        ]
+                      }
+                    ],
+                    "mark": "triangleRight",
+                    "x": {
+                      "field": "end",
+                      "type": "genomic",
+                      "axis": "top",
+                      "linkingId": "1"
+                    },
+                    "size": {
+                      "value": 15
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      }
+                    ],
+                    "mark": "text",
+                    "text": {
+                      "field": "name",
+                      "type": "nominal"
+                    },
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "stroke": {
+                      "value": "white"
+                    },
+                    "strokeWidth": {
+                      "value": 3
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "-"
+                        ]
+                      }
+                    ],
+                    "mark": "triangleLeft",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "size": {
+                      "value": 15
+                    },
+                    "style": {
+                      "align": "right"
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "exon"
+                        ]
+                      }
+                    ],
+                    "mark": "rect",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "size": {
+                      "value": 15
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "+"
+                        ]
+                      }
+                    ],
+                    "mark": "rule",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "strokeWidth": {
+                      "value": 3
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "style": {
+                      "linePattern": {
+                        "type": "triangleRight",
+                        "size": 5
+                      }
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "-"
+                        ]
+                      }
+                    ],
+                    "mark": "rule",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "strokeWidth": {
+                      "value": 3
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "style": {
+                      "linePattern": {
+                        "type": "triangleLeft",
+                        "size": 5
+                      }
+                    }
+                  }
+                ],
+                "row": {
+                  "field": "strand",
+                  "type": "nominal",
+                  "domain": [
+                    "+",
+                    "-"
+                  ]
+                },
+                "color": {
+                  "value": "#CC7DAA"
+                },
+                "visibility": [
+                  {
+                    "operation": "less-than",
+                    "measure": "width",
+                    "threshold": "|xe-x|",
+                    "transitionPadding": 10,
+                    "target": "mark"
+                  }
+                ],
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0
+                },
+                "opacity": {
+                  "value": 0.8
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr12",
+              "interval": [
+                10140000,
+                10210000
+              ]
+            },
+            "linkingId": "1",
+            "tracks": [
+              {
+                "id": "1-1",
+                "title": "Sample 1",
+                "data": {
+                  "url": "https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg",
+                  "type": "vector",
+                  "column": "position",
+                  "value": "peak",
+                  "binSize": 4
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "start",
+                  "type": "genomic",
+                  "axis": "none",
+                  "linkingId": "1"
+                },
+                "xe": {
+                  "field": "end",
+                  "type": "genomic"
+                },
+                "y": {
+                  "field": "peak",
+                  "type": "quantitative",
+                  "axis": "none",
+                  "flip": false
+                },
+                "color": {
+                  "value": "#CC7DAA"
+                },
+                "stroke": {
+                  "value": "white"
+                },
+                "strokeWidth": {
+                  "value": 0.2
+                },
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr8",
+              "interval": [
+                127734000,
+                127744000
+              ]
+            },
+            "linkingId": "2",
+            "tracks": [
+              {
+                "id": "2-1",
+                "title": "Sample 1",
+                "data": {
+                  "url": "https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg",
+                  "type": "vector",
+                  "column": "position",
+                  "value": "peak",
+                  "binSize": 4
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "start",
+                  "type": "genomic",
+                  "axis": "none",
+                  "linkingId": "2"
+                },
+                "xe": {
+                  "field": "end",
+                  "type": "genomic"
+                },
+                "y": {
+                  "field": "peak",
+                  "type": "quantitative",
+                  "axis": "none",
+                  "flip": false
+                },
+                "color": {
+                  "value": "#E6A01B"
+                },
+                "stroke": {
+                  "value": "white"
+                },
+                "strokeWidth": {
+                  "value": 0.2
+                },
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0.2
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr12",
+              "interval": [
+                10140000,
+                10210000
+              ]
+            },
+            "linkingId": "1",
+            "tracks": [
+              {
+                "id": "1-2",
+                "title": "Sample 2",
+                "data": {
+                  "url": "https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w",
+                  "type": "vector",
+                  "column": "position",
+                  "value": "peak",
+                  "binSize": 4
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "start",
+                  "type": "genomic",
+                  "axis": "none",
+                  "linkingId": "1"
+                },
+                "xe": {
+                  "field": "end",
+                  "type": "genomic"
+                },
+                "y": {
+                  "field": "peak",
+                  "type": "quantitative",
+                  "axis": "none",
+                  "flip": false
+                },
+                "color": {
+                  "value": "#CC7DAA"
+                },
+                "stroke": {
+                  "value": "white"
+                },
+                "strokeWidth": {
+                  "value": 0.2
+                },
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr8",
+              "interval": [
+                127734000,
+                127744000
+              ]
+            },
+            "linkingId": "2",
+            "tracks": [
+              {
+                "id": "2-2",
+                "title": "Sample 2",
+                "data": {
+                  "url": "https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w",
+                  "type": "vector",
+                  "column": "position",
+                  "value": "peak",
+                  "binSize": 4
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "start",
+                  "type": "genomic",
+                  "axis": "none",
+                  "linkingId": "2"
+                },
+                "xe": {
+                  "field": "end",
+                  "type": "genomic"
+                },
+                "y": {
+                  "field": "peak",
+                  "type": "quantitative",
+                  "axis": "none",
+                  "flip": false
+                },
+                "color": {
+                  "value": "#E6A01B"
+                },
+                "stroke": {
+                  "value": "white"
+                },
+                "strokeWidth": {
+                  "value": 0.2
+                },
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0.2
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr12",
+              "interval": [
+                10140000,
+                10210000
+              ]
+            },
+            "linkingId": "1",
+            "tracks": [
+              {
+                "id": "1-3",
+                "title": "Sample 3",
+                "data": {
+                  "url": "https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g",
+                  "type": "vector",
+                  "column": "position",
+                  "value": "peak",
+                  "binSize": 4
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "start",
+                  "type": "genomic",
+                  "axis": "none",
+                  "linkingId": "1"
+                },
+                "xe": {
+                  "field": "end",
+                  "type": "genomic"
+                },
+                "y": {
+                  "field": "peak",
+                  "type": "quantitative",
+                  "axis": "none",
+                  "flip": false
+                },
+                "color": {
+                  "value": "#CC7DAA"
+                },
+                "stroke": {
+                  "value": "white"
+                },
+                "strokeWidth": {
+                  "value": 0.2
+                },
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr8",
+              "interval": [
+                127734000,
+                127744000
+              ]
+            },
+            "linkingId": "2",
+            "tracks": [
+              {
+                "id": "2-3",
+                "title": "Sample 3",
+                "data": {
+                  "url": "https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g",
+                  "type": "vector",
+                  "column": "position",
+                  "value": "peak",
+                  "binSize": 4
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "start",
+                  "type": "genomic",
+                  "axis": "none",
+                  "linkingId": "2"
+                },
+                "xe": {
+                  "field": "end",
+                  "type": "genomic"
+                },
+                "y": {
+                  "field": "peak",
+                  "type": "quantitative",
+                  "axis": "none",
+                  "flip": false
+                },
+                "color": {
+                  "value": "#E6A01B"
+                },
+                "stroke": {
+                  "value": "white"
+                },
+                "strokeWidth": {
+                  "value": 0.2
+                },
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0.2
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          },
+          {
+            "xDomain": {
+              "chromosome": "chr8",
+              "interval": [
+                127734000,
+                127744000
+              ]
+            },
+            "linkingId": "2",
+            "tracks": [
+              {
+                "alignment": "overlay",
+                "id": "2-gene",
+                "data": {
+                  "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+                  "type": "beddb",
+                  "genomicFields": [
+                    {
+                      "index": 1,
+                      "name": "start"
+                    },
+                    {
+                      "index": 2,
+                      "name": "end"
+                    }
+                  ],
+                  "valueFields": [
+                    {
+                      "index": 5,
+                      "name": "strand",
+                      "type": "nominal"
+                    },
+                    {
+                      "index": 3,
+                      "name": "name",
+                      "type": "nominal"
+                    }
+                  ],
+                  "exonIntervalFields": [
+                    {
+                      "index": 12,
+                      "name": "start"
+                    },
+                    {
+                      "index": 13,
+                      "name": "end"
+                    }
+                  ]
+                },
+                "tracks": [
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "+"
+                        ]
+                      }
+                    ],
+                    "mark": "triangleRight",
+                    "x": {
+                      "field": "end",
+                      "type": "genomic",
+                      "axis": "bottom",
+                      "linkingId": "2"
+                    },
+                    "size": {
+                      "value": 15
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      }
+                    ],
+                    "mark": "text",
+                    "text": {
+                      "field": "name",
+                      "type": "nominal"
+                    },
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "stroke": {
+                      "value": "white"
+                    },
+                    "strokeWidth": {
+                      "value": 3
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "-"
+                        ]
+                      }
+                    ],
+                    "mark": "triangleLeft",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "size": {
+                      "value": 15
+                    },
+                    "style": {
+                      "align": "right"
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "exon"
+                        ]
+                      }
+                    ],
+                    "mark": "rect",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "size": {
+                      "value": 15
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "+"
+                        ]
+                      }
+                    ],
+                    "mark": "rule",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "strokeWidth": {
+                      "value": 3
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "style": {
+                      "linePattern": {
+                        "type": "triangleRight",
+                        "size": 5
+                      }
+                    }
+                  },
+                  {
+                    "dataTransform": [
+                      {
+                        "type": "filter",
+                        "field": "type",
+                        "oneOf": [
+                          "gene"
+                        ]
+                      },
+                      {
+                        "type": "filter",
+                        "field": "strand",
+                        "oneOf": [
+                          "-"
+                        ]
+                      }
+                    ],
+                    "mark": "rule",
+                    "x": {
+                      "field": "start",
+                      "type": "genomic"
+                    },
+                    "strokeWidth": {
+                      "value": 3
+                    },
+                    "xe": {
+                      "field": "end",
+                      "type": "genomic"
+                    },
+                    "style": {
+                      "linePattern": {
+                        "type": "triangleLeft",
+                        "size": 5
+                      }
+                    }
+                  }
+                ],
+                "row": {
+                  "field": "strand",
+                  "type": "nominal",
+                  "domain": [
+                    "+",
+                    "-"
+                  ]
+                },
+                "color": {
+                  "value": "#E6A01B"
+                },
+                "visibility": [
+                  {
+                    "operation": "less-than",
+                    "measure": "width",
+                    "threshold": "|xe-x|",
+                    "transitionPadding": 10,
+                    "target": "mark"
+                  }
+                ],
+                "style": {
+                  "background": "lightgray",
+                  "backgroundOpacity": 0.2
+                },
+                "opacity": {
+                  "value": 0.8
+                },
+                "width": 700,
+                "height": 100
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "views": [
+    {
+      "spacing": 0,
+      "xDomain": {
+        "chromosome": "chr12",
+        "interval": [
+          10140000,
+          10210000
+        ]
+      },
+      "linkingId": "1",
+      "tracks": [
+        {
+          "alignment": "overlay",
+          "id": "1-gene",
+          "data": {
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+            "type": "beddb",
+            "genomicFields": [
+              {
+                "index": 1,
+                "name": "start"
+              },
+              {
+                "index": 2,
+                "name": "end"
+              }
+            ],
+            "valueFields": [
+              {
+                "index": 5,
+                "name": "strand",
+                "type": "nominal"
+              },
+              {
+                "index": 3,
+                "name": "name",
+                "type": "nominal"
+              }
+            ],
+            "exonIntervalFields": [
+              {
+                "index": 12,
+                "name": "start"
+              },
+              {
+                "index": 13,
+                "name": "end"
+              }
+            ]
+          },
+          "tracks": [
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ]
+                }
+              ],
+              "mark": "triangleRight",
+              "x": {
+                "field": "end",
+                "type": "genomic",
+                "axis": "top",
+                "linkingId": "1"
+              },
+              "size": {
+                "value": 15
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                }
+              ],
+              "mark": "text",
+              "text": {
+                "field": "name",
+                "type": "nominal"
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 3
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ]
+                }
+              ],
+              "mark": "triangleLeft",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "size": {
+                "value": 15
+              },
+              "style": {
+                "align": "right"
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "exon"
+                  ]
+                }
+              ],
+              "mark": "rect",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "size": {
+                "value": 15
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ]
+                }
+              ],
+              "mark": "rule",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "style": {
+                "linePattern": {
+                  "type": "triangleRight",
+                  "size": 5
+                }
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ]
+                }
+              ],
+              "mark": "rule",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "style": {
+                "linePattern": {
+                  "type": "triangleLeft",
+                  "size": 5
+                }
+              }
+            }
+          ],
+          "row": {
+            "field": "strand",
+            "type": "nominal",
+            "domain": [
+              "+",
+              "-"
+            ]
+          },
+          "color": {
+            "value": "#CC7DAA"
+          },
+          "visibility": [
+            {
+              "operation": "less-than",
+              "measure": "width",
+              "threshold": "|xe-x|",
+              "transitionPadding": 10,
+              "target": "mark"
+            }
+          ],
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "opacity": {
+            "value": 0.8
+          },
+          "width": 1008,
+          "height": 120
+        },
+        {
+          "id": "1-1",
+          "title": "Sample 1",
+          "data": {
+            "url": "https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg",
+            "type": "vector",
+            "column": "position",
+            "value": "peak",
+            "binSize": 4
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none",
+            "linkingId": "1"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "#CC7DAA"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.2
+          },
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "width": 1008,
+          "height": 120
+        },
+        {
+          "id": "1-2",
+          "title": "Sample 2",
+          "data": {
+            "url": "https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w",
+            "type": "vector",
+            "column": "position",
+            "value": "peak",
+            "binSize": 4
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none",
+            "linkingId": "1"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "#CC7DAA"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.2
+          },
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "width": 1008,
+          "height": 120
+        },
+        {
+          "id": "1-3",
+          "title": "Sample 3",
+          "data": {
+            "url": "https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g",
+            "type": "vector",
+            "column": "position",
+            "value": "peak",
+            "binSize": 4
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none",
+            "linkingId": "1"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "#CC7DAA"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.2
+          },
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "width": 1008,
+          "height": 120
+        }
+      ]
+    },
+    {
+      "spacing": 0,
+      "xDomain": {
+        "chromosome": "chr8",
+        "interval": [
+          127734000,
+          127744000
+        ]
+      },
+      "linkingId": "2",
+      "tracks": [
+        {
+          "id": "2-1",
+          "title": "Sample 1",
+          "data": {
+            "url": "https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg",
+            "type": "vector",
+            "column": "position",
+            "value": "peak",
+            "binSize": 4
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none",
+            "linkingId": "2"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "#E6A01B"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.2
+          },
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "width": 1008,
+          "height": 120
+        },
+        {
+          "id": "2-2",
+          "title": "Sample 2",
+          "data": {
+            "url": "https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w",
+            "type": "vector",
+            "column": "position",
+            "value": "peak",
+            "binSize": 4
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none",
+            "linkingId": "2"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "#E6A01B"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.2
+          },
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "width": 1008,
+          "height": 120
+        },
+        {
+          "id": "2-3",
+          "title": "Sample 3",
+          "data": {
+            "url": "https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g",
+            "type": "vector",
+            "column": "position",
+            "value": "peak",
+            "binSize": 4
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none",
+            "linkingId": "2"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "peak",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "#E6A01B"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0.2
+          },
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "width": 1008,
+          "height": 120
+        },
+        {
+          "alignment": "overlay",
+          "id": "2-gene",
+          "data": {
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation",
+            "type": "beddb",
+            "genomicFields": [
+              {
+                "index": 1,
+                "name": "start"
+              },
+              {
+                "index": 2,
+                "name": "end"
+              }
+            ],
+            "valueFields": [
+              {
+                "index": 5,
+                "name": "strand",
+                "type": "nominal"
+              },
+              {
+                "index": 3,
+                "name": "name",
+                "type": "nominal"
+              }
+            ],
+            "exonIntervalFields": [
+              {
+                "index": 12,
+                "name": "start"
+              },
+              {
+                "index": 13,
+                "name": "end"
+              }
+            ]
+          },
+          "tracks": [
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ]
+                }
+              ],
+              "mark": "triangleRight",
+              "x": {
+                "field": "end",
+                "type": "genomic",
+                "axis": "bottom",
+                "linkingId": "2"
+              },
+              "size": {
+                "value": 15
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                }
+              ],
+              "mark": "text",
+              "text": {
+                "field": "name",
+                "type": "nominal"
+              },
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "stroke": {
+                "value": "white"
+              },
+              "strokeWidth": {
+                "value": 3
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ]
+                }
+              ],
+              "mark": "triangleLeft",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "size": {
+                "value": 15
+              },
+              "style": {
+                "align": "right"
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "exon"
+                  ]
+                }
+              ],
+              "mark": "rect",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "size": {
+                "value": 15
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "+"
+                  ]
+                }
+              ],
+              "mark": "rule",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "style": {
+                "linePattern": {
+                  "type": "triangleRight",
+                  "size": 5
+                }
+              }
+            },
+            {
+              "dataTransform": [
+                {
+                  "type": "filter",
+                  "field": "type",
+                  "oneOf": [
+                    "gene"
+                  ]
+                },
+                {
+                  "type": "filter",
+                  "field": "strand",
+                  "oneOf": [
+                    "-"
+                  ]
+                }
+              ],
+              "mark": "rule",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "style": {
+                "linePattern": {
+                  "type": "triangleLeft",
+                  "size": 5
+                }
+              }
+            }
+          ],
+          "row": {
+            "field": "strand",
+            "type": "nominal",
+            "domain": [
+              "+",
+              "-"
+            ]
+          },
+          "color": {
+            "value": "#E6A01B"
+          },
+          "visibility": [
+            {
+              "operation": "less-than",
+              "measure": "width",
+              "threshold": "|xe-x|",
+              "transitionPadding": 10,
+              "target": "mark"
+            }
+          ],
+          "style": {
+            "background": "lightgray",
+            "backgroundOpacity": 0
+          },
+          "opacity": {
+            "value": 0.8
+          },
+          "width": 1008,
+          "height": 120
+        }
+      ]
+    }
+  ],
+  "style": {
+    "outlineWidth": 0
+  }
+}

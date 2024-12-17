@@ -1,0 +1,223 @@
+{
+  "static": true,
+  "layout": "linear",
+  "arrangement": "serial",
+  "centerRadius": 0.5,
+  "views": [
+    {
+      "arrangement": "serial",
+      "views": [
+        {
+          "arrangement": "parallel",
+          "views": [
+            {
+              "tracks": [
+                {
+                  "data": {
+                    "type": "multivec",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                    "value": "y",
+                    "row": "_",
+                    "column": "x",
+                    "categories": [
+                      "_"
+                    ],
+                    "binSize": 32
+                  },
+                  "mark": "rect",
+                  "x": {
+                    "field": "start",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "row": {
+                    "field": "_",
+                    "type": "nominal"
+                  },
+                  "color": {
+                    "value": "lightgray"
+                  },
+                  "style": {
+                    "outline": "#D45E00",
+                    "outlineWidth": 7
+                  },
+                  "width": 217,
+                  "height": 60
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "data": {
+                    "type": "multivec",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                    "value": "y",
+                    "row": "_",
+                    "column": "x",
+                    "categories": [
+                      "_"
+                    ],
+                    "binSize": 32
+                  },
+                  "mark": "rect",
+                  "x": {
+                    "field": "start",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "row": {
+                    "field": "_",
+                    "type": "nominal"
+                  },
+                  "color": {
+                    "value": "lightgray"
+                  },
+                  "style": {
+                    "outline": "#029F73",
+                    "outlineWidth": 7
+                  },
+                  "width": 217,
+                  "height": 30
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "arrangement": "parallel",
+          "views": [
+            {
+              "tracks": [
+                {
+                  "data": {
+                    "type": "multivec",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                    "value": "y",
+                    "row": "_",
+                    "column": "x",
+                    "categories": [
+                      "_"
+                    ],
+                    "binSize": 32
+                  },
+                  "mark": "rect",
+                  "x": {
+                    "field": "start",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "row": {
+                    "field": "_",
+                    "type": "nominal"
+                  },
+                  "color": {
+                    "value": "lightgray"
+                  },
+                  "style": {
+                    "outline": "#0072B2",
+                    "outlineWidth": 7
+                  },
+                  "width": 42,
+                  "height": 60
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "data": {
+                    "type": "multivec",
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                    "value": "y",
+                    "row": "_",
+                    "column": "x",
+                    "categories": [
+                      "_"
+                    ],
+                    "binSize": 32
+                  },
+                  "mark": "rect",
+                  "x": {
+                    "field": "start",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "row": {
+                    "field": "_",
+                    "type": "nominal"
+                  },
+                  "color": {
+                    "value": "lightgray"
+                  },
+                  "style": {
+                    "outline": "#CB7AA7",
+                    "outlineWidth": 7
+                  },
+                  "width": 42,
+                  "height": 30
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tracks": [
+        {
+          "data": {
+            "type": "multivec",
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+            "value": "y",
+            "row": "_",
+            "column": "x",
+            "categories": [
+              "_"
+            ],
+            "binSize": 32
+          },
+          "mark": "rect",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "row": {
+            "field": "_",
+            "type": "nominal"
+          },
+          "color": {
+            "value": "lightgray"
+          },
+          "style": {
+            "outline": "#E79F00",
+            "outlineWidth": 7
+          },
+          "width": 35,
+          "height": 100
+        }
+      ]
+    }
+  ]
+}
