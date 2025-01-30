@@ -112,4 +112,4 @@ def extract_rules(inputfile, outputfile):
 
 #     print("Extraction complete. Rules with counts written to file.")
             
-extract_rules('gosling.txt', 'gosling-rules-cfg.txt')
+extract_rules('autogosling.txt', 'autogosling-rules-cfg.txt')
