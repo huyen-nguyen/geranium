@@ -1,0 +1,60 @@
+Alignment -> "left"
+Alignment -> "middle"
+Alignment -> "right"
+Alignment -> "top"
+Category -> "cartesian"
+Category -> "polar"
+CentralAngle -> "0.5"
+CentralAngle -> "1"
+Color -> "depth"
+ColorRange -> "['#2171b5', '#deebf7']"
+CoordinateSystem -> Category
+CoordinateSystem -> Category "+" CentralAngle "+" Direction "+" InnerRadius "+" PolarAxis "+" PolarCenterPos "+" PolarCenterType "+" StartAngle
+Direction -> "clockwise"
+Direction -> "left"
+Direction -> "top"
+Element -> Color "+" ColorRange "+" Direction "+" Link "+" Node
+Element -> Color "+" ColorRange "+" Link "+" Node
+Element -> Color "+" ColorRange "+" Link "+" Node "+" SizeOption
+InnerRadius -> "0"
+InnerRadius -> "0.5"
+Layout -> Mode "+" X "+" Y
+Link -> "arccurve"
+Link -> "curve"
+Link -> "curveStepAfter"
+Link -> "curveStepBefore"
+Link -> "hidden"
+Margin -> "0.05"
+Mode -> "bottom-up"
+Mode -> "top-down"
+Node -> "circle"
+Node -> "ellipse"
+Node -> "hidden"
+Node -> "rectangle"
+Node -> "triangle"
+Padding -> "[0.02, 0.02]"
+PolarAxis -> "x-axis"
+PolarCenterPos -> "left"
+PolarCenterType -> "parent"
+PolarCenterType -> "root"
+Position -> "bottom"
+Position -> "left"
+Position -> "right"
+Position -> "top"
+Relation -> "align"
+Relation -> "flatten"
+Relation -> "include"
+Relation -> "juxtapose"
+Relation -> "within"
+Root -> Alignment "+" Relation
+Root -> Margin "+" Position "+" Relation
+Root -> Padding "+" Relation
+SizeOption -> "fill"
+SizeOption -> "static"
+StartAngle -> "0"
+Subtree -> Alignment "+" Relation
+Subtree -> Margin "+" Relation
+X -> Root "+" Subtree
+Y -> Root "+" Subtree
+root -> CoordinateSystem "+" Element "+" Layout
+Nothing -> None

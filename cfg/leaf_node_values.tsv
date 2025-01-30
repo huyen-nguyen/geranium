@@ -1,12 +1,17 @@
-property	value_type	value_quote	default
-title	string	STR	
-subtitle	string	STR	
-description	string	STR	
-tracks	array	ARR	
-alignment	stack, overlay	["stack", "overlay"]	stack
-views	array	ARR	
-arrangement	parallel, serial, vertical, horizontal	["parallel", "serial", "vertical", "horizontal"]	
-zoomLimits	array	ARR	
-yOffset	number	NUM	
-xOffset	number	NUM	
-static	true, false		
+property	value_type
+visibility	true
+track_count	number
+view_count	number
+linkingId	true
+row	true
+alignment	overlay, stack
+arrangement	parallel, serial, vertical, horizontal
+layout	linear, circular
+orientation	horizontal, vertical
+mark	point, line, area, bar, rect, text, rule, brush, link, triangle
+track.data.type	json, csv, bed, beddb, vcf, gff, bigwig, multivec, vector, matrix, bam
+data_group	sparse, contiguous
+y.type	quantitative, nominal, genomic
+size	data_agnostic, data_dependent
+color	data_agnostic, data_dependent
+text	data_agnostic, data_dependent
