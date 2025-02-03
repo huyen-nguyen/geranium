@@ -26,9 +26,7 @@ background -> "blue"
 background -> "lightgray"
 background -> "red"
 background -> "steelBlue"
-backgroundOpacity -> "0"
-backgroundOpacity -> "0.1"
-backgroundOpacity -> "0.2"
+backgroundOpacity -> number
 barLength -> field "+" type
 baseBackground -> field "+" type
 baseLabelColor -> field "+" type

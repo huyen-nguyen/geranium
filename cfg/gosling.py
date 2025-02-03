@@ -7,7 +7,7 @@ import re
 def get_rules(node, parentkey, rules):
     thisrule = parentkey + ' -> ' + ' "+" '.join(sorted(node.keys()))
     rules.append(thisrule)
-    number_type_property = ["height", "width", "sampleLength", "spacing", "centerRadius", "binSize"]
+    number_type_property = ["height", "width", "sampleLength", "spacing", "centerRadius", "binSize", "backgroundOpacity"]
 
     for k in sorted(node.keys()):
         v = node[k]
@@ -30,7 +30,7 @@ def get_rules(node, parentkey, rules):
                 rules.append(k + ' -> ' + '"' + str(v) + '"')  # Terminal rule
 
 
-def extract_rules(inputfile, outputfile):
+def extract_rules(inputfile, outputfile, lhs_outputfile):
     specs = []
     with open(inputfile, 'r') as inputs:
         for line in inputs:
@@ -61,7 +61,18 @@ def extract_rules(inputfile, outputfile):
 
     print(f'Max rule length: {max_rulelen}')
     print(f'Total unique rules extracted: {len(allrules)}')
+    
+    # Extract unique LHS
+    unique_lhs = {rule.split(' -> ')[0] for rule in allrules.keys()}
 
+    # Save LHS to TSV
+    with open(lhs_outputfile, 'w') as lhs_out:
+        for lhs in sorted(unique_lhs):
+            lhs_out.write(lhs + '\n')
+
+    print(f"Unique LHS values saved to {lhs_outputfile}")
+
+    # Save rules to output file
     allrules = sorted(allrules.keys())
     allrules.append('Nothing -> None')
 
@@ -70,46 +81,5 @@ def extract_rules(inputfile, outputfile):
             outf.write(r + '\n')
 
     print("Extraction complete. Rules written to file.")
-
-# # count the rules 
-# def extract_rules(inputfile, outputfile):
-#     specs = []
-#     with open(inputfile, 'r') as inputs:
-#         for line in inputs:
-#             try:
-#                 specs.append(json.loads(line))
-#             except Exception as e:
-#                 print(f"Error parsing JSON: {e}")
-
-#     print(f'Length of specs: {len(specs)}')
-#     if not specs:
-#         print("No valid JSON objects found in the input file.")
-#         return
-
-#     rule_counts = defaultdict(int)  # Store rule occurrences
-
-#     max_rulelen = 0
-
-#     for spec in specs:
-#         rules = []
-#         get_rules(spec, 'root', rules)
-        
-#         for r in rules:
-#             rule_counts[r] += 1  # Count occurrences of each rule
-        
-#         max_rulelen = max(max_rulelen, len(rules))
-
-#     print(f'Max rule length: {max_rulelen}')
-#     print(f'Total unique rules extracted: {len(rule_counts)}')
-
-#     # Sort rules for consistent output
-#     sorted_rules = sorted(rule_counts.items(), key=lambda x: x[0])
-
-#     # Save rules and their counts
-#     with open(outputfile, 'w') as outf:
-#         for rule, count in sorted_rules:
-#             outf.write(f"{rule} [{count}]\n")
-
-#     print("Extraction complete. Rules with counts written to file.")
             
-extract_rules('autogosling.txt', 'autogosling-rules-cfg.txt')
+extract_rules('gosling.txt', 'gosling-rules-cfg.txt', 'lhs-unique.tsv')
