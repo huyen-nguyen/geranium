@@ -1,0 +1,888 @@
+LHS	->	RHS
+aggregate	->	"""max"""
+aggregate	->	"""min"""
+align	->	"""right"""
+alignment	->	"""overlay"""
+alignment	->	"""stack"""
+arrange	->	"""behind"""
+arrangement	->	"""horizontal"""
+arrangement	->	"""parallel"""
+arrangement	->	"""serial"""
+arrangement	->	"""vertical"""
+assembly	->	"""hg19"""
+assembly	->	"""unknown"""
+assembly	->	[['NC_045512.2', 29903]]
+assembly	->	[['U00096.3', 4641652]]
+axis	->	"""bottom"""
+axis	->	"""left"""
+axis	->	"""none"""
+axis	->	"""right"""
+axis	->	"""top"""
+background	->	STR
+backgroundOpacity	->	NUM
+barLength	->	"field ""+"" type"
+baseBackground	->	"field ""+"" type"
+baseLabelColor	->	"field ""+"" type"
+baseline	->	STR
+binSize	->	NUM
+brush	->	"color ""+"" stroke"
+centerRadius	->	NUM
+chromosome	->	STR
+click	->	TRUE
+color	->	STR
+color	->	"domain ""+"" field ""+"" legend ""+"" range ""+"" type"
+color	->	"domain ""+"" field ""+"" legend ""+"" type"
+color	->	"domain ""+"" field ""+"" range ""+"" type"
+color	->	"domain ""+"" field ""+"" type"
+color	->	"field ""+"" legend ""+"" range ""+"" type"
+color	->	"field ""+"" legend ""+"" type"
+color	->	"field ""+"" range ""+"" type"
+color	->	"field ""+"" type"
+color	->	value
+dashed	->	TRUE
+data	->	"attributesToFields ""+"" indexUrl ""+"" type ""+"" url"
+data	->	"binSize ""+"" categories ""+"" column ""+"" end ""+"" row ""+"" start ""+"" type ""+"" url ""+"" value"
+data	->	"binSize ""+"" categories ""+"" column ""+"" row ""+"" type ""+"" url ""+"" value"
+data	->	"binSize ""+"" column ""+"" type ""+"" url ""+"" value"
+data	->	"categories ""+"" column ""+"" end ""+"" row ""+"" start ""+"" type ""+"" url ""+"" value"
+data	->	"categories ""+"" column ""+"" row ""+"" type ""+"" url ""+"" value"
+data	->	"chromosomeField ""+"" chromosomePrefix ""+"" genomicFields ""+"" headerNames ""+"" longToWideId ""+"" sampleLength ""+"" separator ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" chromosomePrefix ""+"" genomicFields ""+"" headerNames ""+"" longToWideId ""+"" separator ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" genomicFields ""+"" headerNames ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" genomicFields ""+"" sampleLength ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" genomicFields ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" genomicFields ""+"" type ""+"" values"
+data	->	"column ""+"" type ""+"" url ""+"" value"
+data	->	"customFields ""+"" indexUrl ""+"" type ""+"" url"
+data	->	"exonIntervalFields ""+"" genomicFields ""+"" type ""+"" url ""+"" valueFields"
+data	->	"genomicFields ""+"" sampleLength ""+"" type ""+"" url"
+data	->	"genomicFields ""+"" type ""+"" url ""+"" valueFields"
+data	->	"genomicFieldsToConvert ""+"" headerNames ""+"" separator ""+"" type ""+"" url"
+data	->	"genomicFieldsToConvert ""+"" type ""+"" url"
+data	->	"indexUrl ""+"" loadMates ""+"" maxInsertSize ""+"" type ""+"" url"
+data	->	"indexUrl ""+"" loadMates ""+"" type ""+"" url"
+data	->	"indexUrl ""+"" sampleLength ""+"" type ""+"" url"
+data	->	"indexUrl ""+"" type ""+"" url"
+data	->	"type ""+"" url"
+dataTransform	->	[{'type': 'concat', 'fields': ['REF', 'ALT'], 'separator': ' → ', 'newField': 'LAB'}, {'type': 'replace', 'field': 'MUTTYPE', 'replace': [{'from': 'insertion', 'to': 'Insertion'}, {'from': 'deletion', 'to': 'Deletion'}], 'newField': 'MUTTYPE'}]
+dataTransform	->	[{'type': 'coverage', 'startField': 'start', 'endField': 'end'}]
+dataTransform	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5, 'isPaddingBP': True}, 'newField': 'pileup-row'}, {'type': 'subjson', 'field': 'substitutions', 'genomicField': 'pos', 'baseGenomicField': 'start', 'genomicLengthField': 'length'}, {'type': 'filter', 'field': 'type', 'oneOf': ['S', 'H']}]
+dataTransform	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5, 'isPaddingBP': True}, 'newField': 'pileup-row'}]
+dataTransform	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'exonSplit', 'separator': ',', 'flag': {'field': 'type', 'value': 'exon'}, 'fields': [{'field': 'exon_start', 'type': 'genomic', 'newField': 'start', 'chrField': 'chr'}, {'field': 'exon_end', 'type': 'genomic', 'newField': 'end', 'chrField': 'chr'}]}, {'type': 'filter', 'field': 'type', 'oneOf': ['exon']}]
+dataTransform	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
+dataTransform	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
+dataTransform	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}]
+dataTransform	->	[{'type': 'filter', 'field': 'DISTPREVLOGE', 'oneOf': [None]}]
+dataTransform	->	[{'type': 'filter', 'field': 'Sample', 'oneOf': ['PD35930a']}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen'], 'not': True}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}, {'type': 'filter', 'field': 'Name', 'include': 'p'}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}, {'type': 'filter', 'field': 'Name', 'include': 'q'}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-1', 'acen-2'], 'not': True}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-1']}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-2']}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['gneg', 'gpos75', 'gvar']}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['gpos25', 'gpos50', 'gpos100']}]
+dataTransform	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['gvar']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs1'], 'not': True}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs1']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs17']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5', 'hs4', 'hs6']}, {'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs5', 'hs4', 'hs6']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5']}, {'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs5']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr1', 'oneOf': ['1', '16', '14', '9', '6', '5', '3']}, {'type': 'filter', 'field': 'chr2', 'oneOf': ['1', '16', '14', '9', '6', '5', '3']}]
+dataTransform	->	[{'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs1']}]
+dataTransform	->	[{'type': 'filter', 'field': 'count', 'oneOf': [0], 'not': True}]
+dataTransform	->	[{'type': 'filter', 'field': 'minor_cn_tumor', 'oneOf': ['0']}]
+dataTransform	->	[{'type': 'filter', 'field': 'significance', 'oneOf': ['Likely_benign']}, {'type': 'displace', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5}, 'method': 'spread', 'newField': 'a'}]
+dataTransform	->	[{'type': 'filter', 'field': 'significance', 'oneOf': ['Likely_benign']}]
+dataTransform	->	[{'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
+dataTransform	->	[{'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
+dataTransform	->	[{'type': 'filter', 'field': 'total_cn_tumor', 'inRange': [4.5, 900]}]
+dataTransform	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}]
+dataTransform	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}]
+dataTransform	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
+dataTransform	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
+dataTransform	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}]
+dataTransform	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['intron']}]
+dataTransform	->	[{'type': 'filter', 'field': 'value', 'inRange': [0, 999999]}]
+description	->	"""http://circos.ca/intro/genomic_data/"""
+description	->	"""reference: https://dash.plotly.com/dash-bio/alignmentchart"""
+displacement	->	"padding ""+"" type"
+domain	->	['', '25', '50', '75', '100']
+domain	->	['+', '-']
+domain	->	['A', 'T', 'G', 'C']
+domain	->	['C>A', 'C>G', 'C>T', 'T>A', 'T>C', 'T>G']
+domain	->	['Insertion', 'Deletion']
+domain	->	['Pathogenic', 'Pathogenic/Likely_pathogenic', 'Likely_pathogenic', 'Uncertain_significance', 'Likely_benign', 'Benign/Likely_benign', 'Benign']
+domain	->	['chr1', 'chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'chr7', 'chr8', 'chr9', 'chr10', 'chr11', 'chr12', 'chr13', 'chr14', 'chr15', 'chr16', 'chr17', 'chr18', 'chr19', 'chr20', 'chr21', 'chr22', 'chrX', 'chrY']
+domain	->	['deletion', 'inversion', 'translocation', 'tandem-duplication']
+domain	->	['gneg', 'gpos25', 'gpos50', 'gpos75', 'gpos100', 'gvar', 'acen']
+domain	->	['gneg', 'gpos25', 'gpos50', 'gpos75', 'gpos100', 'gvar']
+domain	->	['hs5', 'hs4', 'hs6']
+domain	->	['normal read', 'deletion (+-)', 'inversion (++)', 'inversion (--)', 'duplication (-+)', 'more than two mates', 'mates not found within chromosome', 'clipping']
+domain	->	['protein_coding', 'tRNA', 'rRNA', 'ncRNA', 'pseudogene', 'unknown']
+domain	->	['receptor-binding domain (RBD)', 'receptor-binding motif (RBM)', 'S1/S2 cleavage site', 'heptad repeat 1 (HR1)', 'heptad repeat 2 (HR2)']
+domain	->	['tandem-duplication', 'translocation', 'delection', 'inversion']
+domain	->	chromosome
+domain	->	"chromosome ""+"" interval"
+dx	->	"""-10"""
+dy	->	"""-10"""
+dy	->	"""-12"""
+dy	->	"""-14"""
+dy	->	"""-15"""
+dy	->	"""-16"""
+dy	->	"""10"""
+dy	->	"""16"""
+enableSmoothPath	->	"""False"""
+enableSmoothPath	->	"""True"""
+encoding	->	"barLength ""+"" baseBackground ""+"" baseLabelColor ""+"" endPosition ""+"" position ""+"" startPosition"
+encoding	->	"endPosition ""+"" geneHeight ""+"" geneLabel ""+"" geneLabelColor ""+"" geneLabelFontSize ""+"" geneLabelOpacity ""+"" geneLabelStroke ""+"" geneLabelStrokeThickness ""+"" opacity ""+"" startPosition ""+"" strandColor ""+"" strandRow ""+"" type"
+encoding	->	"endPosition ""+"" name ""+"" stainBackgroundColor ""+"" stainLabelColor ""+"" stainStroke ""+"" startPosition"
+endPosition	->	field
+endPosition	->	"field ""+"" type"
+experimental	->	mouseEvents
+experimental	->	stretchGraphics
+field	->	"""3"""
+field	->	"""4"""
+field	->	"""Band"""
+field	->	"""Basepair_start"""
+field	->	"""Basepair_stop"""
+field	->	"""ChrEnd"""
+field	->	"""ChrStart"""
+field	->	"""Chromosome"""
+field	->	"""DISTPREVLOGE"""
+field	->	"""Density"""
+field	->	"""Gene symbol"""
+field	->	"""Gene"""
+field	->	"""LAB"""
+field	->	"""MUTTYPE"""
+field	->	"""Name"""
+field	->	"""P2_2"""
+field	->	"""POS"""
+field	->	"""POSEND"""
+field	->	"""Protein"""
+field	->	"""SUBTYPE"""
+field	->	"""Stain"""
+field	->	"""Start"""
+field	->	"""Start1"""
+field	->	"""Start2"""
+field	->	"""Stop"""
+field	->	"""Stop1"""
+field	->	"""Stop2"""
+field	->	"""aEnd"""
+field	->	"""aStart"""
+field	->	"""base"""
+field	->	"""c"""
+field	->	"""category"""
+field	->	"""chr"""
+field	->	"""chr_2"""
+field	->	"""chromEnd"""
+field	->	"""chromStart"""
+field	->	"""col7"""
+field	->	"""col8"""
+field	->	"""conservation"""
+field	->	"""count"""
+field	->	"""coverage"""
+field	->	"""e1"""
+field	->	"""e2"""
+field	->	"""end"""
+field	->	"""end2"""
+field	->	"""gap"""
+field	->	"""gene_biotype"""
+field	->	"""name"""
+field	->	"""p"""
+field	->	"""p1"""
+field	->	"""p1_2"""
+field	->	"""p1e"""
+field	->	"""p1s"""
+field	->	"""p2"""
+field	->	"""p2_2"""
+field	->	"""p2e"""
+field	->	"""p2s"""
+field	->	"""peak"""
+field	->	"""pos"""
+field	->	"""pos_end"""
+field	->	"""pos_start"""
+field	->	"""position"""
+field	->	"""s1"""
+field	->	"""s2"""
+field	->	"""sample"""
+field	->	"""significance"""
+field	->	"""start"""
+field	->	"""start1"""
+field	->	"""strand"""
+field	->	"""svType"""
+field	->	"""svclass"""
+field	->	"""type"""
+field	->	"""v"""
+field	->	"""value"""
+field	->	"""x"""
+field	->	"""xe"""
+field	->	"""xs"""
+field	->	"""y"""
+field	->	"""ye"""
+field	->	"""ys"""
+flipY	->	"""False"""
+flipY	->	"""True"""
+geneHeight	->	value
+geneLabel	->	field
+geneLabelColor	->	"field ""+"" range"
+geneLabelFontSize	->	value
+geneLabelOpacity	->	value
+geneLabelStroke	->	value
+geneLabelStrokeThickness	->	value
+grid	->	"""True"""
+height	->	"""False"""
+height	->	NUM
+inlineLegend	->	"""True"""
+interval	->	[0, 1000000000]
+interval	->	[0, 396]
+interval	->	[0, 80000000]
+interval	->	[1, 1000000000]
+interval	->	[1, 2000000]
+interval	->	[1, 29903]
+interval	->	[1, 3000500]
+interval	->	[10140000, 10210000]
+interval	->	[109000000, 112000000]
+interval	->	[126800000, 127700000]
+interval	->	[127734000, 127744000]
+interval	->	[136750, 139450]
+interval	->	[142500000, 143000000]
+interval	->	[160000000, 200000000]
+interval	->	[200000, 800000]
+interval	->	[20000000, 50000000]
+interval	->	[200000000, 220000000]
+interval	->	[205000, 207000]
+interval	->	[222000, 240000]
+interval	->	[3000000, 3000010]
+interval	->	[31500000, 33150000]
+interval	->	[32000000, 32700000]
+interval	->	[32314000, 32402500]
+interval	->	[350, 396]
+interval	->	[43080000, 43120000]
+interval	->	[490000, 496000]
+interval	->	[5000000, 15000000]
+interval	->	[52168000, 52890000]
+interval	->	[68000000, 71000000]
+interval	->	[69276000, 69282000]
+interval	->	[77700000, 81000000]
+interval	->	[77925299, 77925320]
+interval	->	[800000000, 1800000000]
+layout	->	"""circular"""
+layout	->	"""linear"""
+legend	->	"""False"""
+legend	->	"""True"""
+legendTitle	->	"""Insert Size = 300bp"""
+legendTitle	->	"""SV Class"""
+linePattern	->	"size ""+"" type"
+linkConnectionType	->	"""corner"""
+linkStyle	->	"""elliptical"""
+linkingId	->	"""-"""
+linkingId	->	"""1"""
+linkingId	->	"""2"""
+linkingId	->	"""commonId"""
+linkingId	->	"""detail"""
+linkingId	->	"""detail-1"""
+linkingId	->	"""detail-2"""
+linkingId	->	"""link1"""
+linkingId	->	"""linking-with-brush"""
+linkingId	->	"""mid-scale"""
+linkingId	->	"""view1"""
+linkingId	->	"""view2"""
+mark	->	"""area"""
+mark	->	"""bar"""
+mark	->	"""betweenLink"""
+mark	->	"""brush"""
+mark	->	"""line"""
+mark	->	"""point"""
+mark	->	"""rect"""
+mark	->	"""rule"""
+mark	->	"""text"""
+mark	->	"""triangleBottom"""
+mark	->	"""triangleLeft"""
+mark	->	"""triangleRight"""
+mark	->	"""withinLink"""
+matrixExtent	->	"""lower-left"""
+matrixExtent	->	"""upper-right"""
+mouseEvents	->	"click ""+"" groupMarksByField ""+"" mouseOver ""+"" rangeSelect"
+mouseEvents	->	"groupMarksByField ""+"" mouseOver ""+"" rangeSelect"
+mouseEvents	->	"mouseOver ""+"" rangeSelect"
+mouseOver	->	"""True"""
+mouseOver	->	"arrange ""+"" color ""+"" stroke ""+"" strokeWidth"
+mouseOver	->	"color ""+"" opacity ""+"" strokeWidth"
+name	->	field
+opacity	->	"""0.5"""
+opacity	->	value
+orientation	->	"""vertical"""
+outline	->	"""#0072B2"""
+outline	->	"""#029F73"""
+outline	->	"""#8DC1F2"""
+outline	->	"""#CB7AA7"""
+outline	->	"""#D45E00"""
+outline	->	"""#E79F00"""
+outline	->	"""black"""
+outline	->	"""lightgray"""
+outline	->	"""white"""
+outlineWidth	->	"""0"""
+outlineWidth	->	"""0.5"""
+outlineWidth	->	"""1"""
+outlineWidth	->	"""3"""
+outlineWidth	->	"""5"""
+outlineWidth	->	"""7"""
+overlayOnPreviousTrack	->	"""True"""
+padding	->	"""3.5"""
+position	->	"field ""+"" type"
+range	->	"""grey"""
+range	->	"""pink"""
+range	->	"""rdbu"""
+range	->	"""warm"""
+range	->	['#0072B2', '#D45E00']
+range	->	['#012DB8', '#BE1E2C']
+range	->	['#569C4D', '#4C75A2', '#DA5456', '#EA8A2A']
+range	->	['#62AAD7', '#D1A74F', '#6CB74C']
+range	->	['#7585FF', '#FF8A85']
+range	->	['#97A8B2', '#D4C6BA']
+range	->	['#C0C0C0', '#808080', '#404040', 'black', 'black', 'black']
+range	->	['#C8C8C8', '#E79F00', '#029F73', '#0072B2', '#CB7AA7', '#57B4E9', '#D61E2E', '#414141']
+range	->	['#CB3B8C', '#CB71A3', '#CB96B3', 'gray', '#029F73', '#5A9F8C', '#5A9F8C']
+range	->	['#D45E00', '#D45E00', '#D45E00', 'black', '#029F73', '#029F73', '#029F73']
+range	->	['#E79F00', '#029F73', '#0072B2', '#CB7AA7', '#D45E00', '#57B4E9', '#EFE441']
+range	->	['#F6F6F6', 'gray']
+range	->	['#FF0000', '#FF4500', '#32CD32', '#008000', '#006400', '#C2E105', '#FFFF00', '#66CDAA', '#8A91D0', '#CD5C5C', '#E9967A', '#BDB76B', '#808080', '#C0C0C0', 'gray']
+range	->	['#d60000', '#018700', '#b500ff', '#05acc6', '#97ff00', '#ffa52f', '#ff8ec8', '#79525e', '#00fdcf', '#afa5ff', '#93ac83', '#9a6900', '#366962', '#d3008c', '#fdf490', '#c86e66', '#9ee2ff', '#00c846', '#a877ac', '#b8ba01']
+range	->	['black', 'black', 'black', 'black', 'white', 'black']
+range	->	['blue', 'red']
+range	->	['gray']
+range	->	['orange', 'blue', 'green', 'red', 'purple', 'black']
+range	->	['white', '#D9D9D9', '#979797', '#636363', 'black', '#A0A0F2']
+range	->	['white', '#D9D9D9', '#979797', '#636363', 'black', '#F0F0F0', '#8D8D8D']
+range	->	['white', '#D9D9D9', '#979797', '#636363', 'black']
+range	->	['white', 'lightgray', 'gray', 'gray', 'black', '#7B9CC8', '#DC4542']
+range	->	[150, 20]
+rangeSelect	->	"""True"""
+responsiveSize	->	"height ""+"" width"
+responsiveSize	->	width
+responsiveSpec	->	[{'selectivity': [{'measure': 'height', 'operation': 'LT', 'threshold': 1000, 'target': 'container'}], 'spec': {'spacing': 0, 'views': [{'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'alignment': 'overlay', 'id': '1-gene', 'data': {'url': 'https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation', 'type': 'beddb', 'genomicFields': [{'index': 1, 'name': 'start'}, {'index': 2, 'name': 'end'}], 'valueFields': [{'index': 5, 'name': 'strand', 'type': 'nominal'}, {'index': 3, 'name': 'name', 'type': 'nominal'}], 'exonIntervalFields': [{'index': 12, 'name': 'start'}, {'index': 13, 'name': 'end'}]}, 'tracks': [{'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'triangleRight', 'x': {'field': 'end', 'type': 'genomic', 'axis': 'top', 'linkingId': '1'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}], 'mark': 'text', 'text': {'field': 'name', 'type': 'nominal'}, 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 3}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'triangleLeft', 'x': {'field': 'start', 'type': 'genomic'}, 'size': {'value': 15}, 'style': {'align': 'right'}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}], 'mark': 'rect', 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleRight', 'size': 5}}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleLeft', 'size': 5}}}], 'row': {'field': 'strand', 'type': 'nominal', 'domain': ['+', '-']}, 'color': {'value': '#CC7DAA'}, 'visibility': [{'operation': 'less-than', 'measure': 'width', 'threshold': '|xe-x|', 'transitionPadding': 10, 'target': 'mark'}], 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'opacity': {'value': 0.8}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'id': '1-1', 'title': 'Sample 1', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '1'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#CC7DAA'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'id': '2-1', 'title': 'Sample 1', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '2'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#E6A01B'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'id': '1-2', 'title': 'Sample 2', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '1'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#CC7DAA'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'id': '2-2', 'title': 'Sample 2', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '2'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#E6A01B'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'id': '1-3', 'title': 'Sample 3', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '1'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#CC7DAA'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'id': '2-3', 'title': 'Sample 3', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '2'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#E6A01B'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'alignment': 'overlay', 'id': '2-gene', 'data': {'url': 'https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation', 'type': 'beddb', 'genomicFields': [{'index': 1, 'name': 'start'}, {'index': 2, 'name': 'end'}], 'valueFields': [{'index': 5, 'name': 'strand', 'type': 'nominal'}, {'index': 3, 'name': 'name', 'type': 'nominal'}], 'exonIntervalFields': [{'index': 12, 'name': 'start'}, {'index': 13, 'name': 'end'}]}, 'tracks': [{'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'triangleRight', 'x': {'field': 'end', 'type': 'genomic', 'axis': 'bottom', 'linkingId': '2'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}], 'mark': 'text', 'text': {'field': 'name', 'type': 'nominal'}, 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 3}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'triangleLeft', 'x': {'field': 'start', 'type': 'genomic'}, 'size': {'value': 15}, 'style': {'align': 'right'}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}], 'mark': 'rect', 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleRight', 'size': 5}}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleLeft', 'size': 5}}}], 'row': {'field': 'strand', 'type': 'nominal', 'domain': ['+', '-']}, 'color': {'value': '#E6A01B'}, 'visibility': [{'operation': 'less-than', 'measure': 'width', 'threshold': '|xe-x|', 'transitionPadding': 10, 'target': 'mark'}], 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'opacity': {'value': 0.8}, 'width': 700, 'height': 100}]}]}}]
+responsiveSpec	->	[{'selectivity': [{'measure': 'width', 'operation': 'GT', 'threshold': 1000}], 'spec': {'views': [{'tracks': [{'id': 'https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ', 'data': {'url': 'https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ', 'type': 'matrix'}, 'mark': 'bar', 'x': {'field': 'xs', 'type': 'genomic', 'axis': 'top'}, 'xe': {'field': 'xe', 'type': 'genomic', 'axis': 'none'}, 'y': {'field': 'ys', 'type': 'genomic', 'axis': 'left'}, 'ye': {'field': 'ye', 'type': 'genomic'}, 'color': {'field': 'value', 'type': 'quantitative', 'range': 'grey', 'legend': True}, 'style': {'matrixExtent': 'full'}, 'width': 400, 'height': 400}]}, {'tracks': [{'id': 'https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA', 'data': {'url': 'https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA', 'type': 'matrix'}, 'mark': 'bar', 'x': {'field': 'xs', 'type': 'genomic', 'axis': 'top'}, 'xe': {'field': 'xe', 'type': 'genomic', 'axis': 'none'}, 'y': {'field': 'ys', 'type': 'genomic', 'axis': 'left'}, 'ye': {'field': 'ye', 'type': 'genomic'}, 'color': {'field': 'value', 'type': 'quantitative', 'range': 'pink', 'legend': True}, 'style': {'matrixExtent': 'full'}, 'width': 400, 'height': 400}]}]}}]
+responsiveSpec	->	[{'spec': {'arrangement': 'vertical'}, 'selectivity': [{'measure': 'width', 'threshold': 1200, 'operation': 'LT'}]}]
+root	->	"alignment ""+"" centerRadius ""+"" description ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
+root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
+root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" tracks"
+root	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" subtitle ""+"" tooltip ""+"" tracks ""+"" width ""+"" x"
+root	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" row ""+"" subtitle ""+"" title ""+"" tracks ""+"" width"
+root	->	"arrangement ""+"" assembly ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views"
+root	->	"arrangement ""+"" centerRadius ""+"" layout ""+"" static ""+"" subtitle ""+"" title ""+"" views"
+root	->	"arrangement ""+"" centerRadius ""+"" layout ""+"" static ""+"" views"
+root	->	"arrangement ""+"" centerRadius ""+"" layout ""+"" subtitle ""+"" views"
+root	->	"arrangement ""+"" centerRadius ""+"" subtitle ""+"" title ""+"" views"
+root	->	"arrangement ""+"" layout ""+"" subtitle ""+"" title ""+"" views ""+"" xDomain"
+root	->	"arrangement ""+"" layout ""+"" views ""+"" xDomain"
+root	->	"arrangement ""+"" linkingId ""+"" responsiveSize ""+"" responsiveSpec ""+"" views"
+root	->	"arrangement ""+"" linkingId ""+"" responsiveSize ""+"" responsiveSpec ""+"" views ""+"" xDomain"
+root	->	"arrangement ""+"" linkingId ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views ""+"" xDomain"
+root	->	"arrangement ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views"
+root	->	"arrangement ""+"" views"
+root	->	"assembly ""+"" description ""+"" style ""+"" views ""+"" xDomain ""+"" zoomLimits"
+root	->	"assembly ""+"" layout ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views"
+root	->	"assembly ""+"" layout ""+"" spacing ""+"" subtitle ""+"" title ""+"" views"
+root	->	"assembly ""+"" subtitle ""+"" title ""+"" views ""+"" xDomain ""+"" zoomLimits"
+root	->	"centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" subtitle ""+"" title ""+"" tracks ""+"" xDomain"
+root	->	"centerRadius ""+"" layout ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views"
+root	->	"centerRadius ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views ""+"" xDomain"
+root	->	"layout ""+"" title ""+"" tracks"
+root	->	"responsiveSpec ""+"" spacing ""+"" style ""+"" views"
+root	->	"spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views ""+"" xDomain"
+root	->	"style ""+"" title ""+"" views"
+root	->	"subtitle ""+"" title ""+"" tracks"
+root	->	"subtitle ""+"" title ""+"" views ""+"" xDomain"
+root	->	"title ""+"" tracks"
+root	->	tracks
+sampleLength	->	NUM
+select	->	"arrange ""+"" color ""+"" stroke ""+"" strokeWidth"
+select	->	"color ""+"" opacity"
+select	->	"color ""+"" opacity ""+"" strokeWidth"
+spacing	->	NUM
+stainBackgroundColor	->	field
+stainLabelColor	->	field
+stainStroke	->	value
+startPosition	->	field
+startPosition	->	"field ""+"" type"
+static	->	"""False"""
+static	->	"""True"""
+strandColor	->	"field ""+"" range"
+strandRow	->	field
+stretch	->	"""True"""
+stretchGraphics	->	"""True"""
+stroke	->	"""#B9D4FA"""
+stroke	->	"""#E0E0E0"""
+stroke	->	"""green"""
+stroke	->	"""purple"""
+stroke	->	"""yellow"""
+stroke	->	"domain ""+"" field ""+"" range ""+"" type"
+stroke	->	"domain ""+"" field ""+"" type"
+stroke	->	"field ""+"" range ""+"" type"
+stroke	->	"field ""+"" type"
+stroke	->	value
+strokeWidth	->	"""0"""
+strokeWidth	->	"""4"""
+strokeWidth	->	value
+style	->	align
+style	->	"align ""+"" outline ""+"" outlineWidth"
+style	->	background
+style	->	"background ""+"" backgroundOpacity"
+style	->	"background ""+"" outline ""+"" outlineWidth"
+style	->	"background ""+"" outlineWidth"
+style	->	backgroundOpacity
+style	->	"brush ""+"" mouseOver ""+"" select"
+style	->	dashed
+style	->	"dx ""+"" outlineWidth ""+"" textFontWeight"
+style	->	"dx ""+"" textFontWeight"
+style	->	dy
+style	->	"dy ""+"" outline"
+style	->	"dy ""+"" outline ""+"" outlineWidth"
+style	->	"dy ""+"" textFontSize"
+style	->	enableSmoothPath
+style	->	"enableSmoothPath ""+"" outline ""+"" outlineWidth"
+style	->	inlineLegend
+style	->	legendTitle
+style	->	"legendTitle ""+"" linkStyle"
+style	->	"legendTitle ""+"" outlineWidth"
+style	->	linePattern
+style	->	"linePattern ""+"" outline ""+"" outlineWidth"
+style	->	linkConnectionType
+style	->	linkStyle
+style	->	matrixExtent
+style	->	"mouseOver ""+"" select"
+style	->	outline
+style	->	"outline ""+"" outlineWidth"
+style	->	outlineWidth
+style	->	textAnchor
+style	->	textFontWeight
+style	->	textStrokeWidth
+subtitle	->	""""""
+subtitle	->	"""Between-link examples with three types, i.e., straight, corner, and curve"""
+subtitle	->	"""Change the position and range of brushes to update the detail view on the bottom"""
+subtitle	->	"""Comparison of Micro-C and Hi-C for HFFc6 Cells"""
+subtitle	->	"""Customize mouse hovering and range selection events"""
+subtitle	->	"""Data Source: WashU Virus Genome Browser, NCBI, GISAID"""
+subtitle	->	"""Demonstration of using BED files of different specifications"""
+subtitle	->	"""E. coli genome, colored by gene type."""
+subtitle	->	"""Genetic characteristics of RAD51C- and PALB2-altered TNBCs"""
+subtitle	->	"""Gosling.js enables track templates! This allows to create complex visualization more easily."""
+subtitle	->	"""Insertions and deletions from a VCF file"""
+subtitle	->	"""Point mutations from a VCF file"""
+subtitle	->	"""Rather than redrawing every element at every frame, we can scale existing elements"""
+subtitle	->	"""Reimplementation of GenoCAT examples"""
+subtitle	->	"""Reposition marks to address visual overlaps using displacement options"""
+subtitle	->	"""Text and triangle marks will show when zooming in to provide more details"""
+subtitle	->	"""Text marks that indicate base pairs will appear when zooming in"""
+subtitle	->	"""This example demonstrates a dummy track alongside other tracks"""
+subtitle	->	"""Try yourself with different arrangements and layouts"""
+subtitle	->	"""Tutorial Examples"""
+subtitle	->	"""Visualize Hi-C Data Using Matrix and Annotations"""
+template	->	"""gene"""
+template	->	"""ideogram"""
+template	->	"""sequence"""
+text	->	"field ""+"" type"
+text	->	value
+textAnchor	->	"""end"""
+textFontSize	->	"""8"""
+textFontWeight	->	"""bold"""
+textFontWeight	->	"""normal"""
+textStrokeWidth	->	"""0"""
+title	->	"""BED files"""
+title	->	"""BED12+1: A file with all 12 standard fields, and a single extra custom field"""
+title	->	"""BED12: All 12 standard fields"""
+title	->	"""BED6+6: A file with the first 6 BED fields, and 6 custom fields"""
+title	->	"""BED6: A file with the first 6 BED fields"""
+title	->	"""Basic Marks: Link"""
+title	->	"""Basic Marks: Rect"""
+title	->	"""Basic Marks: Text"""
+title	->	"""Basic Marks: Triangles"""
+title	->	"""Basic Marks: area"""
+title	->	"""Basic Marks: bar"""
+title	->	"""Basic Marks: line"""
+title	->	"""Basic Marks: point"""
+title	->	"""Between Links in Circular Layouts with Parallel Arrangements"""
+title	->	"""Between-Connectivity In 2D Tracks"""
+title	->	"""Breast Cancer Variant (Staaf et al. 2019)"""
+title	->	"""Chromosome 5"""
+title	->	"""Circos"""
+title	->	"""Conservation"""
+title	->	"""Corces et al."""
+title	->	"""Curved Connection"""
+title	->	"""Custom Mouse Events"""
+title	->	"""Cyverse-QUBES"""
+title	->	"""Dummy track example"""
+title	->	"""Epilogos (hg38)"""
+title	->	"""Example: Brushing and Linking"""
+title	->	"""Example: Overlay Tracks"""
+title	->	"""Example: Overlayed Tracks"""
+title	->	"""Example: Semantic Zooming"""
+title	->	"""GFF3 file"""
+title	->	"""GIVE"""
+title	->	"""Gain"""
+title	->	"""Gap"""
+title	->	"""Genes"""
+title	->	"""GmGDV"""
+title	->	"""Gremlin (O'Brien et al. 2010)"""
+title	->	"""Group Marks By Chromosome"""
+title	->	"""Group Marks By Gene"""
+title	->	"""Group Marks By Genomic Position"""
+title	->	"""Group Marks By Sample"""
+title	->	"""HFFC6_CTCF"""
+title	->	"""HFFc6_ATAC"""
+title	->	"""HFFc6_H3K4me3"""
+title	->	"""HFFc6_Hi-C"""
+title	->	"""HFFc6_Micro-C"""
+title	->	"""Hi-C Matrix"""
+title	->	"""HiGlass"""
+title	->	"""IGV"""
+title	->	"""Ideogram"""
+title	->	"""Individual Marks"""
+title	->	"""LOH"""
+title	->	"""Layout and Arrangement"""
+title	->	"""Likely Benign"""
+title	->	"""Mark Displacement"""
+title	->	"""Matrix Visualization"""
+title	->	"""NC_045512.2 Genes"""
+title	->	"""NC_045512.2 Sequence"""
+title	->	"""New Approach: Stretching Tiles"""
+title	->	"""Original Approach"""
+title	->	"""Patient Overview (PD35930a)"""
+title	->	"""Pileup Track Using BAM Data"""
+title	->	"""Placeholder track"""
+title	->	"""Placeholder"""
+title	->	"""Putative Driver"""
+title	->	"""Rearrangement View"""
+title	->	"""Region of Interest"""
+title	->	"""S Protein Annotation"""
+title	->	"""SARS-CoV-2"""
+title	->	"""Sample 1"""
+title	->	"""Sample 2"""
+title	->	"""Sample 3"""
+title	->	"""Smoother Zoom"""
+title	->	"""Structural Variant"""
+title	->	"""TRS-L-Dependent Recombination Events"""
+title	->	"""Track Template In Gosling.js"""
+title	->	"""Visual Linking"""
+title	->	"""example_higlass.bam"""
+title	->	"""hg38 | Genes"""
+title	->	"""hg38 | Transcript (Max. 15 Rows)"""
+tooltip	->	[{'field': 'Chr.', 'type': 'nominal'}]
+tooltip	->	[{'field': 'DISTPREVLOGE', 'type': 'nominal', 'format': 's1'}, {'field': 'POS', 'type': 'genomic'}]
+tooltip	->	[{'field': 'POS', 'type': 'genomic'}, {'field': 'POSEND', 'type': 'genomic'}, {'field': 'MUTTYPE', 'type': 'nominal'}, {'field': 'ALT', 'type': 'nominal'}, {'field': 'REF', 'type': 'nominal'}, {'field': 'QUAL', 'type': 'quantitative'}]
+tooltip	->	[{'field': 'name', 'type': 'nominal'}]
+tooltip	->	[{'field': 'start', 'type': 'genomic', 'alt': 'Start Position'}, {'field': 'end', 'type': 'genomic', 'alt': 'End Position'}, {'field': 'peak', 'type': 'quantitative', 'alt': 'Value', 'format': '.2'}, {'field': 'sample', 'type': 'nominal', 'alt': 'Sample'}]
+tooltip	->	[{'field': 'start', 'type': 'genomic'}, {'field': 'end', 'type': 'genomic'}, {'field': 'insertSize', 'type': 'quantitative'}, {'field': 'svType', 'type': 'nominal'}, {'field': 'strand', 'type': 'nominal'}, {'field': 'numMates', 'type': 'quantitative'}, {'field': 'mateIds', 'type': 'nominal'}]
+tooltip	->	[{'field': 'start1', 'type': 'genomic'}, {'field': 'end2', 'type': 'genomic'}, {'field': 'svclass', 'type': 'nominal'}]
+track	->	
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" experimental ""+"" height ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" id ""+"" opacity ""+"" row ""+"" style ""+"" tracks ""+"" visibility ""+"" width"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" opacity ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" tracks ""+"" width ""+"" x ""+"" y"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" row ""+"" title ""+"" tracks ""+"" visibility ""+"" width"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" size ""+"" stroke ""+"" style ""+"" title ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" row ""+"" title ""+"" tracks ""+"" visibility ""+"" width"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" row ""+"" title ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" style ""+"" text ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"alignment ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"alignment ""+"" data ""+"" experimental ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" tracks ""+"" width ""+"" x ""+"" y"
+track	->	"alignment ""+"" data ""+"" height ""+"" opacity ""+"" tracks ""+"" width"
+track	->	"alignment ""+"" data ""+"" height ""+"" row ""+"" title ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" data ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" visibility ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" data ""+"" height ""+"" stroke ""+"" strokeWidth ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" data ""+"" height ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" height ""+"" tracks ""+"" width"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" tooltip ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" overlayOnPreviousTrack ""+"" size ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" style ""+"" text ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" style ""+"" visibility ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" strokeWidth ""+"" style ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" style ""+"" text ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" x"
+track	->	"color ""+"" data ""+"" displacement ""+"" height ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" experimental ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" tooltip ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" flipY ""+"" height ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" style ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" height ""+"" id ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" id ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" id ""+"" mark ""+"" style ""+"" width ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"color ""+"" data ""+"" height ""+"" layout ""+"" mark ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" title ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" width ""+"" x"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" style ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" stretch ""+"" style ""+"" text ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" height ""+"" mark ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"color ""+"" data ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"color ""+"" data ""+"" mark ""+"" strokeWidth ""+"" x"
+track	->	"color ""+"" data ""+"" mark ""+"" strokeWidth ""+"" y"
+track	->	"color ""+"" data ""+"" mark ""+"" style ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"color ""+"" data ""+"" mark ""+"" visibility ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" mark ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" dataTransform ""+"" mark"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" size"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" size ""+"" visibility"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" style ""+"" x"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" text ""+"" visibility"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" text ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" x"
+track	->	"color ""+"" dataTransform ""+"" mark ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransform ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" visibility ""+"" x ""+"" y"
+track	->	"color ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x"
+track	->	"color ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style"
+track	->	"color ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" text ""+"" visibility ""+"" xe"
+track	->	"color ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" x"
+track	->	"color ""+"" mark ""+"" size"
+track	->	"color ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth"
+track	->	"color ""+"" mark ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth"
+track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" text"
+track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" visibility"
+track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x"
+track	->	"color ""+"" mark ""+"" text ""+"" y"
+track	->	"color ""+"" mark ""+"" x"
+track	->	"color ""+"" mark ""+"" xe"
+track	->	"data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"data ""+"" encoding ""+"" experimental ""+"" height ""+"" style ""+"" template ""+"" title ""+"" tooltip ""+"" width"
+track	->	"data ""+"" encoding ""+"" height ""+"" template ""+"" width"
+track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" y"
+track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" stroke ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"data ""+"" height ""+"" mark ""+"" opacity ""+"" style ""+"" width ""+"" x ""+"" y"
+track	->	"data ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" title ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark"
+track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" visibility"
+track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" x"
+track	->	"dataTransform ""+"" mark ""+"" size ""+"" x"
+track	->	"dataTransform ""+"" mark ""+"" size ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" style ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransform ""+"" mark ""+"" text ""+"" x ""+"" xe"
+track	->	mark
+track	->	"mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
+track	->	"mark ""+"" opacity ""+"" x ""+"" y"
+track	->	"mark ""+"" size"
+track	->	"mark ""+"" size ""+"" stroke ""+"" strokeWidth"
+track	->	"mark ""+"" strokeWidth ""+"" x"
+track	->	"mark ""+"" x"
+track	->	"mark ""+"" x ""+"" xe"
+track	->	"mark ""+"" x ""+"" y"
+track	->	"mark ""+"" y"
+track	->	"size ""+"" visibility"
+track	->	"style ""+"" title ""+"" type"
+track	->	"visibility ""+"" xe"
+type	->	"""bam"""
+type	->	"""bed"""
+type	->	"""beddb"""
+type	->	"""bigwig"""
+type	->	"""csv"""
+type	->	"""dummy-track"""
+type	->	"""genomic"""
+type	->	"""gff"""
+type	->	"""json"""
+type	->	"""matrix"""
+type	->	"""multivec"""
+type	->	"""nominal"""
+type	->	"""pile"""
+type	->	"""quantitative"""
+type	->	"""triangleLeft"""
+type	->	"""triangleRight"""
+type	->	"""vcf"""
+type	->	"""vector"""
+type	->	field
+value	->	"""#0070DC"""
+value	->	"""#0072B2"""
+value	->	"""#029F73"""
+value	->	"""#0900B1"""
+value	->	"""#2270B5"""
+value	->	"""#3275B4"""
+value	->	"""#333"""
+value	->	"""#3C4DB4"""
+value	->	"""#4050B4"""
+value	->	"""#414141"""
+value	->	"""#62AAD7"""
+value	->	"""#666666"""
+value	->	"""#6CB74C"""
+value	->	"""#73C475"""
+value	->	"""#777777"""
+value	->	"""#8A96D5"""
+value	->	"""#94C2EF"""
+value	->	"""#999999"""
+value	->	"""#99FEFF"""
+value	->	"""#A0A0F2"""
+value	->	"""#AFD8FF"""
+value	->	"""#B40101"""
+value	->	"""#B74780"""
+value	->	"""#BB57C9"""
+value	->	"""#C6C6C6"""
+value	->	"""#CB7AA7"""
+value	->	"""#CC7DAA"""
+value	->	"""#E2A6F5"""
+value	->	"""#E6A01B"""
+value	->	"""#E79F00"""
+value	->	"""#EEEDA1"""
+value	->	"""#FB6A4B"""
+value	->	"""#FC8D3D"""
+value	->	"""#FF6666"""
+value	->	"""0"""
+value	->	"""0.1"""
+value	->	"""0.15"""
+value	->	"""0.2"""
+value	->	"""0.3"""
+value	->	"""0.4"""
+value	->	"""0.5"""
+value	->	"""0.6"""
+value	->	"""0.8"""
+value	->	"""0.9"""
+value	->	"""1"""
+value	->	"""1.5"""
+value	->	"""18"""
+value	->	"""2"""
+value	->	"""20"""
+value	->	"""3"""
+value	->	"""30"""
+value	->	"""33"""
+value	->	"""4"""
+value	->	"""400"""
+value	->	"""48"""
+value	->	"""5"""
+value	->	"""6"""
+value	->	"""black"""
+value	->	"""blue"""
+value	->	"""count"""
+value	->	"""darkgreen"""
+value	->	"""darkyellow"""
+value	->	"""gray"""
+value	->	"""lightgray"""
+value	->	"""lightgrey"""
+value	->	"""none"""
+value	->	"""peak"""
+value	->	"""red"""
+value	->	"""steelBlue"""
+value	->	"""steelblue"""
+value	->	"""value"""
+value	->	"""white"""
+value	->	"""y"""
+value	->	"""↓"""
+view	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" tracks ""+"" xDomain"
+view	->	"alignment ""+"" centerRadius ""+"" linkingId ""+"" tracks ""+"" xDomain"
+view	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" style ""+"" title ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
+view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" spacing ""+"" static ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe ""+"" y"
+view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe ""+"" y"
+view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" style ""+"" text ""+"" tracks ""+"" width ""+"" x ""+"" xDomain"
+view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" row ""+"" title ""+"" tracks ""+"" visibility ""+"" width"
+view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" row ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
+view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" row ""+"" title ""+"" tracks ""+"" visibility ""+"" width"
+view	->	"alignment ""+"" data ""+"" height ""+"" layout ""+"" static ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe"
+view	->	"alignment ""+"" data ""+"" height ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" tracks ""+"" visibility ""+"" width"
+view	->	"alignment ""+"" data ""+"" height ""+"" row ""+"" size ""+"" title ""+"" tracks ""+"" visibility ""+"" width"
+view	->	"alignment ""+"" height ""+"" static ""+"" tracks ""+"" width ""+"" xDomain"
+view	->	"alignment ""+"" height ""+"" style ""+"" tracks ""+"" width"
+view	->	"alignment ""+"" height ""+"" tracks ""+"" width"
+view	->	"alignment ""+"" layout ""+"" static ""+"" tracks"
+view	->	"arrangement ""+"" spacing ""+"" style ""+"" views"
+view	->	"arrangement ""+"" spacing ""+"" views"
+view	->	"arrangement ""+"" views"
+view	->	"centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" tracks ""+"" xDomain"
+view	->	"height ""+"" tracks ""+"" width"
+view	->	"layout ""+"" linkingId ""+"" tracks ""+"" xDomain"
+view	->	"layout ""+"" spacing ""+"" tracks ""+"" xOffset"
+view	->	"layout ""+"" tracks"
+view	->	"linkingId ""+"" spacing ""+"" tracks"
+view	->	"linkingId ""+"" spacing ""+"" tracks ""+"" xDomain"
+view	->	"linkingId ""+"" tracks ""+"" xDomain"
+view	->	"orientation ""+"" spacing ""+"" tracks ""+"" xDomain ""+"" yOffset"
+view	->	"orientation ""+"" spacing ""+"" tracks ""+"" yOffset"
+view	->	"orientation ""+"" views ""+"" yOffset"
+view	->	"spacing ""+"" tracks"
+view	->	"spacing ""+"" tracks ""+"" xOffset"
+view	->	"spacing ""+"" views"
+view	->	tracks
+view	->	"tracks ""+"" xDomain"
+view	->	views
+width	->	"""True"""
+width	->	NUM
+x	->	"aggregate ""+"" field ""+"" type"
+x	->	"axis ""+"" domain ""+"" field ""+"" linkingId ""+"" type"
+x	->	"axis ""+"" domain ""+"" field ""+"" type"
+x	->	"axis ""+"" field ""+"" linkingId ""+"" type"
+x	->	"axis ""+"" field ""+"" type"
+x	->	"domain ""+"" field ""+"" linkingId ""+"" type"
+x	->	"domain ""+"" field ""+"" type"
+x	->	"field ""+"" linkingId ""+"" type"
+x	->	"field ""+"" type"
+x	->	linkingId
+x1	->	"axis ""+"" domain ""+"" field ""+"" type"
+x1	->	"field ""+"" type"
+x1e	->	"field ""+"" type"
+xDomain	->	chromosome
+xDomain	->	"chromosome ""+"" interval"
+xDomain	->	interval
+xOffset	->	"""190"""
+xOffset	->	"""250"""
+xe	->	"aggregate ""+"" field ""+"" type"
+xe	->	"axis ""+"" field ""+"" type"
+xe	->	"field ""+"" type"
+y	->	"axis ""+"" field ""+"" type"
+y	->	"baseline ""+"" domain ""+"" field ""+"" grid ""+"" range ""+"" type"
+y	->	"baseline ""+"" domain ""+"" field ""+"" range ""+"" type"
+y	->	"field ""+"" type"
+y	->	value
+yOffset	->	"""250"""
+yOffset	->	"""75"""
+ye	->	"axis ""+"" field ""+"" type"
+ye	->	"field ""+"" type"
+zoomLimits	->	[1, 396]
+Nothing	->	None
