@@ -2,19 +2,27 @@ import json
 import re
 import csv
 
+# extracting CFG rules from a JSON structure by recursively processing each key-value pair
+# parent_key -> child_keys
+
 def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
-    """Recursive function to extract the CFG rules: LHS -> RHS for each node encountered."""
     NUMBER_PROPERTIES = ['backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', "opacity", "outlineWidth", "padding",'sampleLength', 'spacing', 'strokeWidth', 'textFontSize', 'textStrokeWidth', 'width', 'value[geneHeight]', 'value[geneLabelFontSize]', 'value[geneLabelOpacity]', 'value[geneLabelStrokeThickness]', 'value[opacity]',  'value[strokeWidth]', 'value[y]', 'xOffset', 'yOffset',
                          # from ignore list
                          "maxInsertSize", "size", 
                         # extended from ignore
-                         "value[size]"]
+                         "value[size]", 
+                        ]
     
     STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", "field",  "legendTitle", "linkingId", "outline", "range[color]", "stroke", "subtitle", "template", "title", "value[color]", "value[data]", "value[geneLabelStroke]", "value[stainStroke]",  "value[stroke]", "value[text]", 
                          # from ignore list
-                         "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", "indexUrl", "longToWideId", "row", "separator", "start", "url"]
+                         "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", 
+                         "indexUrl", "longToWideId", "row", "separator", "start", "url", 
+                        ]
     
-    ARRAY_PROPERTIES = ["assembly", "dashed", "domain[color]", "domain[stroke]", "domain[y]", "interval", "range[color]", "range[geneLabelColor]", "range[strandColor]", "range[stroke]", "range[y]", "tooltip", "visibility", "zoomLimits",
+    ARRAY_PROPERTIES = ["assembly", "dashed", "domain[color]", "domain[stroke]", "domain[y]",
+                        "interval", "range[color]", "range[geneLabelColor]", "range[strandColor]",  
+                        "range[stroke]", "range[y]",
+                        "tooltip", "visibility", "zoomLimits",
                         # from ignore list
                         # A1, terminal symbol
                         "categories",  "customFields", "genomicFields", "headerNames", 
@@ -23,26 +31,43 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
                         "attributesToFields",  "exonIntervalFields", "genomicFieldsToConvert", "responsiveSpec", "valueFields", "values",
                         
                         # extended from ignore
-                        "domain[row]", "range[size]"]
+                        "domain[row]", "range[size]"
+                       ]
         
     KEYS_WITH_GRANDPARENTS = ["domain", "range", "type", "value"]
     
     # Adjust key if it is "type" or "value"
     adjusted_key = f"{parentkey}[{grandparent_key}]" if parentkey in KEYS_WITH_GRANDPARENTS else parentkey  # LHS
-    rhs = ' "+" '.join(sorted(node.keys()))  # Construct RHS
+    rhs_elements = sorted(node.keys())  # Get RHS elements
+    rhs = ' "+" '.join(rhs_elements) if rhs_elements else ""  # Construct RHS
 
-    thisrule = adjusted_key + ' -> ' + rhs
+    thisrule = f"{adjusted_key} -> {rhs}"
+
+    # Only detect and print **truly empty** RHS rules
+    if not rhs:  
+        print(f"\n🚨 Empty RHS detected for rule 1: {adjusted_key} -> [EMPTY]")
+        if spec:  
+            print("🔍 Full spec containing the empty rule:")
+            print(json.dumps(spec, indent=2))
+
     rules.append(thisrule)
 
     # Recursively process child nodes
     for k in sorted(node.keys()):
         v = node[k]
 
+        # Detect **actual** empty RHS
+        if isinstance(v, dict) and not v:  # If v is an empty dict {}
+            print(f"\n🚨 Empty RHS detected for rule 2: {k} -> [EMPTY]")
+            if spec:
+                print("🔍 Full spec containing the empty rule:")
+                print(json.dumps(spec, indent=2))
+
         lhs = k  # Left-hand side of the rule
         new_parent = f"{k}[{parentkey}]" if k in KEYS_WITH_GRANDPARENTS else k
             
-        if isinstance(v, dict):  # If the value is a dictionary (object), recurse
-            get_rules(v, new_parent, rules, parentkey)
+        if isinstance(v, dict):  
+            get_rules(v, new_parent, rules, parentkey, spec=spec)
         
         elif isinstance(v, list):  # If the value is a list (array)
             if new_parent in ARRAY_PROPERTIES:
@@ -50,7 +75,7 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
             elif k in ["tracks", "views"]:  # Special handling for tracks and views
                 for index, item in enumerate(v):
                     if isinstance(item, dict):  # Ensure it's a dictionary before recursion
-                        get_rules(item, k[:-1], rules, parentkey)  # Convert "tracks" -> "track"
+                        get_rules(item, k[:-1], rules, parentkey, spec=spec)  # Convert "tracks" -> "track"
                     else:
                         rules.append(k[:-1] + ' -> ' + '"' + str(item) + '"')  # Terminal rule
             elif k == "dataTransform":
@@ -73,11 +98,12 @@ def extract_rules(inputfile, outputfile, output_tsv):
     with open(inputfile, 'r') as inputs:
         for line in inputs:
             try:
-                specs.append(json.loads(line))
+                spec = json.loads(line)
+                specs.append(spec)
             except Exception as e:
                 print(f"Error parsing JSON: {e}")
 
-    print(f'Total specs: {len(specs)}')
+    print(f'Length of specs: {len(specs)}')
     if not specs:
         print("No valid JSON objects found in the input file.")
         return
@@ -87,8 +113,7 @@ def extract_rules(inputfile, outputfile, output_tsv):
 
     for spec in specs:
         rules = []
-        get_rules(spec, 'root', rules)
-        # print(f"Extracted rules for a spec: {rules}")  # Debugging line
+        get_rules(spec, 'root', rules, spec=spec)  # Pass the full spec
 
         for r in rules:
             if r not in allrules:
@@ -99,11 +124,17 @@ def extract_rules(inputfile, outputfile, output_tsv):
 
     print(f'Max rule length: {max_rulelen}')
     print(f'Total unique rules extracted: {len(allrules)}')
-
     
-    # Placeholder for empty or default cases
+
+    # Save rules to output text file
     allrules = sorted(allrules.keys())
     allrules.append('Nothing -> None')
+
+    with open(outputfile, 'w') as outf:
+        for r in allrules:
+            outf.write(r + '\n')
+
+    print("Extraction complete. Rules written to file.")
     
     # Count distinct LHS
     lhs_set = set()
@@ -113,13 +144,6 @@ def extract_rules(inputfile, outputfile, output_tsv):
         lhs_set.add(lhs)  # Store unique LHS
     
     print(f"Total distinct LHS count: {len(lhs_set)}")
-
-    # Write to text file
-    with open(outputfile, 'w') as outf:
-        for r in allrules:
-            outf.write(r + '\n')
-
-    print("Extraction complete. Rules written to file.")
     
     # Write to TSV file
     with open(output_tsv, 'w', newline='') as tsvfile:
