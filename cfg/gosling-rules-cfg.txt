@@ -11,6 +11,7 @@ arrangement -> "vertical"
 assembly -> "hg19"
 assembly -> "unknown"
 assembly -> ARRAY
+attributesToFields -> ARRAY
 axis -> "bottom"
 axis -> "left"
 axis -> "none"
@@ -24,8 +25,11 @@ baseLabelColor -> field "+" type
 baseline -> STRING
 binSize -> NUMBER
 brush -> color "+" stroke
+categories -> ARRAY
 centerRadius -> NUMBER
 chromosome -> STRING
+chromosomeField -> STRING
+chromosomePrefix -> STRING
 click -> "True"
 color -> STRING
 color -> domain "+" field "+" legend "+" range "+" type
@@ -37,6 +41,8 @@ color -> field "+" legend "+" type
 color -> field "+" range "+" type
 color -> field "+" type
 color -> value
+column -> STRING
+customFields -> ARRAY
 dashed -> ARRAY
 data -> attributesToFields "+" indexUrl "+" type "+" url
 data -> binSize "+" categories "+" column "+" end "+" row "+" start "+" type "+" url "+" value
@@ -75,6 +81,7 @@ dataTransform -> filter, filter
 description -> STRING
 displacement -> padding "+" type
 domain[color] -> ARRAY
+domain[row] -> ARRAY
 domain[stroke] -> ARRAY
 domain[x1] -> chromosome
 domain[x] -> chromosome
@@ -87,8 +94,10 @@ enableSmoothPath -> "True"
 encoding -> barLength "+" baseBackground "+" baseLabelColor "+" endPosition "+" position "+" startPosition
 encoding -> endPosition "+" geneHeight "+" geneLabel "+" geneLabelColor "+" geneLabelFontSize "+" geneLabelOpacity "+" geneLabelStroke "+" geneLabelStrokeThickness "+" opacity "+" startPosition "+" strandColor "+" strandRow "+" type
 encoding -> endPosition "+" name "+" stainBackgroundColor "+" stainLabelColor "+" stainStroke "+" startPosition
+end -> STRING
 endPosition -> field
 endPosition -> field "+" type
+exonIntervalFields -> ARRAY
 experimental -> mouseEvents
 experimental -> stretchGraphics
 field -> STRING
@@ -101,9 +110,15 @@ geneLabelFontSize -> value
 geneLabelOpacity -> value
 geneLabelStroke -> value
 geneLabelStrokeThickness -> value
+genomicFields -> ARRAY
+genomicFieldsToConvert -> ARRAY
 grid -> "True"
+groupMarksByField -> STRING
+headerNames -> ARRAY
 height -> "False"
 height -> NUMBER
+id -> STRING
+indexUrl -> STRING
 inlineLegend -> "True"
 interval -> ARRAY
 layout -> "circular"
@@ -115,6 +130,8 @@ linePattern -> size "+" type
 linkConnectionType -> "corner"
 linkStyle -> "elliptical"
 linkingId -> STRING
+loadMates -> "True"
+longToWideId -> STRING
 mark -> "area"
 mark -> "bar"
 mark -> "betweenLink"
@@ -130,6 +147,7 @@ mark -> "triangleRight"
 mark -> "withinLink"
 matrixExtent -> "lower-left"
 matrixExtent -> "upper-right"
+maxInsertSize -> NUMBER
 mouseEvents -> click "+" groupMarksByField "+" mouseOver "+" rangeSelect
 mouseEvents -> groupMarksByField "+" mouseOver "+" rangeSelect
 mouseEvents -> mouseOver "+" rangeSelect
@@ -149,11 +167,13 @@ rangeSelect -> "True"
 range[color] -> ARRAY
 range[color] -> STRING
 range[geneLabelColor] -> ARRAY
+range[size] -> ARRAY
 range[strandColor] -> ARRAY
 range[stroke] -> ARRAY
 range[y] -> ARRAY
 responsiveSize -> height "+" width
 responsiveSize -> width
+responsiveSpec -> ARRAY
 root -> alignment "+" centerRadius "+" description "+" layout "+" spacing "+" static "+" title "+" tracks
 root -> alignment "+" centerRadius "+" layout "+" spacing "+" static "+" title "+" tracks
 root -> alignment "+" centerRadius "+" layout "+" spacing "+" static "+" tracks
@@ -186,14 +206,26 @@ root -> subtitle "+" title "+" tracks
 root -> subtitle "+" title "+" views "+" xDomain
 root -> title "+" tracks
 root -> tracks
+row -> STRING
+row -> domain "+" field "+" legend "+" type
+row -> domain "+" field "+" type
+row -> field "+" legend "+" type
+row -> field "+" padding "+" type
+row -> field "+" type
 sampleLength -> NUMBER
 select -> arrange "+" color "+" stroke "+" strokeWidth
 select -> color "+" opacity
 select -> color "+" opacity "+" strokeWidth
+separator -> STRING
+size -> NUMBER
+size -> field "+" range "+" type
+size -> field "+" type
+size -> value
 spacing -> NUMBER
 stainBackgroundColor -> field
 stainLabelColor -> field
 stainStroke -> value
+start -> STRING
 startPosition -> field
 startPosition -> field "+" type
 static -> "False"
@@ -422,6 +454,8 @@ type[endPosition] -> "genomic"
 type[linePattern] -> "triangleLeft"
 type[linePattern] -> "triangleRight"
 type[position] -> "genomic"
+type[row] -> "nominal"
+type[size] -> "quantitative"
 type[startPosition] -> "genomic"
 type[stroke] -> "nominal"
 type[text] -> "nominal"
@@ -434,6 +468,8 @@ type[y] -> "genomic"
 type[y] -> "nominal"
 type[y] -> "quantitative"
 type[ye] -> "genomic"
+url -> STRING
+valueFields -> ARRAY
 value[color] -> STRING
 value[data] -> STRING
 value[geneHeight] -> NUMBER
@@ -442,11 +478,13 @@ value[geneLabelOpacity] -> NUMBER
 value[geneLabelStrokeThickness] -> NUMBER
 value[geneLabelStroke] -> STRING
 value[opacity] -> NUMBER
+value[size] -> NUMBER
 value[stainStroke] -> STRING
 value[strokeWidth] -> NUMBER
 value[stroke] -> STRING
 value[text] -> STRING
 value[y] -> NUMBER
+values -> ARRAY
 view -> alignment "+" centerRadius "+" layout "+" spacing "+" tracks "+" xDomain
 view -> alignment "+" centerRadius "+" linkingId "+" tracks "+" xDomain
 view -> alignment "+" color "+" data "+" dataTransform "+" height "+" opacity "+" row "+" style "+" title "+" tracks "+" visibility "+" width "+" xDomain

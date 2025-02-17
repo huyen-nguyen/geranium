@@ -6,25 +6,33 @@ import csv
 # parent_key -> child_keys
 
 def get_rules(node, parentkey, rules, grandparent_key="root"):
-    IGNORED_LIST = ["attributesToFields", "categories", "chromosomeField", "chromosomePrefix", "column", "customFields", "end", "exonIntervalFields", 
-                    "genomicFields", "genomicFieldsToConvert", "groupMarksByField", "headerNames", "id", "indexUrl", "loadMates", "longToWideId", 
-                    "maxInsertSize", "row", "separator", "size", "start", "responsiveSpec", "url", "valueFields", "values"]
-    
-    NUMBER_PROPERTIES = ['backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', 
-                         "opacity", "outlineWidth", "padding",'sampleLength', 'spacing', 'strokeWidth', 'textFontSize', 'textStrokeWidth', 'width', 'value[geneHeight]', 'value[geneLabelFontSize]', 'value[geneLabelOpacity]', 'value[geneLabelStrokeThickness]', 'value[opacity]', 'value[strokeWidth]', 'value[y]', 'xOffset', 'yOffset',
+    IGNORED_LIST = []
+    NUMBER_PROPERTIES = ['backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', "opacity", "outlineWidth", "padding",'sampleLength', 'spacing', 'strokeWidth', 'textFontSize', 'textStrokeWidth', 'width', 'value[geneHeight]', 'value[geneLabelFontSize]', 'value[geneLabelOpacity]', 'value[geneLabelStrokeThickness]', 'value[opacity]',  'value[strokeWidth]', 'value[y]', 'xOffset', 'yOffset',
+                         # from ignore list
+                         "maxInsertSize", "size", 
+                        # extended from ignore
+                         "value[size]", 
                         ]
     
-    STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", "field", 
-                         "legendTitle", "linkingId", "outline", "range[color]",  
-                          "stroke", "subtitle", "template",
-                         "title", "value[color]", "value[data]", "value[geneLabelStroke]", "value[stainStroke]",
-                         "value[stroke]", "value[text]", 
+    STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", "field",  "legendTitle", "linkingId", "outline", "range[color]", "stroke", "subtitle", "template", "title", "value[color]", "value[data]", "value[geneLabelStroke]", "value[stainStroke]",  "value[stroke]", "value[text]", 
+                         # from ignore list
+                         "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", 
+                         "indexUrl", "longToWideId", "row", "separator", "start", "url", 
                         ]
     
     ARRAY_PROPERTIES = ["assembly", "dashed", "domain[color]", "domain[stroke]", "domain[y]",
                         "interval", "range[color]", "range[geneLabelColor]", "range[strandColor]",  
                         "range[stroke]", "range[y]",
-                        "tooltip", "visibility", "zoomLimits"
+                        "tooltip", "visibility", "zoomLimits",
+                        # from ignore list
+                        # A1, terminal symbol
+                        "categories",  "customFields", "genomicFields", "headerNames", 
+                        
+                        # A2c, objects
+                        "attributesToFields",  "exonIntervalFields", "genomicFieldsToConvert", "responsiveSpec", "valueFields", "values",
+                        
+                        # extended from ignore
+                        "domain[row]", "range[size]"
                        ]
         
     KEYS_WITH_GRANDPARENTS = ["domain", "range", "type", "value"]
