@@ -11,25 +11,24 @@ arrangement	->	"""serial"""
 arrangement	->	"""vertical"""
 assembly	->	"""hg19"""
 assembly	->	"""unknown"""
-assembly	->	[['NC_045512.2', 29903]]
-assembly	->	[['U00096.3', 4641652]]
+assembly	->	ARRAY
 axis	->	"""bottom"""
 axis	->	"""left"""
 axis	->	"""none"""
 axis	->	"""right"""
 axis	->	"""top"""
-background	->	STR
-backgroundOpacity	->	NUM
+background	->	STRING
+backgroundOpacity	->	NUMBER
 barLength	->	"field ""+"" type"
 baseBackground	->	"field ""+"" type"
 baseLabelColor	->	"field ""+"" type"
-baseline	->	STR
-binSize	->	NUM
+baseline	->	STRING
+binSize	->	NUMBER
 brush	->	"color ""+"" stroke"
-centerRadius	->	NUM
-chromosome	->	STR
-click	->	TRUE
-color	->	STR
+centerRadius	->	NUMBER
+chromosome	->	STRING
+click	->	"""True"""
+color	->	STRING
 color	->	"domain ""+"" field ""+"" legend ""+"" range ""+"" type"
 color	->	"domain ""+"" field ""+"" legend ""+"" type"
 color	->	"domain ""+"" field ""+"" range ""+"" type"
@@ -39,7 +38,7 @@ color	->	"field ""+"" legend ""+"" type"
 color	->	"field ""+"" range ""+"" type"
 color	->	"field ""+"" type"
 color	->	value
-dashed	->	TRUE
+dashed	->	ARRAY
 data	->	"attributesToFields ""+"" indexUrl ""+"" type ""+"" url"
 data	->	"binSize ""+"" categories ""+"" column ""+"" end ""+"" row ""+"" start ""+"" type ""+"" url ""+"" value"
 data	->	"binSize ""+"" categories ""+"" column ""+"" row ""+"" type ""+"" url ""+"" value"
@@ -74,33 +73,16 @@ dataTransform	->	displace, subjson, filter
 dataTransform	->	filter
 dataTransform	->	filter, displace
 dataTransform	->	filter, filter
-description	->	STR
+description	->	STRING
 displacement	->	"padding ""+"" type"
-domain[color]	->	['', '25', '50', '75', '100']
-domain[color]	->	['+', '-']
-domain[color]	->	['A', 'T', 'G', 'C']
-domain[color]	->	['C>A', 'C>G', 'C>T', 'T>A', 'T>C', 'T>G']
-domain[color]	->	['Insertion', 'Deletion']
-domain[color]	->	['Pathogenic', 'Pathogenic/Likely_pathogenic', 'Likely_pathogenic', 'Uncertain_significance', 'Likely_benign', 'Benign/Likely_benign', 'Benign']
-domain[color]	->	['chr1', 'chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'chr7', 'chr8', 'chr9', 'chr10', 'chr11', 'chr12', 'chr13', 'chr14', 'chr15', 'chr16', 'chr17', 'chr18', 'chr19', 'chr20', 'chr21', 'chr22', 'chrX', 'chrY']
-domain[color]	->	['gneg', 'gpos25', 'gpos50', 'gpos75', 'gpos100', 'gvar', 'acen']
-domain[color]	->	['gneg', 'gpos25', 'gpos50', 'gpos75', 'gpos100', 'gvar']
-domain[color]	->	['hs5', 'hs4', 'hs6']
-domain[color]	->	['normal read', 'deletion (+-)', 'inversion (++)', 'inversion (--)', 'duplication (-+)', 'more than two mates', 'mates not found within chromosome', 'clipping']
-domain[color]	->	['protein_coding', 'tRNA', 'rRNA', 'ncRNA', 'pseudogene', 'unknown']
-domain[color]	->	['receptor-binding domain (RBD)', 'receptor-binding motif (RBM)', 'S1/S2 cleavage site', 'heptad repeat 1 (HR1)', 'heptad repeat 2 (HR2)']
-domain[color]	->	['tandem-duplication', 'translocation', 'delection', 'inversion']
-domain[stroke]	->	['Insertion', 'Deletion']
-domain[stroke]	->	['Pathogenic', 'Pathogenic/Likely_pathogenic', 'Likely_pathogenic', 'Uncertain_significance', 'Likely_benign', 'Benign/Likely_benign', 'Benign']
-domain[stroke]	->	['deletion', 'inversion', 'translocation', 'tandem-duplication']
-domain[stroke]	->	['hs5', 'hs4', 'hs6']
-domain[stroke]	->	['tandem-duplication', 'translocation', 'delection', 'inversion']
+domain[color]	->	ARRAY
+domain[stroke]	->	ARRAY
 domain[x1]	->	chromosome
 domain[x]	->	chromosome
 domain[x]	->	"chromosome ""+"" interval"
-domain[y]	->	['Pathogenic', 'Pathogenic/Likely_pathogenic', 'Likely_pathogenic', 'Uncertain_significance', 'Likely_benign', 'Benign/Likely_benign', 'Benign']
-dx	->	NUM
-dy	->	NUM
+domain[y]	->	ARRAY
+dx	->	NUMBER
+dy	->	NUMBER
 enableSmoothPath	->	"""False"""
 enableSmoothPath	->	"""True"""
 encoding	->	"barLength ""+"" baseBackground ""+"" baseLabelColor ""+"" endPosition ""+"" position ""+"" startPosition"
@@ -110,7 +92,7 @@ endPosition	->	field
 endPosition	->	"field ""+"" type"
 experimental	->	mouseEvents
 experimental	->	stretchGraphics
-field	->	STR
+field	->	STRING
 flipY	->	"""False"""
 flipY	->	"""True"""
 geneHeight	->	value
@@ -122,30 +104,18 @@ geneLabelStroke	->	value
 geneLabelStrokeThickness	->	value
 grid	->	"""True"""
 height	->	"""False"""
-height	->	NUM
+height	->	NUMBER
 inlineLegend	->	"""True"""
-interval	->	TRUE
+interval	->	ARRAY
 layout	->	"""circular"""
 layout	->	"""linear"""
 legend	->	"""False"""
 legend	->	"""True"""
-legendTitle	->	"""Insert Size = 300bp"""
-legendTitle	->	"""SV Class"""
+legendTitle	->	STRING
 linePattern	->	"size ""+"" type"
 linkConnectionType	->	"""corner"""
 linkStyle	->	"""elliptical"""
-linkingId	->	"""-"""
-linkingId	->	"""1"""
-linkingId	->	"""2"""
-linkingId	->	"""commonId"""
-linkingId	->	"""detail"""
-linkingId	->	"""detail-1"""
-linkingId	->	"""detail-2"""
-linkingId	->	"""link1"""
-linkingId	->	"""linking-with-brush"""
-linkingId	->	"""mid-scale"""
-linkingId	->	"""view1"""
-linkingId	->	"""view2"""
+linkingId	->	STRING
 mark	->	"""area"""
 mark	->	"""bar"""
 mark	->	"""betweenLink"""
@@ -168,64 +138,23 @@ mouseOver	->	"""True"""
 mouseOver	->	"arrange ""+"" color ""+"" stroke ""+"" strokeWidth"
 mouseOver	->	"color ""+"" opacity ""+"" strokeWidth"
 name	->	field
-opacity	->	"""0.5"""
+opacity	->	NUMBER
 opacity	->	value
 orientation	->	"""vertical"""
-outline	->	"""#0072B2"""
-outline	->	"""#029F73"""
-outline	->	"""#8DC1F2"""
-outline	->	"""#CB7AA7"""
-outline	->	"""#D45E00"""
-outline	->	"""#E79F00"""
-outline	->	"""black"""
-outline	->	"""lightgray"""
-outline	->	"""white"""
-outlineWidth	->	"""0"""
-outlineWidth	->	"""0.5"""
-outlineWidth	->	"""1"""
-outlineWidth	->	"""3"""
-outlineWidth	->	"""5"""
-outlineWidth	->	"""7"""
+outline	->	STRING
+outlineWidth	->	NUMBER
 overlayOnPreviousTrack	->	"""True"""
-padding	->	"""3.5"""
+padding	->	NUMBER
 position	->	"field ""+"" type"
 rangeSelect	->	"""True"""
-range[color]	->	"""grey"""
-range[color]	->	"""pink"""
-range[color]	->	"""rdbu"""
-range[color]	->	"""warm"""
-range[color]	->	['#0072B2', '#D45E00']
-range[color]	->	['#012DB8', '#BE1E2C']
-range[color]	->	['#569C4D', '#4C75A2', '#DA5456', '#EA8A2A']
-range[color]	->	['#62AAD7', '#D1A74F', '#6CB74C']
-range[color]	->	['#7585FF', '#FF8A85']
-range[color]	->	['#97A8B2', '#D4C6BA']
-range[color]	->	['#C0C0C0', '#808080', '#404040', 'black', 'black', 'black']
-range[color]	->	['#C8C8C8', '#E79F00', '#029F73', '#0072B2', '#CB7AA7', '#57B4E9', '#D61E2E', '#414141']
-range[color]	->	['#CB3B8C', '#CB71A3', '#CB96B3', 'gray', '#029F73', '#5A9F8C', '#5A9F8C']
-range[color]	->	['#D45E00', '#D45E00', '#D45E00', 'black', '#029F73', '#029F73', '#029F73']
-range[color]	->	['#F6F6F6', 'gray']
-range[color]	->	['#FF0000', '#FF4500', '#32CD32', '#008000', '#006400', '#C2E105', '#FFFF00', '#66CDAA', '#8A91D0', '#CD5C5C', '#E9967A', '#BDB76B', '#808080', '#C0C0C0', 'gray']
-range[color]	->	['#d60000', '#018700', '#b500ff', '#05acc6', '#97ff00', '#ffa52f', '#ff8ec8', '#79525e', '#00fdcf', '#afa5ff', '#93ac83', '#9a6900', '#366962', '#d3008c', '#fdf490', '#c86e66', '#9ee2ff', '#00c846', '#a877ac', '#b8ba01']
-range[color]	->	['black', 'black', 'black', 'black', 'white', 'black']
-range[color]	->	['blue', 'red']
-range[color]	->	['orange', 'blue', 'green', 'red', 'purple', 'black']
-range[color]	->	['white', '#D9D9D9', '#979797', '#636363', 'black', '#A0A0F2']
-range[color]	->	['white', '#D9D9D9', '#979797', '#636363', 'black', '#F0F0F0', '#8D8D8D']
-range[color]	->	['white', '#D9D9D9', '#979797', '#636363', 'black']
-range[color]	->	['white', 'lightgray', 'gray', 'gray', 'black', '#7B9CC8', '#DC4542']
-range[geneLabelColor]	->	['gray']
-range[strandColor]	->	['gray']
-range[stroke]	->	['#569C4D', '#4C75A2', '#DA5456', '#EA8A2A']
-range[stroke]	->	['#62AAD7', '#D1A74F', '#6CB74C']
-range[stroke]	->	['#D45E00', '#D45E00', '#D45E00', 'black', '#029F73', '#029F73', '#029F73']
-range[stroke]	->	['#E79F00', '#029F73', '#0072B2', '#CB7AA7', '#D45E00', '#57B4E9', '#EFE441']
-range[y]	->	[150, 20]
+range[color]	->	ARRAY
+range[color]	->	STRING
+range[geneLabelColor]	->	ARRAY
+range[strandColor]	->	ARRAY
+range[stroke]	->	ARRAY
+range[y]	->	ARRAY
 responsiveSize	->	"height ""+"" width"
 responsiveSize	->	width
-responsiveSpec	->	[{'selectivity': [{'measure': 'height', 'operation': 'LT', 'threshold': 1000, 'target': 'container'}], 'spec': {'spacing': 0, 'views': [{'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'alignment': 'overlay', 'id': '1-gene', 'data': {'url': 'https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation', 'type': 'beddb', 'genomicFields': [{'index': 1, 'name': 'start'}, {'index': 2, 'name': 'end'}], 'valueFields': [{'index': 5, 'name': 'strand', 'type': 'nominal'}, {'index': 3, 'name': 'name', 'type': 'nominal'}], 'exonIntervalFields': [{'index': 12, 'name': 'start'}, {'index': 13, 'name': 'end'}]}, 'tracks': [{'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'triangleRight', 'x': {'field': 'end', 'type': 'genomic', 'axis': 'top', 'linkingId': '1'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}], 'mark': 'text', 'text': {'field': 'name', 'type': 'nominal'}, 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 3}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'triangleLeft', 'x': {'field': 'start', 'type': 'genomic'}, 'size': {'value': 15}, 'style': {'align': 'right'}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}], 'mark': 'rect', 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleRight', 'size': 5}}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleLeft', 'size': 5}}}], 'row': {'field': 'strand', 'type': 'nominal', 'domain': ['+', '-']}, 'color': {'value': '#CC7DAA'}, 'visibility': [{'operation': 'less-than', 'measure': 'width', 'threshold': '|xe-x|', 'transitionPadding': 10, 'target': 'mark'}], 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'opacity': {'value': 0.8}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'id': '1-1', 'title': 'Sample 1', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '1'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#CC7DAA'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'id': '2-1', 'title': 'Sample 1', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Zz3CBDSqQ3ySrOSe2yj1eg', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '2'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#E6A01B'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'id': '1-2', 'title': 'Sample 2', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '1'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#CC7DAA'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'id': '2-2', 'title': 'Sample 2', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=dc_SOjdCRgq_8PYf6W--7w', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '2'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#E6A01B'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr12', 'interval': [10140000, 10210000]}, 'linkingId': '1', 'tracks': [{'id': '1-3', 'title': 'Sample 3', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '1'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#CC7DAA'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'id': '2-3', 'title': 'Sample 3', 'data': {'url': 'https://resgen.io/api/v1/tileset_info/?d=Nolbrk9kS3CE0jJL_7OW1g', 'type': 'vector', 'column': 'position', 'value': 'peak', 'binSize': 4}, 'mark': 'bar', 'x': {'field': 'start', 'type': 'genomic', 'axis': 'none', 'linkingId': '2'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'y': {'field': 'peak', 'type': 'quantitative', 'axis': 'none', 'flip': False}, 'color': {'value': '#E6A01B'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 0.2}, 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'width': 700, 'height': 100}]}, {'xDomain': {'chromosome': 'chr8', 'interval': [127734000, 127744000]}, 'linkingId': '2', 'tracks': [{'alignment': 'overlay', 'id': '2-gene', 'data': {'url': 'https://server.gosling-lang.org/api/v1/tileset_info/?d=gene-annotation', 'type': 'beddb', 'genomicFields': [{'index': 1, 'name': 'start'}, {'index': 2, 'name': 'end'}], 'valueFields': [{'index': 5, 'name': 'strand', 'type': 'nominal'}, {'index': 3, 'name': 'name', 'type': 'nominal'}], 'exonIntervalFields': [{'index': 12, 'name': 'start'}, {'index': 13, 'name': 'end'}]}, 'tracks': [{'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'triangleRight', 'x': {'field': 'end', 'type': 'genomic', 'axis': 'bottom', 'linkingId': '2'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}], 'mark': 'text', 'text': {'field': 'name', 'type': 'nominal'}, 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'stroke': {'value': 'white'}, 'strokeWidth': {'value': 3}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'triangleLeft', 'x': {'field': 'start', 'type': 'genomic'}, 'size': {'value': 15}, 'style': {'align': 'right'}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}], 'mark': 'rect', 'x': {'field': 'start', 'type': 'genomic'}, 'xe': {'field': 'end', 'type': 'genomic'}, 'size': {'value': 15}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleRight', 'size': 5}}}, {'dataTransform': [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}], 'mark': 'rule', 'x': {'field': 'start', 'type': 'genomic'}, 'strokeWidth': {'value': 3}, 'xe': {'field': 'end', 'type': 'genomic'}, 'style': {'linePattern': {'type': 'triangleLeft', 'size': 5}}}], 'row': {'field': 'strand', 'type': 'nominal', 'domain': ['+', '-']}, 'color': {'value': '#E6A01B'}, 'visibility': [{'operation': 'less-than', 'measure': 'width', 'threshold': '|xe-x|', 'transitionPadding': 10, 'target': 'mark'}], 'style': {'background': 'lightgray', 'backgroundOpacity': 0.2}, 'opacity': {'value': 0.8}, 'width': 700, 'height': 100}]}]}}]
-responsiveSpec	->	[{'selectivity': [{'measure': 'width', 'operation': 'GT', 'threshold': 1000}], 'spec': {'views': [{'tracks': [{'id': 'https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ', 'data': {'url': 'https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ', 'type': 'matrix'}, 'mark': 'bar', 'x': {'field': 'xs', 'type': 'genomic', 'axis': 'top'}, 'xe': {'field': 'xe', 'type': 'genomic', 'axis': 'none'}, 'y': {'field': 'ys', 'type': 'genomic', 'axis': 'left'}, 'ye': {'field': 'ye', 'type': 'genomic'}, 'color': {'field': 'value', 'type': 'quantitative', 'range': 'grey', 'legend': True}, 'style': {'matrixExtent': 'full'}, 'width': 400, 'height': 400}]}, {'tracks': [{'id': 'https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA', 'data': {'url': 'https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA', 'type': 'matrix'}, 'mark': 'bar', 'x': {'field': 'xs', 'type': 'genomic', 'axis': 'top'}, 'xe': {'field': 'xe', 'type': 'genomic', 'axis': 'none'}, 'y': {'field': 'ys', 'type': 'genomic', 'axis': 'left'}, 'ye': {'field': 'ye', 'type': 'genomic'}, 'color': {'field': 'value', 'type': 'quantitative', 'range': 'pink', 'legend': True}, 'style': {'matrixExtent': 'full'}, 'width': 400, 'height': 400}]}]}}]
-responsiveSpec	->	[{'spec': {'arrangement': 'vertical'}, 'selectivity': [{'measure': 'width', 'threshold': 1200, 'operation': 'LT'}]}]
 root	->	"alignment ""+"" centerRadius ""+"" description ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
 root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
 root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" tracks"
@@ -258,11 +187,11 @@ root	->	"subtitle ""+"" title ""+"" tracks"
 root	->	"subtitle ""+"" title ""+"" views ""+"" xDomain"
 root	->	"title ""+"" tracks"
 root	->	tracks
-sampleLength	->	NUM
+sampleLength	->	NUMBER
 select	->	"arrange ""+"" color ""+"" stroke ""+"" strokeWidth"
 select	->	"color ""+"" opacity"
 select	->	"color ""+"" opacity ""+"" strokeWidth"
-spacing	->	NUM
+spacing	->	NUMBER
 stainBackgroundColor	->	field
 stainLabelColor	->	field
 stainStroke	->	value
@@ -274,18 +203,13 @@ strandColor	->	"field ""+"" range"
 strandRow	->	field
 stretch	->	"""True"""
 stretchGraphics	->	"""True"""
-stroke	->	"""#B9D4FA"""
-stroke	->	"""#E0E0E0"""
-stroke	->	"""green"""
-stroke	->	"""purple"""
-stroke	->	"""yellow"""
+stroke	->	STRING
 stroke	->	"domain ""+"" field ""+"" range ""+"" type"
 stroke	->	"domain ""+"" field ""+"" type"
 stroke	->	"field ""+"" range ""+"" type"
 stroke	->	"field ""+"" type"
 stroke	->	value
-strokeWidth	->	"""0"""
-strokeWidth	->	"""4"""
+strokeWidth	->	NUMBER
 strokeWidth	->	value
 style	->	align
 style	->	"align ""+"" outline ""+"" outlineWidth"
@@ -320,45 +244,17 @@ style	->	outlineWidth
 style	->	textAnchor
 style	->	textFontWeight
 style	->	textStrokeWidth
-subtitle	->	""""""
-subtitle	->	"""Between-link examples with three types, i.e., straight, corner, and curve"""
-subtitle	->	"""Change the position and range of brushes to update the detail view on the bottom"""
-subtitle	->	"""Comparison of Micro-C and Hi-C for HFFc6 Cells"""
-subtitle	->	"""Customize mouse hovering and range selection events"""
-subtitle	->	"""Data Source: WashU Virus Genome Browser, NCBI, GISAID"""
-subtitle	->	"""Demonstration of using BED files of different specifications"""
-subtitle	->	"""E. coli genome, colored by gene type."""
-subtitle	->	"""Genetic characteristics of RAD51C- and PALB2-altered TNBCs"""
-subtitle	->	"""Gosling.js enables track templates! This allows to create complex visualization more easily."""
-subtitle	->	"""Insertions and deletions from a VCF file"""
-subtitle	->	"""Point mutations from a VCF file"""
-subtitle	->	"""Rather than redrawing every element at every frame, we can scale existing elements"""
-subtitle	->	"""Reimplementation of GenoCAT examples"""
-subtitle	->	"""Reposition marks to address visual overlaps using displacement options"""
-subtitle	->	"""Text and triangle marks will show when zooming in to provide more details"""
-subtitle	->	"""Text marks that indicate base pairs will appear when zooming in"""
-subtitle	->	"""This example demonstrates a dummy track alongside other tracks"""
-subtitle	->	"""Try yourself with different arrangements and layouts"""
-subtitle	->	"""Tutorial Examples"""
-subtitle	->	"""Visualize Hi-C Data Using Matrix and Annotations"""
-template	->	"""gene"""
-template	->	"""ideogram"""
-template	->	"""sequence"""
+subtitle	->	STRING
+template	->	STRING
 text	->	"field ""+"" type"
 text	->	value
 textAnchor	->	"""end"""
-textFontSize	->	"""8"""
+textFontSize	->	NUMBER
 textFontWeight	->	"""bold"""
 textFontWeight	->	"""normal"""
-textStrokeWidth	->	"""0"""
-title	->	STR
-tooltip	->	[{'field': 'Chr.', 'type': 'nominal'}]
-tooltip	->	[{'field': 'DISTPREVLOGE', 'type': 'nominal', 'format': 's1'}, {'field': 'POS', 'type': 'genomic'}]
-tooltip	->	[{'field': 'POS', 'type': 'genomic'}, {'field': 'POSEND', 'type': 'genomic'}, {'field': 'MUTTYPE', 'type': 'nominal'}, {'field': 'ALT', 'type': 'nominal'}, {'field': 'REF', 'type': 'nominal'}, {'field': 'QUAL', 'type': 'quantitative'}]
-tooltip	->	[{'field': 'name', 'type': 'nominal'}]
-tooltip	->	[{'field': 'start', 'type': 'genomic', 'alt': 'Start Position'}, {'field': 'end', 'type': 'genomic', 'alt': 'End Position'}, {'field': 'peak', 'type': 'quantitative', 'alt': 'Value', 'format': '.2'}, {'field': 'sample', 'type': 'nominal', 'alt': 'Sample'}]
-tooltip	->	[{'field': 'start', 'type': 'genomic'}, {'field': 'end', 'type': 'genomic'}, {'field': 'insertSize', 'type': 'quantitative'}, {'field': 'svType', 'type': 'nominal'}, {'field': 'strand', 'type': 'nominal'}, {'field': 'numMates', 'type': 'quantitative'}, {'field': 'mateIds', 'type': 'nominal'}]
-tooltip	->	[{'field': 'start1', 'type': 'genomic'}, {'field': 'end2', 'type': 'genomic'}, {'field': 'svclass', 'type': 'nominal'}]
+textStrokeWidth	->	NUMBER
+title	->	STRING
+tooltip	->	ARRAY
 track	->	
 track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
@@ -539,99 +435,19 @@ type[y]	->	"""genomic"""
 type[y]	->	"""nominal"""
 type[y]	->	"""quantitative"""
 type[ye]	->	"""genomic"""
-value[color]	->	"""#0072B2"""
-value[color]	->	"""#029F73"""
-value[color]	->	"""#0900B1"""
-value[color]	->	"""#2270B5"""
-value[color]	->	"""#3275B4"""
-value[color]	->	"""#333"""
-value[color]	->	"""#4050B4"""
-value[color]	->	"""#414141"""
-value[color]	->	"""#666666"""
-value[color]	->	"""#73C475"""
-value[color]	->	"""#8A96D5"""
-value[color]	->	"""#999999"""
-value[color]	->	"""#99FEFF"""
-value[color]	->	"""#A0A0F2"""
-value[color]	->	"""#AFD8FF"""
-value[color]	->	"""#B40101"""
-value[color]	->	"""#B74780"""
-value[color]	->	"""#C6C6C6"""
-value[color]	->	"""#CB7AA7"""
-value[color]	->	"""#CC7DAA"""
-value[color]	->	"""#E2A6F5"""
-value[color]	->	"""#E6A01B"""
-value[color]	->	"""#E79F00"""
-value[color]	->	"""#EEEDA1"""
-value[color]	->	"""#FB6A4B"""
-value[color]	->	"""#FC8D3D"""
-value[color]	->	"""#FF6666"""
-value[color]	->	"""black"""
-value[color]	->	"""blue"""
-value[color]	->	"""darkgreen"""
-value[color]	->	"""darkyellow"""
-value[color]	->	"""gray"""
-value[color]	->	"""lightgray"""
-value[color]	->	"""none"""
-value[color]	->	"""red"""
-value[color]	->	"""steelBlue"""
-value[color]	->	"""steelblue"""
-value[color]	->	"""white"""
-value[data]	->	"""count"""
-value[data]	->	"""peak"""
-value[data]	->	"""value"""
-value[data]	->	"""y"""
-value[geneHeight]	->	"""20"""
-value[geneHeight]	->	"""30"""
-value[geneLabelFontSize]	->	"""20"""
-value[geneLabelFontSize]	->	"""30"""
-value[geneLabelOpacity]	->	"""1"""
-value[geneLabelStrokeThickness]	->	"""4"""
-value[geneLabelStroke]	->	"""white"""
-value[opacity]	->	"""0.1"""
-value[opacity]	->	"""0.15"""
-value[opacity]	->	"""0.2"""
-value[opacity]	->	"""0.3"""
-value[opacity]	->	"""0.4"""
-value[opacity]	->	"""0.5"""
-value[opacity]	->	"""0.6"""
-value[opacity]	->	"""0.8"""
-value[opacity]	->	"""0.9"""
-value[opacity]	->	"""1"""
-value[stainStroke]	->	"""black"""
-value[strokeWidth]	->	"""0"""
-value[strokeWidth]	->	"""0.2"""
-value[strokeWidth]	->	"""0.3"""
-value[strokeWidth]	->	"""0.5"""
-value[strokeWidth]	->	"""0.8"""
-value[strokeWidth]	->	"""1"""
-value[strokeWidth]	->	"""1.5"""
-value[strokeWidth]	->	"""2"""
-value[strokeWidth]	->	"""3"""
-value[strokeWidth]	->	"""4"""
-value[strokeWidth]	->	"""5"""
-value[strokeWidth]	->	"""6"""
-value[stroke]	->	"""#0070DC"""
-value[stroke]	->	"""#0072B2"""
-value[stroke]	->	"""#3275B4"""
-value[stroke]	->	"""#3C4DB4"""
-value[stroke]	->	"""#62AAD7"""
-value[stroke]	->	"""#6CB74C"""
-value[stroke]	->	"""#777777"""
-value[stroke]	->	"""#94C2EF"""
-value[stroke]	->	"""#BB57C9"""
-value[stroke]	->	"""black"""
-value[stroke]	->	"""gray"""
-value[stroke]	->	"""lightgray"""
-value[stroke]	->	"""lightgrey"""
-value[stroke]	->	"""steelblue"""
-value[stroke]	->	"""white"""
-value[text]	->	"""↓"""
-value[y]	->	"""18"""
-value[y]	->	"""33"""
-value[y]	->	"""400"""
-value[y]	->	"""48"""
-value[y]	->	"""5"""
+value[color]	->	STRING
+value[data]	->	STRING
+value[geneHeight]	->	NUMBER
+value[geneLabelFontSize]	->	NUMBER
+value[geneLabelOpacity]	->	NUMBER
+value[geneLabelStrokeThickness]	->	NUMBER
+value[geneLabelStroke]	->	STRING
+value[opacity]	->	NUMBER
+value[stainStroke]	->	STRING
+value[strokeWidth]	->	NUMBER
+value[stroke]	->	STRING
+value[text]	->	STRING
+value[y]	->	NUMBER
 view	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" tracks ""+"" xDomain"
 view	->	"alignment ""+"" centerRadius ""+"" linkingId ""+"" tracks ""+"" xDomain"
 view	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" style ""+"" title ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
@@ -668,8 +484,9 @@ view	->	"spacing ""+"" views"
 view	->	tracks
 view	->	"tracks ""+"" xDomain"
 view	->	views
+visibility	->	ARRAY
 width	->	"""True"""
-width	->	NUM
+width	->	NUMBER
 x	->	"aggregate ""+"" field ""+"" type"
 x	->	"axis ""+"" domain ""+"" field ""+"" linkingId ""+"" type"
 x	->	"axis ""+"" domain ""+"" field ""+"" type"
@@ -686,8 +503,7 @@ x1e	->	"field ""+"" type"
 xDomain	->	chromosome
 xDomain	->	"chromosome ""+"" interval"
 xDomain	->	interval
-xOffset	->	"""190"""
-xOffset	->	"""250"""
+xOffset	->	NUMBER
 xe	->	"aggregate ""+"" field ""+"" type"
 xe	->	"axis ""+"" field ""+"" type"
 xe	->	"field ""+"" type"
@@ -696,9 +512,8 @@ y	->	"baseline ""+"" domain ""+"" field ""+"" grid ""+"" range ""+"" type"
 y	->	"baseline ""+"" domain ""+"" field ""+"" range ""+"" type"
 y	->	"field ""+"" type"
 y	->	value
-yOffset	->	"""250"""
-yOffset	->	"""75"""
+yOffset	->	NUMBER
 ye	->	"axis ""+"" field ""+"" type"
 ye	->	"field ""+"" type"
-zoomLimits	->	[1, 396]
+zoomLimits	->	ARRAY
 Nothing	->	None
