@@ -85,6 +85,7 @@ def extract_rules(inputfile, outputfile, output_tsv):
     allrules = {}
     max_rulelen = 0
 
+    # Loop through all specs
     for spec in specs:
         rules = []
         get_rules(spec, 'root', rules)
@@ -94,16 +95,13 @@ def extract_rules(inputfile, outputfile, output_tsv):
             if r not in allrules:
                 allrules[r] = 0
             allrules[r] += 1
-
         max_rulelen = max(max_rulelen, len(rules))
 
     print(f'Max rule length: {max_rulelen}')
     print(f'Total unique rules extracted: {len(allrules)}')
 
-    
-    # Placeholder for empty or default cases
     allrules = sorted(allrules.keys())
-    allrules.append('Nothing -> None')
+    allrules.append('Nothing -> None') # Placeholder for empty or default cases
     
     # Count distinct LHS
     lhs_set = set()
@@ -146,4 +144,4 @@ def extract_data_transform_types(data_transform):
     
     return ", ".join(types)
             
-extract_rules('gosling.txt', 'gosling-rules-cfg.txt', 'gosling-rules.tsv')
+extract_rules('autogosling-specs.txt', 'autogosling-cfg-rules.txt', 'autogosling-cfg-rules.tsv')

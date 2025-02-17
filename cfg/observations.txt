@@ -1,0 +1,13 @@
+* For gosling-specs.txt input *
+
+Total specs: 364
+Max rule length: 654
+Total unique rules extracted: 555
+Total distinct LHS count: 177
+
+* For autogosling-specs.txt input *
+
+Total specs: 7296
+Max rule length: 652
+Total unique rules extracted: 373
+Total distinct LHS count: 112
