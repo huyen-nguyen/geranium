@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/logo-color.svg" alt="geranium logo" width="120">
+  <img src="./assets/logo-mag.svg" alt="geranium logo" width="120">
   <br>geranium
 </h1>
 
