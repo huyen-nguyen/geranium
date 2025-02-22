@@ -1,5 +1,4 @@
 import json
-import re
 import csv
 
 def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
@@ -8,11 +7,18 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
                          # from ignore list
                          "maxInsertSize", "size", 
                         # extended from ignore
-                         "value[size]"]
+                         "value[size]",
+                        # from dataTransform
+                         "value[flag]"
+                        ]
     
-    STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", "field",  "legendTitle", "linkingId", "outline", "range[color]", "stroke", "subtitle", "template", "title", "value[color]", "value[data]", "value[geneLabelStroke]", "value[stainStroke]",  "value[stroke]", "value[text]", 
+    STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", 
+                         "field",
+                         "legendTitle", "linkingId", "outline", "range[color]", "stroke", "subtitle", "template", "title", "value[color]", "value[data]", "value[geneLabelStroke]", "value[stainStroke]",  "value[stroke]", "value[text]", 
                          # from ignore list
-                         "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", "indexUrl", "longToWideId", "row", "separator", "start", "url"]
+                         "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", "indexUrl", "longToWideId", "row", "separator", "start", "url",
+                         # from dataTransform
+                         "value[flag]"]
     
     ARRAY_PROPERTIES = ["assembly", "dashed", "domain[color]", "domain[stroke]", "domain[y]", "interval", "range[color]", "range[geneLabelColor]", "range[strandColor]", "range[stroke]", "range[y]", "tooltip", "visibility", "zoomLimits",
                         # from ignore list
@@ -27,7 +33,7 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
         
     KEYS_WITH_GRANDPARENTS = ["domain", "range", "type", "value"]
     
-    # Adjust key if it is "type" or "value"
+    # Adjust key if it is typed with grandparents
     adjusted_key = f"{parentkey}[{grandparent_key}]" if parentkey in KEYS_WITH_GRANDPARENTS else parentkey  # LHS
     rhs = ' "+" '.join(sorted(node.keys()))  # Construct RHS
 
@@ -47,14 +53,12 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
         elif isinstance(v, list):  # If the value is a list (array)
             if new_parent in ARRAY_PROPERTIES:
                 rules.append(new_parent + ' -> ARRAY')  
-            elif k in ["tracks", "views"]:  # Special handling for tracks and views
+            elif k in ["tracks", "views", "dataTransforms"]:  # Special handling for tracks, views, dataTransform
                 for index, item in enumerate(v):
                     if isinstance(item, dict):  # Ensure it's a dictionary before recursion
                         get_rules(item, k[:-1], rules, parentkey)  # Convert "tracks" -> "track"
                     else:
                         rules.append(k[:-1] + ' -> ' + '"' + str(item) + '"')  # Terminal rule
-            elif k == "dataTransform":
-                rules.append(new_parent + ' -> ' + extract_data_transform_types(v))
             else:
                 rules.append(new_parent + ' -> ' + str(v))  # Keep other lists as is
         
@@ -73,7 +77,10 @@ def extract_rules(inputfile, outputfile, output_tsv):
     with open(inputfile, 'r') as inputs:
         for line in inputs:
             try:
-                specs.append(json.loads(line))
+                spec = json.loads(line)
+                # Rename "dataTransform" to "dataTransforms" recursively
+                rename_data_transform(spec)
+                specs.append(spec)
             except Exception as e:
                 print(f"Error parsing JSON: {e}")
 
@@ -128,20 +135,17 @@ def extract_rules(inputfile, outputfile, output_tsv):
             writer.writerow([lhs, "->", rhs])
 
     print(f"Rules saved in TSV format to {output_tsv}")
-    
 
-def extract_data_transform_types(data_transform):
-    """
-    Extracts the 'type' field from each dictionary in the given list and returns them as a comma-separated string.
-    
-    :param data_transform: List of dictionaries where each dictionary contains a 'type' key.
-    :return: Comma-separated string of 'type' values.
-    """
-    if not isinstance(data_transform, list):
-        return ""
+def rename_data_transform(obj):
+    if isinstance(obj, dict):
+        for key in list(obj.keys()):
+            if key == "dataTransform":
+                obj["dataTransforms"] = obj.pop("dataTransform")
+            else:
+                rename_data_transform(obj[key])
+    elif isinstance(obj, list):
+        for item in obj:
+            rename_data_transform(item)
 
-    types = [item['type'] for item in data_transform if isinstance(item, dict) and 'type' in item]
-    
-    return ", ".join(types)
             
-extract_rules('autogosling-specs.txt', 'autogosling-cfg-rules.txt', 'autogosling-cfg-rules.tsv')
+extract_rules('gosling-specs.txt', 'gosling-cfg-rules.txt', 'gosling-cfg-rules.tsv')
