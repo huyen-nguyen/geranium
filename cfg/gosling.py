@@ -9,7 +9,8 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
                         # extended from ignore
                          "value[size]",
                         # from dataTransform
-                         "value[flag]"
+                        "maxRows",
+                         "value[flag]",
                         ]
     
     STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", 
@@ -18,7 +19,8 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
                          # from ignore list
                          "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", "indexUrl", "longToWideId", "row", "separator", "start", "url",
                          # from dataTransform
-                         "value[flag]"]
+                          "baseGenomicField", "genomicField", "genomicLengthField", "include", "newField", "endField", "startField",
+                         "value[flag]",]
     
     ARRAY_PROPERTIES = ["assembly", "dashed", "domain[color]", "domain[stroke]", "domain[y]", "interval", "range[color]", "range[geneLabelColor]", "range[strandColor]", "range[stroke]", "range[y]", "tooltip", "visibility", "zoomLimits",
                         # from ignore list
@@ -29,7 +31,11 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
                         "attributesToFields",  "exonIntervalFields", "genomicFieldsToConvert", "responsiveSpec", "valueFields", "values",
                         
                         # extended from ignore
-                        "domain[row]", "range[size]"]
+                        "domain[row]", "range[size]",
+                       
+                        # from dataTransform
+                        "fields", "inRange", "oneOf", "replace", 
+                       ]
         
     KEYS_WITH_GRANDPARENTS = ["domain", "range", "type", "value"]
     
@@ -148,4 +154,4 @@ def rename_data_transform(obj):
             rename_data_transform(item)
 
             
-extract_rules('gosling-specs.txt', 'gosling-cfg-rules.txt', 'gosling-cfg-rules.tsv')
+extract_rules('autogosling-specs.txt', 'autogosling-cfg-rules.txt', 'autogosling-cfg-rules.tsv')
