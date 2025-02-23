@@ -21,9 +21,13 @@ background -> STRING
 backgroundOpacity -> NUMBER
 barLength -> field "+" type
 baseBackground -> field "+" type
+baseGenomicField -> STRING
 baseLabelColor -> field "+" type
 baseline -> STRING
 binSize -> NUMBER
+boundingBox -> endField "+" isPaddingBP "+" padding "+" startField
+boundingBox -> endField "+" padding "+" startField
+boundingBox -> endField "+" startField
 brush -> color "+" stroke
 categories -> ARRAY
 centerRadius -> NUMBER
@@ -68,48 +72,17 @@ data -> indexUrl "+" loadMates "+" type "+" url
 data -> indexUrl "+" sampleLength "+" type "+" url
 data -> indexUrl "+" type "+" url
 data -> type "+" url
-dataTransforms -> [{'type': 'concat', 'fields': ['REF', 'ALT'], 'separator': ' → ', 'newField': 'LAB'}, {'type': 'replace', 'field': 'MUTTYPE', 'replace': [{'from': 'insertion', 'to': 'Insertion'}, {'from': 'deletion', 'to': 'Deletion'}], 'newField': 'MUTTYPE'}]
-dataTransforms -> [{'type': 'coverage', 'startField': 'start', 'endField': 'end'}]
-dataTransforms -> [{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5, 'isPaddingBP': True}, 'newField': 'pileup-row'}, {'type': 'subjson', 'field': 'substitutions', 'genomicField': 'pos', 'baseGenomicField': 'start', 'genomicLengthField': 'length'}, {'type': 'filter', 'field': 'type', 'oneOf': ['S', 'H']}]
-dataTransforms -> [{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5, 'isPaddingBP': True}, 'newField': 'pileup-row'}]
-dataTransforms -> [{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'exonSplit', 'separator': ',', 'flag': {'field': 'type', 'value': 'exon'}, 'fields': [{'field': 'exon_start', 'type': 'genomic', 'newField': 'start', 'chrField': 'chr'}, {'field': 'exon_end', 'type': 'genomic', 'newField': 'end', 'chrField': 'chr'}]}, {'type': 'filter', 'field': 'type', 'oneOf': ['exon']}]
-dataTransforms -> [{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
-dataTransforms -> [{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
-dataTransforms -> [{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}]
-dataTransforms -> [{'type': 'filter', 'field': 'DISTPREVLOGE', 'oneOf': [None]}]
-dataTransforms -> [{'type': 'filter', 'field': 'Sample', 'oneOf': ['PD35930a']}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen'], 'not': True}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}, {'type': 'filter', 'field': 'Name', 'include': 'p'}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}, {'type': 'filter', 'field': 'Name', 'include': 'q'}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-1', 'acen-2'], 'not': True}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-1']}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-2']}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['gneg', 'gpos75', 'gvar']}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['gpos25', 'gpos50', 'gpos100']}]
-dataTransforms -> [{'type': 'filter', 'field': 'Stain', 'oneOf': ['gvar']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr', 'oneOf': ['hs1'], 'not': True}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr', 'oneOf': ['hs1']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr', 'oneOf': ['hs17']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5', 'hs4', 'hs6']}, {'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs5', 'hs4', 'hs6']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5']}, {'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs5']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr1', 'oneOf': ['1', '16', '14', '9', '6', '5', '3']}, {'type': 'filter', 'field': 'chr2', 'oneOf': ['1', '16', '14', '9', '6', '5', '3']}]
-dataTransforms -> [{'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs1']}]
-dataTransforms -> [{'type': 'filter', 'field': 'count', 'oneOf': [0], 'not': True}]
-dataTransforms -> [{'type': 'filter', 'field': 'minor_cn_tumor', 'oneOf': ['0']}]
-dataTransforms -> [{'type': 'filter', 'field': 'significance', 'oneOf': ['Likely_benign']}, {'type': 'displace', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5}, 'method': 'spread', 'newField': 'a'}]
-dataTransforms -> [{'type': 'filter', 'field': 'significance', 'oneOf': ['Likely_benign']}]
-dataTransforms -> [{'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
-dataTransforms -> [{'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
-dataTransforms -> [{'type': 'filter', 'field': 'total_cn_tumor', 'inRange': [4.5, 900]}]
-dataTransforms -> [{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}]
-dataTransforms -> [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}]
-dataTransforms -> [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
-dataTransforms -> [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
-dataTransforms -> [{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}]
-dataTransforms -> [{'type': 'filter', 'field': 'type', 'oneOf': ['intron']}]
-dataTransforms -> [{'type': 'filter', 'field': 'value', 'inRange': [0, 999999]}]
+dataTransform -> baseGenomicField "+" field "+" genomicField "+" genomicLengthField "+" type
+dataTransform -> boundingBox "+" maxRows "+" method "+" newField "+" type
+dataTransform -> boundingBox "+" method "+" newField "+" type
+dataTransform -> endField "+" startField "+" type
+dataTransform -> field "+" inRange "+" type
+dataTransform -> field "+" include "+" type
+dataTransform -> field "+" newField "+" replace "+" type
+dataTransform -> field "+" not "+" oneOf "+" type
+dataTransform -> field "+" oneOf "+" type
+dataTransform -> fields "+" flag "+" separator "+" type
+dataTransform -> fields "+" newField "+" separator "+" type
 description -> STRING
 displacement -> padding "+" type
 domain[color] -> ARRAY
@@ -127,12 +100,15 @@ encoding -> barLength "+" baseBackground "+" baseLabelColor "+" endPosition "+" 
 encoding -> endPosition "+" geneHeight "+" geneLabel "+" geneLabelColor "+" geneLabelFontSize "+" geneLabelOpacity "+" geneLabelStroke "+" geneLabelStrokeThickness "+" opacity "+" startPosition "+" strandColor "+" strandRow "+" type
 encoding -> endPosition "+" name "+" stainBackgroundColor "+" stainLabelColor "+" stainStroke "+" startPosition
 end -> STRING
+endField -> STRING
 endPosition -> field
 endPosition -> field "+" type
 exonIntervalFields -> ARRAY
 experimental -> mouseEvents
 experimental -> stretchGraphics
 field -> STRING
+fields -> ARRAY
+flag -> field "+" value
 flipY -> "False"
 flipY -> "True"
 geneHeight -> value
@@ -142,16 +118,22 @@ geneLabelFontSize -> value
 geneLabelOpacity -> value
 geneLabelStroke -> value
 geneLabelStrokeThickness -> value
+genomicField -> STRING
 genomicFields -> ARRAY
 genomicFieldsToConvert -> ARRAY
+genomicLengthField -> STRING
 grid -> "True"
 groupMarksByField -> STRING
 headerNames -> ARRAY
+height -> "False"
 height -> NUMBER
 id -> STRING
+inRange -> ARRAY
+include -> STRING
 indexUrl -> STRING
 inlineLegend -> "True"
 interval -> ARRAY
+isPaddingBP -> "True"
 layout -> "circular"
 layout -> "linear"
 legend -> "False"
@@ -179,6 +161,9 @@ mark -> "withinLink"
 matrixExtent -> "lower-left"
 matrixExtent -> "upper-right"
 maxInsertSize -> NUMBER
+maxRows -> NUMBER
+method -> "pile"
+method -> "spread"
 mouseEvents -> click "+" groupMarksByField "+" mouseOver "+" rangeSelect
 mouseEvents -> groupMarksByField "+" mouseOver "+" rangeSelect
 mouseEvents -> mouseOver "+" rangeSelect
@@ -186,6 +171,9 @@ mouseOver -> "True"
 mouseOver -> arrange "+" color "+" stroke "+" strokeWidth
 mouseOver -> color "+" opacity "+" strokeWidth
 name -> field
+newField -> STRING
+not -> "True"
+oneOf -> ARRAY
 opacity -> NUMBER
 opacity -> value
 orientation -> "vertical"
@@ -202,6 +190,7 @@ range[size] -> ARRAY
 range[strandColor] -> ARRAY
 range[stroke] -> ARRAY
 range[y] -> ARRAY
+replace -> ARRAY
 responsiveSize -> height "+" width
 responsiveSize -> width
 responsiveSpec -> ARRAY
@@ -257,6 +246,7 @@ stainBackgroundColor -> field
 stainLabelColor -> field
 stainStroke -> value
 start -> STRING
+startField -> STRING
 startPosition -> field
 startPosition -> field "+" type
 static -> "False"
@@ -468,6 +458,13 @@ type[baseBackground] -> "nominal"
 type[baseLabelColor] -> "nominal"
 type[color] -> "nominal"
 type[color] -> "quantitative"
+type[dataTransform] -> "concat"
+type[dataTransform] -> "coverage"
+type[dataTransform] -> "displace"
+type[dataTransform] -> "exonSplit"
+type[dataTransform] -> "filter"
+type[dataTransform] -> "replace"
+type[dataTransform] -> "subjson"
 type[data] -> "bam"
 type[data] -> "bed"
 type[data] -> "beddb"
@@ -503,6 +500,7 @@ url -> STRING
 valueFields -> ARRAY
 value[color] -> STRING
 value[data] -> STRING
+value[flag] -> STRING
 value[geneHeight] -> NUMBER
 value[geneLabelFontSize] -> NUMBER
 value[geneLabelOpacity] -> NUMBER
@@ -553,6 +551,7 @@ view -> tracks
 view -> tracks "+" xDomain
 view -> views
 visibility -> ARRAY
+width -> "True"
 width -> NUMBER
 x -> aggregate "+" field "+" type
 x -> axis "+" domain "+" field "+" linkingId "+" type
