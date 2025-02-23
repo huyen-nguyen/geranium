@@ -22,9 +22,13 @@ background	->	STRING
 backgroundOpacity	->	NUMBER
 barLength	->	"field ""+"" type"
 baseBackground	->	"field ""+"" type"
+baseGenomicField	->	STRING
 baseLabelColor	->	"field ""+"" type"
 baseline	->	STRING
 binSize	->	NUMBER
+boundingBox	->	"endField ""+"" isPaddingBP ""+"" padding ""+"" startField"
+boundingBox	->	"endField ""+"" padding ""+"" startField"
+boundingBox	->	"endField ""+"" startField"
 brush	->	"color ""+"" stroke"
 categories	->	ARRAY
 centerRadius	->	NUMBER
@@ -69,16 +73,17 @@ data	->	"indexUrl ""+"" loadMates ""+"" type ""+"" url"
 data	->	"indexUrl ""+"" sampleLength ""+"" type ""+"" url"
 data	->	"indexUrl ""+"" type ""+"" url"
 data	->	"type ""+"" url"
-dataTransform	->	concat, replace
-dataTransform	->	coverage
-dataTransform	->	displace
-dataTransform	->	displace, exonSplit, filter
-dataTransform	->	displace, filter
-dataTransform	->	displace, filter, filter
-dataTransform	->	displace, subjson, filter
-dataTransform	->	filter
-dataTransform	->	filter, displace
-dataTransform	->	filter, filter
+dataTransform	->	"baseGenomicField ""+"" field ""+"" genomicField ""+"" genomicLengthField ""+"" type"
+dataTransform	->	"boundingBox ""+"" maxRows ""+"" method ""+"" newField ""+"" type"
+dataTransform	->	"boundingBox ""+"" method ""+"" newField ""+"" type"
+dataTransform	->	"endField ""+"" startField ""+"" type"
+dataTransform	->	"field ""+"" inRange ""+"" type"
+dataTransform	->	"field ""+"" include ""+"" type"
+dataTransform	->	"field ""+"" newField ""+"" replace ""+"" type"
+dataTransform	->	"field ""+"" not ""+"" oneOf ""+"" type"
+dataTransform	->	"field ""+"" oneOf ""+"" type"
+dataTransform	->	"fields ""+"" flag ""+"" separator ""+"" type"
+dataTransform	->	"fields ""+"" newField ""+"" separator ""+"" type"
 description	->	STRING
 displacement	->	"padding ""+"" type"
 domain[color]	->	ARRAY
@@ -96,12 +101,15 @@ encoding	->	"barLength ""+"" baseBackground ""+"" baseLabelColor ""+"" endPositi
 encoding	->	"endPosition ""+"" geneHeight ""+"" geneLabel ""+"" geneLabelColor ""+"" geneLabelFontSize ""+"" geneLabelOpacity ""+"" geneLabelStroke ""+"" geneLabelStrokeThickness ""+"" opacity ""+"" startPosition ""+"" strandColor ""+"" strandRow ""+"" type"
 encoding	->	"endPosition ""+"" name ""+"" stainBackgroundColor ""+"" stainLabelColor ""+"" stainStroke ""+"" startPosition"
 end	->	STRING
+endField	->	STRING
 endPosition	->	field
 endPosition	->	"field ""+"" type"
 exonIntervalFields	->	ARRAY
 experimental	->	mouseEvents
 experimental	->	stretchGraphics
 field	->	STRING
+fields	->	ARRAY
+flag	->	"field ""+"" value"
 flipY	->	"""False"""
 flipY	->	"""True"""
 geneHeight	->	value
@@ -111,17 +119,22 @@ geneLabelFontSize	->	value
 geneLabelOpacity	->	value
 geneLabelStroke	->	value
 geneLabelStrokeThickness	->	value
+genomicField	->	STRING
 genomicFields	->	ARRAY
 genomicFieldsToConvert	->	ARRAY
+genomicLengthField	->	STRING
 grid	->	"""True"""
 groupMarksByField	->	STRING
 headerNames	->	ARRAY
 height	->	"""False"""
 height	->	NUMBER
 id	->	STRING
+inRange	->	ARRAY
+include	->	STRING
 indexUrl	->	STRING
 inlineLegend	->	"""True"""
 interval	->	ARRAY
+isPaddingBP	->	"""True"""
 layout	->	"""circular"""
 layout	->	"""linear"""
 legend	->	"""False"""
@@ -149,6 +162,9 @@ mark	->	"""withinLink"""
 matrixExtent	->	"""lower-left"""
 matrixExtent	->	"""upper-right"""
 maxInsertSize	->	NUMBER
+maxRows	->	NUMBER
+method	->	"""pile"""
+method	->	"""spread"""
 mouseEvents	->	"click ""+"" groupMarksByField ""+"" mouseOver ""+"" rangeSelect"
 mouseEvents	->	"groupMarksByField ""+"" mouseOver ""+"" rangeSelect"
 mouseEvents	->	"mouseOver ""+"" rangeSelect"
@@ -156,6 +172,9 @@ mouseOver	->	"""True"""
 mouseOver	->	"arrange ""+"" color ""+"" stroke ""+"" strokeWidth"
 mouseOver	->	"color ""+"" opacity ""+"" strokeWidth"
 name	->	field
+newField	->	STRING
+not	->	"""True"""
+oneOf	->	ARRAY
 opacity	->	NUMBER
 opacity	->	value
 orientation	->	"""vertical"""
@@ -172,13 +191,14 @@ range[size]	->	ARRAY
 range[strandColor]	->	ARRAY
 range[stroke]	->	ARRAY
 range[y]	->	ARRAY
+replace	->	ARRAY
 responsiveSize	->	"height ""+"" width"
 responsiveSize	->	width
 responsiveSpec	->	ARRAY
 root	->	"alignment ""+"" centerRadius ""+"" description ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
 root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
 root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" tracks"
-root	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" subtitle ""+"" tooltip ""+"" tracks ""+"" width ""+"" x"
+root	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" subtitle ""+"" tooltip ""+"" tracks ""+"" width ""+"" x"
 root	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" row ""+"" subtitle ""+"" title ""+"" tracks ""+"" width"
 root	->	"arrangement ""+"" assembly ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views"
 root	->	"arrangement ""+"" centerRadius ""+"" layout ""+"" static ""+"" subtitle ""+"" title ""+"" views"
@@ -227,6 +247,7 @@ stainBackgroundColor	->	field
 stainLabelColor	->	field
 stainStroke	->	value
 start	->	STRING
+startField	->	STRING
 startPosition	->	field
 startPosition	->	"field ""+"" type"
 static	->	"""False"""
@@ -288,9 +309,9 @@ textStrokeWidth	->	NUMBER
 title	->	STRING
 tooltip	->	ARRAY
 track	->	
-track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe"
-track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
-track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" color ""+"" data ""+"" experimental ""+"" height ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" id ""+"" opacity ""+"" row ""+"" style ""+"" tracks ""+"" visibility ""+"" width"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" opacity ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
@@ -310,8 +331,8 @@ track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" stroke ""+"" strok
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" style ""+"" text ""+"" tracks ""+"" width ""+"" x"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" tracks ""+"" width"
-track	->	"alignment ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
-track	->	"alignment ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"alignment ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"alignment ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
 track	->	"alignment ""+"" data ""+"" experimental ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width"
 track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" tracks ""+"" width"
@@ -322,23 +343,23 @@ track	->	"alignment ""+"" data ""+"" height ""+"" size ""+"" stroke ""+"" stroke
 track	->	"alignment ""+"" data ""+"" height ""+"" stroke ""+"" strokeWidth ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" data ""+"" height ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" height ""+"" tracks ""+"" width"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" tooltip ""+"" width ""+"" x ""+"" y"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" overlayOnPreviousTrack ""+"" size ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" style ""+"" text ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" style ""+"" visibility ""+"" x"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" strokeWidth ""+"" style ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" style ""+"" text ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" x"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" tooltip ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" overlayOnPreviousTrack ""+"" size ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" style ""+"" text ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" style ""+"" visibility ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" strokeWidth ""+"" style ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" style ""+"" text ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" x"
 track	->	"color ""+"" data ""+"" displacement ""+"" height ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" xe"
 track	->	"color ""+"" data ""+"" experimental ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" tooltip ""+"" width ""+"" x ""+"" xe ""+"" y"
 track	->	"color ""+"" data ""+"" flipY ""+"" height ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" style ""+"" width ""+"" x ""+"" xe"
@@ -369,20 +390,20 @@ track	->	"color ""+"" data ""+"" mark ""+"" strokeWidth ""+"" y"
 track	->	"color ""+"" data ""+"" mark ""+"" style ""+"" x ""+"" xe ""+"" y ""+"" ye"
 track	->	"color ""+"" data ""+"" mark ""+"" visibility ""+"" x ""+"" xe ""+"" y"
 track	->	"color ""+"" data ""+"" mark ""+"" x ""+"" xe ""+"" y"
-track	->	"color ""+"" dataTransform ""+"" mark"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" size"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" size ""+"" visibility"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" size ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" style ""+"" x"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" text ""+"" visibility"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" text ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" x"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" dataTransforms ""+"" mark"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" size"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" size ""+"" visibility"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" style ""+"" x"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" text ""+"" visibility"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" text ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" x"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" x ""+"" xe ""+"" y"
 track	->	"color ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" visibility ""+"" x ""+"" y"
 track	->	"color ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x"
 track	->	"color ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style"
@@ -399,7 +420,7 @@ track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x"
 track	->	"color ""+"" mark ""+"" text ""+"" y"
 track	->	"color ""+"" mark ""+"" x"
 track	->	"color ""+"" mark ""+"" xe"
-track	->	"data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
 track	->	"data ""+"" encoding ""+"" experimental ""+"" height ""+"" style ""+"" template ""+"" title ""+"" tooltip ""+"" width"
 track	->	"data ""+"" encoding ""+"" height ""+"" template ""+"" width"
 track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" xe ""+"" y"
@@ -407,19 +428,19 @@ track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" size ""+"" width ""+""
 track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" stroke ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
 track	->	"data ""+"" height ""+"" mark ""+"" opacity ""+"" style ""+"" width ""+"" x ""+"" y"
 track	->	"data ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" title ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" visibility"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" x"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" x"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" style ""+"" text ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" visibility"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" style ""+"" x"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" x"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" style ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" text ""+"" x ""+"" xe"
 track	->	mark
 track	->	"mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
 track	->	"mark ""+"" opacity ""+"" x ""+"" y"
@@ -438,6 +459,13 @@ type[baseBackground]	->	"""nominal"""
 type[baseLabelColor]	->	"""nominal"""
 type[color]	->	"""nominal"""
 type[color]	->	"""quantitative"""
+type[dataTransform]	->	"""concat"""
+type[dataTransform]	->	"""coverage"""
+type[dataTransform]	->	"""displace"""
+type[dataTransform]	->	"""exonSplit"""
+type[dataTransform]	->	"""filter"""
+type[dataTransform]	->	"""replace"""
+type[dataTransform]	->	"""subjson"""
 type[data]	->	"""bam"""
 type[data]	->	"""bed"""
 type[data]	->	"""beddb"""
@@ -473,6 +501,7 @@ url	->	STRING
 valueFields	->	ARRAY
 value[color]	->	STRING
 value[data]	->	STRING
+value[flag]	->	STRING
 value[geneHeight]	->	NUMBER
 value[geneLabelFontSize]	->	NUMBER
 value[geneLabelOpacity]	->	NUMBER
@@ -488,7 +517,7 @@ value[y]	->	NUMBER
 values	->	ARRAY
 view	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" tracks ""+"" xDomain"
 view	->	"alignment ""+"" centerRadius ""+"" linkingId ""+"" tracks ""+"" xDomain"
-view	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" style ""+"" title ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
+view	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" row ""+"" style ""+"" title ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
 view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" spacing ""+"" static ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe ""+"" y"
 view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe ""+"" y"
 view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" style ""+"" text ""+"" tracks ""+"" width ""+"" x ""+"" xDomain"

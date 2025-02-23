@@ -2,46 +2,42 @@ import json
 import re
 import csv
 
-# extracting CFG rules from a JSON structure by recursively processing each key-value pair
-# parent_key -> child_keys
+# This file is SPECIFICALLY to see a particular empty track
 
-def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
-    NUMBER_PROPERTIES = ['backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', "opacity", "outlineWidth", "padding",'sampleLength', 'spacing', 'strokeWidth', 'textFontSize', 'textStrokeWidth', 'width', 'value[geneHeight]', 'value[geneLabelFontSize]', 'value[geneLabelOpacity]', 'value[geneLabelStrokeThickness]', 'value[opacity]',  'value[strokeWidth]', 'value[y]', 'xOffset', 'yOffset',
-                         # from ignore list
-                         "maxInsertSize", "size", 
-                        # extended from ignore
-                         "value[size]", 
-                        ]
+def get_rules(node, parent_key, rules, grandparent_key="root", spec=None):
+    ARRAY_PROPERTIES = [
+        'assembly', 'attributesToFields', 'categories', 'customFields', 'dashed', 'domain[color]', 
+        'domain[row]', 'domain[stroke]', 'domain[y]', 'exonIntervalFields', 'fields', 'genomicFields', 
+        'genomicFieldsToConvert', 'headerNames', 'inRange', 'interval', 'oneOf', 'range[color]', 
+        'range[geneLabelColor]', 'range[size]', 'range[strandColor]', 'range[stroke]', 'range[y]', 
+        'replace', 'responsiveSpec', 'tooltip', 'valueFields', 'values', 'visibility', 'zoomLimits'
+    ]
     
-    STRING_PROPERTIES = ["background", "baseline", "chromosome", "color", "description", "field",  "legendTitle", "linkingId", "outline", "range[color]", "stroke", "subtitle", "template", "title", "value[color]", "value[data]", "value[geneLabelStroke]", "value[stainStroke]",  "value[stroke]", "value[text]", 
-                         # from ignore list
-                         "chromosomeField", "chromosomePrefix", "column", "end",  "groupMarksByField", "id", 
-                         "indexUrl", "longToWideId", "row", "separator", "start", "url", 
-                        ]
-    
-    ARRAY_PROPERTIES = ["assembly", "dashed", "domain[color]", "domain[stroke]", "domain[y]",
-                        "interval", "range[color]", "range[geneLabelColor]", "range[strandColor]",  
-                        "range[stroke]", "range[y]",
-                        "tooltip", "visibility", "zoomLimits",
-                        # from ignore list
-                        # A1, terminal symbol
-                        "categories",  "customFields", "genomicFields", "headerNames", 
-                        
-                        # A2c, objects
-                        "attributesToFields",  "exonIntervalFields", "genomicFieldsToConvert", "responsiveSpec", "valueFields", "values",
-                        
-                        # extended from ignore
-                        "domain[row]", "range[size]"
-                       ]
-        
+    NUMBER_PROPERTIES = [
+        'backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', 'maxInsertSize', 'maxRows', 
+        'opacity', 'outlineWidth', 'padding', 'sampleLength', 'size', 'spacing', 'strokeWidth', 'textFontSize', 
+        'textStrokeWidth', 'value[flag]', 'value[geneHeight]', 'value[geneLabelFontSize]', 
+        'value[geneLabelOpacity]', 'value[geneLabelStrokeThickness]', 'value[opacity]', 'value[size]', 
+        'value[strokeWidth]', 'value[y]', 'width', 'xOffset', 'yOffset'
+    ]
+
+    STRING_PROPERTIES = [
+        'background', 'baseGenomicField', 'baseline', 'chromosome', 'chromosomeField', 'chromosomePrefix', 
+        'color', 'column', 'description', 'end', 'endField', 'field', 'genomicField', 'genomicLengthField', 
+        'groupMarksByField', 'id', 'include', 'indexUrl', 'legendTitle', 'linkingId', 'longToWideId', 
+        'newField', 'outline', 'range[color]', 'row', 'separator', 'start', 'startField', 'stroke', 
+        'subtitle', 'template', 'title', 'url', 'value[color]', 'value[data]', 'value[flag]', 
+        'value[geneLabelStroke]', 'value[stainStroke]', 'value[stroke]', 'value[text]'
+    ]
+
     KEYS_WITH_GRANDPARENTS = ["domain", "range", "type", "value"]
-    
-    # Adjust key if it is "type" or "value"
-    adjusted_key = f"{parentkey}[{grandparent_key}]" if parentkey in KEYS_WITH_GRANDPARENTS else parentkey  # LHS
-    rhs_elements = sorted(node.keys())  # Get RHS elements
-    rhs = ' "+" '.join(rhs_elements) if rhs_elements else ""  # Construct RHS
+            
+    # Adjust the key if it belongs to "KEYS_WITH_GRANDPARENTS": same key (parent), different grandparents
+    adjusted_key = f"{parent_key}[{grandparent_key}]" if parent_key in KEYS_WITH_GRANDPARENTS else parent_key # LHS
+    rhs = ' "+" '.join(sorted(node.keys()))  # RHS
 
-    thisrule = f"{adjusted_key} -> {rhs}"
+    this_rule = adjusted_key + ' -> ' + rhs
+    rules.append(this_rule)
 
     # Only detect and print **truly empty** RHS rules
     if not rhs:  
@@ -49,8 +45,6 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
         if spec:  
             print("🔍 Full spec containing the empty rule:")
             print(json.dumps(spec, indent=2))
-
-    rules.append(thisrule)
 
     # Recursively process child nodes
     for k in sorted(node.keys()):
@@ -63,37 +57,39 @@ def get_rules(node, parentkey, rules, grandparent_key="root", spec=None):
                 print("🔍 Full spec containing the empty rule:")
                 print(json.dumps(spec, indent=2))
 
-        lhs = k  # Left-hand side of the rule
-        new_parent = f"{k}[{parentkey}]" if k in KEYS_WITH_GRANDPARENTS else k
+        new_parent = f"{k}[{parent_key}]" if k in KEYS_WITH_GRANDPARENTS else k
             
-        if isinstance(v, dict):  
-            get_rules(v, new_parent, rules, parentkey, spec=spec)
+        if isinstance(v, dict):
+            # Recurse if the value is a dictionary (JS object)
+            get_rules(v, new_parent, rules, parent_key, spec=spec)
         
-        elif isinstance(v, list):  # If the value is a list (array)
+        elif isinstance(v, list):
+            # Handle list (JS array)
             if new_parent in ARRAY_PROPERTIES:
                 rules.append(new_parent + ' -> ARRAY')  
-            elif k in ["tracks", "views"]:  # Special handling for tracks and views
+            elif k in ["tracks", "views", "dataTransforms"]:                   # Special handling for tracks, views, dataTransform
                 for index, item in enumerate(v):
-                    if isinstance(item, dict):  # Ensure it's a dictionary before recursion
-                        get_rules(item, k[:-1], rules, parentkey, spec=spec)  # Convert "tracks" -> "track"
+                    if isinstance(item, dict):        # Ensure it's a dictionary before recursion
+                        get_rules(item, k[:-1], rules, parent_key, spec=spec)             # Convert "tracks" -> "track" etc.
                     else:
                         rules.append(k[:-1] + ' -> ' + '"' + str(item) + '"')  # Terminal rule
-            elif k == "dataTransform":
-                rules.append(new_parent + ' -> ' + extract_data_transform_types(v))
             else:
-                rules.append(new_parent + ' -> ' + str(v))  # Keep other lists as is
-        
+                rules.append(new_parent + ' -> ' + str(v))   # Keep other lists as is
         else:
-            if new_parent in NUMBER_PROPERTIES and type(v) in (int, float):
+            # Handle terminal rules
+            if isinstance(v, bool):            # Check boolean first, since True is treated as 1 in arithmetic operations
+                rules.append(new_parent + ' -> ' + '"' + str(v) + '"')  # keep as is
+            elif new_parent in NUMBER_PROPERTIES and isinstance(v, (int, float)):
                 rules.append(new_parent + ' -> NUMBER')
             elif new_parent in STRING_PROPERTIES and isinstance(v, str):
                 rules.append(new_parent + ' -> STRING')
             else:
-                rules.append(new_parent + ' -> ' + '"' + str(v) + '"')  # Terminal rule
+                rules.append(new_parent + ' -> ' + '"' + str(v) + '"')
 
 
 
-def extract_rules(inputfile, outputfile, output_tsv):
+def extract_rules(inputfile):
+# def extract_rules(inputfile, outputfile, output_tsv):
     specs = []
     with open(inputfile, 'r') as inputs:
         for line in inputs:
@@ -130,44 +126,40 @@ def extract_rules(inputfile, outputfile, output_tsv):
     allrules = sorted(allrules.keys())
     allrules.append('Nothing -> None')
 
-    with open(outputfile, 'w') as outf:
-        for r in allrules:
-            outf.write(r + '\n')
+    # No need to write
+#     with open(outputfile, 'w') as outf:
+#         for r in allrules:
+#             outf.write(r + '\n')
 
-    print("Extraction complete. Rules written to file.")
+#     print("Extraction complete. Rules written to file.")
     
     # Count distinct LHS
-    lhs_set = set()
-    
-    for rule in allrules:
-        lhs, _ = rule.split(' -> ', 1)  # Extract LHS
-        lhs_set.add(lhs)  # Store unique LHS
-    
+    lhs_set = {rule.split(' -> ', 1)[0] for rule in allrules}
     print(f"Total distinct LHS count: {len(lhs_set)}")
+
     
+    # No need to write
     # Write to TSV file
-    with open(output_tsv, 'w', newline='') as tsvfile:
-        writer = csv.writer(tsvfile, delimiter='\t')
-        writer.writerow(["LHS", "->", "RHS"])  # Header row
-        for rule in allrules:
-            lhs, rhs = rule.split(' -> ', 1)  # Split into left and right side
-            writer.writerow([lhs, "->", rhs])
+#     with open(output_tsv, 'w', newline='') as tsvfile:
+#         writer = csv.writer(tsvfile, delimiter='\t')
+#         writer.writerow(["LHS", "->", "RHS"])  # Header row
+#         for rule in allrules:
+#             lhs, rhs = rule.split(' -> ', 1)  # Split into left and right side
+#             writer.writerow([lhs, "->", rhs])
 
-    print(f"Rules saved in TSV format to {output_tsv}")
+#     print(f"Rules saved in TSV format to {output_tsv}")
     
 
-def extract_data_transform_types(data_transform):
-    """
-    Extracts the 'type' field from each dictionary in the given list and returns them as a comma-separated string.
-    
-    :param data_transform: List of dictionaries where each dictionary contains a 'type' key.
-    :return: Comma-separated string of 'type' values.
-    """
-    if not isinstance(data_transform, list):
-        return ""
-
-    types = [item['type'] for item in data_transform if isinstance(item, dict) and 'type' in item]
-    
-    return ", ".join(types)
+def rename_data_transform(obj):
+    # Recursively rename "dataTransform" to "dataTransforms"
+    if isinstance(obj, dict):
+        for key in list(obj.keys()):
+            if key == "dataTransform":
+                obj["dataTransforms"] = obj.pop("dataTransform")
+            else:
+                rename_data_transform(obj[key])
+    elif isinstance(obj, list):
+        for item in obj:
+            rename_data_transform(item)
             
-extract_rules('gosling.txt', 'gosling-rules-cfg.txt', 'gosling-rules.tsv')
+extract_rules('gosling-specs.txt')
