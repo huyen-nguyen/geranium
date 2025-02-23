@@ -69,16 +69,48 @@ data	->	"indexUrl ""+"" loadMates ""+"" type ""+"" url"
 data	->	"indexUrl ""+"" sampleLength ""+"" type ""+"" url"
 data	->	"indexUrl ""+"" type ""+"" url"
 data	->	"type ""+"" url"
-dataTransform	->	concat, replace
-dataTransform	->	coverage
-dataTransform	->	displace
-dataTransform	->	displace, exonSplit, filter
-dataTransform	->	displace, filter
-dataTransform	->	displace, filter, filter
-dataTransform	->	displace, subjson, filter
-dataTransform	->	filter
-dataTransform	->	filter, displace
-dataTransform	->	filter, filter
+dataTransforms	->	[{'type': 'concat', 'fields': ['REF', 'ALT'], 'separator': ' → ', 'newField': 'LAB'}, {'type': 'replace', 'field': 'MUTTYPE', 'replace': [{'from': 'insertion', 'to': 'Insertion'}, {'from': 'deletion', 'to': 'Deletion'}], 'newField': 'MUTTYPE'}]
+dataTransforms	->	[{'type': 'coverage', 'startField': 'start', 'endField': 'end'}]
+dataTransforms	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5, 'isPaddingBP': True}, 'newField': 'pileup-row'}, {'type': 'subjson', 'field': 'substitutions', 'genomicField': 'pos', 'baseGenomicField': 'start', 'genomicLengthField': 'length'}, {'type': 'filter', 'field': 'type', 'oneOf': ['S', 'H']}]
+dataTransforms	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5, 'isPaddingBP': True}, 'newField': 'pileup-row'}]
+dataTransforms	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'exonSplit', 'separator': ',', 'flag': {'field': 'type', 'value': 'exon'}, 'fields': [{'field': 'exon_start', 'type': 'genomic', 'newField': 'start', 'chrField': 'chr'}, {'field': 'exon_end', 'type': 'genomic', 'newField': 'end', 'chrField': 'chr'}]}, {'type': 'filter', 'field': 'type', 'oneOf': ['exon']}]
+dataTransforms	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
+dataTransforms	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
+dataTransforms	->	[{'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}, {'type': 'filter', 'field': 'type', 'oneOf': ['gene']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'DISTPREVLOGE', 'oneOf': [None]}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Sample', 'oneOf': ['PD35930a']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen'], 'not': True}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}, {'type': 'filter', 'field': 'Name', 'include': 'p'}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}, {'type': 'filter', 'field': 'Name', 'include': 'q'}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-1', 'acen-2'], 'not': True}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-1']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['acen-2']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['gneg', 'gpos75', 'gvar']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['gpos25', 'gpos50', 'gpos100']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'Stain', 'oneOf': ['gvar']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs1'], 'not': True}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs1']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs17']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5', 'hs4', 'hs6']}, {'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs5', 'hs4', 'hs6']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5']}, {'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs5']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr', 'oneOf': ['hs5']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr1', 'oneOf': ['1', '16', '14', '9', '6', '5', '3']}, {'type': 'filter', 'field': 'chr2', 'oneOf': ['1', '16', '14', '9', '6', '5', '3']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'chr_2', 'oneOf': ['hs1']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'count', 'oneOf': [0], 'not': True}]
+dataTransforms	->	[{'type': 'filter', 'field': 'minor_cn_tumor', 'oneOf': ['0']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'significance', 'oneOf': ['Likely_benign']}, {'type': 'displace', 'boundingBox': {'startField': 'start', 'endField': 'end', 'padding': 5}, 'method': 'spread', 'newField': 'a'}]
+dataTransforms	->	[{'type': 'filter', 'field': 'significance', 'oneOf': ['Likely_benign']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'total_cn_tumor', 'inRange': [4.5, 900]}]
+dataTransforms	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['exon']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'displace', 'method': 'pile', 'boundingBox': {'startField': 'start', 'endField': 'end'}, 'newField': 'row', 'maxRows': 15}]
+dataTransforms	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['+']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}, {'type': 'filter', 'field': 'strand', 'oneOf': ['-']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['gene']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'type', 'oneOf': ['intron']}]
+dataTransforms	->	[{'type': 'filter', 'field': 'value', 'inRange': [0, 999999]}]
 description	->	STRING
 displacement	->	"padding ""+"" type"
 domain[color]	->	ARRAY
@@ -116,7 +148,6 @@ genomicFieldsToConvert	->	ARRAY
 grid	->	"""True"""
 groupMarksByField	->	STRING
 headerNames	->	ARRAY
-height	->	"""False"""
 height	->	NUMBER
 id	->	STRING
 indexUrl	->	STRING
@@ -178,7 +209,7 @@ responsiveSpec	->	ARRAY
 root	->	"alignment ""+"" centerRadius ""+"" description ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
 root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" title ""+"" tracks"
 root	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" static ""+"" tracks"
-root	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" subtitle ""+"" tooltip ""+"" tracks ""+"" width ""+"" x"
+root	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" subtitle ""+"" tooltip ""+"" tracks ""+"" width ""+"" x"
 root	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" opacity ""+"" row ""+"" subtitle ""+"" title ""+"" tracks ""+"" width"
 root	->	"arrangement ""+"" assembly ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" style ""+"" subtitle ""+"" title ""+"" views"
 root	->	"arrangement ""+"" centerRadius ""+"" layout ""+"" static ""+"" subtitle ""+"" title ""+"" views"
@@ -288,9 +319,9 @@ textStrokeWidth	->	NUMBER
 title	->	STRING
 tooltip	->	ARRAY
 track	->	
-track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe"
-track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
-track	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" color ""+"" data ""+"" experimental ""+"" height ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" id ""+"" opacity ""+"" row ""+"" style ""+"" tracks ""+"" visibility ""+"" width"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" opacity ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
@@ -310,8 +341,8 @@ track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" stroke ""+"" strok
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" style ""+"" text ""+"" title ""+"" tracks ""+"" width ""+"" x"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" style ""+"" text ""+"" tracks ""+"" width ""+"" x"
 track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" tracks ""+"" width"
-track	->	"alignment ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
-track	->	"alignment ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"alignment ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tracks ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"alignment ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" style ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe ""+"" y"
 track	->	"alignment ""+"" data ""+"" experimental ""+"" height ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" row ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width"
 track	->	"alignment ""+"" data ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" tracks ""+"" width"
@@ -322,23 +353,23 @@ track	->	"alignment ""+"" data ""+"" height ""+"" size ""+"" stroke ""+"" stroke
 track	->	"alignment ""+"" data ""+"" height ""+"" stroke ""+"" strokeWidth ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" data ""+"" height ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
 track	->	"alignment ""+"" height ""+"" tracks ""+"" width"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" tooltip ""+"" width ""+"" x ""+"" y"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" overlayOnPreviousTrack ""+"" size ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" style ""+"" text ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" style ""+"" visibility ""+"" x"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" strokeWidth ""+"" style ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" row ""+"" style ""+"" text ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" x"
-track	->	"color ""+"" data ""+"" dataTransform ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" tooltip ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" overlayOnPreviousTrack ""+"" size ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" row ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" style ""+"" text ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" title ""+"" width ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" style ""+"" visibility ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" strokeWidth ""+"" style ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" row ""+"" style ""+"" text ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" mark ""+"" row ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" x"
 track	->	"color ""+"" data ""+"" displacement ""+"" height ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" xe"
 track	->	"color ""+"" data ""+"" experimental ""+"" height ""+"" mark ""+"" style ""+"" title ""+"" tooltip ""+"" width ""+"" x ""+"" xe ""+"" y"
 track	->	"color ""+"" data ""+"" flipY ""+"" height ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" style ""+"" width ""+"" x ""+"" xe"
@@ -369,20 +400,20 @@ track	->	"color ""+"" data ""+"" mark ""+"" strokeWidth ""+"" y"
 track	->	"color ""+"" data ""+"" mark ""+"" style ""+"" x ""+"" xe ""+"" y ""+"" ye"
 track	->	"color ""+"" data ""+"" mark ""+"" visibility ""+"" x ""+"" xe ""+"" y"
 track	->	"color ""+"" data ""+"" mark ""+"" x ""+"" xe ""+"" y"
-track	->	"color ""+"" dataTransform ""+"" mark"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" size"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" size ""+"" visibility"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" size ""+"" visibility ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" style ""+"" x"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" text ""+"" visibility"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" text ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" x"
-track	->	"color ""+"" dataTransform ""+"" mark ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" x ""+"" xe"
-track	->	"color ""+"" dataTransform ""+"" x ""+"" xe ""+"" y"
+track	->	"color ""+"" dataTransforms ""+"" mark"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" size"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" size ""+"" visibility"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" size ""+"" visibility ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" style ""+"" x"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" text ""+"" visibility"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" text ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" x"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" x ""+"" xe"
+track	->	"color ""+"" dataTransforms ""+"" x ""+"" xe ""+"" y"
 track	->	"color ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" visibility ""+"" x ""+"" y"
 track	->	"color ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x"
 track	->	"color ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style"
@@ -399,7 +430,7 @@ track	->	"color ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x"
 track	->	"color ""+"" mark ""+"" text ""+"" y"
 track	->	"color ""+"" mark ""+"" x"
 track	->	"color ""+"" mark ""+"" xe"
-track	->	"data ""+"" dataTransform ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"data ""+"" dataTransforms ""+"" height ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
 track	->	"data ""+"" encoding ""+"" experimental ""+"" height ""+"" style ""+"" template ""+"" title ""+"" tooltip ""+"" width"
 track	->	"data ""+"" encoding ""+"" height ""+"" template ""+"" width"
 track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" size ""+"" width ""+"" x ""+"" xe ""+"" y"
@@ -407,19 +438,19 @@ track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" size ""+"" width ""+""
 track	->	"data ""+"" height ""+"" layout ""+"" mark ""+"" stroke ""+"" width ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
 track	->	"data ""+"" height ""+"" mark ""+"" opacity ""+"" style ""+"" width ""+"" x ""+"" y"
 track	->	"data ""+"" mark ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" title ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" visibility"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" style ""+"" x"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" x"
-track	->	"dataTransform ""+"" mark ""+"" size ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" style ""+"" text ""+"" x ""+"" xe"
-track	->	"dataTransform ""+"" mark ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" visibility"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" style ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" style ""+"" x"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" x"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" x1 ""+"" x1e ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" strokeWidth ""+"" style ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" strokeWidth ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" style ""+"" text ""+"" x ""+"" xe"
+track	->	"dataTransforms ""+"" mark ""+"" text ""+"" x ""+"" xe"
 track	->	mark
 track	->	"mark ""+"" opacity ""+"" row ""+"" size ""+"" visibility ""+"" x"
 track	->	"mark ""+"" opacity ""+"" x ""+"" y"
@@ -488,7 +519,7 @@ value[y]	->	NUMBER
 values	->	ARRAY
 view	->	"alignment ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" tracks ""+"" xDomain"
 view	->	"alignment ""+"" centerRadius ""+"" linkingId ""+"" tracks ""+"" xDomain"
-view	->	"alignment ""+"" color ""+"" data ""+"" dataTransform ""+"" height ""+"" opacity ""+"" row ""+"" style ""+"" title ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
+view	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" opacity ""+"" row ""+"" style ""+"" title ""+"" tracks ""+"" visibility ""+"" width ""+"" xDomain"
 view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" spacing ""+"" static ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe ""+"" y"
 view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" row ""+"" tracks ""+"" width ""+"" x ""+"" xDomain ""+"" xe ""+"" y"
 view	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" layout ""+"" style ""+"" text ""+"" tracks ""+"" width ""+"" x ""+"" xDomain"
@@ -523,7 +554,6 @@ view	->	tracks
 view	->	"tracks ""+"" xDomain"
 view	->	views
 visibility	->	ARRAY
-width	->	"""True"""
 width	->	NUMBER
 x	->	"aggregate ""+"" field ""+"" type"
 x	->	"axis ""+"" domain ""+"" field ""+"" linkingId ""+"" type"
