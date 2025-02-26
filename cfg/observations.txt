@@ -11,3 +11,10 @@ Total specs: 7296
 Max rule length: 784
 Total unique rules extracted: 392
 Total distinct LHS count: 126
+
+* For chromoscope-specs.txt input *
+
+Total specs: 481
+Max rule length: 1633
+Total unique rules extracted: 194
+Total distinct LHS count: 122

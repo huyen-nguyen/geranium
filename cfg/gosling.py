@@ -20,20 +20,20 @@ def get_rules(node, parent_key, rules, grandparent_key="root"):
     ]
     
     NUMBER_PROPERTIES = [
-        'backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', 'maxInsertSize', 'maxRows', 
+        'backgroundOpacity', 'binSize', 'centerRadius', 'dx', 'dy', 'height', 'linkMinHeight', 'maxInsertSize', 'maxRows', 
         'opacity', 'outlineWidth', 'padding', 'sampleLength', 'size', 'spacing', 'strokeWidth', 'textFontSize', 
         'textStrokeWidth', 'value[flag]', 'value[geneHeight]', 'value[geneLabelFontSize]', 
         'value[geneLabelOpacity]', 'value[geneLabelStrokeThickness]', 'value[opacity]', 'value[size]', 
-        'value[strokeWidth]', 'value[y]', 'width', 'xOffset', 'yOffset'
+        'value[strokeWidth]', 'value[stroke]', 'value[y]', 'value[ye]', 'width', 'xOffset', 'yOffset'
     ]
 
     STRING_PROPERTIES = [
-        'background', 'baseGenomicField', 'baseline', 'chromosome', 'chromosomeField', 'chromosomePrefix', 
+        'background', 'baseGenomicField', 'baseline', 'chrField', 'chromosome', 'chromosomeField', 'chromosomePrefix', 
         'color', 'column', 'description', 'end', 'endField', 'field', 'genomicField', 'genomicLengthField', 
         'groupMarksByField', 'id', 'include', 'indexUrl', 'legendTitle', 'linkingId', 'longToWideId', 
-        'newField', 'outline', 'range[color]', 'row', 'separator', 'start', 'startField', 'stroke', 
-        'subtitle', 'template', 'title', 'url', 'value[color]', 'value[data]', 'value[flag]', 
-        'value[geneLabelStroke]', 'value[stainStroke]', 'value[stroke]', 'value[text]'
+        'newField', 'outline', 'posField', 'range[color]', 'row', 'separator', 'start', 'startField', 
+        'strandField', 'stroke', 'subtitle', 'template', 'title', 'url', 'value[color]', 'value[data]', 
+        'value[flag]', 'value[geneLabelStroke]', 'value[stainStroke]', 'value[stroke]', 'value[text]'
     ]
 
     KEYS_WITH_GRANDPARENTS = ["domain", "range", "type", "value"]
@@ -155,4 +155,4 @@ def rename_data_transform(obj):
             rename_data_transform(item)
 
 # Extract rules from input file
-extract_rules('gosling-specs.txt', 'gosling-cfg-rules.txt', 'gosling-cfg-rules.tsv')
+extract_rules('chromoscope-specs.txt', 'chromoscope-cfg-rules.txt', 'chromoscope-cfg-rules.tsv')
