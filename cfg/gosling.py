@@ -155,4 +155,4 @@ def rename_data_transform(obj):
             rename_data_transform(item)
 
 # Extract rules from input file
-extract_rules('chromoscope-specs.txt', 'chromoscope-cfg-rules.txt', 'chromoscope-cfg-rules.tsv')
+extract_rules('gallery-specs.txt', 'gallery-cfg-rules.txt', 'gallery-cfg-rules.tsv')

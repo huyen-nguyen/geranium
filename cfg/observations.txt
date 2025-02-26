@@ -1,9 +1,9 @@
-* For gosling-specs.txt input *
+* For gallery-specs.txt input *
 
-Total specs: 364
+Total specs: 340
 Max rule length: 786
-Total unique rules extracted: 584
-Total distinct LHS count: 196
+Total unique rules extracted: 568
+Total distinct LHS count: 194
 
 * For autogosling-specs.txt input *
 
