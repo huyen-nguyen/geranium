@@ -1,10 +1,11 @@
 #!/bin/sh
 SCALE="0.7;1.0;1.2"
 SCALEWIDTH="0.7;1.0;1.2"
+
+python generate_specs.py -f geranium_seeds/scatterplot.json -pv -cc -s $SCALE -sw $SCALEWIDTH
+
 # python generate_specs.py -f geranium_seeds/band_connection.json -pv -cc -s $SCALE -sw $SCALEWIDTH
 # python generate_specs.py -f geranium_seeds/bar.json -cc
-python generate_specs.py -f geranium_seeds/not_mark_not_color/circular-heat.json -pv -cc -s $SCALE -sw $SCALEWIDTH
-
 # python generate_specs.py -f train_specs/basic_two_horizontal.json -pv -cm -s $SCALE -sw $SCALEWIDTH
 # python generate_specs.py -f train_specs/basic_two_vertical.json -pv -cm -s $SCALE -sw $SCALEWIDTH
 # python generate_specs.py -f train_specs/breast_cancer.json -cm -s $SCALE -sw $SCALEWIDTH
@@ -29,4 +30,4 @@ python generate_specs.py -f geranium_seeds/not_mark_not_color/circular-heat.json
 # python generate_specs.py -f train_specs/two_by_two_uneven_h.json -pv -s $SCALE -sw $SCALEWIDTH
 # python generate_specs.py -f train_specs/two_by_two_uneven_w.json -pv -s $SCALE -sw $SCALEWIDTH
 # python generate_specs.py -f train_specs/two_by_two.json -pv -cm -s $SCALE -sw $SCALEWIDTH
-#echo python generate_specs.py -f train_specs/two_heatmap.json -s $SCALE -sw $SCALEWIDTH
+# echo python generate_specs.py -f train_specs/two_heatmap.json -s $SCALE -sw $SCALEWIDTH

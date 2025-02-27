@@ -1,2 +1,3 @@
-# find ./geranium_sprouts  -type f -exec cp {} ./geranium_sprouts_flat \;
+# combine contents from multiple folders into one
+
 find ./generated_json  -type f -exec cp {} ./generated_combine \;
