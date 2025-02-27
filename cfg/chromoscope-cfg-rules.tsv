@@ -1,0 +1,196 @@
+LHS	->	RHS
+align	->	"""left"""
+align	->	"""right"""
+alignment	->	"""overlay"""
+arrangement	->	"""vertical"""
+assembly	->	"""hg19"""
+assembly	->	"""hg38"""
+axis	->	"""left"""
+axis	->	"""right"""
+axis	->	"""top"""
+background	->	STRING
+centerRadius	->	NUMBER
+chrField	->	STRING
+chromosome	->	STRING
+chromosomeField	->	STRING
+click	->	"""True"""
+color	->	"domain ""+"" field ""+"" legend ""+"" range ""+"" type"
+color	->	"domain ""+"" field ""+"" legend ""+"" type"
+color	->	"domain ""+"" field ""+"" range ""+"" type"
+color	->	value
+dashed	->	ARRAY
+data	->	"chromosomeField ""+"" genomicFields ""+"" separator ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" genomicFields ""+"" type ""+"" url"
+data	->	"chromosomeField ""+"" genomicFields ""+"" type ""+"" values"
+data	->	"exonIntervalFields ""+"" genomicFields ""+"" type ""+"" url ""+"" valueFields"
+data	->	"genomicFieldsToConvert ""+"" separator ""+"" type ""+"" url"
+data	->	"indexUrl ""+"" sampleLength ""+"" type ""+"" url"
+dataTransform	->	"field ""+"" inRange ""+"" type"
+dataTransform	->	"field ""+"" include ""+"" type"
+dataTransform	->	"field ""+"" newField ""+"" replace ""+"" type"
+dataTransform	->	"field ""+"" not ""+"" oneOf ""+"" type"
+dataTransform	->	"field ""+"" oneOf ""+"" type"
+dataTransform	->	"fields ""+"" newField ""+"" separator ""+"" type"
+dataTransform	->	"firstBp ""+"" newField ""+"" secondBp ""+"" type"
+domain[color]	->	ARRAY
+domain[row]	->	ARRAY
+domain[stroke]	->	ARRAY
+enableSmoothPath	->	"""False"""
+encoding	->	"endPosition ""+"" geneHeight ""+"" geneLabel ""+"" geneLabelColor ""+"" geneLabelFontSize ""+"" geneLabelOpacity ""+"" geneLabelStroke ""+"" geneLabelStrokeThickness ""+"" opacity ""+"" startPosition ""+"" strandColor ""+"" strandRow ""+"" type"
+endPosition	->	field
+exonIntervalFields	->	ARRAY
+field	->	STRING
+fields	->	ARRAY
+firstBp	->	"chrField ""+"" posField ""+"" strandField"
+flipY	->	"""True"""
+geneHeight	->	value
+geneLabel	->	field
+geneLabelColor	->	"field ""+"" range"
+geneLabelFontSize	->	value
+geneLabelOpacity	->	value
+geneLabelStroke	->	value
+geneLabelStrokeThickness	->	value
+genomicFields	->	ARRAY
+genomicFieldsToConvert	->	ARRAY
+grid	->	"""True"""
+groupMarksByField	->	STRING
+height	->	NUMBER
+id	->	STRING
+inRange	->	ARRAY
+include	->	STRING
+indexUrl	->	STRING
+inlineLegend	->	"""True"""
+layout	->	"""circular"""
+layout	->	"""linear"""
+legend	->	"""False"""
+legend	->	"""True"""
+linkMinHeight	->	NUMBER
+linkStyle	->	"""elliptical"""
+linkingId	->	STRING
+mark	->	"""brush"""
+mark	->	"""point"""
+mark	->	"""rect"""
+mark	->	"""rule"""
+mark	->	"""text"""
+mark	->	"""triangleLeft"""
+mark	->	"""triangleRight"""
+mark	->	"""withinLink"""
+mouseEvents	->	"click ""+"" groupMarksByField ""+"" mouseOver"
+mouseOver	->	"""True"""
+mouseOver	->	"stroke ""+"" strokeWidth"
+newField	->	STRING
+not	->	"""False"""
+not	->	"""True"""
+oneOf	->	ARRAY
+opacity	->	value
+outline	->	STRING
+outlineWidth	->	NUMBER
+overlayOnPreviousTrack	->	"""True"""
+posField	->	STRING
+range[color]	->	ARRAY
+range[geneLabelColor]	->	ARRAY
+range[strandColor]	->	ARRAY
+range[stroke]	->	ARRAY
+range[y]	->	ARRAY
+replace	->	ARRAY
+root	->	"arrangement ""+"" assembly ""+"" centerRadius ""+"" layout ""+"" spacing ""+"" style ""+"" views"
+row	->	"domain ""+"" field ""+"" legend ""+"" type"
+row	->	"field ""+"" type"
+sampleLength	->	NUMBER
+secondBp	->	"chrField ""+"" posField ""+"" strandField"
+separator	->	STRING
+size	->	value
+spacing	->	NUMBER
+startPosition	->	field
+static	->	"""True"""
+strandColor	->	"field ""+"" range"
+strandField	->	STRING
+strandRow	->	field
+stroke	->	STRING
+stroke	->	"domain ""+"" field ""+"" range ""+"" type"
+stroke	->	value
+strokeWidth	->	NUMBER
+strokeWidth	->	value
+style	->	align
+style	->	background
+style	->	"background ""+"" inlineLegend"
+style	->	dashed
+style	->	"enableSmoothPath ""+"" outline ""+"" outlineWidth"
+style	->	"linkMinHeight ""+"" linkStyle ""+"" mouseOver ""+"" withinLinkVerticalLines"
+style	->	"outline ""+"" outlineWidth"
+style	->	textFontWeight
+template	->	STRING
+text	->	"field ""+"" type"
+textFontWeight	->	"""normal"""
+title	->	STRING
+tooltip	->	ARRAY
+track	->	"alignment ""+"" color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" row ""+"" style ""+"" tooltip ""+"" tracks ""+"" width ""+"" x"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" id ""+"" mark ""+"" mouseEvents ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" tooltip ""+"" tracks ""+"" width ""+"" y"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" id ""+"" size ""+"" strokeWidth ""+"" title ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" color ""+"" data ""+"" height ""+"" id ""+"" size ""+"" strokeWidth ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"alignment ""+"" data ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" size ""+"" stroke ""+"" strokeWidth ""+"" style ""+"" title ""+"" tooltip ""+"" tracks ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" opacity ""+"" style ""+"" title ""+"" tooltip ""+"" width ""+"" x ""+"" y"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" row ""+"" size ""+"" style ""+"" text ""+"" title ""+"" tooltip ""+"" width ""+"" x"
+track	->	"color ""+"" data ""+"" dataTransforms ""+"" height ""+"" id ""+"" mark ""+"" style ""+"" title ""+"" width ""+"" x ""+"" xe"
+track	->	"color ""+"" data ""+"" id ""+"" mark ""+"" opacity ""+"" overlayOnPreviousTrack ""+"" x"
+track	->	"color ""+"" dataTransforms ""+"" mark ""+"" opacity ""+"" strokeWidth ""+"" style ""+"" x"
+track	->	"color ""+"" mark ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x"
+track	->	"color ""+"" y"
+track	->	"data ""+"" encoding ""+"" height ""+"" id ""+"" template ""+"" tooltip ""+"" width"
+track	->	"dataTransforms ""+"" flipY ""+"" opacity ""+"" stroke ""+"" strokeWidth ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"dataTransforms ""+"" flipY ""+"" opacity ""+"" strokeWidth ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"dataTransforms ""+"" flipY ""+"" x ""+"" xe ""+"" y ""+"" ye"
+track	->	"dataTransforms ""+"" mark"
+track	->	"dataTransforms ""+"" mark ""+"" size ""+"" stroke ""+"" style ""+"" x ""+"" y"
+track	->	mark
+track	->	"size ""+"" visibility"
+track	->	"visibility ""+"" xe"
+type[color]	->	"""nominal"""
+type[dataTransform]	->	"""concat"""
+type[dataTransform]	->	"""filter"""
+type[dataTransform]	->	"""replace"""
+type[dataTransform]	->	"""svType"""
+type[data]	->	"""beddb"""
+type[data]	->	"""csv"""
+type[data]	->	"""json"""
+type[data]	->	"""vcf"""
+type[encoding]	->	field
+type[row]	->	"""nominal"""
+type[stroke]	->	"""nominal"""
+type[text]	->	"""nominal"""
+type[x]	->	"""genomic"""
+type[xe]	->	"""genomic"""
+type[y]	->	"""quantitative"""
+url	->	STRING
+valueFields	->	ARRAY
+value[color]	->	STRING
+value[geneHeight]	->	NUMBER
+value[geneLabelFontSize]	->	NUMBER
+value[geneLabelOpacity]	->	NUMBER
+value[geneLabelStrokeThickness]	->	NUMBER
+value[geneLabelStroke]	->	STRING
+value[opacity]	->	NUMBER
+value[size]	->	NUMBER
+value[strokeWidth]	->	NUMBER
+value[stroke]	->	NUMBER
+value[stroke]	->	STRING
+value[y]	->	NUMBER
+value[ye]	->	NUMBER
+values	->	ARRAY
+view	->	"arrangement ""+"" views"
+view	->	"layout ""+"" linkingId ""+"" tracks ""+"" xDomain"
+view	->	"layout ""+"" spacing ""+"" static ""+"" style ""+"" tracks ""+"" xOffset"
+visibility	->	ARRAY
+width	->	NUMBER
+withinLinkVerticalLines	->	"""True"""
+x	->	"field ""+"" type"
+x	->	linkingId
+xDomain	->	chromosome
+xOffset	->	NUMBER
+xe	->	"axis ""+"" field ""+"" type"
+xe	->	"field ""+"" type"
+y	->	"axis ""+"" field ""+"" grid ""+"" range ""+"" type"
+y	->	"axis ""+"" field ""+"" range ""+"" type"
+y	->	value
+ye	->	value
+Nothing	->	None
