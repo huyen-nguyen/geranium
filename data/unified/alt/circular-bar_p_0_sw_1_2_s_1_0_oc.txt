@@ -1,0 +1,1 @@
+Circular bar chart. The genome is shown in intervals on the x-axis. The expression values are shown with bars on the y and ye-axes. The chart is stratified by rows for the categories. The categories are also shown with the color of the bars.  
