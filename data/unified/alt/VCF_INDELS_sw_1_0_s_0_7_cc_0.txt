@@ -1,0 +1,1 @@
+Chart with rectangles, chart with rectangles and chart with text. The genome is shown on the x-axis.  The chart is stratified by rows for the categories. The categories are also shown with the  of the rectangles, rectangles and text. The color of the rectangles is geraldine. The color of the rectangles is geraldine. The color of the text is geraldine. 
