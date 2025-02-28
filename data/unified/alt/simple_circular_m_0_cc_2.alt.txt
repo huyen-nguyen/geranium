@@ -1,0 +1,1 @@
+Figure with circular scatter plot on top and unknown chart on bottom

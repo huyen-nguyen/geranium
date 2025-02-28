@@ -1,0 +1,1 @@
+Figure with scatter plot on left and chart with area displayed on right

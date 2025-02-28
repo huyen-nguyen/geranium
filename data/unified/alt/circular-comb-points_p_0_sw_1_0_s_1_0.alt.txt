@@ -1,0 +1,1 @@
+Figure with circular scatter plot on left and circular scatter plot on right

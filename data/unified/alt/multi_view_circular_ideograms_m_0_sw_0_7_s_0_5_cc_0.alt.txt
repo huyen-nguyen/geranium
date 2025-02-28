@@ -1,0 +1,1 @@
+Figure with circular scatter plot on top and circular ideogram on bottom

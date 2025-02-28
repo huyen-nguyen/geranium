@@ -1,0 +1,1 @@
+Figure with circular bar chart on left and circular line chart and circular scatter plot on right

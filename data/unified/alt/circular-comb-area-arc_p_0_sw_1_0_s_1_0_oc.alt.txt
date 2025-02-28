@@ -1,0 +1,1 @@
+Figure with circular chart with area displayed on left and circular chart with connections on right

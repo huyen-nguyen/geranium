@@ -1,0 +1,1 @@
+Figure with line chart on top and chart with area displayed on bottom

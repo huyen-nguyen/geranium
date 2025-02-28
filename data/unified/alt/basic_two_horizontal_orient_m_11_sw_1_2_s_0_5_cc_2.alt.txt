@@ -1,0 +1,1 @@
+Figure with chart with area displayed on top and bar chart on bottom
