@@ -1,0 +1,100 @@
+{
+  "title": "Example: Semantic Zooming",
+  "subtitle": "Text marks that indicate base pairs will appear when zooming in",
+  "tracks": [
+    {
+      "alignment": "overlay",
+      "data": {
+        "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec",
+        "type": "multivec",
+        "row": "base",
+        "column": "position",
+        "value": "count",
+        "categories": [
+          "A",
+          "T",
+          "G",
+          "C"
+        ],
+        "start": "start",
+        "end": "end"
+      },
+      "tracks": [
+        {
+          "mark": "bar",
+          "y": {
+            "field": "count",
+            "type": "quantitative",
+            "axis": "none"
+          }
+        },
+        {
+          "dataTransform": [
+            {
+              "type": "filter",
+              "field": "count",
+              "oneOf": [
+                0
+              ],
+              "not": true
+            }
+          ],
+          "mark": "text",
+          "x": {
+            "field": "start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "size": {
+            "value": 24
+          },
+          "color": {
+            "value": "white"
+          },
+          "visibility": [
+            {
+              "operation": "less-than",
+              "measure": "width",
+              "threshold": "|xe-x|",
+              "transitionPadding": 30,
+              "target": "mark"
+            },
+            {
+              "operation": "LT",
+              "measure": "zoomLevel",
+              "threshold": 40,
+              "target": "track"
+            }
+          ]
+        }
+      ],
+      "x": {
+        "field": "position",
+        "type": "genomic"
+      },
+      "color": {
+        "field": "base",
+        "type": "nominal",
+        "domain": [
+          "A",
+          "T",
+          "G",
+          "C"
+        ],
+        "legend": true
+      },
+      "text": {
+        "field": "base",
+        "type": "nominal"
+      },
+      "style": {
+        "textFontWeight": "bold"
+      },
+      "width": 672,
+      "height": 96
+    }
+  ]
+}

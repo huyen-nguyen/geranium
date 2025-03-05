@@ -1,0 +1,194 @@
+{
+  "responsiveSize": {
+    "width": true
+  },
+  "responsiveSpec": [
+    {
+      "selectivity": [
+        {
+          "measure": "width",
+          "operation": "GT",
+          "threshold": 1000
+        }
+      ],
+      "spec": {
+        "views": [
+          {
+            "tracks": [
+              {
+                "id": "https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ",
+                "data": {
+                  "url": "https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ",
+                  "type": "matrix"
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "xs",
+                  "type": "genomic",
+                  "axis": "top"
+                },
+                "xe": {
+                  "field": "xe",
+                  "type": "genomic",
+                  "axis": "none"
+                },
+                "y": {
+                  "field": "ys",
+                  "type": "genomic",
+                  "axis": "left"
+                },
+                "ye": {
+                  "field": "ye",
+                  "type": "genomic"
+                },
+                "color": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "range": "grey",
+                  "legend": true
+                },
+                "style": {
+                  "matrixExtent": "full"
+                },
+                "width": 400,
+                "height": 400
+              }
+            ]
+          },
+          {
+            "tracks": [
+              {
+                "id": "https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA",
+                "data": {
+                  "url": "https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA",
+                  "type": "matrix"
+                },
+                "mark": "bar",
+                "x": {
+                  "field": "xs",
+                  "type": "genomic",
+                  "axis": "top"
+                },
+                "xe": {
+                  "field": "xe",
+                  "type": "genomic",
+                  "axis": "none"
+                },
+                "y": {
+                  "field": "ys",
+                  "type": "genomic",
+                  "axis": "left"
+                },
+                "ye": {
+                  "field": "ye",
+                  "type": "genomic"
+                },
+                "color": {
+                  "field": "value",
+                  "type": "quantitative",
+                  "range": "pink",
+                  "legend": true
+                },
+                "style": {
+                  "matrixExtent": "full"
+                },
+                "width": 400,
+                "height": 400
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "linkingId": "commonId",
+  "xDomain": {
+    "chromosome": "chr10"
+  },
+  "arrangement": "horizontal",
+  "views": [
+    {
+      "alignment": "overlay",
+      "tracks": [
+        {
+          "id": "https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ",
+          "data": {
+            "url": "https://higlass.io/api/v1/tileset_info/?d=CQMd6V_cRw6iCI_-Unl3PQ",
+            "type": "matrix"
+          },
+          "mark": "bar",
+          "x": {
+            "field": "xs",
+            "type": "genomic",
+            "axis": "top"
+          },
+          "xe": {
+            "field": "xe",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "ys",
+            "type": "genomic",
+            "axis": "left"
+          },
+          "ye": {
+            "field": "ye",
+            "type": "genomic"
+          },
+          "color": {
+            "field": "value",
+            "type": "quantitative",
+            "range": "grey",
+            "legend": true
+          },
+          "style": {
+            "matrixExtent": "lower-left"
+          },
+          "width": 49,
+          "height": 70
+        },
+        {
+          "id": "https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA",
+          "data": {
+            "url": "https://higlass.io/api/v1/tileset_info/?d=ZCvntCKST0KUvQPGcCbJGA",
+            "type": "matrix"
+          },
+          "mark": "bar",
+          "x": {
+            "field": "xs",
+            "type": "genomic",
+            "axis": "top"
+          },
+          "xe": {
+            "field": "xe",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "ys",
+            "type": "genomic",
+            "axis": "left"
+          },
+          "ye": {
+            "field": "ye",
+            "type": "genomic"
+          },
+          "color": {
+            "field": "value",
+            "type": "quantitative",
+            "range": "pink",
+            "legend": true
+          },
+          "style": {
+            "matrixExtent": "upper-right"
+          },
+          "width": 49,
+          "height": 70
+        }
+      ],
+      "width": 400,
+      "height": 400
+    }
+  ]
+}

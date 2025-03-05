@@ -1,0 +1,360 @@
+{
+  "description": "reference: https://dash.plotly.com/dash-bio/alignmentchart",
+  "zoomLimits": [
+    1,
+    396
+  ],
+  "xDomain": {
+    "interval": [
+      350,
+      396
+    ]
+  },
+  "assembly": "unknown",
+  "style": {
+    "outline": "lightgray"
+  },
+  "views": [
+    {
+      "linkingId": "-",
+      "spacing": 30,
+      "tracks": [
+        {
+          "title": "Gap",
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.gap.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "gap",
+            "type": "quantitative",
+            "axis": "right"
+          },
+          "color": {
+            "value": "gray"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "width": 672,
+          "height": 120
+        },
+        {
+          "title": "Conservation",
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.conservation.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "conservation",
+            "type": "quantitative",
+            "axis": "right"
+          },
+          "color": {
+            "field": "conservation",
+            "type": "quantitative"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "width": 672,
+          "height": 180
+        },
+        {
+          "alignment": "overlay",
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.fasta.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "tracks": [
+            {
+              "mark": "rect"
+            },
+            {
+              "mark": "text",
+              "x": {
+                "field": "start",
+                "type": "genomic"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "color": {
+                "value": "black"
+              },
+              "size": {
+                "value": 12
+              },
+              "visibility": [
+                {
+                  "measure": "zoomLevel",
+                  "target": "track",
+                  "threshold": 10,
+                  "operation": "LT",
+                  "transitionPadding": 100
+                }
+              ]
+            }
+          ],
+          "x": {
+            "field": "pos",
+            "type": "genomic",
+            "axis": "bottom"
+          },
+          "row": {
+            "field": "name",
+            "type": "nominal",
+            "legend": true
+          },
+          "color": {
+            "field": "base",
+            "type": "nominal",
+            "range": [
+              "#d60000",
+              "#018700",
+              "#b500ff",
+              "#05acc6",
+              "#97ff00",
+              "#ffa52f",
+              "#ff8ec8",
+              "#79525e",
+              "#00fdcf",
+              "#afa5ff",
+              "#93ac83",
+              "#9a6900",
+              "#366962",
+              "#d3008c",
+              "#fdf490",
+              "#c86e66",
+              "#9ee2ff",
+              "#00c846",
+              "#a877ac",
+              "#b8ba01"
+            ],
+            "legend": true
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "text": {
+            "field": "base",
+            "type": "nominal"
+          },
+          "width": 672,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "static": true,
+      "xDomain": {
+        "interval": [
+          0,
+          396
+        ]
+      },
+      "alignment": "overlay",
+      "tracks": [
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.fasta.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "mark": "rect",
+          "x": {
+            "field": "pos",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "row": {
+            "field": "name",
+            "type": "nominal",
+            "legend": false
+          },
+          "color": {
+            "field": "base",
+            "type": "nominal",
+            "range": [
+              "#d60000",
+              "#018700",
+              "#b500ff",
+              "#05acc6",
+              "#97ff00",
+              "#ffa52f",
+              "#ff8ec8",
+              "#79525e",
+              "#00fdcf",
+              "#afa5ff",
+              "#93ac83",
+              "#9a6900",
+              "#366962",
+              "#d3008c",
+              "#fdf490",
+              "#c86e66",
+              "#9ee2ff",
+              "#00c846",
+              "#a877ac",
+              "#b8ba01"
+            ],
+            "legend": false
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "text": {
+            "field": "base",
+            "type": "nominal"
+          },
+          "width": 672,
+          "height": 180
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.conservation.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "conservation",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "field": "conservation",
+            "type": "quantitative"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "width": 672,
+          "height": 180
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/alignment_viewer_p53.gap.csv",
+            "type": "csv",
+            "genomicFields": [
+              "pos"
+            ],
+            "sampleLength": 99999
+          },
+          "mark": "bar",
+          "x": {
+            "field": "start",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "gap",
+            "type": "quantitative",
+            "axis": "none"
+          },
+          "color": {
+            "value": "gray"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "strokeWidth": {
+            "value": 0
+          },
+          "width": 672,
+          "height": 180
+        },
+        {
+          "mark": "brush",
+          "x": {
+            "linkingId": "-"
+          },
+          "color": {
+            "value": "black"
+          },
+          "stroke": {
+            "value": "black"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "opacity": {
+            "value": 0.3
+          }
+        }
+      ],
+      "width": 800,
+      "height": 150
+    }
+  ]
+}
