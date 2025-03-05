@@ -171,6 +171,15 @@ def change_track_color(track):
             tracks.append(track_cp)
         return tracks
     
+    # If "color" is not defined, but "stroke"
+    # if "color" not in track and "stroke" in track and isinstance(track["stroke"], dict) and "value" in track["stroke"]:
+    #     tracks = []
+    #     for color in COLORS:
+    #         track_cp = copy.deepcopy(track)
+    #         track_cp["stroke"] = {"value": color}  # Add "color" with a new random value
+    #         tracks.append(track_cp)
+    #     return tracks
+    
     # If "color" is not defined, add it and assign a random color
     if "color" not in track:
         tracks = []
@@ -270,8 +279,8 @@ if __name__ == "__main__":
     parser.add_argument("-cc", "--change-color", action="store_true")
     args = parser.parse_args(sys.argv[1:])
     filename = os.path.splitext(os.path.basename(args.file))[0]
-    # output_dir = os.path.join(OUTPUT_PATH, filename)
-    output_dir = OUTPUT_PATH  # same path
+    output_dir = os.path.join(OUTPUT_PATH, filename)
+    # output_dir = OUTPUT_PATH  # same path
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
     template_spec = read_spec(args.file)
