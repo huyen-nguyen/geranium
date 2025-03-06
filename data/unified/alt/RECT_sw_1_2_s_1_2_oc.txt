@@ -1,0 +1,1 @@
+Ideogram. Chart is titled 'Basic Marks: Rect'. The genome is shown in intervals on the x-axis.  The color of the rectangles indicates the different categories.  

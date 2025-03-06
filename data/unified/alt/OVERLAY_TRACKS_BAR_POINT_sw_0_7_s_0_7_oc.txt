@@ -1,0 +1,1 @@
+Chart with bars and chart with points. The genome is shown in intervals on the x-axis.  The height of the bars and points indicates the different categories. The categories are shown with the color of the bars. The color of the points indicates the different categories.  

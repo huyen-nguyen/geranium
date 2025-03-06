@@ -1,0 +1,1 @@
+Figure with two charts. Top track is a line chart.  The genome is shown in intervals on the x-axis. The expression is shown on the y-axis with lines.  The color of the lines is malibu.  Bottom track is a chart with area displayed.  The genome is shown on the x-axis. The expression is shown on the y-axis with area displayed.  The color of the area displayed is sushi. 
