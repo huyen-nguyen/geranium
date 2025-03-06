@@ -146,16 +146,20 @@ def change_view_marker(view):
             new_views.append(view_cp)
         return new_views
     
+    
 def change_track_color(track):
     # If "color" is a dict and contains "field", adjust the "range" property
-    if (
-        "color" in track and 
+    if ("color" in track and 
         isinstance(track["color"], dict) and 
-        "type" in track["color"] and 
-        track["color"]["type"] == "nominal"):
-        track_cp = copy.deepcopy(track)
-        track_cp["color"]["range"] = Category10_COLORS
-        return [track_cp]
+        "type" in track["color"]):
+        if (track["color"]["type"] == "nominal"):
+            track_cp = copy.deepcopy(track)
+            track_cp["color"]["range"] = Category10_COLORS
+            return [track_cp]
+        elif (track["color"]["type"] == "quantitative"):
+            track_cp = copy.deepcopy(track)
+            track_cp["color"]["range"] = "hot"
+            return [track_cp]
     
     # Check if "color" exists in the track. 
     if "color" in track and isinstance(track["color"], dict) and "value" in track["color"]:
@@ -166,6 +170,15 @@ def change_track_color(track):
             track_cp["color"]["value"] = color  # Change color to new value
             tracks.append(track_cp)
         return tracks
+    
+    # If "color" is not defined, but "stroke"
+    # if "color" not in track and "stroke" in track and isinstance(track["stroke"], dict) and "value" in track["stroke"]:
+    #     tracks = []
+    #     for color in COLORS:
+    #         track_cp = copy.deepcopy(track)
+    #         track_cp["stroke"] = {"value": color}  # Add "color" with a new random value
+    #         tracks.append(track_cp)
+    #     return tracks
     
     # If "color" is not defined, add it and assign a random color
     if "color" not in track:
@@ -178,9 +191,33 @@ def change_track_color(track):
     
     return [track]
 
-def change_view_color(view):
-    if "views" not in view:
-        # If there are no nested views, change colors in tracks
+def change_single_view_color(view):
+    # If "color" is a dict and contains "field", adjust the "range" property
+    if ("color" in view and 
+        isinstance(view["color"], dict) and 
+        "type" in view["color"]):
+        if (view["color"]["type"] == "nominal"):
+            view_cp = copy.deepcopy(view)
+            view_cp["color"]["range"] = Category10_COLORS
+            return [view_cp]
+        elif (view["color"]["type"] == "quantitative"):
+            view_cp = copy.deepcopy(view)
+            view_cp["color"]["range"] = "hot"
+            return [view_cp]
+    
+    # Check if "color" exists in the view. 
+    if "color" in view and isinstance(view["color"], dict) and "value" in view["color"]:
+        # If "color" is defined and is a dictionary with a "value", create variations
+        views = []
+        for color in COLORS:
+            view_cp = copy.deepcopy(view)
+            view_cp["color"]["value"] = color  # Change color to new value
+            views.append(view_cp)
+        return views
+    
+    # If "color" is not defined, add it and assign a random color
+    if "color" not in view:
+        # Otherwise, modify colors in tracks
         tracks = view["tracks"]
         track_color_changes = [change_track_color(t) for t in tracks]
         track_prods = product(*track_color_changes)
@@ -190,8 +227,17 @@ def change_view_color(view):
             view_cp["tracks"] = list(tp)
             views.append(view_cp)
         return views
-    else:
-        # Handle nested views
+    
+    return [view]
+
+
+def change_view_color(view):
+    """
+    Apply color changes to views. If a view has tracks, change the tracks' colors.
+    If a view has additional properties, treat it the same as a track.
+    """
+    if "views" in view:
+        # If there are nested views, recursively change their colors
         deep_views = view["views"]
         view_color = [change_view_color(v) for v in deep_views]
         view_prods = product(*view_color)
@@ -202,6 +248,22 @@ def change_view_color(view):
             new_views.append(view_cp)
         return new_views
 
+    has_other_property = any(key != 'tracks' for key in view)
+    
+    # If view has properties other than "tracks", apply color changes to the view itself
+    if not has_other_property:
+        # Otherwise, modify colors in tracks
+        tracks = view["tracks"]
+        track_color_changes = [change_track_color(t) for t in tracks]
+        track_prods = product(*track_color_changes)
+        views = []
+        for tp in track_prods:
+            view_cp = copy.deepcopy(view)
+            view_cp["tracks"] = list(tp)
+            views.append(view_cp)
+        return views
+        
+    return change_single_view_color(view)
 
 def write_spec(spec_dict, output_path):
     with open(output_path, "w") as f:
@@ -217,8 +279,8 @@ if __name__ == "__main__":
     parser.add_argument("-cc", "--change-color", action="store_true")
     args = parser.parse_args(sys.argv[1:])
     filename = os.path.splitext(os.path.basename(args.file))[0]
-    # output_dir = os.path.join(OUTPUT_PATH, filename)
-    output_dir = OUTPUT_PATH  # same path
+    output_dir = os.path.join(OUTPUT_PATH, filename)
+    # output_dir = OUTPUT_PATH  # same path
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
     template_spec = read_spec(args.file)
