@@ -2,7 +2,7 @@
 SCALE="0.7;1.0;1.2"
 SCALEWIDTH="0.7;1.0;1.2"
 
-python generate_specs.py -f geranium_seeds/rigid/overview-landing.json -cc
+python generate_specs.py -f geranium_seeds/BED_DEMO_sw_0_7_s_0_7_oc.json -cc -pv -s $SCALE -sw $SCALEWIDTH
 
 # python generate_specs.py -f geranium_seeds/band_connection.json -pv -cc -s $SCALE -sw $SCALEWIDTH
 # python generate_specs.py -f geranium_seeds/bar.json -cc
