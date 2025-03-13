@@ -1,1 +1,0 @@
-Figure with two charts. Top track is a line chart.  The genome is shown on the x-axis. The expression is shown on the y-axis with lines.  The color of the lines is gray.  Bottom track is a line chart.  Chart is titled 'Example: Brushing and Linking'. The genome is shown on the x-axis. The expression is shown on the y-axis with lines.  The color of the lines is silver. 

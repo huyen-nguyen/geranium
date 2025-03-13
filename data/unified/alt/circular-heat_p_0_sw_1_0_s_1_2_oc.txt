@@ -1,1 +1,0 @@
-Circular heat map. The genome is shown in intervals on the x-axis. The expression values are encoded using color intensity. The chart is stratified by rows for the categories.  

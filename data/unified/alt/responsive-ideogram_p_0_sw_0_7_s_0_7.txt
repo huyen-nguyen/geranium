@@ -1,1 +1,0 @@
-Figure with two charts. Top track is a unknown chart.  The genome is shown in intervals on the x-axis.     Bottom track is a chart with text.  The genome is shown in intervals on the x-axis.   The color of the text is grey. 
