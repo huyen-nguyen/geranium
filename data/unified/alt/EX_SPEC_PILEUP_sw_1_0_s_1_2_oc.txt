@@ -1,0 +1,1 @@
+Figure with two charts. Top track is a chart with bars.  Chart is titled 'example_higlass.bam'.      Bottom track is a chart with rectangles.  Chart is titled 'example_higlass.bam'.   The chart is stratified by rows for the categories.  
