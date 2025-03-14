@@ -23,7 +23,7 @@ Total unique rules extracted: 605
 Total distinct LHS count: 195
 
 * For unified_V2 (now as unified) input *
-Total specs: 3152
+Total specs: 3200
 Max rule length: 1633
 Total unique rules extracted: 707
 Total distinct LHS count: 205
