@@ -1,0 +1,12 @@
+[Summary] The visualization has two views, with circular and linear layouts, in a vertical arrangement. The views are linked by brushing and linking. 
+
+[Data] The data being represented are from data types: CSV, JSON, BEDDB, VCF
+
+- The circular overview at the top shows the entire genome.
+- The circular overview has five tracks, including an ideogram, a genomic position track (?), two genomic range tracks, and a line-connection track.
+- The first genomic range track is titled "Gain." It shows genomic ranges in blue rectangles.
+- The second genomic range track is titled "Loss of Heterozygosity (LOH)." It shows genomic ranges in red rectangles.
+- The line-connection track shows lines connectin between two genomics positions. The lines are displayed in different colors based on categorical values of "svclass".
+
+- The linear detailed view at the bottom shows the selected regions of chromosome 1 only.
+- The linear detailed view has nine tracks, including an ideogram, a genomic position track (?), gene annotation, scatterplot, four genomic range tracks, and a line-connection track (?).
