@@ -76,10 +76,22 @@ def get_rules(node, parent_key, rules, grandparent_key="root"):
                 rules.append(new_parent + ' -> STRING')
             else:
                 rules.append(new_parent + ' -> ' + '"' + str(v) + '"')
+                
+def rename_data_transform(obj):
+    # Recursively rename "dataTransform" to "dataTransforms"
+    if isinstance(obj, dict):
+        for key in list(obj.keys()):
+            if key == "dataTransform":
+                obj["dataTransforms"] = obj.pop("dataTransform")
+            else:
+                rename_data_transform(obj[key])
+    elif isinstance(obj, list):
+        for item in obj:
+            rename_data_transform(item)
 
 def extract_rules(input_file, output_file, output_tsv):
     """
-    Manage overall process: loading data, extracting rules using get_rules, and saving the rules to files.
+    Manage overall process: loading ALL specs at once, extracting rules using get_rules, and saving the rules to files.
     Level: File.
     
     Input: Input TXT file with JSON data, and paths for output files.
@@ -141,18 +153,68 @@ def extract_rules(input_file, output_file, output_tsv):
             writer.writerow([lhs, "->", rhs])
 
     print(f"Rules saved in TSV format to {output_tsv}")
+    
+    
+def vectorize_specifications_tsv(tsv_input_file, frame_file, onehot_output_file, frequency_output_file):
+    """
+    Process a TSV file where each row contains:
+      1. file_name
+      2. specification JSON (as a string)
+      
+    For each specification, extract CFG rules (using get_rules) and create:
+      1. A one-hot vector (1 if a rule from the frame exists in the specification, 0 otherwise).
+      2. A frequency count vector (the number of times each rule appears in the specification).
+      
+    The vectors are written as TSV files with the frame rules as the header (after the file_name column).
+    """
+    # Load the frame of CFG rules from the frame file.
+    with open(frame_file, 'r') as f:
+        frame_rules = [line.strip() for line in f if line.strip()]
+    
+    onehot_vectors = []
+    frequency_vectors = []
+    
+    # Read the TSV input file (assumes a header row)
+    with open(tsv_input_file, 'r', newline='') as infile:
+        reader = csv.reader(infile, delimiter='\t')
+        header = next(reader)  # Skip header row; adjust if your file has no header
+        for row in reader:
+            if not row or len(row) < 2:
+                continue
+            file_name, json_content = row[0], row[1]
+            try:
+                spec = json.loads(json_content)
+                rename_data_transform(spec)
+                rules = []
+                get_rules(spec, 'root', rules)
+            except Exception as e:
+                print(f"Error processing {file_name}: {e}")
+                rules = []
+            # Build frequency count and one-hot vectors for the frame rules.
+            frequency_vector = [rules.count(frame_rule) for frame_rule in frame_rules]
+            onehot_vector = [1 if count > 0 else 0 for count in frequency_vector]  # build one-hot from frequency count
+            onehot_vectors.append([file_name] + onehot_vector)
+            frequency_vectors.append([file_name] + frequency_vector)
+    
+    # Write one-hot vectors to output TSV file.
+    with open(onehot_output_file, 'w', newline='') as out1:
+        writer = csv.writer(out1, delimiter='\t')
+        header_row = ['file_name'] + frame_rules
+        writer.writerow(header_row)
+        writer.writerows(onehot_vectors)
+    
+    # Write frequency count vectors to output TSV file.
+    with open(frequency_output_file, 'w', newline='') as out2:
+        writer = csv.writer(out2, delimiter='\t')
+        header_row = ['file_name'] + frame_rules
+        writer.writerow(header_row)
+        writer.writerows(frequency_vectors)
+    
+    print(f"Vectorization complete. One-hot vectors saved to {onehot_output_file} and frequency vectors saved to {frequency_output_file}.")
 
-def rename_data_transform(obj):
-    # Recursively rename "dataTransform" to "dataTransforms"
-    if isinstance(obj, dict):
-        for key in list(obj.keys()):
-            if key == "dataTransform":
-                obj["dataTransforms"] = obj.pop("dataTransform")
-            else:
-                rename_data_transform(obj[key])
-    elif isinstance(obj, list):
-        for item in obj:
-            rename_data_transform(item)
+# Example usage:
+vectorize_specifications_tsv('unified-specs.tsv', 'all_cfg_rules.txt', 'vectors_onehot.tsv', 'vectors_frequency.tsv')
 
-# Extract rules from input file
-extract_rules('unified-specs.txt', 'unified-cfg-rules.txt', 'unified-cfg-rules.tsv')
+
+# Extract rules from input file (all specs)
+# extract_rules('unified-specs.txt', 'unified-cfg-rules.txt', 'unified-cfg-rules.tsv')
