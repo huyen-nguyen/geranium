@@ -1,0 +1,24 @@
+.search-panel {
+  height: 100%;
+  width: 500px;
+  border-right: 1px solid #D3CABD;
+  padding: 1rem;
+}
+
+.search-by-button-group {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+button.selected {
+  background: #4a4644;
+  color: white;
+}
+
+.search-button {
+  margin-top: 1rem;
+  width: 100%;
+}

@@ -1,0 +1,13 @@
+.search-by-text-panel {
+  width: 100%;
+}
+
+.search-by-text-textarea {
+  height: 500px;
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid #D3CABD;
+  resize: none;
+  padding: 0;
+  margin: 0;
+}
