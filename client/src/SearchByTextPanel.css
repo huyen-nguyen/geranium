@@ -1,13 +1,22 @@
 .search-by-text-panel {
   width: 100%;
+  padding-top: 0.5rem;
 }
 
 .search-by-text-textarea {
   height: 500px;
-  width: 100%;
+  width: calc(100% - 2rem);
   border-radius: 0;
   border: 1px solid #D3CABD;
   resize: none;
-  padding: 0;
+  padding: 1rem;
   margin: 0;
+  margin-top: 1rem;
+  background: #FAF7F0;
+  font-size: 1.2rem;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.search-by-text-textarea:focus {
+  outline: 2px solid #4A4644;
 }

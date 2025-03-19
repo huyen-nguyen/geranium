@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import SearchByTextPanel from './SearchByTextPanel';
 import './SearchPanel.css'
+import './SearchResultPanel.css'
+import SearchByImagePanel from './SearchByImagePanel';
+import SearchBySpecPanel from './SearchBySpecPanel';
 
 export default function SearchPanel(props) {
   /* eslint-disable react/prop-types */
@@ -9,9 +12,11 @@ export default function SearchPanel(props) {
 
   // inputs
   const [inputText, setInputText] = useState('');
+  const [inputImage, setInputImage] = useState('');
+  const [inputSpec, setInputSpec] = useState('');
 
   const SearchByButtons = useMemo(() => {
-    return ['Text', 'Image', 'JSON Spec'].map(d => {
+    return ['Text', 'Image', 'Spec'].map(d => {
       return (
         <button
           key={d}
@@ -28,6 +33,10 @@ export default function SearchPanel(props) {
     switch (searchType) {
       case 'Text':
         return <SearchByTextPanel onUpdate={(text) => { setInputText(text) }} />;
+      case 'Image':
+        return <SearchByImagePanel onUpdate={(img) => { setInputImage(img) }} />;
+      case 'Spec':
+        return <SearchBySpecPanel onUpdate={(spec) => { setInputSpec(spec) }} />;
     }
   }, [searchType]);
 
@@ -38,7 +47,7 @@ export default function SearchPanel(props) {
         {SearchByButtons}
       </div>
       {SearchByPanel}
-      <button className='search-button' onClick={() => { onSearch(searchType, inputText) }}>
+      <button className='search-button' onClick={() => { onSearch(searchType, inputText, inputImage, inputSpec) }}>
         Search
       </button>
     </div>

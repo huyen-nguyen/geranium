@@ -14,7 +14,7 @@ body,
   -moz-osx-font-smoothing: grayscale;
 }
 
-content {
+.content {
   display: flex;
   height: calc(100% - 4em);
 }
