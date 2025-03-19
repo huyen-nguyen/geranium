@@ -1,0 +1,6 @@
+.spec-preview {
+  width: calc(100% - 2em);
+  height: 500px;
+  resize: vertical;
+  font-family: Consolas, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}

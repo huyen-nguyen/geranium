@@ -1,47 +1,34 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import axios from "axios"
+import { useEffect, useMemo, useState } from 'react'
+import Header from './Header.jsx'
+import SearchPanel from './SearchPanel.jsx'
+// import axios from "axios"
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [array, setArray] = useState([])
 
-  const fetchAPI = async () => {
-    const response = await axios.get("http://127.0.0.1:8080/api/users") 
-    setArray(response.data.users)
-  }
+  const [searchParam, setSearchParam] = useState({});
 
-  useEffect(() => {
-    fetchAPI()
-  }, [])
+  //const fetchAPI = async () => {
+  //  await axios.get("http://127.0.0.1:8080/api/users")
+  //}
+
+  //useEffect(() => {
+  //  fetchAPI()
+  //}, [])
+
+  // Just for testing
+  const SearchedMsg = useMemo(() => {
+    return (
+      <div className="search-result-panel">You clicked "Search." The input type is "{searchParam.type}" and the actual input is "{searchParam.text}" and "{searchParam.image + ''}" and "{searchParam.spec + ''}"</div>
+    )
+  }, [searchParam]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className='content'>
+        <SearchPanel onSearch={(type, text, image, spec) => { setSearchParam({ type, text, image, spec }) }} />
+        {SearchedMsg}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-          {
-            array.map((user, index) => (
-              <div key={index}>
-              <span>{user}</span>
-              </div>
-            ))
-          }      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
