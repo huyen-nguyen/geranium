@@ -1,0 +1,7 @@
+The visualization consists of two vertically arranged linear charts displaying genomic data from chromosome 1 within the interval 1 to 3,000,500. 
+
+The top chart is a scatter plot where genomic positions are represented along the x-axis and expression values, or "peaks," on the y-axis. Each point's size corresponds to its peak value, and the colors indicate different sample categories from "sample 1" to "sample 4." The plot includes a legend to distinguish the samples and has a semi-transparent appearance due to an opacity setting of 0.5.
+
+The bottom chart is an area plot stratified into rows representing samples. It shares the same genomic x-axis as the scatter plot, with the y-axis again denoting expression or peak values. Each sample is illustrated in a distinguishable color, matching the legend. This chart uses area fill to visualize the peaks, with white strokes separating the rows, enhancing clarity.
+
+Both charts feature tooltips that provide genomic start and end positions, peak values formatted to two decimal places, and sample identification when hovering over points or areas, facilitating more detailed data examination. The visualization is interactive, allowing for zooming within specified limits.

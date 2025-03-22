@@ -1,0 +1,11 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" provides an integrated genomic overview of Chromosome 5 along the x-axis, spanning an interval from 0 to 80 million base pairs. It consists of multiple interconnected views and tracks:
+
+1. **Chromosome 5 Ideogram**: The top view displays an ideogram for Chromosome 5, highlighting various stain patterns such as gneg, gpos25, and acen, differently colored to denote their categories. Rectangles and labels represent chromosome bands with notable features, and a brush interface allows linking to other detailed views.
+
+2. **Segmental Duplication Tracks**:
+   - The first track below the ideogram displays segmental duplications on Chromosome 5, using colored connections to illustrate genomic regions. This view is interactive and stratified by rows to categorize data, as depicted by the color and stroke of rectangles.
+   - Another track shows connections across regions, linking genomic positions.
+
+3. **Region of Interest**: This chart zooms into a specific genomic region (chr5: 68,000,000 to 71,000,000) to provide a detailed look, revealing intra-chromosomal connections and stratification based on segment categories indicated by stroke colors.
+
+4. **Rearrangement View**: Focuses on a narrower interval (chr5: 69,276,000 to 69,282,000), showcasing green connections within the specified region. The visual emphasis

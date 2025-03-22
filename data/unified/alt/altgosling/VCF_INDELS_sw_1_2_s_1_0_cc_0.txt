@@ -1,0 +1,1 @@
+Chart with rectangles and text. The genome is shown on the x-axis.  The chart is stratified by rows for the categories. The categories are also shown with the stroke of the rectangles, rectangles and text. The color of the rectangles indicates the different categories. The color of the rectangles indicates the different categories. The color of the text is white. 

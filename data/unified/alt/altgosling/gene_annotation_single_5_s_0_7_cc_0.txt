@@ -1,0 +1,1 @@
+Genomic range annotation track. The genome is shown in intervals on the x-axis.  The chart is stratified by rows for the categories. The color of the rectangles is pink. 
