@@ -1,0 +1,9 @@
+This visualization presents a complex genomic dataset using a combination of circular and linear charts. 
+
+At the top, a **circular ideogram** displays genomic intervals with categories distinguished by color, accompanied by a **circular chart highlighting putative drivers** via textual labels stratified by category rows. Several other **circular charts** depict genomic data using colored rectangles to indicate specific conditions such as **"Gain"** (sky blue rectangles) and **"Loss of Heterozygosity"** (orange rectangles).
+
+Below, a **linear ideogram** serves as a genomic baseline, segmented by color according to band categories. This section is linked to adjacent charts via a brush to facilitate detailed examination. A scatter plot, titled **"Point Mutation"**, maps mutation distances along the y-axis and mutation types through point colors.
+
+The lower part includes multiple linear charts illustrating features like **insertions and deletions**, **copy number variants** in rectangles, and distinctive connections marked by colors and line styles to signify structural variations, such as translocations and inversions.
+
+Overall, this visualization provides a detailed and interactive mapping of genomic features, emphasizing structural variations and highlighting notable genetic markers and mutations through its diverse array of charts and color-coded legends.

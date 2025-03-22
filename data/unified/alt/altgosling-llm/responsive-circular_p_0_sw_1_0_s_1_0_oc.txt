@@ -1,0 +1,5 @@
+The visualization is a circular bar chart derived from genomic data, specifically displaying intervals on chromosome 12 (chr12) between 5,000,000 and 15,000,000 base pairs. The layout is circular, transitioning to linear when the aspect ratio exceeds 1.5. This adaptive visualization employs the hg38 genome assembly and is responsive in height.
+
+Data is sourced from a multi-valued endpoint, highlighting peaks per sample across genomic positions. Bars represent expression levels, stratified by sample categories, with each bar colored by sample type. A filter removes unspecified samples, ensuring focus on defined data points. Overlay tracks show quantitative peak values with varying opacity and visibility, aligning to axis visibility thresholds.
+
+Tracks within the circular layout extend from an inner radius of 90 to an outer radius of 300, covering a comprehensive range of genomic data. This multi-track visualization allows for nuanced exploration of expression across genomic intervals, making it a versatile tool for interactive genetic data analysis.
