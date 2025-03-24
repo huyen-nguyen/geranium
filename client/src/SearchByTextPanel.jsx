@@ -9,7 +9,8 @@ export default function SearchByTextPanel(props) {
     <div className='search-by-text-panel'>
       <BsFillInfoCircleFill style={{
         color: '#4a4644',
-        marginRight: '6px'
+        marginRight: '6px',
+        verticalAlign: 'middle'
       }} />
       Describe a visualization you want to search for.
       <textarea className='search-by-text-textarea' onChange={(e) => { onUpdate(e.currentTarget.value) }}></textarea>

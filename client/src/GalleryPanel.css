@@ -1,0 +1,31 @@
+.gallery-panel {
+  width: calc(100% - 400px);
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.gallery-item {
+  border-bottom: 1px solid #D3CABD;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.gallery-image-text-group {
+  display: flex;
+}
+
+.gallery-item-title {
+  color: #4A4644;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.gallery-item-thumbnail {
+  width: 300px;
+  border: 1px solid #4A4644;
+}
+
+.gallery-item-text {
+  margin-left: 1rem;
+}
