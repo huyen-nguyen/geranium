@@ -1,0 +1,1 @@
+Line chart and scatter plot. The genome is shown on the x-axis. The expression is shown on the y-axis with lines and points. The height of the expression values is shown with the size-axis. The chart is stratified by rows for the categories. The categories are also shown with the color of the lines and points.  

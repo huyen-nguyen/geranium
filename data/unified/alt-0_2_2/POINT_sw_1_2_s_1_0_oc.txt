@@ -1,0 +1,1 @@
+Scatter plot. Chart is titled 'Basic Marks: point'. The genome is shown on the x-axis. The expression values are shown with points on the y and size-axes.   

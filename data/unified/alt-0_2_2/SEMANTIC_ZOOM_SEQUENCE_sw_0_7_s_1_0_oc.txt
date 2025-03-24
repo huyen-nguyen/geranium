@@ -1,0 +1,1 @@
+Bar chart and chart with text. The genome is shown on the x-axis. The genome is shown in intervals on the x-axis. The expression is shown on the y-axis with bars. The color of the bars indicates the different categories. The color of the text is white. 
