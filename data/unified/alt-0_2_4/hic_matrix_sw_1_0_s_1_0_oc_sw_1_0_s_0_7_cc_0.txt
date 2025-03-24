@@ -1,0 +1,1 @@
+Heat map. The genome is shown on both the x- and y-axes. Both axes show intervals. The expression values are encoded using color intensity.   
