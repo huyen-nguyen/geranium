@@ -1,0 +1,16 @@
+This visualization represents a genomic data analysis using a combination of circular and linear views, focusing on the genome assembly hg19. The circular view is a multi-layer ideogram displaying chromosomal bands, annotated with potential genomic variations including 'Gain' and 'Loss of Heterozygosity (LOH)'. These variations are indicated with sky blue and dark orange colors, respectively, and are represented as rectangles.
+
+Key features include:
+
+1. **Circular Ideogram**: Shows chromosomal positions from different chromosomes, with color-coded rectangles indicating categories such as 'Gain' (sky blue) and 'LOH' (dark orange).
+
+2. **Circular Track - Putative Driver**: Contains text annotations showing potential driver mutations on the genome's x-axis, with each text aligned to specific positions.
+
+3. **Circular Connection Track**: Displays structural variations with connections, colored to represent categories like 'Translocation', 'Duplication', 'Deletion', and types of inversions.
+
+4. **Linear Ideogram**: Below the circular view, a linear ideogram shows chromosome 1 in detail, with a colored band indicating various chromosomal regions. 
+
+5. **Gene and Mutation Tracks**: 
+   - **Putative Driver**: Text annotations indicating potential gene drivers stratified by rows for different categories.
+   - **Point Mutation Track**: Scatter plot visualizing point mutations with different colors based on mutation types like 'C>A', 'C>G', etc.
+   - **Insertion and De
