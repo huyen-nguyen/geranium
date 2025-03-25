@@ -1,0 +1,13 @@
+The visualization consists of a linear arrangement of multiple charts analyzing genomic data related to sequence alignment. It features a primary view with specific genomic focus and a secondary overlay view showing aggregate genomic data.
+
+1. **Primary View**:
+   - **Gap Chart**: Displays gaps in the sequence alignment using gray bars on the y-axis, formulated from a CSV dataset showing genomic positions.
+   - **Conservation Chart**: Illustrates conservation values at genomic intervals with color-encoded bars, derived from CSV data for visual emphasis on conservation metrics.
+   - **Category-Stratified Rectangular Chart**: Shows different categories as rectangles, each filled with text indicating base sequences. Categories are color-coded and ordered in rows, representing various sample names in the dataset.
+
+2. **Overlay View**:
+   - Comprises overlaid charts with rectangles and bar charts to reflect comprehensive alignment data.
+   - Contains genomic data visualizations that include multiple color-coded tracks depicting different levels of expression and conservation.
+
+Each view tracks genomic metadata within a specified range, managed with configurable properties like axis labels, color ranges, and interactive linking for dynamic browsing. Colorfulness and interactivity via linking IDs are central for making genomic trends and discrepancies apparent. The aggregated datasets use different color scales and graphical elements to provide insights into conservation levels and gaps in the sequence, facilitating an integrated portrayal of the genomic landscape.
+

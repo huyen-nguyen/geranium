@@ -1,0 +1,7 @@
+The visualization displays data from chromosome 1, ranging from position 1 to 3,000,500, in a vertical linear layout. Two main tracks are shown:
+
+1. **Area Chart**: The upper chart uses an area mark to display genomic data across four rows, each representing a different sample. The x-axis shows genomic positions, and the y-axis represents quantitative peak values. Each sample is distinctively colored, with the color legend visible.
+
+2. **Scatter Plot**: The lower chart is a scatter plot that visualizes the same genomic data. Points are plotted to represent peak values on both y and size axes. The x-axis shows genomic positions, with a grid for better readability. Each point is color-coded by sample, with an opacity of 0.5 and a color legend included.
+
+The visualization effectively uses area and point marks to provide both categorical and quantitative insights into the genomic data.

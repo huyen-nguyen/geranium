@@ -1,0 +1,5 @@
+A visualization titled "Smoother Zoom" uses a linear layout to present a comparative analysis of genomic data rendering approaches. The visualization consists of two vertically arranged views: "New Approach: Stretching Tiles" and "Original Approach." Each view uses a rectangular color-coded heatmap to represent genomic sequences from a CSV file. 
+
+The x-axis displays genomic positions, focusing on the interval from 350 to 396. The y-axis is stratified by nominal categories, without legend, differentiating samples by the 'name' field. Each rectangle is colored based on the 'base' field, with a range of 20 colors coded in hexadecimal. Text annotations display genomic base information, overlaying the rectangles, with conditional visibility for zoom levels less than 10. 
+
+The "New Approach" uses stretching graphics instead of redrawing for performance optimization during zoom, marked experimentally, while the "Original Approach" maintains traditional rendering. Both views have a width of 560 and a height of 310. The subtitle emphasizes scaling existing elements over redrawing.

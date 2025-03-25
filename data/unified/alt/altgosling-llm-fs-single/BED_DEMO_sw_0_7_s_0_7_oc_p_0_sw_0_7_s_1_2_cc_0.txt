@@ -1,0 +1,8 @@
+A linear layout visualization displays four BED files on chromosome 1, from position 1 to 2,000,000. Each chart represents different BED file configurations, using distinct colors to differentiate between datasets. 
+
+1. **BED12**: The chart titled "BED12: All 12 standard fields" displays genomic intervals using pink rectangles, with fields from a BED12 file.
+2. **BED6**: "BED6: A file with the first 6 BED fields" visualizes intervals using green rectangles, focusing on the first six standard fields.
+3. **BED6+6**: In the "BED6+6" track, intervals are shown with green rectangles, representing a combination of six standard and six custom fields.
+4. **BED12+1**: Finally, "BED12+1" features purple rectangles, illustrating a BED file with 12 standard fields plus an extra field. 
+
+All rectangles have black strokes and a consistent size value.

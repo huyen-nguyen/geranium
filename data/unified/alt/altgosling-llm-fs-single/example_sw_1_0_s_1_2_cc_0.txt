@@ -1,0 +1,19 @@
+**Description:**
+
+The visualization showcases various visual encoding methods in Gosling, arranged in a linear vertical layout. It covers chromosome 1, focusing on the interval between 1 and 3,000,500 base pairs.
+
+1. **Heat Map:** Displays genomic intervals on the x-axis, with rows representing samples. Color intensity encodes expression values.
+
+2. **Bar Charts:** Three different bar charts depict genomic data on the x-axis and expression on the y-axis. Categories are shown by bar colors, with one chart displaying grid lines for enhanced readability.
+
+3. **Line and Scatter Plot:** Overlaid line plot and scatter plot, showing genomic data on the x-axis. Expression values are denoted by y-axis positions and point sizes, with color indicating categories.
+
+4. **Scatter Plots:** Two scatter plots represent expression on y and size axes with genomic intervals on the x-axis. Categories are visualized using unique point colors.
+
+5. **Area Chart:** Displays expression as shaded areas on the y-axis, stratified by categories, with the genome on the x-axis.
+
+6. **Additional Bar Chart:** Shows genomic intervals on the x-axis with minimum and maximum expression limits on y and ye-axes. Color and rows separate the categories.
+
+7. **Connections Chart:** Displays genomic intervals with connections, where colors represent different categories.
+
+Each chart is interactive, providing tooltips with genomic positions and expression values for deeper data inspection. The title is "Visual Encoding," and the subtitle is "

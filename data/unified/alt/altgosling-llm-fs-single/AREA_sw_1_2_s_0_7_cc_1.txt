@@ -1,0 +1,3 @@
+Here's a description for the visualization:
+
+A linear area chart visualizes a multivec file, displaying the entire genome of hg38. The x-axis represents genomic positions across several chromosomes, while the y-axis shows quantitative peak values. The area under the curve is filled with a sky-blue color, indicating genomic data for 'sample 1.' The chart is titled 'Basic Marks: area' with the subtitle 'Tutorial Examples.' The visualization has a width of 672 pixels and a height of 156 pixels.

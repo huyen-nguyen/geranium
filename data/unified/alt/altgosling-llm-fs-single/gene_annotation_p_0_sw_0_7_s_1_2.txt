@@ -1,0 +1,17 @@
+Here's a comprehensive description of the visualization:
+
+This figure comprises six genomic range annotation tracks arranged vertically and horizontally. Each track displays data for chromosome 3 between positions 52,168,000 and 52,890,000. The tracks are from different sources, each representing genomic data as follows:
+
+1. **IGV Track**: Displays genes with their names using blue text and arrows indicating gene direction on positive and negative strands. Navy rectangles and white lines with triangle patterns represent genomic intervals.
+
+2. **Corces et al. Track**: Uses blue and red texts, with triangles and rectangles, to show gene annotations. Genes in different strands are represented with alternative colors for distinction.
+
+3. **HiGlass Track**: Similar representation uses triangles, text, and rectangles. Blue and pink colors indicate strand direction. Exons are highlighted with segments.
+
+4. **Cyverse-QUBES Track**: Features genomic intervals using black text and gray shapes, including triangles for strand direction and purple rectangles for exon visualization.
+
+5. **GmGDV Track**: Shows gene annotations contrasting blue and red colors to differentiate strand, with arrows illustrating gene direction. Exons are distinguished from gene bodies using rectangles.
+
+6. **Final Track**: This generic genomic track highlights exons, introns, and other features using varying colors like gray, red, and light blue, depicted within rectangular shapes.
+
+Overall, the visualization provides a comparative genomic representation across multiple tracks from various data sources, showcasing regions of chromosome

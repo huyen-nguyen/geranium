@@ -1,0 +1,11 @@
+The visualization is a linear representation of genomic data centered on chromosome 1. It includes multiple tracks, each serving a distinct function:
+
+1. **Ideogram Track**: This track displays a chromosomal ideogram of chromosome 1, using a color-coded scheme to represent different cytogenetic banding patterns. Rectangles depict various bands, while right and left triangles highlight specific regions (p and q arms).
+
+2. **Gene Annotation Track**: Shows genomic positions of genes within chromosome 1. Gene directions are indicated by blue and orange triangles for positive and negative strands, respectively, and the track is divided into rows based on strand orientation.
+
+3. **Copy Number Variation Tracks**: Two separate tracks display rectangles representing genomic intervals with copy number variations in tumor samples. Purple rectangles indicate regions with minor copy number alterations, whereas pink rectangles highlight regions with more significant copy number changes.
+
+4. **Structural Variant Track**: Illustrates genomic rearrangements using curved lines (withinLink marks), with colors signifying different structural variant classes such as tandem duplications and translocations. Connections between genomic positions highlight these structural variations.
+
+The visualization employs interactive elements allowing insights into genomic architecture and alterations within chromosome 1, using colors to differentiate between data categories.

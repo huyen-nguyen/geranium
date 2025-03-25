@@ -1,0 +1,9 @@
+The visualization presents linear genomic tracks with complex displacement and layering techniques to resolve overlapping data points. It includes three main components:
+
+1. **Transcription Annotation**: Displays transcript data of chromosome 3 from 142,500,000 to 143,000,000 base pairs using triangular arrows to indicate gene direction. Displacement is used to stack a maximum of 15 gene annotations vertically, distinguished by color: blue for positive strand and orange for negative strand.
+
+2. **ClinVar Variants**: Illustrates clinically significant variants marked as "Likely Benign" on chromosome 2 between 126,800,000 and 127,700,000 base pairs. Green points represent variant locations, overlaid with colored text showing base changes. Light gray links connect related genomic sites.
+
+3. **Variant Analysis**: Details pathogenic variants on chromosome 17, from 43,080,000 to 43,120,000 base pairs. Points are colored based on pathogenic significance, showing an interactive spread to avoid visual clutter.
+
+The charts emphasize genomic location on the x-axis, using displacement and color to convey stratified information efficiently.

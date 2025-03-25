@@ -1,0 +1,1 @@
+A line chart in a linear layout visualizes a multivec file, showing the entire genome of hg38. The x-axis represents genomic positions, while the y-axis shows quantitative data indicated by the field 'peak'. The line thickness is set to 2 units. The title of the chart is 'Basic Marks: line', and it is further described by the subtitle 'Tutorial Examples'.

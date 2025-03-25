@@ -1,0 +1,11 @@
+The visualization consists of two sets of genomic views arranged vertically. 
+
+1. **Chromosome 12 View**:
+   - **Genomic Annotation Track**: Displays genes with names such as TMEM52B and OLR1 using text, triangles to indicate strand direction, and rectangles for exons. The genomic region spans from 10,140,000 to 10,210,000.
+   - **Bar Charts**: Three tracks titled "Sample 1," "Sample 2," and "Sample 3" show expression data as bar heights, colored in light pink.
+
+2. **Chromosome 8 View**:
+   - **Bar Charts**: Similar to the previous view, titled "Sample 1," "Sample 2," and "Sample 3," but colored in orange, displaying expression data over the region from 127,734,000 to 127,744,000.
+   - **Genomic Annotation Track**: Features the gene MYC, marked similarly with directional indicators and exon marks in orange.
+
+Both views use genomic coordinates on the x-axis, where the heights of bars represent quantitative expression data and strand information is indicated by the orientation of triangles and rules. Tracks are linked by genomic coordinates, ensuring comparative analysis across samples.

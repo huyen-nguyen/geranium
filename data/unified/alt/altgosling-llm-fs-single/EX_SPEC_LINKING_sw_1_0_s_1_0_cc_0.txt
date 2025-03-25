@@ -1,0 +1,7 @@
+Here is the detailed description for the visualization:
+
+The visualization, titled "Visual Linking," demonstrates a vertical arrangement of views that involve interactive linking. It begins with a circular bar chart displaying genomic data for chromosome 1, organized in rows labeled 'sample 1' through 'sample 4.' Each row is color-coded, with hues like blue, orange, green, and red, representing different categories.
+
+Adjacent to the circular chart, a linear bar chart visualizes genomic intervals in a horizontal layout. Both charts feature brushing elements that allow interaction, dynamically linking to a detailed view presented below.
+
+The detailed view, positioned at the bottom, is an extended linear bar chart focusing on chromosome 1, specifically between 160,000,000 and 200,000,000. This section showcases an in-depth examination of data, echoing the color scheme and row arrangement observed in the top charts. The design invites users to modify the brush range, which sequentially updates the detailed view, promoting an intuitive exploration of genomic data.

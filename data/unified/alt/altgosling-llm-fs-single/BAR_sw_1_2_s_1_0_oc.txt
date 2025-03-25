@@ -1,0 +1,1 @@
+A linear bar chart visualizes genomic intervals using a multivec file, displaying the entire genome of hg38. The height of the bars represents quantitative expression data from a field named 'peak.' The bars are uniformly sized, and the chart uses a bin size of 5 for aggregation. The chart is titled 'Basic Marks: bar' with the subtitle 'Tutorial Examples.'

@@ -1,0 +1,13 @@
+A composite visualization in a linear layout titled "Custom Mouse Events" with the subtitle "Customize mouse hovering and range selection events." It includes five tracks.
+
+1. **Individual Marks**: A bar chart visualizes genomic positions on the x-axis and peaks on the y-axis, with bars colored by sample categories. Interactive features allow mouse hovering and range selection with a purple brush. 
+
+2. **Group Marks By Sample**: Similar bar chart as above, but grouped by sample. Mouse events are highlighted with a green brush.
+
+3. **Group Marks By Genomic Position**: Another similar bar chart, but grouped by genomic position. Mouse interactions are indicated with a yellow brush.
+
+4. **Group Marks By Gene**: A track showing gene annotations from chromosome 3, visualized with rectangles and triangles stratified by gene name, colored in gray. Mouse events are highlighted in a light blue and gray coloring scheme.
+
+5. **Group Marks By Chromosome**: An ideogram with text, rectangles, and triangles representing chromosomal bands and densities, colored variously for different categories like density and type. Mouse events highlighted in blue.
+
+Interactive features include mouseOver, rangeSelect, and groupMarksByField for dynamic exploration of genomic data.

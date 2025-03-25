@@ -1,0 +1,9 @@
+The visualization features a linear layout showing genomic data for chromosome 1, within the interval of 103,900,000 to 104,100,000. It consists of seven tracks that depict genomic intervals and connections. 
+
+1. **Rectangular Tracks**: These tracks illustrate genomic regions with rectangles in various colors — sky blue, pink, and purple. The intervals on the x-axis identify specific genomic positions, with stroke details in dark green and an opacity of 0.15.
+
+2. **Connection Tracks**: Three tracks establish connections between genomic intervals using lines colored pink and green. These lines represent genomic links between different regions, maintaining the same stroke and opacity characteristics as the rectangles.
+
+Each track utilizes a CSV file from an external URL, with chromosome field "c2" and genomic fields "s1", "e1", "s2", and "e2". The visualization provides tooltips for starting and ending positions, emphasizing genome positions using a green font style.
+
+Overall, the visualization effectively displays duplicated genomic segments and their relationships using distinct color coding for each feature.

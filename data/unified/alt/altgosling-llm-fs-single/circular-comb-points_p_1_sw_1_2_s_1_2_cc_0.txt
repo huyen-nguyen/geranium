@@ -1,0 +1,7 @@
+This visualization features a circular layout showcasing genomic data from chromosome 1 within the interval 1 to 3,000,500. It includes two horizontally arranged views:
+
+1. **Left Circular Scatter Plot**: Displays expression values as points, with size and position reflecting values from a multivec file. Colors indicate different samples: sample 1 (blue), sample 2 (orange), sample 3 (green), and sample 4 (red), enhancing categorization.
+
+2. **Right Circular Scatter Plot**: Similar to the left plot but stratified by samples, clearly differentiating categories with color coding.
+
+The plots utilize transparent points (opacity 0.5) for clarity and employ genomic coordinates on the x-axis. Tooltip functionality reveals detailed information, including start and end genomic positions and sample values.

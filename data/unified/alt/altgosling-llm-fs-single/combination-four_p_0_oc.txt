@@ -1,0 +1,11 @@
+The visualization comprises four charts arranged in a linear, vertical layout, each illustrating genomic data from chromosome 1 within the interval of 1 to 3,000,500. The charts present data across four samples, distinguished by color.
+
+1. **Line and Scatter Plot**: Displays genomic positions on the x-axis and expression values on the y-axis, utilizing both lines and points. The point size encodes expression value magnitude, categorized by row and color according to the sample type.
+
+2. **Heat Map**: Depicts genomic intervals on the x-axis, with expression values encoded by color intensity. Rows and color indicate sample categories, demonstrating a detailed view of expression variation.
+
+3. **Scatter Plot**: Shows genomic positions on the x-axis, utilizing point size and opacity to reflect expression values on the y-axis. Sample categories are distinctively colored and arranged by row, revealing detailed expression patterns.
+
+4. **Bar Chart**: Illustrates genomic intervals on the x-axis with expression values shown using bars on the y and 'ye' axes. The chart is row-stratified by sample categories, with each category represented by a unique bar color.
+
+Tooltip functionality facilitates interaction by providing detailed genomic positions, expression values, and sample information upon hovering over data points. The overall layout emphasizes comparative analysis between different samples across the specified genomic region.

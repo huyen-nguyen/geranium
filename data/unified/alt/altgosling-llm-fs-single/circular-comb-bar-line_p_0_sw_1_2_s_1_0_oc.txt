@@ -1,0 +1,23 @@
+The visualization is a circular representation featuring two distinct tracks based on multivec data for chromosome 1, spanning positions 1 to 3,000,500.
+
+### First Track:
+- **Type**: Circular Bar Chart
+- **Data**: Multivec from samples
+- **X-axis**: Genomic positions
+- **Y-axis**: Peak values
+- **Bars**: Represent 'peak' for different samples (sample 1 to sample 4) displayed in circular layout.
+- **Categories**: Samples categorized by distinct colors, visible in the legend.
+- **Tooltip**: Provides genomic start and end positions, peak values, and sample category.
+
+### Second Track:
+- **Type**: Circular Line and Scatter Plot
+- **Data**: Same multivec dataset, overlaying line and point marks.
+- **X-axis**: Genomic positions
+- **Y-axis**: Peak values, lines connect points of continuous data.
+- **Points**: Size varies based on peak values.
+- **Categories**: Lines and points differentiated by sample with distinct colors.
+- **Tooltip**: Displays genomic position, peak value, and sample category.
+
+### Layout:
+- **Format**: Circular layout with nested views, providing a compact overview of data.
+- **Design**: Stratified by rows for sample categories, with legends indicating color codes for each sample.

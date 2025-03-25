@@ -1,0 +1,16 @@
+The visualization titled "Single-cell Epigenomic Analysis" from Corces et al. 2020 presents a linear arrangement focusing on chromosome 3, spanning the interval from 52,168,000 to 52,890,000. It comprises several tracks:
+
+1. **Cell Type-Specific Tracks:** 
+   - **Excitatory neurons** are represented with orange bars showing quantitative peaks based on genomic positions.
+   - **Inhibitory neurons** are displayed with green bars.
+   - **Dopaminergic neurons** are shown with dark purple bars.
+   - **Microglia** use sky blue bars.
+   - **Oligodendrocytes** are depicted with purple bars.
+   - **Astrocytes** are represented with red bars.
+   - **OPCs (Oligodendrocyte Progenitor Cells)** are shown in pink.
+
+2. **Gene Annotation Track:** This track provides gene annotations with strands differentiated by color—blue for the '+' strand and red for the '-' strand.
+
+3. **PLAC-seq Track (H3K4me3) Nott et al.:** Within-links are displayed in a pale color palette, indicating connections between genomic regions for oligodendrocytes, microglia, and neurons.
+
+4. **Genomic Overview:** At the bottom, a cytogenetic band ideogram of chromosome 3 shows regions in varying shades from white to black depending on density, and red triangles represent centromeres

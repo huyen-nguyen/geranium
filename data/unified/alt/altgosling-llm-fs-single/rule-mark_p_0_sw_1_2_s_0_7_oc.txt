@@ -1,0 +1,11 @@
+**Description**: 
+
+This visualization features an annotated bar chart in a linear layout, presenting genomic data with overlays. The chart is titled "Rule Mark" with a subtitle "Annotate visualization with horizontal and vertical lines." It consists of three overlaid tracks. 
+
+1. **Track 1**: A bar chart depicting genomic intervals on the x-axis with peaks on the y-axis, represented as gray bars. The data source is a multivec file.
+
+2. **Track 2**: Displays horizontal and vertical lines overlaid on the bar chart, where the x-axis shows genomic positions. The y-axis represents expression values. These lines are colored red with a stroke width reflecting their value, creating a dashed pattern.
+
+3. **Track 3**: Another set of vertical lines is displayed in blue with a constant width, highlighting specific genomic positions.
+
+Overall, the chart provides a clear annotation of genomic peaks with distinct horizontal and vertical lines, enhancing data interpretation.

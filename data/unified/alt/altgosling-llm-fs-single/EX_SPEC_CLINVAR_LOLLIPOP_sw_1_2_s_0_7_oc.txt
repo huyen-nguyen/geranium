@@ -1,0 +1,7 @@
+The visualization is a vertical arrangement of multiple views focusing on chromosome 13 within different genomic intervals. Each view consists of two tracks.
+
+The first track, titled "HiGlass," presents a range annotation of gene structures, distinguishing between exons and full gene bodies. The genes are represented as either right-pointing blue triangles or left-pointing red triangles, indicating the strand direction, and lines showing the gene boundaries.
+
+The second track showcases clinical significance data from the ClinVar database. It uses bars and points to depict various pathogenic categories such as "Pathogenic," "Likely pathogenic," and "Benign." Colors vary from pink to green to gray, reflecting these categories.
+
+The combination of genomic annotations and clinical variant information provides a comprehensive view of gene locations and potential clinical impacts in the specified genomic regions of chromosome 13.

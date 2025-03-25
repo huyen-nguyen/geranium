@@ -1,0 +1,18 @@
+This visualization consists of a combination of a circular and linear layout to provide a comprehensive genomic overview. 
+
+### Circular View:
+- **Ideogram Track:** Displays a circular representation of the genome with colors representing different chromosomal bands. A brush tool highlights selected regions.
+- **Text Track:** Titled "Putative Driver," this track shows textual annotations stratified by categories.
+- **Range Annotation Tracks:** Includes one track showing "Gain" in blue rectangles and another showing "Loss of Heterozygosity (LOH)" in orange rectangles.
+- **Connection Track:** Lines connect genomic positions, with colors and strokes indicating structural variations such as Translocation, Duplication, Deletion, and types of Inversion.
+
+### Linear View:
+- **Linked via Brush:** Reflects chromosome 1 from the circular view, providing a detailed horizontal layout.
+- **Ideogram Track:** Displays intervals with categories differentiated by colors.
+- **Text Track:** Displays potential genomic drivers, formatted similarly to the circular annotation.
+- **Scatter Plot:** Titled "Point Mutation," visualizes VCF data points, with colors indicating different mutation subtypes.
+- **Rectangular Tracks:** Include "Insertion" and "Deletion" categories displayed as rows.
+- **Copy Number Variants Track:** Shows bar representations in grayscale.
+- **Additional Range Annotation Tracks:** Similar to circular, feature "Gain" and "Loss of Heterozygosity (LOH)" with respective colors.
+
+This visualization incorporates multiple tracks and encoding strategies to

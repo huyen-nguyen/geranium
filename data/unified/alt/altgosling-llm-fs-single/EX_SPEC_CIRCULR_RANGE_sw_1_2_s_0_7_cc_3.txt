@@ -1,0 +1,1 @@
+A circular bar chart visualizes genomic data using a vector file in a stacked circular layout. Each bar represents a genomic position, with its height indicating the 'peak' value. The chart is colored in green and spans multiple chromosomes, with labels around the perimeter. The data utilizes the `hg38` assembly and is statically visualized with a central radius of 0.3.

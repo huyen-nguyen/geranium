@@ -1,0 +1,9 @@
+The visualization titled "Visual Linking" features an interactive genomic data representation on chromosome 1. It comprises three aligned charts arranged vertically. 
+
+The first chart is a linear area chart that shows genomic data across four categories, each represented by distinct colors. A brush tool is available for selecting specific regions, dynamically updating the detailed view below.
+
+The second chart presents a circular line plot with similar data, also stratified by categories and linked with a brush tool for seamless interaction with the linear area chart.
+
+At the bottom, there's a detailed scatter plot of a selected genomic range from positions 160,000,000 to 200,000,000 on chromosome 1. Here, data points are positioned along the x-axis representing genomic coordinates and a y-axis displaying quantitative values. Each category is illustrated with different colors, making it easy to compare variations.
+
+This visualization uses a multivec data file and employs various visual encodings and interaction techniques, such as linking and brushing, to enhance user exploration and understanding of genomic data.

@@ -1,0 +1,9 @@
+The visualization titled "Mark Displacement" displays genomic data using a linear layout across three separate views. 
+
+1. **Transcript Track for Chromosome 3:** It features a transcript annotation track for chromosome 3, focusing on the region from 142,500,000 to 143,000,000. This track shows genes as arrows, indicating direction, with blue for the '+' strand and orange for the '-' strand. It is structured to allow up to 15 rows of gene information, addressing overlaps by utilizing a pile displacement method.
+
+2. **Likely Benign Track for Chromosome 2:** This view highlights clinically significant variants labeled as "Likely Benign" for chromosome 2, ranging from 126,800,000 to 127,700,000. It includes both glyphs like points and rectangles to denote different data aspects related to variants, showing textual information encoded by nucleotide letters (A, T, G, C). Links are made between distinct genomic positions.
+
+3. **Chromosome 17 Variants Track:** This track, focusing on chromosome 17 from 43,080,000 to 43,120,000, visualizes point annotations that are color-coded based on the clinical significance, such as pathogenic and uncertain significance variants.
+
+The visualization combines different mark types, such as text, points, rectangles, and rules, each leveraging displacement and styling techniques to minimize visual clutter and enhance clarity, making it easier to explore and interpret genomic regions and variations.

@@ -1,0 +1,13 @@
+The visualization is a set of five charts in a linear layout, displaying various genomic data along chromosome 1. 
+
+1. The first track is an ideogram showing the chromosome bands, with colors representing different staining categories.
+
+2. The second track is a genomic position annotation, visually marked with triangles indicating gene direction and strands in blue and orange.
+
+3. The third track displays copy number variations (CNVs) with purple rectangles highlighting genomic regions associated with a specific tumor minor copy number of zero.
+
+4. The fourth track shows CNVs with pink rectangles, representing areas where tumor total copy number exceeds 4.5.
+
+5. The final track features genomic rearrangements with connections spanning the chart, where different colors and strokes represent categories like tandem duplications, translocations, deletions, and inversions.
+
+Overall, the visualization provides a detailed overview of structural variations and annotations along the specified genomic region.

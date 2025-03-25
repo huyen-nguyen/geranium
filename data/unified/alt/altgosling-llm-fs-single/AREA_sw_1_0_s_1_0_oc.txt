@@ -1,0 +1,1 @@
+The linear layout features an area chart visualizing a multivec file that represents the genome of hg38. This chart uses the 'peak' data field for the y-axis to illustrate expression levels, and the area under the curve is displayed in a mustard yellow color. The title reads 'Basic Marks: area,' with a subtitle of 'Tutorial Examples.'

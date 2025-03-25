@@ -1,0 +1,16 @@
+A linear genomic visualization titled "Mark Displacement" with the subtitle "Reposition marks to address visual overlaps using displacement options." It features multiple tracks over three different chromosome regions: chr3, chr2, and chr17.
+
+1. **Chr3 Region (142,500,000 - 143,000,000):** 
+   - Displays a track representing transcripts from the hg38 assembly, featuring a maximum of 15 rows.
+   - Visual elements include right and left arrows indicating gene strand direction, text labels for gene names, and rectangles denoting exon regions.
+   - Blue and orange colors distinguish between positive and negative strands.
+
+2. **Chr2 Region (126,800,000 - 127,700,000):** 
+   - Contains an overlay alignment with tracks displaying "Likely Benign" variations.
+   - Points, text, and connections are color-coded in green and pink to indicate different nucleotide categories and significance.
+   - Includes connections that visually link points, with light grey strokes for connections.
+
+3. **Chr17 Region (43,080,000 - 43,120,000):** 
+   - Features a track with small points indicating genomic variation significance levels, marked by their placement in a pile layout.
+   - Colors represent a range of classifications from "Pathogenic" to "Benign," visualized in a color legend.
+   - The layout effectively manages overlap by repositioning elements using displacement methods.

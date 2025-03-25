@@ -1,0 +1,5 @@
+The visualization features a circular and linear arrangement presenting genomic data from the hg19 assembly. The circular view, which includes an ideogram and multiple annotation tracks, covers the entire genome, highlighting gains and losses of heterozygosity (LOH) with distinct color-coded rectangles. The LOH is shown in orange, while gains are in blue.
+
+Overlaying connections colored based on the 'svclass' field represent various structural variations such as Translocations and Duplications. The circular ideogram allows for interactive exploration through a blue brush link, synchronizing with the linear view below.
+
+The linear view focuses on chromosome 1, incorporating tracks for point mutations, insertions, deletions, copy number variations (CNVs), and a gene annotation track that utilizes triangles and text for strand-specific gene annotations. Mutations are represented by dots, with their colors indicating mutation subtype. The layout provides a comprehensive genomic landscape, supporting detailed analysis of structural variations and genomic annotations.

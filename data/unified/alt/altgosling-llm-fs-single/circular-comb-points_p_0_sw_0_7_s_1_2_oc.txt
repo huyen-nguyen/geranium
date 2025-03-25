@@ -1,0 +1,7 @@
+The visualization displays two circular scatter plots in a vertical arrangement, focusing on chromosome 1 from position 1 to 3,000,500 in hg38 assembly. 
+
+The left track is a circular scatter plot, where the x-axis represents genomic positions and the y-axis shows expression values with point size encoding peak intensity. Each series (sample 1 to sample 4) is stratified by rows and color-coded for distinction.
+
+The right track is another circular scatter plot, similarly representing genomic positions on the x-axis while expression values are depicted on the y and size-axes. The samples are color-coded, with a legend indicating variations.
+
+Both charts include opacity adjustments for visibility and tooltips providing details like start and end positions, peak values, and sample identification.

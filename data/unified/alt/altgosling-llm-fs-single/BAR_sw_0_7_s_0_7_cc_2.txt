@@ -1,0 +1,1 @@
+A bar chart in a linear layout visualizes a multivec file, representing genomic data from the entire hg38 assembly. The x-axis shows genomic intervals, while the y-axis measures expression values with purple bars. The chart's title is "Basic Marks: bar" and the subtitle is "Tutorial Examples."

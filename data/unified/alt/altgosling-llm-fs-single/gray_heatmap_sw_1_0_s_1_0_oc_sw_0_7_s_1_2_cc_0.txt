@@ -1,0 +1,3 @@
+**Description:** 
+
+The visualization is a heatmap in a linear layout using a matrix data type, visualizing genomic intervals from the hg38 assembly. Both the x- and y-axes represent genomic positions, with the x-axis on top and the y-axis on the left. The color intensity encodes quantitative expression values using a 'hot' color range, indicating variations across different genomic regions. The heatmap is static, and the track style doesn't overlay on previous tracks. The visualization emphasizes the intersection of different chromosomes, showcasing chromosomal interactions. The width is 366 units, and the height is 510 units.

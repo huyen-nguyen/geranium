@@ -1,0 +1,1 @@
+A circular bar chart illustrates a vector dataset with genomic positions represented on the circular x-axis and quantitative peaks on the y-axis. The visualization spans the whole genome in a circular layout with purple bars indicating the peak values. The chart has a defined center radius and is aligned in a stacked manner.

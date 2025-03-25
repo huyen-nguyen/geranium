@@ -1,0 +1,5 @@
+The visualization consists of three horizontally arranged bar charts, each displaying genomic data. The charts represent segments of chromosome 12 and chromosome 9, focusing on the intervals between 5,000,000 and 15,000,000. 
+
+Each chart utilizes a multivec data type, with the Y-axis reflecting quantitative 'peak' values. The first chart, representing chromosome 12, features purple bars. The second chart displays chromosome 9 with bars in sky blue, and the third chart returns to chromosome 12 with pink bars. Bars in all charts are outlined in white with a consistent stroke width.
+
+This setup allows for a comparative analysis of expression peaks across different genomic intervals, leveraging distinct color schemes for immediate visual differentiation. Interactive elements include adjustments for width responsiveness.

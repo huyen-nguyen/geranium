@@ -1,0 +1,5 @@
+The visualization consists of two main views: an interactive linear view and a static overlay linear view. The interactive view is composed of three tracks, aligned horizontally. The first track is a pink bar chart titled "Gap," representing gap values across a genomic region, with the y-axis indicating quantitative measures. The second track, titled "Conservation," is a bar chart with color encoding, reflecting conservation levels using a 'hot' color range. The third track overlays rectangles and text, representing genomic sequences, stratified by categories. Each category is distinguished by a unique color. The text within the rectangles corresponds to nominal data fields.
+
+The static overlay view aligns various tracks: a rectangular sequence track, a conservation bar chart, a gap bar chart, and a purple brush overlay allowing interactions between the two views. The genomic intervals span from 0 to 396, while horizontal arrangements facilitate comparison across tracks.
+
+Together, these views effectively visualize alignment data referenced from a source URL, encapsulating gap, conservation, and sequence information in a visually cohesive manner.

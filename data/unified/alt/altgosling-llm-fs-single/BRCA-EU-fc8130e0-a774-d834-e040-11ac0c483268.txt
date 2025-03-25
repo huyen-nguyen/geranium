@@ -1,0 +1,9 @@
+A visualization is arranged with a circular and a linear view, connected by a blue interactive brush in the circular view. The circular view displays the entire genome, and the linear view zooms into chromosome 1. The circular view includes five tracks: an ideogram, a point annotation track, two range annotation tracks, and a line-connection track. It highlights genomic ranges for 'Gain' in blue rectangles and 'Loss of Heterozygosity (LOH)' in red rectangles. Line connections illustrate various structural variations like 'Translocation,' 'Duplication,' and 'Inversion.'
+
+In the linear view, additional tracks feature: 
+
+- A gene annotation track showing gene locations and structures.
+- A scatterplot visualizing point mutations with distances to previous mutations, colored by mutation subtype.
+- Two range annotation tracks highlighting 'Insertion' and 'Deletion' rows and visualizing copy number variants (CNVs) in gray rectangles, reflecting the 'total_cn' values.
+
+Overall, the visualization uses color and shape to differentiate genomic events, supported by interactive exploration linking the circular and linear views.

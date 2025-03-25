@@ -1,0 +1,1 @@
+Bar chart in a linear layout visualizes a multivec file, showing genomic intervals on the x-axis and expression values on the y-axis. The bars are green. This chart is titled 'Basic Marks: bar' with the subtitle 'Tutorial Examples.'

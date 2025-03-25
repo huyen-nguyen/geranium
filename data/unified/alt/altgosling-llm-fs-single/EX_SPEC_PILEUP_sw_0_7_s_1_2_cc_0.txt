@@ -1,0 +1,5 @@
+A visualization in a linear layout represents sequence alignment data using a BAM file. The visualization consists of two tracks, both titled "example\_higlass.bam," displaying data from chromosome 1, spanning 136,750 to 139,450 base pairs. 
+
+The top track is a bar chart showing coverage with bars colored in silver, representing the number of reads aligned in corresponding genomic regions. The height of the bars correlates with the level of coverage.
+
+The bottom track shows pileups of individual reads as rectangles stratified by rows, depicting different structural variations. Colors indicate categories such as 'normal read' (gray), 'deletion (+-)' (yellow), 'inversion (++/--)' (green/blue), 'duplication (-+)' (purple), 'more than two mates' (cyan), 'mates not found within chromosome' (red), and 'clipping' (dark gray). The track includes tooltip functionality to display additional information such as start, end positions, insert size, and other attributes when interacting with the rectangles. Legends detail the insert size constraint of 300bp. The overall color scheme uses tones of purple and pink for styling.

@@ -1,0 +1,9 @@
+The visualization titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" features a horizontal arrangement of genomic data from chromosome 7, focusing on the interval between 77,700,000 and 81,000,000. It includes various bar charts, genomic position annotation tracks, and matrix representations.
+
+On the left, vertical tracks display bar charts for H3K4me3 and ATAC-seq data, colored in dark green and orange, respectively. The CTCF track features overlays with genomic annotation, showing strands as pink and green triangles.
+
+The central and right sections feature Hi-C and Micro-C matrix visualizations, using color intensity to represent expression values, transitioning from purple to yellow. These matrices show genomic interactions across the specified intervals.
+
+Additional bar charts for Epilogos annotate different chromatin states, with unique colors for categories like Active TSS and Enhancers.
+
+Overall, this visualization effectively compares genomic annotations and interactions between the different experimental methods, offering insights across multiple genomic layers.

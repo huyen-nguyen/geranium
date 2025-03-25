@@ -1,0 +1,9 @@
+The visualization consists of three linear genomic tracks arranged vertically on chromosome 13. Each track presents gene annotations and ClinVar significance data. Gene tracks display exons and directional gene names using triangles and text. The three rows represent different chromosome regions with overlapping intervals. 
+
+1. The top track shows genes with blue and orange directional indicators for '+' and '-' strands, respectively. Gene names like "FRY" and "PDS5B" are shown along the chromosome interval of 31,500,000 to 33,000,000. Below, ClinVar significance is depicted using light-gray bars and colored points, representing categories such as 'Pathogenic', 'Likely pathogenic', and 'Uncertain significance', with a note of consistency in layout across tracks.
+
+2. The middle track refines the focus to a region, 32,000,000 to 32,700,000, highlighting the "BRCA2" gene. ClinVar data points illustrate pathogenicity levels, maintaining the previous color scheme. The range is more focused than the first, offering detailed insights into variations.
+
+3. The bottom track further zooms into positions 32,314,000 to 32,402,500 showcasing a detailed view of the "BRCA2" section. It emphasizes exon positions and variant counts by height, utilizing the multivec data to enhance understanding of mutational impacts. The use of consistent color-coding for significance maintains a cohesive visual narrative across datasets. 
+
+Combined, the tracks

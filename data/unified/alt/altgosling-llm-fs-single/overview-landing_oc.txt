@@ -1,0 +1,17 @@
+The visualization is a series of linear tracks displayed vertically, comprising diverse genomic data representations over chromosome 1, spanning from 1 to 3,000,500 units. Each track uses a multivec file, showcasing data across four samples titled "sample 1" to "sample 4."
+
+1. **Heat Map:** Colors represent expression levels across genomic positions, stratified by sample. Each row corresponds to a different sample, with intensity indicating peak values.
+
+2. **Bar Chart (Stacked):** Displays peaks of each sample along the x-axis (genomic position), with y-axis values represented as bars. Color differentiates samples.
+
+3. **Aggregated Bar Chart:** Shows summed expression between samples across genomic positions, using stacked bars where sample-specific colors enhance distinction.
+
+4. **Overlay Track (Line and Point):** Combines line and scatter plots to represent expression trends and specific values. Line tracks peaks while point size and color depict magnitude and sample.
+
+5. **Scatter Plot (Sample-based):** Positions and colors points along the x- and y-axes by sample and peak value. Shows value dispersion across samples with transparency enhancing visibility.
+
+6. **Scatter Plot (Overall):** Similar to the previous, but features grid lines aiding readability of positions and values.
+
+7. **Area Chart:** Depicts expression as a filled area, with contours separating samples. Sample colors indicate categories within the track.
+
+8. **Min-Max Bar Chart:** Represents peak minimum and maximum values across

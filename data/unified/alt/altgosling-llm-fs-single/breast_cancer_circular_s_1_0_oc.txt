@@ -1,0 +1,11 @@
+This circular visualization displays genomic data using the hg38 assembly. It features four concentric tracks, each with distinct data representations. 
+
+1. **Outer Track**: A circular ideogram of the genome. The colors of the rectangles represent various genomic categories, such as "gneg," "gpos25," and others, using shades from white to black.
+
+2. **Second Track**: Shows genomic ranges with dark orange rectangles representing regions where the "minor_cn_tumor" value equals zero from a CSV dataset. 
+
+3. **Third Track**: Displays genomic ranges in green rectangles, indicating regions with "total_cn_tumor" values between 4.5 and 900 from the same CSV dataset. 
+
+4. **Inner Track**: Consists of connections representing structural genomic variations, such as "tandem-duplication," "translocation," "delection," and "inversion," with links shown in colors like green, blue, red, and orange.
+
+The layout effectively visualizes complex genomic data, allowing for the interpretation of structural variations and copy number changes at a glance.

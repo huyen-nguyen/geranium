@@ -1,0 +1,7 @@
+The visualization is a linear genomic track layout featuring two chromosomes, chr12 and chr8. It displays gene annotations and data from three samples using bar charts. 
+
+The gene tracks are overlayed with annotations such as text labels and arrows indicating gene direction. Exons are represented by rectangles. The gene annotations are stratified by strands and color-coded differently for visualization clarity. 
+
+Sample data is visualized using bar charts, where the genomic position is on the x-axis and peak values are on the y-axis. The bars vary in color: green, pink, purple, and blue, representing different samples or data segments.
+
+Interactivity is enabled via linking identifiers, allowing users to synchronize views across tracks. The track arrangement is responsive, adapting its layout based on container height, ensuring an optimal display across different viewing environments.

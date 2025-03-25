@@ -1,0 +1,5 @@
+Here is a detailed description based on the provided information and visualization:
+
+The visualization is a horizontal stacked bar chart displaying insertions and deletions across multiple chromosomes derived from a VCF file. It is structured in a linear layout with an 'overlay' alignment. The chart is stratified into two distinct rows, representing "Insertion" and "Deletion" categories. Each genomic position (x-axis) shows the frequency or occurrence of mutations, color-coded: blue for insertions and orange for deletions. A transparent gray background is applied for visual clarity. Rectangles represent the events on the x-axis with a tooltip providing additional genomic, variant, and quality data for each entry. The chart uses a genomic range for the x-axis with endpoints marked for detailed analysis, offering a comprehensive view of genetic variations within specified sample lengths. 
+
+This descriptive summary encapsulates the key features and data visualization depicted in the chart, aligning with the search engine's focus on comprehensive content.

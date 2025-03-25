@@ -1,0 +1,5 @@
+A collection of circular charts illustrating diverse visual encodings on chromosome 1 from position 1 to 3,000,500 using a multivec data file. These charts are organized vertically, each arrangement demonstrating different visual techniques, such as line plots, scatter plots, bar charts, area plots, connection diagrams, and heatmaps. 
+
+The line and scatter plots visualize data for four samples, with lines and points color-coded according to categories. Bar charts and area plots represent quantitative data, with color variations for different samples. Connection diagrams depict genomic links, with colors indicating categories. 
+
+Scatter plots highlight data points using color and size to indicate different samples and expression values. The heatmap encodes expression values with color intensity, organized by sample categories. The title is 'Visual Encoding in Circular Layouts' with the subtitle 'Gosling provides diverse visual encoding methods in circular layouts.'

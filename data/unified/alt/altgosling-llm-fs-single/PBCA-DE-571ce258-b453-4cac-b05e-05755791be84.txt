@@ -1,0 +1,19 @@
+The visualization consists of a circular and linear representation of genomic data, each illustrating the human genome assembly hg19. The circular view features an ideogram, various genomic annotation tracks, and connection lines indicating structural variations. It includes a dynamic brush linking to the linear view to focus on chromosome 1 across both displays.
+
+In the circular layout, five tracks provide insights:
+
+1. **Ideogram**: Displays chromosome bands, with a blue interactive brush for selection.
+2. **Putative Driver**: Textual annotations of potential driver genes, stratified by rows.
+3. **Gain**: Genomic gains marked by blue rectangles.
+4. **Loss of Heterozygosity (LOH)**: Represented by orange rectangles, indicating genomic loss.
+5. **Structural Variations**: Connection lines depict various structural changes like translocations and inversions, color-coded by type.
+
+The linear view offers expanded detail for chromosome 1, comprising:
+
+1. **Ideogram**: Depicts bands with triangles indicating centromere positions.
+2. **Putative Driver**: Gene annotations are detailed, aligning with genomic positions.
+3. **Point Mutation**: A scatter plot showing mutations' distances, colored by subtype.
+4. **Insertions and Deletions**: Displayed as rectangles, stratified into rows.
+5. **Copy Number Variants (CNV)**: Bars show variant copy numbers, shaded gray.
+
+This dual-view design provides a comprehensive exploration of genomic features, structural

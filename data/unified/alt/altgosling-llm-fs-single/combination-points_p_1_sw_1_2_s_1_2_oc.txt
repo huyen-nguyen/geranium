@@ -1,0 +1,5 @@
+The visualization displays the genomic data of chromosome 1 from positions 1 to 3,000,500 in a linear layout with a vertical arrangement. It consists of two scatter plots. 
+
+The top scatter plot shows genomic positions on the x-axis and quantitative peak values on the y-axis. Points are sized and colored based on the peak values and samples, with opacity set to 0.5. The plot includes a legend for color-coded sample categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The axes have grid lines for ease of reading.
+
+The bottom scatter plot is stratified by rows for each sample category. Again, points are sized and colored by peak values and samples, with matching opacity to the top plot. It organizes data into four rows, providing a clear visual separation of sample categories for comparison. The y-axis retains a quantitative scale for consistent reference across plots. Both plots utilize a multivec data source and provide tooltip interactions for detailed data exploration.

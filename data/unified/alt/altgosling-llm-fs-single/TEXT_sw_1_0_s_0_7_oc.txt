@@ -1,0 +1,1 @@
+A text chart in a linear layout visualizes a multivec file displaying genomic positions along the x-axis. The y-axis encodes quantitative values labeled 'count.' The data points are text representing nucleotide bases 'A', 'T', 'G', and 'C', each colored distinctly. The chart's title is 'Basic Marks: Text', and the subtitle is 'Tutorial Examples.'

@@ -1,0 +1,5 @@
+The visualization consists of a linear arrangement with five tracks. The first track is an ideogram with color-coded rectangles and triangles indicating different genomic categories. It uses HG38 data to show chromosome 1, with colors representing various chromosome bands. The second track is a genomic annotation track displaying gene positions with directional arrows based on the strand, using blue for the plus strand and orange for the minus strand.
+
+The third track is a copy number variation (CNV) track from tumor data, displaying green rectangles representing regions with minor copy number variation. The fourth track similarly shows tumor CNVs with red rectangles, highlighting regions with significant total CN alteration.
+
+The final track visualizes structural variations, with lines connecting genomic positions, color-coded by type (e.g., tandem-duplication, translocation). This comprehensive layout offers a detailed view of chromosome 1's genomic landscape, integrating ideogram data, gene annotations, CNV data, and structural variations in a cohesive structure.

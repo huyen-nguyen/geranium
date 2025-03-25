@@ -1,0 +1,7 @@
+The visualization shows a segmental duplication analysis on chromosome 1, covering the region from 103,900,000 to 104,100,000. It consists of multiple stacked linear tracks, each displaying genomic data from a CSV file. The tracks alternate between showing rectangular bars and connections.
+
+- **Rectangular Track**: Displays segments as green rectangles, representing genomic intervals on the x-axis.
+- **Connection Track**: Displays green links between pairs of genomic intervals, illustrating segmental duplications.
+- **Styling**: All elements are colored in a distinct shade of green (#85B348) with a low opacity of 0.15, and outlined with a stroke of #4C6629 at a width of 0.8.
+
+This visualization provides a detailed overview of segmental duplications in the specified genomic region, using a transparent aesthetic to indicate overlapping data.

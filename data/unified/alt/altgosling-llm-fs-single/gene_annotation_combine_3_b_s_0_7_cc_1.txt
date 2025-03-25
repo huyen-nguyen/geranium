@@ -1,0 +1,9 @@
+This visualization showcases a series of three horizontal genomic range annotation tracks, each labeled as "HiGlass," "IGV," and "Corces et al.," aligned vertically. The data spans chromosome 3 from 52,168,000 to 52,890,000. Each track illustrates gene annotations sourced from a BEDDB file, with genes shown as text labels and rectangles.
+
+1. **HiGlass Track**: Displays positive strand genes in blue and negative strand genes in orange. Genes are represented with directional triangles and ruled lines indicating their orientation. Exons are marked by rectangles.
+
+2. **IGV Track**: Similar to the HiGlass view, genes on both strands share the same light blue color. Text, rectangles, and line patterns visually express gene details, with opacity providing visual distinction.
+
+3. **Corces et al. Track**: Utilizes small text and rectangles to indicate gene regions, with strand-specific colors aligning with the HiGlass track. Exons are highlighted in rectangles with a slightly larger size for emphasis.
+
+The layout facilitates a comparative analysis of gene structures across different datasets in a linear format.

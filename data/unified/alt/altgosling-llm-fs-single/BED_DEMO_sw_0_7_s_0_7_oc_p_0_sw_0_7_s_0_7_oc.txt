@@ -1,0 +1,8 @@
+A linear visualization layout demonstrates the use of BED files with different specifications over chromosome 1. The x-axis covers genomic intervals from 1 to 2,000,000. There are four tracks: 
+
+1. **BED12**: Visualizes all 12 standard fields as black-stroked rectangles.
+2. **BED6**: Displays the first 6 BED fields with similar encoding.
+3. **BED6+6**: Illustrates the first 6 fields plus 6 custom fields with data points encoded across fields 'col7' to 'col12'.
+4. **BED12+1**: Combines all 12 standard fields with an extra custom field represented similarly.
+
+Each track shares a common design of black-stroked rectangles, aiding in comparing genomic features across datasets. The display spans a width of 600 and adapts dynamically to the genomic range.

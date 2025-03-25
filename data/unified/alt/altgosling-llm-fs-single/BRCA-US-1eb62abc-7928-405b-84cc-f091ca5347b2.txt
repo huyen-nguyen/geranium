@@ -1,0 +1,7 @@
+The visualization comprises a circular ideogram and a corresponding linear view, both linked via a blue interactive brush on the circular plot. The circular ideogram represents the entire human genome using the hg19 assembly, featuring tracks depicting gain and loss of heterozygosity with distinct color encodings: blue for gains and orange for losses. These tracks are represented with rectangles arranged circularly. 
+
+In addition, the circular chart includes connections in various colors that indicate different structural variations, such as Duplication, Translocation, Deletion, and Inversions. Categorical data is encoded using colors and stroke styles for each connection.
+
+The linked linear view focuses on chromosome 1, giving a detailed genomic representation. It includes multiple tracks: an ideogram, a labeled point mutation scatter plot with color-coded subtypes (C>A, C>G, C>T, T>A, T>C, T>G), and tracks for Insertions and Deletions. Bars represent copy number variants, while juxtaposed rectangles indicate 'Gain' and 'Loss of Heterozygosity (LOH).' The position of bars and rectangles on the x-axis correlates to genomic locations, highlighting quantitative fields like total copy number.
+
+The design is meticulous, enhancing genomic data comprehension through color, layout, and interactivity, facilitating detailed analyses of genomic variations across human chromosomes.

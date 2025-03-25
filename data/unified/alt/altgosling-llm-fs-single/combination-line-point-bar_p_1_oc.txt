@@ -1,0 +1,9 @@
+A genomic visualization in a linear layout displays chromosome 1 from positions 1 to 3,000,500. It consists of three vertically arranged charts. 
+
+- The first chart is a bar chart representing expression values with bars whose height varies between 'peak_min' and 'peak_max' on the y-axis. Each row represents a different sample category, and the bars are color-coded based on these categories.
+
+- The second chart combines a line plot and scatter plot. Lines and points denote values on the y-axis, with the line and point sizes reflecting expression levels. The chart is similarly stratified by sample categories, each rendered in distinct colors.
+
+- The third chart is solely a scatter plot with points plotted along genomic positions on the x-axis, and their y-axis positions and sizes depict expression values. Points are semi-transparent and color-coded according to the sample categories.
+
+The interactive tooltips provide details like genomic positions, expression values, and sample categories for data points across the charts.

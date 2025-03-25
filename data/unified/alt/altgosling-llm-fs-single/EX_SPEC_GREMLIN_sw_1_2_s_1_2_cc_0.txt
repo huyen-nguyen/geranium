@@ -1,0 +1,9 @@
+A comprehensive genomic visualization of Chromosome 5 is presented in a linear layout. The chart integrates multiple elements, including ideograms, connections, and annotations. 
+
+The main track, titled "Chromosome 5," uses a color-coded ideogram to display cytogenetic bands, with gray shades indicating various stain levels and pink highlighting centromeric regions. Dynamic text annotations label the bands based on the stain type, while a brush component allows interactive zooming to explore detailed regions.
+
+A segment duplication track, differentiated by color and stroke, highlights interactions between segments on chromosomes hs5, hs4, and hs6. The connections are visually represented with opacity-adjusted links, using blue and green hues for clarity.
+
+Below the ideogram, a "Region of Interest" track details segment linkages within an interval on Chromosome 5, focusing on positions 68,000,000 to 71,000,000. A specific "Rearrangement View" offers an enlarged examination of a 6,000 base pair segment within this region. Each view is styled with elliptical links to enhance visual flow, employing distinct colors for differentiation.
+
+This visualization serves as an illustrative reference for genomic rearrangement studies, supporting interactive exploration and detailed inspection of chromosomal features. The title "Gremlin (O'Brien et al. 2010)" provides context for the data source and framework.

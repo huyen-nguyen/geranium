@@ -1,0 +1,17 @@
+The visualization consists of a vertical arrangement of linked charts, demonstrating data from chromosome 1 using a multivec file alignment.
+
+1. **Top Left: Linear Area Chart**
+   - Displays genomic intervals on the x-axis with expression values shown in colored areas on the y-axis.
+   - Rows represent categories 'sample 1', 'sample 2', 'sample 3', and 'sample 4', each in different colors.
+   - Includes interactive brushes to update other views, allowing users to select and focus on specific genomic regions.
+
+2. **Top Right: Circular Line Chart**
+   - Illustrates the same data in a circular layout, emphasizing the continuity of genomic data.
+   - Lines correspond to the four categories, with sections of the genome highlighted interactively through brush links.
+
+3. **Bottom: Linear Scatter Plot**
+   - Focuses on a detailed view of chromosome 1 (160,000,000 to 200,000,000).
+   - Displays points reflecting quantitative expression data on the y-axis stratified by category with corresponding colors.
+   - The scatter plot is dynamically linked to the top views, providing detailed insight into the selected region.
+
+Overall, this interactive visualization allows exploration and comparison of genomic data across different layout styles, enhancing the understanding of genomic expression patterns.

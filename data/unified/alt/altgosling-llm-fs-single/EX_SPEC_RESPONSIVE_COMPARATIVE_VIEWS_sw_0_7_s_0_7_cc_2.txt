@@ -1,0 +1,24 @@
+Here is a detailed description of the visualization based on the provided JSON specification and processed attributes:
+
+---
+
+The visualization consists of three bar charts arranged vertically, each displaying genomic data. The charts focus on specific genomic intervals within chromosomes. The dataset is a multivec file from "https://server.gosling-lang.org" with a genomic zoom window of 5,000,000 to 15,000,000.
+
+1. **Top Chart**:
+   - **Chromosome**: 12
+   - **Data Interval**: Between 5,000,000 and 15,000,000
+   - **Encoding**: 
+     - **X-Axis**: Genomic start and end positions
+     - **Y-Axis**: Quantitative peak values
+     - **Color**: Bars are green (`#85B348`)
+   - **Design**: Features a thin white stroke around bars, enhancing the separation between data points.
+
+2. **Middle Chart**:
+   - **Chromosome**: 9
+   - **Data Interval**: Between 5,000,000 and 15,000,000 
+   - **Encoding**:
+     - **X-Axis**: Genomic start and end positions
+     - **Y-Axis**: Quantitative peak values
+     - **Color**: Bars are sky blue (`#6daff4`)
+   - **Design**: Includes a white stroke for clear delineation between bars.
+

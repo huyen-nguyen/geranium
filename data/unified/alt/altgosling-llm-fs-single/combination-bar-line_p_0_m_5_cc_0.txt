@@ -1,0 +1,7 @@
+This linear visualization consists of two vertically arranged tracks, both focusing on chromosome 1 within the range of 1 to 3,000,500. 
+
+The upper track is a line chart that displays genomic data. The x-axis represents genomic positions while the y-axis depicts expression values. Each line is colored distinctly to represent four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The color range includes blue, orange, green, and red. 
+
+The lower track combines a line chart and a scatter plot. It showcases the same genomic positions on the x-axis, with the expression values shown on the y-axis as both lines and points. The size of the points indicates the height of the expression values. This track is stratified by rows, correlating to the sample categories, each row color-matched to the respective sample.
+
+Interactive elements such as tooltips provide additional information, including start and end position for genomic intervals, expression value, and sample identifiers.

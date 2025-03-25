@@ -1,0 +1,14 @@
+The visualization presents a comprehensive genomic overview using a combination of circular and linear formats, integrating multiple datasets related to somatic variations. 
+
+**Circular View:**
+- **Ideogram Track:** Displays an ideogram of the human genome (hg19) with chromosomal bands indicated through color variations, ranging from white for gneg regions to dark colors for gpos regions. 
+- **Text Annotation:** The "Putative Driver" track annotates the circular genome with gene names, highlighting them in black text within nominal rows.
+- **Rectangular Tracks:** Includes tracks titled "Gain" and "Loss of Heterozygosity (LOH)," depicting genomic ranges in sky blue and dark orange, respectively. Additional tracks convey structural variations, such as "Duplication" and "Inversion," using distinct color codes like green and purple.
+
+**Circular Connections:**
+- A unique feature displays genomic connections between different chromosome regions, indicating types such as "Translocation" and "Deletion," represented through color-coded curved lines or links, along with nominal staging reflecting the 'svclass' field.
+
+**Linear View:**
+- **Ideogram Track:** Provides a zoomed-in view of chromosome 1, with the option for genomic exploration via interactive brushing.
+- **Text Annotation:** A linear version of the "Putative Driver" track further details gene annotations in a horizontal setup.
+- **Point Mutation Scatterplot:** The scatterplot labeled "Point Mutation" employs a VCF file to showcase mutations, utilizing positional

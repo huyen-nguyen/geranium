@@ -1,0 +1,14 @@
+The visualization consists of a circular view and a linear view arranged vertically, linked by a blue brush in the circular view. 
+
+The circular view presents a comprehensive genome map with several tracks:
+- An ideogram indicating chromosomal bands.
+- A track titled "Putative Driver" with annotations displayed as text across the genome, characterized by rows for categories.
+- Two range annotation tracks: one titled "Gain" highlighting genomic ranges in sky blue, and another titled "Loss of Heterozygosity (LOH)" in dark orange.
+- A line-connection track showing connections between genomic positions in varied colors, each representing structural variations such as 'Translocation,' 'Duplication,' and more.
+
+The linear view focuses on chromosome 1, replicating similar tracks from the circular view but with enhanced details:
+- A gene annotation track displaying genes with labels and exons visualized with rectangles.
+- A scatter plot titled "Point Mutation" demonstrating variations in a VCF file; points are colored per mutation subtype.
+- Additional tracks for insertions and deletions visualized with rectangles in yellow and green.
+
+Overall, the visualization employs a blend of circular and linear layouts to effectively convey genomic data and structural variations across chromosomes.

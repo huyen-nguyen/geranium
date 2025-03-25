@@ -1,0 +1,7 @@
+The visualization consists of a vertical arrangement of genomic data tracks for chromosome 12 and chromosome 8. There are two main sections, each displaying a genomic range annotation track followed by three bar charts representing samples. 
+
+In the first section, which highlights chromosome 12 from position 10,140,000 to 10,210,000, a genomic range annotation track features genes differentiated by strand direction, using purple marks like triangles and lines. Below this, three bar charts depict data for "Sample 1," "Sample 2," and "Sample 3," with purple and sky blue bars indicating quantitative peaks.
+
+The second section, focusing on chromosome 8 from position 127,734,000 to 127,744,000, mirrors the layout of the first section. It also starts with a genomic range annotation, this time using sky blue marks to indicate gene annotations. The following three bar charts display sample data using colors such as pink, purple, and green.
+
+Each track type uses distinct visual encodings, such as the color and alignment of genomic features, to provide a clear view of gene and sample specific data along the gene intervals.

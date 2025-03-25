@@ -1,0 +1,13 @@
+The visualization consists of two sets of vertically arranged linear tracks showcasing gene annotations on chromosome 3, between positions 52,168,000 and 52,890,000 in the hg38 assembly. Each set comprises three sub-tracks aligned horizontally. 
+
+In the first set:
+1. **HiGlass Track**: Displays plus-strand genes with blue triangles and arrows pointing right, and minus-strand genes with red triangles and arrows pointing left. Gene names are annotated in text.
+2. **Corces et al. Track**: Similar to the HiGlass track, using arrows to depict gene directions, with red and blue color coding for strands and smaller text annotations.
+3. **IGV Track**: Uses triangle patterns within rules to indicate gene direction and strand, with navy color.
+
+In the second set:
+1. **Cyverse-QUBES Track**: Displays gene names in black text, with gray triangles for strand direction, overlaid with rectangular annotations colored light gray.
+2. **GmGDV Track**: Features text annotations and triangular strand indicators colored in blue for plus-strand and red for minus-strand.
+3. **Additional Rectangular Track**: Uses gray, pink, and cyan rectangles to represent different gene components like exons and introns. 
+
+Overall, the visualization provides a comparative view of gene annotations across different data sources, specifying genomic coordinates and strand information with consistent row stratification for strands and distinct coloring strategies.

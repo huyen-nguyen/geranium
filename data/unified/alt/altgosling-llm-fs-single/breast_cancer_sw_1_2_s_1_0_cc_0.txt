@@ -1,0 +1,13 @@
+A linear layout visualization displays genomic data of chromosome 1 from the hg38 assembly. It consists of five tracks: an ideogram, a gene annotation track, two copy number variant (CNV) tracks, and a rearrangement track.
+
+- **Ideogram**: Shows chromosomal bands with regions colored based on cytoband stain. It includes triangular markers indicating the q and p arms of the chromosome.
+  
+- **Gene Annotation Track**: Displays gene locations with directional triangles for positive and negative strands. It is stratified by strand, with colors indicating strand direction.
+  
+- **CNV Tracks**: 
+  - The first CNV track shows regions with a minor copy number of zero in tumor cells, colored purple.
+  - The second CNV track shows amplified regions in tumor cells (total copy number > 4.5), colored pink.
+  
+- **Rearrangement Track**: Visualizes structural variations like duplications, translocations, deletions, and inversions. Bands between regions are colored and stroked according to the rearrangement type.
+
+The visualization permits comparison of genomic features across multiple data types for chromosome 1, facilitating the identification of complex structural variations and genomic alterations in a cancer dataset.

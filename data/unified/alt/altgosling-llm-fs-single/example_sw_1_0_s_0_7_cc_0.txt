@@ -1,0 +1,15 @@
+A visualization featuring multiple chart types showcases diverse visual encoding methods across chromosome 1 to chrX. The linear layout includes:
+
+1. **Heat Map**: Displays genomic data in intervals on the x-axis, with color intensity reflecting expression values, stratified by 'sample' categories.
+
+2. **Bar Charts**: Three types of bar charts visualize the genomic positions on the x-axis with expression values on the y-axis, colored according to 'sample' categories.
+
+3. **Line and Scatter Plot**: Combines lines and points to show genomic data. Expression heights are indicated on the y-axis, with size variations highlighting expression values.
+
+4. **Scatter Plots**: Two scatter plot variations display position on the x-axis and expression on y and size-axes, with color distinctions based on 'sample'.
+
+5. **Area Chart**: Visualizes area under genomic data on the y-axis, highlighting categories through color differences.
+
+6. **Connection Chart**: Links genomic intervals on the x-axis, with connection colors differentiating categories.
+
+The title, "Visual Encoding," and subtitle emphasize Gosling's capability in diverse visual encoding, integrating quantitative, nominal, and range data across multi-track layouts.

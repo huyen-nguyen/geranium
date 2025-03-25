@@ -1,0 +1,30 @@
+The visualization consists of three linear genomic tracks displayed in a horizontal arrangement. Each track represents gene annotations along chromosome 3 from 52,168,000 to 52,890,000 base pairs. 
+
+### Track 1: HiGlass
+- **Annotations and Marks**:
+  - Right and left-facing triangles indicating gene directions.
+  - Text labels for gene names.
+  - Rectangles represent exons.
+  - Lines with patterned ends depicting gene boundaries and strand direction.
+- **Color Encoding**:
+  - Positive strand genes are colored in blue.
+  - Negative strand genes are colored in orange.
+
+### Track 2: IGV
+- **Annotations and Marks**:
+  - Text labels for gene names with rectangles indicating genomic extent.
+  - Transparent white lines depict strand direction with patterned ends.
+- **Color Encoding**:
+  - All elements are predominantly in sky blue, indicating a uniform color scheme.
+
+### Track 3: Corces et al.
+- **Annotations and Marks**:
+  - Smaller text labels for gene names with blue and orange color tones.
+  - Rectangles represent exons, sized differently from Track 1.
+  - Lines used to denote gene boundaries without arrowheads.
+- **Color Encoding**:
+  - Strand-specific coloring, similar to HiGlass, with blue for positive and orange for negative strands.
+
+### Additional Information
+- All tracks are overlay-oriented, emphasizing the genomic intervals they represent.
+- The entire layout has a consistent linear style, providing a

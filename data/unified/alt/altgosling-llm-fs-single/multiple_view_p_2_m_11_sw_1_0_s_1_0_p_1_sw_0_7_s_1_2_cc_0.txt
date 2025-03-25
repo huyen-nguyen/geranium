@@ -1,0 +1,5 @@
+A visualization titled "Visual Linking" presents a coordinated multivec dataset in hg38 assembly across three charts: a scatter plot, an area chart, and a circular line chart. The scatter plot depicts genomic positions on chromosome 1 between intervals 160,000,000 to 200,000,000 on the x-axis and expression values on the y-axis with points stratified by categories labeled 'sample 1' to 'sample 4,' each distinguished by unique colors. 
+
+Below, the area chart, aligned horizontally, showcases genomic intervals on the x-axis, with areas filled to represent expression values. This chart also incorporates a brush interaction to update the detail view dynamically. 
+
+In the circular line chart, genomic intervals around chromosome 1 are displayed, with lines illustrating expression trends and the same categorical color scheme. The x-axis-linked brush further synchronizes interactions between charts, enhancing data exploration capabilities.

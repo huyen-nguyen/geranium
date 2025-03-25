@@ -1,0 +1,17 @@
+The visualization consists of a circular and a linear view showing genomic data based on the hg19 assembly. The circular view features multiple tracks, including an ideogram and annotation tracks, with a blue interactive brush linking to the linear view. The linear view focuses on chromosome 1, featuring tracks such as ideograms, text annotations, gene annotations, scatter plots, and range annotations.
+
+1. Circular View:
+   - **Ideogram**: Displays chromosomal bands using different colors.
+   - **Text Annotation**: The "Putative Driver" track displays gene names alongside a prefix indicating biallelic status.
+   - **Range Annotation**:
+     - "Gain" and "LOH" tracks show genomic gains and loss of heterozygosity using blue and orange rectangles.
+   - **Connections**: Lines depict structural variations, like translocations in grey.
+
+2. Linear View:
+   - **Ideogram**: Highlights chromosome 1 with distinct band patterns.
+   - **Text Annotation**: Gene annotations indicate gene positions and statuses.
+   - **Scatter Plot**: "Point Mutation" track maps the distance to the previous mutation with colored points representing mutation types.
+   - **Range Annotation**:
+     - "Insertion" and "Deletion" tracks use yellow and green rectangles to display indels.
+     - "Copy Number Variants" track uses grey bars for variant depiction.
+   - **Connection Track**: Visualizes structural variants with lines and triangles, classified by svclass and color

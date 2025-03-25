@@ -1,0 +1,13 @@
+The visualization displays genomic data in a linear layout, focusing on chromosome 1 from the hg38 assembly. It consists of five distinct tracks:
+
+1. **Ideogram Track**: Represents genomic intervals using colored rectangles and annotated with left and right triangles to indicate different categories, showing the chromosome banding patterns.
+
+2. **Gene Annotation Track**: Features genomic positions with arrows representing gene orientation. The track is stratified by strand orientation, with forward strands shown in blue triangles and reverse strands in orange.
+
+3. **Copy Number Variation (CNV) Track 1**: Displays genomic intervals where tumor samples have a total copy number classified using green rectangles.
+
+4. **CNV Track 2**: Uses blue rectangles to indicate genomic regions from tumor samples with copy number variations above a specified threshold.
+
+5. **Structural Variant Connections**: Visualizes genomic rearrangements with lines connecting different intervals. The line color and stroke represent different structural variant classes such as tandem duplications, translocations, deletions, and inversions.
+
+The visualization uses a variety of marks (rectangles, triangles, and lines) with color encoding to differentiate between categories, providing a comprehensive overview of genomic data specific to chromosome 1.

@@ -1,0 +1,20 @@
+The visualization comprises three genomic range annotation tracks, each showcasing different genomic regions of chromosome 3 between positions 52,168,000 and 52,890,000. 
+
+1. **First Track: "Cyverse-QUBES"**
+   - Displays genomic features with gene names annotated.
+   - Uses sky blue for text and various genomic elements such as rectangles and arrows (triangles indicating gene direction).
+   - Exons are highlighted in green with purple strokes.
+   - The track is stratified by strand orientation, with "+" and "-" strands shown in separate rows.
+
+2. **Second Track**
+   - Focuses on detailed genomic features without text annotations.
+   - Uses sky blue for gene bodies and green for exons.
+   - Incorporates grey to indicate additional genomic annotations.
+   - Structured similarly with stratification by strand orientation.
+
+3. **Third Track: "GmGDV"**
+   - Features gene names, direction indicators, and exons.
+   - Utilizes a color scheme to differentiate strands: blue for "+" and orange for "−."
+   - Similar layout with separate rows for each strand orientation to illustrate directional genomic elements visually.
+
+Overall, this visualization provides a layered view of chromosome 3's genomic features, facilitating a detailed comparative analysis of gene structures and orientations across the specified region.

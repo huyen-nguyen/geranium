@@ -1,0 +1,1 @@
+A point chart in a linear layout visualizes a multivec file, presenting the entire genome of hg38. Positions and sizes of the green points are encoded using the data field named 'peak.' The chart is titled "Basic Marks: point" with a subtitle "Tutorial Examples."

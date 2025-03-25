@@ -1,0 +1,5 @@
+The visualization consists of two vertically arranged bar chart tracks in a linear layout. Both tracks use a multivec file to display data across chromosome 1 from positions 1 to 3,000,500. 
+
+The top track is segmented into four rows, each representing a different sample ('sample 1', 'sample 2', 'sample 3', 'sample 4'). Bars are color-coded by sample and show peak expression values along the y-axis, with height variation indicating quantitative differences in the data.
+
+The bottom track aggregates all samples in a single view. Here, the x-axis shows genomic positions, and the y-axis displays expression values as bars, with color differentiation for each sample. The track includes a legend for categorical distinction and grid lines for better visibility of the data distribution. The visualization is styled to maintain clarity and readability of data, with tooltips providing precise information on genomic positions, values, and sample categories.

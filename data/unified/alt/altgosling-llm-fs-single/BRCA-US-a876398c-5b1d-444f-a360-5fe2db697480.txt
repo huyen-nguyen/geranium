@@ -1,0 +1,5 @@
+A detailed genomic visualization consists of a circular and linear arrangement, representing a dataset derived from the hg19 assembly. The circular ideogram, titled 'Ideogram,' depicts chromosome intervals with distinct colors differentiating categories. A blue brush on the x-axis interlinks the two views.
+
+Within the circular view, additional tracks include annotations for 'Gain' and 'Loss of Heterozygosity (LOH)' in blue and dark orange rectangles, respectively. A 'Putative Driver' track displays text annotations, while another shows genomic connections categorized by structural variations like 'Translocation' and 'Duplication.'
+
+The linear view focuses on chromosome 1, showcasing ideograms, and a 'Putative Driver' text track stratified by categories. A scatter plot titled 'Point Mutation' visualizes mutations from a VCF file, where points vary by subtype. It also includes a gene annotation track with exons represented as triangles and rectangles, and a color-coded representation of copy number variants.

@@ -1,0 +1,5 @@
+Two line charts are presented in a vertical layout, displaying genomic data along chromosome 1 from position 1 to 3,000,500. 
+
+The top chart visualizes expression values using multicolored lines representing four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The x-axis marks genomic position, while the y-axis shows quantitative peak values with grid lines for reference.
+
+The bottom chart combines line and area marks in an overlay for the same categories. This chart is stratified by rows for each category, with lines and shaded areas differentiating samples. The height of the peaks is also encoded by line thickness, adding another layer of data visualization. Each category is consistently colored across both charts for comparison.

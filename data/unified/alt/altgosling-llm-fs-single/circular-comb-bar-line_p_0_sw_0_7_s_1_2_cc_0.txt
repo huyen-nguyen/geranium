@@ -1,0 +1,7 @@
+The visualization consists of a circular layout with two tracks depicting genomic data of chromosome 1 for samples 1 to 4 across the interval from 1 to 3,000,500 base pairs. 
+
+On the left, a circular bar chart represents genomic positions on the x-axis and quantitative expression values on the y-axis. Each bar's color corresponds to one of the four samples, with colors such as blue, orange, green, and red.
+
+On the right, a combined circular line chart and scatter plot also represent genomic positions, with expression values depicted by lines and points. The points' sizes represent the expression value, and both lines and points are colored according to the sample they represent, maintaining the same color scheme.
+
+Each view includes interactive tooltips providing detailed information about position, value, and sample, enhancing data exploration.

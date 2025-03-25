@@ -1,0 +1,8 @@
+A linear genomic visualization showcases BED files over chromosome 1, from positions 1 to 2,000,000. It includes four distinct tracks:
+
+1. **BED12**: Displays all 12 standard BED fields with green rectangles, covering genomic intervals.
+2. **BED6**: Shows the first 6 BED fields, also in green, marking similar genomic regions.
+3. **BED6+6**: Combines the first 6 BED fields with 6 custom fields, using blue rectangles to highlight specified positions.
+4. **BED12+1**: Features all 12 standard fields and one additional custom field, with regions denoted in green. 
+
+Each track's data is linked to specific genomic start and end fields, visualized as rectangular marks along the x-axis.

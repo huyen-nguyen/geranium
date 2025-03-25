@@ -1,0 +1,7 @@
+**Description:**
+
+The visualization consists of a circular and a linear view arranged vertically. The circular ideogram displays the entire hg19 genome, highlighting specific chromosomal regions with blue and orange colors for 'Gain' and 'Loss of Heterozygosity (LOH)' using CSV data. A central ring features links in various colors, representing structural variations like 'Translocation' and 'Duplication' from a CSV file.
+
+Below, the linear view focuses on chromosome 1, detailing additional annotation tracks. It includes a gene annotation track and a 'Point Mutation' scatter plot from a VCF file. The scatter plot showcases data points in distinct colors, indicating mutation subtypes. Range annotation tracks highlight 'Insertion' and 'Deletion,' displayed as orange and blue bars. Another track, 'Copy Number Variants,' shows quantitative data in grey rectangles.
+
+Both views are linked by an interactive blue brush in the circular view, allowing exploration of detailed genomic regions.

@@ -1,0 +1,9 @@
+A circular visualization using the Circos layout displays genomic data from the hg38 assembly. This includes three main tracks:
+
+1. **Circular Bar Chart:** Shows genomic positions on the x-axis and expression values on the y-axis, depicted as pink bars. The data is a vector type, sourced from an external URL.
+
+2. **Circular Ideogram:** Encodes chromosomal bands using rectangles colored according to the Stain category, with a range of colors including blue, orange, green, red, and more. The ideogram represents the genomic intervals along the chromosomes.
+
+3. **Circular Connection Chart:** Illustrates genomic interactions with colored connections, varying in color based on the nominal data field `chr_2`. The connections are partly filtered to exclude certain chromosomes and highlight interactions within specified regions.
+
+The visualization is static, aligned within a circular space, and includes interactive features like filtering specific genomic data.

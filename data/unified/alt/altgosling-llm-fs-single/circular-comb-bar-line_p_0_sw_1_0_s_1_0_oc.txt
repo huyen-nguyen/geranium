@@ -1,0 +1,7 @@
+The visualization is a circular layout displaying genomic data of chromosome 1 within the interval 1 to 3,000,500. It comprises two horizontal arrangements of tracks. 
+
+The first track is a circular bar chart that encodes multivec data. Genomic positions are represented on the circular x-axis, while expression values appear on the y-axis. Bars are colored based on categories such as 'sample 1', 'sample 2', 'sample 3', and 'sample 4', with a legend provided for clarity.
+
+The second track overlays a circular line chart and a scatter plot. Lines depict genomic positions along the x-axis and expression values on the y-axis, with categories differentiated by color. Points in the scatter plot, sized according to expression values, provide another layer of data visualization. 
+
+Tooltip functionality enriches the presentation by offering detailed data insights on hover, enhancing interactivity and depth of information.

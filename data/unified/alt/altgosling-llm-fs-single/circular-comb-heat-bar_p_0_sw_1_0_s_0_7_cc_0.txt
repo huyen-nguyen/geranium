@@ -1,0 +1,7 @@
+The image presents a circular layout visualization of genomic data from chromosome 1, spanning positions 1 to 3,000,500. It consists of two main tracks:
+
+1. **Left Track - Circular Heat Map**: This section displays genomic intervals along the x-axis. The intensity of the color represents expression values, indicating different peaks across the genome. The visualization is organized into rows distinguished by categories ('sample 1' to 'sample 4'), with color gradients ranging from light to dark to denote quantitative differences.
+
+2. **Right Track - Circular Bar Chart**: This track shows genomic data with a focus on quantitative peaks, using bars to represent values along the y-axis. The chart is stratified by sample categories and uses distinct colors for each ('sample 1' in blue, 'sample 2' in orange, 'sample 3' in green, 'sample 4' in red). The color coding helps visually differentiate between the samples.
+
+Each track is interactive, providing tooltips with detailed data attributes, such as start and end positions, peak values, and sample information. This visualization gives a comprehensive depiction of genomic data using dynamic and color-coded elements to reflect varying levels of gene expression.

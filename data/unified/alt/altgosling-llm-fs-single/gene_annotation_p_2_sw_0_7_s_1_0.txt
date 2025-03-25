@@ -1,0 +1,15 @@
+A series of six genomic range tracks arranged in a linear horizontal layout display different annotations of chromosome 3, between positions 52,168,000 and 52,890,000. 
+
+- The first track, titled "Cyverse-QUBES," shows gene annotations using black text for gene names, light gray rectangles for genes, and purple rectangles with darker outlines for exons. Directionality is indicated with gray triangles.
+  
+- The second track displays a comprehensive genomic annotation with gray, red, and cyan rectangles representing genes, exons, and introns respectively.
+
+- The third, "GmGDV," utilizes colored text, triangles, and rectangles to denote genes and exons, with directional indicators. Blue is used for positive strands and red for negative strands.
+
+- "HiGlass" employs a similar approach with blue and red used to signify strand directions, enhancing clarity with opacity adjustments.
+
+- "IGV" emphasizes gene names and locations with navy blue features, applying white directional lines for strand indication.
+
+- Finally, "Corces et al." uses a combination of blue and red to signify strand direction, with rectangles and text for gene and exon visualization.
+
+Each track is stratified by strand, offering detailed insights into gene structure and transcriptional orientation on the hg38 assembly.

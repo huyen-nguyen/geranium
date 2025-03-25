@@ -1,0 +1,8 @@
+A linear layout visualization depicts various BED file specifications across chromosome 1, from positions 1 to 2,000,000. Four separate tracks display different BED file types: 
+
+1. **BED12**: This track illustrates all 12 standard BED fields with sky blue rectangles.
+2. **BED6**: Displaying the first six BED fields, this track uses pink rectangles.
+3. **BED6+6**: Featuring the first six BED fields plus six custom fields, it represents data with sky blue rectangles.
+4. **BED12+1**: Incorporating all 12 standard fields and one custom field, this track shows data in purple rectangles.
+
+The genomic interval spans the x-axis, and each track is encoded with specific colors to differentiate the types of BED files.

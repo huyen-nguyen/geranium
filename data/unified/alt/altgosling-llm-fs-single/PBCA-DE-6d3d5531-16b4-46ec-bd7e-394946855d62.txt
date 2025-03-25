@@ -1,0 +1,15 @@
+Based on the provided JSON specification and processed attributes, here is a detailed description of the visualization:
+
+---
+
+The visualization consists of a dual-view setup, featuring a circular genome view and a linked linear genome view arranged in a vertical layout. The circular view presents an ideogram of the entire hg19 assembly, offering a comprehensive genomic overview. Various tracks within this view provide insights into genomic features and variations:
+
+1. **Ideogram Track**: Displays chromosome bands in different colors, indicating categories like "gneg" and "gpos" on the chromosomal arms. An interactive brush selector is available for dynamic navigation and linking to the linear view.
+
+2. **Putative Driver Track**: This circularized text annotation track displays gene symbols, differentiated by their genomic positions. Text color is standardized to black, maintaining uniformity.
+
+3. **Gain and Loss of Heterozygosity (LOH) Tracks**: Represented by rectangles, these tracks highlight regions of chromosomal gain in sky blue and LOH in dark orange. These annotations help identify notable genomic copy number variations with their overlapping, providing visual cues on structural genomic alterations.
+
+4. **Structural Variation Track**: Depicts connections between genomic regions with links, visually coded by categories such as "Translocation" and "Duplication." The stroke color corresponds to the type of structural variation, adding further clarity through standardized color coding.
+
+The **Linear View**, directly below the circular layout, focuses on chromosome 1, allowing detailed exploration of specific

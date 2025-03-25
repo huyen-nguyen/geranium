@@ -1,0 +1,13 @@
+The visualization consists of two main sections, each showing three genomic range annotation tracks aligned vertically. 
+
+The first section includes:
+1. **GmGDV Track:** Displays gene annotations with text labels. Genes on the positive strand are marked with blue right-facing triangles, and genes on the negative strand with red left-facing triangles. Exons are shown as rectangles, and genes are connected by lines.
+2. **Intermediate Track:** Presents genes and their components in gray, red, and blue rectangles representing genes, exons, and introns, respectively.
+3. **Cyverse-QUBES Track:** Similar gene annotations with different shades to represent strands. Exons are highlighted in purple rectangles with an outline.
+
+The second section contains:
+1. **Corces et al. Track:** Utilizes small blue and red rectangles for positive and negative strands, respectively. Gene names are displayed above their respective positions.
+2. **HiGlass Track:** Features blue and red overlays for strands, with detailed gene names labeled alongside.
+3. **IGV Track:** Shows dense labels and annotations with dark blue representations across strands. White lines decorate the strands, giving a distinct visualization of gene orientations.
+
+All views encompass the chromosomal interval from 52,168,000 to 52,890,000 on chromosome 3, using data from a BEDDB dataset. This layout serves to compare multiple genomic datasets, highlighting gene structures and orientations within specified genomic regions.

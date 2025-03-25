@@ -1,0 +1,10 @@
+The visualization, titled "Hi-C Matrix," presents a linear overlay layout to visualize Hi-C data on the hg38 genome assembly. It encompasses multiple genomic intervals from 800,000,000 to 1,800,000,000 on both the x and y axes, using color intensity in a grey color range to represent expression values in a matrix format. 
+
+The main view includes several overlaid tracks: 
+1. A matrix view showing genomic interactions with heat intensity.
+2. A vertical line annotation in red, highlighting specific genomic positions on the x-axis using a JSON dataset.
+3. A similar horizontal line annotation in blue on the y-axis. 
+4. A bar track displaying categories based on genomic intervals with adjustable opacity set at 0.5 and colored strokes.
+5. A point track where genomic coordinates are marked with varying point sizes, signifying quantitative data variations, and colored steel blue with white strokes.
+
+Red and blue lines mark annotations denoting particular regions of interest for distinguished genomic loci. The visualization integrates interactive elements for further analysis, offering a comprehensive perspective on Hi-C matrix data enriched by instructional annotations.

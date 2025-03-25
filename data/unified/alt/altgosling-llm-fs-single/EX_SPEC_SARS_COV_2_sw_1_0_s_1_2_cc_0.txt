@@ -1,0 +1,15 @@
+The visualization presents a linear genome layout for SARS-CoV-2, covering the complete NC_045512.2 sequence of 29,903 bases. It is composed of multiple individual views that provide detailed insights into gene annotations, protein annotations, and recombination events.
+
+1. **NC_045512.2 Genes View**: 
+   - Displays genomic regions with purple rectangles and navy blue elements, incorporating annotations like ORF1ab. The genomic intervals are annotated with triangular patterns to indicate gene directionality. Sky blue text labels identify gene symbols.
+
+2. **S Protein Annotation View**: 
+   - Shows rows for protein features such as the receptor-binding domain and heptad repeats. The chart uses distinct colors for each category, and the title is styled in black text.
+
+3. **NC_045512.2 Sequence View**: 
+   - Features a multivec bar chart displaying the nucleotide sequence (A, T, G, C) in different colors. The y-axis represents quantitative counts for nucleotide presence, overlaid with white text to highlight the bases.
+
+4. **TRS-L-Dependent Recombination Events View**: 
+   - Visualizes recombination events with light purple arcs connecting genomic segments, highlighting potential areas of genomic rearrangement.
+
+The visualization includes rich color encoding and styling, with elements like brushes for interactive exploration. The title "SARS-CoV-2" and the subtitle provide context about data sources.

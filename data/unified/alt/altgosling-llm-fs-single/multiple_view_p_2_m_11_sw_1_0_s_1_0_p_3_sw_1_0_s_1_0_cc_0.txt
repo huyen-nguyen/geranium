@@ -1,0 +1,5 @@
+A visualization titled "Visual Linking" features a vertical arrangement showing a linear scatter plot and two charts integrated horizontally. The scatter plot on the top visualizes samples across chromosome 1 from positions 160,000,000 to 200,000,000. Data points are colored based on sample categories and sorted by rows, showing expression values along the y-axis.
+
+Below, the horizontal arrangement includes a circular line chart and a linear area chart. The circular chart displays genomic intervals along the x-axis with expression values represented as colored lines for different samples, featuring an interactive brush for selecting genomic regions.
+
+The accompanying linear area chart similarly shows genomic intervals and expression values with various colored areas depicting different samples. Interactive brushes link to detailed views and allow dynamic adjustment of the visualized regions, enhancing the exploration of genomic data patterns.

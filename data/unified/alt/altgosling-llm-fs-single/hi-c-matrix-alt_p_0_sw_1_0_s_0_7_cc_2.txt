@@ -1,0 +1,12 @@
+The visualization titled "Hi-C Matrix," with the subtitle "Visualize Hi-C Data Using Matrix and Annotations," presents an intricate overlay of multiple tracks. This visualization uses a linear layout to represent genomic data from intervals between 800,000,000 and 1,800,000,000 on the x-axis. 
+
+**Matrix Track:** The main matrix utilizes both x- and y-axes to illustrate genomic interactions, displaying expression values through varying color intensities in a 'hot' color range, where lighter shades indicate lower values and darker shades indicate higher values. 
+
+**Annotations:**
+1. **Vertical and Horizontal Lines:** Two sets of rules are displayed. Vertical lines (sky blue) and horizontal lines (green) mark specific genomic positions, providing reference points across chromosomes.
+   
+2. **Expression Bar Track:** A bar track layered over the matrix uses color to represent quantitative values ('v') and strokes to signify different categories. It further emphasizes patterns in the genomic intervals across chromosomes 6, 7, and 8.
+
+3. **Point Chart:** Points are plotted with both genomic axes, where the size of each point indicates the value of 'v', and color is uniformly purple. This track highlights specific data points within the genomic range with stroke-style customization.
+
+Overall, this visualization efficiently combines matrix and annotation elements to deliver a comprehensive view of Hi-C data. It aids in understanding structural genomic interactions through distinct visual encodings.

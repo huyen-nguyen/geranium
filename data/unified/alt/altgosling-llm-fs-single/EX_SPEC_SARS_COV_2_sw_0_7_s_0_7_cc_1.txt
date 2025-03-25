@@ -1,0 +1,7 @@
+The visualization presents a linear layout of the SARS-CoV-2 genome, with multiple tracks displaying different annotations and features over the full length of NC_045512.2, spanning 29,903 base pairs. The first track titled "NC_045512.2 Genes" uses blue rectangles and lines to denote genes, incorporating a linking brush for interaction with other charts. 
+
+The second track, "S Protein Annotation," organizes data into categories, highlighting various protein domains and motifs with distinct colors. 
+
+A "Sequence" track displays the genome with bars representing nucleotide counts, using color coding for adenine (A), thymine (T), guanine (G), and cytosine (C). Text labels overlay the bars when zoomed in sufficiently.
+
+The visualization also includes a "TRS-L-Dependent Recombination Events" track, displaying arcs that represent recombination events, with connections shown in soft purple hues. The entire visualization is sourced from the WashU Virus Genome Browser, NCBI, and GISAID, providing comprehensive insights into the genomic features and annotations of SARS-CoV-2.

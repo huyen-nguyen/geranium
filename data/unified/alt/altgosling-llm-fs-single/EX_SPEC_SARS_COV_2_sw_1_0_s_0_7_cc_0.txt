@@ -1,0 +1,11 @@
+A detailed visualization of the SARS-CoV-2 genome in a linear layout is presented, sourced from the WashU Virus Genome Browser, NCBI, and GISAID. The entire genome, as defined by the assembly NC_045512.2, consisting of 29,903 base pairs, is analyzed. The chart is divided into five individual sections.
+
+1. **Top Track: Gene Annotations**: This section displays gene annotations with purple rectangles for the genes and pink text indicating gene symbols. A purple brush links this view to the detailed views below.
+
+2. **S Protein Annotation**: This track highlights essential protein domains of the spike (S) protein. The annotations are stratified by categories such as receptor-binding domain (RBD) and receptor-binding motif (RBM), each colored differently for clarity.
+
+3. **Middle Track: Genes Detail**: Similar to the top track, but providing a more detailed view and annotated with different colors: navy blue rectangles and black text, showcasing specific gene segments.
+
+4. **NC_045512.2 Sequence**: Displays a multivec file, visualizing sequence composition with a bar chart. The individual nucleotides (A, T, G, C) are represented in various colors, and their abundance is depicted against the genome positions.
+
+5. **TRS-L-Dependent Recombination Events**: This track visualizes recombination events through arch-like connections. The strokes are colored green with low opacity to indicate

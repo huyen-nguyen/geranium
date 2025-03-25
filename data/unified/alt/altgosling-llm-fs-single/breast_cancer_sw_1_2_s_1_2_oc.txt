@@ -1,0 +1,13 @@
+The visualization consists of five tracks arranged in a linear layout, displaying data related to chromosome 1. The tracks include:
+
+1. **Ideogram Track**: Displays chromosomal bands with color-coded categories, including white for "gneg" and black for "gpos100."
+
+2. **Genomic Position Annotation Track**: Shows gene annotations with directional triangles based on the strand orientation. Blue and beige colors indicate positive and negative strands, respectively.
+
+3. **Copy Number Variants (CNV) Track 1**: Visualizes tumor CNV data with red rectangles representing minor copy number alterations.
+
+4. **CNV Track 2**: Shows CNV data with green rectangles indicating total copy numbers in the tumor.
+
+5. **Structural Variations Track**: Displays genomic rearrangements as colored links connecting genomic positions. Categories include tandem duplications, translocations, deletions, and inversions, visualized in distinct colors like green and orange.
+
+This visualization uses data from CSV and BEDDB files, providing insights into genomic structures and variations within chromosome 1.

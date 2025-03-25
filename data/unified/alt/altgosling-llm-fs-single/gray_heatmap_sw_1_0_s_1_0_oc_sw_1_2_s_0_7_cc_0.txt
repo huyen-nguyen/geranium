@@ -1,0 +1,3 @@
+### Description
+
+A heat map in a linear layout visualizes a matrix file, representing the entire genome of hg38. The x- and y-axes both represent genomic intervals, with positions marked along the chromosomes. The color intensity encodes quantitative values from the data field named 'value,' using a 'hot' color scheme that highlights intensities along the diagonal. The layout is static with no interactive components, and the plot dimensions are configured at 366 by 310 pixels.

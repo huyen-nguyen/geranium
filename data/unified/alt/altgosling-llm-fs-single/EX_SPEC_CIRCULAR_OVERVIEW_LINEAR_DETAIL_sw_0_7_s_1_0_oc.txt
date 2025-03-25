@@ -1,0 +1,16 @@
+**Description:**
+
+The visualization consists of a vertical arrangement with two main sections: a circular view on top and two horizontal bar charts below. 
+
+- **Circular View:**
+  - The circular layout represents the human genome (hg38 assembly) with chromosomes labeled on the outer ring.
+  - Inside the circle, multivec data is visualized using stacked bar charts for samples 1 to 4, differentiated by color.
+  - Brush marks link this circular view with detailed bar charts below.
+  - Connections between genomic intervals show structural variations (deletion, inversion, translocation, tandem duplication) as lines in varying colors and strokes.
+
+- **Horizontal Bar Charts:**
+  - Two horizontal bar charts provide detailed views of chromosomes 5 and 16.
+  - Each chart is stratified by sample categories, with colors consistent with the circular view.
+  - These charts allow for detailed exploration of genomic data, linked via interactive brushes from the circular view.
+
+Each section is connected, providing a comprehensive overview of genomic data through interactive and color-coded elements.

@@ -1,0 +1,5 @@
+The visualization consists of a circular and linear genome view. The circular view includes tracks such as a colored ideogram representing chromosome bands, a text track titled "Putative Driver" displaying gene annotations, and tracks showing genomic ranges of "Gain" and "Loss of Heterozygosity (LOH)" using blue and orange rectangles, respectively. Another circular track displays connections between genomic positions, with colors indicating structural variations like Translocation and Duplication.
+
+The linear view represents chromosome 1 and includes a range of genomic features. An ideogram at the top matches the circular ideogram, followed by the "Putative Driver" text track. A scatterplot titled "Point Mutation" visualizes variants with points, colored by mutation subtype. Beneath are two range annotation tracks displaying insertions and deletions. The "Copy Number Variants" track shows variations with light gray bars.
+
+The views are linked interactively via a blue brush, allowing detailed exploration of chromosome 1 in the linear view based on selections in the circular view.

@@ -1,0 +1,5 @@
+The visualization consists of two adjacent genomic range annotation tracks titled "Corces et al." and "GmGDV," both displayed in a linear layout. These tracks represent data from the chromosome 3 interval between positions 52,168,000 and 52,890,000. 
+
+Each track depicts annotations of gene regions, with their corresponding names displayed as text. The tracks have layers of text, rectangles, triangles pointing right or left, and lines to indicate gene structures and strands. Genes on the positive strand are shown in blue, while those on the negative strand are in orange. Exons are highlighted with thicker rectangles. The color coding and layering effectively stratify the data by strand and gene annotation.
+
+The visualization is interactive, with options to adjust visibility based on width, ensuring optimal viewing as users interact with the data.

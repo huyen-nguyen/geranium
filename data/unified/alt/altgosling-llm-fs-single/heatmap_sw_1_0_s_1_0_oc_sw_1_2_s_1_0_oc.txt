@@ -1,0 +1,1 @@
+A heat map in a linear layout visualizes a matrix file, representing genomic interactions using data from 'HFFc6_Micro-C'. Both axes show genomic intervals. The color intensity encodes quantitative values, using a warm color range. The chart is set on the hg38 assembly, with dimensions of 720 by 600 pixels.

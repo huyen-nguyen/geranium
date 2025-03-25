@@ -1,0 +1,20 @@
+**Description**: 
+
+A layered visualization displaying genomic data using bars and rules. The background is set with a dashed style. 
+
+- **Bar Chart**: 
+  - Depicts genomic intervals on the x-axis.
+  - Y-axis shows expression values capped at 0.003.
+  - Bars are colored in light purple (#b59bf2).
+
+- **Rule Marks**: 
+  - Horizontal and vertical lines cross the chart.
+  - First rule set uses quantitative strokeWidth based on 'v' values plotted against genomic x-axis, colored in light purple (#b59bf2).
+  - Second rule set shows vertical lines with a constant strokeWidth of 2, colored in green (#85B348).
+
+- **Overall Layout**:
+  - Linear orientation with a horizontal layout.
+  - Designed for the hg38 genome assembly.
+  - Provides clear genomic annotations with overlaid tracks for data clarity.
+
+The title "Rule Mark" with the subtitle "Annotate visualization with horizontal and vertical lines" describes its purpose.

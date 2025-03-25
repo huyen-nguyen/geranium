@@ -1,0 +1,16 @@
+The visualization shows a comprehensive genomic analysis using both circular and linear layouts. 
+
+### Circular View:
+- **Tracks**: The circular layout includes multiple tracks:
+  - **Ideogram Track**: Represents the whole genome with color-coded categories such as 'gneg', 'gpos', and more. A blue interactive brush links to the linear view.
+  - **Annotation Tracks**: Include tracks titled 'Gain' and 'Loss of Heterozygosity (LOH)' which show genomic intervals in sky blue and dark orange, respectively.
+  - **Connection Track**: Illustrates structural variations like 'Translocation', 'Duplication', 'Deletion', with lines colored based on the data attribute ‘svclass’.
+
+### Linear View:
+- **Layout**: Showing the region of chromosome 1, aligning with the section highlighted in the circular view.
+- **Tracks**:
+  - **Ideogram**: Displays chromosome bands with detail zooming.
+  - **Putative Driver Text Track**: Lists possible gene drivers, denoted with annotations.
+  - **Point Mutation Scatter Plot**: Points represent genetic mutations categorized by different colors based on ‘SUBTYPE’. The y-position reflects the log distance to previous mutations.
+  - **Annotation Tracks**: ‘Insertion’ and ‘Deletion’ displayed using colored rectangles. Copy number variations are demonstrated in another track titled 'Copy Number Variants', using gray bars to depict 'total_cn'.
+  - **Additional Tracks**: Include gene annotations and further

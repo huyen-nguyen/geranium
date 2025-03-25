@@ -1,0 +1,19 @@
+The visualization titled "Visual Linking" features an interactive genomic data presentation. It consists of a scatter plot and two linked detail views: a linear area chart and a circular line chart. 
+
+1. **Scatter Plot (Top View):** 
+   - Displays genomic data across chromosome 1 between 160,000,000 and 200,000,000 units.
+   - Points represent quantitative data ('peak') for four samples.
+   - Categories are color-coded, with each point stratified by these categories.
+
+2. **Linked Detail Views (Bottom Views):**
+   - **Linear Area Chart:**
+     - Shows full chromosome 1.
+     - Area plots represent the same 'peak' data, color-coded by category.
+     - Includes a brush tool enabling zoom and selection.
+
+   - **Circular Line Chart:**
+     - Represents chromosome 1 in a circular format.
+     - Lines are drawn to indicate data trends for each sample.
+     - Includes a brush tool for interactive linking with the linear chart.
+
+These views allow for detailed exploration of genomic data, facilitating easy navigation and comparison between different data samples and categories.
