@@ -1,0 +1,1 @@
+Line chart. Chart is titled 'Basic Marks: line'. The genome is shown on the x-axis. The expression is shown on the y-axis with lines.   
