@@ -1,0 +1,1 @@
+A circular bar chart in a stacked alignment visualizes a vector file, showing the entire genome of hg38. The position of the bars represents the genomic position, while the height signifies the 'peak' values. The bars are colored in pink.
