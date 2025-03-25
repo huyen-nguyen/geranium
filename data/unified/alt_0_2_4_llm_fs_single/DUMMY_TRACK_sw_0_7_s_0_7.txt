@@ -1,0 +1,11 @@
+This visualization is titled "Dummy track example," and showcases a linear layout of genomic data from chromosome 3 (chr3) between intervals 52,168,000 and 52,890,000. It is arranged horizontally and includes six distinct views.
+
+1. **HiGlass View**: Displays genomic features using various marks such as right and left triangles to indicate gene direction, text for gene names, and rectangles for gene and exon positions. Positive and negative strands are highlighted in blue and red, respectively. Triangles signify the orientation of the genes, with lines for exons. The layout shows genomic structures in a horizontal arrangement with category stratification based on the strand.
+
+2. **Placeholder View**: A dummy track serves as a placeholder with a uniform gray background, indicating a space for potential additional data visualization.
+
+3. **IGV View**: Uses text to label genes and rectangles to depict genomic regions, again exhibiting positive strands in blue with triangular overlay patterns and white lines for visibility. The display is horizontally stratified by gene strand.
+
+4. **Cyverse-QUBES View**: Illustrates genomic data with right and left triangles, text, rectangles, and vertical lines, where gene and exon positions are visually encoded. The strands are colored in shades of gray, light gray for the rectangles, and purple for exons, indicating exon regions.
+
+5. **GmGDV View**: Highlights genomic structures using colored triangles (positive strands in blue, negative in red) and
