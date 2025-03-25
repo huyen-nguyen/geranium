@@ -66,8 +66,8 @@ def get_inference():
             Image.open(BytesIO(base64.b64decode(search_content.split(",")[1]))).convert(
                 "RGB"
             )
-        )
-        image_input = torch.stack([image]).to(device)
+        )  # type: ignore
+        image_input = torch.stack([image]).to(device)  # type: ignore
 
         with torch.no_grad():
             image_features = model.encode_image(image_input)
