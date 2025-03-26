@@ -33,6 +33,6 @@ def read_txt_files_and_write_output(folder_path, output_file_path):
         print(f"Could not write to the output file: {e}")
 
 # Example usage:
-folder_path = '../../data/unified/alt_0_2_2'  # Replace with your folder path
-output_file_path = './alt_0_2_2.txt'
+folder_path = '../data/unified/alt_0_2_2'  # Replace with your folder path
+output_file_path = './merged_texts/alt_0_2_2.txt'
 read_txt_files_and_write_output(folder_path, output_file_path)
