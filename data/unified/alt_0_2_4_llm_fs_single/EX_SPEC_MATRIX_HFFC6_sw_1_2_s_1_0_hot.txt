@@ -1,0 +1,15 @@
+The visualization titled "Matrix Visualization" with a subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" displays genomic data for chromosome 7 within the range of 77,700,000 to 81,000,000. The visualization is arranged horizontally and includes several tracks:
+
+1. **Vertical Tracks**: 
+   - **HFFc6_H3K4me3**: A bar chart displaying peaks in dark green.
+   - **HFFc6_ATAC**: A bar chart with peaks shown in orange.
+   - **HFFC6_CTCF**: An overlay track with bars in navy blue and genomic annotations represented by triangles in pink and green based on strand orientation.
+
+2. **Horizontal Arrangement**:
+   - **HFFc6_Micro-C**: A matrix track showing genomic interactions with intensities represented in a hot color scheme.
+   - The view contains additional bar charts for "Epilogos (hg38)", displaying various genomic features with a multicolor scheme to denote different categories like "Active TSS," "Genic enhancers," and "Heterochromatin."
+
+3. **Parallel Horizontal Views**:
+   - One view presents similar data for **HFFc6_Hi-C** instead of Micro-C, allowing a direct comparison between Micro-C and Hi-C data representations.
+
+This comprehensive alignment of multitrack views facilitates insight into various genomic characteristics of HFFc6 cells, enhancing the comparison between

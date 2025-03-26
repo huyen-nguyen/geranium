@@ -1,0 +1,8 @@
+An alignment chart visualizing genomic data in a linear layout features four individual tracks. 
+
+1. **Gap Chart**: A bar chart displaying gaps in green bars, with intervals along the x-axis (350-396), and gap size values on the y-axis, with right-aligned bars.
+2. **Conservation Chart**: Another bar chart using hot color gradients to depict conservation levels. The x-axis shares the same intervals as the gap chart, and the y-axis reflects quantitative conservation values.
+3. **Sequence Alignment Chart**: Comprised of colored rectangles representing sequence bases, and overlaid text, stratified by protein names along the rows. The colors vary to indicate different base types, with a nominal legend provided.
+4. **Overlay Chart**: Contains layers of rectangles and additional bar charts featuring both conservation and gaps again, supporting interactive exploration with a brush tool linking to a larger genomic interval (0-396) for broader context.
+
+The visualization uses CSV data linked through URLs, allowing dynamic exploration of genomic features.

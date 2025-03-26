@@ -1,0 +1,7 @@
+The visualization consists of five linear bar charts in a vertical arrangement, emphasizing customizable mouse interactions like hovering and range selection. Each chart represents data from a multivec file, with bars indicating genomic data across the entire genome of hg38. 
+
+The first chart, "Individual Marks," displays bars in different colors based on sample categories, with interactions enhancing data exploration. "Group Marks By Sample" groups these bars by sample, while "Group Marks By Genomic Position" organizes them by genomic segments. 
+
+"Group Marks By Gene" offers a genomic range annotation track with gene names alongside bars, allowing exploration by gene positions and names on chromosome 3. The fifth chart, "Group Marks By Chromosome," is a cytogenetic ideogram with overlaid annotations including text, rectangles, and triangles representing different staining patterns. 
+
+The tooltips provide genomic positions, peak values, and sample information, enhancing the understanding of genetic variations. The visualization enables interactive exploration of genomic data, facilitating a comprehensive view of various genomic features across different levels of organization.

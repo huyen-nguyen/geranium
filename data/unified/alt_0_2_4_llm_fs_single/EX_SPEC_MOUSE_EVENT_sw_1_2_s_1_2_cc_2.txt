@@ -1,0 +1,13 @@
+A series of five visual elements arranged vertically showcases customized mouse events applied to bar charts and genomic tracks. Each view highlights specific data categorizations through color variations and outlines.
+
+1. **Bar Chart: 'Individual Marks’** - Displays genomic intervals on the x-axis with expression depicted by bars on the y-axis. Colors represent distinct categories, offering interactive mouse-hover effects altering color to blue and opacity to 0.5.
+
+2. **Bar Chart: 'Group Marks By Sample’** - Similar genomic depiction with color-coded categories representing different samples. Customized interactions include hover and range selection with a brush color of green.
+
+3. **Bar Chart: 'Group Marks By Genomic Position’** - Genomic positions create the base, sorting expressions in colorful bars. Interactive elements allow grouping by position with hover effects, alongside a yellow range selection brush.
+
+4. **Genomic Range Annotation: 'Group Marks By Gene’** - Represents genomic data in distinct annotations, with exons marked by triangles. Colors adjust based on gene information, with behind-visual effects enhancing hover and selection interactivity.
+
+5. **Ideogram & Composite Chart: 'Group Marks By Chromosome’** - Depicts chromosomes with associated bands, showcasing density through a grayscale range and distinct shapes for special markers. The brush and selection responses include red hues for interaction feedback.
+
+Interactive capabilities throughout these elements focus on enhancing user engagement and insight into genomic data distributions, spanning distinct categorical fields like samples, positions, and genes.

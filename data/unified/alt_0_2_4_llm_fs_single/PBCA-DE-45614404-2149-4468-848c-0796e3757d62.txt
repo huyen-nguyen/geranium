@@ -1,0 +1,17 @@
+The visualization consists of two primary views: a circular and a linear arrangement, linked by an interactive brush in the circular view. 
+
+The circular view features five tracks:
+1. **Ideogram**: Displays the entire genome with stains indicated by colors.
+2. **Putative Driver (Text)**: Annotations with genomic positions shown in black text.
+3. **Gain/Ranges in Blue Rectangles**: Highlights genomic regions indicating gains.
+4. **Loss of Heterozygosity (LOH)/Ranges in Orange Rectangles**: Displays genomic regions of LOH.
+5. **Line-Connection Track**: Shows links between genomic positions, categorized by 'svclass' in varied colors, including `Translocation`, `Duplication`, `Deletion`.
+
+The linear view includes:
+1. **Ideogram with Triangles**: Displays genomic bands with right and left triangles indicating centromeres.
+2. **Gene Annotation Track**: Visualizes gene structures with grey triangles and rectangles, showing exon intervals.
+3. **Point Mutation (Scatterplot)**: Plots data from a VCF file. The y-axis represents the logarithm of the distance to the previous mutation, with points colored by mutation subtype.
+4. **Insertion/Deletion Track**: Rectangles display insertion or deletion mutations, distinguished by yellow and green colors.
+5. **Copy Number Variants (Bar Chart)**: Shows quantitative values from a CSV file, with bars representing total copy number.
+
+The visualization is rendered within

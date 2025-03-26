@@ -1,0 +1,5 @@
+The visualization presents genomic data in a linear layout, exemplifying alignment and conservation across multiple charts. It includes two bar charts titled 'Gap' and 'Conservation,' demonstrating genomic intervals on the x-axis and quantitative values on the y-axis. The 'Gap' chart uses sky blue for bars indicating gaps, while the 'Conservation' chart employs a hot color scheme to reflect conservation levels.
+
+Additionally, a detailed chart with rectangles and text is stratified by categories, using a range of colors to distinguish between them. The genomic sequence is displayed on the x-axis, and the text is rendered in black to enhance readability.
+
+The visualization also contains an overlaid chart, consolidating multiple tracks with rectangles and bar charts. In this chart, categories are signified through the color of rectangles and bars, spotlighting a variety of genomic expressions. Overall, it offers an informative view of genomic data through sophisticated visual encoding and color differentiation, facilitating a comprehensive understanding of sequence alignment and conservation.

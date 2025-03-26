@@ -1,0 +1,9 @@
+The visualization consists of a multi-view genomic chart in a linear layout, focusing on chromosome 1 from position 1 to 3,000,500. It includes three vertically arranged tracks:
+
+1. **Line and Scatter Plot**: This track shows genomic positions on the x-axis with expression levels on the y-axis presented as lines and points. Each category, identified by samples 1 to 4, is distinguished by color. The point sizes vary based on expression values.
+
+2. **Bar Chart**: This track also maps genomic positions on the x-axis but displays expression levels using bars on the y-axis. The categories are indicated by different colors, allowing comparison across samples.
+
+3. **Area Chart**: Again mapping genomic positions on the x-axis, this chart uses filled areas to depict expression levels, stratified by category. The categories are color-coded, matching the previous tracks.
+
+The visualization allows for easy comparison of genomic expression levels across different samples, with colors representing distinct categories. Data tooltip provides genomic position and expression value details on hover.

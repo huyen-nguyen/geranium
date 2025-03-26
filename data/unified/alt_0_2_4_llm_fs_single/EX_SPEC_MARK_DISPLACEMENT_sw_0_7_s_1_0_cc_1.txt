@@ -1,0 +1,9 @@
+The visualization titled "Mark Displacement" consists of multiple genomic tracks using displacement methods to resolve visual overlaps. It focuses on three chromosomes: chr3, chr2, and chr17. 
+
+On chr3, a transcript track displays up to 15 rows of gene annotations represented as text and arrows to indicate directionality on the genomic axis. The genes are color-coded by strand, with positive strands in blue and negative strands in orange.
+
+Chr2 features an overlay track of likely benign variants. Green points indicate variants with additional text annotations. Connections illustrated in light gray link these points across the genome. Another track uses color-coded text to denote nucleotide changes.
+
+Chr17 displays a genomic range annotation track with vertical colored bars representing various pathogenicity classifications in shades of pink and blue. Below these, a dense array of small points details individual data points dispersed along the genomic interval.
+
+Overall, displacement techniques such as "pile" and "spread" are employed to manage visual overlap and maintain clarity, structured in both linear and overlay formats.

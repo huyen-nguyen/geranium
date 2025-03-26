@@ -1,0 +1,14 @@
+The visualization, titled "Matrix Visualization," compares Micro-C and Hi-C data for HFFc6 cells. It shows a horizontal arrangement of data covering chromosome 7 from 77,700,000 to 81,000,000 base pairs. 
+
+The left panel includes vertical tracks:
+- **HFFc6_H3K4me3**: A purple bar chart representing peak values.
+- **HFFc6_ATAC**: A dark green bar chart for ATAC-seq peaks.
+- **HFFC6_CTCF**: Overlaying orange bars and green/pink triangles, displaying CTCF peaks and gene annotations.
+- **HFFc6_Micro-C**: A matrix showing genomic interactions with intensity encoded by a warm color range.
+
+The right panel presents horizontal arrangements:
+- **HFFc6_H3K4me3** and **HFFc6_ATAC** repeat with comparable color schemes.
+- Additional matrix tracks for the **HFFc6_Hi-C** data display interactions similarly.
+- **Epilogos (hg38)**: Bar charts at the bottom illustrate various chromatin states using distinct colors.
+
+Overall, these components provide a detailed comparative genomic landscape analysis for the specified region, employing consistent color schemes and track arrangements for ease of interpretation.

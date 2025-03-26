@@ -1,0 +1,19 @@
+The visualization consists of five linear tracks, with each track corresponding to chromosomes 1 through 5. Each track includes an area chart overlayed on top of an ideogram.
+
+### Area Chart
+- **Data Source:** The charts use a multivec file with rows as samples and columns as genomic positions.
+- **Displays:** The area chart shows expression values (y-axis) across varying genomic positions (x-axis) for different categories represented by samples. 
+- **Color Encoding:** Categories are distinguished by colors: blue, orange, green, and red, corresponding to 'sample 1' through 'sample 4'.
+
+### Ideogram and Overlay
+- **Data Source:** The ideograms use CSV data detailing cytogenetic bands.
+- **Visual Elements:**
+  - **Rectangles:** Colored to indicate density and other stain characteristics, using shades of white to black and light purple for gvar.
+  - **Triangles:** Maroon right and left triangles denote acen regions.
+  - **Text:** Names of chromosome bands are displayed in black.
+
+### Overall Layout
+- **Configuration:** Parallel arrangement with a static and centered radius of 0.2.
+- **Size:** Varies per chromosome track to accommodate data; dimensions are specific to genomic extent.
+  
+This visualization provides a comprehensive genomic overview across five chromosome tracks, combining categorical expression data with a detailed cytogenetic band representation.

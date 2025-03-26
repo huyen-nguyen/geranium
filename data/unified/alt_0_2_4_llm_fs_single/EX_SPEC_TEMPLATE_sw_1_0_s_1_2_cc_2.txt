@@ -1,0 +1,9 @@
+A linear layout visualization showcases track templates in Gosling.js, enabling complex visualizations with ease. It includes three main views:
+
+1. **Gene Track**: Displaying genomic intervals on chromosome 3 between 52,168,000 and 52,890,000. The track features exons and gene structures with labels, using triangles and rectangles to represent gene directionality and exon coverage. The elements are shaded gray for clarity, with white strokes accentuating gene names.
+
+2. **Sequence Composition Bar Chart**: Focusing on chromosome 1 from 77,925,299 to 77,925,320, it illustrates nucleotide counts as bars, encoding categories ('A', 'T', 'G', 'C') in different colors. Adjacent text labels provide further information, highlighting nucleotide prevalence.
+
+3. **Ideogram**: Depicts chromosome 1 and includes banding patterns with distinct colors representing various stain categories like gneg, gpos, and acen, along with labels for band names. Triangles indicate centromeric (acen) regions.
+
+The visualization effectively utilizes Gosling.js capabilities for genomic data representation through color coding, text annotations, and detailed encoding of genomic structures.

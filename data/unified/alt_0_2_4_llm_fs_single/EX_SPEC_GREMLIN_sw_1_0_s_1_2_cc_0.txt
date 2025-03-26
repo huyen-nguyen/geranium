@@ -1,0 +1,20 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" is a series of interconnected charts that depict genomic data on chromosome 5.
+
+1. **Chromosome 5 Ideogram**:
+   - The top chart displays an ideogram of chromosome 5, highlighting cytogenetic bands in shades of gray, black, and pink. 
+   - The color coding reflects different banding patterns, with pink indicating a centromere region.
+
+2. **Segmental Duplications**:
+   - The second chart overlays connections, representing segmental duplications within and across chromosomes hs5, hs4, and hs6.
+   - The duplications are depicted as arcs colored in light blue, orange, and green, with varying line widths and opacities.
+
+3. **Intrachromosomal Rearrangements**:
+   - The third track shows detailed connections of intrachromosomal rearrangements on chromosome 5.
+   - The arcs are light blue, indicating duplicated segments, with a consistent color and style.
+
+4. **Region of Interest**:
+   - The next section focuses on a specific region within chromosome 5, zooming into detailed interchromosomal connections.
+   - The connections are color-coded based on associated chromosomes and depicted with a translucent style.
+
+5. **Rearrangement View**:
+   - The final chart offers an expanded view of a particular rearrangement between positions 69,276,000 and 69,280,000 on chromosome 5

@@ -1,0 +1,15 @@
+A circular visualization showcases diverse visual encoding methods provided by Gosling for chromosome 1, covering intervals from 1 to 3,000,500. The display contains several charts arranged in a vertical layout, each demonstrating different data representations.
+
+1. An area chart illustrates the genomic position on the x-axis, with expression values shown on the y-axis. The areas are stratified by rows for categories named sample 1 to sample 4, colored blue to red respectively.
+
+2. A connection chart with segments colored by genomic intervals indicates different categories, providing visual insight into relationships and links within the data.
+
+3. A line and scatter plot uses lines and points to depict genomic position on the x-axis and expression on the y-axis. Point sizes vary by expression values, stratified by categories shown in distinct colors.
+
+4. Bar charts display the genomic position on the x-axis and expression on the y-axis, colored differently to distinguish between categories.
+
+5. Scatter plots exhibit similar attributes to the line plots but focus on depicting the expression with points.
+
+6. A heat map uses color intensity to encode expression values, stratified by rows for different samples.
+
+Across these visualizations, attention is paid to color-coding and interactivity, with tooltips offering detailed data insights, enhancing the user's understanding of the genomic data. The title “Visual Encoding in Circular Layouts” and subtitle “Gosling provides diverse visual encoding methods in circular layouts” frame the context of the visualization, emphasizing the versatility in data representation

@@ -1,0 +1,22 @@
+The visualization displays a circular and a linear genome view showing chromosome 1 (hg19 assembly). The circular ideogram links to the linear view via a blue interactive brush. 
+
+**Circular View:**
+- **Tracks:**
+  - **Ideogram** with a brush linking to the linear view.
+  - **Text Annotation** labeled "Putative Driver," categorizing data by rows.
+  - **Range Annotations:**
+    - "Gain" track with blue rectangles.
+    - "Loss of Heterozygosity (LOH)" track with orange rectangles.
+  - **Connection Track**: Lines representing categorical variations: "Gain," "LOH," "Translocation," "Duplication," "Deletion," "Inversion (TtT)," and "Inversion (HtH)."
+
+**Linear View:**
+- **Tracks:**
+  - **Ideogram** with genomic bands and pointing triangles.
+  - **Text Annotation**: "Putative Driver" categorization.
+  - **Gene Annotation Track**: Features encoded by rectangles and labeled exons.
+  - **Mutation Scatter Plot**: Titled "Point Mutation," colored by "SUBTYPE."
+  - **Range Annotations:**
+    - "Insertion" and "Deletion" data visualized by rectangles.
+    - Rectangles represent "Copy Number Variants" track, quantifying "total_cn."
+  - **Additional Range Annotations**:
+    - "Gain" and "LOH" tracks colored

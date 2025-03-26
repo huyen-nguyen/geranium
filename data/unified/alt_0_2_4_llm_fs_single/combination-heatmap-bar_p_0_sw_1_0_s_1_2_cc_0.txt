@@ -1,0 +1,17 @@
+**Description:**
+
+This visualization consists of two vertically arranged tracks, each displaying genomic data for chromosome 1 between positions 1 and 3,000,500.
+
+1. **Top Track: Heat Map**
+   - **Data Source**: Multivec file with fields for sample, position, and peak values.
+   - **Layout**: Linear, centered with a radius of 0.8.
+   - **Encoding**: The x-axis represents genomic positions, while y-axis categories are defined by samples ('sample 1' to 'sample 4'). 
+   - **Visual Representation**: Rectangular tiles encode peak values using a color scale from light to dark brown based on intensity, creating a heat map effect.
+   - **Additional Features**: Tooltips are enabled, showing start and end genomic positions, value, and sample.
+
+2. **Bottom Track: Bar Chart**
+   - **Data Source**: Same as the top track, focusing on peak values.
+   - **Layout**: Linear, same genomic range as the top track.
+   - **Encoding**: Genomic positions on the x-axis, peak values on the y-axis. Rows stratified by sample categories.
+   - **Color Coding**: Bars are color-coded to match categories: 'sample 1' (blue), 'sample 2' (orange), 'sample 3' (green), and 'sample 4' (red).
+   - **Tooltip**: Provides genomic start and

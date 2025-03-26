@@ -1,0 +1,13 @@
+The visualization presents gene annotation data across chromosome 3 from 52,168,000 to 52,890,000 in a linear layout. It consists of two main vertical arrangements, each containing multiple aligned views.
+
+- **Left Arrangement**:
+  1. **GmGDV Track**: Displays gene names as text with directional triangles indicating strand orientation (blue for positive, red for negative). Gene bodies are represented with rectangular bars and rules for gene boundaries.
+  2. **Generic Track**: Depicts genomic features using gray rectangles for genes, red for exons, and cyan for introns.
+  3. **Cyverse-QUBES Track**: Similar to GmGDV, but uses dark gray triangles and lighter shades for the annotations. Exons are highlighted in purple with a distinct outline.
+
+- **Right Arrangement**:
+  1. **Corces et al. Track**: Features smaller font sizes for gene names and distinct color coding for strands (blue for positive, red for negative). Gene bodies are visualized as rectangles.
+  2. **HiGlass Track**: Utilizes transparency to show overlapping features, with shades of blue and red for strand orientations. Includes patterned lines for gene boundaries.
+  3. **IGV Track**: Uses navy color for text and rectangles, with white patterned lines marking gene directions.
+
+Each track is stratified by strand orientation. The annotation tracks and configurations provide a comprehensive overview of the genomic features,

@@ -1,0 +1,13 @@
+This visualization presents a linear genomic view highlighting chromosome 1 with five tracks. 
+
+1. **Ideogram Track**: Displays a chromosome ideogram with color-coded bands representing different stains such as gneg, gpos, and acen, using a diverse color palette. Right and left-facing triangles indicate specific chromosomal regions, annotated with names.
+
+2. **Genomic Annotation Track**: Illustrates gene positions as right and left-facing triangles based on strand orientation. The track is stratified by strand with distinct colors for positive and negative.
+
+3. **Copy Number Variation Tracks**:
+   - **Green Rectangles**: Indicate genomic regions with minor copy number equal to zero in tumors.
+   - **Purple Rectangles**: Represent regions where total copy number in tumors exceeds a certain threshold.
+
+4. **Genomic Rearrangement Track**: Displays within-link connections across chromosome 1, showcasing structural variations such as tandem duplications, translocations, deletions, and inversions. These variations are color-coded with differing stroke colors.
+
+The visualization is designed for easy interpretation of complex genomic data, with tracks layered to provide comprehensive insight into genomic features and variations.

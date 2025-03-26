@@ -1,0 +1,1 @@
+A genomic bar chart in a linear layout visualizes a multivec file, showing the entire genome of hg38. Genomic intervals are displayed on the x-axis, while the expression values are represented by bar heights on the y-axis. The bars are uniformly colored in green. The title of the chart is 'Basic Marks: bar', and it features the subtitle 'Tutorial Examples'.

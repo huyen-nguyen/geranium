@@ -1,0 +1,16 @@
+The visualization consists of two circular scatter plots arranged vertically, each representing genomic data across chromosome 1 from positions 1 to 3,000,500. 
+
+Both plots share a circular layout, allowing for a side-by-side comparison of genomic expression data visualized via scatter plots.
+
+**Left Plot**: 
+- Displays expression values using points, stratified into four rows corresponding to samples 1 to 4.
+- Points are differentiated by size and color, each representing expression levels and sample categories respectively.
+- Opacity for the points is set at 50%, enhancing visibility across the map.
+- Tooltip functionality provides additional data insights, such as start and end genomic positions and peak values.
+
+**Right Plot**: 
+- Displays expression values in a similar fashion to the left plot but with grid lines to aid quantitative analysis.
+- Retains the same stratification, color coding, and opacity for direct comparison.
+- The tooltip remains consistent to provide quick access to detailed genomic information.
+
+Overall, this visualization effectively presents genomic data for four samples across a specified chromosomal interval using visually distinct and interactive scatter plots.

@@ -1,0 +1,15 @@
+The visualization showcases a genomic region on chromosome 7 (from 77,700,000 to 81,000,000) in a horizontal arrangement, titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells." It features several tracks including:
+
+1. **Vertical Tracks**: 
+   - **HFFc6_H3K4me3**: A purple bar chart representing peak values from bigWig data.
+   - **HFFc6_ATAC**: A dark green bar chart visualizing ATAC-seq data.
+   - **HFFC6_CTCF**: An overlaid track combining orange bar chart for CTCF marks with genomic position annotation using pink and green triangles indicating strand (+/-).
+   
+2. **Horizontal View (Left Panel)**:
+   - **HFFc6_Micro-C**: A matrix displaying interactions in blue and purple gradients, indicating Hi-C data intensity.
+   - **Epilogos (hg38)**: A multicolored bar chart denoting various genomic categories like Active TSS, Enhancers, and Repressed PolyComb using distinct colors.
+
+3. **Horizontal View (Right Panel)**:
+   - Similar arrangement as the left panel but focuses on Hi-C data, demonstrating the structural organization in HFFc6 cells.
+
+The visualization utilizes rich color encoding and various genomic data types (bigWig, beddb, matrix, multivec) to illustrate

@@ -1,0 +1,3 @@
+A linear visualization displays genomic data from chromosome 1, spanning positions 1 to 3,000,500. It includes two tracks arranged vertically. The top track is a scatter plot where points, colored according to categories 'sample 1' to 'sample 4', represent peak values at genomic positions. The x-axis details genomic locations, and the y-axis shows quantitative peak values with gridlines for reference. 
+
+The bottom track overlays line charts, stratified by the same categories. Each line varies in size based on the quantitative 'peak' values. Both tracks interactively highlight these categories with tooltips displaying start, end, value, and sample data, enhancing the exploration of genomic patterns across multiple samples.

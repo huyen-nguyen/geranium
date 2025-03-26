@@ -1,0 +1,13 @@
+The visualization titled "Custom Mouse Events" features multiple linear tracks that demonstrate various ways to interact with genomic data on human genome assembly hg38.
+
+1. **Individual Marks Track**: A bar chart displays genomic intervals on chromosome 1, using color to differentiate categories. The mouseOver interaction highlights bar segments in blue, and range selections in red.
+
+2. **Group Marks By Sample**: Similar to the previous track, this bar chart groups marks by sample categories, distinguished by different colors. MouseOver and range selections are styled in blue and red, respectively, with selection highlighting done in green.
+
+3. **Group Marks By Genomic Position**: This track groups marks based on genomic positions. Again, color differentiates categories, with mouse interactions styled similarly to previous tracks.
+
+4. **Group Marks By Gene**: This genomic range annotation track, focusing on a segment of chromosome 3, displays genes with arrows showing orientation. The track highlights interactions with a change in the background color behind mouseOver and selected items.
+
+5. **Group Marks By Chromosome**: Displays an ideogram of multiple chromosomes with band details. Different shading represents cytogenetic bands, with acrocentric regions shown in red. The track supports click and mouseOver interactions.
+
+Each track leverages custom mouse event interactions to enhance user experience, supported by comprehensive tooltip information. This allows detailed exploration of genomic data via interactive and responsive visual elements.

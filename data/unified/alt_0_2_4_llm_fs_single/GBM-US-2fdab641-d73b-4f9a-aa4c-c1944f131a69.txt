@@ -1,0 +1,11 @@
+The visualization consists of a circular and linear view linked by a blue interactive brush. The circular view displays the entire genome, with chromosome annotations and range annotations for 'Gain' in blue and 'Loss of Heterozygosity (LOH)' in orange. It also shows connections between genomic positions, with lines colored based on structural variations like 'Translocation,' 'Duplication,' 'Deletion,' and 'Inversion.'
+
+The linear view focuses on chromosome 1, featuring multiple tracks:
+1. An ideogram with annotations.
+2. A 'Putative Driver' track displaying gene annotations in black text.
+3. A scatter plot titled 'Point Mutation' illustrating genomic positions and distances to previous mutations, with points colored by mutation type.
+4. Range annotations for 'Insertion' and 'Deletion' in two rows, using yellow and green rectangles.
+5. A 'Copy Number Variants' track using gray rectangles to denote quantitative data.
+6. Additional tracks for 'Gain' and 'LOH,' similar to the circular view, using sky blue and orange rectangles.
+
+The chart utilizes genomic data formatting, with color and stroke styles indicating different categorical data and genomic interactions.

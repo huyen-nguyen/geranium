@@ -1,0 +1,5 @@
+A comprehensive genomic visualization composed of a circular and linear view explores chromosome 1 using the hg19 assembly. The circular view presents five tracks including an ideogram, a text annotation track titled "Putative Driver," and tracks for genomic changes labeled "Gain" and "Loss of Heterozygosity (LOH)," displayed in sky blue and dark orange, respectively. Connections between genomic positions are distinguished by color, indicating different structural variants like Translocations and Inversions.
+
+The linear view, linked via an interactive brush, expands on chromosome 1. It showcases multiple tracks: an ideogram, a gene annotation track, a scatter plot of point mutations from a VCF file, and a range annotation track. The scatter plot, titled "Point Mutation," highlights genomic changes by subtype through color-coded points, providing insight into mutation frequency and distribution.
+
+Overall, this visualization uses color and layering to present a detailed genomic landscape, facilitating the exploration of structural variations and mutations across chromosome 1.

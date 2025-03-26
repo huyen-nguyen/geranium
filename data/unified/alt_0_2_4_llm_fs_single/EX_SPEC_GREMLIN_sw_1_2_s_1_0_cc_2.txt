@@ -1,0 +1,7 @@
+The visualization is divided into three major views, focusing on chromosomal data for chromosome 5. The main view visualizes an ideogram for chromosome 5, showing data fields like 'Stain' with different marks and colors such as pink for particular areas. This ideogram is overlaid with rectangles and brush marks, aiding in interactive exploration across different parts of the view.
+
+The second view, titled "Region of Interest," displays genomic connections using withinLink marks, illustrating specific intervals between 68,000,000 and 71,000,000 on chromosome 5. The connections are color-coded, predominantly in green, with strokes that relate to different categories. 
+
+The final view, labeled "Rearrangement View," focuses on the interval between 69,276,000 and 69,280,000, again on chromosome 5, highlighting genomic rearrangements with connection marks in a sky-blue color. These connections are curved to represent rearrangements visually. 
+
+Each view provides a detailed representation of the genomic data, utilizing link styles and color gradients to illustrate complex relationships and rearrangements across the chromosome.

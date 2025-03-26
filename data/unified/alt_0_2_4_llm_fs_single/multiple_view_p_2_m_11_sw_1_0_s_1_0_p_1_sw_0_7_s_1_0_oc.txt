@@ -1,0 +1,5 @@
+The visualization "Visual Linking" consists of a series of linked genomic views. It features two main components arranged vertically. The top component is a linear scatter plot displaying genomic positions on the x-axis and associated peak values on the y-axis. This plot is stratified by categories, with each sample represented by differently colored points.
+
+Below is a combined view with horizontal area charts on the left and a circular line chart on the right. The horizontal area charts use genomic intervals along the x-axis to show peak values as shaded regions. Each sample category is differentiated by color. Both charts include an interactive brush that allows users to select genomic ranges and update the scatter plot above.
+
+The circular line chart replicates the genomic data in a circular format, with categories shown by colored lines, emphasizing different sample rows. The interactive brush persists here, linking the selected range back to the other views. This design facilitates detailed genomic exploration and interactive data linkage across different visual representations.

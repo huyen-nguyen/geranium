@@ -1,0 +1,13 @@
+The genome data visualization is arranged in a linear layout focusing on chromosome 3, covering the interval from 52,168,000 to 52,890,000. It comprises two vertical blocks, each containing three genomic range annotation tracks with text. The tracks highlight gene, exon, and intron data, color-coded based on the strand direction.
+
+The first vertical block includes:
+1. **Cyverse-QUBES**: Features black text annotations for gene names, with gray right and left triangles indicating gene direction, and light gray rectangles for gene regions. Exons are shown in purple rectangles.
+2. A panel highlighting gene, exon, and intron regions using gray, red, and cyan rectangles, respectively, stratified by strand.
+3. **GmGDV**: Incorporates text annotations with corresponding direction indicators, colored blue for the '+' strand and red for the '-' strand, reflecting strand direction and exon locations.
+
+The second vertical block contains:
+1. **HiGlass**: Emphasizes gene annotations with right and left triangles in light blue and light red for strand directions, text annotations positioned above the line.
+2. **IGV**: Similar to HiGlass but uses navy blue for gene text and rectangles, with white triangles indicating direction.
+3. **Corces et al.**: Displays gene names with fine detail and smaller annotation sizes, maintaining the directional and positional representation like other tracks but using distinctly contrasting colors of blue and red for the respective strands.
+
+Each track

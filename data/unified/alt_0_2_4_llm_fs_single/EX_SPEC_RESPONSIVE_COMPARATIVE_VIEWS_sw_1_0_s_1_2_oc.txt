@@ -1,0 +1,9 @@
+The visualization comprises three horizontal bar charts, each representing genomic intervals on different chromosomes. The charts are organized linearly and display genomic positions on the x-axis and quantitative measurements on the y-axis. 
+
+1. **Left Bar Chart**: Visualizes chromosome 12 between 5,000,000 and 15,000,000. The bars are colored navy blue and have a white stroke, delineated by a specified bin size.
+
+2. **Middle Bar Chart**: Shows chromosome 9 in the same genomic range. The bars are colored orange, also with a white stroke.
+
+3. **Right Bar Chart**: Represents chromosome 12, again between 5,000,000 and 15,000,000, but with bars colored in dark yellow with a white stroke.
+
+The layout adjusts based on width, switching to a vertical arrangement if narrower than 1200 pixels, maintaining a consistent focus on the genomic data across different screen sizes.

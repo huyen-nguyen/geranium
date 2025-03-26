@@ -1,0 +1,1 @@
+A circular bar chart using a vector file to display genomic data with bars colored in green. The chart is in a static circular layout with a spacing of 1 and a center radius of 0.3. Genomic positions are represented on the x-axis, with peaks showing quantitative values on the y-axis. The visualization covers a complete representation of the genome.

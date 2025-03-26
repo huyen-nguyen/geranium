@@ -1,0 +1,11 @@
+The visualization consists of four linear charts showcasing different BED file specifications. The chart is organized vertically and displays genomic intervals from chromosome 1, ranging from 1 to 2,000,000. 
+
+1. **BED12: All 12 standard fields** - This track uses rectangles with a sky-blue color to represent the data. The rectangles are outlined in black.
+
+2. **BED6: A file with the first 6 BED fields** - This track uses green rectangles, again outlined in black, to visualize the BED6 file data.
+
+3. **BED6+6: A file with the first 6 BED fields, and 6 custom fields** - Similar to the BED6 track, this uses green rectangles to represent the data but includes custom fields for additional specificity.
+
+4. **BED12+1: A file with all 12 standard fields, and a single extra custom field** - This utilizes purple rectangles, outlined in black, to showcase the additional custom field alongside standard BED12 data.
+
+Each track follows a consistent layout with a linear arrangement, ensuring clarity in comparing different specifications.

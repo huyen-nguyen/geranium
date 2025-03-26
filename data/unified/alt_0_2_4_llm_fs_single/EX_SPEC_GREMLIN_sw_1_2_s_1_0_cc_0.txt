@@ -1,0 +1,9 @@
+The visualization consists of a linear layout representing chromosome 5, with interactive features across multiple tracks. The top track is an ideogram of chromosome 5, highlighting regions with different stain categories. These categories are displayed using rectangles colored in shades from gray to pink. Text labels for specific sections appear above and below the ideogram.
+
+Below the ideogram, there are two main data tracks. The first track visualizes chromosomal segments from chromosomes hs5, hs4, and hs6 in distinct rows, using colored rectangles to denote duplication events. The segments are colored based on their chromosome of origin, with each chromosome having a unique color and stroke. The track overlay contains a brush tool for zooming into a specific region.
+
+The second data track features connections within chromosome hs5, represented as arcs. These arcs are displayed in a green color, using a smooth elliptical style to connect duplicate regions. A similar brush tool is available for interactive exploration.
+
+The layout also includes two additional views: the "Region of Interest" and the "Rearrangement View." The "Region of Interest" view focuses on a specific subset of chromosome 5's segmental duplications, represented by green and blue connections. The "Rearrangement View" shows a detailed blue arc, highlighting a potential chromosomal rearrangement between close genomic regions.
+
+Overall, this visualization provides a comprehensive overview of segmental duplications and potential rearrangements on chromosome 5, utilizing interactive brushes and colored arcs to enhance understanding of genomic data relationships.

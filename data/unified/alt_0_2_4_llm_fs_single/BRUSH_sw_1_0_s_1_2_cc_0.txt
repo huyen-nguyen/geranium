@@ -1,0 +1,7 @@
+The visualization titled "Example: Brushing and Linking" features two linear layout line charts for chromosome 1 data from a multivec file. 
+
+- **Top Chart:** Displays genomic data with position on the x-axis and peak values on the y-axis. Lines are colored in purple. A brushing feature is present, allowing for dynamic linking with the second chart.
+
+- **Bottom Chart:** Focuses on a specific interval (200,000,000 to 220,000,000) from the same chromosome, linking dynamically with the top chart through brushing. It highlights the selected region with a light steel blue background. 
+
+Both charts maintain a consistent width of 960 pixels and height of approximately 270 pixels, facilitating detailed genomic data analysis through interactive exploration.

@@ -1,0 +1,17 @@
+The visualization consists of eight tracks in a vertical linear layout, visualizing genomic data across chromosomes 12 and 8. 
+
+1. **Genomic Range Annotation with Text**: This track displays gene annotations for chromosome 12 between 10,140,000 and 10,210,000. Genes are depicted with directional arrows (triangles and rules) and text labels, colored in green.
+
+2. **Bar Charts for Sample Data on Chromosome 12**: 
+   - **Sample 1**: Features a green bar chart with peaks indicating quantitative data values.
+   - **Sample 2**: A pink bar chart represents similar data.
+   - **Sample 3**: Another set of pink bars is shown.
+
+3. **Bar Charts for Sample Data on Chromosome 8**:
+   - **Sample 1**: Displays a purple bar chart with data peaks.
+   - **Sample 2**: A continued purple bar chart for visual comparative analysis.
+   - **Sample 3**: Features a sky-blue bar chart.
+
+4. **Genomic Range Annotation for Chromosome 8**: Presents gene annotations similar to chromosome 12, with green visual elements indicating gene positions and directions, spanning 127,734,000 to 127,744,000.
+
+Each track carefully encodes genomic position data along the x-axis and expression data along the y-axis where applicable. The visualization employs color coding and axis-free placement to differentiate data across samples and genetic contexts

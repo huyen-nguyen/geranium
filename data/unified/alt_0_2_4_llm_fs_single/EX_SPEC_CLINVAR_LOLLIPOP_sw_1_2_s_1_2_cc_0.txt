@@ -1,0 +1,14 @@
+The visualization consists of three linear views arranged vertically, each focused on chromosome 13 across specified genomic intervals. Each view contains an annotation track and a significance track.
+
+**Gene Annotation Tracks:**
+- Display gene structures with directionality using triangles, text labels, and exons as rectangles.
+- The strand is encoded with color: blue for positive and orange for negative.
+- A rule pattern indicates gene orientation, with varied line patterns for strands.
+
+**Significance Tracks:**
+- Present ClinVar data with a combination of bars and points.
+- Bar chart encodes significance levels such as "Pathogenic" and "Likely benign" with colors and height.
+- Points show individual data entries positioned along the x-axis according to genomic start.
+- Data adapted dynamically based on zoom level, offering varying insights at different resolutions.
+
+The visualization allows examination of gene structures and ClinVar significance, providing insights with interactive zoom-dependent details.

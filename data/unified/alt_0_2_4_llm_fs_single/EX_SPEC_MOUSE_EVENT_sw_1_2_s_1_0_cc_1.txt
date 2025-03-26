@@ -1,0 +1,9 @@
+A visualization titled "Custom Mouse Events" explores interactive capabilities for genomic data presentation. The display comprises five linear views, each demonstrating diverse grouping methods and mouse event customizations. 
+
+The first three views feature bar charts. In the "Individual Marks" chart, bars represent genomic intervals on chromosome 1, colored by sample categories such as sample 1, sample 2, and more. The "Group Marks By Sample" and "Group Marks By Genomic Position" charts also showcase genomic intervals, with interactive features supporting mouse hover, range selection, and grouping by either sample or genomic position.
+
+The "Group Marks By Gene" track visualizes genomic intervals on chromosome 3, annotated by gene names. It uses various markers such as triangles and rectangles to denote directional and structural genomic features, colored in gray. Overlaying the genomic intervals are textual gene labels, enhancing the annotation clarity.
+
+Lastly, the "Group Marks By Chromosome" ideogram spans multiple chromosomes, utilizing density and stain information to define chromosome regions. Colors vary according to density and specific stain types, integrating text labels for chromosome bands.
+
+Overall, this visualization offers a flexible and interactive examination of genomic data, highlighting custom interaction techniques and comprehensive annotation methods.

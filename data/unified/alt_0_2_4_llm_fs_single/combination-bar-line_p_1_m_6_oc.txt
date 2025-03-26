@@ -1,0 +1,5 @@
+The visualization comprises two vertically arranged linear tracks showcasing genomic data from chromosome 1, covering positions from 1 to 3,000,500. The top track combines a line chart and a scatter plot, displaying four samples ('sample 1' to 'sample 4'). Colors are used to differentiate these samples, with lines and points representing the 'peak' value, which also determines the size of the points. This track stratifies data into rows by sample for clear comparison.
+
+The bottom track presents an area chart using the same genomic range. It overlays data from all four samples, with the 'peak' value depicted as vertical areas filled with colors corresponding to each sample. This track emphasizes cumulative expression differences across the genome.
+
+Both tracks utilize interactive tooltips to provide detailed data insights, such as genomic positions and peak values, enhancing user engagement and data exploration.

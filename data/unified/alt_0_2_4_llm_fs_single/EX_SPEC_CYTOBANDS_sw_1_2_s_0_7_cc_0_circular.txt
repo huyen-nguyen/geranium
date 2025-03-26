@@ -1,0 +1,3 @@
+A circular layout visualization featuring five concentric tracks, each representing chromosomes 1 through 5 of the human genome (hg38). Each track contains an area chart overlay, displaying genomic positions on the x-axis and quantitative peaks on the y-axis. The area colors correspond to different sample categories.
+
+The tracks also include chromosomal ideograms, displaying cytogenetic bands with varied densities—white through black—denoting density categories 0, 25, 50, 75, and 100. Right and left triangles in maroon indicate acen regions. Each track has a width-proportional text label for bands, dynamically adjusting based on visibility. The outer to inner radius of the tracks decreases sequentially, visually emphasizing genomic content and structure.

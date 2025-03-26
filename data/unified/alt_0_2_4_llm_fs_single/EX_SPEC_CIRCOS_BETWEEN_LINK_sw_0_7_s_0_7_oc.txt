@@ -1,0 +1,7 @@
+A circular layout visualization titled "Between Links in Circular Layouts with Parallel Arrangements" features stacked tracks. It employs multivec and CSV data to present genomic intervals from the hg38 assembly. The visualization includes:
+
+1. A circular bar chart showing expression values on the y-axis with light gray bars.
+2. Circular ideograms using color-coded rectangular marks to indicate different categories.
+3. A circular chart with connections using "betweenLink" marks to highlight relationships between genomic locations, shown with alternating light gray and black strokes.
+
+This setup allows for examining linked genomic regions in a compact, intricate format, emphasizing parallel arrangements and categorical distinctions.

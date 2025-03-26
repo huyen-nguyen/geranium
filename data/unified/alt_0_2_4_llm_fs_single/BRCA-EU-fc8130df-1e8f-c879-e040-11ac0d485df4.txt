@@ -1,0 +1,14 @@
+The visualization comprises a circular and a linear view arranged one above the other, linked by an interactive blue brush. The circular view presents the entire genome, while the linear view focuses on chromosome 1. Features include:
+
+- **Circular View:**
+  - **Ideogram Track:** Displays chromosome bands with color-coded categories and an interactive brush.
+  - **Putative Driver Track:** Text annotations of genomic positions with black labels.
+  - **Gain & Loss of Heterozygosity (LOH) Tracks:** Display genomic ranges in blue and orange rectangles, respectively.
+  - **Connection Track:** Shows genomic connections in various colors representing structural variations such as Translocation, Duplication, Deletion, and Inversions.
+
+- **Linear View:**
+  - **Ideogram & Gene Annotation Tracks:** Triangles and rectangles denote genomic features and exons, stratified by strand, with black text labels.
+  - **Point Mutation Track:** Scatter plot depicting genomic positions, with points colored by subtype.
+  - **Copy Number Variants Track:** Bars represent copy number variants with light grey rectangles, showing quantitative data.
+
+This dual-view setup visualizes a detailed genomic analysis using various data formats (CSV, VCF) over the hg19 assembly, enhancing insights into genomic variations and annotations.

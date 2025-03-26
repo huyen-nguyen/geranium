@@ -1,0 +1,1 @@
+A linear line chart visualizes a multivec file, depicting hg38 genome data. The x-axis represents genomic positions, while the y-axis shows quantitative peak values connected by a line, indicating expression. The line is colored in purple. The chart is titled "Basic Marks: line" with the subtitle "Tutorial Examples."

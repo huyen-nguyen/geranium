@@ -1,0 +1,13 @@
+The visualization consists of five tracks arranged in a linear layout, focusing on chromosome 1. 
+
+1. **Ideogram Track**: A genomic ideogram displays chromosome 1 with colored rectangles and triangles. The rectangles represent different chromosomal banding patterns, using colors such as gray, black, and white. Triangles indicate directionality, with right-facing triangles for 'q' arm and left-facing triangles for 'p' arm.
+
+2. **Genomic Position Annotation Track**: Features genomic positions represented by triangles indicating gene direction. The rows are colored based on strand orientation: blue for positive and beige for negative strands.
+
+3. & 4. **CNV Tracks**: Two tracks show copy number variations (CNV) in tumor cells:
+   - First track uses orange rectangles to depict regions with no minor allele copies in the tumor.
+   - Second track uses green rectangles to represent regions with an elevated total copy number.
+
+5. **Rearrangement Track**: Genomic connections are illustrated with lines connecting distinct genome positions. Categorized by structural variants, the lines are colored accordingly: green for tandem duplications, blue for translocations, orange for inversions, and red for deletions.
+
+This visualization provides a comprehensive view of chromosomal structures, gene orientations, copy number variations, and structural rearrangements.

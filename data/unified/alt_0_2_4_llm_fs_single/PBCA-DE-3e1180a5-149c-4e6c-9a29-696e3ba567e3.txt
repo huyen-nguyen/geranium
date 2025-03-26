@@ -1,0 +1,5 @@
+A circular and linear genomic visualization displays data on chromosome 1. The circular view includes an ideogram and several annotation tracks: one with text and two range annotation tracks showing 'Gain' in blue and 'Loss of Heterozygosity (LOH)' in orange. Connections indicate structural variations such as Translocation and Duplication, differentiated by color and stroke.
+
+The linear view, corresponding to the circular region, has multiple tracks for detailed analysis. These include an ideogram, a text annotation track titled 'Putative Driver,' and a scatter plot titled 'Point Mutation' for mutation data from a VCF file. The plot uses colors to show mutation types like C>A or T>C.
+
+Additional tracks show copy number variants in gray bars, insertions and deletions in colored bars, and connections representing structural variations. An interactive brush in the circular view links these views, enhancing data exploration.

@@ -1,0 +1,7 @@
+The visualization shows a parallel arrangement of linear tracks across chromosomes 1 to 5. Each chromosome track features two primary components: 
+
+1. **Area Chart**: Displays genomic data with peaks represented as areas. The colors represent different categories ('sample 1' to 'sample 4'), encoded using shades of blue, orange, green, and red. The x-axis represents genomic positions, and the y-axis shows quantitative values of 'peak'.
+
+2. **Cytogenetic Banding**: Consists of overlaid elements like text labels for bands, rectangles showing density variations (white to black), and colored markers (maroon triangles for centromeric regions, purple for specific bands). These elements mark genomic intervals.
+
+The visualization utilizes data from multivec and CSV sources, providing genomic insights using consistent color schemes and visual encodings across the tracks.

@@ -1,0 +1,8 @@
+A visualization titled "Hi-C Matrix" showcases genomic interactions using a matrix and annotations. The layout is linear with overlaid tracks. A primary feature is a heatmap, illustrating interactions within the genomic interval of 800,000,000 to 1,800,000,000 base pairs using a viridis color scale. Red vertical and blue horizontal rules highlight specific annotations on chromosomes 2, 5, and 10.
+
+Additional track overlays include:
+1. Bars and points indicating interaction values.
+2. Data points on chromosomes 6, 7, and 8, encoded by size and color in steel blue with white strokes.
+3. A dashed background, adding to the visual styling.
+
+The visualization is part of an assembly for the hg38 human genome, providing an insightful view into structured genomic data.

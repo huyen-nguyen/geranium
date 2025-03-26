@@ -1,0 +1,10 @@
+The visualization consists of a circular view and a linear view stacked vertically. The circular view features several data tracks around the entire genome, displaying cytoband information, putative driver annotations, and highlighting regions of gain in blue and loss of heterozygosity (LOH) in orange. A brush selector on chromosome 1 connects the two views interactively.
+
+The linear view focuses on chromosome 1, extending the insight with detailed tracks: 
+- An ideogram illustrating chromosomal landmarks.
+- A 'Putative Driver' text annotation track, organized by rows, identifying significant genetic markers with black text.
+- A scatter plot, titled 'Point Mutation,' utilizes a VCF file to depict point mutations along the chromosome. Points are colored by mutation subtype, offering visual distinction among variants.
+- A range annotation track outlines insertion and deletion events from an indel VCF file, coded in separate hues.
+- Copy Number Variants (CNV) track using gray bars representing variations in copy numbers, affirmatively annotated with quantitative data.
+
+Beneath this, additional tracks chart further gains and losses along the chromosome. Structural variations are visually linked with lines, categorized by event type: translocations, duplications, deletions, and inversions; these are demarcated by distinct colors. The title 'Copy Number Variants' confirms a clear thematic is consistent across such annotations.

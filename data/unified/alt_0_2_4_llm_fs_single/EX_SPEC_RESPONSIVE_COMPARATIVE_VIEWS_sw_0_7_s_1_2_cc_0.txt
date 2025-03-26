@@ -1,0 +1,6 @@
+The visualization consists of three horizontally arranged linear bar charts, each displaying genomic data from a multivec file. The tracks are shown for chromosomes 12 and 9, within the interval of 5,000,000 to 15,000,000.
+
+- The left and right charts present data from chromosome 12, visualizing the genomic 'peak' values as sky blue bars.
+- The middle chart focuses on chromosome 9, using pink bars to represent the same data field.
+
+All charts have a consistent bar width and stroke, with a white stroke and a stroke width of 0.5. The arrangement adapts to screen size, switching to a vertical alignment when needed. The linking mechanism ensures consistent representation across different chromosome views.

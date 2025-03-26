@@ -1,0 +1,2 @@
+A heat map visualization in a linear layout showcases genomic data from a matrix file on both x and y axes, covering the entire hg38 genome. The axes exhibit intervals, with color intensity encoding the quantitative expression values ranging from low to high. The static visualization uses a red-hot color scheme to depict data values, facilitating easy identification of patterns and correlations within the dataset.
+

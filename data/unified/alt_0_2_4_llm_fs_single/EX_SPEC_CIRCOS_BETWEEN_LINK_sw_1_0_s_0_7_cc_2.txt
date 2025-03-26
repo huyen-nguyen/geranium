@@ -1,0 +1,11 @@
+**Description**: 
+
+A visually intricate circular layout titled "Between Links in Circular Layouts with Parallel Arrangements" utilizes multivec, CSV, and segmented duplication data to provide a comprehensive genomic overview. This visualization comprises four principal charts: a circular bar chart, two circular ideograms, and a circular chart featuring connections. 
+
+- **Circular Bar Chart**: Positioned on the outermost layer, this chart employs green bars to represent quantitative 'peak' data along the genomic axis.
+
+- **Circular Ideograms**: Two sets of ideograms intersperse the bar chart and connection layers, encoding chromosomal data with colored rectangles. Each rectangle's hue corresponds to a "Stain" category, ranging from blue to purple.
+
+- **Circular Connections**: The central feature consists of links between genomic positions. These links, distinguished by light-gray and black strokes, illustrate connections within and across chromosomes, emphasizing 'segment duplications.'
+
+The layout is meticulously arranged in a static, parallel fashion with detailed genomic intervals on the x-axis. This configuration allows for an intuitive display of categorical, quantitative, and connection data, ultimately facilitating genomic insights across the entire hg38 assembly.

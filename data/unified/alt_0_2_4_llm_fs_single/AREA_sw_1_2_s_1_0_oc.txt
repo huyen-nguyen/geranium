@@ -1,0 +1,1 @@
+A linear area chart visualizes a multivec file representing the hg38 genome assembly. The X-axis displays genomic position, while the Y-axis shows quantitative expression values as a continuous area. The title is 'Basic Marks: area' with a subtitle 'Tutorial Examples.' The chart emphasizes a single sample category with a fixed area size.

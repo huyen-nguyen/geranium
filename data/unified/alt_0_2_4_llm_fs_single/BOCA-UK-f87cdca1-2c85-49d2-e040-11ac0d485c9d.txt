@@ -1,0 +1,5 @@
+The visualization displays a comprehensive genomic overview using both circular and linear layouts. The circular view features five tracks, including an ideogram and tracks for genomic annotations such as 'Gain' and 'Loss of Heterozygosity (LOH)'. Different colors represent categories like translocations, duplications, and inversions in the line-connection track. An interactive brush links these circular tracks to the linear view below.
+
+The linear view focuses on chromosome 1, offering more detailed information with nine tracks. It includes a scatter plot named 'Point Mutation' that visualizes VCF data, marking points by mutation subtype category. Insets and deletions are shown with a range annotation track. The 'Copy Number Variants' track uses rectangles to indicate variations.
+
+This dual-layout structure allows for a detailed exploration of genome-wide data. The color schemes and interactive features enhance the user's ability to identify genomic patterns and variations.

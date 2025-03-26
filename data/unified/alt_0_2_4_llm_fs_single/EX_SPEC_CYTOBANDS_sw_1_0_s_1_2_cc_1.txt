@@ -1,0 +1,7 @@
+The visualization is a parallel arrangement of five linear views, each representing a different chromosome from chr1 to chr5. Each view consists of two tracks: an area chart and an ideogram with text, rectangles, and triangles.
+
+The area charts visualize multivec data, displaying genomic positions on the x-axis and quantitative peak values on the y-axis. Each chart is color-coded according to samples, with colors such as blue, orange, green, and red.
+
+The ideograms display cytogenetic band data, with genomic intervals shown along the x-axis. Rectangles are colored based on density levels ranging from white to black, indicating regions of varying chromatin states. Purple rectangles represent 'gvar' bands, while maroon triangles indicate centromeric 'acen' regions.
+
+These tracks provide a comprehensive view of both genomic expression and structural features across the chromosomes, utilizing a consistent color scheme to differentiate between samples and annotate chromosomal features.

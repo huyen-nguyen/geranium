@@ -1,0 +1,9 @@
+The visualization consists of three horizontally arranged bar charts displaying genomic data from cistrome-multivec files across different chromosomes. Each chart represents data for chromosome intervals between 5,000,000 and 15,000,000. 
+
+- The first chart shows data for chromosome 12, with bars shaded in purple. The x-axis represents genomic positions, while the y-axis indicates quantitative peak values.
+  
+- The second chart displays data for chromosome 9, also in purple, maintaining the same genomic and quantitative configurations as the first chart.
+  
+- The third chart returns to chromosome 12 data, but this time the bars are colored green. Despite the color variation, the genomic and quantitative axes remain consistent across all charts.
+
+Each bar chart is linked, allowing coordinated exploration across the chromosome views. The stroke of the bars is set to white, providing clear delineation, with a consistent width and height configuration for comparative analysis.

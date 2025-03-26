@@ -1,0 +1,13 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" displays genomic information on chromosome 5 using a linear layout in hg38 assembly. It contains five charts: 
+
+1. **Chromosome 5 Ideogram**: Displays a cytogenetic band showing chromosomal bands in different shades from grey to black for categories like gneg, gpos25, gpos50, etc. Pink bands represent acen regions. Text annotations label specific chromosome regions. An interactive brush links to other charts.
+
+2. **Duplications on Chromosomes 5, 4, and 6**: Shows duplicated segments using separate rows for each chromosome. Colors (blue, gold, green) represent specific chromosomes (hs5, hs4, hs6).
+
+3. **Duplications within Chromosome 5**: Displays connections within chromosome 5 in green arcs, indicating duplicated segments with some opacity.
+
+4. **Region of Interest**: Focuses on a smaller region (chr5: 68,000,000-71,000,000) showing duplications across chromosomes in blue and green arcs.
+
+5. **Rearrangement View**: A detailed view of rearrangements within a very narrow genomic range (chr5: 69,276,000-69,280,000) showing a prominent blue arc representing a large duplication.
+
+The visual encoding uses elliptical link styles and color coding to represent different chromosomal connections and duplications.

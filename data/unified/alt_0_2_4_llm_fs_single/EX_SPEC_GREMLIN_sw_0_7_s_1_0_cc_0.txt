@@ -1,0 +1,9 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" presents interconnected genomic data using multiple linked views. In the first view, a linear ideogram of chromosome 5 showcases bands with distinct stain patterns, color-coded to denote categories, with pink and gray tones. The ideogram is coupled with a brush feature allowing interactive selection linking to other charts.
+
+Below the ideogram, two tracks visualize segmental duplications. The first track aligns chromosomes hs5, hs4, and hs6 using rectangles, with rows color-coded in blue, orange, and green based on chromosome annotations. The second track features within-link connections on chromosome hs5, depicted in sky blue arcs, emphasizing overlapping regions and highlighting genomic rearrangements.
+
+The second main view, titled "Region of Interest," zooms into chromosome 5 between 68,000,000 and 71,000,000 base pairs, showing detailed link connections among chromosome segments hs5, hs4, and hs6.
+
+The final view, "Rearrangement View," focuses further on a smaller genomic interval (69,276,000 to 69,280,000) on chromosome 5. It reveals close-up rearrangements with enhanced arc representation connected in sky blue.
+
+Overall, the visualization employs a linear layout with sophisticated link styles and opacity settings to elucidate genomic relationships and rearrangements effectively.

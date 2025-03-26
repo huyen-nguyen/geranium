@@ -1,0 +1,13 @@
+The visualization titled "Custom Mouse Events" with the subtitle "Customize mouse hovering and range selection events" comprises five tracks in a vertical arrangement. Each track utilizes specific interactive features and visual encodings:
+
+1. **Individual Marks**: A linear bar chart arranged horizontally representing multivec data for chromosome 1. It's interactive with mouseHover and rangeSelection options, and colors indicating categories of 'sample 1' to 'sample 4'. Tooltips provide genomic positions and peak values.
+
+2. **Group Marks By Sample**: Similar to the first, but here marks are grouped by sample, also using color for categorical differentiation. Enhanced mouse interaction allows for grouping by the sample field.
+
+3. **Group Marks By Genomic Position**: This track groups marks by genomic position. It shares the same interaction style as the previous, but differentiates interactions based on genomic positions.
+
+4. **Group Marks By Gene**: A genomic range annotation track representing chromosome 3 from positions 52,168,000 to 52,890,000. It includes genes with labels and is interactive via mouse events, grouping data by gene name.
+
+5. **Group Marks By Chromosome**: An ideogram displaying chromosomal bands (chr1 to chr5) with text and various shapes (rectangles, triangles) to illustrate density and band categories. Interactive features allow for selection and grouping by chromosome.
+
+The visual encoding and interactions create a dynamic exploration space for genomic data, emphasizing categories and making efficient use of

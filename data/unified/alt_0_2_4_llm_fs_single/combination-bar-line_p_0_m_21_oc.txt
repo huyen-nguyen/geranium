@@ -1,0 +1,7 @@
+The visualization consists of two tracks in a linear layout, displaying genomic data from chromosome 1 between positions 1 and 3,000,500. 
+
+- **Top Track**: This is a scatter plot where the x-axis represents genomic positions, and the y-axis shows quantitative expression values. Each point is color-coded based on categories ('sample 1' to 'sample 4'). 
+
+- **Bottom Track**: This combines a line chart and scatter plot, stratified by sample categories displayed in rows. The x-axis represents genomic positions, and the line and point colors correspond to the categories. The points' size is proportional to the expression values.
+
+The data is sourced from a multivec file and uses the 'hg38' assembly. The interactive elements include tooltips providing details such as position, peak value, and sample category.

@@ -1,0 +1,5 @@
+A circular and a linear view are arranged vertically, linked by an interactive brush highlighted in blue. The circular view visualizes the entire genome with five tracks, including an ideogram, a text annotation track titled 'Putative Driver,' and three range annotation tracks, 'Gain,' 'Loss of Heterozygosity (LOH),' and a connections track showing structural variations. The tracks display categories with different colors: light gray rectangles for overall genomic features, sky blue for gains, dark orange for LOH, and various colors for other structural variations.
+
+The linear view focuses on chromosome 1, mirroring the circular view but with additional details. It includes a gene annotation track, a scatterplot titled 'Point Mutation,' which depicts mutations with different colors based on subtype, and tracks for insertions (green rectangles) and deletions (orange rectangles).
+
+Both views are interactive, allowing users to explore genomic data with a consistent color scheme for categories in structural variations like translocations, duplications, and inversions, enhancing the visual connection between these comprehensive datasets.

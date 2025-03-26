@@ -1,0 +1,5 @@
+The visualization consists of two charts arranged vertically in a linear layout. Both charts display genomic data from chromosome 1, spanning positions 1 to 3,000,500. 
+
+The top chart is an area chart representing expression values across four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. Each sample is represented as a distinct row, with different colors assigned to each area to signify categories. The x-axis denotes genomic positions, while the y-axis shows quantitative expression values.
+
+The bottom chart is a bar chart depicting the minimum and maximum expression values for the same four samples. The chart stratifies by rows for each sample, using the same color scheme as the top chart. Genomic intervals are displayed on the x-axis, with variations in expression represented through bars on the y and ye-axes. The charts include tooltips providing details such as start and end positions, expression values, and sample identifiers.

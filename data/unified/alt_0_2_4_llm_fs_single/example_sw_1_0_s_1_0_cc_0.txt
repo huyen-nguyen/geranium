@@ -1,0 +1,19 @@
+The visualization is a linear representation with vertical arrangement, titled "Visual Encoding." It showcases various visual encoding methods using chromosome 1 data. This multi-tiered figure includes nine different types of charts arranged vertically:
+
+1. **Heat Map**: Displays genomic data with color intensity representing 'peak' values for samples 1 to 4, stratified by categories along the x-axis covering chromosomes 1 through Y.
+
+2. **Bar Charts**: 
+   - The first two charts show genomic data using bars to represent 'peak' values along the y-axis. These are colored based on sample categories, spanning all chromosomes.
+   - The third bar chart includes a grid, providing a clear visual separation for the data points.
+
+3. **Line Chart and Scatter Plot**: 
+   - Features lines and points depicting genomic positions on the x-axis and 'peak' values on the y-axis. Points vary in size, reflecting the data values.
+
+4. **Scatter Plots** (two charts):
+   - Both charts display points on an x-axis for genomic positions and a y-axis for 'peak' values, with different categories color-coded. One includes grid lines for enhanced readability.
+
+5. **Area Chart**: 
+   - Illustrated with area fills that represent 'peak' values on the y-axis, stratified by sample categories across chromosomes.
+
+6. **Bar Chart with Ranges**: 
+   - Displays genomic intervals with bars demonstrating minimum to maximum 'peak' values, differentiating samples by

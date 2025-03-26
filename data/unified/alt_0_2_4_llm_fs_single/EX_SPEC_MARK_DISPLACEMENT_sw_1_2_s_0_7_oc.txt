@@ -1,0 +1,11 @@
+**Description**: 
+
+The visualization titled "Mark Displacement" effectively demonstrates techniques for repositioning visual marks to tackle overlaps. In a vertical arrangement, it features multiple views focusing on different chromosomal regions, specifically chr3, chr2, and chr17. 
+
+The top view overlays genomic annotations from chr3, detailing transcripts with displacement using a maximum of 15 rows. Genes are represented by arrows, colored blue for the positive strand and orange for the negative strand, minimizing visual clutter through careful reordering based on genomic positions. Exons are depicted with rectangles interspersed across the layout.
+
+The second view focuses on chr2, displaying genetic variants marked as "Likely Benign." A combination of points, text annotations, and connecting lines visualize this data. Points are positioned to avoid overlap, and nucleotides are color-coded for clarity. 
+
+The lower section highlights chr17, featuring a dense chart of pathogenic variations aligned with a point annotation track. The color scheme distinguishes between multiple variant classifications, including pathogenic (pink shades) and other categories, illustrated along a continuous genomic axis. Displacement ensures neat stacking of variant points, with colors and structures indicated in a coherent legend. 
+
+Overall, the visualization employs color, shape, and displacement techniques to convey comprehensive genomic data efficiently.

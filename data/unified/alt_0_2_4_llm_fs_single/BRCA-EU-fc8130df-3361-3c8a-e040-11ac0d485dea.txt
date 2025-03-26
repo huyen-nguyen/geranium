@@ -1,0 +1,5 @@
+This visualization features a circular and a linear view linked by a blue interactive brush. The circular view shows the complete genome, while the linear view displays the chromosome 1 region. The circular section includes an ideogram and tracks such as a point annotation track, range annotation tracks, and a line-connection track. The annotations display genomic data including 'Gain' and 'Loss of Heterozygosity (LOH)' with blue and orange rectangles, respectively.
+
+The linear view expands these elements, offering additional detail through a gene annotation track, a scatter plot, and additional range annotations. The scatter plot, titled 'Point Mutation,' illustrates data from a VCF file, where points are colored based on the 'SUBTYPE' variable. 
+
+This comprehensive visualization effectively maps complex genomic interactions, structural variations, and mutations, leveraging color and layout to differentiate between various genomic features and categories.

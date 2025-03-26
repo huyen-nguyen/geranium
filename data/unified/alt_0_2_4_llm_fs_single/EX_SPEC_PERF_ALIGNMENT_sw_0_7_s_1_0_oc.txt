@@ -1,0 +1,7 @@
+The visualization titled "Smoother Zoom" emphasizes a new technique for smoother zooming and element scaling. It consists of two linear, horizontal charts arranged vertically to compare different approaches. 
+
+The top chart, labeled "New Approach: Stretching Tiles," dynamically scales genomic data displayed as colored rectangles and text based on the zoom level. Genomic positions span the x-axis, while categories define the row structure, with each category assigned a unique color. Text elements are depicted in black, and experimental techniques allow stretching of graphical elements instead of redrawing each frame.
+
+The bottom chart, titled "Original Approach," serves as a reference to highlight the improvements made by the new approach. It maintains a similar visual structure with colored rectangles and text over genomic positions.
+
+Both visualizations use data sourced from a CSV file with genomic fields, focusing on the interval from position 350 to 396. Each approach implements an overlay of rectangles and text, with zoom level-based visibility control, ensuring clarity and detail as users interact with the charts.

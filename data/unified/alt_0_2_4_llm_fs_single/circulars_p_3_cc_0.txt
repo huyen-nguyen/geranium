@@ -1,0 +1,15 @@
+A series of circular visualizations are arranged to demonstrate various visual encoding methods on chromosome 1, spanning positions 1 to 3,000,500. Each visualization uses a multivec file with data fields like 'peak' and 'sample', stratified by sample categories. The genome is mapped along the circular x-axis.
+
+1. **Circular Scatter Plots**: Two plots show genomic positions as points where peak values dictate point size. The samples are distinguished by color: blue, orange, green, and red.
+
+2. **Circular Connection Chart**: Displays connections between duplicate segments with ribbons colored by starting position, indicating genomic duplications.
+
+3. **Circular Area Chart**: Visualizes peak values as areas under curves, stratified by sample, and color-coded similarly.
+
+4. **Circular Bar Charts**: Present peak values as bars, with distinct samples encoded by color.
+
+5. **Circular Heatmap**: A histogram-style heatmap encodes expression values through color intensity, arranged in concentric circles.
+
+6. **Circular Line and Scatter Plot**: Combines lines and points to depict continuous data with varying sizes; sample categories are shown in different colors.
+
+Overall, these visualizations are arranged in a vertical format, providing a comprehensive representation of genomic data for various samples using Gosling's circular layout capabilities.

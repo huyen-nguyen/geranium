@@ -1,0 +1,9 @@
+A circular layout visualization displays genomic data using Circos. It contains three tracks: 
+
+1. **Circular Bar Chart**: Positioned around the outer edge, this chart uses green bars to indicate expression levels based on the genomic positions along the x-axis. 
+   
+2. **Circular Ideogram**: Lies just inside the bar chart, representing different genomic categories with colored rectangles along the x-axis intervals. 
+
+3. **Circular Connection Chart**: Centrally located, this chart shows a dense web of colored lines connecting different genomic positions, illustrating associations between segments. The connections use varied colors for different categorical data, with a focus on non-hs1 chromosomes, shown in various hues, and hs1 in light gray. 
+
+Overall, this static presentation effectively reveals complex genomic relationships and intervals, facilitated by its detailed data arrangement and color-coded encodings.

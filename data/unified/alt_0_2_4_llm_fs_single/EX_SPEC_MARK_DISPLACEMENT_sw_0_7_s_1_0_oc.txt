@@ -1,0 +1,17 @@
+A visualization titled "Mark Displacement" showcases genomic data across multiple tracks, focusing on handling visual overlaps using displacement. The visualization consists of layered tracks:
+
+1. **Transcript Track:**
+   - Displays genomic intervals on chromosome 3 between 142,500,000 and 143,000,000.
+   - Transcript structures are shown with right and left-oriented triangular annotations, lines, and rectangles color-coded by strand: blue for "+" and orange for "-".
+   - A text track labels gene names within these intervals, allowing a maximum of 15 rows.
+
+2. **Likely Benign Variation Track:**
+   - Highlights a region on chromosome 2 between 126,800,000 and 127,700,000, emphasizing "Likely Benign" variants.
+   - Uses green points and various colored text annotations corresponding to nucleotide changes.
+   - Connections between genomic positions are represented by green lines.
+
+3. **Genomic Variation Track:**
+   - Focuses on chromosome 17 between 43,080,000 and 43,120,000.
+   - Visualizes different types of pathogenicity using color-coded points, including categories such as "Pathogenic" and "Benign".
+
+This comprehensive view utilizes techniques like point displacement and categorical coloring to ensure clarity and enhance the interpretability of overlapping genomic features.

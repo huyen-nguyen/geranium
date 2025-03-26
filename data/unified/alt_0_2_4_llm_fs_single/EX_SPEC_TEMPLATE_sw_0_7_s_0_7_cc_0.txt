@@ -1,0 +1,20 @@
+**Description:**
+
+The visualization titled "Track Template In Gosling.js" demonstrates the use of track templates in Gosling.js for creating complex visualizations. It features a linear layout with three individual tracks, each designed for specific genomic data.
+
+1. **Gene Annotation Track:**
+   - Displays genomic data for chromosome 3 between positions 52,168,000 and 52,890,000.
+   - Features gray arrow marks indicating gene directions on separate strands.
+   - Uses a smooth path style to enhance visual clarity.
+
+2. **Sequence Track:**
+   - Focuses on a short segment of chromosome 1 between positions 77,925,299 and 77,925,320.
+   - Utilizes colored bars and text to denote sequence data, with color representing different nucleotide bases (A, T, G, C).
+   - Text labels are colored according to the nucleotide type and overlay on the bar chart.
+
+3. **Ideogram Track:**
+   - Depicts an ideogram for chromosome 1, running across its entirety ((1-248,956,422).
+   - Colors indicate different cytogenetic bands, with labels for specific regions (e.g., "q12").
+   - Includes black outlines for structural clarity and orientation.
+
+This visualization highlights Gosling.js's capability to dynamically represent detailed genomic annotations and sequence data alongside an ideogram.

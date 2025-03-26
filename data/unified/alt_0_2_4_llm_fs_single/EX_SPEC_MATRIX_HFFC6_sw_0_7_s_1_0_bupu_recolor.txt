@@ -1,0 +1,7 @@
+The visualization, titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells," displays a genomic comparison on chromosome 7 between positions 77,700,000 and 81,000,000. It features a horizontal layout with multiple tracks illustrating different datasets.
+
+On the left, vertical bar charts represent genomic data such as "HFFc6_H3K4me3" in purple, "HFFc6_ATAC" in dark green, and "CTCF" binding sites shown in orange. Additional annotations use triangles to indicate gene direction, colored pink and green for different strands.
+
+The central and right sections include large matrix plots for "HFFc6_Micro-C" and "HFFc6_Hi-C," encoding interaction frequencies with a blue-purple color gradient. Below, the track "Epilogos (hg38)" represents various chromatin states in distinct color-coded categories.
+
+Overall, this visualization effectively compares chromatin modifications and architectural protein binding in HFFc6 cells across specified genomic regions.

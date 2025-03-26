@@ -1,0 +1,13 @@
+A visualization titled "Hi-C Matrix" showcases Hi-C data using matrix and annotations within specified genomic intervals. The chart includes overlaid tracks in a linear layout featuring several genomic visual encodings:
+
+1. The main Hi-C heatmap displays normalized contact frequencies between genomic loci, with color intensity representing interaction strength. Genomic regions are mapped on both x and y axes, covering a domain from 800,000,000 to 1,800,000,000 base pairs.
+
+2. Vertical green lines annotate specific positions on the x-axis, while horizontal pink lines highlight the same positions on the y-axis.
+
+3. Additional bar and point tracks overlay the matrix, utilizing color gradation from a "hot" palette to depict quantitative values. 
+
+4. Bars are used for denser data, represented with categories indicated by stroke color, and opacity adjusted for clarity.
+
+5. Point markers convey scattered expression data, with size corresponding to the variable 'v.' The consistent white stroke outlines enhance visual distinction.
+
+The chart's arrangement reflects a complex data layering strategy, employing green and pink annotations for additional context within the cohesive genome-wide interaction portrayal, underlining structural variation visibility across selected chromosomes.

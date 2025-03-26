@@ -1,0 +1,15 @@
+The visualization consists of two main views arranged vertically: a circular view above a linear view. Both views are synchronized using an interactive blue brush in the circular section. The circular view provides a genomic overview, displaying all chromosomes, while the linear view focuses specifically on chromosome 1.
+
+In the circular view, several tracks present different data types:
+- An ideogram displays chromosome bands, with a color-coded key indicating various categories.
+- A text track labeled "Putative Driver" highlights gene annotations.
+- Two range annotation tracks titled "Gain" and "Loss of Heterozygosity (LOH)" show genomic intervals using sky-blue and dark-orange rectangles, respectively.
+- A connection track depicts links between genomic positions, with colors representing different structural variations like 'Translocation,' 'Duplication,' 'Deletion,' and 'Inversion.'
+
+The linear view expands on chromosome 1, featuring:
+- A transcript annotation track highlighting gene structures with triangles and rectangles.
+- A scatter plot titled "Point Mutation" shows data from a VCF file, with points positioned based on the distance to previous mutations and colored by mutation subtype.
+- Range annotations for "Insertion" and "Deletion" exhibit rectangles in distinct colors for each type.
+- Copy Number Variants (CNVs) are displayed in a track, with positions encoded as quantitative values.
+
+This visualization effectively integrates different genomic datasets, facilitating a comprehensive analysis of genomic changes across chromosome 1, complemented by an overview of all chromosomes in the circular view.

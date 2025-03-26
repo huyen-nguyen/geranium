@@ -1,0 +1,1 @@
+An area chart in a linear layout visualizes a multivec file, showing the entire genome of hg38. The area is encoded using the data field named 'peak,' and is colored sky blue. The title is 'Basic Marks: area' and the subtitle is 'Tutorial Examples.'

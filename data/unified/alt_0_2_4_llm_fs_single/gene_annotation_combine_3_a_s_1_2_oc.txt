@@ -1,0 +1,9 @@
+A horizontal linear layout visualization displays genomic data for chromosome 3 between positions 52,168,000 and 52,890,000. The visualization includes three vertically arranged views:
+
+1. **Cyverse-QUBES Track**: This track shows gene annotations with black text labels. The orientation of the genes is indicated by gray triangles (left for negative strand, right for positive strand) and gray lines. Genes are represented as light gray rectangles, and exons as purple rectangles with a dark purple outline.
+
+2. **Gene Annotation Track**: Visualizes genes, exons, and introns with rectangles, where genes are in dark gray, exons in red, and introns in light blue. The chart is stratified by rows for different strands.
+
+3. **GmGDV Track**: This track also displays gene annotations with text labels. Positive strand genes are marked with blue triangles and lines, while negative strand genes are marked with red triangles and lines.
+
+The charts are stratified by rows based on strand orientation, and the presentation uses consistent color coding to differentiate strands and elements within the gene structures.

@@ -1,0 +1,1 @@
+A bar chart in a linear layout visualizes a multivec file, showing various chromosome intervals from the genome hg38. The height of each bar, colored in green, represents the value "peak" from the data. The title is "Basic Marks: bar," with the subtitle "Tutorial Examples." The x-axis displays genomic intervals, and the y-axis shows quantitative measures.

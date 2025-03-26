@@ -1,0 +1,24 @@
+**Description:**
+
+This visualization, titled "Visual Linking," comprises a vertical arrangement of charts. It features a linear scatter plot and two views (circular and linear) interconnected through interactive brushing. 
+
+1. **Linear Scatter Plot**: 
+   - **Data**: Multivec.
+   - **Genome**: Displayed on the x-axis, specifically highlighting chromosome 1 from position 160,000,000 to 200,000,000.
+   - **Expression Values**: Plotted on the y-axis using points.
+   - **Stratification**: By sample categories, each represented by a different color.
+   - **Linking**: The x-axis is linked to the lower detail view, dynamically updating it based on the selected genomic range.
+
+2. **Circular Line Chart**:
+   - **Genome**: Displayed as circular intervals.
+   - **Expression Values**: Shown with lines.
+   - **Stratification**: By sample categories using different colors.
+   - **Interactive Brush**: Links to the linear view below, allowing dynamic updates.
+
+3. **Linear Area Chart**:
+   - **Genome**: Displayed on the x-axis as linear intervals.
+   - **Expression Values**: Visualized with colored areas.
+   - **Stratification**: Similar to the other charts, by sample categories.
+   - **Interactive Brush**: Links to the scatter plot, supporting interactive exploration.
+
+All views are embedded within the hg

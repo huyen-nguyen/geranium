@@ -1,0 +1,5 @@
+A visualization titled "Visual Linking" explores genomic data using interactive brushing to connect two arrangements: an area chart and a circular line chart, positioned above a scatter plot. 
+
+The upper part consists of a linear area chart and a circular line chart, both representing chromosome 1. Using data from a multivec file, these charts display expression values stratified by categories (sample 1 to sample 4), colored distinctly in yellow, green, blue, and pink. The area chart uses an interactive brush to update the lower scatter plot, which provides detailed views of specified genomic intervals, notably between positions 160,000,000 and 200,000,000 on chromosome 1.
+
+The scatter plot beneath highlights expression peaks with points, colored by category and aligned horizontally in rows. This setup enables dynamic exploration, enhancing the understanding of genomic links and variations across different visual representations.

@@ -1,0 +1,15 @@
+The visualization comprises a series of six genomic range annotation tracks, arranged horizontally and vertically, to represent different datasets on chromosome 3, from 52,168,000 to 52,890,000 base pairs. Each track uses various colors to differentiate between positive and negative DNA strands.
+
+1. **IGV Track**: Displays genomic intervals and gene names in navy. It uses rectangles and white triangle patterns on lines to indicate gene direction based on strand information.
+   
+2. **Corces et al. Track**: Utilizes text and rectangle annotations for genes, with blue/red coloring to represent strands. Text is smaller and offset to adjust label positioning.
+   
+3. **HiGlass Track**: Features a combination of text, triangles, and rectangles. It includes color-coded lines and opacities to reflect different strands and gene positions.
+
+4. **Cyverse-QUBES Track**: Employs rects and rule markers with text to annotate genes. Coloring is predominantly gray with a layer of purple exons, and lines extend across gene intervals.
+   
+5. **GmGDV Track**: Uses blue/red colors to distinguish strands. Contains annotations with triangles indicating gene direction and rects representing gene regions.
+
+6. **Final Track**: A basic range annotation track highlighting the genome in gray with additional color coding for specific genomic features such as exons.
+
+Overall, the visualization presents a detailed genomic comparison, leveraging varied visual encodings and styles to emphasize strand orientation and gene arrangement across datasets

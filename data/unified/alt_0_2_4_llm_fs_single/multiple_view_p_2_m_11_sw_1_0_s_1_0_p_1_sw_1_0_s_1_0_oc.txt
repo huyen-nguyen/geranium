@@ -1,0 +1,9 @@
+This visualization, titled "Visual Linking," displays genomic data using a combination of scatter plots, area charts, and line charts. It features a dynamic vertical arrangement with multiple tracks linked by interactive brushes for detailed updates.
+
+1. **Top Track:** A scatter plot in a linear layout focused on chromosome 1 between positions 160,000,000 and 200,000,000. It shows expression levels on the y-axis with colored points, stratified by samples "sample 1" through "sample 4."
+
+2. **Bottom Left Track:** An area chart in a horizontal layout covering chromosome 1, displaying a summary view with an interactive brush. Expression is shown with filled areas, each color-coded by sample categories.
+
+3. **Bottom Right Track:** A circular line chart, also showing chromosome 1, illustrating expression trends with lines. The brush in this track links back to the detail view, allowing for refined genomic navigation.
+
+Each track is stratified by samples, displaying distinct colors for different data categories, enhancing clarity in analyzing the genomic intervals.

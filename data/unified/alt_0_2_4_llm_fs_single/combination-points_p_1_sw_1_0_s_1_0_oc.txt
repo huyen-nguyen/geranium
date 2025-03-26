@@ -1,0 +1,5 @@
+The visualization consists of two linear scatter plots, each visualizing genomic data from chromosome 1, spanning from position 1 to 3,000,500. Both plots display data points corresponding to expression peaks across four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. 
+
+In the top plot, points are sized and colored based on the expression peak value and sample category, respectively. The x-axis represents genomic position, while the y-axis represents expression values, with grid lines for better visual reference.
+
+The bottom plot is stratified by sample categories, displaying rows for each sample. Points are similarly sized and colored as in the top plot. Each plot is interactive, featuring a tooltip that displays detailed information about genomic start and end positions, peak value, and sample data when hovered over. The transparency of points is set to 0.5, providing a clear view of overlapping data points. The layout is vertically arranged, ensuring a comprehensive comparison between the different samples across the genomic region.

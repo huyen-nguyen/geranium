@@ -1,0 +1,8 @@
+The visualization titled "SARS-CoV-2" presents genomic data in a linear layout using the NC_045512.2 assembly, consisting of two main views linked by a brush tool. The upper view, "NC_045512.2 Genes," depicts gene regions using purple rectangles outlined in white. Sky blue vertical lines with triangle patterns represent structural annotations, and gene symbols are labeled in purple text. The lower stacked view includes:
+
+1. **S Protein Annotation**: Displays various protein domains as colored rectangles, stratified by rows, with black text annotations.
+2. **Gene Annotations**: Similar to the upper view but employs navy blue for rectangles.
+3. **NC_045512.2 Sequence**: Features a bar chart showing base pair counts for "A," "T," "G," and "C" in distinct colors. White text annotations display non-zero counts.
+4. **TRS-L-Dependent Recombination Events**: Visualizes genomic connections using light green lines, representing recombination events with varying opacity.
+
+The subtitle credits the WashU Virus Genome Browser, NCBI, and GISAID as data sources. The interactive and color-coded design aids in exploring viral genomics comprehensively.

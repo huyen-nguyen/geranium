@@ -1,0 +1,3 @@
+**Description:**
+
+A line chart in a linear layout visualizes a multivec file, presenting the entire genome of hg38. The x-axis displays genomic position data, while the y-axis represents expression values. The line thickness is set to a size of 2, and its color is a shade of green. The chart is titled 'Basic Marks: line' with a subtitle 'Tutorial Examples.'

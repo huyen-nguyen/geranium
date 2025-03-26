@@ -1,0 +1,3 @@
+**Description**: 
+
+A multi-layered circular area chart visualizes genomic data from chromosome 12, covering an interval between 5,000,000 and 15,000,000 base pairs. The data is represented using a multivec file and is displayed in a circular layout with multiple layers corresponding to different samples. Each layer shows quantitative peak values, represented as filled areas within the circle. The circular chart is colored with distinct shades for each sample, including blue, orange, green, red, purple, brown, and others. This visualization method effectively maps genomic positions (x-axis) and peak values (y-axis), providing a comprehensive view of genomic variations across multiple samples.

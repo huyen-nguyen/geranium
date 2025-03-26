@@ -1,0 +1,7 @@
+The visualization consists of a circular chart and two horizontal bar charts arranged vertically. 
+
+- The circular layout displays genomic data with separate tracks for different 'samples', each color-coded in blue, orange, green, and red. Bars represent quantitative peaks, stratified into rows for each category. Additionally, connections between genomic intervals are shown in pink strokes, depicting rearrangements such as 'deletion', 'inversion', 'translocation', and 'tandem-duplication'.
+  
+- The lower section includes two linked bar charts. These charts focus on chromosomes 5 and 16, as indicated by linked brushes in the circular view. Each bar chart represents expression levels stratified by 'samples', colored consistently with the circular chart.
+
+This design enables interactive exploration of genomic relationships and variations across different chromosomes and samples.

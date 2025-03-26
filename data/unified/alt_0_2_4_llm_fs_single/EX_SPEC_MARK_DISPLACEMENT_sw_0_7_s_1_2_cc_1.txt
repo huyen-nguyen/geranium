@@ -1,0 +1,17 @@
+A series of charts visualize genomic data with a focus on mark displacement. The main title is "Mark Displacement," and the subtitle explains the use of displacement options to address visual overlaps.
+
+1. **Top Chart (Transcripts on chr3):** 
+   - Displays genomic transcripts on chromosome 3 (interval 142,500,000 to 143,000,000).
+   - Marks include right and left arrows, lines, and text indicating gene names like PLS1 and TRPC1. 
+   - Up to 15 rows of data are visualized, with genes color-coded by strand: blue for '+' and orange for '-'.
+
+2. **Middle Chart (Variants on chr2):**
+   - Shows "Likely Benign" variants on chromosome 2 (interval 126,800,000 to 127,700,000).
+   - Points and lines are marked with connections to gene annotations.
+   - Features texts representing nucleotide bases, color-coded by letter (A, T, G, C).
+   - Arrows and rectangles depict genes like BIN1 and MYO7B, colored according to strand.
+
+3. **Bottom Chart (Features on chr17):**
+   - Displays a deep pileup of points colored by significance on chromosome 17 (interval 43,080,000 to 43,120,000).
+   - Points are positioned to avoid overlaps, using a "pile" method.
+   - The chart’s layout includes significant genomic features marked in

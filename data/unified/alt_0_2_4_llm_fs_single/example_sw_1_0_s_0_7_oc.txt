@@ -1,0 +1,13 @@
+The visualization titled "Visual Encoding" with the subtitle "Gosling provides diverse visual encoding methods" exhibits a linear layout in a vertical arrangement. It encompasses multiple tracks showcasing data from a multivec file for chromosome 1, spanning the interval from 1 to 3,000,500. 
+
+1. The initial track shows a heat map where genomic intervals are represented on the x-axis, and color intensity reflects expression values. The chart is stratified into rows for categories labeled as 'sample 1' to 'sample 4.' 
+2. A bar chart follows, illustrating genomic data with bars along the y-axis and stratified by sample categories. 
+3. Another track displays a bar chart with similar genomic data representation.
+4. A composite track includes a line chart combined with a scatter plot, presenting lines and points for expression values, stratified by sample categories. 
+5. The following track is a scatter plot, with position on the x-axis and expression values displayed using points sized and colored by sample category.
+6. Another scatter plot mirrors this setup but with a grid included for guidance.
+7. An area chart follows, where expression values are highlighted along the y-axis with distinct area colors signifying various samples.
+8. A bar chart shows minimum and maximum values for genomic intervals using the y and ye axes.
+9. Lastly, there is a connection track displaying links between genomic intervals, color-coded by categories.
+
+This visualization effectively conveys diverse methods of visual encoding through bars,

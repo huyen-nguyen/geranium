@@ -1,0 +1,7 @@
+The visualization titled "Example: Brushing and Linking" consists of two line charts arranged in a linear layout. Each chart represents multivec data of chromosome 1.
+
+1. **Top Chart**: Displays a genomic line chart where the x-axis represents positions on chromosome 1, and the y-axis shows quantitative values from a field named 'peak.' The line is colored sky blue. It includes an interactive brush linked to the bottom chart, highlighting regions.
+
+2. **Bottom Chart**: Also depicts a genomic line chart, covering a specific interval on chromosome 1, between 200,000,000 and 220,000,000. The data is visualized with green lines, and the chart has a slightly lighter blue background to indicate interaction readiness.
+
+The brushing and linking feature allows users to interactively select regions in one chart and see the corresponding data in the other, enhancing data exploration.

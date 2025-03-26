@@ -1,0 +1,5 @@
+A circular and linear visualization layout is used to depict genomic data. The circular view includes tracks for an ideogram, putative driver annotations, gain, and loss of heterozygosity (LOH), along with connections representing structural variations like translocations and duplications. The ideogram track uses a blue brush linking the circular and linear views.
+
+In the linear view, the chromosome 1 region is expanded to display tracks for putative driver text annotations, point mutations, insertions, deletions, and copy number variants (CNVs). The point mutation track visualizes a VCF file, with points colored by mutation subtype. Insertion and deletion tracks use yellow and green rectangles, respectively. The CNV track indicates copy number values with grey rectangles.
+
+Overall, the visualization highlights genomic variations and anomalies in a detailed, layered format, using color and shape to differentiate categories and types of genetic alterations.

@@ -1,0 +1,7 @@
+The visualization consists of two vertically arranged tracks in a linear layout, intersecting chromosome 1 between positions 1 and 3,000,500. 
+
+The top track combines a line chart with a scatter plot. It displays four samples, each sample represented by lines and points in distinct colors: blue, orange, green, and red. The x-axis represents genomic positions, while the y-axis represents quantitative expression values. The size of the points encodes peak values. 
+
+The bottom track is a scatter plot, using point size to signify peak values and color to delineate sample categories, maintaining consistency with the top track's color scheme. Points are semi-transparent, allowing overlapping data to be visualized.
+
+Both tracks are stratified by sample, enabling comparison across samples with associated legends displayed on the right. Data is sourced from a multivec file, providing layered data visualization over the specified genomic range.

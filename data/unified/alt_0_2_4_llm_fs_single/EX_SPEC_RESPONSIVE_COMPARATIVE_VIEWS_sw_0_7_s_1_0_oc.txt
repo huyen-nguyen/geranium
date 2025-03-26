@@ -1,0 +1,21 @@
+The visualization displays three linear bar charts side by side, each showing genomic data for a specific chromosome interval. The layout is responsive horizontally:
+
+1. **First Chart**:
+   - **Chromosome**: chr12
+   - **Range**: 5,000,000 to 15,000,000
+   - **Color**: Navy blue
+   - **Encodes**: Genomic position on the x-axis and quantitative peak values on the y-axis.
+
+2. **Second Chart**:
+   - **Chromosome**: chr9
+   - **Range**: 5,000,000 to 15,000,000
+   - **Color**: Orange
+   - **Encodes**: Similar to the first chart, with similar genomic and quantitative data fields.
+
+3. **Third Chart**:
+   - **Chromosome**: chr12
+   - **Range**: 5,000,000 to 15,000,000
+   - **Color**: Dark yellow
+   - **Encodes**: Genomic position on the x-axis and peak values on the y-axis like the other charts.
+
+The visualization uses a multivec data type from given URLs, utilizing a bar mark with individual domains for clear separation. Each track's data is distinctively colored with consistent styling features like white strokes and configurable width and height, offering an informative genomic comparison across different chromosomal regions.

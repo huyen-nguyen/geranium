@@ -1,0 +1,12 @@
+The visualization comprises three stacked views, each depicting a segment of chromosome 13 in a linear layout. The views consist of gene annotations and ClinVar data significance.
+
+1. **Gene Annotations: HiGlass Track**
+   - Displays gene annotations for chromosome 13, showcasing the direction of genes with arrows. Gene names are labeled, and exons are highlighted with rectangles. The annotation track uses blue for forward strand and pink for reverse strand genes.
+
+2. **ClinVar Significance Track**
+   - Features a bar chart with discrete points to represent genetic variant significance, using a color gradient ranging from dark pink to green. Pathogenic variants are indicated in pink shades, uncertain in gray, and benign in green hues. The track's transparency varies by zoom level.
+
+3. **Multivec Data: ClinVar Count**
+   - A third bar chart shows the density of variants, colored by significance. The chart adapts visibility based on user interaction, providing a quantitative view of variant distribution across the specified genomic region.
+
+Together, these tracks provide an integrated view of chromosome 13, focusing on gene structures and the clinical significance of variants. The genomic intervals displayed are dynamically adjustable, supporting detailed analysis.

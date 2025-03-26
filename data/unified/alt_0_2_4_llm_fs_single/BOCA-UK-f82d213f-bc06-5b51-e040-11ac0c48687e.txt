@@ -1,0 +1,16 @@
+The visualization consists of two main views: a circular view and a linear view, aligned vertically. These are linked by an interactive brush in the circular view, allowing for synchronized exploration of genomic data. 
+
+### Circular View
+- **Tracks:**
+  - **Ideogram:** Displays the human genome using color-coded bands. Includes a blue brush for interactive selection, linking to the linear view.
+  - **Putative Driver Annotation:** Displays genomic positions with text annotations, using data fields to concatenate and replace values.
+  - **Gain and LOH Tracks:** Highlight genomic ranges using colored rectangles. Gains are shown in sky blue and losses in dark orange.
+  - **SV Connections:** Show links between genomic positions, with lines colored by structural variation types such as Translocation, Duplication, and Inversions.
+
+### Linear View
+- **Tracks:**
+  - **Putative Driver and Gene Annotation:** Displays gene information using text and graphical annotations like triangles and rectangles, stratified by strand.
+  - **Point Mutation:** A scatterplot showing mutations with points positioned by genomic distance, color-coded by mutation subtype (e.g., C>A, T>G).
+  - **Insertion and Deletion:** Exhibits insertions and deletions along the genome with distinct colored rectangles.
+  - **Copy Number Variants (CNV):** Bar chart depicting quantitative CNV data, colored gray for neutral and varying shades for abnormalities.
+  - **Gain and LOH:** Similar to the circular view, highlighting

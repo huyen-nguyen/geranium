@@ -1,0 +1,9 @@
+Here's a detailed description of the visualization:
+
+The visualization is comprised of a circular view and a linear view arranged vertically. The circular view displays two tracks: a multivec file visualized as a circular bar chart and a CSV file visualized with connections. The circular bar chart represents genomic data with the genome shown in intervals on the x-axis and expression values shown on the y-axis with bars. Each row in the chart represents a distinct category ('sample 1' to 'sample 4') and is depicted with different colors, such as blue, orange, green, and red. Brushes link parts of this chart to the linear views below.
+
+The second track in the circular view is a chart with connections that indicate structural variations between genomic positions, such as deletions, inversions, translocations, and tandem duplications. These connections are colored in pink, with the stroke style varying to indicate different categories.
+
+Below the circular view are two linear bar charts arranged horizontally. Each chart is linked to a specific chromosome (chr5 and chr16) and shows more detailed genomic data for the selected intervals depicted in the circular view. These linear charts visualize data using bars stratified by categories, maintaining the same color scheme for 'sample 1' to 'sample 4.'
+
+Overall, the visualization provides an integrated view of genomic data through both circular and linear perspectives, allowing detailed examination of specific genomic regions and structural variances.

@@ -1,0 +1,11 @@
+**Description:**
+
+This visualization presents a linear arrangement of chromosomal data from chromosome 1, spanning positions 103,900,000 to 104,100,000 on the hg38 assembly. Seven separate tracks showcase the genomic intervals depicted as rectangles and betweenLink charts.
+
+1. **Rectangular charts**: Each track includes rectangles using colors such as pink, green, and purple. The genomic start and end positions, S1 and E1, are indicated by their horizontal placement. Stroke outlining in dark green (#4C6629) adds clarity, with an opacity set to 15%.
+
+2. **Connection charts (betweenLink)**: The connections between coordinates S1 to S2 and E1 to E2 are highlighted in pink and green, depending on the source data. The linkage is visually represented with faded strokes alongside opacity settings, adding depth and context.
+
+3. **Data Source**: The data originates from a CSV file accessed through a URL, with genomic fields including S1, E1, S2, and E2 delineating the genomic locations involved.
+
+Collectively, this visualization provides intricate insights into duplicated segments on chromosome 1, highlighting regions and connections with distinct color codes for easy comprehension.

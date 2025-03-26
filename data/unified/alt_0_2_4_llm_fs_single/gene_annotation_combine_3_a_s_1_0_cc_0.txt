@@ -1,0 +1,9 @@
+The visualization is a genomic range annotation chart in a linear layout, focusing on chromosome 3 from positions 52,168,000 to 52,890,000. It includes three vertically aligned tracks, each showing different aspects of gene annotations. 
+
+1. **Track 1**: Titled "Cyverse-QUBES," it combines text, triangles, and colored rectangles to represent gene structures. The text indicates gene names, with purple text color, right-facing triangles in purple for forward strands, and left-facing triangles in pink for reverse strands. Genes are also shown as sky blue rectangles with lines.
+
+2. **Track 2**: This track uses purple and pink rectangles to represent genomic features such as exons and introns, stratified by strand.
+
+3. **Track 3**: Titled "GmGDV," it mirrors Track 1 with additional color coding in blue and orange to differentiate between strands. It similarly layers text and geometric shapes for gene annotation.
+
+Each track is aligned similarly, making it easier to compare annotations across the chromosome interval.

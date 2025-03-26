@@ -1,0 +1,17 @@
+The visualization consists of a circular view and a linear view, both arranged vertically and linked by an interactive blue brush. The circular view depicts the entire human genome (hg19), while the linear view focuses on chromosome 1. 
+
+In the circular view, there are tracks illustrating different data elements: 
+
+1. **Ideogram Track**: Displays the chromosomal bands, colored according to staining categories, with a linking brush to the linear view.
+2. **Text Annotation Track** titled "Putative Driver": Shows gene names along the genome, indicating potential driver mutations.
+3. **Range Annotation Tracks**: 
+   - **'Gain' Track**: Highlights gained genomic regions in sky blue.
+   - **'Loss of Heterozygosity (LOH)' Track**: Displays lost heterozygosity regions in dark orange.
+4. **Line-Connection Track**: Visualizes structural variations by connecting genomic positions with lines, using different colors for types like 'Translocation', 'Duplication', 'Deletion', and 'Inversion'.
+
+The linear view contains:
+
+1. **Ideogram**: Provides a detailed view of chromosome 1 with staining patterns.
+2. **Text Annotation**: Similar to the circular view, it lists gene names with prefixes indicating mutations.
+3. **Gene Annotation Track**: Displays the positions of genes and exons within chromosome 1.
+4. **Scatter Plot** titled "Point Mutation": Plots distances to previous mutations, colored by mutation subtype

@@ -1,0 +1,7 @@
+A complex genomic visualization is organized vertically with a circular view and a horizontal array of two linear views. The circular view features a multivec file of the hg38 assembly, arranged in a stacked layout. Four categories, 'sample 1' to 'sample 4', are represented as concentric rings in distinct colors. Genomic data is displayed in intervals along the x-axis with quantitative values on the y-axis. Colored bars visualize these data points, enriched by interactive blue and red brushes linking to the lower linear views.
+
+Below, two horizontal linear bar charts illustrate detailed views of chromosomes 5 and 16, respectively. Each chart uses the same color coding as the circular view to distinguish the four samples. Both views share linked interactions through the circular chart’s brushes, displaying genomic intervals on the x-axis and quantitative peaks on the y-axis.
+
+The circular view also incorporates connections between genomic positions via lines in varying shades determined by categorical field values, such as deletion, inversion, translocation, and tandem duplication. Stroke colors differentiate these categories, while an overlay of a CSV file enriches the connectivity visualization with light pink shaded paths.
+
+Overall, this visualization integrates multiple datasets and interactive brushing to facilitate detailed exploration and comparison of genomic data across different chromosomes and categories.

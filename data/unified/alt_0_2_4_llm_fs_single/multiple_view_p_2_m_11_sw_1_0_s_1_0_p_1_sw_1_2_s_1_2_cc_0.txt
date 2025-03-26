@@ -1,0 +1,9 @@
+The visualization titled "Visual Linking" features an interactive genomic data representation using a multivec file. The arrangement is vertical, emphasizing the concept of data linkage controlled by brushes.
+
+The upper section showcases a linear scatter plot of chromosome 1, focusing on the interval between 160,000,000 and 200,000,000. The y-axis represents expression values with points, stratified by categories such as 'sample 1' to 'sample 4', colored in blue, orange, green, and red respectively.
+
+Below, the layout splits into two components: a horizontal chart with displayed areas and a circular line chart. The horizontal area chart displays genomic intervals on the x-axis and expression levels on the y-axis across samples. It features a brush tool that links and updates detail views between these representations.
+
+On the right, a static circular line chart displays the same genomic data, with lines colored by sample categories. The chart's x-axis is linked to the linear views through a brush, enabling dynamic range selection and enhanced detail view control.
+
+The subtitle "Change the position and range of brushes to update the detail view on the bottom" highlights the visualization's interactive nature, allowing users to explore genomic data efficiently.

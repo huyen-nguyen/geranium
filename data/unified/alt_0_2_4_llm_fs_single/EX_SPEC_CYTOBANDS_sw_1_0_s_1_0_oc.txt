@@ -1,0 +1,7 @@
+The parallel layout visualization displays five linear views, each depicting genomic data for chromosomes 1 through 5. Each view consists of two aligned tracks:
+
+1. For each chromosome, an area chart visualizes multivec data, highlighting peaks represented by shades correlating to 'sample 1' through 'sample 4'.
+
+2. Below the area chart, an ideogram displays cytogenetic bands of the corresponding chromosome, with text labels marking bands and their density indicated by varying shades of gray, from light to dark. Purple rectangles denote certain genetic variations (gvars), while red triangles point out centromere regions ('acen-1' and 'acen-2').
+
+The composition allows comparison of genomic features across chromosomes, emphasizing structure and variation using differenced coloring schemes and geometric markers.

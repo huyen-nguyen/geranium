@@ -1,0 +1,7 @@
+The visualization titled "Single-cell Epigenomic Analysis" with the subtitle "Corces et al. 2020" presents a multi-track linear layout focused on chromosome 3. The ideogram at the top showcases chromosome 3 with distinct cytogenetic bands, including variegated colors for different densities and red triangular shapes for centromeres. 
+
+Following the ideogram, several bar charts represent the expression levels of various cell types: excitatory neurons, inhibitory neurons, dopaminergic neurons, microglia, oligodendrocytes, astrocytes, and OPCs. Each chart uses a specific color to differentiate cell types—orange for excitatory neurons, green for inhibitory neurons, etc.
+
+The gene annotation track, labeled "Genes," displays genomic features like exons and gene names, stratified by strand orientation. It uses blue for positive and red for negative strands. Below the gene track, link tracks for PLAC-seq data (H3K4me3) are shown, indicating chromatin interactions with subtle lines in different colors.
+
+Overall, this visualization integrates multiple data types, linking high-level genomic structure to detailed cell-specific epigenomic activity.

@@ -1,0 +1,7 @@
+The visualization is a circular twin scatter plot illustrating genomic data. The layout is vertical and static, centered in the middle with a 0.5 radius. Both tracks represent data from chromosome 1, spanning positions 1 to 3,000,500 on the x-axis.
+
+The left circular scatter plot stratifies samples 'sample 1' to 'sample 4' by row. Each sample is displayed using a distinct color: blue, orange, green, and red, respectively. The y-axis and size of the points encode 'peak' values, with a specified opacity of 0.5.
+
+The right circular scatter plot, similar in design, features grid lines on its y-axis, enhancing visibility of the 'peak' values. Both plots utilize tooltips that reveal genomic start/end positions, peak values, and sample identifiers on interaction.
+
+The data originates from a multivec file, ensuring comprehensive representation of the four samples across the defined genomic range.

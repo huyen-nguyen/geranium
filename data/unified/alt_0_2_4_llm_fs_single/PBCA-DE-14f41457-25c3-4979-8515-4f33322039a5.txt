@@ -1,0 +1,9 @@
+A circular and a linear view are arranged vertically, linked by an interactive blue brush. The circular view represents the entire hg19 genome with five tracks: an ideogram, point annotations, and range annotations for 'Gain' (blue) and 'Loss of Heterozygosity (LOH)' (orange). Connections between genomic positions show structural variations in colors based on categories like 'Gain', 'LOH', 'Translocation', 'Duplication', 'Deletion', 'Inversion (TtT)', and 'Inversion (HtH)'. 
+
+The linear view focuses on chromosome 1, with tracks including: 
+- An ideogram,
+- Point annotations displaying gene data, 
+- A scatter plot titled 'Point Mutation' visualizing a VCF file with points colored by mutation subtype,
+- Range annotations for 'Copy Number Variants', 'Gain', and 'LOH', shown with respective rectangle colors.
+
+Overall, this visualization effectively reveals genomic features and variations, emphasizing chromosomal changes and mutation distribution.

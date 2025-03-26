@@ -1,0 +1,16 @@
+Certainly! Here's a detailed description for the visualization based on the JSON specification:
+
+---
+
+**Description**: 
+
+The visualization consists of two circular scatter plots arranged side by side, representing genomic data of chromosome 1 from positions 1 to 3,000,500 using a multivec file. Each plot belongs to a static, circular layout with rows stratified by categories labeled as 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The data points, marked as small circles, are colored in four distinct colors: blue, orange, green, and red corresponding to their respective categories.
+
+**Details**:
+
+- The **left scatter plot** shows data points with a circular arrangement where the position of each point is determined by the genomic field 'position' along the x-axis. The expression values, represented by the peaks, are plotted on the y and size-axes. Color differentiation based on the 'sample' field is used to distinguish categories.
+
+- The **right scatter plot** follows a similar configuration with the expression values demonstrated using data points on the y and size-axes. The plot includes a grid layout for clarity, enhancing the visualization of alignments in genomic data.
+
+Both tracks feature a tooltip displaying the start and end genomic positions, the value of 'peak', and the sample category when hovered over, providing interactive data exploration. Overall, these visualizations offer insights into the alignment and expression of genomic data for different samples within specified chromosome intervals.
+

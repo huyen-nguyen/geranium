@@ -1,0 +1,7 @@
+A visualization titled "Visual Linking" utilizes a multivec dataset to show genomic data across chromosome 1. This vertical layout contains a circular chart and two linear bar charts. 
+
+The circular chart, positioned at the top, depicts genomic intervals on the x-axis, with expression values shown as bars. The chart is divided into rows based on four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4', each represented by distinct colors. A brush on the x-axis links to the linear bar chart below.
+
+The top linear bar chart likewise displays genomic intervals on the x-axis and expression on the y-axis, stratified by the same categories and colors. It also includes an x-axis brush for detail linking.
+
+At the bottom, the linear detail view focuses on the genomic region between 160,000,000 and 200,000,000 base pairs on chromosome 1. This view is dynamically updated based on interactions with the brushes above, providing a more detailed representation of the genomic data. The visual linking emphasizes interactive data exploration by enabling users to manipulate the x and y-axis ranges using the brush tool.

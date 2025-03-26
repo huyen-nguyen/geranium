@@ -1,0 +1,1 @@
+A linear layout text chart visualizes a multivec file, displaying the full genome of hg38. The x-axis represents genomic positions. The text height on the y-axis corresponds to the 'count' of each base ('A', 'T', 'G', 'C') and is colored in blue, orange, green, and red respectively. The title is 'Basic Marks: Text' with the subtitle 'Tutorial Examples'.

@@ -1,0 +1,5 @@
+The visualization consists of four tracks in a linear arrangement. The first track is a bar chart titled "Gap," displaying genomic intervals on the x-axis and using purple bars to represent quantitative gap values along the y-axis. The second track, also a bar chart, titled "Conservation," shows genomic intervals on the x-axis, with conservation values represented by bars colored in a gradient of yellow to orange based on quantitative values.
+
+The third track features rectangles and text, showing genomic intervals on the x-axis. The track is stratified by categories, with colors indicating different nominal categories. Each row is labeled, and text is displayed in black to denote specific base information. 
+
+At the bottom, an overlaid chart combines rectangles and two bar charts—one for conservation and one for gap. The overlaid tracks maintain the genomic intervals on the x-axis. The interactive brush below links to the genome browser view, displaying bright purple and yellow colors that represent data interaction and selection functionality. This visualization references the alignment chart example from Dash Bio, as indicated in the description metadata.

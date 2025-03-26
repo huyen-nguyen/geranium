@@ -1,0 +1,8 @@
+A linear visualization showcases BED files with different specifications across four tracks. Each track represents a genomic range on chromosome 1, spanning from position 1 to 2,000,000. The tracks include:
+
+1. **BED12**: Displays all 12 standard fields with purple rectangles.
+2. **BED6**: Shows the first 6 standard BED fields with similar purple rectangles.
+3. **BED6+6**: Illustrates the first 6 standard fields plus 6 custom fields, again in purple.
+4. **BED12+1**: Highlights all 12 standard fields, with an additional custom field, using sky blue rectangles.
+
+Each track utilizes rectangles to denote genomic intervals, with consistent styling features like black strokes to outline the rectangles. The chart is arranged vertically, emphasizing the comparison of different BED file structures, underlined by the title "BED files" and the subtitle indicating a demonstration of various BED specifications.

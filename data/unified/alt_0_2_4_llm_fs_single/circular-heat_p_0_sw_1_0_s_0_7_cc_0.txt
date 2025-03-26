@@ -1,0 +1,3 @@
+**Description:**
+
+A circular heatmap visualizes a multivec file over chromosome 1, spanning the interval [1, 3,000,500] using the hg38 assembly. The data is displayed in circular layout, with vertical arrangement of tracks. Each track is subdivided into four rows corresponding to categories 'sample 1' to 'sample 4'. Genomic intervals are laid out on a circular x-axis, while data 'peak' values are encoded as color intensity, using a color scale from light yellow to dark brown. A quantitative legend indicates the color scale, enhancing data interpretation. The chart is static and assembled with a center radius of 0.5.

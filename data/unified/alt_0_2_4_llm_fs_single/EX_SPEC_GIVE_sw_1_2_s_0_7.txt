@@ -1,0 +1,5 @@
+A visualization titled "GIVE: Reimplementation of GenoCAT examples" displays two linear views vertically aligned. Each view features multiple genomic tracks. The top view includes a genomic range annotation track titled "Genes," displaying regions on chromosome 17 with navy blue rectangles and lines. Three bar charts represent quantitative data with bars in purple, highlighting peaks across intervals. Below is a track with rectangles and triangles using white color to indicate different categories.
+
+The bottom view presents a similar setup, this time focused on chromosome 1. The layout consists of a genomic range annotation track titled "Genes," with similar styling to the top view. Additional bar charts display quantitative peaks, again in purple, illustrating data distribution.
+
+The overall arrangement offers a comparative analysis of genetic information and annotations across specified chromosomal regions, enhancing insight into genomic data.

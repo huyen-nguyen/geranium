@@ -1,0 +1,7 @@
+A visualization composed of five linear tracks demonstrates custom mouse events for genomic data. The first track titled "Individual Marks" displays bar charts representing expression peaks across chromosome 1, colored according to four different samples. Mouse interaction changes the bar color to blue on hover and red on selection.
+
+The second track, "Group Marks By Sample," groups bars by sample, retaining distinct colors for each. The third track, "Group Marks By Genomic Position," groups data by genomic location along chromosome 1 with similar interactivity.
+
+A fourth track, "Group Marks By Gene," depicts gene structures on chromosome 3 using triangles and rectangles for exons and introns, respectively, where mouse hover highlights elements in gray.
+
+The final track, "Group Marks By Chromosome," visualizes cytobands across chromosomes 1 to 5 with distinct color codes. Interactivity elements include hover and selection actions, enhancing data exploration. The subtitle, "Customize mouse hovering and range selection events," highlights these interactions.

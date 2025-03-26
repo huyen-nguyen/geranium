@@ -1,0 +1,1 @@
+A linear bar chart illustrates a multivec file, displaying data across the genome of hg38. The x-axis represents genomic intervals, while the y-axis reflects quantitative 'peak' expression values. The bars are colored green, and the chart is titled 'Basic Marks: bar' with the subtitle 'Tutorial Examples.'

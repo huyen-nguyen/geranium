@@ -1,0 +1,1 @@
+The visualization is an area chart displayed in a linear layout that visualizes a multivec file, showing the entire genome of hg38. The x-axis represents the genomic positions, while the y-axis encodes quantitative data using the 'peak' field. The area is colored pink. The title of the chart is 'Basic Marks: area,' and the subtitle is 'Tutorial Examples.'

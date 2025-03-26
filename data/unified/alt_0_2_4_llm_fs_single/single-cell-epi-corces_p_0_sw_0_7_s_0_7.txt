@@ -1,0 +1,11 @@
+The visualization is a multi-layered genomic analysis with a linear layout, arranged vertically. It consists of 12 charts focusing on chromosome 3. The title is "Single-cell Epigenomic Analysis" with the subtitle "Corces et al. 2020."
+
+- **Ideogram**: The top chart is an ideogram showing chromosome 3 with distinct regions highlighted by rectangles and maroon triangles, indicating different cytogenetic bands. The x-axis includes a red brush linking to the detailed data views below.
+
+- **Bar Charts**: Seven subsequent bar charts depict the expression data for various cell types—Excitatory, Inhibitory, Dopaminergic neurons, Microglia, Oligodendrocytes, Astrocytes, and OPCs. Each chart reflects genomic intervals on the x-axis and expression peaks on the y-axis, with each neuron type represented by a distinct color: orange, green, blue, sky blue, purple, red, and magenta.
+
+- **Gene Annotation**: Below the bar charts, a genomic range annotation track displays gene names and structures using text labels and rectangles. This track is colored based on the strand orientation, with blue for positive and red for negative strands.
+
+- **Genomic Connections**: At the bottom, three charts titled "PLAC-seq (H3K4me3) Nott et al." illustrate genomic interactions using connection lines in varying colors. The connections visualize interactions across specific genomic positions, with subtle transparency.
+
+The
