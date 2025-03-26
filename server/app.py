@@ -1,3 +1,4 @@
+from io import BytesIO
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import torch
@@ -6,9 +7,11 @@ import pandas as pd
 from scipy.spatial.distance import cosine
 import os
 import base64
+from PIL import Image
+
 
 # get the model and tokenizer
-model, preprocess_train, preprocess_val = open_clip.create_model_and_transforms(
+model, _, preprocess = open_clip.create_model_and_transforms(
     "hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224"
 )
 tokenizer = open_clip.get_tokenizer(
@@ -59,10 +62,15 @@ def get_inference():
         top_k = get_all_modalities(top_k_file_names)
         return jsonify({"data": top_k})
     elif search_type == "Image":
-        image_input = torch.stack([search_content]).to(device)
+        image = preprocess(
+            Image.open(BytesIO(base64.b64decode(search_content.split(",")[1]))).convert(
+                "RGB"
+            )
+        )  # type: ignore
+        image_input = torch.stack([image]).to(device)  # type: ignore
 
         with torch.no_grad():
-            image_features = model.encode_text(image_input)
+            image_features = model.encode_image(image_input)
             image_features = image_features / image_features.norm(dim=-1, keepdim=True)
 
         image_embedding = image_features.cpu().numpy().tolist()[0]

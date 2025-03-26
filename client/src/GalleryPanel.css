@@ -24,6 +24,7 @@
 .gallery-item-thumbnail {
   width: 300px;
   border: 1px solid #4A4644;
+  height: 100%;
 }
 
 .gallery-item-text {
