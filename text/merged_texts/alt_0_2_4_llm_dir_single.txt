@@ -1,0 +1,91 @@
+File Name: AREA_sw_1_2_s_1_2_oc.txt
+Content:
+The visualization is a linear area chart titled "Basic Marks: area" with a subtitle "Tutorial Examples." It uses a multivec file to display genomic data from the entire hg38 genome assembly. The x-axis represents genomic positions across various chromosomes labeled chr1 to chrX, while the y-axis represents quantitative peaks of expression levels. The data focuses on a single category, "sample 1," highlighted in orange. The chart is 1152 units wide and 216 units high, emphasizing the variation of peak intensities across the genome. The data is sourced from an online URL.
+
+========================================
+
+File Name: combination-point-area_p_0_sw_1_2_s_0_7_cc_0.txt
+Content:
+The visualization displays two linked charts in a linear layout, showcasing genomic data for chromosome 1, spanning positions 1 to 3,000,500. 
+
+The top chart is a scatter plot where each point's position represents a genomic location on the x-axis, and the peak expression value on the y-axis also influences the size of the points. The points are color-coded according to the sample, with categories 'sample 1' through 'sample 4', displayed in distinct colors such as blue, orange, green, and red. The scatter plot helps highlight variations in expression values across different samples.
+
+The bottom chart is an area plot, stratified by rows for each sample category, displaying the expression values over the same genomic region. The x-axis represents the genomic position, while the y-axis shows the expression level, filled as areas. Each sample is distinctly represented by a different color corresponding to the scatter plot colors.
+
+Both charts include interactive tooltips providing details such as start and end genomic positions and corresponding expression values when hovered over. The design employs an opacity setting of 0.5 for visualization clarity, and legends are provided to facilitate the identification of categories.
+
+========================================
+
+File Name: EX_SPEC_CIRCOS_sw_0_7_s_0_7_cc_2.txt
+Content:
+The visualization is a circular genome plot titled "Circos," showcasing genomic data in a multi-track circular layout. It includes three distinct layers:
+
+1. **Circular Bar Chart**: This layer represents genomic positions on the x-axis, with the y-axis encoding quantitative 'peak' data through purple bars. The data is sourced from a vector using a specified URL and highlights the 'position' and 'peak' fields.
+
+2. **Circular Ideogram**: This track illustrates chromosomal intervals from a CSV file, using color-coded rectangles to signify different stain categories ('gneg', 'gpos25', 'gpos50', etc.) on the genomic axis. The color range includes various shades corresponding to specific bands.
+
+3. **Circular Link Connections**: This layer displays genomic connections with varying colors for each chromosome. Connections are filtered and linked using genomic positions 'p1' and 'p2' from a CSV dataset. Link color varies, reflecting chromosome associations, and opacity is applied to enhance visualization.
+
+Overall, the visualization combines quantitative bar representation and categorical ideograms with linkage, offering a comprehensive view of genomic data interactions and distributions. The center radius and spacing are configured for compact presentation without interaction features, making it ideal for static analysis.
+
+========================================
+
+File Name: EX_SPEC_CIRCULR_RANGE_sw_0_7_s_0_7_cc_0.txt
+Content:
+A circular bar chart in a stacked alignment visualizes a genomic dataset. The chart displays data across the entire genome, encoded in the circular x-axis, with expression values represented as pink bars on the y-axis. The visualization has a center radius of 0.3 and is designed in a static, circular layout. The bars are mapped to the 'peak' data field, providing quantitative expressions from a vector data source.
+
+========================================
+
+File Name: EX_SPEC_GREMLIN_sw_1_2_s_0_7_cc_1.txt
+Content:
+The visualization titled "Gremlin (O'Brien et al. 2010)" consists of two main sections in a linear layout. The top section features a detailed ideogram of Chromosome 5, highlighting genomic intervals with categories such as 'gneg', 'gpos', and 'gvar', indicated by different shades of gray and black. Categories are also labeled with their names in sky blue text. Beneath this is an overlay track showing duplicated segments connecting genomic positions within Chromosome 5 and between adjacent chromosomes 4 and 6, visualized with colored strokes in shades of blue, orange, and green. 
+
+The lower sections include two linked views. The "Region of Interest" focus area shows detailed segment duplications within a specified range on Chromosome 5 between 68,000,000 and 71,000,000 bases, using strokes in similar colors. The "Rearrangement View" further zooms in to show specific connections between 69,276,000 and 69,280,000 bases on the chromosome, displayed as transparent blue links. These interconnected visualizations enhance understanding of genomic rearrangements by interlinking detailed and broad views through a system of brushes and linking IDs.
+
+========================================
+
+File Name: gray_heatmap_sw_1_0_s_1_0_oc_sw_0_7_s_1_0_cc_0.txt
+Content:
+A heatmap in a linear layout visualizes a genomic matrix from the hg38 assembly. The x-axis shows genomic intervals from the entire genome, and the y-axis does the same, providing a chromosomal overview. Color intensity represents quantitative expression values, with a 'hot' color range indicating varying levels of expression. The plot is static, with predefined dimensions and no interactive elements.
+
+========================================
+
+File Name: PBCA-DE-2009e5e7-1796-445b-8677-46b3804fe0bf.txt
+Content:
+This visualization represents a genomic data analysis using a combination of circular and linear views, focusing on the genome assembly hg19. The circular view is a multi-layer ideogram displaying chromosomal bands, annotated with potential genomic variations including 'Gain' and 'Loss of Heterozygosity (LOH)'. These variations are indicated with sky blue and dark orange colors, respectively, and are represented as rectangles.
+
+Key features include:
+
+1. **Circular Ideogram**: Shows chromosomal positions from different chromosomes, with color-coded rectangles indicating categories such as 'Gain' (sky blue) and 'LOH' (dark orange).
+
+2. **Circular Track - Putative Driver**: Contains text annotations showing potential driver mutations on the genome's x-axis, with each text aligned to specific positions.
+
+3. **Circular Connection Track**: Displays structural variations with connections, colored to represent categories like 'Translocation', 'Duplication', 'Deletion', and types of inversions.
+
+4. **Linear Ideogram**: Below the circular view, a linear ideogram shows chromosome 1 in detail, with a colored band indicating various chromosomal regions. 
+
+5. **Gene and Mutation Tracks**: 
+   - **Putative Driver**: Text annotations indicating potential gene drivers stratified by rows for different categories.
+   - **Point Mutation Track**: Scatter plot visualizing point mutations with different colors based on mutation types like 'C>A', 'C>G', etc.
+   - **Insertion and De
+
+========================================
+
+File Name: POINT_sw_1_2_s_1_2_cc_2.txt
+Content:
+The visualization is a scatter plot titled "Basic Marks: point," with the subtitle "Tutorial Examples." It uses a linear layout to display genomic data from the multivec file associated with dataset "UvVPeLHuRDiYA3qwFlm7xQ." The x-axis represents genomic positions across the human genome assembly hg38, labeled with chromosome numbers (e.g., chr1, chr2, etc.). The y-axis indicates quantitative expression values labeled as "peak," and this field also controls the size of the points. Each point is uniformly colored in light purple (#b59bf2), encoding no additional categorical differentiation. The chart is interactive with zoom capabilities, configured with a width of 1152 pixels and a height of 246 pixels, allowing a detailed examination of genomic data associated with "sample 1."
+
+========================================
+
+File Name: responsive-circular_p_0_sw_1_0_s_1_0_oc.txt
+Content:
+The visualization is a circular bar chart displaying genomic data. It represents chromosome 12, covering an interval from 5,000,000 to 15,000,000. The expression levels, derived from multivec data, are encoded on the y-axis using bar length. Different samples, identified as categories, are displayed in concentric circular rows, with distinct colors representing each sample, such as 'sample 1', 'sample 2', and others, excluding 'sample -'. The x-axis denotes genomic intervals, and the chart adjusts its size responsively with a fixed width while allowing height adaptation. The opacity and visibility of bars are dynamically controlled based on the track height. The visualization effectively stratifies genomic expression data into rows corresponding to various samples, providing a visually comprehensive overview of expression patterns across the specified genomic region.
+
+========================================
+
+File Name: TEXT_sw_0_7_s_1_0_cc_0.txt
+Content:
+The visualization is a text chart in a linear layout titled "Basic Marks: Text," with the subtitle "Tutorial Examples." It represents genomic data from the hg38 assembly using a multivec dataset. The x-axis displays genomic intervals across several chromosomes like chr1, chr4, chr12, and more. The y-axis quantifies nucleotide expression, encoded as text. Nucleotides A, T, G, and C are colored blue, orange, green, and red, respectively. Each letter's position and size are based on a quantitative field named 'count.' The layout features a width of 560 and a height of 180, allowing for stretching to accommodate data. TextStrokeWidth is set to zero, and the style prioritizes categorical coloring for easy differentiation between nucleotides.
+
+========================================
+
