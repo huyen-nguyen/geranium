@@ -2470,7 +2470,7 @@
 2468,example_sw_1_2_s_1_0_oc,example,False,
 2469,example_sw_1_2_s_1_2_cc_0,example,False,
 2470,example_sw_1_2_s_1_2_oc,example,False,
-2471,gastric-bc0dee07-de20-44d6-be65-05af7e63ac96,gastric,False,
+2471,gastric-bc0dee07-de20-44d6-be65-05af7e63ac96,gastric,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
 2472,gene_annotation_combine_2_a_s_0_7_cc_0,gene_annotation_combine_2_a,False,
 2473,gene_annotation_combine_2_a_s_0_7_oc,gene_annotation_combine_2_a,False,
 2474,gene_annotation_combine_2_a_s_1_0_cc_0,gene_annotation_combine_2_a,False,
@@ -2732,7 +2732,7 @@
 2730,hic_matrix_sw_1_0_s_1_0_oc_sw_1_2_s_1_0_oc,hic,False,hic_matrix_sw_1_0_s_1_0_oc_sw_0_7_s_0_7_cc_0
 2731,hic_matrix_sw_1_0_s_1_0_oc_sw_1_2_s_1_2_cc_0,hic,False,hic_matrix_sw_1_0_s_1_0_oc_sw_0_7_s_0_7_cc_0
 2732,hic_matrix_sw_1_0_s_1_0_oc_sw_1_2_s_1_2_oc,hic,True,hic_matrix_sw_1_0_s_1_0_oc_sw_1_2_s_1_2_oc
-2733,kidney-9ae0744a-9bc1-4cd7-b7cf-c6569ed9e4aa,kidney,False,
+2733,kidney-9ae0744a-9bc1-4cd7-b7cf-c6569ed9e4aa,kidney,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
 2734,multi_layer_circular_m_0_s_0_5_cc_0,multi_layer_circular,True,multi_layer_circular_m_0_s_0_5_cc_0
 2735,multi_layer_circular_m_0_s_0_5_oc,multi_layer_circular,False,multi_layer_circular_m_0_s_2_0_oc
 2736,multi_layer_circular_m_0_s_0_7_cc_0,multi_layer_circular,False,multi_layer_circular_m_0_s_0_5_cc_0
@@ -2939,14 +2939,14 @@
 2937,multiple_view_p_2_m_11_sw_1_0_s_1_0_p_3_sw_1_2_s_1_0_oc,multiple_view,False,multiple_view_p_2_m_11_sw_1_0_s_1_0_p_0_sw_1_2_s_1_2_oc
 2938,multiple_view_p_2_m_11_sw_1_0_s_1_0_p_3_sw_1_2_s_1_2_cc_0,multiple_view,False,multiple_view_p_2_m_11_sw_1_0_s_1_0_p_1_sw_1_0_s_1_0_cc_0
 2939,multiple_view_p_2_m_11_sw_1_0_s_1_0_p_3_sw_1_2_s_1_2_oc,multiple_view,False,multiple_view_p_2_m_11_sw_1_0_s_1_0_p_0_sw_1_2_s_1_2_oc
-2940,ovarian serous cystadenocarcinoma-b243adb4-b3e7-4e0e-bc0d-625aa8dbb1be,ovarian serous cystadenocarcinoma,False,
-2941,ovarian-7a921087-8e62-4a93-a757-fd8cdbe1eb8f,ovarian,False,
-2942,ovarian-84ca6ab0-9edc-4636-9d27-55cdba334d7d,ovarian,False,
-2943,ovarian-89dad92e-5b3f-479a-a6da-a94ee7df7f8a,ovarian,False,
-2944,ovarian-f1504811-8363-41e6-b43c-62452b1262d3,ovarian,False,
+2940,ovarian serous cystadenocarcinoma-b243adb4-b3e7-4e0e-bc0d-625aa8dbb1be,ovarian serous cystadenocarcinoma,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
+2941,ovarian-7a921087-8e62-4a93-a757-fd8cdbe1eb8f,ovarian,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
+2942,ovarian-84ca6ab0-9edc-4636-9d27-55cdba334d7d,ovarian,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
+2943,ovarian-89dad92e-5b3f-479a-a6da-a94ee7df7f8a,ovarian,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
+2944,ovarian-f1504811-8363-41e6-b43c-62452b1262d3,ovarian,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
 2945,overview-landing_cc_0,overview-landing,True,overview-landing_cc_0
 2946,overview-landing_oc,overview-landing,True,overview-landing_oc
-2947,prostate adenocarcinoma-0bfd1043-816e-e3e4-e050-11ac0c4860c5,prostate adenocarcinoma,False,
+2947,prostate adenocarcinoma-0bfd1043-816e-e3e4-e050-11ac0c4860c5,prostate adenocarcinoma,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
 2948,responsive-circular_p_0_sw_0_7_s_0_7_cc_0,responsive-circular,False,responsive-circular_p_0_sw_0_7_s_1_0_cc_0
 2949,responsive-circular_p_0_sw_0_7_s_0_7_oc,responsive-circular,True,responsive-circular_p_0_sw_0_7_s_0_7_oc
 2950,responsive-circular_p_0_sw_0_7_s_1_0_cc_0,responsive-circular,True,responsive-circular_p_0_sw_0_7_s_1_0_cc_0
@@ -3028,7 +3028,7 @@
 3026,rule-mark_p_0_sw_1_2_s_1_2_cc_1,rule-mark,False,rule-mark_p_0_sw_0_7_s_0_7_cc_0
 3027,rule-mark_p_0_sw_1_2_s_1_2_cc_2,rule-mark,True,rule-mark_p_0_sw_1_2_s_1_2_cc_2
 3028,rule-mark_p_0_sw_1_2_s_1_2_oc,rule-mark,False,rule-mark_p_0_sw_0_7_s_0_7_oc
-3029,sarcoma-7d332cb1-ba25-47e4-8bf8-d25e14f40d59,sarcoma,False,
+3029,sarcoma-7d332cb1-ba25-47e4-8bf8-d25e14f40d59,sarcoma,False,BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e
 3030,scatterplot_p_0_sw_0_7_s_0_7_cc_0,scatterplot,True,scatterplot_p_0_sw_0_7_s_0_7_cc_0
 3031,scatterplot_p_0_sw_0_7_s_0_7_oc,scatterplot,False,scatterplot_p_0_sw_1_2_s_1_2_oc
 3032,scatterplot_p_0_sw_0_7_s_1_0_cc_0,scatterplot,False,scatterplot_p_0_sw_0_7_s_0_7_cc_0

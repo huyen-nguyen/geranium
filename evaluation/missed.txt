@@ -539,7 +539,6 @@ example_sw_1_2_s_1_0_cc_0
 example_sw_1_2_s_1_0_oc
 example_sw_1_2_s_1_2_cc_0
 example_sw_1_2_s_1_2_oc
-gastric-bc0dee07-de20-44d6-be65-05af7e63ac96
 gene_annotation_combine_2_a_s_0_7_cc_0
 gene_annotation_combine_2_a_s_0_7_oc
 gene_annotation_combine_2_a_s_1_0_cc_0
@@ -657,14 +656,6 @@ hi-c-matrix_p_0_sw_1_2_s_1_2_cc_0
 hi-c-matrix_p_0_sw_1_2_s_1_2_cc_1
 hi-c-matrix_p_0_sw_1_2_s_1_2_cc_2
 hi-c-matrix_p_0_sw_1_2_s_1_2_oc
-kidney-9ae0744a-9bc1-4cd7-b7cf-c6569ed9e4aa
-ovarian serous cystadenocarcinoma-b243adb4-b3e7-4e0e-bc0d-625aa8dbb1be
-ovarian-7a921087-8e62-4a93-a757-fd8cdbe1eb8f
-ovarian-84ca6ab0-9edc-4636-9d27-55cdba334d7d
-ovarian-89dad92e-5b3f-479a-a6da-a94ee7df7f8a
-ovarian-f1504811-8363-41e6-b43c-62452b1262d3
-prostate adenocarcinoma-0bfd1043-816e-e3e4-e050-11ac0c4860c5
-sarcoma-7d332cb1-ba25-47e4-8bf8-d25e14f40d59
 simple_circular_m_0_oc_cc_0
 simple_circular_m_0_oc_oc
 simple_circular_m_1_oc_cc_0
