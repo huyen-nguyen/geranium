@@ -20,13 +20,9 @@ export default function SearchBySpecPanel(props) {
   }, [onUpdate, inputSpec]);
 
   const specPreview = useMemo(() => {
-    if (inputSpec) {
-      return (
-        <textarea className='spec-preview' value={inputSpec} readOnly />
-      );
-    } else {
-      return null;
-    }
+    return (
+      <textarea className='spec-preview' value={inputSpec ?? ''} onChange={(e) => setInputSpec(e.target.value)} />
+    );
   }, [inputSpec]);
 
   return (
