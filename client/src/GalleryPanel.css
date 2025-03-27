@@ -1,0 +1,110 @@
+.gallery-panel {
+  width: calc(100% - 400px);
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.gallery-item {
+  border-bottom: 1px solid #D3CABD;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  min-height: 10rem;
+}
+
+.selected-example-panel {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  background: white;
+  left: 10%;
+  top: 10%;
+  border-radius: 0.5rem;
+}
+
+.selected-example-panel-dark-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #00000099;
+}
+
+.selected-example-content {
+  padding: 2rem;
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+}
+
+.selected-example-panel-close-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.gallery-item:nth-child(odd) {}
+
+.gallery-image-text-group {
+  display: flex;
+}
+
+.gallery-item-title {
+  color: #4A4644;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.gallery-item-thumbnail {
+  width: 400px;
+  border: 1px solid #4A4644;
+  height: 100%;
+}
+
+.selected-example-content>.gallery-item-thumbnail {
+  width: auto;
+  border: 0;
+  height: auto;
+}
+
+.gallery-item-text {
+  border-left: 0.5rem solid #D3CABD;
+  margin-left: 1rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  background: #D3CABD55;
+  min-height: 20rem;
+  max-height: 40rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.selected-example-content>.gallery-item-text {
+  margin: 0;
+  display: block;
+  min-height: auto;
+  max-height: 100%;
+}
+
+.gallery-item-spec textarea {
+  border-radius: 0.5rem;
+  margin: 0;
+  width: 500px;
+  height: calc(100% - 2rem);
+  font-size: 1rem;
+  max-height: calc(40rem);
+}
+
+.selected-example-content>.gallery-item-spec textarea {
+  field-sizing: content;
+  max-height: 100%;
+  width: calc(100% - 2rem);
+}

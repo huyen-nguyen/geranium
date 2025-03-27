@@ -1,0 +1,10 @@
+flask
+flask-cors
+pandas
+numpy
+scipy
+torch
+Pillow
+open_clip_torch==2.23.0 
+transformers==4.35.2 
+pyarrow

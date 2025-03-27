@@ -213,7 +213,7 @@ def vectorize_specifications_tsv(tsv_input_file, frame_file, onehot_output_file,
     print(f"Vectorization complete. One-hot vectors saved to {onehot_output_file} and frequency vectors saved to {frequency_output_file}.")
 
 # Example usage:
-vectorize_specifications_tsv('unified-specs.tsv', 'all_cfg_rules.txt', 'vectors_onehot.tsv', 'vectors_frequency.tsv')
+vectorize_specifications_tsv('unified-specs.tsv', 'all_cfg_rules.txt', '../server/embeddings/spec_onehot.tsv', '../server/embeddings/spec_frequency.tsv')
 
 
 # Extract rules from input file (all specs)
