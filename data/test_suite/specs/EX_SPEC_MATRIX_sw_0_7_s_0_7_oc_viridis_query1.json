@@ -1,0 +1,127 @@
+{
+  "xDomain": {
+    "interval": [
+      800000000,
+      1800000000
+    ]
+  },
+  "views": [
+    {
+      "alignment": "overlay",
+      "tracks": [
+        {
+          "data": {
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=leung2015-hg38",
+            "type": "matrix"
+          },
+          "mark": "bar",
+          "x": {
+            "field": "xs",
+            "type": "genomic",
+            "axis": "top"
+          },
+          "xe": {
+            "field": "xe",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "y": {
+            "field": "ys",
+            "type": "genomic",
+            "axis": "left"
+          },
+          "ye": {
+            "field": "ye",
+            "type": "genomic"
+          },
+          "color": {
+            "field": "value",
+            "type": "quantitative",
+            "range": "viridis",
+            "legend": true
+          },
+          "style": {
+            "background": "lightgray"
+          }
+        },
+        {
+          "data": {
+            "type": "json",
+            "values": [
+              {
+                "c": "chr2",
+                "p": 100000
+              },
+              {
+                "c": "chr5",
+                "p": 100000
+              },
+              {
+                "c": "chr10",
+                "p": 100000
+              }
+            ],
+            "chromosomeField": "c",
+            "genomicFields": [
+              "p"
+            ]
+          },
+          "mark": "rule",
+          "x": {
+            "field": "p",
+            "type": "genomic",
+            "axis": "none"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "color": {
+            "value": "red"
+          }
+        },
+        {
+          "data": {
+            "type": "json",
+            "values": [
+              {
+                "c": "chr2",
+                "p": 100000
+              },
+              {
+                "c": "chr5",
+                "p": 100000
+              },
+              {
+                "c": "chr10",
+                "p": 100000
+              }
+            ],
+            "chromosomeField": "c",
+            "genomicFields": [
+              "p"
+            ]
+          },
+          "mark": "rule",
+          "y": {
+            "field": "p",
+            "type": "genomic"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "color": {
+            "value": "blue"
+          }
+        }
+      ],
+      "width": 600,
+      "height": 600,
+      "style": {
+        "dashed": [
+          6,
+          3
+        ]
+      }
+    }
+  ]
+}

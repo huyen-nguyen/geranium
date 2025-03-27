@@ -1,0 +1,146 @@
+{
+  "arrangement": "horizontal",
+  "xDomain": {
+    "chromosome": "chr7",
+    "interval": [
+      77700000,
+      81000000
+    ]
+  },
+  "spacing": 1,
+  "linkingId": "-",
+  "views": [
+    {
+      "spacing": 30,
+      "views": [
+        {
+          "spacing": 0,
+          "arrangement": "vertical",
+          "views": [
+            {
+              "tracks": [
+                {
+                  "data": {
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=hffc6-microc-hg38",
+                    "type": "matrix"
+                  },
+                  "mark": "bar",
+                  "x": {
+                    "field": "xs",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "xe": {
+                    "field": "xe",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "y": {
+                    "field": "ys",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "ye": {
+                    "field": "ye",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "color": {
+                    "field": "value",
+                    "type": "quantitative",
+                    "range": "warm"
+                  },
+                  "width": 864,
+                  "height": 720
+                }
+              ]
+            },
+            {
+              "tracks": [
+                {
+                  "data": {
+                    "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=epilogos-hg38",
+                    "type": "multivec",
+                    "row": "category",
+                    "column": "position",
+                    "value": "value",
+                    "categories": [
+                      "Active TSS",
+                      "Flanking Active TSS",
+                      "Transcr at gene 5\\' and 3\\'",
+                      "Strong transcription",
+                      "Weak transcription",
+                      "Genic enhancers",
+                      "Enhancers",
+                      "ZNF genes & repeats",
+                      "Heterochromatin",
+                      "Bivalent/Poised TSS",
+                      "Flanking Bivalent TSS/Enh",
+                      "Bivalent Enhancer",
+                      "Repressed PolyComb",
+                      "Weak Repressed PolyComb",
+                      "Quiescent/Low"
+                    ],
+                    "binSize": 8
+                  },
+                  "dataTransform": [
+                    {
+                      "type": "filter",
+                      "field": "value",
+                      "inRange": [
+                        0,
+                        999999
+                      ]
+                    }
+                  ],
+                  "mark": "bar",
+                  "x": {
+                    "field": "start",
+                    "type": "genomic",
+                    "axis": "none"
+                  },
+                  "xe": {
+                    "field": "end",
+                    "type": "genomic"
+                  },
+                  "y": {
+                    "field": "value",
+                    "type": "quantitative",
+                    "axis": "none"
+                  },
+                  "color": {
+                    "field": "category",
+                    "type": "nominal",
+                    "range": [
+                      "#FF0000",
+                      "#FF4500",
+                      "#32CD32",
+                      "#008000",
+                      "#006400",
+                      "#C2E105",
+                      "#FFFF00",
+                      "#66CDAA",
+                      "#8A91D0",
+                      "#CD5C5C",
+                      "#E9967A",
+                      "#BDB76B",
+                      "#808080",
+                      "#C0C0C0",
+                      "gray"
+                    ]
+                  },
+                  "width": 864,
+                  "height": 48
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "style": {
+    "outlineWidth": 0,
+    "background": "#F6F6F6"
+  }
+}

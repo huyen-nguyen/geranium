@@ -1,0 +1,67 @@
+{
+  "layout": "linear",
+  "arrangement": "vertical",
+  "xDomain": {
+    "chromosome": "chr1",
+    "interval": [
+      1,
+      2000000
+    ]
+  },
+  "views": [
+    {
+      "tracks": [
+        {
+          "data": {
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/bed/chr1_CDS_BED12.bed.gz",
+            "indexUrl": "https://s3.amazonaws.com/gosling-lang.org/data/bed/chr1_CDS_BED12.bed.gz.tbi",
+            "type": "bed"
+          },
+          "mark": "rect",
+          "x": {
+            "field": "chromStart",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "chromEnd",
+            "type": "genomic"
+          },
+          "size": {
+            "value": 10
+          },
+          "stroke": {
+            "value": "black"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        },
+        {
+          "data": {
+            "url": "https://s3.amazonaws.com/gosling-lang.org/data/bed/chr1_CDS_BED6.bed.gz",
+            "indexUrl": "https://s3.amazonaws.com/gosling-lang.org/data/bed/chr1_CDS_BED6.bed.gz.tbi",
+            "type": "bed"
+          },
+          "mark": "rect",
+          "x": {
+            "field": "chromStart",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "chromEnd",
+            "type": "genomic"
+          },
+          "size": {
+            "value": 10
+          },
+          "stroke": {
+            "value": "black"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      ]
+    }
+  ]
+}

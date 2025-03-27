@@ -1,0 +1,151 @@
+{
+  "arrangement": "vertical",
+  "views": [
+    {
+      "spacing": 10,
+      "arrangement": "horizontal",
+      "views": [
+        {
+          "tracks": [
+            {
+              "data": {
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                "type": "multivec",
+                "row": "sample",
+                "column": "position",
+                "value": "peak",
+                "categories": [
+                  "sample 1",
+                  "sample 2",
+                  "sample 3",
+                  "sample 4"
+                ],
+                "binSize": 4
+              },
+              "mark": "bar",
+              "x": {
+                "field": "start",
+                "type": "genomic",
+                "linkingId": "detail-1",
+                "domain": {
+                  "chromosome": "chr5"
+                }
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "field": "peak",
+                "type": "quantitative"
+              },
+              "row": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "color": {
+                "field": "sample",
+                "type": "nominal",
+                "range": [
+                  "#1f77b4",
+                  "#ff7f0e",
+                  "#2ca02c",
+                  "#d62728",
+                  "#9467bd",
+                  "#8c564b",
+                  "#e377c2",
+                  "#7f7f7f",
+                  "#bcbd22",
+                  "#17becf"
+                ]
+              },
+              "stroke": {
+                "value": "black"
+              },
+              "strokeWidth": {
+                "value": 0.3
+              },
+              "style": {
+                "background": "blue"
+              },
+              "width": 171.5,
+              "height": 150
+            }
+          ]
+        },
+        {
+          "tracks": [
+            {
+              "data": {
+                "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=cistrome-multivec",
+                "type": "multivec",
+                "row": "sample",
+                "column": "position",
+                "value": "peak",
+                "categories": [
+                  "sample 1",
+                  "sample 2",
+                  "sample 3",
+                  "sample 4"
+                ],
+                "binSize": 4
+              },
+              "mark": "bar",
+              "x": {
+                "field": "start",
+                "type": "genomic",
+                "domain": {
+                  "chromosome": "chr16"
+                },
+                "linkingId": "detail-2"
+              },
+              "xe": {
+                "field": "end",
+                "type": "genomic"
+              },
+              "y": {
+                "field": "peak",
+                "type": "quantitative"
+              },
+              "row": {
+                "field": "sample",
+                "type": "nominal"
+              },
+              "color": {
+                "field": "sample",
+                "type": "nominal",
+                "legend": true,
+                "range": [
+                  "#1f77b4",
+                  "#ff7f0e",
+                  "#2ca02c",
+                  "#d62728",
+                  "#9467bd",
+                  "#8c564b",
+                  "#e377c2",
+                  "#7f7f7f",
+                  "#bcbd22",
+                  "#17becf"
+                ]
+              },
+              "stroke": {
+                "value": "black"
+              },
+              "strokeWidth": {
+                "value": 0.3
+              },
+              "style": {
+                "background": "red"
+              },
+              "width": 171.5,
+              "height": 150
+            }
+          ]
+        }
+      ],
+      "style": {
+        "backgroundOpacity": 0.1
+      }
+    }
+  ]
+}
