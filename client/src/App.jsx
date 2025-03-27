@@ -3,7 +3,6 @@ import Header from './Header.jsx'
 import SearchPanel from './SearchPanel.jsx'
 import GalleryPanel from './GalleryPanel.jsx'
 import axios from "axios"
-import './GalleryPanel.css'
 import './utils.js'
 
 function App() {
