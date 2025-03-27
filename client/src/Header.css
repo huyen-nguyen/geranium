@@ -1,0 +1,13 @@
+.header {
+  height: 3em;
+  width: 100%;
+  border-bottom: 1px solid #D3CABD;
+}
+
+.header>p {
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  margin: 0;
+  margin-left: 1rem;
+}

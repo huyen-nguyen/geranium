@@ -4,6 +4,8 @@
 .idea
 **/.ipynb_checkpoints/
 **/.DS_Store
+__pycache__
+.virtual_documents
+tmp/
 .env
-tmp
 node_modules

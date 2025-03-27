@@ -1,0 +1,5 @@
+.search-result-panel {
+  width: calc(100% - 500px);
+  padding: 1rem;
+  word-wrap: break-word;
+}
