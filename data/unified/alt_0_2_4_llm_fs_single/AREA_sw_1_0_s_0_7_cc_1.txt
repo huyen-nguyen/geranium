@@ -1,0 +1,1 @@
+A linear layout visualization displays an area chart using a multivec file, showing the entire genome of hg38. The x-axis represents genomic positions, while the y-axis shows quantitative data labeled as 'peak.' The area is filled with a sky-blue color. The visualization is titled 'Basic Marks: area' with a subtitle 'Tutorial Examples.'

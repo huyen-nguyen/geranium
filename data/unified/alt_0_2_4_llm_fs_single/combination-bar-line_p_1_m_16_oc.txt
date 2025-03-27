@@ -1,0 +1,3 @@
+**Description:**
+
+The visualization presents a linear chart layout with two vertically arranged tracks, focusing on chromosome 1 from position 1 to 3,000,500. The top track combines a bar and area chart, stratified by rows for each of the four samples. Each sample is represented by a different color: sample 1 (orange), sample 2 (green), sample 3 (blue), and sample 4 (pink), displaying genomic positions on the x-axis and peak values on the y-axis. The bottom track is a line chart with the same categorical color scheme, showing the continuous expression data of the peaks across the same genomic region. Color legend on the side aids in distinguishing the different samples.

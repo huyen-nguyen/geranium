@@ -1,0 +1,7 @@
+The visualization is a circular arrangement of genomic tracks, displayed in a spiral pattern for chromosomes 1 to 5. Each track consists of two layers: an area plot and an ideogram with additional annotations. 
+
+The area plot visualizes quantitative data for four samples ('sample 1' to 'sample 4') along the genome, where the x-axis represents genomic positions and the y-axis shows the expression values. Areas are color-coded by sample, highlighting differences in expression across genomic regions.
+
+The ideogram layer features genomic bands with various annotations. It includes text labels for chromosome bands, colored rectangles indicating density categories, and triangle markers for centromeric regions (stained in maroon for distinct visibility). 
+
+The tracks are arranged in a circular layout with specific reference to human genome assembly hg38. The visualization provides an easy comparison between chromosomes, allowing for the exploration of gene expression and cytogenetic features concurrently.

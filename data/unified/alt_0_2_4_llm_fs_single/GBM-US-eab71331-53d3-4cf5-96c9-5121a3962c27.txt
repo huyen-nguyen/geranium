@@ -1,0 +1,20 @@
+Here's a comprehensive description based on your specifications and the provided data:
+
+---
+
+The visualization consists of a circular view and a linear view arranged vertically, linked via an interactive brush in the circular view. The visualization uses the hg19 genome assembly. The circular view includes the entire genome, depicting various tracks such as:
+
+1. **Ideogram**: Displays chromosomal bands with color-coded categories.
+2. **Text Track titled "Putative Driver"**: Displays genomic positions of putative driver mutations. Text annotations are black.
+3. **Range Annotation Tracks**:
+   - **"Gain"**: Uses sky blue rectangles to represent genomic gains.
+   - **"Loss of Heterozygosity (LOH)"**: Uses dark orange rectangles for indicating LOH.
+4. **Connection Track**: Displays structural variants like translocations, duplications, deletions, and inversions, with categorical color differentiation.
+
+The linear view shows a detailed region corresponding to chromosome 1, including:
+
+- **Ideogram**: Features left and right triangles for centromeres and telomeres.
+- **"Putative Driver" track**: Text annotations in black showing genes affected by variations.
+- **"Point Mutation" scatter plot**: Shows VCF data with points representing mutations, color-coded by subtype.
+- **Insertion and Deletion Track**: Displays genomic indels in respective rows, using yellow and green rectangles.
+- **"Copy Number Variants" track**: Bars represent total

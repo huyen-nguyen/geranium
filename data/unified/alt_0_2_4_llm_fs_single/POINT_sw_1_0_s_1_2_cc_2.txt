@@ -1,0 +1,1 @@
+The visualization is a bubble chart in a linear layout, displaying a multivec file for the entire genome of hg38. It uses the 'peak' data field to encode the position and size of points. The points are colored in purple. The chart's title is "Basic Marks: point" and the subtitle is "Tutorial Examples".

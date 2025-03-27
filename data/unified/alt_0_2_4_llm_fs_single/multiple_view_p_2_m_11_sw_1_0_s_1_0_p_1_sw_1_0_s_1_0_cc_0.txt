@@ -1,0 +1,5 @@
+The visualization titled "Visual Linking" showcases genomic data across different layouts. The top chart is a scatter plot arranged in a linear layout, displaying genomic positions on the x-axis from chromosome 1, between 160,000,000 and 200,000,000. Each row represents a sample ('sample 1' to 'sample 4'), with point colors varying for each sample (e.g., shades of blue, orange, green, red).
+
+Below, two views are positioned horizontally. On the left is an area chart depicted linearly, covering the entire chromosome 1, with layers of colored areas representing the same samples. This chart incorporates an interactive brush that highlights the selected region on the main scatter plot above.
+
+To the right is a circular line chart, displaying genome positions on the x-axis, and similar to the linear chart, it shows lines for each sample. The circular layout emphasizes data categorization through line colors, corresponding to those in the linear charts, with a linked brush enabling focused interaction with the other charts. This composition facilitates dynamic exploration of genomic variances across different samples and scales.

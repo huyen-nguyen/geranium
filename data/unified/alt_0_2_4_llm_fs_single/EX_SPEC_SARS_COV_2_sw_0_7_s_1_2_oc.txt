@@ -1,0 +1,11 @@
+The visualization provides a comprehensive linear genome representation of SARS-CoV-2, incorporating data from the WashU Virus Genome Browser, NCBI, and GISAID. It features five distinct tracks: 
+
+1. **NC_045512.2 Genes**: Displays genomic intervals with navy blue rectangles on the x-axis, annotated with white vertical lines and black text representing gene symbols. An interactive brush facilitates zooming and detail linking.
+
+2. **S Protein Annotation**: Stratified by categories, this track employs multi-colored rectangles along the x-axis to indicate specific protein domains like the receptor-binding domain (RBD) and S1/S2 cleavage site, with black text labels.
+
+3. **NC_045512.2 Sequence**: Highlights the genome sequence using a bar chart where bar colors denote nucleotide categories (A, T, G, C). The x-axis displays genomic intervals with corresponding count values on the y-axis, while white text enhances visibility at suitable zoom levels.
+
+4. **TRS-L-Dependent Recombination Events**: Connects genomic positions with navy blue curves, representing recombination events. These lines illustrate genomic interactions within specified intervals.
+
+This visualization effectively communicates genomic features and interactions within the SARS-CoV-2 genome, providing tools for detailed exploration and analysis.

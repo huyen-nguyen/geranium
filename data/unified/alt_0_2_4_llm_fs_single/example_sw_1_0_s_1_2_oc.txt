@@ -1,0 +1,17 @@
+The visualization demonstrates diverse visual encoding methods for genomic data in a linear layout. It features nine charts, each illustrating different encoding techniques on chromosome 1, covering positions from 1 to 3,000,500. 
+
+1. **Heat Map**: Displays genomic intervals on the x-axis, with expression values represented through color intensity. It is stratified by 'sample' categories, using colors to denote different levels of expression.
+
+2. **Bar Charts**: Three variations highlight genomic data on the x-axis, with expression levels shown on the y-axis. Rows are categorized by 'sample,' and colors highlight different samples.
+
+3. **Line and Scatter Plot**: Combines lines and points to show expression values on the y-axis across genomic positions. The size of points represents expression magnitude, with colors indicating sample categories.
+
+4. **Scatter Plots**: Two versions plot genomic positions on the x-axis and expression values on the y-axis, using point size and color to denote expression intensity and sample variety.
+
+5. **Area Chart**: Depicts genomic intervals on the x-axis and expression values through filled areas, color-coded by sample.
+
+6. **Bar Chart with Range Bars**: Displays genomic intervals on the x-axis, representing expression with bars on two axes (y and ye). Colors differentiate sample categories.
+
+7. **Connection Chart**: Visualizes connections between genomic positions, with colors indicating various categories.
+
+Overall, the visualization effectively showcases the versatility and richness of visual encoding techniques applied

@@ -1,0 +1,17 @@
+A genome visualization is presented with a circular layout at the top and a linear layout at the bottom. 
+
+**Circular View:**
+- Includes a circular ideogram, color-coded by stain, with an interactive brush linking to the linear view.
+- Displays genomic annotations with text tracks named "Putative Driver."
+- Shows two range annotation tracks titled "Gain" (sky blue rectangles) and "Loss of Heterozygosity (LOH)" (dark orange rectangles).
+- Features a connection track illustrating structural variations with lines colored based on categories: Gain, LOH, Translocation, Duplication, Deletion, Inversion (TtT), Inversion (HtH).
+
+**Linear View:**
+- Shows chromosome 1 from the circular view with an ideogram and arrow annotations indicating genomic features.
+- Includes a text annotation track titled "Putative Driver," stratified by genomic categories.
+- Displays a scatter plot titled "Point Mutation," where points represent genomic mutations, colored according to mutation type (e.g., C>A, C>G).
+- Features two range annotation tracks with rows labeled "Insertion" (yellow) and "Deletion" (green).
+- Contains a "Copy Number Variants" track showing quantitative data as gray rectangles.
+- Includes additional tracks titled "Gain" and "LOH," corresponding to the circular view annotations, linked by a genomic scale track.
+
+Overall, this visualization effectively combines circular and linear layouts to depict genomic data, focusing on structural variations and annotations across chromosome

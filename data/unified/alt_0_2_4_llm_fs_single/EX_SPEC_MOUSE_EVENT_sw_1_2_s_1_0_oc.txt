@@ -1,0 +1,11 @@
+The visualization titled "Custom Mouse Events" demonstrates interactive genomic data exploration across five tracks using a multivec file. Each track is a bar chart displaying genomic data from various samples. 
+
+1. **Individual Marks**: Displays genomic positions along the x-axis and peak values on the y-axis. Mouseover changes bar color to blue.
+
+2. **Group Marks By Sample**: Groups the data by sample, illustrating sample variation. Hovering highlights bars in blue, and selection colors them red.
+
+3. **Group Marks By Genomic Position**: Groups data by genomic position, emphasizing positional variance with similar interactive coloring.
+
+4. **Group Marks By Gene**: Annotates gene data, showing exons and gene names in gray, arranged by genomic position. Interaction highlights elements in light gray or blue.
+
+5. **Group Marks By Chromosome**: Shows cytogenetic bands across chromosomes, highlighting regions by density and staining. Rectangles and triangles indicate band types, with mouse interactions altering visibility and color.

@@ -1,0 +1,9 @@
+A two-part visualization with a vertical arrangement demonstrates genomic data from chromosome 1. The top part consists of two tracks: a linear chart with an area plot, and a circular chart with line plots. Both feature interactive brushes linked to a detailed view below. 
+
+The linear chart shows genomic positions on the x-axis and quantitative 'peak' values on the y-axis, stratified by samples using distinct colors for each category: 'sample 1' (blue), 'sample 2' (orange), 'sample 3' (green), and 'sample 4' (red). 
+
+The circular chart displays similar data with lines representing the genomic values, offering an alternative visual perspective. 
+
+The lower part is a detailed linear scatter plot focusing on a specific region of chromosome 1 (160,000,000 to 200,000,000), highlighting individual 'peak' values for each sample category. 
+
+The visualization highlights dynamic interactions, allowing users to modify the view with brushing to examine details more closely. The title is "Visual Linking" and includes a subtitle explaining the functionality of the brush interaction.

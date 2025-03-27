@@ -1,0 +1,14 @@
+The visualization is composed of a circular and linear view, both linked by an interactive brush on the circular view. The circular view encompasses the whole genome, while the linear view focuses on a specific region of chromosome 1 that corresponds to the circular section. 
+
+The circular view contains multiple tracks:
+1. An ideogram highlighting chromosomal bands.
+2. A point annotation track with labels.
+3. Two range annotation tracks illustrating 'Gain' in blue and 'Loss of Heterozygosity (LOH)' in red through rectangles.
+4. A line-connection track displaying structural variations across genomic positions, color-coded by categories: 'Gain,' 'LOH,' 'Translocation,' 'Duplication,' 'Deletion,' 'Inversion (TtT),' and 'Inversion (HtH).'
+
+The linear view replicates similar tracks as the circular view and includes additional tracks:
+1. A gene annotation track providing details about gene positions and labels.
+2. A scatterplot labeled 'Point Mutation' visualizing mutations based on their distance to previous mutations, with points colored by mutation subtype ('C>A', 'C>G', etc.).
+3. Two range annotation tracks: one visualizing insertions and deletions from a VCF file colored yellow and green, and another titled 'Copy Number Variants' from a CSV file, using bars to represent quantitative copy number data in gray.
+
+Overall, the visualization effectively integrates genomic data to provide insights into structural variations, mutations, and gene annotations,

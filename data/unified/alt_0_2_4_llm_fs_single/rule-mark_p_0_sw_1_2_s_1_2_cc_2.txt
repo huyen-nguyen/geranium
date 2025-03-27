@@ -1,0 +1,7 @@
+The visualization features a horizontal layout with multiple tracks, displaying genomic data annotated with horizontal and vertical lines. It includes:
+
+1. A bar chart showing genomic data intervals on the x-axis, with expression levels on the y-axis. The bars are colored pink and reflect data from a multivec file.
+2. Rules indicating genomic positions with horizontal and vertical lines. The positions link to JSON data values, displayed with varying thickness on the y-axis. Lines are colored purple, with stroke widths indicating data values.
+3. Additional green vertical lines provide further annotation across the genomic axis.
+
+The chart is titled "Rule Mark" with a subtitle "Annotate visualization with horizontal and vertical lines," emphasizing the aggregated representation of genomic expressions and positional annotations. The overall style uses dashed lines, enhancing the visual separation between genomic regions.

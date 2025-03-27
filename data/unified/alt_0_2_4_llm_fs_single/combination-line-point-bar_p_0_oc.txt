@@ -1,0 +1,5 @@
+The visualization in a vertical linear layout comprises a series of genomic tracks focused on chromosome 1, spanning an interval from 1 to 3,000,500. The first track is a multi-row scatter plot featuring points representing genomic positions on the x-axis and expression values on the y-axis. The points' size is determined by the expression values, stratified by categories 'sample 1' to 'sample 4', each depicted in distinct colors.
+
+The second track overlays a line chart and a scatter plot, illustrating genomic positions on the x-axis. Expression is shown on the y-axis with lines connecting points. The height and size are proportional to the expression values, with categories differentiated by colors. 
+
+The third track is a bar chart, showing genomic intervals on the x-axis with expression values depicted as bars on the y-axis. The chart is stratified by categorical rows, and each category, from 'sample 1' to 'sample 4', is color-coded consistently across all charts. These tracks provide a detailed visual analysis of genomic data, with interactive tooltips providing additional metadata and value specifics.

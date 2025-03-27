@@ -1,0 +1,13 @@
+This visualization consists of five linear tracks arranged vertically, displaying genomic data for chromosome 1 (hg38 assembly).
+
+1. **Ideogram Track:** Displays a cytoband ideogram with colored bands representing chromosomal regions. White, gray, black, blue, and red bands indicate different staining intensities or types, such as "gvari" and "acen." Triangles on the left and right end mark p and q arm boundaries.
+
+2. **Genomic Position Annotation Track:** Shows directionality with right and left-facing triangles. The triangles are colored to show strand direction, with one strand in gray-blue and the other in beige, representing gene annotations based on directionality.
+
+3. **Copy Number Variation Tracks:** Two tracks use rectangular bars to represent copy number variations in tumor samples.
+   - **Minor CN Tumor Track:** Shows regions where minor copy number is zero, visualized in dark orange.
+   - **Total CN Tumor Track:** Displays areas with high total copy number, shown in green.
+
+4. **Rearrangement Track:** Visualizes structural variations as arcs connecting genomic positions. The arcs are color-coded by structural variant class: tandem-duplications (green), translocations (blue), deletions (red), and inversions (orange).
+
+Overall, the visualization presents an overview of chromosome 1 with detailed annotation of cytobands, gene directionality, copy number alterations, and structural rearrangements.

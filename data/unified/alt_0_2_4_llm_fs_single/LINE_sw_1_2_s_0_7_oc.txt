@@ -1,0 +1,1 @@
+A line chart in a linear layout visualizes a multivec file, representing the entire genome of hg38. The genomic positions are on the x-axis, while expression levels are displayed on the y-axis using lines. The line size is consistent throughout, with a width value of 2. The title is "Basic Marks: line," and the subtitle is "Tutorial Examples."

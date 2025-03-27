@@ -1,0 +1,7 @@
+The visualization displays two genomic regions on chromosomes 12 and 8. Each region includes a series of aligned bar charts and corresponding gene annotations. 
+
+For chromosome 12, three stacked bar charts titled 'Sample 1', 'Sample 2', and 'Sample 3' use pink bars to indicate expression levels, with the genomic interval spanning from 10,140,000 to 10,210,000. A gene annotation track overlays this, showing genes alongside exons and introns marked with arrows and lines in pink, stratified by strand.
+
+Similarly, chromosome 8 has three bar charts for the same samples, using orange color for expression levels across the genomic region from 127,734,000 to 127,744,000. The associated gene annotation track shows annotations in orange, with detailed gene structures including exons, introns, and directional indicators.
+
+The layout features clear genomic coordinates on the x-axis across both chromosomes, providing a comprehensive view of gene structure and expression levels for comparative analysis.

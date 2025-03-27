@@ -1,0 +1,1 @@
+A heat map in a linear layout visualizes a matrix file, focusing on genomic intervals of hg38. The axes show genomic positions, and color intensity represents quantitative values, following a 'hot' color scheme. The title is "HFFc6_Micro-C."

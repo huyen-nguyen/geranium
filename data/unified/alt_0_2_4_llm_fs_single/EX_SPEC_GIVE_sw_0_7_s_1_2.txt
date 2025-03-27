@@ -1,0 +1,7 @@
+The visualization titled "GIVE" displays a series of genomic tracks in a vertical arrangement, exemplifying a reimplementation of GenoCAT examples. It includes two linear views, each containing multiple tracks.
+
+1. The first view focuses on chromosome 17, displaying genes as rectangles and exons with thicker rectangles. Positive and negative strands are differentiated by position on the y-axis. Three bar charts illustrate quantitative peak data across defined genomic intervals in purple, emphasizing expression levels. Additionally, an ideogram depicts chromosome bands with light and dark regions, aided by rectangular and triangular markers.
+
+2. The second view highlights chromosome 1, similar in structure. Genes are visually represented through rows, with annotations distinguishing gene features. Three additional bar charts in purple further visualize expression data. The ideogram in this view functions similarly, outlining chromosome-specific features.
+
+Overall, the visualization emphasizes genomic data representation, integrating multiple data sources and functional features like brush linking, tailored for detailed genomic analysis in an educational context.

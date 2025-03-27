@@ -1,0 +1,11 @@
+**Description:**
+
+This visualization is a circular genomic plot titled "Circos," showcasing a comprehensive circular layout representation of genomic data. The plot features multiple layers, each serving a specific data visualization purpose:
+
+1. **Circular Bar Chart**: This outermost layer displays quantitative genomic data using bars, where the x-axis shows genomic positions and the y-axis represents the quantitative measure 'peak.' The bars are colored in a uniform pink (#fc8585), providing a visual indication of peak values across genomic positions.
+
+2. **Circular Ideogram**: Situated just inside the bar chart, the ideogram represents different chromosome bands across the genome. This layer uses rectangular marks colored based on distinct genomic categories or stains (e.g., gneg, gpos25) using a color palette ranging from blue (#1f77b4) to teal (#17becf). Light gray strokes outline these rectangles, enhancing readability.
+
+3. **Circular Connections**: The innermost layer visualizes genomic interactions or duplicated segments (segdups) using connecting lines within the circle. The connections illustrate the relationship between different genomic positions, particularly those involving chromosome 1 and others. The color of these connections varies depending on the chromosome pairs involved, distinguished by a range of colors (e.g., yellow #E79F00, green #029F73).
+
+The visualization is static, with neatly aligned tracks and a compact layout. This comprehensive circular plot provides insights into genomic data distribution and correlations, designed to facilitate intuitive analysis

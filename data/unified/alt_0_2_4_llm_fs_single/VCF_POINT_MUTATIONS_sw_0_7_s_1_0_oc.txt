@@ -1,0 +1,3 @@
+**Description:**
+
+This visualization is a scatter plot in a linear layout displaying point mutations from a VCF file. Positioned on the x-axis are different chromosomes labeled as chr2, chr4, chr6, chr8, chr13, and chr21. The y-axis represents the distance to the previous mutation. Each point on the chart corresponds to a mutation and is colored according to its subtype, which includes categories like C>A, C>G, C>T, T>A, T>C, and T>G. The layout is vertical with a center radius of 0.8, ensuring a compact representation of genomic variation across multiple chromosomes. The title is "Point mutations from a VCF file."

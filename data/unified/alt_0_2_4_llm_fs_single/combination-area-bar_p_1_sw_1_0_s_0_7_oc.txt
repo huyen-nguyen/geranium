@@ -1,0 +1,7 @@
+Based on the provided specifications, the visualization consists of two tracks arranged vertically in a linear layout, depicting genomic data from chromosome 1 between positions 1 and 3,000,500.
+
+The top track is a bar chart displaying genomic intervals on the x-axis. Expression values are represented by the height of the bars on the y-axis. This chart is stratified by rows representing four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. Each category is represented by a different color, with black strokes outlining the bars.
+
+The bottom track is an area chart, also showcasing genomic intervals on the x-axis. Expression values are visualized through the filled area on the y-axis. This track maintains the same categorical stratification as the bar chart, with colors depicting each sample and white strokes outlining the area chart.
+
+Both charts include tooltips providing genomic positions and expression values for each sample, and the data is derived from a multivec file hosted online. The specification is based on hg38 assembly with interactive features for detailed exploration.

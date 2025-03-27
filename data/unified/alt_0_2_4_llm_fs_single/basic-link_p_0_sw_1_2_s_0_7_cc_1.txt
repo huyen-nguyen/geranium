@@ -1,0 +1,1 @@
+A linear layout visualization displays links within chromosome 1 using a CSV dataset. The links are plotted with curved connections, showcasing genomic intervals on the x-axis. The stroke color is light purple. The visualization is titled "Basic Marks: Link" with the subtitle "Tutorial Examples," and corresponds to the entire genome assembly hg38.

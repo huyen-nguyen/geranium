@@ -1,0 +1,16 @@
+The visualization, titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells," shows genomic data using horizontal and vertical arrangements. It focuses on chromosome 7, specifically the interval from 77,700,000 to 81,000,000 bp.
+
+The left section contains vertically arranged tracks: 
+1. **Three Bar Charts:**
+   - "HFFc6_H3K4me3": Green bars represent peaks from BigWig data.
+   - "HFFc6_ATAC": Orange bars represent open chromatin peaks.
+   - "HFFC6_CTCF": Navy blue bars show binding sites with additional annotations using pink and green triangles indicating strand directions. 
+2. **Micro-C Matrix:**
+   - "HFFc6_Micro-C": A heatmap representing interaction frequencies with intensity encoded in a hot color map.
+
+The right section is a horizontally arranged mirror of the left, swapping the Micro-C for Hi-C:
+1. **Three Bar Charts** (similar description as left).
+2. **Hi-C Matrix:**
+   - "HFFc6_Hi-C": Heatmap visualizing chromatin interactions.
+
+The bottom track in both comparison sections is "Epilogos (hg38)," showing genomic features in a multicolored categorical bar chart, indicating various genomic annotations. The use of different colors in rectangles distinguishes features like active transcription start sites or enhancers. This comprehensive visualization allows for

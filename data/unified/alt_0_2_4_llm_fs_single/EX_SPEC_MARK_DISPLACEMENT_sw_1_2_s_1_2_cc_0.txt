@@ -1,0 +1,9 @@
+A composite visualization displays genomic data across multiple tracks in a linear layout. The chart, titled "Mark Displacement," illustrates the use of displacement and visualization techniques to resolve overlaps in genomic marks.
+
+The first track focuses on the hg38 transcript data for chromosome 3 between positions 142,500,000 and 143,000,000. It highlights transcripts in a maximum of 15 rows, using arrows to represent strandedness: blue for positively stranded genes and orange for negatively stranded ones. Text annotations identify specific transcripts, ensuring clarity even with overlapping data using a displacement method.
+
+The middle section, titled "Likely Benign," shows chromosome 2 data from 126,800,000 to 127,700,000. It features points connected by lines to depict benign genomic variants. Text annotations and color codes represent distinct genomic bases, enhanced with a vertical arrow for additional context.
+
+The final track displays a scatter plot of genomic points along chromosome 17, representing various pathogenicity levels through color and position on the y-axis, employing displacement to handle dense data regions effectively.
+
+Overall, the visualization demonstrates advanced genomic data encoding techniques such as displacement, color-coding, and annotation to communicate complex information clearly and effectively.

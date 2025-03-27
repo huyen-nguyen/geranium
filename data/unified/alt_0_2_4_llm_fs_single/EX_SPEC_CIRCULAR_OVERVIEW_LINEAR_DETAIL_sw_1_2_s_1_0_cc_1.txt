@@ -1,0 +1,5 @@
+A visualization consists of a circular chart and two horizontal bar charts, formatted in a vertical arrangement. The circular chart features two tracks: a stratified bar chart displaying genomic intervals and peaks, and a connection line chart illustrating rearrangements with strokes colored according to types such as deletion and inversion. The bar chart shows data in a multivec file across samples with brush tools linking to the horizontal charts.
+
+The horizontal section has two bar charts showcasing chromosome 5 and 16. Each bar's y-axis represents the peak value, with colors assigned to different samples, linked by a brush to specific genomic regions in the circular view.
+
+The dataset, in hg38 assembly, highlights genomic information comprehensively through multivec and CSV files, effectively utilizing color and connection strokes to depict categorical variations.

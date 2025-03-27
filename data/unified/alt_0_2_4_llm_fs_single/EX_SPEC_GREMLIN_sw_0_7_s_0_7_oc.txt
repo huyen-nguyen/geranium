@@ -1,0 +1,7 @@
+The visuals titled "Gremlin (O'Brien et al. 2010)" showcase a detailed representation of genetic data across chromosome 5 using genomic intervals and multiple tracks. The top section features an ideogram with categories denoted by rectangles of varying shades, including acen in pink. This section is linked to others through an elliptical brush feature. Beneath, a layered chart displays connections between segments on chromosomes hs5, hs4, and hs6, each represented by distinct colors: blue, gold, and green, with the same colors outlining the connections.
+
+The second section, titled "Region of Interest," focuses on a specific genomic interval from 68,000,000 to 71,000,000 on chromosome 5, showing connections stratified by the same categories and colors as above. Notably, these connections lack color fill, emphasizing the strokes instead.
+
+Finally, the "Rearrangement View" zeroes in on an even narrower region from 69,276,000 to 69,282,000 on chromosome 5, highlighting potential data rearrangements with thick blue arcs.
+
+The visualization employs elliptical link styles for smooth path integration across views, with interactive elements enhancing exploration through linked dynamic brushing between tracks.

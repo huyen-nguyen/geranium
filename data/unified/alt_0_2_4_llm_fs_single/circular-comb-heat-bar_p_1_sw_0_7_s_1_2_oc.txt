@@ -1,0 +1,7 @@
+The visualization consists of two circular tracks arranged vertically, focusing on chromosome 1 from position 1 to 3,000,500. 
+
+The left track is a circular bar chart featuring data from four different samples. Each sample is represented as a separate row, and the colors of the bars correspond to these samples. The chart displays genomic positions on the x-axis and quantitative peak values on the y-axis. Interactive tooltips provide additional details, such as start and end positions, peak values, and sample names.
+
+The right track is a circular heatmap where the genomic positions are divided into intervals shown on the x-axis. The intensity of each interval is encoded with colors, representing quantitative expression values​. This track is also stratified into rows for each sample.
+
+The assembly used is hg38, and both tracks are styled in a circular layout, allowing for a comparative visualization of multivec data.

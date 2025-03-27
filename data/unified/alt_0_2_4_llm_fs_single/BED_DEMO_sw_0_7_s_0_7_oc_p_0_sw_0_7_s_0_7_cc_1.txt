@@ -1,0 +1,8 @@
+A vertical linear layout displays four distinct BED tracks visualizing genomic intervals on chromosome 1 from 1 to 2,000,000. Each track represents BED files with varying specifications. The tracks are visually encoded using rectangles. 
+
+1. The first track, titled "BED12: All 12 standard fields," shows genomic annotations in green rectangles.
+2. The second track, "BED6: A file with the first 6 BED fields," uses sky blue rectangles.
+3. The third track, "BED6+6: A file with the first 6 BED fields, and 6 custom fields," features purple rectangles.
+4. The fourth track, "BED12+1: A file with all 12 standard fields, and a single extra custom field," also uses purple rectangles.
+
+This visualization demonstrates the use of BED files in genomic data representation, highlighting differences in BED structure through color coding.

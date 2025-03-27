@@ -1,0 +1,21 @@
+In a horizontal arrangement, this visualization features three bar charts representing genomic data. Each chart showcases expression levels on the y-axis, with genomic regions on the x-axis.
+
+1. **First Bar Chart:** 
+   - **Genome Segment:** Chromosome 12, intervals 5,000,000 to 15,000,000. 
+   - **Data Source:** Multivec file.
+   - **Bar Color:** Light purple.
+   - **Characteristics:** The chart illustrates expression peaks in different genomic positions, with white strokes and light purple bars.
+
+2. **Second Bar Chart:**
+   - **Genome Segment:** Chromosome 9, intervals 5,000,000 to 15,000,000.
+   - **Data Source:** Same multivec file.
+   - **Bar Color:** Light purple.
+   - **Characteristics:** Similar to the first chart, showing a continuation of expression data.
+
+3. **Third Bar Chart:**
+   - **Genome Segment:** Chromosome 12, intervals 5,000,000 to 15,000,000.
+   - **Data Source:** Multivec file, same parameters.
+   - **Bar Color:** Sky blue.
+   - **Characteristics:** Features similar genomic data with blue bars instead, representing a different condition or data subset.
+
+Common features across all charts include genomic intervals on the x-axis and quantitative expression levels on the y-axis, enhancing comparability within the visualization.

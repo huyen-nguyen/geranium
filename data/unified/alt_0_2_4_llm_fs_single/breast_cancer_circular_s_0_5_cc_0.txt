@@ -1,0 +1,7 @@
+**Description:**
+
+A circular ideogram chart shows chromosome bands across the entire genome of hg38. The genome is depicted with intervals along the x-axis. Different colors represent various cytogenetic bands, with categories like "gneg," "gpos25," and others distinguished by shades such as blue and orange.
+
+Inside the ideogram, there are two circular tracks represented by rectangles. The first track uses green rectangles to highlight regions based on the "minor_cn_tumor" field where the value is "0." The second track uses sky blue rectangles to depict regions with "total_cn_tumor" values between 4.5 and 900.
+
+At the center, a circular chart with connections displays genomic rearrangements. The connections link different genomic positions, with colors and strokes indicating different types of structural variations like "tandem-duplication," "translocation," and "inversion." The line colors and strokes vary, adding more detail to the visualization of genomic structures.

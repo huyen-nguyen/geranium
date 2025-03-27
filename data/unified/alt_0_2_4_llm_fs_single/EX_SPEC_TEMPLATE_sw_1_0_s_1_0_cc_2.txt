@@ -1,0 +1,9 @@
+**Description:**
+
+The visualization consists of three distinct tracks utilizing Gosling.js track templates in a linear layout. The topmost track is a genomic range annotation track focused on chromosome 3, between positions 52,168,000 and 52,890,000. It includes gray triangular and rectangular marks representing gene annotations, with labels indicating gene names. 
+
+The middle track is a sequence-focused bar chart located at chromosome 1 between positions 77,925,299 and 77,925,320. This track visualizes base counts using colorful bars representing different bases (A, T, G, C) and includes textual labels for the bases.
+
+The bottom track displays a full ideogram of chromosome 1, illustrating cytogenetic bands, with designations such as p31.1, q12, and q41. The colors vary by band stain type, including black, white, and shades of gray, with additional indicators for p and q arms using right and left triangles.
+
+The overall visualization showcases the capabilities of Gosling.js in rendering layered, complex genomic data efficiently, with a focus on smooth paths and precise genomic positioning.

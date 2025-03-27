@@ -1,0 +1,9 @@
+The visualization showcases a set of genomic tracks in a linear layout created using Gosling.js. It includes three individual charts: a genomic range annotation track with text, a sequence bar chart with base annotations, and a cytogenetic ideogram.
+
+1. **Genomic Range Annotation Track**: Displays gene annotations on chromosome 3 (chr3) between positions 52,168,000 and 52,890,000. Gene structures are represented with arrows, indicating direction, and labeled with gene names in gray text. The track is stratified by rows for positive and negative strands, marked with triangles and rectangles.
+
+2. **Sequence Bar Chart with Base Annotations**: Focuses on a small genomic region on chromosome 1 (chr1) from position 77,925,299 to 77,925,320. Bars represent nucleotide counts (A, T, G, C) in different colors, with textual base annotations in white.
+
+3. **Cytogenetic Ideogram**: Illustrates the entire length of chr1, highlighting cytogenetic bands with color-coded rectangles. Bands are labeled with text to denote specific regions, like p31.1 and q12.
+
+This visualization utilizes data templates in Gosling.js to simplify the creation of complex genomic visualizations, enabling detailed representation and analysis of genomic features.

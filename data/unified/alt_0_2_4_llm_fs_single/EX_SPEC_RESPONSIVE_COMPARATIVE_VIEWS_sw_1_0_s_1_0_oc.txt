@@ -1,0 +1,7 @@
+The visualization consists of three linear bar charts arranged horizontally, each representing genomic data from a multivec file. The charts illustrate data from chromosome 12 and chromosome 9, specifically within intervals from 5,000,000 to 15,000,000. 
+
+- The first chart displays data in navy blue, focused on chromosome 12.
+- The second chart features orange bars, depicting chromosome 9.
+- The third chart highlights chromosome 12 data again, using dark yellow bars.
+
+Each chart encodes the genomic position on the x-axis and quantitative peak values on the y-axis. The bars' colors and strokes provide visual differentiation, with all bars having a thin white stroke. The layout is responsive, allowing for width adjustments while maintaining a fixed height. The data is sourced from a tileset URL and uses a consistent bin size for aggregation.

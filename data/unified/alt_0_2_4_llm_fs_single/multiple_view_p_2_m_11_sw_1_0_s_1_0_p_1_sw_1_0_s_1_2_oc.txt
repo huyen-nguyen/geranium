@@ -1,0 +1,14 @@
+The visualization titled "Visual Linking" presents genomic data using a vertical arrangement. It consists of two main views: a linear scatter plot and a combination of linear and circular views at the bottom.
+
+1. **Top Scatter Plot**:
+   - Displays data across chromosome 1 (160,000,000 to 200,000,000) with genomic positions on the x-axis and quantitative values on the y-axis.
+   - The data is stratified by samples ('sample 1' to 'sample 4') with different colors for each sample.
+   - Points represent genomic peaks.
+
+2. **Bottom Views**:
+   - **Left Linear View**: Shows genomic intervals as area charts, similar sample stratification with color encoding.
+     - Includes an interactive brush to select a genomic range, linking to the detail view above.
+   - **Right Circular View**: Depicts the same data in a circular layout, again allowing interactive range selection via a brush.
+     - Enhances visual linkage by displaying interconnected genomic regions in a radial form.
+
+These components collectively enable detailed exploration of genomic data with easily adjustable focus areas through interactive brushes, emphasizing dynamic linkage between different visual dimensions.

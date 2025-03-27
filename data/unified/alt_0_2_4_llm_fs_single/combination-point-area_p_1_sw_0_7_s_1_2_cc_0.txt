@@ -1,0 +1,5 @@
+A linear layout visualizes genomic data from chromosome 1 between positions 1 and 3,000,500. The visualization consists of two vertically arranged views. 
+
+The top view features a multi-row area chart illustrating expression levels. Each row represents one of four samples, displayed in distinct colors: blue, orange, green, and red. This view presents genomic positions on the x-axis and expression values on the y-axis. The color and height of the area indicate quantitative values from the 'peak' data field. 
+
+The bottom view is a scatter plot displaying individual expression values in the same four samples. Points vary in size based on their quantitative 'peak' values and are semi-transparent. The x-axis shows genomic positions, while the y-axis reflects expression levels. Points are colored according to the sample categories. Both views include interactive tooltips providing additional details, such as genomic position and expression values.

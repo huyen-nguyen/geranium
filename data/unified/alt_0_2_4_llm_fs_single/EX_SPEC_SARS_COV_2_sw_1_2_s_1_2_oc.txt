@@ -1,0 +1,9 @@
+The visualization is a detailed linear representation of the SARS-CoV-2 genome, sourced from the WashU Virus Genome Browser, NCBI, and GISAID. It features two main sections: 
+
+1. **NC_045512.2 Genes**: Displayed as a series of navy blue rectangles along a x-axis representing the genome from position 1 to 29,903. White lines with a triangular pattern are used to indicate specific genomic features, linked to an interactive brush for exploration. Black text labels denote gene symbols.
+
+2. **S Protein Annotation**: Illustrates protein domains such as 'receptor-binding domain (RBD)' and 'S1/S2 cleavage site,' with categories represented as colored rectangles. These annotations are organized in rows for clarity.
+
+The subsequent sequence data shows nucleotide frequency across the genome with bar height representing count, and color coding distinguishes between bases (A, T, G, C). 
+
+Lastly, the TRS-L-Dependent Recombination Events is visualized with curved connections in a light navy blue, indicating genomic positions where recombination events occur, providing insights into structural genome rearrangements.

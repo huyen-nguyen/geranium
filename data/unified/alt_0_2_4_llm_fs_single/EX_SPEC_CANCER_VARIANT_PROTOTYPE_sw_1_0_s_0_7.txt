@@ -1,0 +1,9 @@
+The visualization presents a detailed genomic analysis of breast cancer variants, focusing on RAD51C- and PALB2-altered triple-negative breast cancers, with data specific to the HG19 assembly. The figure is organized linearly in vertical and horizontal arrangements.
+
+The top section features a circular ideogram displaying chromosome intervals with different colors representing varying genomic categories. Included are a track titled "Patient Overview (PD35930a)" with a blue interactive brush linking to other charts, and tracks like "Putative Driver" showcasing genomic intervals with text annotations. The "LOH" and "Gain" tracks highlight regions with copy number variations through dark orange and green rectangles, respectively. The "Structural Variant" track visually connects genomic positions using color-coded lines indicating different SV classes such as tandem-duplications and translocations.
+
+The middle horizontal section further details chromosome 1, illustrating an ideogram with text and directional triangles indicating genomic directionality. Accompanying tracks indicate genes, with distinct rows and labeling by strand direction, and structural variants showcasing connections and points color-coded by SV class.
+
+The lower section displays coverage and pileup tracks using BAM data, focusing on the genomic regions of chromosome 1 between specific intervals. These tracks use bar charts to represent read coverage and rectangular pileup layers to detail the alignment across a variety of SV types, each presented in distinct colors to convey structural details like deletions, inversions, and clipping.
+
+Overall, this multi-layered visualization effectively stratifies and highlights key genomic features essential

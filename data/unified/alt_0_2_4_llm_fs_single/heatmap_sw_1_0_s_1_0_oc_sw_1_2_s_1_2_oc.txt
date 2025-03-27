@@ -1,0 +1,1 @@
+A heat map in a linear layout visualizes a matrix file using the hg38 genome assembly. The genomic positions are represented on both the x- and y-axes, with intervals marked along each axis. The expression values are encoded through color intensity, using a warm color range. The title of the visualization is 'HFFc6_Micro-C'.

@@ -1,0 +1,5 @@
+The visualization consists of five aligned tracks featuring interactive genomic data representations. The first three tracks are bar charts, each highlighting different groupings: 'Individual Marks,' 'Group Marks By Sample,' and 'Group Marks By Genomic Position.' These charts display genomic intervals on the x-axis with expression values shown as colored bars on the y-axis, where colors represent different samples.
+
+The fourth track is a genomic range annotation track labeled 'Group Marks By Gene,' portraying gene annotations over chromosome 3 using gray triangles and rectangles. The track allows for interactive mouse-hovering and range selection to highlight genomic features.
+
+The fifth track, titled 'Group Marks By Chromosome,' features an ideogram displaying cytogenetic bands for multiple chromosomes. Various colors and shapes within this track denote different band types and densities, offering detailed chromosome visualization. The entire figure is enriched with user interactions such as mouse hovering and selection, enhancing data exploration capabilities.

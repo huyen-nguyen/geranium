@@ -1,0 +1,11 @@
+The visualization presents the SARS-CoV-2 genome in a linear layout using data sourced from the WashU Virus Genome Browser, NCBI, and GISAID. It includes several tracks depicting various genomic features across the NC_045512.2 reference assembly.
+
+1. **Gene Track**: Displays genes from the NC_045512.2 genome using pink rectangles. Genes are annotated with green lines and text labels, providing their genomic positions. A blue interactive brush facilitates zoom linkages to expand specific regions.
+
+2. **S Protein Annotation Track**: Annotates protein regions such as receptor-binding domain (RBD), receptor-binding motif (RBM), and cleavage sites. It uses colorful rectangles to differentiate these regions and labels them with black text.
+
+3. **Sequence Track**: Features a bar chart that shows sequence data based on nucleotide counts (A, T, G, C) represented by bars. The bars are color-coded to indicate nucleotide type.
+
+4. **Link Track**: Visualizes TRS-L-dependent recombination events with arcs connecting different genomic locations, colored in sky blue to denote linkage paths.
+
+The chart is richly detailed with colors denoting specific features, and interactivity to enhance data exploration.

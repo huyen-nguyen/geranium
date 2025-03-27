@@ -1,0 +1,5 @@
+The visualization is an overlaid heatmap combining two genomic matrix tracks for chromosome 10, arranged horizontally. It consists of two tracks where the genomic positions on both the x- and y-axes represent intervals, with expression values encoded by color intensity.
+
+The first track uses shades of orange ("hot" range) for the lower-left matrix, while the second track uses shades of grey for the upper-right matrix. Both tracks are styled with legends displaying the quantitative value ranges, helping in interpreting the color-encoded data. The visualization adjusts responsively based on the display width, offering responsive size options.
+
+Each track overlays multiple elements to create an insightful representation of genomic data, allowing for the comparison of genomic intervals in terms of expression values across different conditions or datasets. The entire visualization is connected by a common linking ID, ensuring cohesive interpretation across the two matrices.

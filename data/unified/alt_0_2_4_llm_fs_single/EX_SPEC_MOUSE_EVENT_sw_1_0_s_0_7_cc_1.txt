@@ -1,0 +1,13 @@
+The visualization titled "Custom Mouse Events" displays five genomic tracks in a linear layout, focusing on chromosome 1. Each track uses a multivec data type for bar marks, highlighting distinct mouse interaction functionalities such as mouse hover and range selection.
+
+1. **Individual Marks**: Displays bars colored by sample, allowing mouse interactions like hovering and purple range selection.
+
+2. **Group Marks By Sample**: Bars are grouped and colored by sample, with interactive blue hover and green brushing features.
+
+3. **Group Marks By Genomic Position**: Similar to the first, bars are grouped by genomic position, featuring blue hover and yellow brushing.
+
+4. **Group Marks By Gene**: Uses gene annotation data from chromosome 3, rendering genomic intervals with text, arrows, and rectangles arranged by strand direction. Mouse interactions are possible.
+
+5. **Group Marks By Chromosome**: Uses cytogenetic band data across multiple chromosomes, denoting texts, rectangles, and colored triangles representing chromosome bands; interactions include mouse click and hover functionality.
+
+These tracks demonstrate complex data interaction techniques while keeping data interpretation clear through color encoding and tooltips.

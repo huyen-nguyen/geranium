@@ -1,0 +1,7 @@
+The visualization displays a matrix comparing Micro-C and Hi-C data for HFFc6 cells, focused on chromosome 7 from positions 77,700,000 to 81,000,000. It includes two horizontal arrangements of views, each with multiple tracks.
+
+The first section contains vertically arranged bar charts showing peak data from bigWig files, colored in dark green for HFFc6_H3K4me3 and orange for HFFc6_ATAC. An overlay contains blue bars for HFFC6_CTCF, along with pink and green genomic position annotations indicating strand directions.
+
+The second section presents matrix tracks for Micro-C and Hi-C data, depicting genomic intervals on both axes. Expression values are encoded using a heatmap color intensity. Below these matrices, the Epilogos (hg38) track displays categories using various colors.
+
+Overall, this visualization structure provides a comprehensive comparison between different genomic interaction data types, enriched by color-coded categorical annotations.

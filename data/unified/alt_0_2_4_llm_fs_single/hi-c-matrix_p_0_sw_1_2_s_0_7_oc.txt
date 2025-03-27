@@ -1,0 +1,9 @@
+The visualization titled "Hi-C Matrix" showcases genomic interactions using a matrix layout combined with additional annotations. Positioned within the x-domain interval of 800,000,000 to 1,800,000,000, it overlays multiple tracks in a linear format focused on the hg38 assembly.
+
+1. **Matrix Track**: Displays the genome on both x- and y-axes as intervals with color intensity encoding expression values. Grey shades indicate varying quantitative data, supplying a comprehensive view of interaction intensity.
+
+2. **Rule Tracks**: Vertical and horizontal lines adorn the x- and y-axes, colored red and blue respectively, delineating specific genomic positions for highlighted annotation, enhancing interpretative layering.
+
+3. **Additional Bar and Point Tracks**: Include a bar chart contrasting genomic coordinates on both axes, utilizing quantitative data fields to color-code the centroid. Simultaneously, a scatter plot demonstrates genomic intervals where point size reveals data magnitude, colored in steel blue.
+
+The presentation effectively utilizes overlay technique to enrich the exploratory and interpretational depth of complex genomic interaction, integrating both quantitative and categorical data dimensions.

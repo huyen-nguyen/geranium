@@ -1,0 +1,12 @@
+The visualization comprises a nested circular and linear view, linked by a blue interactive brush in the circular view. 
+
+**Circular View**:
+- Displays the entire hg19 genome as an ideogram.
+- Includes five tracks: an ideogram, a text track labeled "Putative Driver," two tracks for "Gain" (sky blue) and "Loss of Heterozygosity (LOH)" (dark orange) regions, and a line-connection track showing various structural variations such as Translocation, Duplication, and Deletion in colors like light gray, green, and blue.
+
+**Linear View**:
+- Focuses on chromosome 1.
+- Contains nine tracks mirroring the circular view, with added gene annotation (gray triangles and rectangles for exons), a scatterplot named "Point Mutation" indicating the distance to previous mutations with colored dots, and additional tracks for Insertion and Deletion (shown in yellow and green). 
+- A Copy Number Variants track shows quantitative data in gray.
+
+The layout effectively conveys chromosomal abnormalities and mutations, aiding in an intricate genomic analysis.

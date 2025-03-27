@@ -1,0 +1,12 @@
+A dual view visualization consisting of a circular view and a linear view is displayed. The circular view, representing the complete genome on the assembly hg19, connects to the linear view using a blue interactive brush on chromosome 1.
+
+The circular view includes an ideogram with categories shown in various colors, a text track titled "Putative Driver," and multiple range annotation tracks. The range annotation tracks "Gain" and "Loss of Heterozygosity (LOH)" are visualized with blue and orange rectangles, respectively. Connections between genomic positions are shown with lines in different colors, distinguished by structural variation types such as 'Gain', 'LOH', 'Translocation', 'Duplication', 'Deletion', and 'Inversion.'
+
+The linear view zooms into chromosome 1, showing detailed tracks: 
+1. An ideogram categorizing genomic regions.
+2. A text annotation track titled "Putative Driver" with black text.
+3. A scatter plot titled "Point Mutation" displays points aligned to genomic positions, color-coded by mutation subtype.
+4. Range annotation tracks show insertions and deletions in different rows with colors yellow and green.
+5. A "Copy Number Variants" track displays bars, where bar height represents 'total_cn' and the color is light gray, providing a quantitative measure of copy number changes.
+
+This comprehensive visualization assists in the analysis of complex genomic structural variations and annotations.

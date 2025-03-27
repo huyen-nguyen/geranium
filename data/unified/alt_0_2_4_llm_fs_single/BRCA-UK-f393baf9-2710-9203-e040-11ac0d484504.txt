@@ -1,0 +1,5 @@
+A visualization combining circular and linear views highlights genomic data from assembly hg19. The top circular view showcases an ideogram and additional tracks for point annotations, range annotations titled 'Gain' and 'Loss of Heterozygosity (LOH)', and line-connection tracks illustrating structural variations. Tracks include sky blue rectangles for 'Gain' and orange rectangles for 'LOH', with connections of various colors indicating categories such as 'Translocation', 'Duplication', and 'Inversion'.
+
+The linear view below details chromosome 1 with tracks including ideograms, point mutation scatter plots, and gene annotations. The 'Point Mutation' scatter plot visualizes mutations with diverse colors representing subtypes like 'C>A' and 'T>A'. Range annotation tracks for 'Insertions' and 'Deletions' display yellow and green rectangles, respectively. The 'Copy Number Variants' track shows genomic ranges highlighted in gray bars, while separate tracks for 'Gain' and 'LOH' utilize sky blue and orange colors.
+
+These dual views are connected by a blue interactive brush, allowing exploration and insight into genomic structural variations and point mutations.

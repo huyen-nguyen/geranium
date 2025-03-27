@@ -1,0 +1,13 @@
+The visualization is a linear representation of genomic data for chromosome 1. It includes five distinct tracks displayed horizontally:
+
+1. **Ideogram with Triangles**: This track shows the chromosomal bands using rectangles and annotations using right and left triangles. The colors of these elements represent different categories.
+
+2. **Genomic Position Annotation Track**: This track features triangles indicating gene positions and strands. The blue right-facing triangles represent the positive strand, while the orange left-facing triangles represent the negative strand.
+
+3. **Rectangular Tracks for CNV Data**:
+   - **First Rectangular Track**: Visualizes regions where the minor copy number in tumors is zero, using sky blue rectangles.
+   - **Second Rectangular Track**: Shows data where the total copy number in tumors ranges from 4.5 to 900, indicated by green rectangles.
+
+4. **Connection Track**: Displays structural variations using lines connecting genomic positions. The color and stroke of these lines represent different categories, such as tandem duplications, translocations, deletions, and inversions.
+
+Each track represents specific aspects of genomic information for detailed analysis.

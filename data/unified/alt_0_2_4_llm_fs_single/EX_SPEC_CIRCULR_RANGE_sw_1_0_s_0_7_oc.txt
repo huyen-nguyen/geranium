@@ -1,0 +1,1 @@
+A circular bar chart visualizes vector data, displaying the entire genome of hg38. The bars represent genomic positions on the x-axis and peak values on the y-axis. The bars are colored in light yellow. The chart is arranged in a circular layout with a center radius of 0.3 and has a static arrangement without interactive features.

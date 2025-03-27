@@ -1,0 +1,3 @@
+**Description:**
+
+A text plot in a linear layout visualizes a multivec file, showcasing genomic intervals. It displays counts on the y-axis with text annotations. The positions are depicted on the x-axis using fields named 'start' and 'end.' Each nucleotide base ('A', 'T', 'G', 'C') is represented with different colors denoting various categories. The plot title is 'Basic Marks: Text' and the subtitle is 'Tutorial Examples.'

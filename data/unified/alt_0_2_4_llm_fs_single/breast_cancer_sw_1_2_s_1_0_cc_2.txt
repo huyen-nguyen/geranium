@@ -1,0 +1,13 @@
+This visualization is arranged in a linear layout displaying genomic data corresponding to chromosome 1. It includes five main tracks:
+
+1. **Ideogram with Triangles:** The top track is an ideogram where the genome is represented along the x-axis. Colored rectangles and left/right triangles encode different cytogenetic banding patterns, with colors indicating categories such as "gneg" and "gpos" levels.
+
+2. **Genomic Position Annotation Track:** This track features directional gene annotations as triangles. Blue right-facing triangles signify the positive strand, while orange left-facing triangles denote the negative strand. These are organized into rows based on strand alignment.
+
+3. **Copy Number Variation (CNV) Track:** Displays CNV data with sky-blue rectangles showing genomic intervals where the minor copy number in the tumor is zero.
+
+4. **Additional CNV Track:** Depicts total copy number variation in tumors with pink rectangles representing genomic intervals with total CNV between 4.5 and 900.
+
+5. **Connections Track:** This layer visualizes structural variations using connections between genomic positions. Different colors and strokes denote categories such as "tandem-duplication," "translocation," "deletion," and "inversion."
+
+The visualization effectively integrates cyto-banding, gene annotations, CNV data, and structural variations, leveraging various graphical elements to provide a comprehensive genomic overview.

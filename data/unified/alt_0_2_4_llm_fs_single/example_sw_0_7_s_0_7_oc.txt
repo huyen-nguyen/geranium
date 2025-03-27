@@ -1,0 +1,10 @@
+A linear visualization titled "Visual Encoding" showcases diverse visual encoding methods using a multivec file. It displays data for chromosome 1 across nine tracks: a heat map, bar charts, scatter plots, a line chart, an area chart, and a connection chart. 
+
+- The heat map uses color intensity to encode expression values, arranged by categories.
+- Bar charts use bars to show quantitative data for samples 1 to 4, color-coded by category.
+- A combined line and scatter plot displays lines and points to represent expression values, with point size indicating peak value.
+- Two scatter plots represent the expression values with varying point sizes and colors.
+- The area chart visualizes expression with filled areas, categorized by color.
+- A connection chart uses colors to depict different genomic categories.
+
+Each visualization is accompanied by detailed tooltips, aiding in the interpretation of genomic positions and expression values.

@@ -1,0 +1,17 @@
+The visualization is titled "Single-cell Epigenomic Analysis" and subtitled "Corces et al. 2020." It features a linear arrangement with multiple tracks focused on chromosome 3, covering the genomic interval from 52,168,000 to 52,890,000. The visualization includes several bar charts representing different cell types, each visualized using distinct colors: 
+
+- "Excitatory neurons" are shown with orange bars.
+- "Inhibitory neurons" with green bars.
+- "Dopaminergic neurons" with purple bars.
+- "Microglia" with light blue bars.
+- "Oligodendrocytes" with dark purple bars.
+- "Astrocytes" with red bars.
+- "OPCs" with pink bars.
+
+These data are sourced from bigwig files, reflecting quantitative expression across the specified genomic region. 
+
+A gene annotation track displays gene positions and orientations with text and rectangles colored blue for genes on the positive strand and red for those on the negative strand. Exons are represented as rectangles, and a rule indicates the genomic range of each gene. 
+
+Additionally, there are charts utilizing a "withinLink" mark for PLAC-seq data, with stroke colors of orange, blue, and purple representing different neuronal types and their connections, all visualized with a high level of transparency.
+
+An ideogram track provides a broader context of chromosome 3, colored according to cytogenetic band density, along with regions highlighted in

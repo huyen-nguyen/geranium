@@ -1,0 +1,21 @@
+The visualization titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" illustrates several genomic datasets for chromosome 7, specifically from base pairs 77,700,000 to 81,000,000. This horizontal arrangement features a matrix comparing Micro-C and Hi-C interactions in HFFc6 cells.
+
+### Details:
+- **Vertical Arrangements:** Two vertical panels are present.
+  - **First Vertical Panel:**
+    - **Bar Charts:**
+      - HFFc6_H3K4me3 (dark green): Displays peaks using bigWig data.
+      - HFFc6_ATAC (orange): Visualizes accessibility using bigWig data.
+      - HFFc6_CTCF (navy blue): Shows CTCF binding sites.
+    - **Annotation Tracks:**
+      - Genomic position markers using pink and green triangles to indicate strand orientation.
+
+  - **Second Vertical Panel:**
+    - **Bar Charts:** (Identical layout to the first panel):
+      - Similar to HFFc6_H3K4me3, ATAC, and CTCF tracks.
+      
+    - **Matrix Track:**
+      - HFFc6_Micro-C: A matrix view using warm color range to represent genomic interactions.
+
+  - **Gene Annotations:**
+    - Epilogos track uses multivec data to represent various genomic categories with a spectrum of colors indicating different epigen

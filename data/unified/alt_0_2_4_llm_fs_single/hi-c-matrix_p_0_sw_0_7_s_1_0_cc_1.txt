@@ -1,0 +1,11 @@
+A visualization titled "Hi-C Matrix: Visualize Hi-C Data Using Matrix and Annotations" displays genomic data in a linear layout covering an interval from 800,000,000 to 1,800,000,000 base pairs. This visualization overlays multiple tracks:
+
+1. **Heatmap Matrix**: Positioned on both x- and y-axes, it represents genomic intervals with color intensities indicating expression values using a "hot" color range, with a light gray background. The assembly used is hg38.
+
+2. **Vertical and Horizontal Lines**: The chart includes vertical lines colored sky blue and horizontal lines in purple, marking specified genomic positions (e.g., at 100,000 on chr2, chr5, chr10) with a stroke width of 2.
+
+3. **Bar Annotations**: Alongside the matrix, bars exhibit categories with strokes varied by chromosome (chr6, chr7, chr8), indicating their quantitative values with opacity set at 0.5.
+
+4. **Point Chart**: Points plotted over the matrix have sizes representing quantitative values and are colored green with an opacity of 0.5. These use genomic coordinates and extend along specified intervals.
+
+Overall, the visualization is dynamic, featuring a dashed line styling and supporting interaction by linking specific genomic intervals within the hg38 human genome assembly.

@@ -1,0 +1,7 @@
+The given visualization is a genomic annotation and expression chart, displaying data from two chromosomes: chr12 and chr8. The chart is divided into eight individual panels, each representing a different sample or annotation.
+
+In the first section, chr12 is visualized from 10,140,000 to 10,210,000. The top panel displays a gene annotation track with textual labels, showing both gene and exon regions. The text, lines, and triangles are shaded in light purple, indicating strand orientation. Below this, there are three bar charts, each representing a different sample ('Sample 1', 'Sample 2', and 'Sample 3') with expression levels visualized as bars. The bars for the samples are colored in green, pink, and pink respectively.
+
+The second section illustrates chr8 from 127,734,000 to 127,744,000. Similar to the first section, it starts with a genomic range annotation with text, where the arrows, text labels, and lines are sky blue, denoting gene orientation. The three subsequent bar charts represent the expression data for 'Sample 1', 'Sample 2', and 'Sample 3'. In this section, the bars are colored in purple, green, and sky blue.
+
+Throughout the chart, tracks are vertically aligned, and expression values are plotted on the y-axis as bars, while genomic positions are denoted on the x-axis in fixed intervals. The visualization uses color and geometry to effectively stratify data across

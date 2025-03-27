@@ -1,0 +1,7 @@
+The visualization consists of two charts within a circular layout, representing genomic data from chromosome 1 between positions 1 and 3,000,500 using a multivec file. 
+
+The left chart is a circular bar chart, where the genome is mapped on the x-axis and expression levels are displayed on the y-axis with bars. These bars are colored to represent four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4', in yellow, cyan, blue, and pink respectively. 
+
+The right chart combines a circular line chart and a circular scatter plot. It similarly maps the genome on the x-axis and expression levels on the y-axis, illustrated by lines and points. Each category is represented by a distinct color. Additionally, point sizes are determined by the expression values, with the chart segmented into rows by category. 
+
+Both charts include tooltips that provide genomic position, value, and sample information on hover, enhancing interactivity.

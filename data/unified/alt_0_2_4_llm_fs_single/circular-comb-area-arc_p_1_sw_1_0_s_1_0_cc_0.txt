@@ -1,0 +1,19 @@
+The visualization is a circular layout with two distinct tracks showing data from chromosome 1 within genomic intervals. 
+
+### Left Track:
+- **Type:** Circular chart with connections.
+- **Data Source:** CSV file indicating genomic positions (`s1`, `s2`, `e1`, `e2`) with associated categories.
+- **Visual Encoding:** Genomic positions (`s1` to `e1`) on the x-axis with connections representing nominal categories. 
+- **Styles:** Lines colored based on categories with black stroke and 0.2 opacity.
+- **Dimensions:** Width and height are set to 350 units.
+  
+### Right Track:
+- **Type:** Circular chart with area plots.
+- **Data Source:** Multivec file showing genomic `position`, row `sample`, and expression `peak`.
+- **Visual Encoding:** x-axis represents genomic position, and y-axis shows expression as an area under each sample. 
+- **Categories:** Stratified by four samples, each colored differently with a legend for reference.
+- **Tooltip:** Interactive details for start and end positions of genomic data, peaks, and sample names.
+- **Styles:** White stroke with a width of 0.5 for area distinction.
+- **Dimensions:** Width and height mirror the left track at 350 units.
+
+Overall, this visualization displays genetic sequence connections and expression data across samples, categorized by colors, within a circular genomic context.

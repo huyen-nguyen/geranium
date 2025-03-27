@@ -1,0 +1,22 @@
+The visualization comprises a linear layout depicting genomic data from an unknown assembly. Two sets of tracks are included, each offering a different perspective on the data.
+
+**Upper Section:**
+1. **Gap Bar Chart:** 
+   - Displays genomic intervals along the x-axis with gap values shown as purple bars on the y-axis.
+   - Indicates gaps in genomic alignment with specified intervals between positions 350 and 396.
+
+2. **Conservation Bar Chart:**
+   - Illustrates genomic intervals with corresponding conservation values, rendered in a heatmap color range.
+   - Conservation is visualized quantitatively on the y-axis, providing insights into evolutionary preservation across sequences.
+
+3. **Alignment Chart with Rectangles and Text:**
+   - Shows sequences stratified by rows representing different samples or categories.
+   - Colored rectangles and black text annotations illustrate base information across genomic positions.
+
+**Lower Section:**
+1. **Overlaid Chart:**
+   - Combines rectangles for sequences, conservation bars, and gap bars with a comprehensive view.
+   - Intervals range from 0 to 396, showcasing genomic conservation and gaps in a unified display.
+
+**Overall Description:**
+The visualization effectively communicates genomic gaps, conservation, and base alignment using varied bar and text elements, facilitating a comprehensive understanding of sequence characteristics within specified intervals. This amalgamation allows users to explore distinct attributes, such as gaps and conservation, seamlessly across linked views in a coordinated manner, traced by interactive brushes aligning different sections.

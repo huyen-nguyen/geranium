@@ -1,0 +1,5 @@
+The visualization consists of a circular and a linear view, linked by an interactive brush in the circular ideogram of the human genome (hg19 assembly). The circular view displays data on structural variations such as 'Gain,' 'Loss of Heterozygosity (LOH),' 'Translocation,' 'Duplication,' 'Deletion,' and 'Inversion,' each represented with distinct colors overlaid on concentric tracks. The tracks include an ideogram, text annotations for potential drivers, and range annotations of genetic data.
+
+The linear view, corresponding to chromosome 1, includes an ideogram, textual annotations, and multiple tracks for various genomic data, including point mutations shown as a scatter plot, copy number variants, and insertion/deletion categories distinguished by vertical lines. The scatter plot of 'Point Mutations' marks the genomic positions with points colored differently based on mutation subtypes. The annotation tracks detail insertions and deletions with rectangles of varying heights in gray tones.
+
+Additionally, the visualization emphasizes interactive exploration, allowing users to hover over elements for detailed genomic information provided via tooltips.

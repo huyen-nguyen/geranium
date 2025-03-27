@@ -1,0 +1,7 @@
+The visualization is a circular layout displaying genomic data from chromosome 1 within the interval 1 to 3,000,500. It consists of two horizontally arranged views. 
+
+The left view is a circular heat map representing expression values using color intensity. The map is divided into rows corresponding to four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The color gradient encodes quantitative values from the field 'peak', with values linked to genomic intervals.
+
+The right view is a circular bar chart where bars display expression values (y-axis) along genomic positions (x-axis). The chart is also stratified by rows for the four categories, each distinguished by its color. Both views use data from a multivec file, and tooltips provide additional genomic and quantitative information.
+
+This visualization effectively combines bar and heat map encodings to illustrate genomic patterns across multiple samples.

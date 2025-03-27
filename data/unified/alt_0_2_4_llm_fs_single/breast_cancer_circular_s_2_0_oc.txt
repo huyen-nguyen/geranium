@@ -1,0 +1,7 @@
+The visualization is a circular ideogram that incorporates four individual layers. The outermost layer displays a genomic ideogram using a CSV dataset of the human genome assembly hg38. The chromosomes are represented on the outer circle, with color-coded bands highlighting different chromosomal features such as "gneg," "gpos25," and "acen," each shown in distinct colors ranging from white to black and shades of blue and red.
+
+Inside the ideogram are two circular tracks showing genomic regions as colored rectangles. The first track visualizes data filtered for tumor minor copy number variants (CNVs) of zero, which are highlighted in dark orange. The second track features CNVs with total copy numbers ranging between 4.5 and 900, using green rectangles.
+
+At the center, a connection track illustrates genomic rearrangements using "withinLink" marks. Different categories of structural variations, like "tandem-duplication," "translocation," "deletion," and "inversion," are color-coded with lines connecting across the genome. The colors for these categories are green for tandem duplications, blue for translocations, red for deletions, and orange for inversions, each with a defined stroke style.
+
+This comprehensive layout offers an integrated view of genomic features and structural variations, styled with light gray backgrounds for some tracks to enhance visibility. The circular design effectively uses space to provide a thorough overview of complex genomic data relationships and annotations.

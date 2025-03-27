@@ -1,0 +1,7 @@
+The visualization titled "Example: Semantic Zooming" presents an ideogram of the human genome using a linear layout. It employs a semantic zooming feature where text and triangle marks become visible upon zooming in, providing more detailed information. 
+
+The primary data source is a CSV file containing genomic data, which is visually represented using a series of rectangle and triangle marks. Rectangles highlight different chromosomal bands, each colored according to the respective chromosome. The visualization distinguishes stains using a color range from black for high-density regions to white for low-density ones, with specific colors for genetic variations. 
+
+When the zoom level surpasses a certain threshold, text labels appear, indicating the names of individual chromosome bands. Maroon-colored triangles denote the centromeric regions ('acen') with a marker for both arms of the chromosomes. The values and details adapt dynamically to the zoom level, showcasing additional insights as users explore specific regions. 
+
+The plot spans the entire width of 800 pixels with a height of 55 pixels, maintaining a consistent gray outline styled with a stroke width of 0.5. This interactive design enhances the user's understanding by incrementally revealing more genomic details upon closer inspection.

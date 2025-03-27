@@ -1,0 +1,7 @@
+A comprehensive genomic visualization featuring both circular and linear layouts is presented. The circular view encompasses various tracks, including an ideogram titled 'Ideogram' illustrating chromosome bands. Adjacent circular tracks provide a 'Putative Driver' text annotation and visualize genomic intervals using rectangles, with colors indicating different gain and loss events such as 'Gain' in sky blue and 'Loss of Heterozygosity (LOH)' in dark orange.
+
+Connections within these tracks represent different structural variations, with categories like 'Translocation', 'Duplication', and 'Inversion', color-coded accordingly. The circular tracks have been linked to the linear view through an interactive blue brush.
+
+The linear layout focuses on chromosome 1 and includes multiple tracks: an ideogram, a gene annotation track with strand-specific triangles and rectangles, and a scatter plot titled 'Point Mutation' highlighting mutations based on their distance to previous mutations. The plot uses a color scheme to differentiate mutation subtypes.
+
+Additional linear tracks visualize insertions and deletions with distinct colors, and a 'Copy Number Variants' track uses gray rectangles to represent quantitative copy number data. Overall, the visualization offers an integrated approach to analyze genomic variations effectively.

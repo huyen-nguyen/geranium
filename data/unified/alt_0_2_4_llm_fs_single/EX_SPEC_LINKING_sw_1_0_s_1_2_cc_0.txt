@@ -1,0 +1,7 @@
+A visualization titled "Visual Linking" is arranged vertically, featuring interactive elements to explore genomic data from chromosome 1. The top section includes two panels—one circular and one linear. The circular panel displays genomic data in bar format along the genome's circumference, distinguished by colors representing different categories ('sample 1', 'sample 2', 'sample 3', 'sample 4'). An interactive brush links to the linear panel, allowing dynamic selection of genomic intervals.
+
+The linear panel parallels the circular one with horizontal bars, showing genomic intervals on the x-axis and expression levels on the y-axis. The panel is similarly stratified and color-coded. Both tracks offer an interactive brushing feature to update the detailed view below.
+
+The bottom section presents a linear layout detailing the selected intervals within chromosome 1, ranging from position 160,000,000 to 200,000,000. This detail track employs consistent color coding and displays quantitative expression data across specified genomic intervals, showcasing multivec data focusing on different sample categories.
+
+The layout enables a comprehensive examination of genomic data at both macro and micro scales, fostering an interactive exploration experience.

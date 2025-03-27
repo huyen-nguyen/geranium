@@ -1,0 +1,7 @@
+The visualization presents a detailed genomic analysis using both circular and linear layouts. 
+
+The circular layout showcases an ideogram of the human genome with tracks for 'Putative Driver,' and range annotations for 'Gain' and 'Loss of Heterozygosity (LOH)' highlighted in sky blue and dark orange. Connections across the genome are visualized with colored links representing structural variations such as duplications and inversions.
+
+The linear layout focuses on chromosome 1, featuring tracks for gene annotations, point mutations, insertions, and deletions. A scatter plot, titled 'Point Mutation,' visualizes mutation distances with points colored by subtype.
+
+Overall, the visualization interlinks both views with a blue brush, allowing interactive exploration of genomic regions.

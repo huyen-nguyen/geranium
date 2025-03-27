@@ -1,0 +1,7 @@
+The visualization consists of two tracks arranged vertically in a linear layout. The x-domain represents chromosome 1, ranging from 1 to 3,000,500. 
+
+The top track features an overlay of area charts stratified by categories, each represented by a different color: blue, orange, green, and red, corresponding to 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. These areas depict genomic positions on the x-axis and quantitative expression peak values on the y-axis.
+
+The bottom track is a scatter plot showing the same genomic interval, with points representing expression peaks. Points are also color-coded according to the same samples. This track includes a grid for easier comparison of values across different samples.
+
+The visualization leverages multivec data and presents interactivity through tooltips, displaying genomic positions, peak values, and sample identifiers.

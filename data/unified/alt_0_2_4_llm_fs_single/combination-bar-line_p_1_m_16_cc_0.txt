@@ -1,0 +1,7 @@
+This visualization presents genomic data for chromosome 1 in a linear layout. It covers the interval between positions 1 and 3,000,500, showcasing data from a multivec file.
+
+The top panel contains an overlay track, combining both bar and area marks. It is stratified into four rows, each corresponding to different samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. Each sample is color-coded: blue, orange, green, and red, respectively. The x-axis represents genomic positions, while the y-axis scales quantitative values of the 'peak' field. The height and size of the marks convey expression levels across samples.
+
+The bottom panel features a line chart illustrating the same data. Here, lines represent continuous expression values for each sample across the genomic positions, with the same color scheme used in the overlay track. The chart is annotated with legends and tooltips, providing additional metadata such as exact genomic positions and expression values.
+
+This configuration facilitates comparative analysis of expression patterns across different samples along chromosome 1.

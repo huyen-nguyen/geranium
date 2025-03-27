@@ -1,0 +1,20 @@
+The visualization "Gremlin (O'Brien et al. 2010)" represents genomic data using a linear layout across multiple views, primarily focusing on chromosome 5.
+
+1. **Chromosome 5 Overview**: 
+   - This section is styled with an elliptical link style and emphasizes different stain categories using varied shades of gray, black, and pink. 
+   - The x-axis displays genomic intervals, with a brush tool linking this overview to detailed views below. 
+   - Text labels on this ideogram indicate specific chromosomal regions.
+
+2. **Duplications and Segmental Duplications**:
+   - Rectangular tracks in varied colors represent chromosomal duplications across chromosomes hs5, hs4, and hs6.
+   - Green connections link duplicate regions on chromosome 5, emphasizing within-link connections.
+
+3. **Region of Interest**:
+   - Highlights a specific interval on chromosome 5 (68-71 million base pairs).
+   - Blue and green connections between region-specific duplications showcase a more focused, detailed examination of potential rearrangements.
+
+4. **Rearrangement View**:
+   - Concentrates on a smaller region (69,276,000 to 69,282,000), visualizing within-link connections in pink with thicker strokes for emphasis.
+   - This view offers a closer inspection of potential genomic rearrangements, further linking interactive tools to the overview.
+
+Overall, this sophisticated visualization conveys potential genomic rearrangements and duplications on chromosome 5, utilizing a multi-layer

@@ -1,0 +1,11 @@
+A linear visualization of single-cell epigenomic data from Corces et al. 2020 spans chromosome 3, focusing on regions between base pairs 52,168,000 and 52,890,000. The visualization consists of several stacked tracks, each representing different data:
+
+1. **Ideogram**: Displays chromosome banding patterns. Red and maroon triangles indicate centromeric regions.
+   
+2. **Neuronal and Glial Cell Tracks**: Bigwig data is shown with bar plots, each representing a different cell type—Excitatory neurons (orange), Inhibitory neurons (green), Dopaminergic neurons (dark blue), Microglia (sky blue), Oligodendrocytes (purple), Astrocytes (red), and OPCs (pink). The y-axis shows the peak values of genomic features.
+
+3. **Gene Annotations**: Shows gene structures and exon regions, stratified by strand (+/-) with color coding (blue for `+`, red for `-`). Gene names are annotated alongside.
+
+4. **PLAC-seq Interactions**: Includes interaction arcs showing chromatin interactions detected by PLAC-seq, differing in three colors for Oligodendrocyte (orange), Microglia (blue), and Neuron (purple) tracks, representing different datasets, with connections subtly displayed.
+
+The visualization is enriched by multiple styles, including dynamic brush interaction linking the ideogram to detailed cell type tracks, emphasizing genomic

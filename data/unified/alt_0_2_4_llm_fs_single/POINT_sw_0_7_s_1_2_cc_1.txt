@@ -1,0 +1,1 @@
+This linear layout visualization is a scatter plot featuring data from a multivec file, illustrating genomic positions of hg38. The position and size of the sky blue points are encoded by a data field called 'peak.' The title of the visualization is 'Basic Marks: point', and it includes the subtitle 'Tutorial Examples.'

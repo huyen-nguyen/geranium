@@ -1,0 +1,3 @@
+**Description:**
+
+A heat map in a linear layout visualizes a genomic matrix file using the hg38 assembly, covering genomic intervals between 800,000,000 and 1,800,000,000 base pairs. Both axes represent genomic positions, with the x-axis labeled at the top and the y-axis labeled on the left. Each cell in the matrix is a rectangle, and its color intensity indicates quantitative expression values, using a gradient from light to dark grey. The visualization, sized at 630x630 pixels, focuses on precise and detailed quantitative representation over a specified genomic range.

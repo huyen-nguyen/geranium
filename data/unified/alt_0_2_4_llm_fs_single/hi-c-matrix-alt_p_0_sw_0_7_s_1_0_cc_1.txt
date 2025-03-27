@@ -1,0 +1,15 @@
+**Description:**
+
+This visualization presents a linear Hi-C matrix plot enriched with overlaid genomic data and annotations. The main focus is a matrix display, with both x- and y-axes representing genomic intervals ranging from 800 million to 1.8 billion base pairs. The heatmap colors correspond to the expression values, using a range of "hot" colors to indicate different quantitative values.
+
+Several tracks are overlaid on the matrix to add contextual information:
+
+1. **Matrix Track:** Illustrated as bars, showing genomic data on both axes, with color intensity encoding expression values.
+   
+2. **Vertical and Horizontal Rules:** Lines are plotted on both x- and y-axes, denoting specific genomic positions for chromosomes 2, 5, and 10. The vertical rules are colored pink, and horizontal rules are purple.
+
+3. **Genomic Bar Track:** Horizontal bars across the plot that mark specific genomic ranges for chromosomes 6, 7, and 8, again using color intensity to represent quantitative data. 
+
+4. **Scatter Plot Points:** Points overlaid on the matrix illustrate diverse genomic interactions with size and color encoding respective quantitative values. These points are shaded pink and sized variably to reflect intensity.
+
+The plot is designed using a linear layout in a horizontal orientation, dynamically adjustable with zoom limits. It visually integrates several types of data (matrix, rules, bars, and points), providing a comprehensive view of genetic interactions and annotations within the specified genomic range. The title "

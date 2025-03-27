@@ -1,0 +1,9 @@
+The visualization consists of a circular and linear view displaying genomic data from hg19. The circular ideogram includes color-coded rectangles representing different categories, with a blue brush linking to the linear view. Tracks within the circular layout feature genomic ranges titled 'Gain' and 'Loss of Heterozygosity (LOH)' shown in blue and orange rectangles, respectively. A within-link track connects genomic positions, color-coded by categories such as 'Translocation' and 'Duplication.'
+
+The linear view, focused on chromosome 1, displays: 
+1. An ideogram with left/right triangles indicating centromeric regions.
+2. A text track labeled "Putative Driver" for gene annotations.
+3. A scatter plot titled "Point Mutation" showing mutation distance with color representing subtypes.
+4. Range tracks for 'Insertion' and 'Deletion,' with a 'Copy Number Variants' track visualizing quantitative data.
+
+Each layout provides detailed genomic insights, offering interactive exploration between circular and linear representations.

@@ -1,0 +1,10 @@
+The visualization titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" displays horizontal matrix plots focusing on chromosome 7 between positions 77,700,000 and 81,000,000. It features two primary views in parallel: Micro-C and Hi-C data for HFFc6 cells.
+
+The visualization includes several tracks on each side:
+
+1. **HFFc6_H3K4me3 Bars:** Indicate peak values using a purple color scheme.
+2. **HFFc6_ATAC Bars:** Display peaks in a dark green color.
+3. **HFFc6_CTCF Bars:** Visualize data with bars in orange, which encompass overlaid annotations using pink right and green left triangles.
+4. **Epilogos Annotations:** Mark genomic categories with color-coded bars.
+
+The matrix plots use quantitative color scales to represent contact intensities, providing a contrast between the two methods, Micro-C and Hi-C, over the selected genomic intervals. The consistent layout and color coding between the two sides help in comparing the interaction landscapes and genomic feature annotations across these orthogonal methods.

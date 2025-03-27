@@ -1,0 +1,5 @@
+The visualization consists of two stacked tracks in a linear layout. The first track is a scatter plot, displaying genomic positions on the x-axis (chromosome 1 from position 1 to 3,000,500) and expression values on the y-axis, with points sized by peak values. The color and opacity of the points represent different categories, specifically 'sample 1' to 'sample 4,' shown in blue, orange, green, and red.
+
+The second track is an area chart, also showing genomic positions on the x-axis. It is stratified by rows for the categories 'sample 1' to 'sample 4,' with each area filled in corresponding colors. This track highlights variations in expression across samples, with the areas delineated by a thin white stroke.
+
+Both tracks share interactive tooltips that provide detailed genomic and quantitative data, enhancing the user's ability to explore and interpret the visualization. The color ranges are consistent across tracks, providing a cohesive view of the data.

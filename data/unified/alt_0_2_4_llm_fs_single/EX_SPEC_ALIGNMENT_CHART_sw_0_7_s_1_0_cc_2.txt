@@ -1,0 +1,17 @@
+The visualization contains two views arranged vertically, each with multiple tracks. The first view includes three tracks:
+
+1. **Gap Track**: A purple bar chart illustrates gap data over a genomic range from positions 350 to 396. The height of each bar corresponds to the gap values, represented on the y-axis.
+
+2. **Conservation Track**: An orange bar chart shows conservation data over the same genomic range. The bars' heights and colors represent conservation values.
+
+3. **Alignment Track**: This includes rectangles and text representing genomic base pairs for various sequences. The x-axis represents genomic positions, while rows indicate sequence identifiers, using unique colors for each base.
+
+The second view is an overlay:
+
+1. **Rectangles and Text**: Displays aligned genomic sequences with rows for different identifiers, color-coded by bases.
+
+2. **Conservation Overlay**: A bar chart showcasing conservation data as in the first view.
+
+3. **Gap Overlay**: A bar chart depicting gap data, similar to the first view, but with pink bars.
+
+These views visualize genomic sequences, their gaps, and conservation metrics, enabling analysis of sequence alignment and variabilities among positions.

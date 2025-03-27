@@ -1,0 +1,13 @@
+The visualization is a linear genomic track display for chromosome 1 using the hg38 assembly. It consists of five distinct tracks:
+
+1. **Ideogram Track**: Shows a visual representation of chromosome 1 as a series of bands (gneg, gpos25, etc.). The color coding corresponds to different staining categories, with additional triangular markings indicating centromeric regions.
+   
+2. **Genomic Position Annotation Track**: Displays genomic features stratified by strand (+ or -) with right and left-pointing triangles representing gene directions and colors indicating strand orientation.
+
+3. **Copy Number Variation (CNV) Track 1**: Highlights genomic intervals with deletions in dark orange. This track uses a data filter where the minor copy number in the tumor is zero.
+
+4. **Copy Number Variation (CNV) Track 2**: Displays amplifications in the tumor (total copy number greater than 4.5) as green rectangles.
+
+5. **Structural Variation (SV) Track**: Shows connections between genomic positions with lines representing various classes of structural variants, including tandem duplications, translocations, deletions, and inversions. Each variant type is color and stroke-coded.
+
+Overall, this visualization integrates data from CSV and BED files with filtering techniques to represent chromosomal features and variations, offering insights into genomic structural and copy number changes.

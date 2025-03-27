@@ -1,0 +1,1 @@
+A linear bar chart visualizes genomic data from a multivec file, displaying the entire genome of hg38. The chart shows genomic positions on the x-axis and expression levels on the y-axis. Bars are colored in sky blue, each representing a genomic range with a bin size of 5. The visualization is titled 'Basic Marks: bar' with the subtitle 'Tutorial Examples.'

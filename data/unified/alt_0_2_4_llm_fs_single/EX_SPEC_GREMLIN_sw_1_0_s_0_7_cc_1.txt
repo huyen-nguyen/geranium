@@ -1,0 +1,5 @@
+This visualization, titled "Gremlin (O'Brien et al. 2010)", comprises five interconnected charts displaying data related to chromosome 5. The primary view on top includes an ideogram enriched with a genomic track containing rectangles and text, visually differentiating various categories by color. The intervals along chromosome 5 are shown on the x-axis with a green rectangle highlighting 'acen' points. 
+
+Below this, two additional charts show genomic connections. The first, "Region of Interest," focuses on a specific segment from 68,000,000 to 71,000,000 base pairs, illustrating connections between chromosome 5 and others (chromosomes 4 and 6), with lines colored in blue and green. These connections are enhanced by a brush function that links to other views.
+
+The bottom chart, "Rearrangement View," zooms further into a small region (69,276,000 to 69,280,000 base pairs), depicting detailed intra-chromosomal rearrangements in light blue arcs. The arrangement of views allows for an interactive examination of structural variations and connections along chromosome 5.

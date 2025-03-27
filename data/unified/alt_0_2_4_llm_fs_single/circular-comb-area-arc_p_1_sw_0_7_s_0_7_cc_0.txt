@@ -1,0 +1,7 @@
+The visualization is a circular layout displaying genomic data for chromosome 1 between 1 and 3,000,500. It contains two main tracks: 
+
+1. **Left Track**: Displays a circular chart with connections (links) between genomic positions on chromosome 1. The color of each connection segments the data into categories, with each category represented by a distinct color. These connections are drawn from a CSV file.
+
+2. **Right Track**: An area chart stratified by rows for different samples (sample 1 to sample 4). Expression values are shown on the y-axis. The area color represents different samples, enhancing categorical differentiation.
+
+This circular visualization uses multiple colors across its samples to offer a comprehensive view of genomic relationships and variations in expression data.

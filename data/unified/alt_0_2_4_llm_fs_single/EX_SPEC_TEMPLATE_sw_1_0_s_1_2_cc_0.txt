@@ -1,0 +1,5 @@
+The visualization features a linear layout composed of three views, designed using Gosling.js. The first view presents a gene annotation track for chromosome 3, covering positions 52,168,000 to 52,890,000. It displays genes with gray arrows, indicating strand direction, and labels larger genes like DNAH1 and PBRM1.
+
+The second view is a sequence track for chromosome 1, spanning positions 77,925,299 to 77,925,320. The track consists of bars with varying lengths representing nucleotide counts, and distinct colors for bases A, T, G, and C.
+
+The third view provides an ideogram of chromosome 1, with bands marked in different shades of gray, and regions like q12 and q41 highlighted. The track employs black and gray colors to indicate different cytogenetic bands along the chromosome. The overall design utilizes track templates to streamline complex visualizations.

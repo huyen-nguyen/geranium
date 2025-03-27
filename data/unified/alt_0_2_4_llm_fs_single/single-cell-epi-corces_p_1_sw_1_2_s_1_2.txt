@@ -1,0 +1,16 @@
+The visualization displays a linear arrangement titled "Single-cell Epigenomic Analysis" from Corces et al. (2020). It contains a series of bar charts visualizing genomic data for chromosome 3 between positions 52,168,000 and 52,890,000.
+
+The bar charts represent various cell types:
+- **Excitatory neurons:** Orange bars.
+- **Inhibitory neurons:** Green bars.
+- **Dopaminergic neurons:** Blue-violet bars.
+- **Microglia:** Light blue bars.
+- **Oligodendrocytes:** Purple bars.
+- **Astrocytes:** Red bars.
+- **OPCs (Oligodendrocyte Precursor Cells):** Magenta bars.
+
+Below the bar charts, the "Genes" track displays genetic annotations differentiated by strand direction using text and rectangular shapes colored in blue for the positive strand and red for the negative strand.
+
+The visualization also includes a series of "within-link" tracks showing connections related to PLAC-seq data for H3K4me3 across three conditions, with strokes in shades of orange, blue, and purple respectively. These tracks have low-opacity connections flipping vertically.
+
+At the bottom, an ideogram is depicted, representing the structural layout of chromosome 3, marked with alternating bands of various shades to indicate different chromosomal regions. A red brush links specific regions to detailed views, enhancing interactivity within the visualization.

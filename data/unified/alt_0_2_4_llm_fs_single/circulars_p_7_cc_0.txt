@@ -1,0 +1,19 @@
+A series of eight charts in a circular layout demonstrates various visual encoding methods on chromosome 1, ranging from positions 1 to 3,000,500. This visualization is divided into pairs of circular plots, each offering distinct views:
+
+1. **Circular Line and Scatter Plot**: Displays genomic data using lines and points, encoding expression values through height and colors corresponding to four samples.
+
+2. **Circular Bar Chart**: Shows expression values as bars, stratified by categories 'sample 1' to 'sample 4', with distinct color coding for each sample.
+
+3. **Circular Area Chart**: Illustrates data using filled areas, stratified by rows and colored by sample categories.
+
+4. **Circular Link Chart**: Displays connections within chromosome intervals using different colors to indicate various categories.
+
+5. **Circular Scatter Plot**: Presents expression values as points, with positions and sizes reflecting data points' genomic location and peak values, respectively.
+
+6. **Second Circular Scatter Plot**: Offers an alternative view similar to previous scatter plots, highlighting size axis variation and point color differentiation by sample.
+
+7. **Second Circular Bar Chart**: Mirrors the first bar chart but provides an alternate view, showing expression values along the genomic axis.
+
+8. **Circular Heat Map**: Converts genomic expression values into color intensity, providing a heat-like encoding across four samples.
+
+Title: "Visual Encoding in Circular Layouts" with a subtitle: "Gosling provides diverse visual encoding methods in circular layouts,"

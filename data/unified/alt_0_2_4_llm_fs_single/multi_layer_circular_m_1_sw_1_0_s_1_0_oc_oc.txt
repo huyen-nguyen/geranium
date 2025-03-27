@@ -1,0 +1,3 @@
+The visualization is a circular line chart depicting multiple time series data from a multivec file. It shows chromosome 12 between positions 5,000,000 and 15,000,000. The data is stratified by rows for 14 samples, differentiated by color with a unique line for each sample. The y-axis represents expression levels with varying transparency across different tracks, indicating distinct domains of peak values. The design aligns multiple tracks, enhancing perceptual clarity across genomic intervals. The visualization is interactive, with dynamically adjusted opacity and no legend to maintain a clean appearance.
+
+Reference: Javed et al. Graphical perception of Multiple Time Series. TVCG 2010.

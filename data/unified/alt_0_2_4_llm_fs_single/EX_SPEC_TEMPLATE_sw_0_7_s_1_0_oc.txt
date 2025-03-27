@@ -1,0 +1,20 @@
+**Description**: 
+
+This visualization presents three distinct charts using the Gosling.js library for genomic data. It highlights a linear layout designed to facilitate complex visualizations through track templates.
+
+1. **Genomic Range Annotation Track**: 
+    - Displays a range of chromosome 3, spanning positions 52,168,000 to 52,890,000.
+    - Features gene annotations with directional arrows indicating gene orientation. 
+    - The track uses gray to encode the strand information, differentiating between positive and negative strands with left and right triangle markers.
+
+2. **Bar Chart with Text**: 
+    - Focuses on a specific interval of chromosome 1, from 77,925,299 to 77,925,320.
+    - Visualizes nucleotide base counts as bars, colored distinctively for each base (A, T, G, C).
+    - Overlay of text labels on each bar display the nucleotide letter and are color-coded according to the base.
+
+3. **Ideogram with Text and Triangles**: 
+    - Covers the entirety of chromosome 1, presenting a cytogenetic band ideogram.
+    - Uses different shades and patterns to represent various staining categories (e.g., gneg, gpos).
+    - Includes labels for cytogenetic bands and distinctive colored triangles indicating centromeres.
+
+The visualization is enhanced with smooth path styles, ensuring clear and comprehensible data interpretation, suitable for multi-dimensional genomic insights. The title is "Track Template In

@@ -1,0 +1,5 @@
+The visualization consists of a circular and a linear arrangement representing genomic data. The circular view includes tracks like an ideogram, a point annotation track, and range annotation tracks titled 'Gain' and 'Loss of Heterozygosity (LOH),' each visualized with different colored rectangles. Connections are drawn between genomic positions, colored based on categories like 'Translocation' and 'Duplication.'
+
+In the linear view, tracks display various annotations: a gene annotation track with directional triangles and rectangles for exons, a scatter plot for point mutations colored uniquely by subtype, and range annotations for insertions and deletions. The 'Copy Number Variants' track shows total copy numbers with gray bars.
+
+A blue interactive brush in the circular view links to a detailed chromosome 1 region in the linear view, allowing focus between full genome and specific chromosomal analysis.

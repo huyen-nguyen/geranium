@@ -1,0 +1,15 @@
+This visualization, titled "Visual Encoding in Circular Layouts," showcases a variety of visual encoding methods in a circular layout. The graphic focuses on chromosomal data from chromosome 1, spanning the interval 1 to 3,000,500. It features diverse charts:
+
+1. Two circular bar charts display genomic positions on the x-axis, with expression values represented by the height of colored bars. Different samples are stratified by rows, each in unique hues.
+
+2. A circular heat map encodes expression values through color intensity, segmented by rows for four categories.
+
+3. A circular area chart shows the genome along the x-axis with expression represented by shaded areas, reinforcing category distinction through color.
+
+4. A circular connection chart uses links to show associations between genomic intervals, specifying categories with distinct colors for each connection.
+
+5. A circular line and scatter plot combination indicates the genome on the x-axis, expressing data through both lines and points, with categories distinguished by color. Points vary in size according to expression values.
+
+6. Two different circular scatter plots illustrate expression values using points across the y-axis, with size variance and color coding for different categories.
+
+The visualization employs a circular layout to efficiently convey complex genomic information in a visually appealing and informative manner, facilitating the exploration of patterns across samples and expression values. The static charts are designed for in-depth analysis and easy comparison of categorical data through color and positioning.

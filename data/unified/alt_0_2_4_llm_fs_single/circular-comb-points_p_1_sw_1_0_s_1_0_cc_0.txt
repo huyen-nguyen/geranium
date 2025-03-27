@@ -1,0 +1,7 @@
+The visualization consists of two circular scatter plots in a side-by-side layout. Each plot represents genomic data from chromosome 1, covering the interval from 1 to 3,000,500. The plots use a multivec data type with four sample categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. 
+
+- **Left Plot**: Displays points representing expression values on both the y and size axes. The x-axis represents genomic positions. A grid is applied on the y-axis. Points are semi-transparent with an opacity of 0.5, and each sample category is assigned a distinct color from a predefined palette. Tooltips provide detailed genomic and quantitative information for each point.
+
+- **Right Plot**: Also a circular scatter plot, but structured into rows based on sample categories, allowing stratification. Similar color coding is applied to distinguish categories. The plot uses an identical color palette and opacity level, with tooltips offering detailed data insights.
+
+Both plots employ the hg38 assembly and maintain a consistent circular layout. The interactive design includes legends to enhance interpretability, highlighting the sample categories and supporting an informative visual exploration of genomic data.

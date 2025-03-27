@@ -1,0 +1,15 @@
+A visualization titled "Hi-C Matrix" with the subtitle "Visualize Hi-C Data Using Matrix and Annotations" presents genomic data in a linear layout. The x-domain spans from 800,000,000 to 1,800,000,000 on the genomic scale.
+
+The primary view overlays multiple tracks:
+
+1. **Matrix Layer**: Displays a genomic matrix where both x and y axes represent genomic intervals. The expression values are encoded by color intensity, using a "bupu" color range, with a legend provided for reference.
+
+2. **Vertical Rule Layer**: Red vertical lines are placed at specified genomic positions on the x-axis for chromosomes 2, 5, and 10, with a consistent stroke width of 2.
+
+3. **Horizontal Rule Layer**: Blue horizontal lines correspond to the same genomic positions on the y-axis, echoing the vertical lines but with a unique color.
+
+4. **Bar Layer**: Features bars on the matrix with strokes indicating different categories. This visual element highlights genomic intervals on both axes, enhancing the qualitative data through a stroke-based categorization.
+
+5. **Point Layer**: Steelblue points are overlaid on the matrix, varying in size according to quantitative genomic data. This layer illustrates additional variations in genomic intervals, employing a size range from 1 to 4 for expression values, with visual transparency set at an opacity of 0.5.
+
+Overall, the visualization effectively integrates quantitative and spatial genomic data, employing a consistent

@@ -1,0 +1,7 @@
+The visualization titled "Single-cell Epigenomic Analysis" with the subtitle "Corces et al. 2020" displays a linear, vertically arranged view focusing on chromosome 3. The first track features an ideogram illustrating cytogenetic bands, with rectangles and maroon-colored triangles representing different stains. A red brush highlights the region linked to detailed views below.
+
+There are seven bar charts representing different cell types: "Excitatory neurons" (orange), "Inhibitory neurons" (green), "Dopaminergic neurons" (purple), "Microglia" (sky blue), "Oligodendrocytes" (purple), "Astrocytes" (dark red), and "OPCs" (purple), showing expression values along the x-axis in genomic coordinates.
+
+A genomic range annotation track titled "Genes" displays text annotations and color-coded tracks indicating gene and exon positions, with separate colors for positive (blue) and negative (red) strands.
+
+At the bottom, three linkage charts visualize PLAC-seq data (H3K4me3) for various cell types with stroke links displayed in graded transparency, each overlaid on the previous track. This detailed composition captures genomic and epigenomic landscapes of neuronal cell types based on peak expression profiles and structural annotations.

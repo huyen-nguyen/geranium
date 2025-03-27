@@ -1,0 +1,7 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" is presented in a linear layout across three main views. The first view shows Chromosome 5 with multiple tracks, including an ideogram represented by rectangles in shades of gray, black, and pink, indicating different stain types. Text labels of stain names accompany these rectangles, colored in purple. Additional tracks exhibit links and connections, with connections color-coded in blue, green, and pink based on categories and their pairings within specific regions on Chromosome 5.
+
+The second view, named "Region of Interest," focuses on a specified genomic region (68,000,000 to 71,000,000 on chr5). This view displays linkage connections in green and blue, stratified by rows for categories like hs5, hs4, and hs6.
+
+The third view, titled "Rearrangement View," concentrates on a more detailed region (69,276,000 to 69,280,000 on chr5). It highlights a single arc connection in blue, suggesting detailed structural rearrangements within the genomic segment.
+
+The entire visualization employs elliptical link styles and interactive elements, with the ability to select regions using brushes to explore specific genomic intervals further. Each view's data is intricately linked, allowing comprehensive exploration of Chromosome 5's structural variations and annotations.

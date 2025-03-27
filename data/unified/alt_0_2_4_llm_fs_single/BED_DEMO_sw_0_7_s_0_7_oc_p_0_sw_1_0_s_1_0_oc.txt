@@ -1,0 +1,11 @@
+Here's a detailed description for the visualization:
+
+This visualization demonstrates the use of BED files with varying specifications within a linear layout, focusing on chromosome 1 from base 1 to 2,000,000. It consists of four vertically arranged tracks, each utilizing rectangular marks to represent genomic intervals.
+
+1. **BED12 Track**: This track, titled "BED12: All 12 standard fields," presents data from a BED file containing all 12 standard fields. Each rectangle corresponds to a defined genomic region between `chromStart` and `chromEnd`, depicted with a consistent size and bordered in black.
+
+2. **BED6 Track**: Titled "BED6: A file with the first 6 BED fields," this track showcases a simplified BED file format, utilizing only the first six fields. The visual encoding remains consistent with the BED12 track, employing rectangles to illustrate genomic intervals.
+
+3. **BED6+6 Track**: Under the title "BED6+6: A file with the first 6 BED fields, and 6 custom fields," this track displays a BED file that includes six additional custom fields. The rectangles' genomic start and end positions are derived from these custom fields, maintaining uniform stroke styling.
+
+4. **BED12+1 Track**: This final track, titled "BED12+1: A file with all 12 standard fields, and a single extra custom field," extends the BED12 format by incorporating one additional custom field. The genomic intervals are

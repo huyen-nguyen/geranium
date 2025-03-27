@@ -1,0 +1,17 @@
+Certainly! Here's a detailed description of the visualization based on the given specification:
+
+---
+
+This visualization titled "Visual Linking" includes two main parts arranged vertically. The top part consists of two side-by-side views: a linear area chart and a circular line chart, both providing an overview of chromosome 1. 
+
+The linear area chart (left side) uses a brush for interactive selection. It visualizes genomic data, where the x-axis shows genomic ranges, and the y-axis displays quantitative peak values for four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The area is color-coded by sample categories.
+
+Adjacent to it, the circular line chart (right side) offers a circular representation of the same genomic data, with lines connecting points to depict trends across samples. This circular view also features a brush linked to the linear view below.
+
+The bottom part, titled the "detail view," offers a more fine-grained linear display from chromosome 1, spanning genomic positions 160,000,000 to 200,000,000. This section features a scatter plot where each point represents a genomic position, and the y-axis shows peak values. Points are color-coded by the same sample categories, providing consistency with the overviews above.
+
+Overall, the visualization effectively links overviews and details, allowing users to interactively explore genomic data across different representations.
+
+--- 
+
+This description captures the essential components, interactions, and design of the visualization.

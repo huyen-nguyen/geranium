@@ -1,0 +1,5 @@
+The visualization consists of two horizontal genomic range annotation tracks positioned side by side. The left track is titled "Corces et al." and depicts genomic features including genes and exons on chromosome 3 between positions 52,168,000 and 52,890,000. Text labels and rectangles are used to represent gene names, with strands differentiated by color: blue for the positive strand and red for the negative strand. Rectangles denote the positions of genes and exons, while lines connect gene start and end points.
+
+The right track, titled "GmGDV," similarly illustrates gene annotations in the specified region using text, triangle markers, and rectangles. Positive strand genes are indicated by blue right-pointing triangles, and negative strand genes by red left-pointing triangles. Exon regions are highlighted with rectangles, maintaining the strand-based color scheme.
+
+Both tracks share a linear layout and are arranged vertically to stratify categories by gene strand orientation. The colors and markers consistently indicate strand orientation across both tracks.

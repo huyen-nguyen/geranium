@@ -1,0 +1,9 @@
+This visualization consists of three genomic range annotation tracks, each titled "HiGlass." Each track displays data for chromosome 13 within specified intervals. The tracks are arranged vertically, and each includes a stacked view with multiple overlays of bars, points, and text elements.
+
+The first genomic range track shows gene structures with directional arrows indicating transcription direction. Colors denote the strands, with blue for the positive strand and orange for the negative strand. Text annotations provide gene names.
+
+The second track incorporates bars and circles indicating clinical significance categories, such as "Pathogenic" and "Benign." These are visualized using a multivec file, and colored according to significance: pinks for pathogenic variants, grays for uncertain significance, and greens for benign variants. The height of the bars and the placement of circles indicate the significance of genetic variants.
+
+Each track maintains stratification by significance categories and utilizes an interactive navigation feature allowing user zoom and focus on variant details.
+
+Additionally, the visualization includes styling details like opacity and line patterns for enhanced interpretation of strand orientation and variant significance. The tracks collectively visualize data on genetic annotations and clinical significance, providing comprehensive genomic insights.

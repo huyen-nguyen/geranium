@@ -1,0 +1,5 @@
+The visualization consists of a combination of circular and linear layouts showing genomic data from hg19. The circular layout features an ideogram, text annotation, and tracks for genomic gains and losses, represented with blue and orange rectangles respectively. Connection lines indicate various structural variations such as translocations and duplications, with color-coded categories.
+
+The circular view is linked to a linear view via an interactive brush, allowing exploration of chromosome 1. The linear view contains tracks including a detailed ideogram, text annotations for 'Putative Driver' genes, point mutations depicted as a scatterplot with distance-based coloring, and structural variations categorized into insertions and deletions.
+
+The visualization employs consistent styling and interaction elements such as linking, allowing in-depth genomic analysis with a focus on structural variations and mutation data.

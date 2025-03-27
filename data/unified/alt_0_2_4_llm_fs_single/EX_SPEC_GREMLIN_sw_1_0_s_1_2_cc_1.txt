@@ -1,0 +1,11 @@
+The visualization displays a genomic overview titled "Gremlin (O'Brien et al. 2010)" in a linear layout. It shows Chromosome 5 from position 0 to 80,000,000, utilizing several tracks: 
+
+1. **Ideogram Track**: Features rectangular and text elements to represent genomic bands. The colors indicate different categories of bands ('gneg', 'gpos', etc.), with pink rectangles for centromeres and green text for labels.
+
+2. **Connection Tracks**: These display segmental duplications and rearrangements using connections between genomic positions. These links are color-coded by chromosome, with strokes of blue, green, and orange indicating different chromosomes ('hs5', 'hs4', 'hs6').
+
+3. **Region of Interest**: Highlights a specific area between 68,000,000 and 71,000,000 on Chromosome 5. Connections here are color-coded in pink and blue, showing detailed genomic relationships.
+
+4. **Rearrangement View**: Focuses on a small segment from 69,276,000 to 69,280,000 on Chromosome 5. The sky-blue links demonstrate specific structural rearrangements within this region.
+
+The visualization employs interactive brushes to allow linking between different views, enhancing data exploration across the genomic intervals.

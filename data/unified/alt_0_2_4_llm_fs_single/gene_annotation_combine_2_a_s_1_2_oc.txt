@@ -1,0 +1,14 @@
+The visualization consists of linear genome annotations for chromosome 3, spanning from 52,168,000 to 52,890,000. It features two horizontally arranged views, each containing vertical tracks.
+
+**First View - "Corces et al.":**
+- Displays genomic ranges with annotations showing both positive and negative strands.
+- Gene names are labeled at their genomic start and end positions.
+- The chart is stratified by strand with color encoding: blue for positive and red for negative strands.
+- Uses bars and rectangles to denote genes and exons.
+
+**Second View - "GmGDV":**
+- Similar to the first view but employs arrow shapes for gene directionality, indicating gene orientation.
+- Features triangular marks (arrows) to represent the direction of transcription for each strand: right triangles (blue) for positive and left triangles (red) for negative strands.
+- Both views emphasize genomic positioning on the x-axis with text annotations providing further genomic context.
+
+This visualization aids in comparing gene annotations between the two datasets within the specified genomic interval.

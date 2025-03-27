@@ -1,0 +1,7 @@
+The visualization consists of a circular layout with vertical arrangement and two primary tracks. The dataset focuses on chromosome 1, spanning a genomic interval from position 1 to 3,000,500. 
+
+The left track is a circular bar chart displaying genomic data by sample categories, using rows for differentiation. Each category is represented by a distinct color: blue, orange, green, and red for 'sample 1' to 'sample 4'. The y-axis encodes expression levels with bars, while the x-axis represents genomic positions.
+
+The right track is a circular heat map, displaying genomic intervals on the x-axis. Color intensity is used to encode expression values, creating a gradient from light to dark for low to high values. The chart is stratified by sample categories, enhancing the visual differentiation of data.
+
+Both tracks are interactive, featuring tooltips that provide detailed information about genomic start and end positions, value, and sample. The layout is static, centering around a designated radius, and styled uniformly for consistent presentation.

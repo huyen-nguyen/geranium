@@ -1,0 +1,5 @@
+The visualization consists of a circular and a linear view, connected by a blue interactive brush in the circular portion. The circular view displays the entire hg19 genome as an ideogram with genomic ranges color-coded by categories, showing tracks like 'Gain' and 'Loss of Heterozygosity (LOH).' These are represented in sky blue and dark orange, respectively. The circular view includes connections indicating structural variations with categories such as 'Translocation' and 'Duplication,' colored accordingly.
+
+The linear view focuses on chromosome 1 and includes multiple tracks, such as a point mutation scatter plot indicating mutation distances and types, which are color-coded based on mutation subtype. Additional tracks illustrate insertions and deletions, visualized as colored rectangles, and a track titled 'Copy Number Variants' which uses gray bars to represent quantitative data.
+
+Overall, the interactive links between views facilitate exploration of genomic relationships and variations, providing a comprehensive overview of genomic features and their structural complexities.

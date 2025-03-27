@@ -1,0 +1,5 @@
+The visualization consists of two circular scatter plots, both showcasing genomic data from chromosome 1, spanning positions 1 to 3,000,500. Each plot displays expression values using points where size and position on the y-axis represent the quantitative data field named 'peak.' The color of the points distinguishes between four categories: 'sample 1,' 'sample 2,' 'sample 3,' and 'sample 4.'
+
+The plot on the left features a continuous scatter where all categories are mixed, with each point's color corresponding to one of the samples noted in the legend. The right plot is stratified by rows for each category, clearly segregating different samples into circular bands. Opacity is set at 0.5 for both plots to enhance visibility of overlapping data points, and a legend is provided to facilitate category identification.
+
+Tooltip information is available for further details on genomic start and end positions, peak values, and sample names. The layout and style are circular and static, with a center radius of 0.5, ensuring a compact and informative display of the genomic data.

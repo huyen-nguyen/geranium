@@ -1,0 +1,7 @@
+This visualization is a circular chart with five concentric tracks arranged in a parallel layout, each representing a different chromosome from chr1 to chr5. Each track includes a genomic area chart and an overlay of cytogenetic bands with multiple visual elements. 
+
+The area charts, derived from a multivec file, display expression peaks along the x-axis (genomic position) for four different samples, differentiated by color. 
+
+Overlaying the area charts are ideograms showing cytogenetic bands. The ideograms use rectangles to encode different band densities, with colors ranging from white to black, representing increasing density. Special marks indicate particular regions: purple rectangles for gvar areas and maroon triangles for acen-1 and acen-2 regions, pointing right and left, respectively.
+
+The layout is static, and the centerRadius for the visualization is set to 0.2. The tracks are sized differently per chromosome, with widths varying from 518 to 700 pixels, maintaining the circular symmetry of the layout.

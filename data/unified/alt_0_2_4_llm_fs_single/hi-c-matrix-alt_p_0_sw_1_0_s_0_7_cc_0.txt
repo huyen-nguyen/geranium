@@ -1,0 +1,11 @@
+A Hi-C matrix visualization with a linear layout, featuring overlaid tracks. The genomic data spans from 800,000,000 to 1,800,000,000, covering various chromosomes. 
+
+1. **Matrix Track**: Displays genomic interactions with both x- and y-axes representing genomic positions, encoded with a color gradient from hot to light for intensity. 
+
+2. **Vertical Lines Annotation**: Red vertical lines mark specific genomic positions on the x-axis.
+
+3. **Horizontal Lines Annotation**: Purple horizontal lines mark genomic positions on the y-axis.
+
+4. **Genomic Bars and Points**: Overlaid bars and points represent quantitative data across specific genomic regions. The points are sky blue, with sizes indicating expression values and stroke detailing categorical differences. 
+
+Both color and stroke effectively differentiate between categories, while opacity is utilized to layer visual elements without obscuring details. The visualization is titled "Hi-C Matrix" with the subtitle "Visualize Hi-C Data Using Matrix and Annotations."

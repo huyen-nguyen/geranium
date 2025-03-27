@@ -1,0 +1,19 @@
+The visualization consists of two main views: a circular view and a linear view, both organized in a vertical layout. 
+
+### Circular View:
+- **Structure:** Circular ideogram with multiple layers.
+- **Tracks:**
+  - **Ideogram Track:** Displays the full genome with color-coded bands representing different stains.
+  - **Text Annotation Track:** Shows putative driver genes. Text is stratified in rows based on gene categories, colored in black.
+  - **Range Annotation Tracks:**
+    - "Gain" track displays genomic regions with gains in blue rectangles.
+    - "Loss of Heterozygosity (LOH)" track shows regions with loss in dark orange rectangles.
+  - **Connection Track:** Illustrates connections between genomic positions using lines with colors representing structural variations: Gain, LOH, Translocation, Duplication, Deletion, and Inversions (TtT, HtH).
+
+### Linear View:
+- **Structure:** Straight timeline showing genomic data for Chromosome 1.
+- **Tracks:**
+  - **Ideogram:** Similar to the circular view, displaying chromosome bands.
+  - **Putative Driver Text Track:** Annotates driver genes with text, same stratification and color as circular view.
+  - **Point Mutation Scatterplot:** Visualizes mutations with positions represented along the x-axis and distances to previous mutations on the y-axis. Points are colored by mutation subtype (e.g., C>A, T>G).
+  - **Indel Annotation

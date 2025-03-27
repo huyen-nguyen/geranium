@@ -1,0 +1,3 @@
+The visualization consists of two vertically arranged linear tracks displaying genomic data. The top track is an area chart representing multivec data for chromosome 1, spanning from position 1 to 3,000,500. Each row corresponds to a different sample, and the colors of the areas differ, using a palette including blue, orange, green, and red. The x-axis shows genomic positions while the y-axis indicates peak values.
+
+The bottom track is a bar chart showing genomic intervals with varying heights representing minimum and maximum peak values. Similar to the area chart, samples are stratified by rows and use identical color coding. This setup is designed to provide both detail on individual sample values and an overview of variations across the genomic range.

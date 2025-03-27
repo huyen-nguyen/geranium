@@ -1,0 +1,5 @@
+A genomic visualization in a linear layout showcases a range of genomic features from chromosome 3 between 52,168,000 and 52,890,000, using multiple annotation tracks. The tracks are arranged horizontally and vertically, titled 'Cyverse-QUBES', 'GmGDV', 'HiGlass', 'IGV', and 'Corces et al.'
+
+Each track displays genes as black text alongside corresponding exon (purple), intron (cyan), and gene (light gray) annotations. Triangular markers indicate the direction of transcription, with blue and red colors denoting positive and negative strands, respectively. The tracks visualize various aspects of genomic data, including the spatial arrangement of genes, exons, and introns, with highlighted patterns and colored indicators.
+
+This comprehensive view facilitates the analysis of genomic structures, allowing users to explore detailed annotations from public datasets. The visualization integrates interactive elements for a detailed inspection of specific genomic regions, supporting a deeper understanding of gene positioning and transcriptional directions.

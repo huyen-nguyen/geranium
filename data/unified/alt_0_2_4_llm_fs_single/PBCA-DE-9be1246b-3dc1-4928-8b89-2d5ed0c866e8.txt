@@ -1,0 +1,5 @@
+The visualization consists of two major sections: a circular plot and a linear plot, connected interactively through a brush. The circular plot displays the entire genome, highlighting specific regions such as 'Gain' shown in blue and 'Loss of Heterozygosity (LOH)' in orange. It comprises several tracks, including an ideogram and annotations, using both rectangles and lines to denote genomic features.
+
+The linear plot aligns with chromosome 1 from the circular view, offering detailed tracks for various genomic analyses. Tracks include a gene density ideogram, putative driver mutations in black text, a scatter plot titled 'Point Mutation' showing variants colored by mutation type, and range annotations for insertions and deletions. Copy number variants are depicted with gray rectangles, and translocations are visualized with connecting lines in diverse colors based on structural variant classification such as 'Translocation' and 'Duplication.'
+
+Overall, this visualization effectively integrates multiple data sources, presenting genomic variations and annotations in an interactive and comprehensive manner, suitable for detailed genomic analysis.

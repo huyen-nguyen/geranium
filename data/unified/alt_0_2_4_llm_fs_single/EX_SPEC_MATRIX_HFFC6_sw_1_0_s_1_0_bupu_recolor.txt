@@ -1,0 +1,17 @@
+**Description**
+
+The visualization titled "Matrix Visualization: Comparison of Micro-C and Hi-C for HFFc6 Cells" provides a comparative analysis between Micro-C and Hi-C techniques on chromosome 7, between positions 77,700,000 and 81,000,000. The layout is divided horizontally.
+
+- **Tracks Configuration**: 
+  - **Vertical Tracks**: On the left, several vertical tracks display data on three histone modifications and transcription factor binding:
+    - H3K4me3 (purple bars)
+    - ATAC-seq (dark green bars)
+    - CTCF (orange bars) with genomic annotations (triangles indicating strand directionality; pink and green for positive and negative strands, respectively).
+  - **Matrix View**: 
+    - The central region displays a matrix heatmap for Micro-C (left) and Hi-C (right), color-encoded using the 'bupu' color range, showing contact frequencies within the genomic region.
+
+- **Horizontal Tracks**:
+  - The bottom track displays additional genomic annotations (Epilogos) using a multivec bar chart with a color scheme representing different chromatin states such as active TSS, enhancers, and heterochromatin. Each bar's color corresponds to a specific chromatin state, indicated by various colors including red, orange, green, and shades of blue and gray.
+
+- **Styling**:
+  - The background is set to a light gray color (#F

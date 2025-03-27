@@ -1,0 +1,3 @@
+**Description:**
+
+A linear arc visualization displays structural variations within a specified genomic region on chromosome 1, ranging from 1 to 3,000,500. The arcs represent genomic links using a CSV file as the data source. The arcs are colored based on a nominal data field, 's1,' and are arranged vertically within the layout. The arcs are outlined in black with a stroke width of 0.5 and have a transparency level of 0.2, allowing overlapping details to be visible. The title of the chart is "Visual Encoding," with a subtitle "Arcs," providing context for the visualization of genomic intervals in the specified range.

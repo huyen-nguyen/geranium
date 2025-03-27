@@ -1,0 +1,7 @@
+**Description:** 
+
+A linear bar chart visualization titled "Example: Semantic Zooming" with the subtitle "Text marks that indicate base pairs will appear when zooming in." This visualization displays the genome on the x-axis, including chromosomes 1 to Y. The y-axis represents quantitative expression values with bars.
+
+Each bar is color-coded according to four nucleotide categories: Adenine (A) in pink, Thymine (T) in blue, Guanine (G) in green, and Cytosine (C) in orange. The alignment is set to overlay, and the data is from a multivec file comprising base positions and counts. Text labels for nucleotide bases appear as zooming in occurs, visualized in white and bold style.
+
+The chart includes a legend indicating the colors assigned to each base. This interactive chart supports semantic zooming, revealing genomic information and base text as users zoom into specific regions. The data source URL is provided, supporting detailed exploration through dynamic visualization.

@@ -1,0 +1,3 @@
+A circular view and a linear view are arranged vertically, linked by a blue interactive brush. The circular view includes an ideogram highlighting genome intervals, a 'Putative Driver' annotation with black text, range annotations for 'Gain' in sky blue and 'Loss of Heterozygosity (LOH)' in dark orange, and a line-connection track indicating different structural variations like Translocation and Duplication.
+
+The linear view details chromosome 1, with additional tracks illustrating putative drivers, gene annotations, and mutation plots. A scatter plot titled 'Point Mutation' displays VCF data, coloring points by mutation subtype. The rectangle tracks show insertions and deletions, while 'Copy Number Variants' uses gray rectangles to indicate quantitative changes.

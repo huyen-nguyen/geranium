@@ -1,0 +1,1 @@
+A linear bar chart visualizes genomic data from a multivec file across the entire hg38 assembly. The chart displays genomic intervals on the x-axis, representing chromosomes, and quantitative peak values on the y-axis. The bars are colored in green. The title is "Basic Marks: bar" and it is part of the "Tutorial Examples" set.

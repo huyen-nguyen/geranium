@@ -1,0 +1,17 @@
+The visualization consists of a circular and a linear view, linked by an interactive brush in the circular view. The circular view displays the entire hg19 genome, and the linear view focuses on chromosome 1. 
+
+The circular view includes several tracks:
+1. **Ideogram**: A genomic representation in grayscale with a blue brush indicating the selected region.
+2. **Putative Driver**: Annotated text tracks showing genes.
+3. **Gain and Loss of Heterozygosity (LOH)**: Displaying genomic ranges in sky blue and dark orange, respectively.
+4. **Structural Variations**: Lines connecting genomic positions, colored according to variation type (e.g., Translocation, Duplication).
+
+The linear view extends the analysis for chromosome 1 with additional tracks:
+1. **Ideogram**: Similar to the circular view with band annotations.
+2. **Putative Driver**: Text annotations for genomic positions, visualized in rows.
+3. **Point Mutation**: A scatter plot showing mutation distances, coded by mutation subtype.
+4. **Indels**: Showing insertions and deletions as rectangles.
+5. **Copy Number Variants (CNV)**: Bar charts representing copy number alterations, colored in gray.
+6. **Gain and LOH**: Mirroring circular tracks for detailed segmentation.
+
+This visualization utilizes a comprehensive genomic dataset to provide insights into structural variations, mutations, and copy number changes across the genome, specifically focusing on their manifestation in chromosome 1

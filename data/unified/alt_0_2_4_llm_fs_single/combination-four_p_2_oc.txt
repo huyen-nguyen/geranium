@@ -1,0 +1,11 @@
+The visualization features a linear layout with four vertically arranged tracks, each showing data from chromosome 1 in the range of 1 to 3,000,500 base pairs. 
+
+1. **Line Chart and Scatter Plot**: The first track combines lines and points to display expression values along the genomic position (x-axis), stratified by rows for categories named 'sample 1' to 'sample 4.' Color differentiates the categories, while point size indicates expression magnitude.
+
+2. **Scatter Plot**: The second track uses points, with the expression indicated on the y-axis and size axis, stratified by categories also distinguished by color.
+
+3. **Bar Chart**: Represents expression values through bars on both y and y-end axes, with the x-axis showing genome intervals. The color distinguishes categories.
+
+4. **Heat Map**: Encodes expression data through color intensity, again stratified by categories, showing genomic intervals on the x-axis.
+
+The visualization provides interactive tooltips for detailed data inspection, highlighting the comprehensive overview of genomic data across multiple samples.

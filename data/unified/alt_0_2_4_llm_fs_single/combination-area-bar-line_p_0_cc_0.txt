@@ -1,0 +1,9 @@
+The visualization presents genomic data in a linear layout with three vertically arranged charts, focusing on chromosome 1 from position 1 to 3,000,500. 
+
+1. **Area Chart**: The first chart uses an area mark to display expression values on the y-axis against genomic positions on the x-axis. It is stratified into four rows based on categories labeled as samples 1 to 4, each distinguished by distinct colors: blue, orange, green, and red.
+
+2. **Line and Scatter Plot**: The second integrated chart combines a line chart and scatter plot. It depicts the same genomic data, with lines showing trends and points visualizing individual data points, the size of which corresponds to expression values. Similar to the area chart, this chart is categorized into four rows corresponding to the sample categories.
+
+3. **Bar Chart**: The third chart presents data using bars to depict expression values. The bar heights represent the quantitative 'peak' values, with colors indicating different sample categories.
+
+All charts feature tooltips providing additional information on genomic start and end positions, peak values, and sample categories when hovered over. This visualization comprehensively illustrates how genomic positions correlate with varying expression values across multiple samples.

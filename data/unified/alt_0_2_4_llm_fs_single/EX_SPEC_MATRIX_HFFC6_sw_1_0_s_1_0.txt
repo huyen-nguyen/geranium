@@ -1,0 +1,20 @@
+The image showcases a horizontal arrangement of visualizations comparing Micro-C and Hi-C data for HFFc6 cells, focusing on chromosome 7 from 77,700,000 to 81,000,000. 
+
+There are two main sections:
+
+1. **Left Vertical Section:**
+   - Three vertical bar charts represent different genomic tracks:
+     - **HFFc6_H3K4me3:** In dark green.
+     - **HFFc6_ATAC:** In orange.
+     - **HFFC6_CTCF:** In blue.
+   - Additionally, right-facing (pink) and left-facing (green) triangles indicate genomic position annotations at different strands.
+
+2. **Right Horizontal Section:**
+   - Two vertical arrangements of tracks:
+     - Each arrangement contains bar charts similar to the left section, but oriented horizontally. 
+     - Each includes:
+       - **HFFc6_H3K4me3** and **HFFc6_ATAC** tracks.
+       - An **Epilogos (hg38)** chart, visualizing multiple chromatin states such as Active TSS, Enhancers, and Repressed regions, using multicolor bars.
+     - **HFFc6_Micro-C** and **HFFc6_Hi-C** matrix plots display contact intensities in warm color ranges, showing genomic interactions across two axes.
+
+These visualizations are embedded within a light gray background, enhancing the contrast for detailed genomic analysis and providing insights

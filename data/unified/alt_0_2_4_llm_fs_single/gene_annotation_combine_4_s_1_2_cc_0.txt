@@ -1,0 +1,11 @@
+The visualization comprises four genomic range annotation tracks laid out in a horizontal linear format, representing a region on chromosome 3 between positions 52,168,000 and 52,890,000. Each track corresponds to a different data view, titled 'Corces et al.,' 'GmGDV,' 'IGV,' and another unnamed track, all structured in vertical arrangement within two separate columns.
+
+1. **Corces et al.**: Displays genes using text and rectangles with colors representing the strand orientation (blue for '+', orange for '-'). Rectangles also depict exons with thicker bars and genes as lines connecting start and end positions.
+
+2. **IGV**: This view uses green for both textual annotations and rectangular representations of gene positions. Lines with white triangles indicate gene directionality based on strand orientation.
+
+3. **GmGDV**: Features orange and blue arrows indicating strands and direction. This view includes triangle representations of gene direction and rectangles for exons.
+
+4. **Unnamed View**: Utilizes shades of sky blue and purple, representing exonic and intronic regions respectively. The stroke of rectangles indicates strand division, with text labels for gene names.
+
+Each track maintains alignment to the genomic axis with chromosome intervals marked at the top. The tracks are stratified by rows for strands, indicated by color. The visualization adopts a consistent color palette across views for intuitive navigation, with strand-specific colors and standard genomic representation techniques like rule markings for genes.

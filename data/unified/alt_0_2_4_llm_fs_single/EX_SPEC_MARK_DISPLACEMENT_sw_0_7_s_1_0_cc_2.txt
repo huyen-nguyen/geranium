@@ -1,0 +1,5 @@
+The visualization is structured in a vertical arrangement with three main parts. The first part features a track titled "hg38 | Transcript (Max. 15 Rows)" showcasing a genomic interval on chromosome 3 with directional arrows. The arrows, colored blue for positive and orange for negative strands, represent gene orientations and genomic positions with text annotations. Displacement is applied to address visual overlaps, allowing 15 rows.
+
+The second section contains a track titled "Likely Benign," displaying a sequence on chromosome 2. Points and text annotations in green and purple denote different sequence categories, while connecting lines illustrate relationships between them. Displacement and spread methods visually distinguish overlapping data points.
+
+The third part highlights a genomic interval on chromosome 17 with color-coded points. Each point represents variant significances using colors like blue for "Pathogenic" and orange for "Likely Pathogenic," with interactive features for detailed exploration. The tracks use different alignment and displacement strategies for clarity and efficient display of genomic data with overlapping marks.

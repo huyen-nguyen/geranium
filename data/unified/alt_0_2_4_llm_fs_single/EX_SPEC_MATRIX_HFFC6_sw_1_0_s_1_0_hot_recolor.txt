@@ -1,0 +1,14 @@
+This visualization, titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells," features a horizontal layout depicting chromosome 7 from positions 77,700,000 to 81,000,000. The structure includes two main vertically arranged views. Each view is composed of multiple tracks.
+
+The left view consists of vertical bar charts:
+1. "HFFc6_H3K4me3" marked in purple.
+2. "HFFc6_ATAC" marked in dark green.
+3. "HFFC6_CTCF" contains orange bars with pink and green triangles indicating strand directions. These bars utilize data from bigWig files.
+
+This view is linked to the right view, demonstrating two matrix-based heatmaps and additional tracks:
+1. A "Micro-C" matrix where data intensity is represented using a hot color scale.
+2. An "Epilogos (hg38)" chart visualizing several chromatin states, using colors ranging from red and green to yellow and gray for different categories such as "Active TSS" and "Bivalent Enhancer."
+
+The right view mirrors this structure but focuses on Hi-C data instead of Micro-C.
+
+Overall, the diagram effectively shows correlations between genomic modifications and structural variations across the specified region of chromosome 7.

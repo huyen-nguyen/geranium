@@ -1,0 +1,23 @@
+Here's a comprehensive description based on your JSON specification:
+
+---
+
+The visualization comprises two vertically arranged scatter plots, visualizing genomic data across the chromosome 1 region from position 1 to 3,000,500 using a multivec file. 
+
+**Top Plot**: 
+- Features a scatter plot where the x-axis represents the genomic positions, and the y-axis displays quantitative expression values.
+- Each point's size is scaled according to the 'peak' data field, indicating expression magnitudes.
+- Data points are colored based on the categorical 'sample' field, with a legend highlighting categories like 'sample 1', 'sample 2', 'sample 3', and 'sample 4'.
+- Points are semi-transparent (opacity: 0.5), allowing overlapping points to remain visible.
+- The chart includes tooltips showing genomic start and end positions, peak values, and sample names for detailed exploration.
+
+**Bottom Plot**:
+- This scatter plot is similar in configuration to the top plot.
+- In addition, points are stratified into four horizontal rows based on the sample categories, facilitating category-wise comparison.
+- Like the top plot, it uses size and color encoding for point expression and sample identity respectively.
+
+The entire visualization is set in a linear layout with a shared genomic x-axis, and both plots align horizontally. The center radius of 0.8 provides a unified structural context for the data representation.
+
+--- 
+
+This description highlights key elements from your spec, including layout configuration, data

@@ -1,0 +1,11 @@
+A linear layout visualization showing genomic data from chromosome 1 (position 1 to 3,000,500). There are four main tracks: 
+
+1. **Scatter Plot**: Displays genomic positions on the x-axis and expression values on the y-axis with point sizes indicating the magnitude. It is stratified by samples 1 through 4, with distinct colors for each sample.
+
+2. **Bar Chart**: Shows genomic intervals on the x-axis with bars representing expression values, stratified by samples. The y-axis captures the range between minimum and maximum peaks.
+
+3. **Heat Map**: Depicts genomic intervals, with color intensity representing expression values. It is stratified by samples, facilitating comparison across categories.
+
+4. **Line Chart with Scatter Plot Overlay**: Displays lines showing trends over genomic positions with points indicating specific values, color-coded by sample. Tracks changes in expression visually across the genome domain.
+
+Each track provides a tooltip with detailed information including genomic positions and sample details, enhancing interactivity. The tracks are aligned for easy comparison, allowing detailed exploration of genomic patterns for each sample.

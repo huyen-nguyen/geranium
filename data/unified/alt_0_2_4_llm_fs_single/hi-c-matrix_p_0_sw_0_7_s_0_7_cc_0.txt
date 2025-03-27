@@ -1,0 +1,13 @@
+The visualization, titled "Hi-C Matrix" with the subtitle "Visualize Hi-C Data Using Matrix and Annotations," presents a comprehensive view of genomic interactions across a specified interval range of 800,000,000 to 1,800,000,000. The chart employs a linear layout in the horizontal orientation, using the hg38 assembly.
+
+Multiple overlaid tracks are featured:
+
+1. **Matrix Track**: Shows genomic positions on both x- and y-axes with intervals. Interaction intensities are represented by color gradients in a "hot" color scheme, with a dashed background styling for emphasis.
+
+2. **Vertical and Horizontal Rule Tracks**: Green and purple lines respectively indicate specific genomic positions, offering reference points or annotations across the matrix.
+
+3. **Bar Track**: Displays bar plots with genomic intervals, with stroke colors indicating categorical differences among chromosomes (chr6, chr7, and chr8).
+
+4. **Point Track**: Superimposes points on the matrix, with coordinates mapped to both axes. The points' size is proportionate to the quantitative values defined by 'v', rendered in pink with white strokes for contrast.
+
+The matrix emphasizes the density and variability of gene interactions across various chromosomes, made visually accessible through strategic use of color intensity, size, and stroke width. Annotations serve as guides to highlight significant positions within this genomic landscape. The entire assembly is presented within a 600x600px frame, providing a detailed but compact sketch of chromosomal interactions.

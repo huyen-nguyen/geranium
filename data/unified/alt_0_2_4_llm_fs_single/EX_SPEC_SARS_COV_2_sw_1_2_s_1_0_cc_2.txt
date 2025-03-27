@@ -1,0 +1,11 @@
+A linear visualization titled "SARS-CoV-2" sourced from the WashU Virus Genome Browser, NCBI, and GISAID, displays various genomic features of the NC_045512.2 assembly on a horizontal linear layout. The visualization includes multiple tracks:
+
+1. **NC_045512.2 Genes Track**: Shows genes with purple rectangles, mapping genome intervals from positions 1 to 29,903.
+
+2. **S Protein Annotation Track**: Stratified by categories, including receptor-binding domain (RBD) and heptad repeat regions, displayed with corresponding colors.
+
+3. **NC_045512.2 Sequence Track**: A bar chart indicating the frequency of nucleotide bases (A, T, G, C) with bars colored according to their base type. Text annotations depict base identities visible only under specific zoom levels.
+
+4. **TRS-L-Dependent Recombination Events Track**: Visualizes recombination events with connections spanning genomic positions, colored in light purple with low opacity.
+
+The layout emphasizes gene locations, protein annotations, and recombination dynamics across the SARS-CoV-2 genome, benefiting genomic and virology research.

@@ -1,0 +1,14 @@
+The visualization presents genomic alignment data in both linear and overlaid layouts. It spans genomic intervals from positions 350 to 396. Two main sections are detailed: 
+
+1. **Gap and Conservation Tracks:**
+   - **Gap Bar Chart:** This track illustrates gap values using sky-blue bars, indicating variations in genomic intervals on the x-axis, with quantitative gap values displayed on the y-axis.
+   - **Conservation Bar Chart:** This track shows conservation values with a color gradient ranging from yellow to red, representing varying degrees of conservation. The bars’ color intensity correlates with conservation strength.
+
+2. **Rectangular and Text Tracks:**
+   - **Rectangular Track with Text:** Displays genomic base sequences. Rows are categorized by sample names, with base categories differentiated by distinctive colors, and text annotations are in black.
+   - **Overlaid Track:**
+     - Comprises a combination of bar charts and rectangular tracks.
+     - Utilizes categories in different colors, visualizing base sequences with enhanced detail due to multiple overlaid tracks.
+     - Interactive features include a highlighting brush to correlate genomic regions between different visual tracks.
+
+This visualization is based on a CSV data source related to genomic alignment, facilitating a comprehensive view of genetic regions, gaps, and conservation across specified genomic intervals.
