@@ -149,5 +149,11 @@ def load_embeddings():
     return (text_embeddings, image_embeddings, spec_embeddings)
 
 
+@app.route("/api/get_db", methods=["GET"])
+def get_index_database():
+    index_db_file_names = os.listdir("../data/indexed/imgs")
+    index_db = get_all_modalities(index_db_file_names)
+    return jsonify({"data": index_db})
+
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
