@@ -1,0 +1,7 @@
+A genomic visualization in a linear layout displays data from chromosome 1, spanning the interval from 1 to 3,000,500. The visualization consists of two tracks: 
+
+1. **Top Track - Bar Chart**: This track shows genomic intervals on the x-axis, with expression values represented by bars on the y-axis. Data is stratified by four categories — 'sample 1,' 'sample 2,' 'sample 3,' and 'sample 4.' Each category is depicted in a distinct color, with black strokes outlining the bars. The bar chart also distinguishes quantitative ranges using 'peak_min' and 'peak_max' values.
+
+2. **Bottom Track - Area Chart**: This track also displays genomic intervals on the x-axis, but visualizes expression as areas on the y-axis. It is similarly stratified into the same four categories, each represented with corresponding colors. The area chart employs white strokes and a slightly greater stroke width for emphasis.
+
+Both tracks feature interactive tooltips that provide specific genomic positions, expression values, and sample information. The use of color and stratification clearly delineates differences between samples, facilitating comparative analysis across the genomic data.

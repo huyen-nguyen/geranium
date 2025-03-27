@@ -1,0 +1,1 @@
+A heat map in a linear layout visualizes a matrix file, displaying data from genome regions between positions 800,000,000 and 1,800,000,000 of the hg38 assembly. Both axes represent genomic intervals, with expression values encoded as color intensity in shades of grey.

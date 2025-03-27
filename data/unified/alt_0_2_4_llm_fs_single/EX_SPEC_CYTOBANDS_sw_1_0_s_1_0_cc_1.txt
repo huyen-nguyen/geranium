@@ -1,0 +1,21 @@
+A series of linear visualizations display genomic data for five chromosomes (chr1 to chr5) in parallel tracks. Each chromosome track contains two layers: an area chart and an ideogram.
+
+### Area Chart
+- **Data Source**: Multivec file showing genomic positions across samples.
+- **Marks**: Area, representing quantitative variations (peak values) along the genome.
+- **X-axis**: Genomic positions on each chromosome.
+- **Y-axis**: Quantitative peak values.
+- **Colors**: Different colors represent samples (blue, orange, green, red) categorized under 'sample 1' to 'sample 4'.
+
+### Ideogram
+- **Data Source**: Cytogenetic banding data from a CSV file.
+- **Marks**: Text, rectangles, and triangles overlaid on:
+  - **Rectangles**: Represent the density of bands in gray-scale shades (from white to black) and purple for genomic variance regions.
+  - **Text**: Labels bands with black text to indicate chromosomal features.
+  - **Triangles**: Maroon triangles represent centromeric regions ('acen-1' and 'acen-2').
+
+### Layout
+- **Configuration**: Linear arrangement in horizontal orientation.
+- **Style Attributes**: Gray strokes outline the genomic segments, adding clarity to delineated boundaries of genomic ranges. 
+
+This visualization effectively communicates genomic density and variability across multiple chromosomes with a clear and informative layout.

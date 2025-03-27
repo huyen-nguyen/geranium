@@ -1,0 +1,9 @@
+The Hi-C matrix visualization displays genomic interactions within intervals from 800,000,000 to 1,800,000,000 on the x-axis. The chart includes overlaid tracks:
+
+1. **Matrix Track**: Uses light to dark shades of gray to encode the intensity of interactions. Both the x and y axes represent genomic intervals.
+2. **Vertical Lines Track**: Features red lines denoting specific genomic positions on the x-axis for chromosomes 2, 5, and 10.
+3. **Horizontal Lines Track**: Contains blue lines marking genomic positions on the y-axis for the same chromosomes.
+4. **Bar Track**: Highlights genomic intervals as bars, with strokes indicating different categories. The bars encode a quantitative value using varying color intensities.
+5. **Point Track**: Depicts point annotations where both axes indicate genomic intervals. The steel blue points vary in size based on a quantitative measure, representing additional data dimensions.
+
+The visualization is styled with a light gray background, and the plot is laid out in a linear arrangement.

@@ -1,0 +1,9 @@
+This visualization presents a multi-track linear layout focused on a section of chromosome 3 between positions 52,168,000 and 52,890,000. It includes three genomic range annotation tracks titled 'HiGlass', 'IGV', and 'Corces et al.' Each track represents gene annotations and exon intervals, with elements such as text labels, rectangles, and arrows using various visual marks.
+
+- **HiGlass Track**: Displays gene annotations with text and directional signals using colored triangles and lines. Genes on the positive strand are marked in blue, and genes on the negative strand are marked in red. 
+
+- **IGV Track**: Visualizes gene annotations with text and rectangles, all colored in navy blue. Directional signals for strands are indicated by white lines with triangular patterns.
+
+- **Corces et al. Track**: Shows a detailed view with smaller text and rectangles indicating exons. The color scheme involves blue for positive stranded genes and red for negative stranded genes.
+
+The genome is stratified into rows based on strand orientation, depicted using interactive and graphical elements across tracks, providing a comprehensive view of gene distribution within the specified genomic interval.

@@ -1,0 +1,13 @@
+The visualization is a linear genomic layout focusing on chromosome 3, covering intervals from 52,168,000 to 52,890,000. It contains six individual charts, each representing gene annotations with various styling and arrangements. The charts are arranged in two horizontal rows, each containing three vertical tracks.
+
+**Top Row:**
+1. **GmGDV**: Displays gene annotations using text, triangles, rectangles, and rules. Blue represents the '+' strand and red represents the '-' strand.
+2. **Corces et al.**: Features gene names and annotations with a similar structure to GmGDV but with a different color scheme (#012DB8 for the '+' strand and #BE1E2C for the '-' strand).
+3. **HiGlass**: Uses triangles and rules with specific line patterns to depict gene direction. Colors are blue for '+' and red for '-' with an opacity of 0.8.
+
+**Bottom Row:**
+4. **Cyverse-QUBES**: Highlights gene annotations using a gray color scheme for structural elements, with purple and dark gray shades for unique features.
+5. **IGV**: Employs a navy color scheme to present gene annotations, using text and rectangles to represent genomic features. Lines are in white with a semi-transparent style to indicate orientation and direction.
+6. **IGV Continued**: Offers detailed exon and intron annotations within the same framework, showing diversity in exon and intron color coding.
+
+The charts utilize

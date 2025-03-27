@@ -1,0 +1,1 @@
+A scatter plot in a linear layout visualizes a multivec file, depicting the entire genome of hg38. The x-axis represents genomic positions across chromosomes, while the y-axis encodes quantitative expression values named 'peak.' The size of each point also reflects the expression values. The plot title is 'Basic Marks: point' and it has a subtitle 'Tutorial Examples.'

@@ -1,0 +1,13 @@
+The visualization, titled "Hi-C Matrix," presents genomic data in a linear layout using matrix and point annotations. This multilayered chart overlays several tracks, including:
+
+1. **Matrix Track**: Displays a heatmap where both the x and y axes represent genomic intervals spanning between 800,000,000 and 1,800,000,000 base pairs. The intensity of the color on the heatmap encodes the expression values, with hotter colors indicating higher values. 
+
+2. **Vertical Line Annotations**: Vertical lines on the x-axis mark specific genomic positions, colored sky blue for easy distinction.
+
+3. **Horizontal Line Annotations**: Horizontal lines on the y-axis mark similar genomic positions, colored green.
+
+4. **Bar Annotations**: Shows additional genomic intervals with color intensity variations defining expression values, surrounded by distinct categorical strokes.
+
+5. **Point Annotations**: On a matrix of genomic intervals, points overlay the grid to denote data of various sizes proportional to quantitative values. Points are colored sky blue with a white stroke for clear visibility.
+
+Setup uses the assembly "hg38" and is styled with dashed lines for grid clarity, enhancing the interactive exploration of genomic relationships within this visualization.

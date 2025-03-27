@@ -1,0 +1,1 @@
+A linear bar chart visualizes a multivec file showing genomic positions across the genome (assembly hg38). The x-axis represents genomic intervals, while the y-axis represents expression values in bars, colored in purple. The size of the bars is constant. The chart is titled "Basic Marks: bar" with the subtitle "Tutorial Examples."

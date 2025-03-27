@@ -1,0 +1,1 @@
+A text-based chart in a linear layout visualizes a multivec file, displaying the genome of hg38 across multiple intervals. The height and color of each letter represent its category and count, with categories 'A', 'T', 'G', 'C' corresponding to colors blue, orange, green, and red, respectively. The chart's title is 'Basic Marks: Text', and the subtitle is 'Tutorial Examples'.

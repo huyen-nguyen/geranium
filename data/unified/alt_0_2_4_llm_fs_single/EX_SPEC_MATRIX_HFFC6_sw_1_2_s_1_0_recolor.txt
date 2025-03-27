@@ -1,0 +1,7 @@
+The visualization is a horizontal arrangement of genomic data focusing on chromosome 7 of hg38, spanning from 77,700,000 to 81,000,000 base pairs. It includes two main views for comparison: Micro-C and Hi-C for HFFc6 cells. Each view contains a vertical and a horizontal section.
+
+In the vertical section, there are stacked bar charts displaying data from HFFc6_H3K4me3, HFFc6_ATAC, and HFFC6_CTCF. These charts show genomic intervals on the x-axis with quantitative peak values, encoded in purple, dark green, and orange respectively. Additional genomic position annotation tracks use triangles to indicate strand orientation and are colored pink and green.
+
+The horizontal section features large matrix plots titled "HFFc6_Micro-C" and "HFFc6_Hi-C," showing genomic interactions with color intensity representing expression values. A subsequent bar chart, "Epilogos (hg38)," displays various chromatin states with color coding for categories like "Active TSS" and "Enhancers."
+
+The title "Matrix Visualization" and subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" guide the analysis. The layout style includes a light gray background for clarity, and tracks are horizontally linked with minimal spacing to facilitate comparison.

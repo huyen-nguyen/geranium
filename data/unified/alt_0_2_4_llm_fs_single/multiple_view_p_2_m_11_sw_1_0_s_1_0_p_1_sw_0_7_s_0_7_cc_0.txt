@@ -1,0 +1,9 @@
+The visualization, titled "Visual Linking," consists of three integrated charts with a vertical arrangement that demonstrates dynamic data interaction across different genomic views. 
+
+The first chart is a linear scatter plot focusing on chromosome 1, displaying positions from 160,000,000 to 200,000,000. It visualizes genomic expression for four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4.' The samples are represented by points whose colors are blue, orange, green, and red, respectively. Their placement on the y-axis corresponds to quantitative peak values.
+
+The second chart is a linear area chart showcasing the complete chromosome 1 from start to the end. It overlies an interactive brush connected to the scatter plot view, facilitating detailed exploration of selected genomic intervals. The area beneath the line for each sample is color-coded similarly to the first chart.
+
+Positioned on the right, the third visualization is a static circular line chart. It serves as an overview of chromosome 1, displaying interconnected lines for each sample with matching colors. An interactive brush across this circular view links back to the linear chart, providing a seamless transition between overview and detail.
+
+This visualization employs multivec tilesets and showcases the interactive and dynamic exploration of genomic data, allowing users to manipulate brush positions to instantly update the focused view on the scatter plot.

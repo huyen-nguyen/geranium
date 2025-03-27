@@ -1,0 +1,7 @@
+**Description**: 
+
+This visualization consists of two vertically aligned panels comparing Micro-C and Hi-C data for chromosome 7 in HFFc6 cells. Each panel contains three horizontal bar charts, where expression levels from bigWig data files are shown for modifications like H3K4me3 and ATAC-seq. The bars in these charts are colored dark green (H3K4me3) and orange (ATAC), with navy blue for CTCF. Furthermore, genomic positions are annotated with small triangles indicating gene strand direction, using pink for positive and green for negative strands. 
+
+Each panel features a matrix plot visualizing interaction data, with genomic coordinates on both x and y-axes. Color intensity, mapped with a purple-blue scheme, represents interaction frequencies. Additionally, the bottom track displays an Epilogos annotation with bars colored according to categories like "Active TSS," "Bivalent TSS," among others, encoding chromatin states for hg38 assembly data. 
+
+Titles and annotations provide clarity about data types: "HFFc6_Micro-C," "HFFc6_Hi-C," and "Epilogos (hg38)" represent data sources and chromatin states analyzed. This multi-layered view provides a detailed comparison of chromosomal interactions and modifications across the selected genomic interval.

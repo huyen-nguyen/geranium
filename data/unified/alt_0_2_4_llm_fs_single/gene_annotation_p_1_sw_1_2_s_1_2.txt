@@ -1,0 +1,5 @@
+This visualization displays parallel genomic annotations across multiple tracks for chromosome 3, spanning positions 52,168,000 to 52,890,000. The layout is linear with two sections arranged horizontally, each containing three vertically stacked tracks. 
+
+The first column includes tracks titled "Corces et al.," "IGV," and "HiGlass." These tracks highlight genomic features such as genes and exons, represented by text labels, rectangles, and triangles. Each track uses color coding to denote gene strand direction, with blue for positive and red for negative strands.
+
+The second column consists of "GmGDV" and "Cyverse-QUBES" tracks, showcasing annotations similar to the first column. These include exons, genes, and intron regions, identified through distinct color indicators: gray for genes, pink for exons, and cyan for introns. The annotations are stratified by gene strand, featuring text, triangles, and lines to illustrate genomic intervals.

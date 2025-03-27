@@ -1,0 +1,13 @@
+The visualization presents genomic data using both circular and linear layouts, centered on the hg19 assembly. It features two main views linked by a brush tool:
+
+1. **Circular View**: Displays a comprehensive genome ideogram. Key tracks include:
+   - A point annotation track titled "Putative Driver" with text labels for genes.
+   - Range annotations showing genomic gains (in blue) and losses of heterozygosity (LOH in orange).
+   - A connection track visualizes structural variations with links and lines in multiple colors, representing categories such as 'Translocation,' 'Duplication,' 'Deletion,' and various inversions.
+
+2. **Linear View**: Focuses on chromosome 1, displaying similar tracks:
+   - An ideogram with right and left triangles indicating centromeric regions.
+   - A scatter plot titled "Point Mutation" highlights mutations, color-coded by subtype within a VCF dataset.
+   - Gene annotation and range tracks display insertion, deletion, and copy number variations (CNVs) with quantitative expressions detailed in grayscale bars.
+
+Both views are synchronized, providing detailed genomic insights into structural and mutational variations across the hg19 genome.

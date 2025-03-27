@@ -1,0 +1,27 @@
+The visualization consists of two circular scatter plots arranged horizontally. Both tracks display genomic data from chromosome 1 between 1 and 3,000,500.
+
+### Left Track:
+- **Type**: Circular scatter plot
+- **Layout**: Circular
+- **Data Source**: Multivec file
+- **Encoding**: 
+  - **X-Axis**: Genomic position
+  - **Y-Axis and Size**: 'Peak' values (quantitative)
+  - **Color**: Categorical samples ('sample 1', 'sample 2', 'sample 3', and 'sample 4') in distinct colors
+  - **Opacity**: 50%
+- **Additional Features**: 
+  - **Gridlines**: Shown on the y-axis
+  - **Tooltip**: Displays start position, end position, peak value, and sample category
+
+### Right Track:
+- **Type**: Circular scatter plot
+- **Layout**: Circular, stratified by sample rows
+- **Data Source**: Same multivec file as the left track
+- **Encoding**: 
+  - **X-Axis**: Genomic position
+  - **Y-Axis**: 'Peak' values (quantitative), stratified by samples
+  - **Row**: Stratified by sample category
+  - **Color and Size**: As left track with categorial differentiation
+
+### General Characteristics:
+- **Chromosome**

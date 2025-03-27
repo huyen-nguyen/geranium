@@ -1,0 +1,1 @@
+A linear bar chart visualizes a multivec file, displaying genomic intervals on the x-axis and expression values on the y-axis. The bars, colored green, represent the 'peak' field data. This visualization, titled "Basic Marks: bar" with the subtitle "Tutorial Examples," focuses on 'sample 1' using a bin size of 5.

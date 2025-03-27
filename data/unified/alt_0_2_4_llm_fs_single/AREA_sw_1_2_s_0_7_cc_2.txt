@@ -1,0 +1,1 @@
+A linear area chart visualizes a multivec file across the entire genome of hg38. The x-axis represents genomic positions, and the y-axis encodes quantitative peak values as areas. The chart is colored in purple, showcasing an overview of expression with the title "Basic Marks: area" and the subtitle "Tutorial Examples."

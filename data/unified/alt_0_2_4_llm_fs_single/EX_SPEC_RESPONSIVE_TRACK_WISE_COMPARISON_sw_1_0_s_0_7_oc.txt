@@ -1,0 +1,3 @@
+The visualization comprises two genomic regions, with tracks displaying gene annotations and quantitative data. The first region covers chromosome 12 (10,140,000 to 10,210,000) and features a genomic range annotation track in pink, showing directional gene annotations with triangles and text. This is followed by three bar charts representing expression peaks for "Sample 1," "Sample 2," and "Sample 3," all colored in pink.
+
+The second region spans chromosome 8 (127,734,000 to 127,744,000), with a similar setup but in orange. The gene annotation track is accompanied by bar charts for the same samples, showing their expression peaks in orange. Both regions feature tracks linked through genomic coordinates, providing a comparative view of two separate chromosomal areas.

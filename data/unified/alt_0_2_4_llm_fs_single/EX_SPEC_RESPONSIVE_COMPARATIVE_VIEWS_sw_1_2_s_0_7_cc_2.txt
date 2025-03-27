@@ -1,0 +1,7 @@
+The visualization features three horizontally arranged bar charts, each representing genomic data from different chromosomes. The charts are:
+
+1. **Left Chart**: Displays data on chromosome 12, between positions 5,000,000 and 15,000,000, using a pinkish-red color for the bars.
+2. **Middle Chart**: Shows data on chromosome 9, from 5,000,000 to 15,000,000, with purple-colored bars.
+3. **Right Chart**: Also focuses on chromosome 12 within the same interval (5,000,000 to 15,000,000), colored in purple.
+
+Each bar in the charts represents a quantitative genomic value, using a white stroke for accentuation. The data source is a multivec type file, focusing on a sample category and peak values, accurately binned for visualization clarity. The charts adjust responsively, switching to a vertical arrangement if the width is below 1200px.

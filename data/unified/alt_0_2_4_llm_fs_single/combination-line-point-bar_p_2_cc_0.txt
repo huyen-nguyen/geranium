@@ -1,0 +1,9 @@
+The visualization consists of three vertically aligned linear tracks displaying genomic data for chromosome 1, within the interval from 1 to 3,000,500 base pairs. It uses the hg38 assembly and features:
+
+1. **Line and Scatter Plot**: This track visualizes multivec data with both line and point marks, showing peaks of four samples ('sample 1' to 'sample 4') using different colors for each sample (e.g., #1f77b4 for blue). The x-axis represents genomic positions, while the y-axis shows quantitative values for expression. Point sizes correspond to peak intensity. Categories are stratified by rows.
+
+2. **Bar Chart**: This track displays genomic intervals using bars, with start and end positions on the x-axis and peak minimum and maximum values on the y-axis. The data is stratified by sample categories, with distinct colors representing each sample, and a black stroke applied to bar outlines for emphasis.
+
+3. **Scatter Plot**: Similar to the first track but solely focused on point marks, this plot illustrates peaks of the same samples, using point size and color to indicate expression levels and categories, respectively. The transparency of points is set to 0.5 for visual clarity.
+
+Each track is interactive, with tooltips provided to display genomic position and peak values on mouse hover, enhancing the exploration of potential variations within the sample data. The design is clean and organized, making it easy to compare and interpret expression patterns across different

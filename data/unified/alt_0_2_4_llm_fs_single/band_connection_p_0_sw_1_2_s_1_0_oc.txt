@@ -1,0 +1,6 @@
+The visualization is a linear arrangement consisting of seven individual charts, each visualizing genomic data from chromosome 1 between 103,900,000 and 104,100,000 base pairs. It consists of alternating tracks of rectangles and connections, all colored in a light green shade with a low opacity of 0.15.
+
+- Four tracks display genomic intervals using green rectangles, with stroke and color encoded in hex color "#85B348".
+- Three tracks visualize connections (betweenLink) between genomic positions, adding a layered, complex look to the linear layout.
+
+The charts utilize a CSV dataset, processed from a file of edited segmental duplications. Genomic intervals are shown along the x-axis, with identical styling across tracks emphasizing continuity and data linkage. The visualization is designed for an hg38 assembly with interactive zoom and tooltip functionality for exploring genomic start and end positions.

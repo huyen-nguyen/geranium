@@ -1,0 +1,5 @@
+The visualization consists of two adjacent genomic range annotation tracks arranged horizontally, focusing on a specific region of chromosome 3 between 52,168,000 and 52,890,000. 
+
+The left track, titled 'IGV,' includes text labels for gene names and is colored in sky blue. It features rectangles representing gene regions, overlaid with directional white arrows indicating gene strands. 
+
+The right track contains a more detailed view with gene, exon, and intron annotations. Gene regions are highlighted in pink, exons in green, and introns are shown in the same green color, with the text labels in purple. Both tracks are stratified by strands, distinguished through row separation, enhancing clarity of gene orientation and arrangement.

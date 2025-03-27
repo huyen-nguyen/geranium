@@ -1,0 +1,15 @@
+The visualization titled "Matrix Visualization" compares Micro-C and Hi-C datasets for HFFc6 cells on chromosome 7 within the interval 77,700,000 to 81,000,000. It features a horizontal arrangement with two main views.
+
+### View 1: Vertical Layout
+- **Tracks:**
+  1. **HFFc6_H3K4me3:** A vertical bar chart representing genomic intervals on the x-axis and expression peaks on the y-axis, colored in purple.
+  2. **HFFc6_ATAC:** Another vertical bar chart similar to the above, but colored dark green.
+  3. **HFFC6_CTCF and Gene Annotations:** An overlay of bars and genomic position annotation tracks. The bars are orange, while right and left triangles representing gene strands are pink and green, respectively.
+
+### View 2: Horizontal Layout with Two Subviews
+- **Subview 1:**
+  - Replicates the tracks from View 1 but in a horizontal orientation.
+  - Includes a matrix titled **HFFc6_Micro-C** where genomic coordinates are on both the x- and y-axes. The color intensity represents expression values using a "bupu" color scheme.
+  - **Epilogos (hg38):** A bar chart showing different genomic categories, each color-coded (e.g., red, green, yellow) to represent specific genomic states.
+
+- **Subview 2:

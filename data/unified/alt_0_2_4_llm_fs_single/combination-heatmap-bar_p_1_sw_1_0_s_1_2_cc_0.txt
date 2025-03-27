@@ -1,0 +1,12 @@
+The visualization presents genomic data analysis in a linear layout covering chromosome 1 from base 1 to 3,000,500 (hg38 assembly). It consists of two vertically stacked tracks: 
+
+1. **Bar Chart** (Top Track): 
+   - Displays quantitative genomic data (peak values) as a bar plot.
+   - Stratified into four rows for categories: "sample 1" (blue), "sample 2" (orange), "sample 3" (green), and "sample 4" (red).
+   - The x-axis shows genomic positions, and the y-axis encodes peak values.
+
+2. **Heat Map** (Bottom Track):
+   - Visualizes the same data as a heatmap, encoding peak values with color intensity.
+   - The chart is also stratified by the same four sample categories.
+
+Each track offers interactive tooltips that display start and end genomic positions, peak values, and sample information.

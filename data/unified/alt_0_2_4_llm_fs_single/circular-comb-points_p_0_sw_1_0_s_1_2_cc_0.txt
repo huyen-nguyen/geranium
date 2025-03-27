@@ -1,0 +1,5 @@
+This visualization consists of two circular scatter plots representing genomic data from chromosome 1, spanning positions 1 to 3,000,500. Each circular plot is in a horizontal arrangement, displaying genomic positions on the x-axis, while the y-axis and size of the points correspond to expression values. Both plots stratify data by four sample categories, each represented by a unique color: blue, orange, green, and red.
+
+The left plot features rows for each sample, emphasizing categorized data representation. In contrast, the right plot includes a grid, enhancing the clarity of expression value distribution. The opacity of points is set to 0.5 to maintain visibility of overlapping data points.
+
+Interactivity is supported through tooltips, which provide detailed information on start and end genomic positions, expression values, and sample categories. The visualization utilizes a multivec data type from an external URL, ensuring dynamic and comprehensive genomic data representation.

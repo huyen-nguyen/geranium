@@ -1,0 +1,9 @@
+A linear layout in Gosling.js demonstrates track templates, facilitating complex visualizations. It features three main tracks:
+
+1. **Genomic range annotation track**: Displays gene annotations on chromosome 3 between positions 52,168,000 and 52,890,000. Genes are represented as arrows indicating strand direction. The track is stylized, with labels for gene names using a smooth path with gray and white coloring appropriate to strand information.
+
+2. **Bar chart with text**: Visualizes base counts from multivec data on chromosome 1 between positions 77,925,299 and 77,925,320. Bars correspond to base counts (A, T, G, C) with colors indicating categories, and text annotations display base types.
+
+3. **Ideogram**: Shows genomic bands of chromosome 1, with positions ranging from 50,000,000 to 200,000,000. Bands are colored according to stain types with labeled p and q arms using left and right triangles. The display utilizes a CSV source for cytoBand ideogram data.
+
+The visualization is titled "Track Template In Gosling.js" with a subtitle explaining the ease of creating complex visualizations using templates. The design employs smooth paths and cohesive styling across tracks.

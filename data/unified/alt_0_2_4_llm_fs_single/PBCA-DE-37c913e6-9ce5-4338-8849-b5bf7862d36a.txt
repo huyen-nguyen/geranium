@@ -1,0 +1,14 @@
+The visualization consists of a circular and a linear view, with a focus on chromosome 1 of the hg19 assembly. The circular view includes:
+
+1. **Circular Ideogram**: Displays entire genome with chromosome labels and genomic intervals.
+2. **Annotation Tracks**: Show “Gain” with blue rectangles and “Loss of Heterozygosity (LOH)” with orange rectangles.
+3. **Connection Track**: Illustrates structural variations like Translocations, Duplication, Deletion, and Inversions in varying colors representing different categories.
+
+The linear view displays:
+
+1. **Ideogram**: Depicts chromosome 1 with bands and highlights.
+2. **Text Annotation**: Marks “Putative Drivers” with annotated gene names.
+3. **Point Mutation Track**: Scatter plot indicating mutations with distances to previous ones, colored by subtype.
+4. **Indel and CNV**: Bars for insertions/deletions and copy number variations.
+
+Interactive features include a blue brush in the circular ideogram linking to the linear view. The visualization provides a comprehensive genomic overview with multiple data layers for detailed analysis.

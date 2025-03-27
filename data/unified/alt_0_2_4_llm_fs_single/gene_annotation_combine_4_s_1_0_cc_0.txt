@@ -1,0 +1,11 @@
+The visualization consists of four genomic range annotation tracks, each with distinct styling and content. These tracks display gene annotations for a section of chromosome 3, covering positions 52,168,000 to 52,890,000. 
+
+The first chart, titled "Corces et al.," uses blue and orange to indicate gene strands, with genes displayed as text and rectangles. Exons are shown with larger rectangles, and connecting lines represent genes' genomic ranges.
+
+The second chart, "GmGDV," presents similar data with added triangle markers indicating gene directions. The colors remain consistent with "Corces et al."
+
+The third, "IGV," highlights genes with purple rectangles and text. White lines with a triangular pattern indicate gene directionality.
+
+The fourth chart features multicolored rectangle patterns representing exons and introns. Each chart stratifies data by strand and uses color to delineate categories. 
+
+This visualization effectively portrays gene position, orientation, and component breakdown using diverse visual encodings.

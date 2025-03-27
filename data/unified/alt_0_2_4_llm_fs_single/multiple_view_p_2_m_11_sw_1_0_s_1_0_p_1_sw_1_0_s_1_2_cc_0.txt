@@ -1,0 +1,19 @@
+**Description**: 
+
+The visualization is titled "Visual Linking" with the subtitle "Change the position and range of brushes to update the detail view on the bottom". This interactive visualization consists of a scatter plot, an area chart, and a circular line chart. 
+
+1. **Scatter Plot**: 
+   - Arranged in a linear layout with an x-axis showing the genomic positions on chromosome 1, ranging from 160,000,000 to 200,000,000.
+   - The y-axis represents quantitative expression values, depicted as points. 
+   - The data is stratified by four categories labeled 'sample 1', 'sample 2', 'sample 3', and 'sample 4', with distinct colors (blue, orange, green, and red).
+
+2. **Area Chart**: 
+   - Organized horizontally, with the same genomic intervals on the x-axis.
+   - It visualizes the expression data as filled areas, with colors corresponding to different samples. 
+   - An interactive brush allows users to select specific data sections for detailed exploration.
+
+3. **Circular Line Chart**: 
+   - The genome data is displayed in a circular format, maintaining the chromosomal intervals.
+   - Line connections represent the expression data, colored analogously to the scatter plot.
+
+The charts are linked, allowing dynamic updates to the detailed view at the bottom based on user interactions with the brushes. The genomic data is sourced from a multivec file, emphasizing the expression peaks

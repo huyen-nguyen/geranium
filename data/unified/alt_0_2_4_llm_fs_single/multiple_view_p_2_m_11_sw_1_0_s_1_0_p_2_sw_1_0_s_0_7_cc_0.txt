@@ -1,0 +1,9 @@
+The visualization titled "Visual Linking" includes a vertical arrangement of views that demonstrate interactive genomics data representation. It showcases three individual charts: a circular line chart, a linear area chart, and a scatter plot.
+
+1. **Circular Line Chart**: This chart displays genomic intervals on the x-axis and expression levels on the y-axis using multivec data for chromosome 1. It is stratified by four categories ('sample 1' to 'sample 4'), each represented by distinct colors like blue, orange, green, and red. An interactive brush on the x-axis links this chart to the linear area chart.
+
+2. **Linear Area Chart**: This chart visually represents genomic intervals with areas filled under each line, utilizing the same category color coding. The x-axis also includes an interactive brush that connects to the scatter plot below, allowing users to focus on specific genomic ranges.
+
+3. **Scatter Plot**: Positioned at the bottom, this chart presents a detail view based on the interactive brush selections above, focusing on a specified interval of chromosome 1. It illustrates expression levels with points, maintaining the categorical color coding.
+
+The visualization effectively links the circular overview and linear details, enabling dynamic exploration of genomic data through interactive brushes.

@@ -1,0 +1,1 @@
+A heat map in a linear layout visualizes a matrix file, showing a genomic interaction map between multiple chromosomes. The genomic intervals are plotted on both the x- and y-axes, representing chromosome locations. Color intensity encodes quantitative expression values, with a range in shades of grey. The visualization is static and uses the hg38 assembly.

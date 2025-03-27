@@ -1,0 +1,7 @@
+The visualization is a layered bar chart within a linear layout, titled "Rule Mark" with the subtitle "Annotate visualization with horizontal and vertical lines." It displays genomic data across the entire hg38 genome. 
+
+The main bar chart uses "multivec" data to depict the 'peak' values of 'sample 1' along the genomic position, shown on the x-axis, with light gray bars representing quantitative values up to 0.003 on the y-axis.
+
+Overlaid are two rule tracks. The first track uses vertical red lines to mark specific genomic positions (chr2, chr5, chr10) and their corresponding quantitative values, with stroke widths that vary according to these values. The second track introduces blue vertical lines at the same genomic positions, with a consistent stroke width of 2.
+
+The lines are styled with dashed patterns, adding annotation to the visualization. This chart facilitates interpretation of genomic intervals and quantitative expression, highlighted through the use of colored rules.

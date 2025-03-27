@@ -1,0 +1,9 @@
+**Description**: 
+
+This circular visualization depicts various genomic data across multiple tracks. The outermost track is an ideogram representing the human genome assembly hg38, with chromosomes color-coded to indicate different staining patterns.
+
+The middle track displays regions of copy number variations (CNVs) using pink and green rectangles. The pink rectangles represent regions with a loss of genetic material (minor allele copy number is zero), while green rectangles indicate regions of gain (total copy number is above average).
+
+The innermost track contains connections representing genomic rearrangements. These connections are color-coded to signify different structural variants, such as tandem duplications, translocations, deletions, and inversions. Strokes also vary in color to match distinct categories of structural variations, providing a comprehensive view of the genomic structure and variations. 
+
+Overall, this visualization offers a detailed look at genomic features and alterations, aiding in the analysis of genetic data.

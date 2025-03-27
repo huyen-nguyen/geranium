@@ -1,0 +1,5 @@
+The visualization consists of a circular and a linear view linked by an interactive brush in the circular track, allowing focus on chromosome 1 in the linear view. The circular view features an ideogram, a genomic track with text annotations, and separate tracks for "Gain" and "Loss of Heterozygosity (LOH)" marked in blue and orange, respectively. Connections between genomic positions are illustrated with lines colored by structural variation categories like "Translocation," "Duplication," and "Deletion."
+
+In the linear view, tracks offer detailed genomic insights. The ideogram highlights chromosome regions, while the "Putative Driver" track annotates gene positions with black text. The "Point Mutation" scatterplot displays mutation points colored by subtype. Two range annotation tracks depict "Insertion" and "Deletion" with annotated rectangles, while the "Copy Number Variants" track uses gray bars to indicate gene copy numbers across the genome.
+
+Overall, this visualization provides a comprehensive genomic overview, tracking variations and annotations within the human genome assembly hg19.

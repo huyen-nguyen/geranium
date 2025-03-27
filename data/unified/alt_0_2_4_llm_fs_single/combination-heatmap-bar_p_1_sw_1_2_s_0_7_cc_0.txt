@@ -1,0 +1,7 @@
+The visualization is composed of two vertically arranged charts focusing on chromosome 1 from position 1 to 3,000,500, utilizing a linear layout. 
+
+**Top Chart**: A bar chart displays quantitative genomic data across four samples—'sample 1,' 'sample 2,' 'sample 3,' and 'sample 4.' Each sample is represented by rows, with bars encoded in specific colors: blue, orange, green, and red, respectively. The x-axis represents genomic positions, while the y-axis indicates peak values.
+
+**Bottom Chart**: A heat map provides a detailed view of the genomic data, stratified by the same four samples along the rows. Color intensity encodes expression values, ranging from light to dark based on the magnitude, aiding in the visualization of data variation across genomic intervals.
+
+Tooltip functionality is incorporated for both charts, offering detailed information on genomic start and end positions, sample names, and values upon interaction. The assembly is based on 'hg38.'

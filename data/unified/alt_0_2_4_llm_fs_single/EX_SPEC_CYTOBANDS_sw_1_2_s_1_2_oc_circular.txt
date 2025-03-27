@@ -1,0 +1,14 @@
+A circular visualization composed of parallel tracks for multiple chromosomes, displaying genomic data and cytogenetic bands. Each track has two layers: an area chart for genomic expression and an ideogram with band annotations.
+
+- **Layout:** Circular, static, and parallel.
+- **Chromosomes:** Five tracks represent chromosomes 1 to 5.
+- **Data Type:** Multivec file for genomic data and CSV for cytogenetic band data.
+- **Area Chart:**
+  - **X-Axis:** Genomic position.
+  - **Y-Axis:** Expression values.
+  - **Color:** Represents different sample categories.
+- **Ideogram:**
+  - Displays cytogenetic bands in varied colors (e.g., white, gray, black) to indicate density.
+  - Additional elements: Purple rectangles and maroon triangles represent centromere bands.
+- **Purpose:** To compare genomic expression and structural information across chromosomes in a compact, visually layered format.
+

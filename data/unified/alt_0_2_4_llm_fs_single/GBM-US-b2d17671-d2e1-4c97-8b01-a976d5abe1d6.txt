@@ -1,0 +1,20 @@
+**Description**: 
+
+This genome visualization consists of circular and linear views integrated for a comprehensive analysis of structural variants and other genomic features. The circular ideogram displays the whole genome, highlighting specific chromosome anomalies. Tracks include:
+
+1. **Ideogram Track**: Shows chromosome bands with a brush interaction linking to the linear view.
+2. **Annotation Track**: Titled "Putative Driver," displays gene annotations as text, stratified by rows, where each row is color-coded based on categories.
+3. **Range Tracks**: 
+   - "Gain" shows genomic intervals in sky blue.
+   - "Loss of Heterozygosity (LOH)" displays in dark orange.
+
+4. **Connections Track**: Visualizes structural variants, colored and stroked by categories (e.g., Gain, LOH, Translocation, etc.).
+
+The linear view, corresponding to chromosome 1, further details:
+
+- **Ideogram with Triangular Marks**: Shows centromeric regions with arrows indicating directionality.
+- **Gene Track**: Annotates gene positions and structures with gray markers, providing strand information.
+- **Scatterplot**: "Point Mutation" track highlights mutation types with dots colored by subtype.
+- **Range Tracks**: Include "Copy Number Variants," showing expression levels with gray rectangles, and separate tracks for specific "Insertion" and "Deletion" events using two distinct colors.
+
+Overall, this visualization effectively integrates multiscale genomic data, employing interactive elements to

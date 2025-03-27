@@ -1,0 +1,20 @@
+Based on the provided JSON specification and details, here is a detailed description for the visualization:
+
+---
+
+Title: **Between Links in Circular Layouts with Parallel Arrangements**
+
+This visualization is a circular plot designed to represent genomic data in a compact and interconnected manner, highlighting structural relationships within the genome.
+
+**Layout and Design:**
+
+- **Circular Layout**: The visualization adopts a circular format, with the genomic data arranged in a ring. This layout is static with a center radius of 0.3, facilitating an organized parallel arrangement of tracks.
+
+- **Tracks**: 
+  - The outermost layer features a **circular bar chart**, effectively communicating quantitative genomic data. The bars are colored green, representing expression values, and are mapped to the x-axis showing genomic intervals.
+  - Two **circular ideograms** display chromosomal information, marked with rectangles colored in varying shades indicating different genomic features ('gneg', 'gpos25', 'gpos50', 'gpos75', 'gpos100', 'gvar', 'acen'). These elements help categorize genomic regions visually.
+  - A **connection track** visualizes links between genomic regions, employing light gray and black lines to indicate connections within and across chromosomes. These connections emphasize structural variations and duplications.
+
+**Data and Encoding:**
+
+- **Multivec Data**: The chart uses multivec data for the bar chart, with a bin size of 1 to represent the 'peak' values across samples on the

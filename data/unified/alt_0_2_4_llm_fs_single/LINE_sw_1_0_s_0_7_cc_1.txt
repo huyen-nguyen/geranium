@@ -1,0 +1,1 @@
+A line chart in a linear layout visualizes a multivec file, representing the hg38 genome. The 'position' field is mapped to the x-axis, and the 'peak' field to the y-axis. The line thickness is set to 2, and the line color is sky blue. The chart carries the title 'Basic Marks: line' and the subtitle 'Tutorial Examples.'

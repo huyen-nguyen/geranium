@@ -1,0 +1,11 @@
+The visualization comprises four genomic range annotation tracks displayed in a linear layout, focused on chromosome 3 between bases 52,168,000 and 52,890,000. 
+
+1. **Corces et al.**: This track uses a combination of text and colored rectangles to represent different strands, with '+' strands in blue and '-' strands in red. Gene annotations are visible, with exons marked as larger blue or red rectangles, and gene boundaries indicated by lines.
+
+2. **GmGDV**: Displays genes with text annotations, '+' strands as triangles pointing right and '-' strands as triangles pointing left. Exons are shown as wider rectangles. This track uses blue for '+' strands and red for '-' strands.
+
+3. **IGV**: Features gene annotations with blue rectangles and text. Directional lines with white triangles indicate gene orientation.
+
+4. **Unlabeled Track**: Implements a distinctive color palette with gray for genes, pink for exons, and cyan for introns, marked as rectangles.
+
+Each chart is stratified by strand categories, providing a comprehensive genomic annotation of the specified region.

@@ -1,0 +1,11 @@
+A genomic visualization in a linear layout showcases data from chromosome 1 ranging from position 1 to 3,000,500. The visualization comprises four distinct charts arranged vertically:
+
+1. **Bar Chart:** Displays stacked bars representing minimum and maximum peak values on the y-axis across different samples ('sample 1' to 'sample 4') over genomic intervals on the x-axis. Each bar is color-coded to reflect different samples.
+
+2. **Scatter Plot:** Illustrates peak values plotted as points on the y-axis, stratified by sample categories with varying point sizes reflecting the quantitative peak values. The data spans genomic positions on the x-axis.
+
+3. **Line and Point Chart:** Features lines and points to depict quantitative peak variations along the y-axis. The chart uses color to differentiate sample categories, and point sizes indicate the magnitude of peaks.
+
+4. **Heat Map:** Encodes peak expression values into color intensities for different samples across genomic intervals. The chart provides a comparative view of expression across the four samples, highlighting variations in data distribution.
+
+Sample categories across all charts are consistently represented using a shared color scheme, with tooltip information available for genomic positions, peak values, and sample identifiers.

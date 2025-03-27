@@ -1,0 +1,20 @@
+A matrix visualization with a horizontal arrangement compares Micro-C and Hi-C for HFFc6 cells on chromosome 7, between 77,700,000 and 81,000,000 base pairs. The visualization includes multiple views, each featuring various data tracks. 
+
+The left vertical view displays:
+
+1. **Bar Charts**:
+   - **HFFc6_H3K4me3**: Uses dark green bars to show genomic positions on the x-axis and quantitative peak values on the y-axis.
+   - **HFFc6_ATAC**: Displays data in orange bars with similar axes.
+   - **HFFc6_CTCF**: Comprises navy blue bars overlaid with genomic annotation tracks using right (pink) and left (green) triangles for positive and negative strands.
+
+2. **Matrix**: 
+   - **HFFc6_Micro-C**: A heatmap in warm colors displays genomic interactions, with intervals on both x and y-axes.
+
+3. **Epilogos (hg38)**: 
+   - A multivec track shows categories of genomic features in various colors.
+
+The right view replicates similar charts with:
+
+- **HFFc6_Hi-C**: Another heatmap displays interactions in the Hi-C dataset, encoded by color intensity.
+
+Overall, this visualization offers a comprehensive comparison of genomic data, employing color-coded bar charts, matrix heatmaps, and annotation tracks, all linked by interactive features.

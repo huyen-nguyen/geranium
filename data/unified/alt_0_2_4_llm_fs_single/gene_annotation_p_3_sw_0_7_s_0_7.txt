@@ -1,0 +1,10 @@
+The visualization is a set of six genomic range annotation tracks aligned horizontally, displaying data for chromosome 3 within the interval of 52,168,000 to 52,890,000. Each track represents a different study or tool, including 'GmGDV', 'Corces et al.', 'Cyverse-QUBES', 'HiGlass', and 'IGV'. 
+
+- **GmGDV**: This track shows gene annotations with directional arrows indicating strand orientation. Genes on the positive strand are in blue, while those on the negative strand are in red. Gene names are labeled directly on the track.
+- **Corces et al.**: Similar to the GmGDV track but providing detailed exon-intron structures with light blue and red arrows for positive and negative strands, respectively.
+- **General Annotation**: This layer uses gray, salmon, and cyan rectangles to represent different genomic features, including genes, exons, and introns.
+- **HiGlass**: Displays genomic features with directional text annotations and colored arrows shaded in transparency to distinguish strands.
+- **Cyverse-QUBES**: This track combines features such as text labels and directional indicators, coloring text black, triangles gray, and exons purple.
+- **IGV**: Displays annotations similarly but with a focus on navy text and rectangles, and white lines for strand indication.
+
+The visualization is arranged in two columns, with three tracks per column, enabling comparison across different datasets and annotation styles.

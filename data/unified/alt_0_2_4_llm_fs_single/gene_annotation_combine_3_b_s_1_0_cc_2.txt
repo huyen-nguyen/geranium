@@ -1,0 +1,9 @@
+The visualization presents a linear layout focusing on the genomic region of chromosome 3, from position 52,168,000 to 52,890,000. It consists of three vertically arranged annotation tracks titled "HiGlass," "IGV," and "Corces et al." Each track displays genomic data with distinct visual encodings.
+
+1. **HiGlass**: Displays gene annotations using triangles for gene direction, lines with arrows for strand orientation, and rectangles for exons. Positive strands are shown in blue and negative strands in orange, with gene names labeled on the chart.
+
+2. **IGV**: Utilizes a pale purple color scheme to overlay gene annotations, represented by text and rectangles. Gene direction and strand information are depicted with opaque triangles and lines.
+
+3. **Corces et al.**: Similar to the first track, this uses blue and orange to denote positive and negative strands, respectively. It highlights gene locations with text annotations and exons with rectangles, providing a compact view of the genetic structure.
+
+Overall, the visualization effectively stratifies genetic data by strand orientation, using color and shape patterns to differentiate between positive and negative strands and annotate exon regions.

@@ -1,0 +1,11 @@
+The visualization consists of nine linear, vertically arranged charts depicting genomic data from chromosome 1, covering a range from 1 to 3,000,500 base pairs. These charts utilize a multivec file with data stratified by four samples. The visual encodings include:
+
+1. **Heat map**: Displays genome intervals on the x-axis with color intensity representing expression values across samples.
+2. **Bar charts**: Three bar charts show genomic positions on the x-axis and expression on the y-axis, differentiated by row and color according to the sample category.
+3. **Line and scatter plot overlay**: Combines line charts and scatter plots, marking genomic positions and expression values, with point size indicating peak magnitude.
+4. **Scatter plots**: Two separate plots depict genomic positions against expression values, using point size and color for different samples.
+5. **Area chart**: Visualizes genomic data with filled areas under the curve, color-coded by sample.
+6. **Range bar chart**: Represents min and max expression values using bars, organized by sample and colored accordingly.
+7. **Connection chart**: Illustrates genomic intervals with arcs, using color to denote different categorical connections.
+
+Each track is equipped with tooltips for genomic position and expression details, enhancing data exploration. The layout employs consistent genomic axis labels for intuitive navigation.

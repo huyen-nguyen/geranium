@@ -1,0 +1,1 @@
+A heatmap in a linear layout visualizes a matrix file, representing genomic intervals between positions 800,000,000 and 1,800,000,000 on the hg38 assembly. Both axes display genomic intervals, with intensity of color encoding quantitative values. The main structure is marked by rectangles, emphasizing data concentration along the diagonal. The title is not explicitly provided.

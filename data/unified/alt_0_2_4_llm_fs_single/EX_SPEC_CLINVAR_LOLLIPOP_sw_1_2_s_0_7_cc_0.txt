@@ -1,0 +1,13 @@
+The visualization consists of three stacked linear views illustrating genomic data on chromosome 13 between positions 31,500,000 and 33,150,000. Each view contains two main tracks: a genomic range annotation track showing gene structures and a significance track displaying genetic variant classifications.
+
+1. **Genomic Range Annotation Track (HiGlass)**: 
+   - The genomic range is represented with genes annotated as arrows, indicating transcription direction (right for "+" strand and left for "-"). 
+   - Gene names such as "FRY," "BRCA2," and "NBPF2L2" are labeled accordingly.
+   - Exons are displayed as rectangles within the gene structures, colored differently based on strand direction.
+
+2. **Significance Track**: 
+   - This track features bars and points marking genetic variants and their clinical significance.
+   - Variants are categorized as "Pathogenic," "Likely Pathogenic," "Uncertain Significance," etc., using a color-coded scheme (e.g., purple for "Pathogenic," green for "Likely Benign").
+   - Points and bars vary in size and opacity based on their zoom level visibility.
+
+Color and styling attributes are configured to enhance readability and differentiation. This visualization efficiently combines detailed genomic annotations with variant significance data, providing a comprehensive view across multiple resolution scales.

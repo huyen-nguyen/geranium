@@ -1,0 +1,5 @@
+A linear visualization displays genomic data from chromosome 1 between positions 1 and 3,000,500. The visualization is arranged vertically with two tracks.
+
+The upper track is an area chart depicting the quantitative expression levels ('peak') stratified by four samples ('sample 1' to 'sample 4'). The x-axis represents genomic positions, and the y-axis displays expression values. The areas are colored individually for each sample.
+
+Below, the second track shows a bar chart representing the range of expression values. Bars are grouped by sample, color-coded similarly, and display minimum and maximum values ('peak_min' and 'peak_max') on the y and ye-axes. Both tracks feature legends for sample identification and interactive tooltips providing detailed data information at various positions.

@@ -5,6 +5,6 @@
 **/.ipynb_checkpoints/
 **/.DS_Store
 **/__pycache__/
+tmp/
 .env
-tmp
 node_modules

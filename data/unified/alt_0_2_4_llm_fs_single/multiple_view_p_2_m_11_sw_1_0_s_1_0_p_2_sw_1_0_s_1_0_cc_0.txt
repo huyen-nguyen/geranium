@@ -1,0 +1,9 @@
+A visualization titled "Visual Linking" demonstrates data interaction and exploration across three charts: a circular line chart, an area chart, and a scatter plot. The visualization is designed to update details based on brush selections. 
+
+1. **Circular Line Chart**: This chart displays genomic intervals on the x-axis and expression values on the y-axis, represented by lines. The chart is stratified by categories (samples 1 to 4), each colored distinctly in blue, orange, green, and red. 
+
+2. **Area Chart**: Exhibiting similar genomic intervals, the area under the curve reflects expression strength. Like the line chart, it is stratified by categories, with areas color-coded accordingly. A brush tool enables linking to other views.
+
+3. **Scatter Plot**: Below the line and area charts, this plot details expression points across chromosome 1 from position 160,000,000 to 200,000,000. Points are color-coded by category, showing expression variability.
+
+The charts are interconnected, allowing users to adjust the brush range to dynamically update data in the scatter plot. The overall layout is vertical, with a brush tool facilitating exploration across dimensions.

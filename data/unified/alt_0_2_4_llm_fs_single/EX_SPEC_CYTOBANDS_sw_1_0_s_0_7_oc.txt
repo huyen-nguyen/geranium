@@ -1,0 +1,7 @@
+The visualization consists of a parallel arrangement of five linear views, each representing chromosomes 1 to 5 from the human genome assembly hg38. Each view contains two tracks:
+
+1. **Area Chart Track**: Displays a multivec dataset as an area chart across the genomic positions. The x-axis represents genomic positions, while the y-axis captures quantitative values named 'peak.' Different categories, labeled as ‘sample 1’ to ‘sample 4,’ are represented by distinct colors in the area display.
+
+2. **Ideogram and Annotation Track**: Displays a linear ideogram with overlaid annotations. Genomic bands are colored based on their density, ranging from white to black, indicating less to more dense regions. Specific stains are marked with triangles (right and left) in maroon, representing regions ‘acen-1’ and ‘acen-2,’ and rectangles in purple for ‘gvar.'
+
+Both tracks are static and lack interactive features, emphasizing a straightforward presentation of genomic data across these chromosomes.

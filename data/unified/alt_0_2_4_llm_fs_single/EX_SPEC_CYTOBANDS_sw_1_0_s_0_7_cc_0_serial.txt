@@ -1,0 +1,18 @@
+This visualization displays five linear views arranged serially, each representing individual chromosomes from chr1 to chr5. Each view consists of two tracks: an area plot and an ideogram with annotations.
+
+1. **Area Plot:**
+   - **Data Source:** Multivec file containing genomic information.
+   - **X-axis:** Genomic positions along each chromosome.
+   - **Y-axis:** Quantitative peaks representing expression levels.
+   - **Color Encoding:** Different categories within the data are shown in diverse colors.
+
+2. **Ideogram and Annotations:**
+   - **Data Source:** CSV file with cytogenetic band information.
+   - **Displays:** Chromosomal bands with annotations such as text, rectangles, and triangles.
+   - **Visual Elements:** 
+     - Rectangles are used to indicate density values, varying from white to black.
+     - Text annotations label each band.
+     - Triangles highlight specific bands (acen-1 and acen-2) in maroon.
+   - **Color Coding:** Band density and categorical information are visually distinguished using color.
+
+The visualization is static and organized in a linear layout with additional styling features to enhance clarity, such as defined stroke widths and grid lines. The genomic views efficiently overlay data across different tracks, allowing for a comprehensive comparative analysis of chromosomal regions.

@@ -1,0 +1,7 @@
+A genomic visualization featuring two vertically arranged tracks within a linear layout, illustrating data on chromosome 1 from position 1 to 3,000,500. 
+
+The top track is a bar chart showing genomic positions along the x-axis and quantitative peaks on the y-axis, with distinct rows for samples labeled 'sample 1' to 'sample 4'. The sample categories are distinguished by color: blue for 'sample 1', orange for 'sample 2', green for 'sample 3', and red for 'sample 4'. 
+
+The bottom track is a heatmap displaying the same chromosome region, with color intensity encoding quantitative peak values. Rows represent the same sample categories as the bar chart, providing a visual comparison between samples using a 'hot' color range.
+
+Interactive tooltips provide information about start and end positions, peak values, and sample identifiers, offering detailed insights into the genomic data.

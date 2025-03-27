@@ -1,0 +1,7 @@
+The visualization is a linear genomic chart titled "Pileup Track Using BAM Data," showing a specified region of chromosome 1 between 136,750 and 139,450. It consists of two main tracks:
+
+1. **Coverage Track**: Located at the top, this track is a bar chart displaying gray bars representing the coverage of aligned reads within the specified genomic intervals. The height of each bar corresponds to the quantitative measure of coverage on the y-axis.
+
+2. **Pileup Track**: Below the coverage, this track features rectangles representing individual reads from BAM data. It's stratified into rows based on the attribute 'pileup-row,' with categories determined by structural variation types (e.g., 'normal read,' 'deletion (+-)', 'inversion (++)'). Colors distinguish these categories: gray for normal reads, with additional colors like red and yellow highlighting variations.
+
+The visualization includes detailed style specifications, such as an outline width of 0.5, and dynamic interactions, including a linking id, enabling further exploration.

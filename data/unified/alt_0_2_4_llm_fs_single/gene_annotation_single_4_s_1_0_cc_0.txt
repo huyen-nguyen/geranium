@@ -1,0 +1,3 @@
+### Text Description:
+
+This visualization is a linear genomic range annotation track titled "GmGDV," showcasing a specific region of chromosome 3, spanning from positions 52,168,000 to 52,890,000. The layout is horizontal, and the chart is stratified by rows based on strand orientation. Gene names are displayed as text, with "+" strands indicated by right-pointing blue triangles, and "-" strands by left-pointing orange triangles. Exon regions are represented by rectangles. The x-axis features top-aligned genomic intervals. Color distinctions for strands are blue for the "+" strand and orange for the "-" strand, enabling clear differentiation of gene orientation and feature annotation.

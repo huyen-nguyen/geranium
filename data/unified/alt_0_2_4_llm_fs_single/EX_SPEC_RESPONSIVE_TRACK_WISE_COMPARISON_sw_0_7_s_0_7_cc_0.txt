@@ -1,0 +1,17 @@
+The visualization presents a series of genomic data tracks in a linear layout for two specific chromosomal regions: chromosome 12 (chr12) from 10,140,000 to 10,210,000 and chromosome 8 (chr8) from 127,734,000 to 127,744,000. It includes gene annotations as well as expression data for three samples, depicted in bar charts.
+
+- **Gene Annotations:** 
+  - **Chr12:** Displays genes such as TMEM52B and OLR1 using right and left-pointing triangles to indicate strand direction, combined with gene and exon representations through text and rectangles. The colors used are primarily sky blue.
+  - **Chr8:** Shows the MYC gene, with similar visual encodings as on chr12, using purple for gene features.
+
+- **Expression Data Tracks:**
+  - **Sample 1, 2, and 3 on chr12:** 
+    - Sample 1: Sky blue bars depicting quantitative expression.
+    - Sample 2: Green bars show a different expression pattern.
+    - Sample 3: Purple bars indicate yet another distinct expression profile.
+  - **Sample 1, 2, and 3 on chr8:**
+    - Sample 1: Purple bars.
+    - Sample 2: Sky blue bars.
+    - Sample 3: Purple bars, maintaining consistency in color coding across both chromosomal regions.
+
+The color differentiation aids in visual discrimination between samples and

@@ -1,0 +1,8 @@
+A linear arrangement of four horizontal bar charts demonstrates the use of BED files with varying specifications across the chromosome 1 interval from 1 to 2,000,000. 
+
+1. The first chart, "BED12: All 12 standard fields," uses data from a BED file with 12 standard fields, visualized with sky blue rectangles.
+2. The second chart, "BED6: A file with the first 6 BED fields," displays a subset of the fields using green rectangles.
+3. The third chart, "BED6+6: A file with the first 6 BED fields, and 6 custom fields," highlights additional custom fields in pink rectangles.
+4. Lastly, "BED12+1: A file with all 12 standard fields, and a single extra custom field," also uses pink rectangles for visualization. 
+
+Each chart encodes genomic positions with rectangles, using black borders to outline the regions.

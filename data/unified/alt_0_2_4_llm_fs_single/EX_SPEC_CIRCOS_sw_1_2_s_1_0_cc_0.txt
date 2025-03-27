@@ -1,0 +1,9 @@
+The visualization is a Circos plot with a circular layout, showcasing genomic data from the hg38 assembly. It includes three tracks:
+
+1. A circular bar chart representing expression data with pink bars. The x-axis represents genomic position, and the y-axis indicates the peak value.
+   
+2. An ideogram displaying the genomic intervals as rectangles. The color of these rectangles represents different genomic categories, such as "gneg" and "gpos," using a variety of colors like blue, orange, and green.
+   
+3. A chart with connections illustrating segmental duplications. The lines are colored based on the chromosome pairs they connect, with colors such as yellow, green, and blue. The lines vary in opacity and are stroked differently to indicate distinct genomic relationships.
+
+Overall, this plot provides a comprehensive view of genomic data, emphasizing expression levels and structural variations across the genome. The title is "Circos," referencing the visualization style's origin and detailed at circos.ca.

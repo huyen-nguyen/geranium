@@ -1,0 +1,7 @@
+The circular visualization titled "Between Links in Circular Layouts with Parallel Arrangements" features genomic data represented in a multi-layered circular format using the hg38 assembly. It includes four primary tracks:
+
+1. A light gray circular bar chart displaying genomic intervals on the x-axis and quantitative peak values on the y-axis.
+2. Two circular ideograms illustrating chromosomal bands, each colored to indicate different chromosomal features based on the "Stain" field with specific color coding.
+3. A circular chart featuring connections (betweenLinks) showcasing genomic linkages. Light gray links represent connections excluding chromosome hs1, while black links highlight connections involving chromosome hs1.
+
+This figure utilizes a static, stacked layout with a central white circle, allowing for clear visualization of parallel arrangements and interactions among genomic data. The design emphasizes the connections between genomic regions across the assembly.

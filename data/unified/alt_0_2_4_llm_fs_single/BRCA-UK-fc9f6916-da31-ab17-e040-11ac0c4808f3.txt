@@ -1,0 +1,14 @@
+The visualization consists of two main views: a circular view and a linear view. These views are linked by a blue interactive brush, allowing navigation between the complete genome and a detailed section of chromosome 1. 
+
+The circular view contains multiple tracks:
+1. **Ideogram Track**: Displays chromosomal bands on a circular layout. The bands are colored based on their staining properties.
+2. **Annotation Tracks**: Show putative driver genes with labels, and genomic events such as 'Gain' in sky blue and 'Loss of Heterozygosity (LOH)' in orange rectangles.
+3. **Connection Track**: Visualizes structural variations as lines connecting genomic positions, colored by variation types like 'Translocation', 'Duplication', 'Deletion', and 'Inversions'.
+
+The linear view below provides a detailed chromosome-1-centric representation:
+1. **Ideogram**: Linear representation with color-coded bands.
+2. **Gene Annotation**: Indicates gene locations with text labels and exon structures.
+3. **Mutation Annotations**: Scatter plot for point mutations of different subtypes (C>A, C>G, etc.), showing distances to previous mutations on the y-axis.
+4. **Copy Number and Structural Variants**: Bars indicate copy number variations, and rectangles for insertions and deletions, colored by mutation type.
+
+This dual representation allows comprehensive genomic analysis across scales, linking high-level chromosomal visuals with in-depth molecular insights.

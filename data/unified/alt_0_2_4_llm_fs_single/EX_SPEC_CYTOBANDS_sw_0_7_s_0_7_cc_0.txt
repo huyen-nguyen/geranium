@@ -1,0 +1,3 @@
+The visualization consists of a series of parallel area charts and ideograms for chromosomes 1 to 5, each displaying genomic data from a multivec file. The x-axis represents genomic positions, while the y-axis displays peak values quantitatively. Areas are color-coded based on 'sample' categories, using a range of colors including blue, orange, and green.
+
+Each area chart is aligned with an ideogram, containing text, rectangles, and triangles, to indicate cytogenetic bands. The colors of the bands vary: black, gray shades, purple rectangles, and maroon triangles mark centromeric regions. This combination of area charts and ideograms provides a comprehensive view of genomic expression and structural details across chromosomes 1 to 5.

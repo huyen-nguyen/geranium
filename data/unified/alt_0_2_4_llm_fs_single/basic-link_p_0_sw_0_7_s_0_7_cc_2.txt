@@ -1,0 +1,1 @@
+A genomic link chart in a linear layout visualizes CSV data, highlighting segmental duplications within chromosome 1 of hg38. Arcs in the chart represent connections between genomic positions, colored in green. The title is "Basic Marks: Link" with the subtitle "Tutorial Examples."

@@ -1,0 +1,5 @@
+The visualization consists of two vertically arranged linear tracks representing chromosome 1 from position 1 to 3,000,500 in a multivec dataset. 
+
+The top track is a heatmap where each row represents a different sample ("sample 1" to "sample 4"). Genomic intervals are shown on the x-axis, and expression values are encoded by color intensity. Each sample is stratified into separate rows with a legend for easy identification.
+
+The bottom track is a bar chart with genomic positions on the x-axis and expression values on the y-axis. It features bars with colors corresponding to each sample, stratified by rows, providing a clear distinction between samples. The visualization allows interpretation of genomic data with interactive tooltips providing specific data details.

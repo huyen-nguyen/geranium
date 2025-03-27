@@ -1,0 +1,3 @@
+Here's a detailed description:
+
+The visualization consists of two tracks in a linear layout showing genomic data from chromosome 1 between positions 1 and 3,000,500. The top track is a stacked bar chart where the x-axis represents genomic positions, and the y-axis measures quantitative expression values. Bars are color-coded to represent four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4', each with a distinct color. The bottom track is an area chart, stratified by rows corresponding to the same categories, with the same color scheme. The expression values are displayed along the y-axis and across the area of the chart. Both tracks include tooltips providing genomic positions and expression values, enhancing interactivity and data interpretation.

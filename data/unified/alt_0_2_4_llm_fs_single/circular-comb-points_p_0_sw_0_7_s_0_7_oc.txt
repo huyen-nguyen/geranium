@@ -1,0 +1,7 @@
+The visualization is a circular scatter plot divided into two horizontally arranged tracks, each depicting genomic data from chromosome 1, covering the range from 1 to 3,000,500. 
+
+The left chart uses circular points to represent the 'peak' values, with size encoding reflecting peak magnitude. Data points are stratified into rows corresponding to four categories ('sample 1' to 'sample 4'). Each category is color-coded: yellow, green, blue, and pink. The points have a semi-transparent look with an opacity of 0.5.
+
+The right chart also uses a circular scatter plot with similar attributes but includes a grid on the y-axis. It maintains the same category color-coding and opacity. 
+
+Both charts are interactive, providing tooltips on hovering, showing genomic start and end positions, peak values, and sample categories. The layout incorporates the entire circular format with a center radius of 0.5, ensuring compact representation within the circular frame.

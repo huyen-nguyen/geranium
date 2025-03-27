@@ -1,0 +1,7 @@
+This visualization comprises three main sections, each with distinct genomic tracks. The top section shows a transcript annotation track for chromosome 3 from 142,500,000 to 143,000,000, utilizing a linear layout. Transcripts are represented with directional markers (triangles and arrows) and text labels, stratified across 15 rows to address overlaps, with color coding based on strand orientation (blue for '+' and orange for '-').
+
+The middle section focuses on chromosome 2, highlighting 'Likely Benign' variants between 126,800,000 and 127,700,000. It includes points, text, and links indicating variant types, stratified by categories. These elements use green and grey colors for text and points to denote different categories.
+
+The bottom section displays pathogenic variants on chromosome 17 between 43,080,000 and 43,120,000. Points colored in shades from pink to green represent the clinical significance of the variants, stratified and linked with connecting lines to demonstrate relational overlaps. 
+
+Overall, the visualization uses displacement methods like piling and spreading to minimize visual clutter, ensuring clear representation of genomic features across multiple regions.

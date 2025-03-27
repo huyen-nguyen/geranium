@@ -1,0 +1,11 @@
+The visualization titled "Visual Linking" showcases a genomic overview using a combination of linked charts in a vertical arrangement. 
+
+The top part contains two horizontal views:
+
+1. A **linear layout** on the left displays four samples as areas, with genomic intervals on the x-axis and expression values on the y-axis, differentiated by color. A brush tool allows interaction by linking to the detailed view below.
+
+2. A **circular layout** on the right represents the same samples as lines, maintaining the genomic positions and expression values. It also includes a brush tool for interactive linking.
+
+Below, a **linear detail view** shows a point plot within a specific chromosome range (chr1: 160,000,000 to 200,000,000), detailing each sample's expression as points. The positions are aligned on the x-axis, with separate rows for each sample indicated by color.
+
+This visualization highlights interactive genomic exploration, enabling users to adjust views via brush tools for dynamic data inspection.

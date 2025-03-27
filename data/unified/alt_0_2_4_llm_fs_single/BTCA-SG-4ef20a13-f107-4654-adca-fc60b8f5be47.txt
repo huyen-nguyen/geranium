@@ -1,0 +1,11 @@
+A circular and linear genomic layout displays various genomic tracks. The circular view features an ideogram spanning the entire hg19 genome, highlighting structural variations using connections. Tracks titled "Gain" and "Loss of Heterozygosity (LOH)" show genomic ranges in blue and orange, respectively. The linking axis with a brush selects chromosome 1, which is detailed in the linear view below.
+
+The linear view includes several tracks: 
+- The ideogram provides a detailed chromosome 1 view.
+- "Putative Driver" shows gene annotations as text.
+- "Point Mutation" is a scatter plot showing mutation types with points colored by "SUBTYPE."
+- An indel track displays "Insertion" and "Deletion" as bars.
+- "Copy Number Variants" track shows variations in gray bars.
+- Additional "Gain" and "LOH" tracks are visualized in blue and orange bars.
+
+Different types of structural variations such as "Translocation," "Duplication," "Deletion," and "Inversions" (TtT and HtH) are represented by curved lines of varying colors and strokes, overlaying these tracks in a comprehensive interactive genomic visualization.

@@ -1,0 +1,13 @@
+A linear layout visualization displays genomic data across chromosome 1 using a CSV file. The visualization consists of five overlapping tracks:
+
+1. **Ideogram Track**: Displays chromosome bands with colors corresponding to different band types like gneg, gpos, and acen. Triangles indicate p and q arms.
+
+2. **Gene Annotation Track**: Shows gene positions with blue and orange triangles indicating strand direction (+/-). Tracks are arranged by strand categories.
+
+3. **Chromosomal Copy Number Loss Track**: Highlights regions with chromosomal copy number loss in sky blue rectangles.
+
+4. **Chromosomal Copy Number Gain Track**: Shows areas of increased copy number in green rectangles.
+
+5. **Genomic Rearrangements Track**: Illustrates structural variations such as tandem duplications, translocations, deletions, and inversions using colored arcs, with different colors and strokes indicating specific variation types. 
+
+The visualization effectively encodes genomic features like banding patterns, gene locations, and structural variations, supporting genomic data analysis.

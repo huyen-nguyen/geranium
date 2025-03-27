@@ -1,0 +1,14 @@
+The visualization presents genomic data in a vertical arrangement, featuring three linear views of chromosome 13. Each view is aligned to show detailed genomic annotations and variant significance information, focusing on different intervals:
+
+1. **Genomic Range Tracks:** Each view includes a track titled "HiGlass," displaying gene annotations using arrows and text. The genes are displayed with arrows indicating transcription direction and are colored based on strand: blue for positive and red for negative.
+
+2. **Variant Significance Tracks:** Below the gene annotations, bars and points represent the clinical significance of variants from the ClinVar database. Categories range from "Pathogenic" to "Benign," represented with a color scale from shades of magenta to green.
+
+3. **Details:**
+   - The first view covers the genomic region from 31,500,000 to 33,150,000, highlighting genes like EEF1DP3, BRCA2, and PDS5B.
+   - The second view narrows to the interval 32,000,000 to 32,700,000, emphasizing additional variant density and significance.
+   - The final view further focuses on 32,314,000 to 32,402,500, offering greater detail on a smaller scale.
+
+4. **Styling:** The tracks use opacity and size adjustments for clarity, adapting visibility based on zoom level to manage dense data efficiently.
+
+This design allows for comprehensive exploration of genetic regions, integrating gene structure and variant impact visually across specified intervals of

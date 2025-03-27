@@ -1,0 +1,5 @@
+A vertical arrangement of visualizations links overview and detail views using visual brushes. The visualization begins with a top section containing an area chart and a circular line chart. Both charts depict genomic data from chromosome 1, where each category—'sample 1', 'sample 2', 'sample 3', and 'sample 4'—is represented with distinctive colors: blue, orange, green, and red. An interactive brush in the linear area chart allows dynamic updates to the lower, detailed section by selecting specific genomic ranges. 
+
+In the circular chart, the genome is displayed with color-coded lines, depicting the data categories similarly to the area chart. 
+
+The bottom section provides a detailed view of chromosome 1, between positions 160,000,000 and 200,000,000. Here, the scatter plot further breaks down the data into color-coded points distributed by the 'peak' value for each sample. This interactive visualization, titled "Visual Linking," enables synchronized exploration across different scales through linked data brushing.

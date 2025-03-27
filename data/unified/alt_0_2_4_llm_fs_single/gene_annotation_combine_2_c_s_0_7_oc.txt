@@ -1,0 +1,7 @@
+The visualization is composed of two side-by-side linear genomic range annotation tracks, titled 'HiGlass' and 'Cyverse-QUBES'. Both display data from chromosome 3, ranging from 52,168,000 to 52,890,000. 
+
+The 'HiGlass' chart prominently features gene annotations, with directional arrows marking gene orientations. Genes on the positive strand are shown with right-facing triangles and are colored blue, while those on the negative strand are displayed with left-facing triangles and are colored red. Gene names are annotated along the genome, with exons marked by rectangles. Intronic regions are illustrated by rules, using distinctive triangular line patterns for strand orientation.
+
+The 'Cyverse-QUBES' chart employs a similar layout but utilizes a different color scheme, with all elements in shades of gray and purple. The exonic regions are highlighted in purple with a visible bounding stroke. Gene names appear in black text, and strand orientations are indicated with simple arrow shapes at the gene endpoints.
+
+Both charts are stratified by rows representing the genomic strand, providing a comprehensive overview of gene positioning and structure within the specified genomic interval.

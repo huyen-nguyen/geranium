@@ -1,0 +1,5 @@
+A genomic visualization in a linear arrangement displays data from chromosome 1 between positions 1 and 3,000,500. 
+
+The top chart is a stacked bar chart representing expression levels across samples, with categories 'sample 1' to 'sample 4' depicted by four distinct colors: blue, orange, green, and red. The x-axis indicates genomic positions while the y-axis shows a quantitative scale for expression levels. Tooltips enhance interactivity by providing detailed data points.
+
+The bottom chart overlays a scatter plot with lines, stratified by rows for each sample category. Points and lines, colored similarly to the top chart, denote distributions and trends within the expression data. The width and height of charts are consistent, while the central radius maintains a proportional layout within the design constraints.

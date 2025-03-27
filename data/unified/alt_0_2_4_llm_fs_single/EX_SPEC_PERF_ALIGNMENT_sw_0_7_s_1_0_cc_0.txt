@@ -1,0 +1,7 @@
+The visualization comprises two layered tracks showcasing a protein alignment visualization titled "Smoother Zoom." The focus is on genomic positions between intervals 350 and 396, presented in a linear orientation. Both tracks follow an overlay alignment using CSV data from a FASTA file.
+
+The top track, "New Approach: Stretching Tiles," emphasizes an experimental method by stretching graphics instead of redrawing, with colored rectangles representing different genomic bases along the x-axis. Text annotations overlay the rectangles in black, with visibility triggered at a zoom threshold below 10.
+
+The lower track, "Original Approach," follows a traditional method, retaining similar data representation with colored rectangles and text annotations based on genomic bases. The x-axis showcases genomic positions with stratification by name across rows.
+
+Overall, the visualization contrasts two approaches for viewing genomic data efficiently, offering insight into dynamic visual encoding while maintaining consistent styling such as color distinctions and row stratification.

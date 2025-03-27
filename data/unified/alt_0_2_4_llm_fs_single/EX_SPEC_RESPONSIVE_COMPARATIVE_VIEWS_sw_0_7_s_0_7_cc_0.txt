@@ -1,0 +1,21 @@
+The visualization consists of three linear bar charts arranged vertically. Each chart represents genomic data from a multivec file on chromosomes 9 and 12, ranging between positions 5,000,000 and 15,000,000.
+
+1. **First Bar Chart**: 
+   - **Chromosome**: 12
+   - **Color**: Purple
+   - **Data**: Genomic positions on the x-axis and quantitative peak values on the y-axis.
+   - **Styling**: White stroke with a width of 0.5 units.
+
+2. **Second Bar Chart**:
+   - **Chromosome**: 9
+   - **Color**: Green
+   - **Data**: Similar genomic layout as the first, with quantitative peak values.
+   - **Styling**: White stroke with a width of 0.5 units.
+
+3. **Third Bar Chart**:
+   - **Chromosome**: 12
+   - **Color**: Purple, mirroring the first chart.
+   - **Data**: Echoes the genomic and quantitative structure observed previously.
+   - **Styling**: White stroke with a width of 0.5 units.
+
+The charts rely on a responsive layout that adjusts horizontally and support dimensions wider than 1200 units, transitioning to a vertical arrangement for narrower displays. The data highlights changes in expression values across specified genomic intervals, coded through consistent bar designs and distinct color patterns to aid visual differentiation.

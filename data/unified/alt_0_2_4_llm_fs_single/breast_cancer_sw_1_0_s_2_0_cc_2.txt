@@ -1,0 +1,11 @@
+The visualization is a linear layout displaying chromosome 1 using the hg38 assembly. It consists of five tracks:
+
+1. **Ideogram**: Displays chromosomal bands using colorful rectangles, left and right triangles, representing different categories.
+
+2. **Gene Annotation Track**: Shows gene annotations with directionality using blue right triangles for positive strands and orange left triangles for negative strands.
+
+3. **CNV Track**: Two separate tracks with blue and green rectangles indicate minor and total copy number variations in tumor samples from a CSV file.
+
+4. **Structural Variation Track**: Displays genomic rearrangements with connections between two genomic positions, colored based on structural variation classes like tandem-duplication and translocation.
+
+The tracks utilize color to distinguish categories and enhance understanding of genomic data structure and variations.

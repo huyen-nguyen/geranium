@@ -1,0 +1,9 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" consists of multiple linear and overlay tracks, focusing on Chromosome 5 of the hg38 assembly. The top track is an ideogram of Chromosome 5, showing genomic intervals with colors representing different stains, including gray, pink, and black. Text labels for regions are displayed in pink.
+
+The second track displays connections between segments of Chromosome 5 (hs5) and other chromosomes (hs4, hs6) using colored links, with orange, blue, and green indicating links to different chromosomes. These connections are semi-transparent with elliptical styles.
+
+The "Region of Interest" section highlights a specific genomic range on Chromosome 5, from 68,000,000 to 71,000,000, with connections between regions shown in blue and green. This section is overlayed with a brush for interactive zooming.
+
+The "Rearrangement View" focuses on a narrower segment of Chromosome 5, from 69,276,000 to 69,282,000, showing a single, prominent link between regions in light blue, indicating a possible structural rearrangement.
+
+The entire visualization is interactive, with linked brushing allowing users to focus on segments of interest across different views. The elliptical link style and consistent genomic representation create a cohesive analysis tool for exploring structural variations in Chromosome 5.

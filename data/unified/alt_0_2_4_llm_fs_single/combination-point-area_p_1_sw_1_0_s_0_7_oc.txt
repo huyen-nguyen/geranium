@@ -1,0 +1,3 @@
+The visualization consists of two tracks arranged linearly. The first track is an area chart displaying genomic data across chromosome 1, from positions 1 to 3,000,500. Each row represents a different sample ('sample 1' to 'sample 4') and is colored uniquely. The area height indicates 'peak' values.
+
+The second track is a scatter plot showing the same genomic range. Points correspond to 'peak' values, with size and color reflecting the sample category and expression level. Both charts feature genomic positions on the x-axis and quantitative peak values on the y-axis, enriched with interactive tooltips.

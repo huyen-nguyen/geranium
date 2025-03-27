@@ -1,0 +1,1 @@
+A bar chart in a linear layout visualizes a multivec file, showing the entire genome of hg38. The x-axis represents genomic intervals from chromosomes 1 to X, while the y-axis displays quantitative expression values, encoded with pink bars. The graphic is titled "Basic Marks: bar" with the subtitle "Tutorial Examples."

@@ -1,0 +1,1 @@
+A linear layout link plot visualizes genomic data using a CSV file. It displays connections within chromosome 1, represented by arcs in light purple. The arcs connect different genomic positions, indicated on the x-axis. The title is 'Basic Marks: Link' with a subtitle 'Tutorial Examples'.

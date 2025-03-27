@@ -1,0 +1,1 @@
+A line chart in a linear layout visualizes a multivec file across the genome of hg38. The x-axis represents genomic positions, while the y-axis shows quantitative expression values. The line is colored green. The chart is titled "Basic Marks: line," with a subtitle of "Tutorial Examples."

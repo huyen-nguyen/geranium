@@ -1,0 +1,19 @@
+The visualization features a pair of horizontally arranged vertical panels presenting genomic tracks for chromosome 3 from 52,168,000 to 52,890,000 on the hg38 assembly. Each vertical panel consists of three tracks aligned in an overlay format.
+
+The first panel includes:
+
+1. **Cyverse-QUBES Track**: This track displays gene annotations with black text labels for gene names, gray arrows indicating gene direction, and light gray and purple rectangles representing gene structures.
+   
+2. **A General Track**: Featuring gray rectangles for genes, red rectangles for exons, and light blue rectangles for introns, stratified by strand. 
+
+3. **GmGDV Track**: This track uses blue and red to indicate positive and negative strands, with text annotations for gene names. Genes are represented by arrows, and exons by blue or red rectangles, matching the track’s strand color.
+
+The second panel comprises:
+
+1. **HiGlass Track**: Here, genes are annotated with text and arrows showing direction, colored in blue for positive and red for negative strands. Semi-transparent overlay enhances visualization.
+   
+2. **IGV Track**: Displays text annotations in navy blue with white directional patterns indicating gene strands. Rectangles visualize gene structures.
+
+3. **Corces et al. Track**: Gene annotations include blue for positive strands and red for negative strands. Arrows and rectangles depict gene directions and exon structures, with small text indicating gene names.
+
+The layout facilitates the comparison

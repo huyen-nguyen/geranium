@@ -1,0 +1,11 @@
+A multi-layered visualization in a linear layout showcasing Hi-C data using a matrix and annotations. The overall genomic coverage spans intervals between 800,000,000 and 1,800,000,000. Various tracks are overlaid:
+
+1. **Matrix Track:** Displays genomic data on the x and y axes, with color intensity indicating expression levels.
+   
+2. **Vertical and Horizontal Lines:** Represent positions noted in pink, corresponding to specific genomic points.
+
+3. **Annotated Matrix:** Highlights categories with strokes around specific genomic intervals. 
+
+4. **Scatter Plot Track:** Points within the plot are colored sky blue and vary in size, representing additional data variables. 
+
+The subtitle "Visualize Hi-C Data Using Matrix and Annotations" complements the title "Hi-C Matrix."

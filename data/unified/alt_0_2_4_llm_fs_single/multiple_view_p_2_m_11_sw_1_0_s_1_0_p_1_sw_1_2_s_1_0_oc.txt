@@ -1,0 +1,9 @@
+The visualization titled "Visual Linking" demonstrates interactive linking between views to detail genomic data for chromosome 1. It consists of three charts: a linear scatter plot, a linear area chart, and a circular line chart. 
+
+1. **Linear Scatter Plot**: Displays genomic positions on the x-axis and peak values on the y-axis, stratified by rows for the nominated samples — "sample 1" through "sample 4". The points are color-coded for each sample and cover the genomic interval 160,000,000 to 200,000,000.
+
+2. **Linear Area Chart**: Positioned below the scatter plot, this chart shows genomic intervals on the x-axis and peak values as filled areas on the y-axis. It is stratified by sample categories, linking to the scatter plot above via an overlaying brush interaction. The brush allows for selection and zooming into specific genomic regions.
+
+3. **Circular Line Chart**: Represents genomic data in a circular layout with genomic intervals on the x-axis and peak values on the y-axis. Lines are color-coded according to the sample categories. This chart also includes an interactive brush, serving to update the detailed view in the linear charts.
+
+The circular chart, along with the other charts’ interactive brushing feature, provides a detailed dynamic view of genomic data, enhancing exploratory data analysis.

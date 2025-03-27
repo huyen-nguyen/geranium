@@ -1,0 +1,5 @@
+The visualization consists of three linear genomic tracks aligned vertically, each focusing on chromosome 13, with specific intervals highlighted. The top track displays gene annotation for regions 31,500,000 to 33,150,000. It includes genes represented with arrows indicating strand direction: blue for positive and red for negative strands. Gene names are labeled alongside.
+
+The middle track, spanning 32,000,000 to 32,700,000, features a detailed look at variation significance. Bars and points are used to show the significance of genetic variants, ranging from 'Pathogenic' in pink to 'Benign' in green, structured in rows for each category.
+
+The bottom track provides an even more detailed view from 32,314,000 to 32,402,500, mirroring the middle track’s structure but showing a denser array of data points and variations. The layout facilitates zoom interactions, allowing transitions that reveal or hide specific visual elements based on the zoom level. The color scheme conveys strand direction and clinical significance for clear visual differentiation.

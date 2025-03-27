@@ -1,0 +1,13 @@
+The visualization displays genomic data on chromosome 3 from positions 52,168,000 to 52,890,000 using linear layouts. There are two main vertical arrangements of horizontal tracks, each containing three overlay views.
+
+**First Arrangement:**
+1. **HiGlass Track**: Displays genomic annotations with arrows indicating gene directions, colored in shades of blue and red based on strand orientation. Exons are highlighted with rectangles.
+2. **Corces et al. Track**: Similar structure to HiGlass, showing annotations with text labels for gene names and rectangles for exons. Features two distinct color schemes for different strands.
+3. **IGV Track**: Exhibits text and arrow annotations for genes with color variations depending on the strand, overlaid with white triangular patterns indicating the direction.
+
+**Second Arrangement:**
+1. **Cyverse-QUBES Track**: Shows gene names and directions using text and triangle markers. Exons are presented with light gray rectangles, and strand directions are depicted with gray arrows.
+2. **GmGDV Track**: Features text annotations for genes with triangles indicating direction, and exons marked by rectangles. Uses a blue and red color scheme based on strand orientation.
+3. **Additional Track**: Illustrates genomic regions using rectangles for genes, exons, and introns, with varying colors to differentiate these elements.
+
+The visualization employs different colors and annotations to distinguish between positive and negative strands and provides detailed genomic annotation tracks for analytical comparison.

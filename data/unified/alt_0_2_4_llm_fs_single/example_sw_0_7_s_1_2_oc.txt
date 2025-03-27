@@ -1,0 +1,17 @@
+A figure titled "Visual Encoding" with the subtitle "Gosling provides diverse visual encoding methods." The layout is linear with a vertical arrangement and spans chromosome 1 from 1 to 3,000,500. It contains nine individual charts, each focusing on different visualization techniques:
+
+1. **Heat Map**: Displays genome intervals on the x-axis. Color intensity encodes expression values, stratified by 'sample 1', 'sample 2', 'sample 3', and 'sample 4'.
+
+2. **Bar Chart 1**: Genome on the x-axis and expression on the y-axis. Bars are colored by sample categories.
+
+3. **Bar Chart 2**: Similar to the first bar chart, with stacked bars denoting sample categories.
+
+4. **Line Chart and Scatter Plot**: Genome on x-axis with lines and points showing expression on the y-axis. Points are size-encoded, and tracks overlay line charts.
+
+5. **Scatter Plot 1**: Represents genome on x-axis with points indicating expression values on the y- and size-axes, colored by sample.
+
+6. **Scatter Plot 2**: Similar to Scatter Plot 1, emphasizing different categorical colors for samples.
+
+7. **Area Chart**: Displays genome intervals on the x-axis and expression on y-axis with area-colored fill. Stratified by sample categories.
+
+8. **Bar Chart with Range**: Genome shown on x-axis with bars extending from min to max values on

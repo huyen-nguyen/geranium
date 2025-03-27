@@ -1,0 +1,9 @@
+The genomic visualization is presented in a linear layout with three vertically arranged views, focusing on chromosome 3 from 52,168,000 to 52,890,000. Each view uses gene annotation data to display gene names and exon positions. 
+
+- The **HiGlass** track highlights gene annotations with right and left facing triangles representing the strand direction. Text labels of gene names are positioned accordingly, and exons are marked with rectangles. The positive and negative strands are colored differently for distinction.
+
+- The **IGV** view features gene annotations displayed with text labels and colored rectangles. Lines with triangular patterns indicate gene directions; these are also colored to differentiate strands.
+
+- The **Corces et al.** track exhibits a similar setup with text and rectangles marking gene annotations. The exon sizes are emphasized slightly more, and strands have distinct coloring.
+
+Overall, this visualization efficiently combines multi-layered genomic data into an accessible format, making it easier to analyze gene positions and directions along chromosome 3.

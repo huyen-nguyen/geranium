@@ -1,0 +1,7 @@
+This visualization consists of two horizontally arranged genomic range annotation tracks, each portraying data from chromosome 3 within the interval of 52,168,000 to 52,890,000. 
+
+The left track, titled "Corces et al.," displays genes and exons as text annotations and geometric shapes such as rectangles and lines. It uses plus and minus strand indicators to categorize and color-code the genes. The track is structured vertically based on the strand orientation, with colors assigned to different strands.
+
+The right track, titled "GmGDV," similarly depicts genomic features with text and geometric marks, including rectangles, and triangles indicating the direction of the strand. It also uses strand orientation for stratification and color-coding in vertical arrangements. 
+
+Both tracks highlight exon regions within the genes and include styling to ensure visibility and clarity of overlapping elements. Color differentiation and strand-based orientation are utilized to enhance the visual distinction of genomic features.

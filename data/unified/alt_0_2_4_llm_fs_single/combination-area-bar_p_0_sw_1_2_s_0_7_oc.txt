@@ -1,0 +1,7 @@
+The visualization consists of two vertically arranged linear tracks focusing on chromosome 1 from position 1 to 3,000,500 of the hg38 genome assembly. 
+
+The top track displays an area chart representing genomic peaks across four samples. Each sample is assigned a unique color, and the area chart stratifies the data by sample categories. Colors enhance the differentiation of categories, with the x-axis denoting genomic position and the y-axis showing quantitative peak values.
+
+The bottom track is a bar chart presenting the same genomic data. It is also stratified by sample categories using color coding. Here, the bars illustrate the minimum and maximum values of peaks, providing a clearer view of data variability across the specified genomic regions.
+
+Both tracks share interactive elements, such as tooltips revealing start/end positions and peak values for each sample, enhancing data exploration and interpretation.

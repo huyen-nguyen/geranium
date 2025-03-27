@@ -1,0 +1,11 @@
+The visualization titled "Mark Displacement" showcases genomic data with a focus on resolving visual overlaps using displacement techniques. The main view is arranged vertically, displaying several tracks across different chromosomal regions.
+
+1. **Transcript Track**: Located at the top, this track employs up to 15 rows to showcase gene annotations from chromosome 3, particularly between positions 142,500,000 and 143,000,000. Genes on the positive strand are represented with right-pointing blue markers, while negative-strand genes use left-pointing orange markers. Exons are depicted as rectangles, with gene names noted in text.
+
+2. **Benign Variants Track**: Below the transcript view, this track visualizes variants on chromosome 2 from 126,800,000 to 127,700,000. Points in different colors reflect nucleotide changes, with connecting lines indicating variant locations. The layout addresses overlap through displacement by spreading related elements to minimize clutter.
+
+3. **Connections and Annotations**: A combination of connection lines and annotations highlight gene relationships and variant effects. Lightgray rectangles show genomic ranges of uncertain variants, while colored text annotations provide additional variant information.
+
+4. **Variant Points Track**: The bottom track presents variant data from chromosome 17. Variants between 43,080,000 and 43,120,000 are displayed as color-coded points based on pathogenicity, enhancing contrast with previous tracks.
+
+Overall, the visualization employs color, line patterns, and displacement to convey

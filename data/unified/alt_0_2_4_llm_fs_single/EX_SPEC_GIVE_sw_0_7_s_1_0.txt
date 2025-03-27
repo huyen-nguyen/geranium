@@ -1,0 +1,15 @@
+The visualization consists of two linear views titled "GIVE: Reimplementation of GenoCAT examples" arranged vertically with spacing. It displays genomic data of human genome assembly hg38. 
+
+The first view illustrates chromosome 17, focusing on genomic intervals between 20,000,000 and 50,000,000 base pairs. It contains:
+
+- A "Genes" track with rows stratified by strand direction, showing gene annotations as blue rectangles and exon annotations as darker blue rectangles. The gene intervals are connected by blue lines indicating the gene structure.
+- Three bar charts displaying quantitative peak values from vector datasets, colored in purple and outlined in blue.
+- An ideogram track visualized with rectangles and triangles indicating various genomic features, using a color encoding scheme.
+
+The second view focuses on chromosome 1, displaying genomic intervals between 110,000,000 and 112,000,000 base pairs. It contains:
+
+- Another "Genes" track with similar characteristics to the first view.
+- Three additional bar charts displaying peak values using the same styling as above.
+- Another ideogram track using a similar color scheme to display genomic features.
+
+Rectangles, triangles, and connections are used across both views to convey different genetic attributes and annotations, with interactive linking between tracks for dynamic exploration.

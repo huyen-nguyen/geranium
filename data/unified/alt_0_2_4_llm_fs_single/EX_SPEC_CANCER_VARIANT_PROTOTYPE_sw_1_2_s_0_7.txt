@@ -1,0 +1,9 @@
+The visualization titled "Breast Cancer Variant (Staaf et al. 2019)" presents the genetic characteristics of RAD51C- and PALB2-altered TNBCs in a detailed genomic layout using hg19 assembly. The structure includes multiple views arranged vertically and horizontally, depicting various genomic data points.
+
+In the circular layout, labeled as "Patient Overview (PD35930a)," genomic intervals are represented through color-coded rectangles indicating different categories like "LOH" in dark orange and "Gain" in green, linked by a blue interactive brush. The "Putative Driver" section displays genes in black text and triangles. A "Structural Variant" track visualizes connections in colors based on categories like "tandem-duplication" (green) and "translocation" (blue), with connections indicating structural variations.
+
+The linear view highlights the chromosome 1 region, featuring tracks such as the "Ideogram," with genomic bands annotated by color and triangles for direction. Another track, "hg38 | Genes," includes gene annotations with strand information and exons shown as rectangles. The "LOH" and "Gain" tracks further visualize genomic ranges in dark orange and green, respectively.
+
+A horizontal arrangement presents coverage and pileup data from a BAM file in two adjacent regions on chromosome 1. Coverage tracks use silver bars to depict expression levels, while pileup tracks illustrate read alignments, color-coded by structural variation types like "normal read" and "deletion."
+
+This comprehensive visualization

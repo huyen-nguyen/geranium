@@ -1,0 +1,14 @@
+A vertical arrangement of visualizations with a circular and linear layout. 
+
+1. The **circular view** features:
+   - A multivec file shown as a circular bar chart displaying samples with four categories, each differentiated by color.
+   - A connection chart illustrates genomic rearrangements between chromosomes 1, 16, 14, 9, 6, 5, and 3. The connections are colored pink with strokes indicating different rearrangement types such as deletion, inversion, translocation, and tandem-duplication.
+
+2. The **linear view** contains:
+   - Two bar charts aligned horizontally. Each chart represents a specific chromosome region:
+     - The left chart corresponds to chromosome 5.
+     - The right chart corresponds to chromosome 16.
+   - Both charts detail genomic positions on the x-axis and peak values on the y-axis, segmented by samples and colored accordingly.
+   - The background color for the left chart is blue, and for the right chart is red, linking them to specific regions in the circular view.
+
+Interactive elements include brushes and stroked connections, enhancing detail exploration and interactivity across charts. The style maintains clarity with specific background opacities and outlines.

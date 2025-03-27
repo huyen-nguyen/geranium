@@ -1,0 +1,5 @@
+The visualization consists of multiple tracks displaying genomic data. Two main views, a zoomed view and an overview, are presented. The zoomed view contains three charts: a bar chart labeled 'Gap' showing genomic gaps with pink bars on the y-axis, a 'Conservation' bar chart showing conservation scores with a color gradient, and a sequence alignment view using colored rectangles and text on a nucleotide/amino acid scale. The overview features an overlay of a sequence track and bar charts for 'Conservation' and 'Gap' across a broader genomic interval.
+
+The sequence alignment track displays various sequences labeled with identifiers on the y-axis and is color-coded by base types, with a legend indicating different bases/colors. The conservation and gap tracks show quantitative values without explicit axes, as two bar charts stacked vertically.
+
+Styling includes light gray outlines and a specified center radius, width, and height for tracks. The visualization is interactive, with a brush feature linking views, allowing navigation through the alignment.

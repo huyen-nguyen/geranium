@@ -1,0 +1,7 @@
+The visualization is a genome browser featuring five tracks aligned linearly to provide a detailed view of chromosome 1 data. The top track is a chromosomal ideogram with colored bands indicating different staining properties, such as gneg, gpos, and acen, creating a visual reference for genomic locations.
+
+Below, there are two tracks showcasing genomic annotations with directional indicators. Blue right-facing triangles represent genes on the positive strand, while orange left-facing triangles denote genes on the negative strand, organized by strand orientation.
+
+The next track visualizes copy number variation (CNV) data, with green rectangles depicting genomic intervals where the minor copy number in tumors is zero. Another CNV track follows, similarly showing genomic ranges with elevated total copy numbers in tumors, colored consistently in green.
+
+The final track is an intra-chromosomal rearrangement track displaying connections between genomic locations using colored arcs. Different colors and stroke styles represent various types of structural variants, including tandem duplications, translocations, deletions, and inversions. These visual encodings provide insights into complex genomic rearrangements within chromosome 1.

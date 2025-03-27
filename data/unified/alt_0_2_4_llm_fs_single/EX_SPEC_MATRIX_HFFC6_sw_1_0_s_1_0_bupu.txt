@@ -1,0 +1,17 @@
+**Description:**
+
+The visualization titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" is arranged horizontally. It examines a chromosomal region from chromosome 7 (77,700,000 to 81,000,000) in the hg38 assembly. 
+
+The visualization consists of multiple tracks:
+
+1. **Vertical Section:**
+    - **Bar Charts:** Display epigenomic data with tracks for H3K4me3 (dark green), ATAC-seq (orange), and CTCF (navy blue) signals. 
+    - **Genomic Position Annotation Tracks:** Overlays include gene annotations using right-facing pink triangles for the positive strand and left-facing green triangles for the negative strand.
+
+2. **Horizontal Section:**
+    - **Track Overlaying:**
+        - **Micro-C and Hi-C Data:** Two matrix visualizations depict chromatin interactions, with intensity encoding for interaction strength in the 'bupu' color scale. The matrix is represented by color intensity on both x- and y-axes.
+    - **Additional Tracks:**
+        - **Epilogos Annotation:** A bar chart titled "Epilogos (hg38)" uses colors to represent different chromatin states.
+
+The visualization uses consistent vertical and horizontal alignment with integrated tracks showing interrelations. Utilizing bigwig and matrix data types, it intricately presents chromatin features and interactions within the specified genomic region.

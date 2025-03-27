@@ -1,0 +1,9 @@
+The visualization titled "Mark Displacement" demonstrates the arrangement of genomic data across a linear layout, aiming to manage visual overlaps through displacement techniques. It incorporates three primary views, each covering specific chromosome segments: chr3, chr2, and chr17.
+
+1. **View on chr3**: Displays transcript data from the hg38 assembly, focusing on genes within specified genomic intervals. The visualization uses different shapes and colors to represent genes and their strands, employing a displacing method to stack annotations without overlap. Text annotations display gene names at specific start and end positions, with directional arrows indicating gene orientation.
+
+2. **View on chr2**: Focuses on "Likely Benign" variants from ClinVar, illustrating genomic positions through points, text, and connection lines. Displacement spreads marks to avoid crowding, with color codes differentiating categories. Annotations articulate nucleotide sequences, enhancing variant context.
+
+3. **View on chr17**: Highlights ClinVar variants, employing a "pile" method for displacement. Points are colored according to pathogenic significance, ranging from "Pathogenic" to "Benign." The layout allows for clear visual parsing of overlapping data points with nominal classification.
+
+The entire visualization utilizes color, shape, and text strategically to distinguish between data points and categories efficiently, ensuring accessible comprehension of complex genomic information without visual clutter.

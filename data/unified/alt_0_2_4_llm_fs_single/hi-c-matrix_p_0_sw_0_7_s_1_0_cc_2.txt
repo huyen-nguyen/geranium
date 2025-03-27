@@ -1,0 +1,11 @@
+The visualization, titled "Hi-C Matrix," showcases genomic data using a matrix and annotations. Positioned in a linear layout, it spans across a specified genomic interval from 800,000,000 to 1,800,000,000 on the hg38 assembly. The central feature is an overlaid Hi-C matrix presented with genomic intervals on both axes, where color intensity reflects expression values. The spectrum ranges from light to dark shades, guided by a legend, to illustrate quantitative data patterns.
+
+The visualization integrates diverse tracks:
+- **Track 1:** A colored matrix where expression levels are encoded by color intensity.
+- **Track 2:** Vertical genomic annotation lines in sky blue, enhancing genomic positions.
+- **Track 3:** Horizontal lines in purple, offering genomic context across annotations.
+- **Track 4:** Genomic bar annotations for chromosomes 6, 7, and 8, where stroke colors differentiate categories within the dataset.
+- **Track 5:** Purple points scattered across the matrix, coded by their genomic size and value, providing clarity on expression intensity.
+
+The individual datasets, distinguished by their colors and stroke widths, indicate various structures within the chromosomal data, emphasizing structural patterns and variations. These elements collectively work to convey a complex genomic landscape efficiently, supported by a coherent visual style to improve interpretability and engagement.
+

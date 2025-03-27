@@ -1,0 +1,13 @@
+The visualization titled "Hi-C Matrix" utilizes a linear layout to represent Hi-C data and annotations. The x-axis represents genomic intervals between 800,000,000 and 1,800,000,000 base pairs, while the y-axis displays similar ranges. This overlaid chart consists of five tracks:
+
+1. A bar matrix represents genomic interactions with color intensity indicating expression levels. Each bar's color varies according to its value.
+
+2. A chart with purple vertical lines marks positions on the x-axis, with a stroke width of two units.
+
+3. A chart with sky-blue horizontal lines highlights genomic positions along the y-axis.
+
+4. Another bar matrix encodes both genomic axes' expression values, using color for intensity and the stroke of bars to categorize them.
+
+5. A scatter plot of points on the genomic axes illustrates intervals with point sizes corresponding to expression values and colored in purple with white strokes. The opacity level is set to 0.5.
+
+The entire visualization is outlined with dashed lines.

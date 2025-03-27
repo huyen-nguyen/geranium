@@ -1,0 +1,5 @@
+A linear visualization contains two vertically arranged tracks, each illustrating genomic data from chromosome 1, spanning positions 1 to 3,000,500. 
+
+The top track is a scatter plot where the x-axis represents genomic positions, and the y-axis encodes the peak values. Points vary in size based on the peak values and are colored according to four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The colors used are blue, orange, green, and red respectively. The opacity of the points is set to 0.5, allowing overlap visibility, and tooltips provide interactive data details such as the start and end positions.
+
+The bottom track features an area chart aligned in rows for each category. Each category is depicted in its respective color, matching the scatter plot. The x-axis represents the genomic positions, while the y-axis shows the peak values. A grid enhances visibility, and the stroke of the areas is outlined in white for distinction. Both tracks are interactive, offering insights through tooltips for genomic positions and peak values.

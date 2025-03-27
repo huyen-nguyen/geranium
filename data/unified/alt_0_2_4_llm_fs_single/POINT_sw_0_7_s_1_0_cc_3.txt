@@ -1,0 +1,1 @@
+A scatter plot with a linear layout visualizes a multivec file, showing the entire genome of hg38. Positions on the x-axis represent genomic positions, and the y-axis encodes expression values using points. The size of each point is proportional to expression values, and their color is green. The title of the chart is "Basic Marks: point," and the subtitle is "Tutorial Examples."

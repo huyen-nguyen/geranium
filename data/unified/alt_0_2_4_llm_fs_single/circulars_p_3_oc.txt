@@ -1,0 +1,13 @@
+The visualization displays a range of circular layouts to illustrate various visual encoding methods, concentrating on genomic data. The visualization title is "Visual Encoding in Circular Layouts," with a subtitle "Gosling provides diverse visual encoding methods in circular layouts." The circular layout consists of four horizontal arrangements, each showcasing distinct visualizations:
+
+1. **Circular Scatter Plots:** Two scatter plots represent genomic data from chromosome 1. The x-axis is genomic position, and the y-axis is peak value. Points are stratified by samples, and size represents expression values, with colors indicating different samples ('sample 1' to 'sample 4').
+
+2. **Circular Connected Plot:** This plot illustrates connections between genomic intervals, with colors indicating varying categories.
+
+3. **Circular Area Chart:** Displays genomic data as areas, stratified by categories and colored by samples, revealing expression on the y-axis.
+
+4. **Circular Bar and Heat Map Charts:** Bar and heat map charts show expression values on the y-axis using bars and color intensity. Samples are colored categorically. The heat map uses color intensity to visualize expression.
+
+5. **Circular Line and Scatter Plot:** A line and scatter plot combines lines and points to represent genomic expression. Lines and points, colored by sample categories, help interpret expression values on the y-axis.
+
+By providing diverse visual encoding methods in circular layouts, this visualization effectively communicates multivec file data across multiple tracks with points, bars, lines, and connections, emphasizing varying types of expression encoded

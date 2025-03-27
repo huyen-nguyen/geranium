@@ -1,0 +1,9 @@
+The visualization presents a linear genomic range annotation focusing on chromosome 3, highlighting regions between 52,168,000 and 52,890,000. It consists of three horizontally arranged views: "HiGlass," "IGV," and "Corces et al."
+
+1. **HiGlass View**: Displays gene annotations with directional markers and text labels. Blue triangles and lines represent the '+' strand, while red triangles and lines depict the '-' strand. Gene exons are shown as rectangles. This track is stratified by strand rows.
+
+2. **IGV View**: Shows gene annotations similarly but in a predominantly navy color scheme. Text labels and rectangles denote gene positions with indiscernible strand orientation, while white patterned lines indicate directional information.
+
+3. **Corces et al. View**: Features finer-resolution gene annotations. It uses text and smaller rectangles for genes, colored by strand—blue for '+', red for '-'. Exons are rendered as separate larger rectangles, and lines connect genomic start and end points.
+
+Each view is overlaid to offer multiple perspectives within the same genomic interval, enhancing comparative genomic analysis.

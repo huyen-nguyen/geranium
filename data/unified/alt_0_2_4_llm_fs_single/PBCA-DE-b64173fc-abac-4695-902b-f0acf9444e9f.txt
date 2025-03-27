@@ -1,0 +1,5 @@
+A circular and linear genomic visualization is presented. The circular layout provides an overview of the entire hg19 genome, with interactive brushing to zoom into specific regions, linked via a brush to the linear part. The circle features include a black-and-white ideogram for chromosome identification.
+
+In the linear arrangement, focusing on chromosome 1, several tracks are depicted. The "Putative Driver" track displays annotated genetic features, with points colored differently based on genetic significance. Below, the "Point Mutation" track visualizes single nucleotide variations, with colored points indicating mutation types such as C>A or T>G. Adjacent are tracks indicating insertions, deletions, and copy number variants, with the latter divided into "Gain" and "Loss of Heterozygosity (LOH)" using blue and orange rectangles respectively.
+
+The visualization employs interactive and detailed genomic comparisons, providing insights into structural variations like duplications and translocations, shown with connections between regions, color-coded by category.

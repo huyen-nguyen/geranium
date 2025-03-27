@@ -1,0 +1,9 @@
+The visualization consists of three stacked tracks in a vertical linear layout. Each track visualizes genomic data along the x-axis representing chromosome 1, spanning positions 1 to 3,000,500.
+
+1. **Top Track**: A scatter plot displays genomic positions on the x-axis with expression values shown as points on the y-axis. The points are stratified by rows for categories 'sample 1' to 'sample 4'. Each category is represented by different colors, with point size reflecting the expression's magnitude.
+
+2. **Middle Track**: This is a bar chart where genomic intervals on the x-axis correspond to 'start' and 'end' positions. Bars represent expression values on the y-axis, with ranges from 'peak_min' to 'peak_max'. The chart is stratified by category, reflecting color variations for samples '1' to '4'.
+
+3. **Bottom Track**: An overlay of a line chart and scatter plot. Genomic positions are on the x-axis, while expression values are shown via lines and points on the y-axis. The height of points represents their size. Categories 'sample 1' to 'sample 4' are shown in different colors for both lines and points.
+
+Each track utilizes tooltip information, detailing genomic start and end positions, expression value, and sample category. The opacity of the points is set to 0.5, enhancing visibility of overlapping data.

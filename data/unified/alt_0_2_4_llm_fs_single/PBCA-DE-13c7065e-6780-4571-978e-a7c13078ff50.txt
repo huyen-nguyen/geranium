@@ -1,0 +1,16 @@
+Certainly! Here's a detailed description based on the provided visualization specification:
+
+---
+
+The visualization showcases a comprehensive genomic analysis using a combination of circular and linear layouts. The main elements are structured across multiple tracks to illustrate genomic data effectively.
+
+**Circular Layout:**
+- The outermost part features a circular ideogram titled "Ideogram" displaying the entire genome. Each chromosome is represented with intervals on the x-axis, and the colors of the rectangles indicate different cytogenetic bands.
+- Inside the ideogram, a track named "Putative Driver" visualizes genomic data as text annotations. Each text is stratified by categories in rows and is colored black.
+- Two prominent range annotation tracks highlight genomic alterations. The track titled "Gain" uses sky blue rectangles to depict areas with increased copy numbers, while "Loss of Heterozygosity (LOH)" uses dark orange rectangles for regions with a loss of heterozygosity.
+- A connection track displays lines linking genomic positions. These lines are color-coded based on different structural variations such as 'Gain', 'LOH', 'Translocation', 'Duplication', 'Deletion', 'Inversion (TtT)', and 'Inversion (HtH)'.
+
+**Linear Layout:**
+- A linear ideogram spans the top, providing a detailed view of chromosome 1 with annotated cytogenetic bands.
+- The "Putative Driver" track is repeated in linear form, showing positional annotations of genomic elements across the chromosome.
+- A "Point Mutation

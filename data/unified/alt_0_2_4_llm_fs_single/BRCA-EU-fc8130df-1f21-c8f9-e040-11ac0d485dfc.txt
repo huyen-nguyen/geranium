@@ -1,0 +1,15 @@
+This visualization consists of a circular and a linear view, arranged vertically. The circular view displays the entire genome using an ideogram with interactive features, and it connects with the linear view through a blue brush tool, highlighting the region corresponding to chromosome 1. 
+
+In the circular view, five tracks are present, including:
+1. An ideogram illustrating chromosome bands.
+2. A point annotation track titled "Putative Driver," displaying genomic positions with labels.
+3. Two range annotation tracks, "Gain" and "Loss of Heterozygosity (LOH)," showing genomic segments in blue and orange rectangles respectively.
+4. A line-connection track that connects genomic points, color-coded by categories such as 'Gain', 'LOH', 'Translocation', 'Duplication', 'Deletion', and 'Inversion.'
+
+The linear view features similar tracks along with additional visualizations:
+1. A gene annotation track, specifying gene positions and strands.
+2. A scatterplot titled "Point Mutation," which visualizes distances between mutations as points, color-coded by mutation subtypes.
+3. Range annotation tracks for "Insertion" and "Deletion," displayed in yellow and green rectangles, sourced from a VCF file.
+4. A range annotation track titled "Copy Number Variants," depicting quantitative data fields via gray bars.
+
+Both views are intricately styled with attention to color schemes and alignments, providing a comprehensive genomic data analysis.

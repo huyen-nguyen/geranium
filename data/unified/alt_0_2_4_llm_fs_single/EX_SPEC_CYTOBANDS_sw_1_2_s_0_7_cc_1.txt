@@ -1,0 +1,7 @@
+The visualization comprises a series of parallel linear tracks, each displaying data for a different chromosome (chr1 to chr5). Each track combines two main elements: an area chart and an extended ideogram.
+
+1. **Area Charts**: Above each ideogram, area charts display quantitative genomic expression data using a multivec file. The x-axis represents genomic positions, while the y-axis shows the expression values. The data is categorized into four samples, each depicted with distinct colors: blue, orange, green, and red.
+
+2. **Ideograms**: Below the area charts, ideograms depict cytogenetic bands with overlaid annotations. Text labels identify bands, while optional decorations include rectangles and triangles indicating various staining patterns. The staining density is represented by shades ranging from white to black, with other colors like purple for specific genomic markers.
+
+The layout is static, arranged parallelly with consistent styling across tracks. Each track varies in width to accommodate the genomic domain of the respective chromosome, providing a comprehensive view of genomic data for multiple chromosomes in a coordinated manner.

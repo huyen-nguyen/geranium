@@ -1,0 +1,7 @@
+The visualization comprises three charts arranged in a linear layout, facilitated by Gosling.js. The first chart is a genomic range annotation track displaying gene annotations on chromosome 3, spanning positions 52,168,000 to 52,890,000. This chart uses text and geometric shapes like triangles and rectangles to denote exons and genes, with colors signifying strand orientation.
+
+The second chart exhibits a sequence visualization as a bar chart, detailing the nucleotide composition of chromosome 1 from positions 77,925,299 to 77,925,320. The height of bars indicates the count of bases ('A', 'T', 'G', 'C'), while colors differentiate between categories.
+
+The third chart is an ideogram representing chromosome 1. It includes blocks and triangles highlighting different regions and their categories, such as centromeric (acen) zones. The ideogram provides an overview of chromosomal banding patterns with color codes for various attributes.
+
+The visualization is interactively arranged to facilitate smooth navigation and detailed exploration of genomic data.

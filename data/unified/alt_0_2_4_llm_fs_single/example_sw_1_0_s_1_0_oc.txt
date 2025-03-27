@@ -1,0 +1,17 @@
+The visualization titled "Visual Encoding" demonstrates diverse encoding methods provided by Gosling. It uses a vertical arrangement in a linear layout to display chromosome 1 between positions 1 and 3,000,500. The visualization consists of several tracks including:
+
+1. A heatmap that represents genomic intervals on the x-axis, with expression values encoded using color intensity. The categories are stratified by rows.
+   
+2. Three distinct bar charts depicting genomes on the x-axis and expression values on the y-axis, stratified by rows and categories, with colors indicating the categories.
+
+3. A combination of a line chart and a scatter plot, where the genome is displayed on the x-axis and expression values are presented on the y-axis using lines and points. The size of the points reflects expression values, with categories indicated by color.
+
+4. Two scatter plots showing genome on the x-axis and expression values on the y-axis, using points and size axes to encode data, and colors to differentiate categories.
+
+5. An area chart exhibiting genome on the x-axis and expression values on the y-axis with stratification for categories using area color.
+
+6. A bar chart that depicts genomic intervals on the x-axis, with expression values represented by y and ye-axes bars, stratified by rows and categories with color differentiation.
+
+7. A chart with connections that shows genomic intervals on the x-axis, where colors of the connections indicate different categories.
+
+Each chart includes relevant tooltips for genomic positions and expression values, enhancing

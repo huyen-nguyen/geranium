@@ -1,0 +1,5 @@
+A visualization featuring a circular view and a linear view. The circular view includes a genome ideogram, text annotations indicating putative driver mutations, and tracks showing genomic gains (in blue) and loss of heterozygosity (LOH) (in orange). Additional tracks depict structural variations such as translocations, duplications, deletions, and inversions with line connections in diverse colors, reflecting their categorical classifications.
+
+In the linear view, tightly linked to the circular view, chromosome 1 is detailed with a range of annotations. This includes an ideogram, gene annotations with exons and introns, and point mutations visualized as a scatter plot. The scatter plot nominates point mutations by their distance to previous mutations, colored by subtype (e.g., C>A, T>G).
+
+Additional annotations in the linear format include tracks for copy number variants and genomic insertions/deletions. The visualization uses diverse styles, colors, and overlay techniques to distinguish between different genomic elements and categories. The circular brush facilitates interactivity, linking the circular and linear views by chromosome regions.

@@ -1,0 +1,11 @@
+The visualization consists of genomic tracks displayed in a linear layout, focusing on specific intervals of chromosomes 12 and 8. 
+
+- **Gene Annotations:** The first track on chromosome 12 displays gene annotations with arrows indicating strand direction. It utilizes purple color for visual emphasis. Each gene annotation carries labels in white.
+
+- **Sample Data:** Following the annotations, there are three bar chart tracks marked as "Sample 1," "Sample 2," and "Sample 3." These bars display expression values along the x-axis represented by genomic intervals. The colors of bars vary per sample: purple for "Sample 1," sky blue for "Sample 2," and again purple for "Sample 3."
+
+- **Chromosome 8 Data:** The data for chromosome 8 is similarly organized, with bar charts for each sample. Here, "Sample 1" is represented in purple, "Sample 2" in green, and "Sample 3" in blue.
+
+- **Gene Annotations on Chromosome 8:** A final track provides additional gene annotation for chromosome 8, likewise distinguished by strand-specific arrows and green coloring. Each gene is labeled for clarity.
+
+Overall, these visualizations facilitate comparison across samples and chromosomes for genomic features and expression values, highlighted by distinct color codings for quick identification.

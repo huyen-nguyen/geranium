@@ -1,0 +1,5 @@
+The visualization consists of a circular view and a linear view arranged vertically. The circular view represents the entire genome of hg19 with a focus on chromosome 1, displaying five tracks: a circular ideogram, a text annotation track titled 'Putative Driver,' two genomic range tracks for 'Gain' and 'Loss of Heterozygosity (LOH)' depicted with sky blue and dark orange rectangles, and a connection track showing genomic interactions with various structural variants such as 'Translocation,' 'Duplication,' 'Deletion,' and 'Inversions' in colorful strokes.
+
+The linear view zooms into the region of chromosome 1, maintaining similar tracks, and additionally includes a scatter plot titled 'Point Mutation' and a range track for 'Copy Number Variants.' The scatter plot visualizes VCF data, with points illustrating genomic positions and colored by mutation subtype. Beside it, the 'Copy Number Variants' track uses gray bars to represent quantitative data for copy number changes.
+
+A blue interactive brush in the circular ideogram links the views, allowing a deep dive into chromosome-specific data while maintaining an overall genomic context.

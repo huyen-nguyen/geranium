@@ -1,0 +1,11 @@
+The visualization consists of a circular view and a linear view stacked vertically, focusing on the hg19 genomic assembly. The circular view features a genome-wide ideogram with interactive brushing, showing various genomic features color-coded based on categories like 'Gain' in blue and 'Loss of Heterozygosity (LOH)' in orange. Inside the ideogram, there are links representing structural variations such as translocations, duplications, deletions, and inversions, distinguished by different colors.
+
+The linear view expands chromosome 1, displaying detailed tracks: 
+
+1. **Ideogram**: Centers on chromosome 1, linking with upstream views.
+2. **Putative Driver**: Stratified by categorical rows, marking genomic positions of interest.
+3. **Point Mutation**: A scatter plot illustrates VCF file information, with point colors indicating mutation subtypes.
+4. **Insertion and Deletion**: Annotated by rectangle tracks. Rectangles vary in color, denoting insertion or deletion events.
+5. **Copy Number Variants**: Bars illustrate total copy numbers against the right y-axis grid.
+
+This visualization effectively combines circular and linear layouts to provide a comprehensive view of genomic data, integrating multiple data types, including CSV and VCF files, with rich interactive features.

@@ -1,0 +1,15 @@
+A circular visualization layout illustrates genomic data from chromosome 1, ranging from positions 1 to 3,000,500. The visualization comprises two horizontal views.
+
+**Left view:**  
+- Displays a circular bar chart with tracks stratified by four samples: "sample 1," "sample 2," "sample 3," and "sample 4."
+- Each sample is represented by distinct colors, and the bars encode quantitative genomic values in the y-dimension.
+- The x-dimension depicts genomic positions along the top axis.
+- Tooltip provides genomic positions and peak values.
+
+**Right view:**  
+- Features a circular heatmap encoding expression values as color intensities.
+- Samples are stratified in rows with genomic positions linked along the top axis.
+- Color intensity varies to denote different quantitative genomic values.
+- Tooltip supports interactive exploration by displaying genomic positions, peak values, and sample information.
+
+The visualization employs a multivec data source rendered in a static, circular format, using "hg38" genomic assembly, with emphasis on categories and sample details for interpretive clarity.

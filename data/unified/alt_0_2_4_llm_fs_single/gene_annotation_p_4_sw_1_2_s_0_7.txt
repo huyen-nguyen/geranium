@@ -1,0 +1,10 @@
+The visualization consists of six genomic range annotation tracks arranged horizontally, covering chromosome 3 from 52,168,000 to 52,890,000. Each track represents a different dataset: 
+
+1. **HiGlass**: Displays genes with directional arrows indicating strands, with blue and red colors representing positive and negative strands, respectively. Exons are marked with rectangles.
+2. **Corces et al.**: Shows gene names and structures with smaller, colored rectangles representing gene strands and exons.
+3. **IGV**: Features gene names and structures highlighted in navy with directional triangles on strands.
+4. **Cyverse-QUBES**: Depicts gene annotations with black text and gray directional arrows for strands, with purple rectangles for exons.
+5. **GmGDV**: Similar to HiGlass but uses blue for positive strands and red for negative; exons are highlighted in faint colors.
+6. **Unlabeled Track**: Shows a simple annotation with gray rectangles, as well as highlights for exons and introns.
+
+Each track stratifies data by the strand orientation, which is also color-coded. This comprehensive visualization provides detailed genomic annotations across multiple datasets for the specified region of chromosome 3.

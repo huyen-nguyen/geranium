@@ -1,0 +1,16 @@
+A visualization titled "Mark Displacement" demonstrates the repositioning of marks to address visual overlaps using displacement options. The genomic data from chromosomes 3, 2, and 17 is displayed across multiple tracks. 
+
+1. **Track 1 - Genomic Range Annotation:**
+   - **Title:** "hg38 | Transcript (Max. 15 Rows)"
+   - **Content:** Displays transcripts from chromosome 3 between positions 142,500,000 and 143,000,000. 
+   - **Marks:** Includes right-facing triangles for genes on the '+' strand, left-facing triangles for '-' strands, text labels for gene names, rules, and rectangles for exons. 
+   - **Displacement:** Piling method to organize overlapping features into a maximum of 15 rows.
+
+2. **Track 2 - Genomic Position Annotation:**
+   - **Title:** "Likely Benign"
+   - **Content:** Depicts likely benign variants from chromosome 2, interval 126,800,000 to 127,700,000.
+   - **Marks:** Contains points, text, and connections. Points are colored green, and accompanying text is colored according to specific base categories.
+   - **Links:** Features pink connection lines between genomic positions.
+
+3. **Additional Track on Chromosome 17:**
+   - This track illustrates various pathogenicity-related points using a color spectrum to indicate significance, spanning positions 43,080,000 to 43,120,

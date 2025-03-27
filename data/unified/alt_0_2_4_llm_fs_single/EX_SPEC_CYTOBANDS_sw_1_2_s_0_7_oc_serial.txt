@@ -1,0 +1,11 @@
+The visualization consists of a linear layout displaying data for chromosomes 1 to 5. Each chromosome view includes two main tracks: an area track and an ideogram track.
+
+1. **Area Track**: Visualizes multivec data showing genomic positions on the x-axis and expression 'peak' values on the y-axis. The 'sample' field determines the color of the area, representing four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The dimensions of each area chart slightly differ, adapting to the chromosome.
+
+2. **Ideogram Track**: Overlaid elements derived from cytogenetic band data, consisting of:
+   - Rectangular bands colored according to 'Density' field values: white, light gray, dark gray, and black.
+   - Purple rectangles denoting 'gvar' regions.
+   - Red right and left triangles indicating centromere positions ('acen-1' and 'acen-2').
+   - Chromosome band labels displayed in black text, which are dynamically visible based on zoom width.
+
+The visualization effectively layers genomic information and annotations, providing a comprehensive view of chromosomal data across multiple chromosomes in a serial arrangement.

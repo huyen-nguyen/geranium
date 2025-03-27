@@ -1,0 +1,11 @@
+The visualization consists of four distinct tracks arranged vertically in a linear layout, highlighting genomic data across chromosome 1 from position 1 to 3,000,500. 
+
+1. **Scatter Plot**: Displays expression values for 'sample 1', 'sample 2', 'sample 3', and 'sample 4', using genomic positions along the x-axis. Each category is represented by different colored points where size correlates with expression value ('peak'). The transparency of the points is set to 0.5 to show overlapping data.
+
+2. **Bar Chart**: Illustrates minimum ('peak_min') and maximum ('peak_max') expression values for the samples, represented by bars. The genomic positions define the x-intervals, stratified by category with bars colored according to sample.
+
+3. **Heat Map**: Encodes expression data through color intensity, presenting a bin size of 4. This track stratifies rows by sample, using a gradient color scale to indicate variations in peak values.
+
+4. **Overlay Chart (Line and Scatter Plot)**: Combines lines and points to show expression trends with lines indicating changes and point sizes conveying expression magnitude ('peak'). Different sample categories are marked by color.
+
+The comprehensive use of multivec data allows for the representation of multiple samples and their respective genomic expressions, emphasizing trends and variations within specified genomic intervals.

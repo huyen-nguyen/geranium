@@ -1,0 +1,5 @@
+**Description:**
+
+This visualization is a linear, multi-track chart titled "Example: Overlayed Tracks." It presents a genomic view of chromosome 1, focusing on the interval between base pairs 1 and 3,000,500. The chart consists of four strata (rows) based on different samples labeled "sample 1" to "sample 4." Each stratum combines a line chart and a scatter plot overlay. 
+
+The x-axis represents genomic positions, while the y-axis quantifies the "peak" values from a multivec data source. These values are visually encoded by lines and points within each stratum. The size of the points correlates with the "peak" values, ranging from 0 to 6 in size. The samples are distinguished by distinct colors: blue, orange, green, and red, respectively, providing visual separation across the rows. The visualization leverages color to maintain clarity and highlight variations among the stratified data.

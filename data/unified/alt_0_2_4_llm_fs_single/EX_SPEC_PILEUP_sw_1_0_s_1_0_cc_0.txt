@@ -1,0 +1,9 @@
+**Description:**
+
+This visualization contains two tracks arranged in a linear layout, focusing on a specific genomic interval on chromosome 1, from positions 136,750 to 139,450. The entire layout is titled "Pileup Track Using BAM Data."
+
+- **Top Track**: This is a coverage bar chart derived from a BAM file. It visualizes the number of reads aligned across the genomic interval, represented by the height of the bars on the y-axis. These bars are colored silver.
+
+- **Bottom Track**: A pileup chart displaying individual reads as rectangles, also from the same BAM file. Each rectangle's color represents a type of structural variation or read category, with options like "normal read" (gray), "deletion (+-)" (orange), "inversion (++)" (green), "inversion (--)" (blue), and others. This chart includes a legend on the right indicating these categories, titled "Insert Size = 300bp."
+
+Both tracks share the genomic position on the x-axis, and the entire visualization is designed to highlight complex genomic data through distinct color coding and structural arrangement.

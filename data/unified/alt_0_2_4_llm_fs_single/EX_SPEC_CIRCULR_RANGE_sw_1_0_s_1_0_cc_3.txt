@@ -1,0 +1,1 @@
+A circular bar chart in a circular layout visualizes a vector data file. It depicts genomic data across all chromosomes of the hg38 assembly. The bars represent quantitative values from the field named 'peak,' plotted against genomic position. The bars are green in color. The chart has a diameter size of 700 units.

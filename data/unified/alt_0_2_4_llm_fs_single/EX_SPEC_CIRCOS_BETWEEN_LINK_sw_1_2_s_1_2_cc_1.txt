@@ -1,0 +1,11 @@
+**Description**: 
+
+This circular visualization, titled "Between Links in Circular Layouts with Parallel Arrangements," displays genomic data using a circular layout. It consists of four main components:
+
+1. **Circular Bar Chart**: Located on the outermost ring, this chart represents genomic intervals on the x-axis and expression values on the y-axis using sky blue bars. The height of the bars indicates the quantitative data field named 'peak.'
+
+2. **Circular Ideogram**: Two ideogram tracks are integrated within the circle. These tracks show genomic banding patterns with colored rectangles representing different categories. The colors of the rectangles represent various chromosomal stains, such as gneg, gpos25, and others, displayed in blue, orange, green, red, purple, brown, and additional colors.
+
+3. **Circular Chart with Connections**: A series of links connect different genomic positions within the circular chart. The links are visualized in light gray and black, indicating different correlations or relationships between segments. This part uses data transformations to highlight specific chromosomal links, with black highlighting connections to "hs1."
+
+Each component is stacked and rotated around a central point to produce a cohesive circular visualization. The layout is static with a slight spacing of 0.01 between tracks, maintaining alignment and parallel arrangements. The assembly used for this data is hg38, and the chart is designed for genomic analysis, demonstrating interactions between various genomic intervals through its structured, multi-layered arrangement.

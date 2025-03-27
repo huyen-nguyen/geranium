@@ -1,0 +1,5 @@
+The visualization is a linear heat map illustrating genomic data over chromosome 1, between positions 1 and 3,000,500. It uses a multivec file with four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4', as separate rows.
+
+Each sample's data is presented as rectangles spanning the genomic positions, with colors indicating expression values. The gradient color scale, located on the right, represents the quantitative values of 'peak', ranging from deep purple (low expression) to bright yellow (high expression). The x-axis denotes genomic positions, while rows are stratified by sample, with corresponding labels displayed on the left side of each row. 
+
+Tooltips provide additional information on hover, displaying start and end genomic positions, expression values, and sample names.

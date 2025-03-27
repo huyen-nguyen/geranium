@@ -1,0 +1,9 @@
+A visualization titled "Visual Linking" displays genomic data using a combination of circular and linear bar charts with interactive features. The visualization is structured vertically, featuring a circular chart on top followed by two linear charts. 
+
+The circular chart illustrates genomic intervals on chromosome 1, with expression data shown as bars, stratified by category rows. Each category is color-coded with distinct hues: blue, orange, green, and red. An interactive brush links this circular view to the subsequent linear views.
+
+The first linear chart maintains the same genomic representation as the circular chart but displays it in a horizontal format. The brushed regions on the x-axis dynamically update the view, providing detailed exploration functionality.
+
+The second linear chart delves deeper, focusing on the interval from 160,000,000 to 200,000,000 on chromosome 1. It provides a detailed view of expression data, maintaining the same categorical coloring for consistency.
+
+Overall, the visualization effectively combines interactive and static elements, allowing for exploratory analysis of multivec data across genomic positions and categories.

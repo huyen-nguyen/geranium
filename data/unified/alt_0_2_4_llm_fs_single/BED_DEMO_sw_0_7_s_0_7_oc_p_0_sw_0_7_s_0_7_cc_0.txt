@@ -1,0 +1,8 @@
+The visualization demonstrates a vertical linear arrangement of four BED file representations on chromosome 1 from position 1 to 2,000,000. Each track uses rectangle marks to encode genomic ranges. 
+
+1. **BED12**: Displays all 12 standard BED fields with green rectangles.
+2. **BED6**: Shows the first 6 BED fields with purple rectangles.
+3. **BED6+6**: Includes 6 custom fields in addition to the first 6 BED fields, using sky blue rectangles.
+4. **BED12+1**: Represents all 12 standard fields plus one custom field, also with purple rectangles.
+
+Each rectangle's color and size remain consistent, featuring a black stroke and a width hinted by the genomic span. The visualization effectively contrasts different specifications within BED files, encoded under a consistent layout on the human genome assembly hg38.

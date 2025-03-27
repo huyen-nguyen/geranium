@@ -1,0 +1,7 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" features a linear layout with interactive genomic data. The upper section displays Chromosome 5's ideogram, showcasing the genomic intervals as rectangles colored according to various categories. Some rectangles are pink, indicating specific regions, while green text labels chromosomal bands. A brushing tool links to another chart, facilitating exploration.
+
+The middle section, titled "Region of Interest," presents a detailed view of selected segments with connection lines. These links are pink and green, differing by the data category they represent. This section spans from 68,000,000 to 71,000,000 base pairs on Chromosome 5.
+
+The lower section, "Rearrangement View," focuses on genomic rearrangements within a narrower range, from 69,276,000 to 69,282,000 base pairs. Blue arcs illustrate these rearrangements, emphasizing the data's structural complexity.
+
+Overall, this visualization effectively combines ideograms, detailed genomic views, and interactive elements, using color and layout to differentiate genomic features and facilitate deeper data exploration.

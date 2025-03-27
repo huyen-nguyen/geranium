@@ -1,0 +1,1 @@
+A circular bar chart in a stacked layout visualizes a vector dataset, showing the hg38 genome assembly. The x-axis encodes genomic positions, and the y-axis displays quantitative values of 'peak'. Bars are consistently colored green. The visualization contains one circular track, with a center radius of 0.3 and dimensions of approximately 588 by 588 units.

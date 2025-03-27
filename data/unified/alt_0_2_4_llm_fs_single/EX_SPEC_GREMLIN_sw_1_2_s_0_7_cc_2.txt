@@ -1,0 +1,11 @@
+**Description:**
+
+The visualization titled "Gremlin (O'Brien et al. 2010)" presents a multi-layered analysis of Chromosome 5 using the hg38 genome assembly in a linear layout. The top view features an ideogram with colored rectangles representing different chromatin states, with an interactive brush linking to detailed views below. The ideogram colors range from black to pink, indicating various stain types like gneg and gpos.
+
+Beneath the ideogram, a track displays segmental duplications across multiple chromosomes (hs5, hs4, hs6) as colored rectangles in blue, orange, and green—each indicating a different chromosome. Vertically linking arcs show connections within these segments, adding a network layer visualized with green strokes.
+
+The middle section titled "Region of Interest" zooms into positions 68,000,000 to 71,000,000 on Chromosome 5. It visualizes connections between genomic ranges, repeated in blue and green arcs, stratified by category.
+
+At the bottom, the "Rearrangement View" provides even finer detail between positions 69,276,000 and 69,820,000. It displays translucent purple arches highlighting rearrangements, indicating structural variances within this highly focused region.
+
+Overall, this visualization employs chromosomal charts, colors, and connection arcs to effectively present structural variations and segmental duplications on Chromosome 5, using a combination of ideograms, range annotations, and linking marks.

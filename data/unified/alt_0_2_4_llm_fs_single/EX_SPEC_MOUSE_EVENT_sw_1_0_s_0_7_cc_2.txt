@@ -1,0 +1,13 @@
+This visualization, titled "Custom Mouse Events," showcases five tracks in a vertical linear layout, featuring bar charts and genomic annotations. The x-axis represents genomic intervals, with five distinct views:
+
+1. **Individual Marks**: A bar chart displaying genomic data for chromosome 1, with categories such as sample 1 to sample 4, in various colors like blue and red.
+
+2. **Group Marks By Sample**: Another bar chart, similarly categorizing data by samples, showing genomic intervals and peak values.
+
+3. **Group Marks By Genomic Position**: A bar chart organizing data by genomic positions, maintaining the sample-based color scheme.
+
+4. **Group Marks By Gene**: A genomic range annotation track for chromosome 3, featuring directional gene annotations with grey triangles and rectangles, enhanced by text labels.
+
+5. **Group Marks By Chromosome**: An ideogram with text, displaying cytogenetic bands for multiple chromosomes, using colors like purple and maroon to indicate different characteristics.
+
+The visualization incorporates interactive mouse events, allowing users to hover, select, and group data by fields such as sample name and genomic position.

@@ -1,0 +1,7 @@
+The visualization is composed of three separate views arranged vertically in a linear layout. The first view focuses on chromosome 3, depicting gene annotations. It uses triangular and rectangular marks to indicate gene boundaries and exons, colored in gray. Labels for genes are included in white text with surrounding strokes for clarity. 
+
+The second view zooms into a section of chromosome 1, representing a sequence using a multivec format. Here, bars show the frequency of bases (`A`, `T`, `G`, `C`) at different positions, with colors indicating base type.
+
+The third view is an ideogram for chromosome 1, displaying cytogenetic bands using a combination of rectangles and triangular annotations. Each band is colored according to a predefined scheme to highlight different staining categories. 
+
+The visualization efficiently presents complex genomic data with clear categorical distinctions through the use of consistent color schemes and thoughtful label placement. The overall design is enhanced by enabling smooth paths and maintaining a cohesive style across all tracks.

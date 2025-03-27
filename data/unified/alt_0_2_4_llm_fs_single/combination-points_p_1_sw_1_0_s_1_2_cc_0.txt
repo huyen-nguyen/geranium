@@ -1,0 +1,7 @@
+The visualization consists of two stacked scatter plots within a linear layout, displaying multivec data from chromosome 1, ranging from position 1 to 3,000,500. 
+
+The top scatter plot shows genomic positions on the x-axis, mapping expression values with bubble sizes and colors indicating four different samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4', colored in blue, orange, green, and red, respectively. The y-axis represents quantitative 'peak' values, with a grid for easy comparison.
+
+The bottom scatter plot is stratified by sample rows, each line representing a sample, maintaining the same color coding as the top plot. This enables better differentiation between samples, aiding in visualizing trends across samples.
+
+Both plots include tooltips displaying start and end genomic positions, peak values, and sample information upon hovering, with an opacity setting of 0.5, ensuring clarity in overlapping data points.
