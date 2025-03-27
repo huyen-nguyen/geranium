@@ -1,10 +1,9 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import Header from './Header.jsx'
 import SearchPanel from './SearchPanel.jsx'
+import GalleryPanel from './GalleryPanel.jsx'
 import axios from "axios"
-import './GalleryPanel.css'
 import './utils.js'
-import { BsFillInfoCircleFill } from "react-icons/bs";
 
 function App() {
 
@@ -22,28 +21,7 @@ function App() {
 
   const topKGallery = useMemo(() => {
     return (
-      <div className='gallery-panel'>
-        {topK.map(d => {
-          const title = d.name.split('_')[0].replaceAll('-', ' ').titleCase();
-          return (
-            <div className='gallery-item' key={d.name}>
-              <div className='gallery-item-title'>{`Example Name: ${d.name}`}</div>
-              <div className='gallery-image-text-group'>
-                <img className='gallery-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
-                <div className='gallery-item-text'>
-                  <BsFillInfoCircleFill style={{
-                    color: '#4a4644',
-                    marginRight: '6px',
-                    verticalAlign: 'middle'
-                  }} />
-
-                  {d.text}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <GalleryPanel data={topK} />
     );
   }, [topK]);
 

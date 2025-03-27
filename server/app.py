@@ -112,6 +112,7 @@ def get_inference():
 def get_all_modalities(file_names):
     texts = []
     images = []
+    specs = []
     file_names_wo_extensions = [os.path.splitext(x)[0] for x in file_names]
 
     for file_name in file_names_wo_extensions:
@@ -127,9 +128,16 @@ def get_all_modalities(file_names):
         )
         images.append(image)
 
+        # spec
+        spec_base_path = os.path.join("../data/unified/specs/", file_name)
+        spec = open(spec_base_path + ".json", "r").read()
+        specs.append(spec)
+
     dumped = [
-        {"name": name, "text": text, "image": image}
-        for name, text, image in zip(file_names_wo_extensions, texts, images)
+        {"name": name, "text": text, "image": image, "spec": spec}
+        for name, text, image, spec in zip(
+            file_names_wo_extensions, texts, images, specs
+        )
     ]
     return dumped
 
