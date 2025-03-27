@@ -265,7 +265,7 @@ def extract_rules(input_file, output_file, output_tsv):
     print(f"Rules saved in TSV format to {output_tsv}")
 
 
-def vectorize_specification(json_content, frame_file):
+def vectorize_specification(json_content, frame_file, is_onehot=False):
     # Load the frame of CFG rules from the frame file.
     with open(frame_file, "r") as f:
         frame_rules = [line.strip() for line in f if line.strip()]
@@ -280,6 +280,10 @@ def vectorize_specification(json_content, frame_file):
         rules = []
 
     # Build frequency count and one-hot vectors for the frame rules.
-    frequency_vector = [rules.count(frame_rule) for frame_rule in frame_rules]
+    vector = [rules.count(frame_rule) for frame_rule in frame_rules]
+    if is_onehot:
+        vector = [
+            1 if count > 0 else 0 for count in vector
+        ]  # build one-hot from frequency count
 
-    return frequency_vector
+    return vector
