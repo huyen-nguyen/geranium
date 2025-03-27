@@ -50,6 +50,7 @@ def get_inference():
         text_0_2_4_embeddings,
         text_0_2_4_llm_fs_single_embeddings,
         spec_onhot_embeddings,
+        spec_embeddings,
     ) = load_embeddings()
 
     # Inference
@@ -111,10 +112,10 @@ def text_query_top_k(model, tokenizer, device, search_content, embeddings):
 
 
 def image_query_top_k(model, preprocess, device, search_content, embeddings):
+    if isinstance(search_content, str):
+        search_content = search_content.split(",")[1]
     image = preprocess(
-        Image.open(BytesIO(base64.b64decode(search_content.split(",")[1]))).convert(
-            "RGB"
-        )
+        Image.open(BytesIO(base64.b64decode(search_content))).convert("RGB")
     )  # type: ignore
     image_input = torch.stack([image]).to(device)  # type: ignore
 
@@ -131,8 +132,10 @@ def image_query_top_k(model, preprocess, device, search_content, embeddings):
     return embeddings
 
 
-def spec_query_top_k(search_content, embeddings):
-    spec_embedding = vectorize_specification(search_content, "all_cfg_rules.txt")
+def spec_query_top_k(search_content, embeddings, is_onehot=False):
+    spec_embedding = vectorize_specification(
+        search_content, "all_cfg_rules.txt", is_onehot
+    )
 
     # compute similarities and get top K
     embeddings["similarity"] = embeddings.iloc[:, 1:].apply(
@@ -177,9 +180,10 @@ def get_all_modalities(file_names):
 def load_embeddings():
     text_embeddings = pd.read_csv("./embeddings/text_embeddings.tsv", sep="\t")
     image_embeddings = pd.read_csv("./embeddings/image_embeddings.tsv", sep="\t")
-    spec_embeddings = pd.read_csv("./embeddings/spec_frequency.tsv", sep="\t")
+    spec_freq_embeddings = pd.read_csv("./embeddings/spec_frequency.tsv", sep="\t")
 
     # Additional versions
+    spec_embeddings = pd.read_csv("./embeddings/spec_embeddings.tsv", sep="\t")
     text_0_2_4_embeddings = pd.read_csv(
         "./embeddings/text_0_2_4_embeddings.tsv", sep="\t"
     )
@@ -191,10 +195,11 @@ def load_embeddings():
     return (
         text_embeddings,
         image_embeddings,
-        spec_embeddings,
+        spec_freq_embeddings,
         text_0_2_4_embeddings,
         text_0_2_4_llm_fs_single_embeddings,
         spec_onehot_embeddings,
+        spec_embeddings,
     )
 
 
