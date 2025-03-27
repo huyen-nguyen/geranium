@@ -10,11 +10,11 @@ function App() {
 
   const [topK, setTopK] = useState([]);
 
-  const onSearch = async (type, text, image, spec) => {
+  const onSearch = async (type, Text, Image, Spec) => {
     const results = await axios.post('http://127.0.0.1:5000/api/get_inference', {
       k: 10,
       type,
-      content: type === 'Text' ? text : image
+      content: { Text, Image, Spec }[type]
     });
     console.warn('New query results', results);
     setTopK(results.data.data);

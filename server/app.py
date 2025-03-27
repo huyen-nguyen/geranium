@@ -8,6 +8,7 @@ from scipy.spatial.distance import cosine
 import os
 import base64
 from PIL import Image
+from rules_extraction import vectorize_specification
 
 
 # get the model and tokenizer
@@ -36,7 +37,7 @@ def get_inference():
     search_content = rq.get("content")
 
     # Load all embeddings
-    (text_embeddings, image_embeddings) = load_embeddings()
+    (text_embeddings, image_embeddings, spec_embeddings) = load_embeddings()
 
     # Inference
     if search_type == "Text":
@@ -88,6 +89,22 @@ def get_inference():
         # get all data modalities
         top_k = get_all_modalities(top_k_file_names)
         return jsonify({"data": top_k})
+    elif search_type == "Spec":
+        spec_embedding = vectorize_specification(search_content, "all_cfg_rules.txt")
+
+        # compute similarities and get top K
+        spec_embeddings["similarity"] = spec_embeddings.iloc[:, 1:].apply(
+            lambda row: 1 - cosine(row, spec_embedding), axis=1
+        )
+        top_k_file_names = (
+            spec_embeddings.sort_values(by="similarity", ascending=False)
+            .head(k)
+            .file_name.tolist()
+        )
+
+        # get all data modalities
+        top_k = get_all_modalities(top_k_file_names)
+        return jsonify({"data": top_k})
     else:
         return jsonify({})
 
@@ -120,7 +137,8 @@ def get_all_modalities(file_names):
 def load_embeddings():
     text_embeddings = pd.read_csv("embeddings/text_embeddings.tsv", sep="\t")
     image_embeddings = pd.read_csv("embeddings/image_embeddings.tsv", sep="\t")
-    return (text_embeddings, image_embeddings)
+    spec_embeddings = pd.read_csv("embeddings/spec_frequency.tsv", sep="\t")
+    return (text_embeddings, image_embeddings, spec_embeddings)
 
 
 if __name__ == "__main__":
