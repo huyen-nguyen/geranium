@@ -175,18 +175,18 @@ def get_all_modalities(file_names):
 
 
 def load_embeddings():
-    text_embeddings = pd.read_csv("embeddings/text_embeddings.tsv", sep="\t")
-    image_embeddings = pd.read_csv("embeddings/image_embeddings.tsv", sep="\t")
-    spec_embeddings = pd.read_csv("embeddings/spec_frequency.tsv", sep="\t")
+    text_embeddings = pd.read_csv("./embeddings/text_embeddings.tsv", sep="\t")
+    image_embeddings = pd.read_csv("./embeddings/image_embeddings.tsv", sep="\t")
+    spec_embeddings = pd.read_csv("./embeddings/spec_frequency.tsv", sep="\t")
 
     # Additional versions
     text_0_2_4_embeddings = pd.read_csv(
-        "embeddings/text_0_2_4_embeddings.tsv", sep="\t"
+        "./embeddings/text_0_2_4_embeddings.tsv", sep="\t"
     )
     text_0_2_4_llm_fs_single_embeddings = pd.read_csv(
-        "embeddings/text_0_2_4_llm_fs_single_embeddings.tsv", sep="\t"
+        "./embeddings/text_0_2_4_llm_fs_single_embeddings.tsv", sep="\t"
     )
-    spec_onehot_embeddings = pd.read_csv("embeddings/spec_onehot.tsv", sep="\t")
+    spec_onehot_embeddings = pd.read_csv("./embeddings/spec_onehot.tsv", sep="\t")
 
     return (
         text_embeddings,
