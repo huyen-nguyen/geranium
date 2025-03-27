@@ -1,0 +1,108 @@
+{
+  "spacing": 0,
+  "layout": "linear",
+  "centerRadius": 0.5,
+  "style": {
+    "enableSmoothPath": true
+  },
+  "views": [
+    {
+      "xDomain": {
+        "chromosome": "chr1",
+        "interval": [
+          77925299,
+          77925320
+        ]
+      },
+      "tracks": [
+        {
+          "template": "sequence",
+          "data": {
+            "url": "https://server.gosling-lang.org/api/v1/tileset_info/?d=sequence-multivec",
+            "type": "multivec",
+            "row": "base",
+            "column": "position",
+            "value": "count",
+            "categories": [
+              "A",
+              "T",
+              "G",
+              "C"
+            ],
+            "start": "start",
+            "end": "end"
+          },
+          "encoding": {
+            "barLength": {
+              "field": "count",
+              "type": "quantitative"
+            },
+            "baseBackground": {
+              "field": "base",
+              "type": "nominal"
+            },
+            "baseLabelColor": {
+              "field": "base",
+              "type": "nominal"
+            },
+            "position": {
+              "field": "position",
+              "type": "genomic"
+            },
+            "startPosition": {
+              "field": "start",
+              "type": "genomic"
+            },
+            "endPosition": {
+              "field": "end",
+              "type": "genomic"
+            }
+          },
+          "width": 800,
+          "height": 100
+        }
+      ]
+    },
+    {
+      "xDomain": {
+        "chromosome": "chr1"
+      },
+      "tracks": [
+        {
+          "template": "ideogram",
+          "data": {
+            "url": "https://raw.githubusercontent.com/sehilyi/gemini-datasets/master/data/UCSC.HG38.Human.CytoBandIdeogram.csv",
+            "type": "csv",
+            "chromosomeField": "Chromosome",
+            "genomicFields": [
+              "chromStart",
+              "chromEnd"
+            ]
+          },
+          "encoding": {
+            "startPosition": {
+              "field": "chromStart"
+            },
+            "endPosition": {
+              "field": "chromEnd"
+            },
+            "stainBackgroundColor": {
+              "field": "Stain"
+            },
+            "stainLabelColor": {
+              "field": "Stain"
+            },
+            "name": {
+              "field": "Name"
+            },
+            "stainStroke": {
+              "value": "black"
+            }
+          },
+          "width": 800,
+          "height": 60
+        }
+      ]
+    }
+  ]
+}

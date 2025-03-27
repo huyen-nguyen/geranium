@@ -1,0 +1,1 @@
+Chart with rectangles, vertical lines and text. The genome is shown in intervals on the x-axis.   The color of the rectangles is navy blue. The color of the lines is white. The color of the text is black. The x-axis has a brush, linking to one of the other charts. 

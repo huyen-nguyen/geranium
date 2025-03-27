@@ -1,0 +1,57 @@
+{
+  "static": false,
+  "layout": "linear",
+  "centerRadius": 0.05,
+  "xDomain": {
+    "chromosome": "chr1",
+    "interval": [
+      136750,
+      139450
+    ]
+  },
+  "spacing": 0.01,
+  "tracks": [
+    {
+      "alignment": "overlay",
+      "data": {
+        "type": "bam",
+        "url": "https://s3.amazonaws.com/gosling-lang.org/data/example_higlass.bam",
+        "indexUrl": "https://s3.amazonaws.com/gosling-lang.org/data/example_higlass.bam.bai",
+        "loadMates": true
+      },
+      "mark": "bar",
+      "tracks": [
+        {
+          "dataTransform": [
+            {
+              "type": "coverage",
+              "startField": "start",
+              "endField": "end"
+            }
+          ],
+          "x": {
+            "field": "start",
+            "type": "genomic"
+          },
+          "xe": {
+            "field": "end",
+            "type": "genomic"
+          },
+          "y": {
+            "field": "coverage",
+            "type": "quantitative",
+            "axis": "right"
+          },
+          "color": {
+            "value": "#C6C6C6"
+          }
+        }
+      ],
+      "style": {
+        "outlineWidth": 0.5
+      },
+      "width": 1250,
+      "height": 80
+    }
+  ]
+}
