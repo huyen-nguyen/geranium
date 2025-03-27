@@ -1,0 +1,7 @@
+A circular layout visualization titled "Circos" displays genomic data. Three main tracks are included: 
+
+1. A **bar chart** showing genomic positions on the x-axis and expression values on the y-axis, colored in pale yellow.
+2. An **ideogram** using rectangles to represent different chromosomal bands, with color indicating categories like gene density.
+3. A **connection track** with lines depicting links between genomic locations. These lines are various colors to signify different chromosomes connections, such as orange, green, and blue, and have varying opacity levels.
+
+The assembly is HG38, and the links use genomic positions as fields, providing a comprehensive view of inter-chromosomal relationships.

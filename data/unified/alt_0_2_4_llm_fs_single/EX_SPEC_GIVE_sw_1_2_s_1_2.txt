@@ -1,0 +1,14 @@
+The visualization features a linear layout with two sections, each containing multiple genomic tracks and visualizations based on the human genome assembly hg38.
+
+1. **Top Section:**
+   - **Gene Annotation Track:** Displays genes on chromosome 17 between positions 200,000 and 800,000, marked by navy blue rectangles and lines, representing gene and exon regions.
+   - **Expression Bar Charts:** Three bar charts showing expression levels (peaks) along genomic positions in shades of purple.
+   - **Ideogram:** A genomic ideogram highlights the chromosomal bands with white rectangles and black outlines, featuring right and left triangles to indicate centromere regions. Overlayed with segmental duplication data in colored rectangles.
+
+2. **Bottom Section:**
+   - **Ideogram:** Similar genomic ideogram for chromosome 1, featuring centromere annotations.
+   - **Segmental Duplications:** Colored rectangles show segmental duplications in the genomic context.
+   - **Expression Bar Charts:** Three further bar charts displaying expression levels along chromosome 1 in shades of purple.
+   - **Gene Annotation Track:** Displays genes on chromosome 1 between 109,000,000 and 112,000,000, marked similarly by navy blue rectangles and lines for gene and exon regions.
+
+These views are arranged vertically, with consistent styling for color, size, and stroke width across tracks, enabling a detailed comparative analysis of genomic data along specified intervals.

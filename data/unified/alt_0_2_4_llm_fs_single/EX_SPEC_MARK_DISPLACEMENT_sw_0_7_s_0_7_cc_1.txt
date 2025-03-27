@@ -1,0 +1,5 @@
+A multi-chart visualization in a linear layout demonstrates genomic data across three chromosomes: chr3, chr2, and chr17. The first chart focuses on chr3, visualizing transcripts with arrows and labels 'hg38 | Transcript (Max. 15 Rows)' to manage overlaps using a displacement method. Arrows indicate gene strands with directional markers and are color-coded by strand type, either blue or orange.
+
+The second chart examines chr2, titled 'Likely Benign', featuring points representing genomic positions, each labeled with letters and marked by color to depict categories. Green points are connected with thin gray lines to indicate likenesses. Blue rightward and red leftward arrows denote strands, organized into rows.
+
+The final chart shows chr17 with a scatterplot of points, showcasing significance levels through various colors, with an interactive layout to address overlapping elements. Opacity and styling enhance visibility and clarity, effectively communicating the complex genetic data through structured visual arrangements.

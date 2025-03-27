@@ -1,0 +1,5 @@
+The visualization consists of two linear genomic range annotation tracks titled "HiGlass" and "Cyverse-QUBES," both showing data from chromosome 3 between positions 52,168,000 and 52,890,000. Each track displays genomic features, including genes and exons, with text labels for gene names.
+
+In the "HiGlass" track, features on the positive strand are colored blue, while features on the negative strand are colored red. Triangle markers represent gene direction, and text annotations provide gene names. Exons are depicted as rectangles, and connecting lines indicate gene extent.
+
+The "Cyverse-QUBES" track uses gray triangle markers for gene direction, with purple rectangles for exons. Gene names are annotated in black text, and lines denote gene extent. Both tracks are layered vertically based on genomic strand, providing a comparative visual depiction of the same genomic interval, highlighting differences in style and color coding between the two datasets.

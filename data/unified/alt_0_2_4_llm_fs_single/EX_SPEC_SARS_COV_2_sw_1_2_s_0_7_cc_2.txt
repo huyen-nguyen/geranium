@@ -1,0 +1,11 @@
+The visualization presents a comprehensive linear layout of the SARS-CoV-2 genome, featuring data from the WashU Virus Genome Browser, NCBI, and GISAID. The genome assembly NC_045512.2, consisting of 29,903 bases, is depicted across various tracks.
+
+1. **NC_045512.2 Genes Track**: This track highlights gene locations using purple rectangles. An interactive brush link allows zooming into specific regions. Gene symbols are annotated in purple text.
+
+2. **S Protein Annotation Track**: Displayed in a stratified view, this track shows structural components of the spike (S) protein. Categories like receptor-binding domain (RBD) and heptad repeats (HR1/HR2) are color-coded and labeled in black.
+
+3. **NC_045512.2 Sequence Track**: It uses bars to display base pairs (A, T, G, C) in navy blue, with orange highlights indicating higher base counts. The bar height reflects quantitative expression, with text labels for individual bases in white.
+
+4. **TRS-L-Dependent Recombination Events Track**: This connection track outlines recombination events with sky blue lines, linking genomic regions. The opacity of connections is low to ensure visual clarity.
+
+Overall, the visualization provides an interactive and detailed view of SARS-CoV-2 genomic features, focusing on both structural and sequence data. The titular track encourages exploration of recombination events, critical for understanding viral evolution

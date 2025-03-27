@@ -1,0 +1,5 @@
+A visualization in a linear layout presents two scatter plots vertically aligned, showcasing genomic data from chromosome 1 between positions 1 and 3,000,500. The dataset is a multivec file distinguished by four categories: 'sample 1,' 'sample 2,' 'sample 3,' and 'sample 4.' 
+
+The top plot stratifies data by row, with each sample category represented by a different color—blue, orange, green, and red. Each point's position and size are determined by its 'peak' value, encoding quantitative differences within genomic intervals.
+
+The bottom plot illustrates a similar scatter plot without row stratification, placing emphasis on individual point distribution across the y-axis. Both plots utilize point opacity for better visualization of overlapping data and incorporate interactive tooltips that display detailed metadata for each genomic position.

@@ -1,0 +1,18 @@
+The visualization titled "Visual Linking" presents a multivec file using a vertically arranged layout with interactive linking. It consists of three views: one circular and two linear bar charts. 
+
+1. **Circular Bar Chart**: 
+   - Displays data for chromosome 1 using rows for categories named "sample 1" to "sample 4".
+   - Each category is distinguished by a unique color: blue, orange, green, and red.
+   - A brush tool is present on the x-axis, linking to the linear views to provide interactive updates.
+
+2. **Two Linear Bar Charts**:
+   - Each chart represents data across chromosome 1.
+   - The x-axis is segmented into genomic intervals, while the y-axis displays the expression values with bars.
+   - Data is stratified by rows and visualized using the same color scheme for categories as in the circular chart.
+   - The top linear chart features an interactive brush linking to the detailed view below.
+
+3. **Detailed Linear View**:
+   - Provides a focused view for the interval between 160,000,000 to 200,000,000 on chromosome 1.
+   - Allows for detailed observation of data variations across the mentioned genomic range.
+
+The visualization emphasizes the dynamic exploration of genomic data through interactive linking across different chart types.

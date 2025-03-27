@@ -1,0 +1,1 @@
+A linear bar chart visualizes a multivec file, displaying genomic intervals of hg38 across several chromosomes. The chart uses orange bars to represent expression values, with the genomic position on the x-axis and the peak value on the y-axis. The data is aggregated with a bin size of 5. The chart includes a title, "Basic Marks: bar," and a subtitle, "Tutorial Examples."

@@ -1,0 +1,9 @@
+The visualization "Visual Linking" exemplifies a coordinated multi-view approach, consisting of a linear area chart, a circular line chart, and a scatter plot. The charts focus on chromosome 1, using multivec data categorized by four samples. 
+
+The top view features an area chart that presents genomic data along the x-axis and quantitative expression along the y-axis. It includes a brush area for interactive linking to a detailed view. Each sample category is distinctly colored.
+
+Adjacent to it, a circular line chart displays similar genomic data. This chart uses lines to represent the expression levels and is arranged by sample categories, with colors matched to the linear chart. It also includes a brush for interactive linking.
+
+The bottom scatter plot serves as the detailed view, reflecting the selected region from the other two charts. This plot visualizes genomic position on the x-axis and expression on the y-axis, with points colored by sample category.
+
+Overall, this setup allows dynamic exploration of genomic intervals and expression patterns across samples, with interactivity provided by the linkable brush components.

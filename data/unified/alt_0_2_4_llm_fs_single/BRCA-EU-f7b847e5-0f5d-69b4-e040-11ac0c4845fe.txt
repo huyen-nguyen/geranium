@@ -1,0 +1,18 @@
+**Description**: 
+
+The visualization consists of a circular and a linear view, arranged one above the other, showcasing genomic data for the hg19 assembly. 
+
+The circular view includes five tracks: 
+- An ideogram depicting the entire genome with a blue interactive brush linking to the linear view, which highlights chromosome 1. 
+- A text annotation track titled "Putative Driver" showing genomic positions labeled with gene information.
+- A range annotation track titled "Gain," highlighting genomic regions with sky blue rectangles.
+- Another range annotation track for "Loss of Heterozygosity (LOH)" using dark orange rectangles.
+- A connection track illustrating genomic links with lines colored according to the data field "svclass," which includes categories such as "Gain," "LOH," "Translocation," "Duplication," "Deletion," "Inversion (TtT)," and "Inversion (HtH)."
+
+The linear view provides nine tracks, mirroring the circular view's tracks and adding:
+- A gene annotation track visualized with triangles and rectangles colored in gray.
+- A scatter plot labeled "Point Mutation," which displays VCF file data with points colored by mutation subtype.
+- The first of two additional annotation tracks shows "Insertion" and "Deletion" rows using yellow and green rectangles.
+- The second annotation track titled "Copy Number Variants" visualizes CSV file data with light grey rectangles. 
+
+These elements offer a comprehensive view of the genomic structure and variations across the annotated regions

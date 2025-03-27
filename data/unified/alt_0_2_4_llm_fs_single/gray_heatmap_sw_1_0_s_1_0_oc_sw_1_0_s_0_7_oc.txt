@@ -1,0 +1,1 @@
+A linear heat map visualizing a genomic matrix from the hg38 assembly. The x- and y-axes represent genomic intervals, corresponding to genomic positions. Color intensity encodes expression levels, with a range in shades of gray. The view is static, with dimensions of 310x310 pixels.

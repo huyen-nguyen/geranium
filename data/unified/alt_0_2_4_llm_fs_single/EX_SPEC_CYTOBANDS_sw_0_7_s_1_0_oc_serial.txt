@@ -1,0 +1,7 @@
+The visualization consists of a series of linear views representing five chromosomes (chr1 to chr5) in a serial arrangement. Each chromosome view includes two key tracks. 
+
+The first track is an area chart displaying genomic data sourced from a multivec file. This data is divided into four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4', each represented in distinct colors. The x-axis denotes genomic positions, while the y-axis displays quantitative peak values.
+
+The second track is an ideogram overlay, providing cytogenetic banding information from a CSV file. It features text labels for chromosomal bands, colored rectangles indicating varying densities, and maroon arrows representing centromeric regions. The ideogram's color scheme includes black text, purple rectangles, and maroon triangles to highlight specific genomic structures.
+
+Overall, this visualization offers an integrated genomic overview, linking quantitative expression data with chromosomal banding patterns for multiple chromosomes.

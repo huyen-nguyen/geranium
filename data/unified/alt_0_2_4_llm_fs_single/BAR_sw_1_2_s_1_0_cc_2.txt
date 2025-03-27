@@ -1,0 +1,1 @@
+The linear bar chart displays a multivec file, encoding the entire genome of hg38. The genomic intervals are represented on the x-axis, while the peak values are shown on the y-axis. The bars are colored purple. The chart is titled "Basic Marks: bar" with the subtitle "Tutorial Examples."

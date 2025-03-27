@@ -1,0 +1,7 @@
+The visualization presents a reimplementation of GenoCAT examples using a linear layout arranged vertically. There are two main views, each comprising multiple tracks, showcasing genomic data related to chromosomes 17 and 1.
+
+The first view includes five tracks visualizing genes and their exons on chromosome 17, using rectangular marks to represent genomic ranges with purple bars indicating different types of genomic data. The ideogram below the bar charts illustrates chromosome banding patterns with rectangles and triangles, including categories like "acen" shown in white.
+
+The second view focuses on chromosome 1, mirroring the layout of the first view. It showcases gene annotations, exonic regions, and peak values using similar visual encodings. Navy blue is used for gene representations, and the ideogram with white rectangles again highlights banding patterns. Purple bars indicate quantitative peak data, with distinct tracks for different datasets.
+
+The title "GIVE" and subtitle "Reimplementation of GenoCAT examples" accompany the visualization, emphasizing the data's genomic context.

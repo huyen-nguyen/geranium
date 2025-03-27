@@ -1,0 +1,5 @@
+A linear visualization with two vertically arranged tracks displays multivec genomic data. The x-axis represents chromosome 1 from position 1 to 3,000,500, while the y-axis displays quantitative peak values. 
+
+The first track is an area chart showing combined expression for 'sample 1' through 'sample 4' with distinct colors. The tooltip reveals genomic start and end positions and peak values.
+
+The second track overlays area and line charts, stratified by rows for each sample category, with similar color encoding as the first track. The line size represents peak values, with genomic positions and peak values shown in the tooltip. The layout is interactive and static, enhancing data exploration.

@@ -1,0 +1,13 @@
+A multi-track linear visualization features custom mouse events. The visualization comprises five different tracks:
+
+1. **Individual Marks**: A bar chart displays genomic data along the x-axis, with the y-axis showing expression levels. Bars are color-coded to represent different categories, with interactive features for mouse hovering and selection.
+
+2. **Group Marks By Sample**: Another bar chart groups data by sample, with colors indicating categories. It incorporates interactive grouping, highlighting, and brushing based on samples.
+
+3. **Group Marks By Genomic Position**: A similar bar chart groups data by genomic position. Interactive features allow mouse over, selection, and grouping by position.
+
+4. **Group Marks By Gene**: Displays genomic range annotations with text, highlighting genes on the x-axis. Tracks are stratified by categories, shown in colors on rectangles and triangles, with interaction based on gene names.
+
+5. **Group Marks By Chromosome**: An ideogram shows chromosome details with text, rectangles, and triangles representing various categories. Interactive features allow mouse hover, selection, and grouping based on chromosomes.
+
+The overall design is tailored for intuitive exploration of genome data, with a focus on user interaction and customization through mouse events.

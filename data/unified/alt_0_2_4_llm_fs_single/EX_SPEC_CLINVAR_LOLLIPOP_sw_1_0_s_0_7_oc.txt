@@ -1,0 +1,7 @@
+The visualization consists of nine genomic charts, each displaying different tracks and annotations over the 13th chromosome. The genomic range annotation tracks feature text, arrows, and lines to denote gene positions and how they are oriented on each strand. Gene names like 'FRY', 'PDS5B', and 'BRCA2' are labeled with text elements.
+
+Three HiGlass tracks show the gene annotations with right and left triangles, representing gene orientation and exons marked with rectangles. The gene strands are color-coded: blue for the forward strand and red for the reverse strand.
+
+Alongside gene tracks, the charts display ClinVar significance with bars and points, stratified into categories such as 'Pathogenic', 'Pathogenic/Likely_pathogenic', 'Likely_pathogenic', 'Uncertain_significance', and 'Likely_benign'. Points denote significance category counts, while bars provide intensity for each significance level, illustrated using colors such as magenta, gray, and green.
+
+Overall, the visualization provides a detailed view of gene structures and significance annotations across different scales within the specified chromosome intervals.

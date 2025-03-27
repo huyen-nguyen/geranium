@@ -1,0 +1,7 @@
+The visualization is a Circos circular plot that integrates genomic data from the entire genome of hg38. This plot includes three tracks: 
+
+1. **Circular Bar Chart**: Displays genomic positions on the x-axis and expression values on the y-axis, with bars colored sky blue. 
+2. **Circular Ideogram**: Shows genomic intervals with color-coded rectangles representing different stain categories.
+3. **Circular Link Track**: Illustrates connections between two genomic regions, color-coded by a nominal field. Non-chromosome 1 links are light gray, while chromosome 1 links use a specific color range.
+
+The design is static, uses a spacing of 1, and aligns tracks in a stack manner around a center radius of 0.3.

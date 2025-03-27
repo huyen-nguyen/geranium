@@ -1,0 +1,5 @@
+Two stacked tracks are displayed in a linear vertical arrangement, visualizing multivec data for chromosome 1 between positions 1 and 3,000,500. The top track is a scatter plot showing point annotations to represent genomic positions on the x-axis and quantitative peak values on the y-axis. The data is stratified into rows by categories 'sample 1' to 'sample 4,' each category represented by a distinct color with a legend provided. The points vary in size according to the peak values, and the opacity is set to 0.5.
+
+The bottom track overlays a line chart and scatter plot, displaying genomic positions on the x-axis and peak values on the y-axis. Each category is shown in a distinct color in both lines and points, with size variation representing peak values. Both tracks offer tooltips for genomic start and end positions, peak values, and sample information.
+
+The visualization uses data from a multivec file with categories 'sample 1,' 'sample 2,' 'sample 3,' and 'sample 4' and maintains a uniform width of 600 with varying heights. The arrangement is augmented by an 0.8 center radius specification.

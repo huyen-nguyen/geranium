@@ -1,0 +1,20 @@
+The visualization shows four genomic range annotation tracks in a linear arrangement, focusing on chromosome 3 between 52,168,000 and 52,890,000. 
+
+1. **Track 1 (Corces et al.):** 
+   - Displays gene annotations with rows stratified by strand direction.
+   - Blue text and rectangles represent positive strands, while red indicates negative strands.
+   - Exons are marked by rectangles, and gene boundaries are shown with lines.
+
+2. **Track 2 (GmGDV):**
+   - Similar to Track 1 but uses arrows to indicate the direction of transcription.
+   - Positive strands are in blue, while negative strands are in red.
+
+3. **Track 3 (IGV):**
+   - Uses navy-colored text and rectangles for gene annotations, with white lines indicating strand direction.
+   - Features a simplified representation of gene structure.
+
+4. **Track 4:**
+   - Shows genomic range with text annotation.
+   - Exons are highlighted in pink, introns in silver, and overall gene structures in gray.
+
+Each track is stratified horizontally for clear comparison of genetic features across different datasets.

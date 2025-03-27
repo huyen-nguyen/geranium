@@ -1,0 +1,5 @@
+A circular scatter plot visualization in a dual-track arrangement shows genomic data, using a multivec file for chromosome 1, spanning from 1 to 3,000,500. Each track is aligned horizontally, with a shared center radius of 0.5. 
+
+The left track displays a circular scatter plot where genomic positions are mapped on the x-axis and expression values on the y-axis. The plot uses stratified rows representing four categories: 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. Points are colored blue, orange, green, and red, respectively, showing variations in peak values.
+
+The right track mirrors the left, with added grid lines on the y-axis, illustrating variability in peak values. Both tracks feature points sized according to the 'peak' field and colored by 'sample', with an opacity of 0.5. Tooltip data provides genomic start and end positions, peak value information, and sample categorization.

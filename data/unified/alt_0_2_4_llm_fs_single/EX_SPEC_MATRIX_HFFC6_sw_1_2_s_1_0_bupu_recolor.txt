@@ -1,0 +1,23 @@
+The visualization consists of two matrix plots positioned horizontally, comparing Micro-C and Hi-C data for HFFc6 cells. 
+
+**Title and Subtitle:**
+- Title: "Matrix Visualization"
+- Subtitle: "Comparison of Micro-C and Hi-C for HFFc6 Cells"
+
+**Data and Encoding:**
+- The domain focuses on chromosome 7 between positions 77,700,000 and 81,000,000.
+- Tracks show different genomic data, including epigenetic marks and transcription factors as bar charts:
+  - **HFFc6_H3K4me3**: Represents histone modification data in purple bars.
+  - **HFFc6_ATAC**: Shows open chromatin regions in dark green bars.
+  - **HFFc6_CTCF**: Displays CTCF binding sites in orange bars with gene annotations at strand-specific positions shown as pink and green triangles.
+  - **Epilogos (hg38)**: Visualizes category-specific data across various genomic features in multiple colors.
+
+- **Matrix Tracks:**
+  - **HFFc6_Micro-C and HFFc6_Hi-C** matrices represent chromosomal contact frequency, showing data in a "bupu" color scale intensity.
+
+**Layout:**
+- The bars and matrices are represented in both vertical and horizontal orientations.
+- The matrix dimensions are wide for detailed chromosomal segment inspection.
+
+**Styling:**
+- The background color is set to light gray (#

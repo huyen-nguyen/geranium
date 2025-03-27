@@ -1,0 +1,13 @@
+This visualization displays multiple genomic range annotation tracks arranged in a horizontal linear layout, focusing on chromosome 3 between positions 52,168,000 and 52,890,000. 
+
+The top set of charts includes three vertical views:
+1. **HiGlass**: Depicts strands with informative annotations using text, right triangles, left triangles, rectangles, and lines. Positive strands are visualized in blue and negative strands in pink.
+2. **Corces et al.**: Displays similar genomic regions with annotations; colors for strands are darker, focusing on distinct annotations for each strand.
+3. **IGV**: Shows a cleaner visualization with annotations primarily in navy and white, highlighting exon and gene positions.
+
+The bottom set also features three vertical views:
+1. **Cyverse-QUBES**: Uses various shapes and colors to indicate gene positions and exons, with black text and gray geometric features.
+2. **GmGDV**: Displays gene annotations with text and arrows, aligned to represent strand directionality.
+3. **An unlabelled track**: Visualizes genomic features, distinguishing genes, exons, and introns with different colors, including gray and red.
+
+Each chart uses overlay alignment and stratification by strand type, allowing for detailed examination of genomic features across different annotation platforms.

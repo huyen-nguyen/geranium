@@ -1,0 +1,7 @@
+The visualization consists of two linear charts arranged horizontally, each depicting genomic information for chromosome 3 between positions 52,168,000 and 52,890,000. 
+
+The left chart, titled 'IGV', is a genomic range annotation track in a vertical layout. It displays gene annotations with text and rectangular marks, indicating the genomic regions and their names. The text and rectangles are colored sky blue. The chart incorporates arrows indicating the direction of gene sequences, with arrows on the '+' strand pointing right and on the '-' strand pointing left.
+
+The right chart is another genomic range annotation track, showcasing gene, exon, and intron annotations with different colors for each feature. Gene annotations are marked in pink, while exons and introns are marked in sky blue. Both charts are stratified by strands, with '+' and '-' as separate rows.
+
+This visualization effectively represents genomic elements in a clear, color-coded manner, facilitating the study of gene structure and spatial organization within the specified genomic interval.

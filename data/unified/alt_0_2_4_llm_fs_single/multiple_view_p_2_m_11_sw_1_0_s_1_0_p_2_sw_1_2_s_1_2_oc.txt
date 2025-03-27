@@ -1,0 +1,16 @@
+The visualization consists of a vertical arrangement featuring two views: a top composite view with a circular line chart and an area chart, and a bottom detail view with a scatter plot. The title is "Visual Linking" with a subtitle indicating the interactivity. 
+
+1. **Top View**: 
+   - It contains a circular layout showing genomic data from chromosome 1, using a multivec file.
+   - Four samples are displayed in rows, and each sample is represented by a different color.
+   - A line chart encodes the expression values on the y-axis, with categories indicated by color.
+   - The chart includes an interactive brush, allowing users to link to the other views and update display ranges.
+
+2. **Area Chart**:
+   - Displayed along with the circular chart, it similarly divides data into categories by color, showing expression levels as areas.
+
+3. **Bottom View**:
+   - A detailed linear scatter plot shows a specified interval (160,000,000 to 200,000,000) of chromosome 1.
+   - Points represent quantitative peaks per sample, and color further indicates the specific sample.
+
+Interactivity is emphasized, with brushes enabling dynamic updates to the detail view below. The multivec file includes samples categorized by "sample 1" through "sample 4." This visualization efficiently links a broad genomic overview with detailed exploration using colors and interactive elements.

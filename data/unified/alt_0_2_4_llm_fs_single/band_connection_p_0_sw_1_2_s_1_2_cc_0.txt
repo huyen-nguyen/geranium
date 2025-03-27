@@ -1,0 +1,13 @@
+The visualization is a linear layout representing genomic data from chromosome 1 between positions 103,900,000 and 104,100,000. This includes six tracks utilizing CSV data to display chromosomal segments and their connections. The tracks are composed of color-coded rectangles and links, highlighting specific genomic intervals.
+
+1. **Rectangular Track (Purple):** The first track uses rectangles to denote genomic regions in purple with a slight transparency, displaying regions between positions `s1` and `e1`. 
+
+2. **Link Track (Purple):** Following is a track of between-links that connect different genomic positions `s1` to `e2` using purple translucent lines, visually connecting the rectangular positions. 
+
+3. **Rectangular Track (Pink):** The third track shows genomic segments in pink with rectangles, representing regions between `s2` and `e2`.
+
+4. **Link Track (Pink):** A link track using pink between-links visually connects positions `s2` to `e1`. The connections retain pink coloring with translucent properties.
+
+5. **Rectangular Track (Green):** Finally, a different set of genomic regions is represented using green rectangles, illustrating a third type of genomic data visualization.
+
+Each track is distinctively styled with a stroke of `#4C6629` and has a stroke width of 0.8, providing a clear boundary for each genomic feature. The entire visualization maintains high detail through tooltip annotations showing precise start and end genomic positions.

@@ -1,0 +1,5 @@
+The visualization consists of a linear layout displaying genomic data from chromosome 1. It includes an ideogram representing cytoband patterns using rectangles and annotated with left and right triangles indicating specific features. The ideogram's colors range from white to black, denoting different staining intensities.
+
+Below, a genomic position annotation track features triangular markers showing gene positions on the x-axis, differentiated by strand direction with colors blue and beige. Two subsequent tracks display genomic intervals using colored rectangles: dark orange for a specific condition (e.g., tumor with minor CNV) and green for others (e.g., increased total CNV).
+
+The final track visualizes genomic rearrangements with connections linking two genomic positions. The connection colors denote structural variant classes, such as tandem-duplication, translocation, deletion, and inversion, enhancing the understanding of rearrangement types within chromosome 1.

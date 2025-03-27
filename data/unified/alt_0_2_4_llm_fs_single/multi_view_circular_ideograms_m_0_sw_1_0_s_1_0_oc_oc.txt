@@ -1,0 +1,6 @@
+A circular visualization displays genomic data focusing on chromosome 1. It contains two tracks: 
+
+1. A scatter plot with points representing genomic positions and their respective 'peak' values. The points are categorized into 'sample 1', 'sample 2', 'sample 3', and 'sample 4', each marked with distinct colors.
+2. An ideogram of chromosome 1, represented with rectangular marks. The rectangles are colored according to different chromosome stains, such as white, light gray, and black, indicating regions like 'gneg', 'gpos25', and 'gpos100'.
+
+Both tracks utilize a circular layout with a specified center radius, enhancing the visualization of chromosome 1.

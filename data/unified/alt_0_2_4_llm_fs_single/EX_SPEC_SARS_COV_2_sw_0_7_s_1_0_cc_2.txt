@@ -1,0 +1,11 @@
+The visualization titled "SARS-CoV-2" from the WashU Virus Genome Browser, NCBI, and GISAID is structured in a linear layout. It spans the full genome length of 29,903 base pairs. The visualization includes five distinct tracks:
+
+1. **NC_045512.2 Genes Track**: Displays genome intervals with purple rectangles and corresponding gene symbols in green text. It features a linked interactive brush for detail exploration.
+   
+2. **S Protein Annotation Track**: Categorizes protein domains visually with a stratified row layout. Each row, representing different domains, is marked in varying colors and labeled with black text.
+
+3. **NC_045512.2 Sequence Track**: Presents a bar chart showing genomic positions, with bars colored according to nucleotide categories. White text displays bases over the bars, linked by interactive zoom.
+
+4. **TRS-L-Dependent Recombination Events Track**: Includes arcs representing recombination events in light blue connections across genomic intervals.
+
+Collectively, these elements provide a comprehensive view of the SARS-CoV-2 genomic structure and associated features.

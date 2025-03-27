@@ -1,0 +1,15 @@
+A horizontal arrangement of views displays genomic data for chromosome 7, between positions 77,700,000 and 81,000,000. The visualization includes multiple tracks comparing Micro-C and Hi-C data for HFFc6 cells. 
+
+Vertical tracks on the left show:
+1. **HFFc6_H3K4me3**: A bar chart representing histone modifications using dark green bars.
+2. **HFFc6_ATAC**: A bar chart indicating chromatin accessibility with orange bars.
+3. **HFFC6_CTCF**: An overlay of blue bars for CTCF binding sites, along with pink and green triangles representing genomic positional annotations (right and left, respectively).
+
+Two matrix tracks show:
+1. **HFFc6_Micro-C**: A heatmap visualizing three-dimensional chromatin architecture, with intensity indicating contact frequency.
+2. **Epilogos (hg38)**: Color-coded bars represent different chromatin states, including active, repressive, and quiescent regions.
+
+On the right side:
+1. The same configurations for HFFc6 datasets are repeated to validate comparisons between Micro-C and Hi-C, with **HFFc6_Hi-C** displayed similarly to the Micro-C view.
+
+Overall, the visualization efficiently integrates various genomic data types to provide insights into chromatin interactions and modifications, underlining the title and subtitle: "Matrix Visualization - Comparison of Micro-C and Hi-C for HFFc

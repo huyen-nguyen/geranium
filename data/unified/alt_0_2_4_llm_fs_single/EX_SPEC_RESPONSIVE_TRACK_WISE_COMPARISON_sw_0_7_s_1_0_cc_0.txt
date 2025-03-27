@@ -1,0 +1,11 @@
+The visualization consists of two main views arranged vertically, each focusing on different genomic regions. The first view displays genome data from chromosome 12, covering the interval 10,140,000 to 10,200,000, while the second view covers chromosome 8 from 127,734,000 to 127,744,000. 
+
+### First View (Chromosome 12):
+- **Genomic Range Annotation Track:** Displays gene annotations with text and graphical elements (triangles and lines) stratified by strand (+/-). The color theme is pink.
+- **Bar Charts for Samples 1, 2, and 3:** These charts display quantitative expression data as bars, encoded in green and sky blue shades. Each sample is visibly distinct through color variations.
+
+### Second View (Chromosome 8):
+- **Bar Charts for Samples 1, 2, and 3:** Similar to the first view but with different color encodings (green, sky blue, and purple) to represent different peaks across the samples.
+- **Genomic Range Annotation Track:** Annotations are shown with text, triangles, and lines, stratified by strand, with a color theme of green.
+
+Both views collectively offer a comprehensive visualization of gene expression and annotation, allowing for detailed comparison across samples and regions. The charts are interactive, with linking enabled for cross-referencing data points between views.

@@ -1,0 +1,5 @@
+The visualization consists of two genomic range annotation tracks and six bar charts, focusing on chromosomes 12 and 8. Each genomic range annotation track uses texts to display gene names, with the genomic intervals shown on the x-axis. The first annotation track has pink markings for genes, exons, and strands, while the second features green. 
+
+For the bar charts, data is divided into "Sample 1," "Sample 2," and "Sample 3," representing genomic intervals on the x-axis and peak values on the y-axis. On chromosome 12, "Sample 1" is green, "Sample 2" is purple, and "Sample 3" is sky blue. On chromosome 8, "Sample 1" and "Sample 2" are both pink, while "Sample 3" is purple.
+
+The chart layout is linear with specified spacings and heights, utilizing color to distinguish between different samples and elements. The visualization provides a detailed genetic and quantitative comparison across specific chromosomal regions.

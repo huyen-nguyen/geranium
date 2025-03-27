@@ -1,0 +1,11 @@
+**Description:** 
+
+This visualization is a circular layout known as a Circos plot, designed to present genomic data. It features three major tracks:
+
+1. **Circular Bar Chart**: The outermost track displays a bar chart with genomic positions along the x-axis and expression values on the y-axis, encoded by the height of purple bars.
+
+2. **Circular Ideogram**: Inside the bar chart, an ideogram represents chromosomes in intervals along the x-axis. The color of each segment reflects different categories, providing a visual distinction across genomic regions.
+
+3. **Circular Connections**: At the core of the Circos plot, a web of colored connections illustrates relationships between genomic positions. The links, encoded with different hues, depict associations or interactions between segments of the genome.
+
+This Circos plot, constructed with genomics data from vectors and CSV files, offers a comprehensive view of complex genomic data, with interactive browsing capabilities determined by a static assembly using the hg38 reference genome.

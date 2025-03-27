@@ -1,0 +1,3 @@
+The visualization consists of a circular and two linear views, displaying genomic data. The circular view features a bar chart and a chart with connections for selected chromosomes. The genome is divided into intervals, represented by colored bars for four samples, with each sample depicted in a distinct color. Interactive brushes in blue and red link to the linear views. Connections between genomic points are colored green, indicating different categories.
+
+The linear views display detailed bar charts for chromosomes 5 and 16. These charts are aligned horizontally, showing expression values for the same four samples as the circular view. The bars are colored identically to the circular view, maintaining visual consistency and category representation.

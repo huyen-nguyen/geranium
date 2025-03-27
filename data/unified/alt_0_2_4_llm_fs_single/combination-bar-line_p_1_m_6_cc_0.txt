@@ -1,0 +1,16 @@
+The visualization is a linear, vertically arranged genomic plot focused on chromosome 1, spanning positions 1 to 3,000,500. It consists of two main views:
+
+1. **Top View (Overlay Track)**:
+   - This view combines a line chart and a scatter plot.
+   - The x-axis represents the genomic position, while the y-axis indicates quantitative expression values.
+   - Four samples ('sample 1' to 'sample 4') are visualized, each represented by distinct colors: blue, orange, green, and red.
+   - The scatter plot points vary in size based on expression peak values, providing an additional dimension of data.
+   - Rows categorize the samples, and tooltips provide interactive information about positions, values, and samples.
+
+2. **Bottom View**:
+   - This view displays an area chart.
+   - Like the top view, the x-axis shows genomic positions, while the y-axis indicates expression values.
+   - The area under the curve is colored to represent different samples, aiding in the clear differentiation of each sample's expression profile.
+   - Sample data is stratified into categories using distinct colors, enhancing traceability across genomic intervals.
+
+Overall, the visualization is designed for genomic data exploration, enabling detailed analysis of expression patterns across chromosome 1 with interactive elements.

@@ -1,0 +1,15 @@
+The visualization presents parallel views of five chromosomes (chr1 to chr5) in a linear layout. Each chromosome section includes an area chart and an overlay with text, rectangles, and triangles.
+
+1. **Area Chart:**
+   - **Data Source:** Multivec file.
+   - **X-Axis:** Genomic positions.
+   - **Y-Axis:** Quantitative peaks.
+   - **Color Encoding:** Nominal categories ('sample 1' to 'sample 4') with colors like blue, orange, green, and red.
+   - **Purpose:** To visualize peak intensity variations along genomic positions.
+
+2. **Overlay Track:**
+   - **Data Source:** Cytogenetic band CSV file.
+   - **Elements:** Black text, rectangles with varying shades (white to black based on density), and maroon triangles.
+   - **Purpose:** Shows cytogenetic banding patterns, highlighting regions with specific stains using distinct visual elements.
+
+The chart provides a comprehensive genomic overview, with each chromosome visualized independently yet aligned. It's static, offering an organized view without interaction.

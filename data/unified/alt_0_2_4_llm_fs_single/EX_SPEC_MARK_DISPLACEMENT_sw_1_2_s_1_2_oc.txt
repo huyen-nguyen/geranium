@@ -1,0 +1,9 @@
+A visualization titled "Mark Displacement" demonstrates various genomic data using displacement strategies to mitigate visual overlap. It comprises several views:
+
+1. **Transcript View:** Displays a linear representation of the transcriptome of chromosome 3 between positions 142,500,000 and 143,000,000. Methods like "pile" displace annotations up to a maximum of 15 rows. Genes on the positive and negative strands are illustrated with blue and orange triangles, respectively, alongside text labels. Exons are depicted with filled rectangles.
+
+2. **Likely Benign View:** Focuses on variations on chromosome 2, spanning positions 126,800,000 to 127,700,000. It includes an overlay of genomic features annotated as "Likely benign." Variants are shown as green points with text annotations of genetic sequences. Gray connections link variants, visualized with light gray rectangles representing range annotations.
+
+3. **Pathogenicity View:** Covers chromosome 17 around positions 43,080,000 to 43,120,000. Variants are represented by colored points and categorized by their significance, from pathogenic to benign, using a color scale from pink to green.
+
+The visualization effectively uses various data transformations and styling elements like color and displacement to present complex genomic data clearly and informatively.

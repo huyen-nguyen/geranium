@@ -1,0 +1,5 @@
+The visualization features two sets of genomic data tracks arranged vertically. The first set exhibits genomic range annotations and expression profiles for chromosome 12, spanning intervals [10,140,000 to 10,210,000]. It includes a gene annotation track rendered in pink, displaying gene locations with directional arrows and gene names. Below, three bar charts for Samples 1, 2, and 3 display expression levels as green bars.
+
+The second set focuses on chromosome 8, between [127,734,000 and 127,744,000], showcasing expression profiles and gene annotations. The bar charts for Samples 1 and 2 are presented in sky blue, while Sample 3 is in pink. Each bar chart visualizes the expression values along the y-axis, representing quantitative peaks.
+
+The gene track is illustrated in blue with arrows indicating gene directionality. Both sets incorporate linking mechanisms through IDs, allowing interactive navigation between aligned genomic regions. The design employs a responsive layout with consistent spacing, background styling, and visibility settings to ensure clarity across varying display conditions.

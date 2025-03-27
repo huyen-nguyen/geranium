@@ -1,0 +1,5 @@
+The visualization titled "Matrix Visualization" with the subtitle "Comparison of Micro-C and Hi-C for HFFc6 Cells" displays a genomic interval from chromosome 7 (77,700,000 to 81,000,000). It has a horizontal arrangement with multiple tracks and two matrix heatmaps. It uses data from different sources including bigWig and multivec files, visualized with bar and matrix marks.
+
+The left panel displays vertical tracks, featuring data from HFFc6_H3K4me3 (dark green bars) and HFFc6_ATAC (orange bars), as well as an overlay of HFFC6_CTCF data (navy blue bars) with genomic position annotations represented by pink and green triangles indicating strand orientation. The right panel features horizontal tracks overlaid on matrix heatmaps. It includes bar charts for HFFc6_Micro-C and HFFc6_Hi-C, represented with color intensities based on interaction values.
+
+Additionally, the Epilogos (hg38) data is visualized in color-coded bar charts at the bottom. The visualization uses the hg38 assembly and features a seamless transition between single-cell data and broader genomic context.

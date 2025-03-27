@@ -1,0 +1,17 @@
+The linear visualization consists of two vertical panels, each displaying multiple genomic range annotation tracks. The data represents a region on chromosome 3, between positions 52,168,000 and 52,890,000.
+
+**First Panel:**
+1. **GmGDV Track:** Displays gene annotations, with blue and red arrows indicating gene direction based on strand orientation. Gene names are labeled, and small triangles represent the orientation.
+   
+2. **Corces et al. Track:** Similar to GmGDV, it uses a smaller font size for gene names. Directional boxes and lines are used, colored based on strand orientation in dark blue and red.
+
+3. **Blank Track:** Displays genomic ranges without annotations, using dark gray bars.
+
+**Second Panel:**
+1. **Cyverse-QUBES Track:** Displays gene data with black text for gene names and various visual elements like triangles and rectangles in light gray to mark gene locations and exons.
+   
+2. **HiGlass Track:** Uses faded colors (blue and red) for chromosome visualization, with directional triangles and assorted rectangles highlighting gene structure.
+   
+3. **IGV Track:** Presents gene information using bold navy text and rectangles. Arrows in white lines show gene direction.
+
+Each track is stratified by rows, with categories visually distinguished through color coding, representing strand orientation and genetic features.

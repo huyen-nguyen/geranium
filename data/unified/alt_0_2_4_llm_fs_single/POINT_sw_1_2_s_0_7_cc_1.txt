@@ -1,0 +1,1 @@
+A bubble chart in a linear layout visualizes a multivec file, showing the entire genome of hg38. The chart encodes position data with 'peak' field in both the y-axis and the size of the points. All points are colored sky blue. The visualization is titled 'Basic Marks: point' with a subtitle 'Tutorial Examples.'.

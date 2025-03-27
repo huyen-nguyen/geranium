@@ -1,0 +1,7 @@
+The visualization displays a linear layout of genomic data for chromosome 1, spanning 1 to 3,000,500. It consists of two main tracks:
+
+1. **Top Track**: An area chart depicts the expression values across genomic positions, with categories such as "sample 1" to "sample 4" displayed in different colors (blue, orange, green, and red). The x-axis represents genomic positions, while the y-axis shows quantitative expression levels.
+
+2. **Bottom Track**: An overlay chart combines both line and area visualizations, stratified by rows for each sample category. The genomic positions are on the x-axis, expression values are on the y-axis, and line thickness varies with peak values. The chart is color-coded according to samples, matching the top track’s color scheme.
+
+The data originates from a multivec file and the visualization includes interactive tooltips providing details such as the start and end positions, quantitative value of expression peaks, and the sample category.

@@ -1,0 +1,14 @@
+In this visualization, a circular view and a linear view are organized vertically, with interactivity facilitated by a brush linking both views. The circular component represents the entire hg19 genome, featuring multiple tracks including ideograms and structural variations. The linear view zooms into chromosome 1, detailing variations and annotations.
+
+The circular track includes:
+1. A detailed ideogram layer, showcasing color-coded chromosomal bands.
+2. A track displaying putative driver mutations as black text annotations.
+3. Two concentric tracks highlighting regions of genomic gain in sky blue and loss of heterozygosity (LOH) in dark orange.
+4. An intricate connection layer visualizing structural variants with lines colored according to types: Translocation, Duplication, Deletion, and Inversions (TtT, HtH).
+
+In the linear view:
+1. The ideogram is repeated for chromosome 1, transitioning to more detailed annotations.
+2. Gene structures are depicted with labeled exons and directional indicators for gene strands.
+3. A scatter plot labeled 'Point Mutation' displays mutations visualized from a VCF file, where the distance to the previous mutation is plotted along the y-axis, and mutations are color-coded by type ('C>A', 'C>G', etc.).
+4. Copy number variations are shown as gray rectangles, with tracks for 'Gain' and 'Loss of Heterozygosity (LOH)' using the same color codes as in the circular view.
+5. Additional tracks describe

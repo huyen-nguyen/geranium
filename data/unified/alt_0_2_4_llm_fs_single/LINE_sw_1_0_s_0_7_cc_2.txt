@@ -1,0 +1,1 @@
+A line chart in a linear layout visualizes a multivec file, showing the entire genome of hg38. The position of lines is encoded using the data field named 'peak.' The chart is titled 'Basic Marks: line' with the subtitle 'Tutorial Examples.' The lines are colored in purple, and the genome is depicted on the x-axis. Expression values are represented on the y-axis.

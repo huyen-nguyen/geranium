@@ -1,0 +1,9 @@
+The visualization titled "Gremlin (O'Brien et al. 2010)" consists of a multilayered linear layout detailing chromosome 5. The top track presents an ideogram with bands differentiated by colors indicating various stains, with descriptive text labels in white and black. Intervals along the chromosome are highlighted in different shades of grey and pink for acen regions. 
+
+Below, an overlay track shows connections within chromosome 5, 4, and 6 using links, color-coded by chromosome origin: sky blue for 5, tan for 4, and green for 6. These connections are displayed with elliptical curves, offering insight into segmental duplications or rearrangements.
+
+The middle view, titled "Region of Interest," focuses on a specified segment from 68 to 71 million base pairs on chromosome 5. It exhibits colored arcs indicating genetic interactions, with rows stratified based on chromosome categories. The color and stroke differentiate interactions, while a light gray background provides contrast.
+
+The bottom view, called "Rearrangement View," zooms in further on a small interval from 69,276,000 to 69,280,000 base pairs, illustrated with a thicker blue arc representing rearrangement within this narrow range. This detailed view aids in exploring fine-scale genomic relationships.
+
+Overall, the design blends rectilinear and curved visual elements to convey genomic structure and interactions effectively using an engaging elliptical style.

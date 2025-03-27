@@ -1,0 +1,7 @@
+A vertically arranged genomic visualization features two linear tracks displaying data from chromosome 1 between positions 1 and 3,000,500. 
+
+The top track is an area chart stratified into four rows corresponding to 'sample 1' through 'sample 4.' Each row displays peaks representing quantitative data for genomic positions, colored uniquely per sample, providing a gradient visualization of expression levels.
+
+The bottom track is a bar chart, similarly stratified by samples. It represents peak ranges using genomic intervals on the x-axis, with min-max peak values indicated by bars. The chart's categorical color scheme aligns with the sample rows, enhancing visual differentiation.
+
+Both tracks include tooltips for detailed genomic positions and peak values, offering interactive data exploration within the designated region of hg38.

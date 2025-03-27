@@ -1,0 +1,13 @@
+The visualization depicts a linear track layout focusing on chromosome 1. It consists of five primary tracks, including an ideogram, a genomic position annotation track, two CNV tracks, and a structural variation track.
+
+1. **Ideogram Track**: Displays chromosome 1 with varying shades indicating chromosomal banding patterns. Right and left triangles represent specific chromosomal features (p and q arms).
+
+2. **Genomic Position Annotation Track**: Contains triangles colored by strand ('+' in blue, '-' in light brown), stratified by row. These denote gene positions and directions along the chromosome.
+
+3. **CNV (Copy Number Variation) Tracks**: 
+   - The first CNV track (dark orange rectangles) displays regions with no minor copy number (CN) in the tumor.
+   - The second CNV track (green rectangles) shows areas with total CN of tumor cells exceeding a threshold, indicating CN gains.
+
+4. **Structural Variation Track**: Represents genomic rearrangements using arcs connecting different genomic locations within chromosome 1. The arcs' color and stroke vary by structural variant class, including tandem duplications (green), translocations (blue), deletions (red), and inversions (orange).
+
+The visualization cohesively integrates genomic data from multiple sources to illustrate complex genomic alterations in cancer, anchoring its display to chromosome 1's spatial layout.

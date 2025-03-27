@@ -1,0 +1,15 @@
+**Description:**
+
+This visualization presents a Hi-C matrix in a linear layout, showcasing genomic interactions across specified intervals from 800,000,000 to 1,800,000,000 on the x-axis. The matrix is visualized using color intensity to represent interaction frequencies, with a gradient from light to hot colors. 
+
+The visualization includes overlaid tracks to enhance interpretation:
+
+1. **Matrix Bar Track**: Displays genomic interactions on both axes as a matrix, with intervals indicated by color intensity.
+
+2. **Vertical and Horizontal Lines**: Annotations with purple vertical lines and pink horizontal lines indicate specific genomic positions.
+
+3. **Bar Overlay**: Encodes quantitative values as a bar matrix with distinct category strokes for chromosomes 6, 7, and 8.
+
+4. **Point Track**: Highlights genomic regions with points whose size is determined by a quantitative variable. Points are in purple, with a range of sizes, and utilize white strokes to enhance visibility.
+
+The visualization is interactive, allowing for detailed exploration of genomic data through matrix annotations and varied visual encodings, all within the context of the hg38 assembly.

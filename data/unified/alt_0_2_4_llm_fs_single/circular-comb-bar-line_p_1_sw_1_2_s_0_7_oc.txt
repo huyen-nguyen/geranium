@@ -1,0 +1,5 @@
+The visualization consists of two circular charts aligned horizontally. 
+
+The left chart combines a circular line chart and a scatter plot, both depicting genomic data from chromosome 1 spanning 1 to 3,000,500 positions. Each line and point represents 'peak' values, color-coded by four samples: 'sample 1' (yellow), 'sample 2' (green), 'sample 3' (blue), and 'sample 4' (pink). Points vary in size based on their 'peak' values, enhancing the depiction of expression levels.
+
+The right chart is a circular bar chart displaying the same genomic range. Bars represent 'peak' values, stratified by the same samples and colored accordingly. The chart emphasizes differences in expression levels through bar heights, providing a comparative visual between the samples. Both charts feature legends for accurate identification of sample categories and interactive tooltips for detailed data inspection.

@@ -1,0 +1,11 @@
+A genomic visualization titled "SARS-CoV-2" provides a detailed linear view of the virus's genome, based on data from the WashU Virus Genome Browser, NCBI, and GISAID. The visualization consists of multiple layers:
+
+1. **NC_045512.2 Genes Layer**: Displays genes as pink rectangles with a white outline and triangle patterns indicating direction. Gene symbols are annotated in sky blue text.
+
+2. **S Protein Annotation Layer**: Stratified by rows representing different protein domains such as "receptor-binding domain (RBD)," "receptor-binding motif (RBM)," and others. Each domain is color-coded, and protein names are shown in black text.
+
+3. **NC_045512.2 Sequence Layer**: A bar chart where different bases (A, T, G, C) are color-coded. This layer is annotated with white text for the bases.
+
+4. **TRS-L-Dependent Recombination Events Layer**: Visualizes recombination events with arcs connecting genomic locations. The arcs are semi-transparent pink with blue outlines.
+
+The x-axis displays genomic intervals, and interactive elements like a purple brush allow linking between detailed layers. The visualization is arranged vertically with clear distinctions between data types and annotations.

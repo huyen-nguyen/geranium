@@ -1,0 +1,9 @@
+The visualization titled "Track Template In Gosling.js" showcases the application of track templates in a linear layout, designed to simplify the creation of complex visualizations. It features three distinct views:
+
+1. **Genomic Annotation View**: Displays a range of genomic data from chromosome 3, between positions 52,168,000 and 52,890,000. The track uses a linear template to highlight gene annotations with gray triangles and rectangles, representing strands and exons respectively. Gene labels like "PBRM1" are included for clarity, with intricate encoding settings allowing for detailed exploration of gene positioning and characteristics.
+
+2. **Sequence View**: Focused on a specific interval of chromosome 1, from 77,925,299 to 77,925,320, this view presents sequence data through a combination of bar charts and text annotations. The bars represent quantitative data on nucleotide counts, categorized into bases A, T, G, and C, each colored uniquely to facilitate easy differentiation. Text annotations overlay the bars, imparting additional contextual information about the sequence composition.
+
+3. **Ideogram View**: Provides a broad overview of chromosome 1, utilizing an ideogram with accompanying text and visual markers like left and right triangles. The staining patterns are coded in shades of black, white, and gray, offering insight into chromosomal banding structures and facilitating the recognition of notable chromosomal features, such as centromeres identified by distinct triangle markers.
+
+Overall, Gosling.js

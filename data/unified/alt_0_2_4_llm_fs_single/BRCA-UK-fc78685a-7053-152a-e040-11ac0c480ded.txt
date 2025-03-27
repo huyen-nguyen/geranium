@@ -1,0 +1,13 @@
+The visualization illustrates genomic data using a combination of circular and linear layouts. 
+
+The circular view, positioned at the top, provides an overview of the entire genome, featuring an ideogram with distinct color categories on the outermost ring. Inside, it includes tracks for "Putative Driver" annotations, "Gain" regions in sky blue, and "Loss of Heterozygosity (LOH)" in orange. A track of connections showcases structural variations, differentiated by color for types such as 'Translocation,' 'Duplication,' 'Deletion,' and 'Inversion.'
+
+The linear view beneath it aligns with chromosome 1, highlighted by a blue brush in the ideogram above. It consists of multiple tracks: 
+- An ideogram with banding and triangle markers for centromeres.
+- A text track displaying "Putative Driver" genes.
+- A scatterplot titled "Point Mutation," with points representing genomic positions and colored by mutation subtype.
+- Tracks for 'Insertion' and 'Deletion' events represented by rectangles.
+- A "Copy Number Variants" (CNV) track showing quantitative data as gray bars.
+- Additional tracks for "Gain" and "LOH," using sky blue and orange, similar to the circular representation.
+
+These together create a comprehensive genomic visualization, linking large-scale chromosomal insights with detailed sequence annotations, allowing for interactive exploration and contextual understanding of genomic variations.

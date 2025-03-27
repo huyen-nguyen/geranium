@@ -1,0 +1,18 @@
+The visualization consists of a circular view and a linear view arranged vertically. The circular view represents the entire genome of hg19 with a brush tool linking to the linear view, which focuses on chromosome 1. 
+
+The circular view includes five tracks: 
+
+1. A circular ideogram displays chromosome bands and a brush tool for zooming into specific genomic regions.
+2. A text annotation track, titled "Putative Driver," highlights gene names with prefix symbols indicating biallelic status.
+3. A range annotation track titled "Gain" represents genomic gain regions with sky-blue rectangles.
+4. Another range annotation track titled "Loss of Heterozygosity (LOH)" displays genomic loss regions with orange rectangles.
+5. A connection track shows structural variations between genomic positions, with lines colored and stroked based on structural variation type, including "Translocation," "Duplication," "Deletion," and inversions.
+
+The linear view replicates the circular view's structure for chromosome 1, and includes additional tracks:
+
+1. A gene annotation track visualizes gene structures with exons and labels.
+2. A scatter plot titled "Point Mutation" shows mutation distances, with point colors reflecting different mutation subtypes like "C>A" or "T>G."
+3. A range annotation track for Insertions and Deletions with yellow and green bars, respectively.
+4. A copy number variation track visualizes quantitative variations as gray bars.
+
+Each track is enriched with tooltips providing detailed information about genomic

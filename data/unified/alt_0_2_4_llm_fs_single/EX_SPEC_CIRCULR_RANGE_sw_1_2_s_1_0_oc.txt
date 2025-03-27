@@ -1,0 +1,1 @@
+A circular bar chart in a stacked alignment visualizes a vector file, representing the entire genome of hg38. The bars encode the 'peak' values along genomic positions on the x-axis. The bars are colored in a pale yellow hue. The chart's width and height are both 840 units, with a center radius of 0.3. The static layout ensures the visualization does not change dynamically.

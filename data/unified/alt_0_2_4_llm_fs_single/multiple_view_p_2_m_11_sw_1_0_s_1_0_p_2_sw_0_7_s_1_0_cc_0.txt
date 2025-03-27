@@ -1,0 +1,7 @@
+This visualization illustrates a multivec dataset using a linked view with a circular and linear arrangement. The circular chart on the left displays genome intervals on the x-axis and expression peaks on the y-axis, represented by lines. Categories are distinguished by color and rows, with an interactive brush on the x-axis linking to detail views.
+
+On the right, the top linear chart shows genomic intervals on the x-axis with expression areas shaded per category. An interactive brush links both circular and linear charts, allowing detailed exploration.
+
+The bottom linear scatterplot focuses on chromosome 1 from position 160,000,000 to 200,000,000. It displays genomic positions on the x-axis and peak values on the y-axis, with categories indicated by point colors and rows.
+
+The visualization emphasizes interactive exploration of genomic data by linking high-level views to detailed insights, titled "Visual Linking," with the subtitle instructing users to update the detail view using brushes.

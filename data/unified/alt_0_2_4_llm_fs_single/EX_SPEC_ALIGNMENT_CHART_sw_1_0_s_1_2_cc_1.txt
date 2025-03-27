@@ -1,0 +1,8 @@
+The visualization displays genomic data in a linear layout with four tracks.
+
+1. **Bar Chart (Gap)**: Shows gaps in genomic sequences, colored purple with height representing quantitative gap data.
+2. **Bar Chart (Conservation)**: Illustrates conservation levels in genome intervals, colored on a gradient from yellow to orange, indicating the degree of conservation.
+3. **Rectangles and Text Chart**: Represents genomic bases with rows for different nominal categories. Colored rectangles denote different bases, while accompanying text provides annotations.
+4. **Overlay Chart**: Combines multiple track types, including rectangles and bars. Features an interactive brush tool for selecting genomic regions, with overlaid conservation and gap data.
+
+This chart provides an interactive view of genomic alignment, facilitating comparative analysis and data visualization.

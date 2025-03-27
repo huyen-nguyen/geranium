@@ -1,0 +1,5 @@
+The visualization is titled "Rule Mark" and contains a linear layout that overlays multiple tracks. The primary track is a bar chart, where genomic positions are plotted on the x-axis and quantitative expression levels are on the y-axis. The categories are aggregated into light gray bars.
+
+Overlaid on this are two rule tracks featuring horizontal and vertical lines. The first rule track shows red lines, whose opacity and stroke width vary based on a quantitative dataset. The second rule track features blue lines with a constant stroke width. These annotations intersect the bars, adding contextual information relative to genomic position and value.
+
+The chart visually encodes data related to genome assembly hg38, with annotations marking specific quantitative values. It uses a dashed line style throughout to emphasize annotation consistency. The visualization aims to provide a comprehensive view of genomic intervals with additional emphasis through annotative lines.

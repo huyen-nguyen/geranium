@@ -1,0 +1,13 @@
+The visualization is an overlaid Hi-C matrix displaying genomic interactions, titled "Hi-C Matrix" with the subtitle "Visualize Hi-C Data Using Matrix and Annotations." It spans the interval from 800,000,000 to 1,800,000,000 base pairs. The layout is linear and horizontal in a coordinate system displaying genomic data.
+
+Various tracks are overlaid within this visualization:
+
+1. **Matrix Track**: The primary track visualizes Hi-C data using a bar matrix where both the x- and y-axes represent genomic intervals. Color intensity encodes interaction frequencies, employing a 'hot' color scheme with an accompanying legend. The matrix background is light gray, incorporating a dashed style for visual structuring.
+
+2. **Vertical and Horizontal Rule Tracks**: Two overlaid tracks incorporate genomic position annotations using vertical and horizontal pink lines, indicating significant loci across the genome. These lines are styled with a stroke width of 2.
+
+3. **Point and Bar Charts**: 
+   - A bar chart further details specific chromosome interactions (chr6, chr7, chr8), indicated by varying stroke colors, stroke width of 4, and color gradients expressing quantitative differences in interaction strengths.
+   - A point chart maps additional genomic loci on both axes, encoding discrete interaction sites. Point size varies to reflect quantitative attributes, colored pink and outlined in white for clarity.
+
+Overall, the visualization employs multiple tracks to richly detail genomic interactions within specified intervals, facilitating the analysis of chromosomal

@@ -1,0 +1,8 @@
+The visualization titled "BED files" uses a linear layout to demonstrate various BED file specifications over chromosome 1, spanning 1 to 2,000,000 base pairs. It includes four vertically arranged tracks:
+
+1. "BED12: All 12 standard fields" displays genomic intervals with black outlines using BED12 files.
+2. "BED6: A file with the first 6 BED fields," also shows genomic intervals with black outlines from BED6 files.
+3. "BED6+6: A file with the first 6 BED fields, and 6 custom fields" visualizes intervals with black outlines using BED6+6 files, utilizing custom fields for chromosomal data.
+4. "BED12+1: A file with all 12 standard fields, and a single extra custom field," uses BED12+1 files with an additional custom field, presenting intervals with black outlines.
+
+All tracks feature rectangular marks, helping compare different BED file formats. The axes are labeled with genomic intervals, and the title includes a subtitle for context.

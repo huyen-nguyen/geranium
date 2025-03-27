@@ -1,0 +1,1 @@
+A linear layout chart visualizes genomic data connections using arcs, representing chromosomal segments from a CSV file. The arcs connect data points, demonstrating relationships along chromosome 1. The arcs are colored in green, enhancing visibility against the genomic intervals displayed on the x-axis. The chart is titled "Basic Marks: Link," serving as a tutorial example.

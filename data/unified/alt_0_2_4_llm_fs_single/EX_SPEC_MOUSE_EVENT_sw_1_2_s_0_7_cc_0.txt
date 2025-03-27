@@ -1,0 +1,9 @@
+The visualization titled "Custom Mouse Events" features five tracks in a linear layout that portray different genomic data encoding methods using a multivec file with mouse interaction capabilities. 
+
+1. "Individual Marks" displays genomic positions on the x-axis as multicolored bars according to categorical data consisting of samples. 
+2. "Group Marks By Sample" groups these bars by sample color, showing peaks on the y-axis without axis labeling.
+3. "Group Marks By Genomic Position" organizes bars by position, maintaining similar color encoding and tooltip information based on sample and genomic position.
+4. "Group Marks By Gene" uses a gene annotation data source focusing on chromosome 3, showing exonic and genic intervals as gray annotations with labels, in addition to interactive sorting based on gene names.
+5. "Group Marks By Chromosome" presents chromosomal bands from chromosomes 1 to 5, using different marks including rectangles and triangles, colored based on density and band stain significance, facilitating group selection by chromosome.
+
+Interactive elements within the charts include mouse hovering and range selection, with respective customizable color changes to red and blue upon interaction, enhancing user exploration and engagement with the genomic data.

@@ -1,0 +1,10 @@
+The visualization consists of five parallel tracks, each displaying genomic data for chromosomes 1 through 5. Each track contains two main components:
+
+1. **Area Chart (Multivec Data)**: The area chart represents genomic positions on the x-axis and quantitative peaks on the y-axis, with colors indicating different categories such as 'sample 1' through 'sample 4'. The tracks display continuous area plots with overlapping colored layers, providing a comparative view of expression levels across samples. The colors used include shades of blue, orange, green, and red.
+
+2. **Ideogram with Text and Shapes**: Below each area chart is an ideogram that provides cytogenetic banding information. The x-axis shows genomic intervals, with varying densities indicated by grayscale rectangles. Additional annotations include:
+   - Colored text labeling bands, visible based on space availability.
+   - Purple rectangles marking specific density regions.
+   - Maroon triangles pointing left and right, indicating regions like centromeres ('acen').
+
+This visualization effectively combines multivec area plots with cytogenetic banding, allowing for a comprehensive view of genomic data and structural annotations across five chromosomes.

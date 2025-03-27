@@ -1,0 +1,9 @@
+The visualization consists of horizontally arranged linear genomic tracks focusing on chromosome 3, between positions 52,168,000 and 52,890,000. Two sets of vertically stacked views represent different genomic annotations and styles. 
+
+The first set includes tracks titled "Corces et al." and "IGV," displaying gene structures with annotations. The "Corces et al." track stratifies annotations by the genetic strand with categories colored in blue and orange, representing gene names and structures. It includes arrows and exons visualized as rectangles. 
+
+The "IGV" track, colored in pink, uses text and rectangles to denote genes and employs white arrowhead patterns to indicate strands. 
+
+The second vertical view features the "GmGDV" track, similar to the "Corces et al." view but includes triangular glyphs indicating strand direction and crosses for exon representation. It is styled with alternating blue and orange for positive and negative strands. 
+
+The final track in this view visualizes genomic segments using shades of blue and gray. Each track within the views aligns genomic positions along the x-axis, highlighting different aspects of gene annotations and exon-intron structures.

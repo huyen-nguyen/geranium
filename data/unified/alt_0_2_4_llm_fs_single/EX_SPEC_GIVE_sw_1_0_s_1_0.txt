@@ -1,0 +1,12 @@
+The visualization is composed of two linear views, each comprising multiple tracks that illustrate genomic data over different chromosome regions. It bears the title "GIVE" with a subtitle "Reimplementation of GenoCAT examples." The first view displays data along chromosome 17, ranging from positions 20,000,000 to 50,000,000, while the second view focuses on chromosome 1, from positions 109,000,000 to 112,000,000.
+
+**First Linear View (Chromosome 17):**
+- **Genes Track:** Displays genomic positions of genes on two strands using navy blue rectangles and lines.
+- **Three Bar Tracks:** Each bar track shows quantitative peaks (expression values) plotted along the genome, with bars colored in purple.
+- **CytoBand Ideogram Track:** Incorporates rectangles and triangles colored white with black outlines, highlighting chromosome bands (ideograms).
+- **Rectangular Track:** Overlaid to show genomic regions from a CSV file, using different nominal colors for various chromosome connections, with opacity set at 0.5.
+
+**Second Linear View (Chromosome 1):**
+- **Two Ideogram Tracks:** Similar to the cytoBand ideogram track in the first view, these tracks use rectangles, left and right triangles to visualize chromosome bands in white.
+- **Rectangular Track:** Illustrates additional genomic connections between chromosomes, using rectangles colored based on nominal chromosome data.
+- **Three Bar Tracks:** Mirror the first view's bar tracks, showing

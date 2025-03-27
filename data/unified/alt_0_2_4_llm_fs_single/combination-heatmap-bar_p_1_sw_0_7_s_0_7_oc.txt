@@ -1,0 +1,5 @@
+The visualization consists of two vertically arranged tracks. The top track is a bar chart displaying genomic data from chromosome 1, spanning positions 1 to 3,000,500. Each row represents a distinct sample ('sample 1', 'sample 2', 'sample 3', and 'sample 4'), with expression levels shown as bar heights. The colors differentiate the samples and are visible in the accompanying legend.
+
+The bottom track is a heatmap that represents the same genomic interval. It also stratifies data by the same samples, using color intensity to encode expression values. The gradient legend indicates the range of expression values from low to high.
+
+This visualization effectively combines detailed bar representations with an overview heatmap to facilitate comparative analysis across multiple samples in the specified genomic region.

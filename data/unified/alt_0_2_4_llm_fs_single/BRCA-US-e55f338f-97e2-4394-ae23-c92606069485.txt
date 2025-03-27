@@ -1,0 +1,15 @@
+The visualization comprises a circular view and a linear view, linked through an interactive brush in the circular section. The circular view displays the entire hg19 genome, while the linear view specifically focuses on chromosome 1. 
+
+In the circular layout, several tracks are highlighted:
+1. An ideogram with categorical coloring.
+2. A text-based track titled "Putative Driver," displaying gene annotations. 
+3. Range annotation tracks titled "Gain" and "Loss of Heterozygosity (LOH)," illustrating genomic regions with blue and red rectangles, respectively.
+4. A connection track illustrating structural variants such as Translocation and Duplication, colored based on "svclass."
+
+The linear view includes:
+1. A gene annotation track featuring gene structures and labels.
+2. A scatter plot titled "Point Mutation," where the position represents the mutation distance, colored by "SUBTYPE."
+3. Insertion and Deletion tracks from a VCF, with distinct colors for each mutation type.
+4. A copy number variant track titled "Copy Number Variants," displaying total CN as gray bars.
+
+These views provide a comprehensive overview of genomic features such as mutations, structural variants, and copy number variations across the genome.

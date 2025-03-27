@@ -1,0 +1,1 @@
+A heat map visualizes a matrix data file using a linear layout, displaying genomic intervals from the hg38 assembly. The chart is titled "HFFc6_Micro-C" and encodes expression values with color intensity along both the x- and y-genomic axes. The color range follows a "hot" gradient, with the width and height of the visualization being approximately 504 by 420 units.

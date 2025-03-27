@@ -1,0 +1,15 @@
+**Description:**
+
+This visualization is a Hi-C matrix overlaid with annotations, providing a detailed view of genomic interactions within human chromosomes 5 to 10 using the hg38 assembly. It features a linear layout with various components:
+
+1. **Matrix Track (Overlaid Track 1):** Displays genomic intervals on both x and y axes, using a color intensity gradient from the BuPu palette to represent expression values. This track visually encodes the Hi-C data as a heat map, where darker shades indicate higher values.
+
+2. **Vertical Lines Track (Overlaid Track 2):** Illustrates annotations as vertical rules on the x-axis, highlighting specific genomic positions in purple.
+
+3. **Horizontal Lines Track (Overlaid Track 3):** Displays annotations as horizontal rules along the y-axis in sky blue, marking special regions of interest.
+
+4. **Bar Matrix Track (Overlaid Track 4):** A secondary matrix uses bar marks with nominal stroke colors to differentiate various categories, adding another layer of categorical information to the heat map.
+
+5. **Point Track (Overlaid Track 5):** Shows genomic positions on both axes as points, scaled by quantitative values (between 1 and 4), with a consistent pink color and white stroke, adding further interaction insights into the matrix.
+
+The visualization has a width and height of 630x630 pixels and includes visual effects like dashed lines for stylistic element separation. It effectively combines matrix and annotation layers to enhance data scanning across a

@@ -1,0 +1,5 @@
+A sequence alignment visualization consists of two main views. The first view, using a linear layout, highlights specific genomic intervals (350 to 396) with three key tracks. The first track, titled 'Gap,' employs a pink bar chart to display quantitative gap data along the y-axis. The second track, titled 'Conservation,' uses a hot color scheme to represent conservation values, also visualized with bars. The third track overlays rectangles and text to color-code categorical data across multiple rows, illustrating different genomic bases.
+
+The second view, also linear but on a wider scale (0 to 396), features an overlaid alignment of rectangles, bar charts, and a brush. This view includes similar tracks: a rectangular alignment of genomic data colored by base, a conservation bar chart using a hot color range, and a 'Gap' bar chart in pink. An interactive green brush enables linkages between views, with transitions governed by zoom levels.
+
+This visualization provides an in-depth look at sequence variations and conservations, utilizing a combination of bar and text encodings for clear categorical differentiation.

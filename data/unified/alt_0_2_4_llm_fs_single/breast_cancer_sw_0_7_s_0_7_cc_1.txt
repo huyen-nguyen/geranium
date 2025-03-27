@@ -1,0 +1,13 @@
+The visualization is a linear genomic layout focused on chromosome 1, showcasing an ideogram, gene annotations, copy number variants, and structural variants.
+
+1. **Ideogram and Cytoband**: The top track displays a colored ideogram for chromosome 1, with rectangles and triangles marking centromeric and arm regions in distinct colors, representing various staining intensities and banding patterns.
+   
+2. **Gene Annotations**: The second track depicts gene annotations with orientation-indicating triangles. Blue triangles represent the positive strand, and orange triangles represent the negative strand, showing the direction and position of genes.
+
+3. **Copy Number Variants (CNVs)**:
+   - **Minor CN Tumor Track**: The first variant track shows CNVs with minor copy number zero, marked by sky blue rectangles.
+   - **Total CN Tumor Track**: The second variant track highlights regions with total copy numbers ranging between 4.5 and 900, shown in pink rectangles.
+
+4. **Structural Variants**: The bottom track presents structural variants as connections, with lines linking genomic positions based on different variant classes like tandem duplications and translocations. Line colors and strokes differentiate these classes, such as blue for tandem duplications and green for inversions.
+
+Overall, this visualization efficiently integrates multiple genomic data layers, providing insights into chromosomal structures, gene locations, and variations.

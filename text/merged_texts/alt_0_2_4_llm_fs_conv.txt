@@ -1,0 +1,60 @@
+File Name: AREA_sw_1_2_s_1_2_oc.txt
+Content:
+A linear area chart visualizes a multivec file, showing the entire genome of hg38. The x-axis represents the genomic position, while the y-axis represents expression values. The area is filled, with a size value of 2, highlighting expression variations. The title is 'Basic Marks: area' and the subtitle is 'Tutorial Examples'.
+
+========================================
+
+File Name: combination-point-area_p_0_sw_1_2_s_0_7_cc_0.txt
+Content:
+A linear layout visualizes multivec data along chromosome 1 between positions 1 and 3,000,500. The first track is a scatter plot where points represent peaks with varying sizes and colors based on the sample category. Points are semi-transparent and show genomic data on the x-axis and quantitative values on the y-axis, with colors indicating four different samples: blue, orange, green, and red. The second track is an area chart stratified by sample categories, displaying peaks as colored areas. The layout includes interactive elements and positions for genomic intervals, enhancing data comprehension.
+
+========================================
+
+File Name: EX_SPEC_CIRCOS_sw_0_7_s_0_7_cc_2.txt
+Content:
+A circular layout visualization titled "Circos" displays genomic data. The chart includes three main components: a circular bar chart, an ideogram, and a connection chart. The bar chart shows genomic positions on the x-axis and peaks on the y-axis, with bars colored in purple. The ideogram displays genomic intervals in various colored rectangles, indicating different categories. The connection chart illustrates genomic intervals with colorful links, visualizing data from a vector file. The chart's central theme revolves around showcasing relationships and variations across different chromosomes.
+
+========================================
+
+File Name: EX_SPEC_CIRCULR_RANGE_sw_0_7_s_0_7_cc_0.txt
+Content:
+A circular bar chart in a stacked alignment visualizes a vector file, showing the entire genome of hg38. The position of the bars represents the genomic position, while the height signifies the 'peak' values. The bars are colored in pink.
+
+========================================
+
+File Name: EX_SPEC_GREMLIN_sw_1_2_s_0_7_cc_1.txt
+Content:
+A genomic visualization titled "Gremlin (O'Brien et al. 2010)" displays Chromosome 5 of the human genome (hg38) using a linear layout. The ideogram chart highlights chromosome bands using colors to represent different staining patterns. It includes textual annotations and an interactive brush for linking views. Below the ideogram, three additional charts visualize genomic rearrangements with links. The first is color-coded according to chromosome categories, showing connections across Chromosomes 4, 5, and 6 in blue and green. The "Region of Interest" chart narrows the focus to specific genomic intervals, and the "Rearrangement View" emphasizes a smaller segment of Chromosome 5, demonstrating connections in green. The visualization employs elliptical links and uses rows to categorize data points.
+
+========================================
+
+File Name: gray_heatmap_sw_1_0_s_1_0_oc_sw_0_7_s_1_0_cc_0.txt
+Content:
+The visualization is a heatmap in a linear layout, encoded with genomic positions from the hg38 assembly on both axes. The intensity of colors represents quantitative expression values, with a color scheme ranging from yellow to dark brown indicating varying intensities. The visualization is static, with chromosomes labeled on the axes, and no interactive elements. The heatmap's design provides an overview of genomic interactions within specific intervals.
+
+========================================
+
+File Name: PBCA-DE-2009e5e7-1796-445b-8677-46b3804fe0bf.txt
+Content:
+A circular and a linear view are arranged vertically. The circular view displays the entire genome with chromosome bands in an ideogram, annotated with text tracks for putative drivers. It has multiple rings depicting gains, losses, and structural variations with connections. Colors represent different categories. The linear view, linked by a blue brush, focuses on chromosome 1, with multiple tracks showing similar annotations, point mutations colored by subtype, gene annotations, and copy number variants. The layout is generated using hg19 assembly data.
+
+========================================
+
+File Name: POINT_sw_1_2_s_1_2_cc_2.txt
+Content:
+The visualization is a bubble chart in a linear layout, representing a multivec file that shows the entire genome of hg38. The points' positions and sizes are encoded using a data field named 'peak.' The points are displayed in a purple color. The chart is titled "Basic Marks: point" with a subtitle "Tutorial Examples."
+
+========================================
+
+File Name: responsive-circular_p_0_sw_1_0_s_1_0_oc.txt
+Content:
+The visualization is a circular multivariate bar chart that showcases a multivec file focusing on chromosome 12 between 5,000,000 and 15,000,000. It uses a circular layout where each bar's height represents the 'peak' value, categorized by different samples. Each sample is assigned a unique color to distinguish them. The chart adapts responsively, switching to a linear layout when the aspect ratio is above 1.5. The description references "Graphical perception of Multiple Time Series" by Javed et al. from TVCG 2010.
+
+========================================
+
+File Name: TEXT_sw_0_7_s_1_0_cc_0.txt
+Content:
+A linear chart illustrates a multivec file, representing genome data from hg38. The text on the chart indicates the categories 'A', 'T', 'G', 'C', displayed in blue, orange, green, and red, respectively. The chart has a title 'Basic Marks: Text' and a subtitle 'Tutorial Examples.' The x-axis shows genomic intervals, while the y-axis displays quantitative values under the 'count' field.
+
+========================================
+

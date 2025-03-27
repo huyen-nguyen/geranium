@@ -1,0 +1,7 @@
+The visualization is a circular chart depicting genomic data from chromosome 1 using the hg38 assembly. It features two main tracks: 
+
+1. **Top Track**: A circular line chart representing expression values shown with lines radiating from the center. The x-axis displays genomic positions, while the y-axis represents quantitative expression values. The lines are color-coded to indicate different categories for samples 1 to 4, with a palette including blue, orange, green, and red.
+
+2. **Bottom Track**: A circular ideogram outlining genomic intervals. The x-axis indicates genomic positions, and the color of rectangles within the ideogram denotes different staining categories. The ideogram uses a color scheme ranging from white to black, with shades of gray and blue, representing different stain intensities.
+
+The layout maintains a 0.6 center radius ratio and a spacing of 5, creating a clear and organized overview of genomic data with distinct category differentiation.

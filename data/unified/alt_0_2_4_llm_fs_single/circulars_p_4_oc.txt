@@ -1,0 +1,13 @@
+A circular layout visualization titled "Visual Encoding in Circular Layouts" showcases various visual encoding methods using the genome of chromosome 1, spanning positions 1 to 3,000,500. The visualization consists of multiple horizontal views, each employing different graphic marks such as rectangles, bars, points, and line connections.
+
+The first view is a circular heat map utilizing a multivec dataset. It displays expression values through color intensity, organized into rows based on samples labeled from 'sample 1' to 'sample 4'. 
+
+Subsequent views include circular bar charts showing genomic positions on the x-axis and expression values on the y-axis. The bars are colored according to sample categories.
+
+A combined line and point chart highlights peaks with lines and corresponding points, where the size represents expression values. 
+
+In another view, a scatter plot uses points to display genomic data. Here, color denotes the sample categories, and point size represents expression magnitude.
+
+The visualization concludes with an area chart illustrating data of four samples and a connection chart that links genomic positions with arcs colored to reflect different data divisions. All tracks include tooltips providing detailed data insights.
+
+This visualization effectively demonstrates circular layout capabilities in encoding genomic data through diverse graphical representations.

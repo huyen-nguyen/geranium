@@ -1,0 +1,7 @@
+A vertical arrangement of multiple linear genomic tracks. The visualization encompasses two sets of chromosomal data: one for chromosome 12 (chr12) and the other for chromosome 8 (chr8). 
+
+For chr12, an overlay track featuring gene annotations is displayed at the top, where exons are represented with pink rectangles and gene names are annotated. This is followed by three bar charts representing expression values for 'Sample 1', 'Sample 2', and 'Sample 3', all using a pink color scheme. These charts visualize peak values without axis annotations on the x and y axes.
+
+Chr8 similarly includes a set of three bar charts, also for 'Sample 1', 'Sample 2', and 'Sample 3', but in an orange color scheme. These are succeeded by another overlay track with gene annotations, employing orange triangles for directionality and text labels for gene names. 
+
+The visualization fundamentally aims to juxtapose genomic data across two distinct chromosomal regions, with notably consistent styling and alignment, to facilitate comparative analysis across samples.

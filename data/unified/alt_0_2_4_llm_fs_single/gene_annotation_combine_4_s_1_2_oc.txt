@@ -1,0 +1,9 @@
+The visualization consists of four genomic range annotation tracks in a linear layout, focused on chromosome 3 between positions 52,168,000 and 52,890,000, using the hg38 assembly. Each track is detailed below:
+
+1. **Corces et al. Track**: This track displays gene annotations with text and rectangles, indicating the genomic start and end positions. The annotations are stratified by strand, with '+' strand genes in blue and '-' strand genes in red. The track includes exons, depicted with thicker lines, and gene names are positioned above or below the gene lines based on strand orientation.
+
+2. **IGV Track**: The IGV track shows gene annotations similar to the first track but visualized differently. Gene names are labeled in navy, and the annotations are represented with filled rectangles. Strands are marked with white lines forming triangle patterns to indicate direction, providing a distinct visual separation.
+
+3. **GmGDV Track**: This track follows a similar structure as the previous tracks, with annotations color-coded by strand (blue for '+' and red for '-'). It uses triangular glyphs for strand direction at the gene ends, enriching the visual representation of gene orientation. Exons are highlighted with solid lines.
+
+4. **Final Annotation Track**: This track combines gene and intron annotations. Genes are labeled in black, with gray rectangles indicating gene regions, pink for exons, and silver for introns. The annotations are again stratified by strand,

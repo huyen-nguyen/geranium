@@ -1,0 +1,3 @@
+**Description for Multimodal Search Engine:**
+
+A horizontal layout features overlaid matrix visualizations for chromosome 10. Two matrix tracks are presented, each displaying genomic intervals on both axes with colors encoding expression values. The first matrix uses grey shades, shown on the lower-left, while the second matrix uses pink hues in the upper-right. This double-overlay allows comparison of quantitative data across matrices. The visualization utilizes interactive features such as responsive resizing and threshold-based view adjustments. The data are presented using HiGlass, linking views via a common ID, ensuring synchronized exploration of genomic data across differing visual presentations.

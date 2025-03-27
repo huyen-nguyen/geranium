@@ -1,0 +1,5 @@
+The visualization is a circular chart with two tracks, designed to represent genomic data from chromosome 1 using the HG38 assembly. The outer track is a circular bar chart, displaying multivec file data. It uses bars to indicate expression levels, color-coded across four samples: 'sample 1', 'sample 2', 'sample 3', and 'sample 4.' Each sample is assigned a unique color from a diverse palette. The x-axis represents genomic positions, with the y-axis indicating quantitative values of gene expression ('peak').
+
+The inner track features a circular ideogram. It shows the genomic intervals for each section of the chromosome, excluding acentric regions due to a filtering process. The ideogram segments are colored based on different stains found in the cytogenetic banding pattern, aiding in the identification of structural features across the genome.
+
+This comprehensive genomic visualization facilitates the exploration of complex data patterns within a compact circular layout, allowing for simultaneous observation of both individual gene expression and broader chromosomal characteristics.

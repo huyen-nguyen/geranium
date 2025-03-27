@@ -1,0 +1,11 @@
+The visualization is a linear layout demonstrating various BED file specifications for chromosome 1 between positions 1 and 2,000,000. Four tracks are presented vertically:
+
+1. **BED12: All 12 standard fields** - Uses a BED file to display genomic features with rectangles colored in green.
+   
+2. **BED6: A file with the first 6 BED fields** - Also utilizes BED data, but with only the first six fields, shown in sky blue rectangles.
+   
+3. **BED6+6: A file with the first 6 BED fields, and 6 custom fields** - Expands on the BED6 format to include six custom fields, indicated by sky blue rectangles.
+
+4. **BED12+1: A file with all 12 standard fields, and a single extra custom field** - Similar to BED12 but includes an additional custom field, displayed in sky blue rectangles.
+
+Each track employs a genomic coordinate system, with rectangles representing regions defined by start and end fields. Rectangles are uniformly sized and outlined with a black stroke. The visualization aims to illustrate the flexibility and variety of BED file specifications.

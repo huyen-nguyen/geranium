@@ -1,0 +1,9 @@
+The visualization titled "Custom Mouse Events" features five individual charts in a linear layout to demonstrate the customization of mouse hovering and range selection events on genomic data. The charts utilize multivec and BED file data to represent genomic intervals with various grouping strategies.
+
+The first three charts are bar charts visualizing genomic positions on chromosome 1, colored by sample categories in shades of blue, orange, green, and red. The charts are titled "Individual Marks," "Group Marks By Sample," and "Group Marks By Genomic Position," with interactions such as mouse-over hover effects and range selection, dynamically altering the appearance of the bars.
+
+The fourth chart, "Group Marks By Gene," illustrates genomic annotations on chromosome 3, using triangles and rectangles to indicate strand direction and gene regions, respectively. It enables grouping by gene names, with interactive highlighting to emphasize selection.
+
+The final chart, "Group Marks By Chromosome," is an ideogram displaying chromosome bands with text, rectangles, and triangles, categorized by stain density and color-coded accordingly. It features interactive elements offering mouse-over and click events to explore chromosomal data in detail.
+
+This visualization showcases a blend of genomic data and interactive elements to facilitate the exploration of complex data sets with user-friendly custom mouse events.

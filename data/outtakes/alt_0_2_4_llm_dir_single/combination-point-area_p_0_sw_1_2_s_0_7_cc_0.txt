@@ -1,0 +1,7 @@
+The visualization displays two linked charts in a linear layout, showcasing genomic data for chromosome 1, spanning positions 1 to 3,000,500. 
+
+The top chart is a scatter plot where each point's position represents a genomic location on the x-axis, and the peak expression value on the y-axis also influences the size of the points. The points are color-coded according to the sample, with categories 'sample 1' through 'sample 4', displayed in distinct colors such as blue, orange, green, and red. The scatter plot helps highlight variations in expression values across different samples.
+
+The bottom chart is an area plot, stratified by rows for each sample category, displaying the expression values over the same genomic region. The x-axis represents the genomic position, while the y-axis shows the expression level, filled as areas. Each sample is distinctly represented by a different color corresponding to the scatter plot colors.
+
+Both charts include interactive tooltips providing details such as start and end genomic positions and corresponding expression values when hovered over. The design employs an opacity setting of 0.5 for visualization clarity, and legends are provided to facilitate the identification of categories.

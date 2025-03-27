@@ -1,0 +1,1 @@
+A linear area chart visualizes a multivec file, representing the entire genome of hg38. The genomic positions are mapped on the x-axis, while quantitative peaks are displayed as a continuous green area along the y-axis. The chart is titled "Basic Marks: area" with a subtitle "Tutorial Examples."

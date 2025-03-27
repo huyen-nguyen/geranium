@@ -1,0 +1,5 @@
+The visualization consists of two aligned tracks in a linear vertical layout focused on chromosome 1 from position 1 to 3,000,500. The top track is a stratified scatter plot displaying points for four different samples across the genome, with their positions represented on the x-axis and peak values on the y-axis. The points are colored to differentiate between 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. Each sample is shown in a separate row, and the size of each point corresponds to its 'peak' value.
+
+The bottom track is an area chart representing aggregated data for the same samples over the same genomic region. The x-axis denotes genomic positions, while the y-axis shows quantitative 'peak' values, with a grid for reference. The color of the area corresponds to the respective sample categories, providing a clear visualization of expression levels.
+
+This configuration is designed for detailed genomic data analysis, with interactivity enhanced by tooltips that reveal the position, peak value, and sample identifier for each data point. The layout efficiently combines individual data points' detail with the overall trend exhibited by the area chart.

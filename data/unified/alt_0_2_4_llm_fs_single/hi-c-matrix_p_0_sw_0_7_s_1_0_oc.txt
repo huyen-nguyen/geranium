@@ -1,0 +1,7 @@
+The visualization is a complex overlay of Hi-C data represented as a matrix with genomic annotations. The matrix shows interactions between genomic positions along the x- and y-axes, spanning the interval from 800,000,000 to 1,800,000,000 on hg38. Color intensity encodes expression values, with a grey scale indicating the level of interaction. Additional layers include:
+
+1. Vertical and horizontal lines indicating specific genomic positions on chromosomes 2, 5, and 10, colored red and blue, respectively, for differentiation. 
+2. Bars for chromosomes 6 to 8, where the stroke of the bars shows categorical distinctions.
+3. A chart with steelblue points overlaid on the matrix, where point size represents different quantitative values. 
+
+The visualization is styled with a dashed background for emphasis and detailed legends guide the interpretation of color and size encodings. The title is "Hi-C Matrix" with the subtitle "Visualize Hi-C Data Using Matrix and Annotations," providing a comprehensive view of genomic interactions.

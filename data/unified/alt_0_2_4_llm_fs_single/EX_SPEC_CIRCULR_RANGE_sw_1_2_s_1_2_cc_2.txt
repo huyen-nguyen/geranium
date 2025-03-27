@@ -1,0 +1,1 @@
+A circular bar chart, displaying genomic data from a vector file in the hg38 assembly, shows chromosome positions on the x-axis and expression levels on the y-axis. The layout is static and aligned in a stacked arrangement with a center radius of 0.3. This visualization spans a width and height of 1008 units each, with data points depicted as purple bars.

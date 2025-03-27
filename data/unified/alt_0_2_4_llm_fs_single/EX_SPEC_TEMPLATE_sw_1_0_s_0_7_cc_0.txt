@@ -1,0 +1,17 @@
+The visualization is structured in a linear layout titled "Track Template In Gosling.js" with a subtitle indicating the ease of creating complex visualizations using Gosling.js track templates.
+
+This visualization consists of three tracks:
+
+1. **Genomic Range Annotation Track**: 
+   - Depicts chromosome 3, ranging between positions 52,168,000 and 52,890,000.
+   - Uses triangle markers and rectangles to indicate gene structures, stratified by strand direction, with labels in gray. 
+
+2. **Bar Chart with Text**:
+   - Displays sequence data for chromosome 1 between positions 77,925,299 and 77,925,320.
+   - Features colored bars representing different nucleotide counts (A, T, G, C) and overlaying text labels for each base. The colors are associated with nucleotide categories.
+
+3. **Ideogram with Text and Triangles**:
+   - Shows the full span of chromosome 1.
+   - Uses colored rectangles and triangular markers to denote different chromosomal bands and regions, with textual labels overlaying non-centromeric areas.
+
+Overall, this visualization provides a detailed genomic overview by incorporating various chart types and annotations to facilitate comprehensive analysis.

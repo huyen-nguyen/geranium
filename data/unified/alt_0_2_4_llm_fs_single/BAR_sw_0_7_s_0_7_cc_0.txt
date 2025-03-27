@@ -1,0 +1,1 @@
+A bar chart in a linear layout visualizes a multivec file, representing genomic data across the entire genome of hg38. The bars depict 'peak' values over genomic intervals on the x-axis, with expression levels on the y-axis. The bars are colored pink. The chart is titled 'Basic Marks: bar' and has the subtitle 'Tutorial Examples.'

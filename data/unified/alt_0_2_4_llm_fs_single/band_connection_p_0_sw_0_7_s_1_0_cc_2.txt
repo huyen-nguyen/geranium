@@ -1,0 +1,7 @@
+The visualization is a multi-track linear layout representing a segmental duplication analysis of chromosome 1, ranging from 103,900,000 to 104,100,000 base pairs (bp). It consists of a sequence of alternating rectangle and betweenLink representations. Each track uses CSV data to encode the genomic positions linked through a series of connections. 
+
+- **Rectangles**: The rectangle elements mark segments with genomic intervals colored pink, sky blue, purple, and pink for different duplication events, while the stroke color is consistent at dark olive green (#4C6629) with a stroke width of 0.8.
+  
+- **Connections**: The betweenLink marks illustrate the relationships between these segments. Pink, green, and light green color the connections, with strokes matching the rectangles. 
+
+All tracks feature semi-transparent elements with an opacity setting of 0.15, providing a visual layering effect. The information is supported by tooltips providing detailed information about start and end positions of segments in a green font.

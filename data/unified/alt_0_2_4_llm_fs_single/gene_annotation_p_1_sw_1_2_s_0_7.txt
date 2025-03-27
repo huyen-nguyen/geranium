@@ -1,0 +1,15 @@
+The visualization consists of six genomic range annotation tracks displayed horizontally, each titled and stratified by strand. The x-axis represents chromosome 3, spanning from 52,168,000 to 52,890,000 base pairs. 
+
+1. **Corces et al.**: Uses a combined representation of gene names, exons, and strand directionality, with text and rectangles colored in blue for the '+' strand and red for the '-' strand. Genetic features are plotted with rules and filled arrows indicating transcript direction.
+
+2. **IGV**: Features similar annotations with gene names, displayed in a navy color scheme. Triangles and patterned lines indicate strand direction, with white lines on a navy background denoting introns.
+
+3. **HiGlass**: Displays a faint color scheme with light rectangles for exons and arrows indicating gene direction, in shades of blue and pink for different strands.
+
+4. **GmGDV**: Combines gene name text with directional triangles to highlight strand orientation. Exons are marked in blue for '+' and red for '-' strand, maintaining consistency with other tracks.
+
+5. **Cyverse-QUBES**: Shows gene features in a subtle color palette with gray triangles and text marking gene names. Purple rectangles highlight exons, contrasted by gray lines for the structural connections.
+
+6. **Overall Layout**: The charts are vertically aligned within two main columns, both structured to maintain a uniform representation of genomic data on chromosome 3 intervals.
+
+This visualization effectively

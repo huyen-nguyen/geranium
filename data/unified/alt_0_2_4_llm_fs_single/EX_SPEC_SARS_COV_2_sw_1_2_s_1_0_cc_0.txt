@@ -1,0 +1,9 @@
+The visualization titled "SARS-CoV-2" is a linear layout featuring genomic data from the SARS-CoV-2 genome, as sourced from the WashU Virus Genome Browser, NCBI, and GISAID. It displays genomic intervals of NC_045512.2. The top track, titled "NC_045512.2 Genes," uses green rectangles to represent gene locations along the genome, delineated by purple lines. Text annotations for genes are indicated in green.
+
+Beneath it, the "S Protein Annotation" track shows protein domains as colored rectangles. These domains include receptor-binding domains and heptad repeats, each color-coded for differentiation.
+
+The "NC_045512.2 Sequence" track visualizes the nucleotide sequence through a bar chart, where the height of bars represents nucleotide counts, and different nucleotides are color-coded within the A, T, G, and C categories.
+
+At the bottom, the track titled "TRS-L-Dependent Recombination Events" shows connections across genomic positions, visualized with sky blue arcs indicating recombination events.
+
+The interactive brush on the top track allows users to link and explore details further in connected tracks. The visualization is color-rich with annotations to guide understanding, making genomic exploration intuitive.

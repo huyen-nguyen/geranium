@@ -1,0 +1,9 @@
+The visualization is a multi-layered linear chart displaying genomic data across chromosome 1 from positions 1 to 3,000,500. It includes three main tracks:
+
+1. **Line and Scatter Plot Track**: This track overlays line charts and scatter plots. The x-axis represents genomic position, while the y-axis shows peak values. Each row is categorized by samples ("sample 1" to "sample 4"), and both the lines and points are color-coded by sample. The size of the points reflects the peak value.
+
+2. **Scatter Plot Track**: Displays points where the x-axis represents genomic positions and the y-axis represents peak values. Points are color-coded by sample categories, with opacity set to 0.5. The size also reflects peak values.
+
+3. **Bar Chart Track**: Shows data in a bar chart format, representing genomic intervals on the x-axis. The y and y-e axes represent minimum and maximum peak values. Bars are stratified by sample, with each sample in a different color. 
+
+Tooltips provide detailed data annotations, enhancing interactivity. The layout orientation is vertical with a center radius of 0.8, using multivec data from a specified URL. The charts facilitate comparison of genomic data across different samples.

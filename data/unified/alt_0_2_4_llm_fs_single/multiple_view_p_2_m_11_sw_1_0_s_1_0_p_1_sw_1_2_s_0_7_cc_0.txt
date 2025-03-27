@@ -1,0 +1,5 @@
+A vertical arrangement visualization comprises a linear scatter plot at the top and two detailed views beneath it: a horizontal area chart and a circular line chart. The title is "Visual Linking" with a subtitle indicating interactive brushing. The top chart visualizes data for chromosome 1, from 160,000,000 to 200,000,000, using multivec data with genome positions on the x-axis and expression values on the y-axis. Data points are color-coded by sample categories. 
+
+In the bottom section, a horizontal area chart spans chromosome 1, featuring stratified rows and color-coded areas per category. An interactive brush links this view to the scatter plot, allowing dynamic range updates. The adjacent circular line chart displays genome intervals, with expression lines color-coded per category, illustrating the comprehensive genomic data across sample categories. 
+
+Overall, this visualization demonstrates interactive linking and detailed genome data analysis through diverse chart types.

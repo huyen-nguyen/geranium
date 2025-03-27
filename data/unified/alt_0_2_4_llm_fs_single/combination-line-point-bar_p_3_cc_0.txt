@@ -1,0 +1,9 @@
+The visualization consists of three aligned tracks in a linear layout, displaying genomic data for chromosome 1 between positions 1 and 3,000,500. 
+
+The top track is a scatter plot with points representing expression values on the y-axis and genomic positions on the x-axis. Data is stratified by four samples ('sample 1' to 'sample 4'), each shown in different colors (blue, orange, green, and red). The size of the points correlates with expression magnitude, and the opacity is set to 0.5 for visual clarity.
+
+The middle track is a bar chart showing ranges of expression values using intervals on the x-axis. Bars are colored according to the sample categories with outlined in black, depicting min and max expression values along the y and ye-axes.
+
+The bottom track integrates a line chart with a scatter plot to capture expression trends over the same genomic range. The size of points increases with higher expression values.
+
+Tooltip information provides precise data points on genomic position and expression levels, aiding interactive exploration of the visualization.

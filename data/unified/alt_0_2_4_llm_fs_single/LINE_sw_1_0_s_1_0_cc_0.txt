@@ -1,0 +1,1 @@
+A linear line chart visualizes a multivec file, displaying the entire genome of hg38. The x-axis represents genomic positions, while the y-axis illustrates quantitative expression values. The line's thickness is 2 pixels, and it is colored pink. The visualization is titled "Basic Marks: line" with the subtitle "Tutorial Examples."

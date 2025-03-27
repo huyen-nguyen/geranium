@@ -1,0 +1,15 @@
+A comprehensive circular visualization titled "Visual Encoding in Circular Layouts" uses multiple visual encoding methods within a circular layout to represent genomic data. It showcases samples from chromosome 1 across specific intervals, utilizing a multivec dataset. 
+
+The visualization consists of several individual charts, each providing distinct insights:
+
+1. **Circular Scatter Plots (Top Left & Right)**: Display genomic positions on the x-axis and expression values on the y-axis, represented by points. The size of the points reflects peak values, while color categorizes different samples (sample 1 to sample 4). A complete legend clarifies the color coding.
+
+2. **Circular Bar Charts (Middle Left & Right)**: Present expression values as bars along the y-axis, segmented by sample categories. Bar colors are consistent with sample categories.
+
+3. **Circular Line and Scatter Plot (Middle Right)**: Combines line and point marks to depict genomic data. This hybrid chart shows expression on the y-axis, utilizing color and size variations to differentiate sample categories.
+
+4. **Circular Heat Map (Bottom Left)**: Illustrates expression using color intensity to show peak values across genomic intervals. The chart rows are stratified based on samples, offering a visual gradient to indicate expression density.
+
+5. **Circular Area Chart (Bottom Middle)**: Displays expression as filled areas, the arrangement stratified by sample categories, each area colored accordingly.
+
+6. **Circular Connection Chart (Bottom Right)**: Visualizes genomic connections with links, indicating relationships between

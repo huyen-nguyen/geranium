@@ -1,0 +1,5 @@
+A linear genomic visualization contains two main sections, each highlighting different chromosomal regions. The first section covers chromosome 12 from positions 10,140,000 to 10,210,000. It consists of a gene annotation track and three bar charts, representing samples 1, 2, and 3. The gene track shows the position of genes with arrows indicating transcription direction, and is colored in pink.
+
+The second section covers chromosome 8 from positions 127,734,000 to 127,744,000, with a similar structure: a gene annotation track and three corresponding bar charts, colored in orange. The bar charts display quantitative peaks on a shared genomic axis, with values encoded by bar height.
+
+The gene annotation tracks show gene names with arrows and exons marked by rectangles, illustrating gene structure. The visualization is interactive and can adapt to different display heights by adjusting spacing. The presentation uses a uniform styling with light gray backgrounds and white strokes for better visual clarity. The tracks are linked, allowing for synchronized navigation across samples and chromosomes.

@@ -1,0 +1,13 @@
+**Description**: 
+
+A linear Hi-C matrix visualization integrates matrix and annotation tracks, spanning genomic intervals from 800,000,000 to 1,800,000,000 across the human genome (hg38 assembly). The visualization comprises multiple overlaid tracks: 
+
+1. **Matrix Track**: Displays a heatmap representing genomic interactions with intensity encoded by color, ranging from light to dark hues on the 'hot' scale to denote varying levels of interaction.
+
+2. **Vertical and Horizontal Rule Annotations**: Green vertical lines and pink horizontal lines demarcate specific genomic positions, enhancing interpretability with a stroke width of 2.
+
+3. **Bar Annotations**: Genomic intervals associated with specific chromosomes are highlighted with bars, utilizing stroke colors indicative of categories.
+
+4. **Scatter Plot Track**: Overlaid points representing genomic data are sized proportional to quantitative values, with a sky-blue color and white stroke, emphasizing regions of interest within the matrix.
+
+The title "Hi-C Matrix" and subtitle "Visualize Hi-C Data Using Matrix and Annotations" contextualize the visualization, offering a comprehensive view of genomic connections. The entire layout maintains a styled, dashed background for visual distinction, while ensuring interactive analysis of complex genomic data.

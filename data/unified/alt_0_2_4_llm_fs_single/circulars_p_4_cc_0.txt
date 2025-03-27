@@ -1,0 +1,9 @@
+The visualization titled "Visual Encoding in Circular Layouts" demonstrates various methods of representing data in circular formats using Gosling. It features multiple tracks arranged vertically and horizontally, displaying data from the first chromosome (chr1) within the interval 1 to 3,000,500. 
+
+Two main horizontal arrangements are present. The first features a heat map encoded with color intensity to show expression values stratified by categories. Adjacent to this is a circular bar chart that highlights genomic positions with bar heights representing expression values, colored according to sample categories.
+
+The next set of circular views includes a combined line and scatter plot, and standalone scatter plots. Genomic positions are on the x-axis, while expression values and sample categories are represented through point sizes and colors. This arrangement facilitates a detailed comparison of genomic and expression data trends.
+
+The final horizontal arrangement includes an area chart and a chart illustrating connections within genomic intervals. The area chart uses color for different sample categories, while the connections chart highlights interactions between genomic segments using arcs.
+
+Across these views, the visualization showcases the flexibility of encoding genomic data with circular layouts, featuring legends and tooltips for enhanced interactivity.

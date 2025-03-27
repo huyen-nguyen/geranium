@@ -1,0 +1,7 @@
+The visualization consists of two vertically arranged tracks depicting genomic data from chromosome 1 between positions 1 to 3,000,500 in a linear layout. 
+
+The top track displays a multi-row bar chart, representing a multivec file with genomic intervals on the x-axis and the range of expression values (peak_min to peak_max) on the y-axis. Each row corresponds to categories 'sample 1' through 'sample 4,' with different colors representing each sample. Bars are outlined in black with a thin stroke.
+
+The bottom track features an area chart, showing the same genomic range with expression values on the y-axis for each sample category. The areas are colored similarly to the bar chart, helping track sample distinctions.
+
+Tooltips provide detailed data for genomic positions, peak values, and sample categories, enhancing interaction. Both tracks offer consistent visual encoding using colors to differentiate samples and simplifying analysis across the genomic intervals.

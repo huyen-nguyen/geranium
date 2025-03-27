@@ -1,0 +1,7 @@
+A vertical layout visualization depicts genomic data from chromosome 1, spanning positions 1 to 3,000,500. This visualization consists of two tracks:
+
+1. **Top Track**: A multicolored scatter plot with points representing expression values. The x-axis shows genomic positions, while the y-axis displays quantitative peak values. Points are colored by sample category, including 'sample 1', 'sample 2', 'sample 3', and 'sample 4', with hues of blue, orange, green, and red, respectively. Each point's size is based on its peak value, with an included grid to aid visual interpretation.
+
+2. **Bottom Track**: A stratified scatter plot organized by sample categories on individual rows. The x-axis continues to display genomic positions with the y-axis showing peak values. This track also uses the same color scheme per sample category, maintaining an opacity of 0.5 for all points to enhance visibility of overlapping data.
+
+Both tracks provide tooltips indicating start and end genomic positions, peak values formatted to two decimal places, and sample names. The assembly used is hg38, ensuring data corresponds to a common human genome reference.

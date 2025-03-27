@@ -1,0 +1,7 @@
+The visualization is a linear layout with a focus on genomic data from chromosomes 1 to 5. Each chromosome is represented by two tracks: 
+
+1. **Area Charts:** These visualize multivec data for samples 1 to 4, plotted along the genomic position (x-axis) with peaks representing quantitative expression values (y-axis). The area is color-coded by sample category.
+
+2. **Ideograms with Overlays:** These show cytogenetic bands, enriched with black text labels wherever applicable. The rectangles depict different densities in shades of white to black. Additionally, lavender highlights 'gvar' regions, while maroon triangles indicate acen regions (both right and left).
+
+This serial arrangement makes it easy to compare expression and cytogenetic features across chromosomes while maintaining static positioning for detailed examination.

@@ -1,0 +1,5 @@
+The "Smoother Zoom" chart is presented in a linear layout with two vertically arranged tracks, each demonstrating different zooming approaches for visualizing genomic data. Both tracks utilize data from a CSV file, plotted over an x-axis interval of positions 350 to 396. 
+
+The top track, titled "New Approach: Stretching Tiles," exhibits a method that scales existing elements rather than redrawing them at every frame. This approach is experimental and aims at providing smoother zoom interactions. The visualization is stratified by categories, and both rectangles and text annotations use a rich color palette to represent different nominal data values. The text within each rectangle appears in black.
+
+The bottom track, titled "Original Approach," serves as a baseline comparison, visualizing the same genomic data without the experimental stretching feature. Like the top track, it is categorized and colored similarly, with black text annotations overlaid on colored rectangles. Both tracks share features such as genomic fields alignment, lack of axis displays for the genomic positions, and nominal display for categorical data.

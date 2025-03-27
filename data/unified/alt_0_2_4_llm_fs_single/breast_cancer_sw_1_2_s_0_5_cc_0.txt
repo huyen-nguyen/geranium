@@ -1,0 +1,13 @@
+The visualization shows a linear genome view of chromosome 1 with five distinct tracks. 
+
+1. **Ideogram and Triangles**: The top track is an ideogram displaying chromosome bands with varying colors. This track includes right and left triangles indicating different chromosomal features, with colors representing categories such as "gneg" to "acen."
+
+2. **Genomic Position Annotation Track**: The second track shows genomic positions with blue and orange triangles stratified by strand. Right-pointing triangles represent the "+" strand, while left-pointing triangles represent the "-" strand.
+
+3. **CNV Rectangles**: The third track shows genomic intervals with purple rectangles, highlighting regions of "minor_cn_tumor" values of 0, indicating loss in tumor samples.
+
+4. **Tumor CNV Rectangles**: The fourth track shows genomic intervals with sky blue rectangles for regions with "total_cn_tumor" above 4.5, indicating duplication in tumor samples.
+
+5. **Connections Track**: The bottom track features lines connecting genomic positions, stratified by structural variation classes such as "tandem-duplication" and "translocation," with lines colored and stroked according to their type.
+
+Together, these tracks provide a comprehensive overview of genomic features, variations, and structural changes in chromosome 1.

@@ -1,0 +1,7 @@
+A comprehensive genomic visualization comprising multiple linear tracks, exploring chromosomes 3, 2, and 17 with textual and graphical annotations. The track titled “hg38 | Transcript (Max. 15 Rows)” displays gene transcripts along chromosome 3 using various shapes, like triangles and rectangles, with displacement to prevent overlap. Genes on the '+' strand are colored blue, while those on the '-' strand are orange.
+
+The “Likely Benign” track on chromosome 2 uses points, text, and connections to represent likely benign variants. Points are green, while connections are in light gray, linking specific genomic positions. Text annotations identify nucleotide changes.
+
+Chromosome 17 features a dense vertical point scatter plot demonstrating pathogenic annotations, each color-coded based on significance categories, such as Pathogenic or Benign. Points are strategically displaced to avoid overlapping.
+
+Overall, the visualization efficiently communicates complex genomic relationships across specified intervals, providing clarity through color, shape, and layout strategies, including dynamic row displacement and interactive elements like legends to enhance interpretability.

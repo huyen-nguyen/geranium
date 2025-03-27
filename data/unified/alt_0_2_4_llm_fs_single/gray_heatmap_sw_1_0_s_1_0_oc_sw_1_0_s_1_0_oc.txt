@@ -1,0 +1,2 @@
+The image represents a genomic heat map in a linear layout, visualizing a matrix file for the hg38 assembly. The genome is displayed on both x- and y-axes with intervals representing chromosome positions. Rectangles encode the expression values through varying shades of grey, indicating quantitative differences. The visualization is static, covering the full genomic range without interaction. The heat map image is 430x430 pixels, and the tileset information is sourced from a matrix-type data file.
+

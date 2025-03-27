@@ -1,0 +1,13 @@
+The visualization presents a linear layout featuring chromosome 1. 
+
+1. **Ideogram Track**: Displays chromosome bands with various colors, representing different staining categories. Right and left triangles indicate centromeric regions with q and p arm labels, respectively.
+
+2. **Genomic Position Annotation Track**: Displays genes as triangular markers aligned by strand direction. Blue markers represent the positive strand, while orange markers represent the negative strand, stratified into rows.
+
+3. **Copy Number Variation (CNV) Tracks**:
+   - **Pink Rectangles**: Indicate regions with a minor copy number of zero in tumor samples.
+   - **Green Rectangles**: Denote regions with elevated total copy numbers in tumor samples.
+
+4. **Rearrangement Track**: Visualizes structural variants with connections differing in color and stroke, corresponding to categories like tandem-duplications, translocations, deletions, and inversions.
+
+The interactive elements allow exploration of genomic intervals.

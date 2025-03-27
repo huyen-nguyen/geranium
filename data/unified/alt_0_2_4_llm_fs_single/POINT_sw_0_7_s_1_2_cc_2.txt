@@ -1,0 +1,1 @@
+A scatter plot in a linear layout depicts a multivec file of the entire hg38 genome. The 'peak' data field encodes the position and size of points. Points are colored purple. The chart is titled 'Basic Marks: point' with the subtitle 'Tutorial Examples.'

@@ -1,0 +1,13 @@
+A linear layout shows various genomic features of SARS-CoV-2 across five distinct tracks. 
+
+1. **Genes Track**: Displays the genes from the NC_045512.2 accession. The genomic regions are represented by pink rectangles with purple vertical lines and sky blue text labels. An interactive brush links this track to others.
+
+2. **S Protein Annotation Track**: Stratified by rows for categories such as receptor-binding domain (RBD) and others. Rectangles of different colors indicate categorical protein regions, with black text labels.
+
+3. **Genes Overlay Track**: Features rectangles in navy blue, white vertical lines, and black text over the same gene regions for additional annotation.
+
+4. **Sequence Track**: A bar chart displays base sequences (A, T, G, C) depicted in various colors representing different categories. White text annotates the sequences within zoom constraints.
+
+5. **Recombination Events Track**: Connects genomic positions, indicated by sky blue arcs, visualizing TRS-L-dependent recombination events.
+
+This visualization uses data from WashU Virus Genome Browser, NCBI, and GISAID, covering the entire genome from 1 to 29,903 base pairs.

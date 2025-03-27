@@ -1,0 +1,7 @@
+The visualization is a linear layout representing genomic data focused on chromosome 1. It includes five tracks:
+
+1. An ideogram with categories displayed using colored rectangles and triangles to indicate different chromosomal bands; the x-axis shows genomic intervals.
+2. A strand annotation track with arrows indicating gene direction, stratified by strand (+/-) and colored accordingly.
+3. A copy number variant (CNV) track highlighting tumor-specific regions with dark orange rectangles.
+4. Another CNV track with green rectangles showing regions with high copy number in the tumor.
+5. A connection track presenting structural variations as lines between genomic positions, with lines colored based on variation type, including tandem duplication, translocation, deletion, and inversion.

@@ -1,0 +1,5 @@
+A linear, vertically arranged visualization shows genomic data for chromosome 1 from position 1 to 3,000,500. Two tracks are presented in a stacked configuration.
+
+The top track is a scatter plot displaying data points in a non-stratified manner. Each point represents a genomic position on the x-axis and a quantitative value, 'peak', on the y-axis. The size of each point correlates with the value of 'peak', while colors differentiate between categories labeled 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. A legend is present for category identification. The track provides gridlines and a tooltip showing start and end positions, along with the 'peak' value and sample category.
+
+The bottom track is also a scatter plot, but the display is stratified by the 'sample' category across different rows. Each point indicates its genomic position and 'peak' value, similar to the top track, with additional row stratification. The same color scheme represents the categories, and a legend and tooltip are similarly provided. The opacity of all points is set to 0.5, allowing for visual overlay without complete obfuscation.

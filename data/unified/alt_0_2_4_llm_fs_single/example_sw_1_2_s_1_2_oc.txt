@@ -1,0 +1,17 @@
+The visualization titled "Visual Encoding" with the subtitle "Gosling provides diverse visual encoding methods" consists of multiple chart types arranged in a linear vertical layout. This figure includes:
+
+1. A heat map displaying the genomic data across chromosome 1 to chromosome Y, stratified by samples 1 to 4. The color intensity represents the expression values.
+
+2. Three different bar charts where genomic positions are on the x-axis and expression levels are on the y-axis, categorized by sample and color-coded for clarity.
+
+3. A combined line chart and scatter plot overlay with lines and points representing expression levels. The point size is determined by the peak value of each genomic position.
+
+4. Two scatter plots where the genomic data is displayed horizontally and expression levels vertically, with points color-coded by sample type and sized by peak values.
+
+5. An area chart showing expression values filled beneath the genomic positions, color-coded by samples.
+
+6. A bar chart displaying both minimum and maximum peak values within given ranges, color-coded by samples, with black borders defining the bar edges.
+
+7. Lastly, an interleaved connection chart shows connections across specified genomic intervals, color-coded by the genomic starting position, with transparency effects for visual clarity.
+
+Overall, this visualization explores various visual encoding methods to effectively present genomic data, with interactivity supported through tooltips to provide detailed information about each data point.

@@ -1,0 +1,7 @@
+The visualization is titled "Mark Displacement" and subtitled "Reposition marks to address visual overlaps using displacement options." It features multiple tracks in a linear genomic layout, focusing on data from chromosomes 3, 2, and 17. 
+
+A transcript track shows gene annotations for chromosome 3 between positions 142,500,000 and 143,000,000, with a maximum of 15 rows. Displacement techniques are used to manage overlapping annotations, depicted with directional triangles and text. Blue represents the positive strand, and orange the negative strand. 
+
+Another track highlights "Likely Benign" variants for chromosome 2 between positions 126,800,000 and 127,700,000. Points and text annotations are colored according to base pair categories, with green text indicating genomic significance. Additionally, green connections are used to link annotations.
+
+A final track for chromosome 17 between positions 43,080,000 and 43,120,000 displays pathogenicity using points colored by significance. Rows are stratified based on displacement to avoid visual overlap.

@@ -1,0 +1,9 @@
+A multi-panel genomic visualization titled "Mark Displacement" demonstrates the use of displacement options to manage visual overlaps. This visualization includes three genomic tracks with distinct focuses:
+
+1. **Transcript Track**: Displayed in a linear format, this track highlights the transcript data for chromosome 3, between positions 142,500,000 and 143,000,000. The visualization employs 'pile' displacement to manage up to 15 rows, showing gene names as text. Genomic features such as exons are marked by rectangles, while introns are connected by lines with arrowheads indicating the direction based on strand information (blue for '+' and orange for '-').
+
+2. **Likely Benign Variants Track**: For chromosome 2, spanning 126,800,000 to 127,700,000, this track visualizes likely benign variants. It uses displacement techniques to spread marks (points) to avoid overlap, with specific nucleotide letters (A, T, G, C) color-coded on the points. The points are linked by light blue connections.
+
+3. **Pathogenicity Annotations Track**: Located on chromosome 17, covering 43,080,000 to 43,120,000, this track uses color-coded points to represent various pathogenicity categories, such as 'Pathogenic', 'Likely Pathogenic', and others. The points are organized with 'pile' displacement to illustrate their quantitative distribution across this genomic region.
+
+This visualization aims to provide a clear

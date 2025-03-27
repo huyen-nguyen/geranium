@@ -1,0 +1,15 @@
+A visualization combining circular and linear views presents genomic data based on the hg19 assembly. The circular ideogram at the top displays the entire genome, marked with various chromosomal bands. An interactive brush in blue links the circular view to the linear view below, highlighting chromosome 1.
+
+The circular view includes several tracks:
+1. **Ideogram**: Chromosomal bands color-coded by categories.
+2. **Putative Driver**: Text annotations for genomic positions, differentiated by categories.
+3. **Gain and Loss of Heterozygosity (LOH)**: Shows genomic ranges in blue and orange rectangles respectively.
+4. **Structural Variants (SV)**: Connects genomic positions with lines, color-coded based on structural variant types, such as 'Translocation,' 'Duplication,' and others.
+
+In the linear view, multiple tracks provide a detailed chromosome 1 analysis:
+1. **Ideogram**: Shows chromosomal bands in detail.
+2. **Putative Driver**: Displays gene annotations with text in rows, reflecting genomic positions.
+3. **Point Mutation**: A scatter plot visualizing mutation data, with positions represented by colors indicating mutation subtypes.
+4. **Insertion and Deletion**: Rectangles in a two-row layout, colored to indicate mutation types.
+5. **Copy Number Variants**: Bars represent copy number variations quantitatively.
+6. **Gain and LOH**: Further displays ranges for gains and losses in light blue and orange, aligning with the

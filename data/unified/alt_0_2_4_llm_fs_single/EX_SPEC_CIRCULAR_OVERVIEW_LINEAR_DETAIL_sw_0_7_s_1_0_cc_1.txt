@@ -1,0 +1,3 @@
+This visualization consists of a circular bar chart and two horizontal bar charts, aligned vertically. The circular chart displays genomic data across multiple chromosomes with connections representing different structural variations. Rows represent categories such as 'sample 1' to 'sample 4', with colors encoded for each sample. Brushes highlight specific genomic details.
+
+The two horizontal bar charts provide detailed views of chromosomes 5 and 16. Each bar's position and height represent genomic positions and expression values, respectively, with colors indicating different samples. This setup allows for an interactive exploration, linking the overview and detail views, facilitating data comparison across different genomic regions.

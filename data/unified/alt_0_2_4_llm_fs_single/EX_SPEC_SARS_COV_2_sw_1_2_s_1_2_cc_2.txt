@@ -1,0 +1,11 @@
+A linear visualization of the SARS-CoV-2 genome is presented with a detailed multi-track view. The data is sourced from the WashU Virus Genome Browser, NCBI, and GISAID. Five distinct tracks are aligned vertically, each revealing specific genomic features of the NC_045512.2 reference assembly, spanning positions 1 to 29,903.
+
+The first track, titled "NC_045512.2 Genes," illustrates genomic intervals with green rectangles, each accompanied by a pink triangle pattern indicating the reading frame direction. Gene names are labeled in pink text, clearly legible due to text bounding.
+
+The second track is "S Protein Annotation," stratified by key protein domains and motifs, including the receptor-binding domain, receptor-binding motif, S1/S2 cleavage site, and heptad repeats. Each is color-coded accordingly, and black text labels are positioned adjacent to relevant regions.
+
+Following is the "NC_045512.2 Sequence" track, showcasing base counts in a bar graph format where the y-axis represents count values. Bases 'A', 'T', 'G', and 'C' are encoded with different colors, facilitating identification. White text overlays display the base where space allows.
+
+The fourth track depicts "TRS-L-Dependent Recombination Events," visualizing connections between recombination sites as soft blue arcs, highlighting connections across genomic positions. These arcs are subtly colored to maintain clarity without overshadowing colored details.
+
+Together, the tracks offer a comprehensive genomic

@@ -1,0 +1,3 @@
+The visualization consists of a circular and linear view of the hg19 genome, connected by an interactive brush. The circular view includes an ideogram, a text annotation track labeled 'Putative Driver', and range annotation tracks titled 'Gain' (blue rectangles) and 'Loss of Heterozygosity (LOH)' (orange rectangles). A line-connection track displays genomic connections, with colors representing categories like 'Translocation' and 'Duplication'.
+
+In the linear view, similar tracks are present with additional ones like a gene annotation track, a scatter plot for 'Point Mutation', and range tracks for 'Insertion' and 'Deletion' (rectangles in yellow and green). The linear view shows chromosome 1, detailing copy number variants and structural variations.

@@ -1,0 +1,9 @@
+The visualization features a circular layout titled "Between Links in Circular Layouts with Parallel Arrangements." It includes four main elements:
+
+1. **Circular Bar Chart:** This track represents genomic data with bars in sky blue, encoding the expression values on both the x-axis and y-axis.
+
+2. **Two Circular Ideograms:** These tracks display genomic intervals on the x-axis. The rectangles are color-coded based on various categories, such as gneg, gpos25, and others, using a diverse color palette including blues, oranges, and greens.
+
+3. **Circular Chart with Connections:** It highlights links between genomic regions with lines. Black and light gray colors represent different categories of connections.
+
+Together, these tracks showcase genomic data in a visually compelling circular format, allowing for parallel arrangements and intricate connections within the layout.

@@ -1,0 +1,7 @@
+The visualization consists of five parallel views, each displaying genomic data for chromosomes 1 to 5 on a linear layout. Each view contains two tracks: 
+
+1. **Area Chart Track**: This displays genomic positions on the x-axis and quantitative peak values on the y-axis, using an area chart. Four samples ('sample 1', 'sample 2', 'sample 3', 'sample 4') are represented, each with a unique color. The width varies slightly per chromosome, maintaining a fixed overall height.
+
+2. **Ideogram and Annotation Track**: Positioned below each area chart, this track features a cytogenetic band ideogram along with annotations. Black text labels represent genomic bands. Rectangles colored based on density categories—ranging from white to black—indicate other annotations. Maroon right and left triangles mark centromere positions ('acen-1', 'acen-2'), while purple rectangles highlight variable regions ('gvar').
+
+This composition allows for a comparative examination of chromosomal regions across multiple samples, indicating variations such as band density and centromere locations.

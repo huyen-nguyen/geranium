@@ -1,0 +1,7 @@
+A linear visualization consists of two horizontally stacked charts displaying genomic data from chromosome 1, ranging from position 1 to 3,000,500. 
+
+The top chart is a line chart where expression values (peaks) are plotted on the y-axis across genomic positions on the x-axis. Each line represents a different sample and is color-coded: blue for "sample 1," orange for "sample 2," green for "sample 3," and red for "sample 4."
+
+The bottom chart is an overlay of bar charts, stratified by sample rows. Each bar's height and color (matching the respective sample colors) represent expression values, allowing for direct comparison of categorical data across the same genomic intervals depicted in the line chart above.
+
+The charts include interactive elements, such as tooltips, which provide detailed quantitative insights when hovering over data points or bars. The overall arrangement and color scheme facilitate multi-sample genomic comparisons within this specified region of chromosome 1, using data from a multivec file.

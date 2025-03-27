@@ -1,0 +1,14 @@
+The visualization consists of three stacked linear views depicting genomic data on chromosome 13. Each view ranges over different intervals: 31,500,000-33,150,000, 32,000,000-32,700,000, and 32,314,000-32,402,500.
+
+**Top View:**
+- **Genomic Annotation:** The top track is titled 'HiGlass' and features a genomic range annotation. Genes are represented by arrows indicating their direction, colored based on the strand (blue for positive, orange for negative).
+- **ClinVar Significance:** Below the genomic track, a multivec bar chart shows the significance of genomic variations as classified by ClinVar, utilizing colors from a palette ranging from pink for 'Pathogenic' to green for 'Benign.'
+
+**Middle View:**
+- **Focused Region:** This view zooms into a subsection of the previous range (32,000,000-32,700,000), maintaining the same track configuration and details.
+
+**Bottom View:**
+- **Detailed Gene Focus:** The bottom view zooms into an even more precise region (32,314,000-32,402,500), providing a detailed insight into the 'BRCA2' gene.
+- **Data Representation:** The same data representation methods are employed, with bars and points indicating significance in variation and detail at increased resolution.
+
+Overall, the visualization offers a comprehensive representation of gene and variant data across three levels of magnification,

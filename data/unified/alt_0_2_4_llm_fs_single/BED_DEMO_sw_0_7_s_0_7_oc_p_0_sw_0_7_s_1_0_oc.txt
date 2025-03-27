@@ -1,0 +1,8 @@
+A linear layout visualization of BED files shows data from chromosome 1, spanning positions 1 to 2,000,000. The layout consists of four vertically arranged tracks, each displaying genomic intervals as black-stroked rectangles:
+
+1. **BED12**: Uses all 12 standard BED fields.
+2. **BED6**: Features the first six BED fields.
+3. **BED6+6**: Displays the first six BED fields plus six custom fields.
+4. **BED12+1**: Includes all 12 standard BED fields and one additional custom field.
+
+Each track is labeled with its respective BED specification, marked with consistent rectangle sizes and black outlines to represent genomic intervals.

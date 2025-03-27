@@ -1,0 +1,10 @@
+The visualization consists of a circular ideogram and a linear ideogram, connected by an interactive brush in the circular view. The circular ideogram displays the entire genome, including tracks for 'Gain' in blue, 'Loss of Heterozygosity (LOH)' in orange, and connection lines for structural variations. Each category is color-coded and includes items like 'Translocation' and 'Duplication.'
+
+Below, the linear view focuses on chromosome 1, showing detailed tracks: 
+- 'Putative Driver' with gene annotations in text.
+- 'Point Mutation' as a scatter plot with mutations in various colors based on subtype.
+- 'Insertion' and 'Deletion' categories in a track, visualized using rectangles.
+- 'Copy Number Variants' with quantitative bars in grey.
+- Additional tracks indicating 'Gain' and 'LOH' are similarly structured.
+
+Overall, the layout provides a comprehensive overview of genomic variations with a focus on structural and numerical variations across genomes.
