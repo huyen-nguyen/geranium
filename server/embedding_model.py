@@ -1,0 +1,265 @@
+from sentence_transformers import SentenceTransformer
+import torch
+import os
+import json
+import hashlib
+
+print("here")
+
+def get_md5(input_str):
+    # Create an MD5 hash object
+    md5_hash = hashlib.md5()
+    
+    # Encode the string and update the hash object
+    md5_hash.update(input_str.encode('utf-8'))
+    
+    # Return the hexadecimal MD5 digest
+    return md5_hash.hexdigest()
+
+class VisRAGModel:
+    def __init__(self, rag_model_name, load_model=True):
+        self.rag_model_name = rag_model_name
+        self.rag_model = None
+        self.desc_embedding = None
+        self.name = None
+        self.embedding_path = None
+        self.load_model_flag = load_model
+        if load_model:
+            self.load_rag_model()
+
+    def load_rag_model(self):
+        if not self.load_model_flag:
+            print("Skipping model loading as requested.")
+            return
+            
+        print(f"Loading model: {self.rag_model_name}")
+        self.rag_model = SentenceTransformer(self.rag_model_name)
+        self.rag_model.max_seq_length = 4096
+        self.rag_model.tokenizer.padding_side = "right"
+
+    def load_desc_embedding(self, desc_dict, name):
+        keys = list(desc_dict.keys())
+        all_value_str = [desc_dict[key] for key in keys]
+        md5_value = get_md5(json.dumps(keys, sort_keys=True))
+        print("get the md5 value of keys:", md5_value)
+        embedding_path = self.rag_model_name.split(
+            '/')[-1] + "embedding_" + name + '_' + md5_value + ".pt"
+        try:
+            desc_embedding = torch.load(
+                embedding_path, weights_only=False)
+            assert len(desc_embedding) == len(
+                desc_dict), "The number of tools in the desc_dict is not equal to the number of desc_embedding."
+        except:
+            desc_embedding = None
+            print("\033[92mInferring the desc_embedding.\033[0m")
+            desc_embedding = self.rag_model.encode(
+                all_value_str, prompt="", normalize_embeddings=True
+            )
+            torch.save(desc_embedding, embedding_path)
+            
+            print("\033[92mFinished inferring the desc_embedding.\033[0m")
+        return desc_embedding
+
+    def load_embeddings_from_disk(self, dict_keys, names):
+        """
+        Load embeddings directly from disk without recomputing them.
+        
+        Args:
+            dict_keys: A list of dictionaries containing the keys used to generate the embeddings
+                     (e.g., [query_dict.keys(), reference_dict.keys()])
+            names: A list of names corresponding to each dictionary (e.g., ['query', 'reference'])
+            
+        Returns:
+            A list of loaded embeddings corresponding to each dictionary
+        """
+        embeddings = []
+        model_prefix = self.rag_model_name.split('/')[-1]
+        
+        for keys, name in zip(dict_keys, names):
+            # Calculate MD5 hash for the keys
+            md5_value = get_md5(json.dumps(list(keys), sort_keys=True))
+            embedding_path = f"{model_prefix}embedding_{name}_{md5_value}.pt"
+            
+            print(f"Loading {name} embeddings from {embedding_path}")
+            try:
+                embedding = torch.load(embedding_path, weights_only=False)
+                print(f"Successfully loaded {name} embeddings with shape {embedding.shape}")
+                embeddings.append(embedding)
+            except Exception as e:
+                print(f"Failed to load {name} embeddings: {str(e)}")
+                embeddings.append(None)
+        
+        return embeddings
+
+    def rag_infer(self, query, top_k=5):
+        if self.rag_model is None:
+            print("Model not loaded. Cannot perform inference.")
+            return []
+            
+        torch.cuda.empty_cache()
+        queries = [query]
+        query_embeddings = self.rag_model.encode(
+            queries, prompt="", normalize_embeddings=True
+        )
+        if self.desc_embedding is None:
+            print("No desc_embedding")
+            exit()
+        scores = self.rag_model.similarity(
+            query_embeddings, self.desc_embedding)
+        top_k = min(top_k, len(self.name))
+        top_k_indices = torch.topk(scores, top_k).indices.tolist()[0]
+        top_k_names = [self.name[i] for i in top_k_indices]
+        return top_k_names
+    
+def save_embeddings(query_list, reference_list, rag_model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"):
+    embedding_model = VisRAGModel(rag_model_name)
+    query_embedding = embedding_model.load_desc_embedding(query_list, name='query')
+    reference_embedding = embedding_model.load_desc_embedding(reference_list, name='reference')
+    return query_embedding, reference_embedding
+
+# Example usage of class method for loading embeddings
+def load_saved_embeddings(query_dict, reference_dict, model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"):
+    """Helper function to load saved embeddings using the class method without loading the model"""
+    # Initialize with load_model=False to skip model loading
+    embedding_model = VisRAGModel(model_name, load_model=False)
+    embeddings = embedding_model.load_embeddings_from_disk(
+        [query_dict.keys(), reference_dict.keys()], 
+        ['query', 'reference']
+    )
+    return embeddings
+
+def transform_files_to_dict(folder, suffix):
+    print(f"Processing files in {folder} with suffix {suffix}")
+    data_dict = {}
+    for file_name in os.listdir(folder):
+        if file_name.endswith(suffix):
+            file_path = os.path.join(folder, file_name)
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data_dict[file_name] = f.read().strip()
+    
+    print(f"Processed {len(data_dict)} files.")
+    return data_dict
+
+
+def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dict, reference_dict):
+    """
+    Evaluate the embeddings by calculating similarity scores between query and reference embeddings.
+    """
+    if query_embedding is None or reference_embedding is None:
+        print("Embeddings are not loaded properly.")
+        return
+
+    # Calculate similarity scores
+    similarity_scores = torch.matmul(
+        torch.tensor(query_embedding), torch.tensor(reference_embedding).T
+    )
+
+    # Get the keys from both dictionaries
+    query_keys = list(query_dict.keys())
+    reference_keys = list(reference_dict.keys())
+    
+    evaluation_result = []
+    
+    for i, query_file_name in enumerate(query_keys):
+        # Get ground truth by removing "_query" suffix
+        ground_truth = query_file_name.split('_query')[0] if '_query' in query_file_name else query_file_name.split('.')[0]
+        
+        # Get siblings for this ground truth
+        ground_truths = [ground_truth]
+        if ground_truth in gt_data:
+            ground_truths.extend(gt_data[ground_truth])
+        
+        # Get similarities for this query
+        scores = similarity_scores[i]
+        
+        # Create dataframe-like structure for sorting
+        embeddings = []
+        for j, reference_key in enumerate(reference_keys):
+            # Clean reference key by removing extension
+            clean_reference_key = reference_key.split('.')[0]
+            similarity = float(scores[j])
+            embeddings.append({
+                "file_name": clean_reference_key,
+                "similarity": similarity
+            })
+        
+        # Sort by similarity descending
+        embeddings = sorted(embeddings, key=lambda x: x["similarity"], reverse=True)
+        
+        # Add rank (k) to each result
+        for k, embed in enumerate(embeddings):
+            embed["k"] = k + 1
+        
+        # Check if each result is a ground truth
+        for embed in embeddings:
+            embed["is_groundtruth"] = any(gt in embed["file_name"] for gt in ground_truths)
+        
+        # Find smallest k where a ground truth was matched
+        matched_k_list = [embed["k"] for embed in embeddings if embed["is_groundtruth"]]
+        matched_k = min(matched_k_list) if matched_k_list else float('inf')
+        
+        # Add to evaluation results
+        evaluation_result.append({
+            'query_file': query_file_name,
+            'query_type': 'alt',
+            'target_embedding_type': 'spec',
+            'smallest_k_matched': matched_k if matched_k != float('inf') else None,
+            'matched_ground_truths': [embed["file_name"] for embed in embeddings if embed["is_groundtruth"]][:5]
+        })
+    
+    # Calculate summary statistics
+    total_queries = len(evaluation_result)
+    queries_with_match = sum(1 for result in evaluation_result if result['smallest_k_matched'] is not None)
+    top_1_matches = sum(1 for result in evaluation_result if result['smallest_k_matched'] == 1)
+    top_5_matches = sum(1 for result in evaluation_result if result['smallest_k_matched'] is not None and result['smallest_k_matched'] <= 5)
+    
+    print(f"Total Queries: {total_queries}")
+    print(f"Queries with at least one match: {queries_with_match}")
+    print(f"Top-1 Accuracy: {top_1_matches/total_queries:.4f}")
+    print(f"Top-5 Accuracy: {top_5_matches/total_queries:.4f}")
+    
+    return {
+        "total_queries": total_queries,
+        "queries_with_match": queries_with_match,
+        "top_1_accuracy": top_1_matches/total_queries if total_queries > 0 else 0,
+        "top_5_accuracy": top_5_matches/total_queries if total_queries > 0 else 0,
+        # "detailed_results": evaluation_result
+    }
+
+# Example usage
+text_dict = transform_files_to_dict('../data/test_suite/alt', '.txt')
+spec_dict = transform_files_to_dict('../data/test_suite/specs', '.json')
+
+# Choose one of these options:
+
+# Option 1: Generate embeddings by loading the model (default behavior)
+# text_embedding, spec_embedding = save_embeddings(text_dict, spec_dict)
+
+# Option 2: Load pre-computed embeddings without loading the model
+model_name = "/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"
+embedding_model = VisRAGModel(model_name, load_model=False)  # Skip loading the actual model
+embeddings = embedding_model.load_embeddings_from_disk(
+    [text_dict.keys(), spec_dict.keys()], 
+    ['query', 'reference']
+)
+text_embedding, spec_embedding = embeddings
+
+# Load ground truth data - URL can't be opened directly, need to download the file first
+import requests
+try:
+    # This is just an example approach - in practice you would download the file first
+    response = requests.get("https://raw.githubusercontent.com/huyen-nguyen/geranium/evaluation/evaluation/siblings.json")
+    gt_data = response.json()
+except:
+    print("Could not load ground truth data from URL. Please download the file manually.")
+    gt_data = {}
+
+# Run evaluation in both directions
+if text_embedding is not None and spec_embedding is not None:
+    evaluation_summary = evaluate_embeddings(text_embedding, spec_embedding, gt_data, text_dict, spec_dict)
+    print("Text to Spec Evaluation Summary:", evaluation_summary)
+
+    evaluation_summary = evaluate_embeddings(spec_embedding, text_embedding, gt_data, spec_dict, text_dict)
+    print("Spec to Text Evaluation Summary:", evaluation_summary)
+else:
+    print("Embeddings could not be loaded. Please generate them first using save_embeddings().")
