@@ -1,0 +1,1 @@
+Genomic visualization chart with green rectangles and connections

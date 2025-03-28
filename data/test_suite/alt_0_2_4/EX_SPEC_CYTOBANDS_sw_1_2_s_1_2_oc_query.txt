@@ -1,0 +1,1 @@
+Genomic expression area and ideogram chart with text, rectangles, and triangles; categories color-coded; genome on x-axis; expression on y-axis.
