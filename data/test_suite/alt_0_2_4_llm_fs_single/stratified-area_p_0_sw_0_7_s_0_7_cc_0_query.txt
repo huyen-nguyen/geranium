@@ -1,0 +1,1 @@
+Genomic area chart chromosome 1 positions 1-3,000,500 samples 1-4 colors blue orange green red

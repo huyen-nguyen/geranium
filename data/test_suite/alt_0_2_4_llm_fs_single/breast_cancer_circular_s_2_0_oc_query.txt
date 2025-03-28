@@ -1,0 +1,1 @@
+Circular ideogram genomic visualization with multiple tracks showcasing human genome assembly hg38, CNVs highlighted in dark orange and green, and structural variations like translocations and deletions color-coded within a connection track.

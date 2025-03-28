@@ -1,0 +1,1 @@
+Query: GmGDV genomic range track with strand-oriented gene annotations on chromosome 3
