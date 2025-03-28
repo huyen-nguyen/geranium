@@ -1,0 +1,1 @@
+Genomic chromosome 1 linear layout with ideogram, strand annotations, CNVs, and structural variations

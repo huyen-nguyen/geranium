@@ -1,0 +1,1 @@
+Chromosome 1 bar chart sequence visualization with colored bases and interactive zoom

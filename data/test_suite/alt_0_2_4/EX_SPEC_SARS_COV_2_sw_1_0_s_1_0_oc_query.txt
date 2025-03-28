@@ -1,0 +1,1 @@
+Genomic visualization with navy blue charts and connections, including 'NC_045512.2 Genes', 'S Protein Annotation', and 'TRS-L-Dependent Recombination Events'.

@@ -1,0 +1,1 @@
+Gene annotations visualization on chromosome 3 in hg38 with strand indicators and color-coded tracks

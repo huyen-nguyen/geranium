@@ -1,0 +1,1 @@
+Query: Genomic range annotation tracks and bar charts with categorical colors and HiGlass title
