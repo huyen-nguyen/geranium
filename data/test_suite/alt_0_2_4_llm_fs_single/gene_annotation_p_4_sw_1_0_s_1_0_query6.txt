@@ -1,0 +1,5 @@
+The linear genomic visualization displays chromosome 3 between positions 52,168,000 and 52,890,000 in a horizontal arrangement. There are two vertically aligned views.
+
+The first view is an overlay alignment that presents genomic range annotations with text labels for gene names in black. Gene symbols are flanked by right-facing triangles in gray for the positive strand and left-facing triangles for the negative strand. These are accompanied by light gray rectangles and gray lines indicating gene locations. Exons are highlighted in purple rectangles with a pink stroke.
+
+The second view, similarly aligned as an overlay, contains genomic annotations using rectangles to distinguish between genes, exons, and introns. Genes are marked in dark gray, exons in red, and introns in blue, with a light gray stroke. The arrangement stratifies the annotations by strand, visualizing differences in gene structures across the specified genomic interval.

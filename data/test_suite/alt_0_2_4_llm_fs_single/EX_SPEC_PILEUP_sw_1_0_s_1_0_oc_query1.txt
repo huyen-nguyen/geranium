@@ -1,0 +1,1 @@
+A linear bar chart visualizes a BAM file covering chromosome 1 from positions 136,750 to 139,450. The height of each bar represents the coverage of reads aligned in the corresponding genomic regions. Bars are colored silver, and the axes include a right y-axis for quantitative data.

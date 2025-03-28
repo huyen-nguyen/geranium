@@ -1,0 +1,1 @@
+A scatter plot visualizing a multivec file in a linear layout. It displays genomic data from the hg38 assembly with the entire genome on the x-axis and expression values plotted on the y-axis. Each data point is represented as a sky-blue circle, with size and position encoded by the data field named 'peak'. The chart spans a width of 672 and a height of 246 pixels.

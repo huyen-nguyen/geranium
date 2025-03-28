@@ -1,0 +1,11 @@
+**Description:**
+
+A linear line chart visualizing a multivec file, representing the genome of hg38. The x-axis displays genomic positions, while the y-axis measures quantitative values labeled 'peak.' The chart encodes data using a continuous line mark, colored green for visual emphasis. The visualization spans the entire genome and is designed with a horizontal orientation, occupying an 800x210 layout.
+
+**Details:**
+
+- **Assembly:** hg38
+- **Data:** Retrieved from a multivec source with a single category 'sample 1'.
+- **Axes:** Genomic positions on the x-axis, quantitative peaks on the y-axis.
+- **Line Attributes:** Solid with a size of 2 units, green in color.
+- **Layout:** Linear and horizontal orientation with zoom capabilities.

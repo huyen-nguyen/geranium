@@ -1,0 +1,1 @@
+A linear area chart visualizes genomic data from a multivec file across the entire genome of hg38. The x-axis represents genomic positions, while the y-axis encodes quantitative values from a data field named 'peak.' The area is filled with green, and the chart's dimensions are 672x246 pixels.

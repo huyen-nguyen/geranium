@@ -1,0 +1,2 @@
+The visualization is a linear line chart depicting genomic data. It shows the interval of chromosome 1 between 200,000,000 and 220,000,000. The position is on the x-axis, while the expression values, derived from the 'peak' data field, are on the y-axis. The lines are pink, and the background is styled in steel blue with a slight opacity. The data is sourced from a multivec file and focuses on 'sample 1'. The chart is interactive, with a linking ID for potential brush interactions.
+

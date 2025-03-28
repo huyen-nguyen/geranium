@@ -1,0 +1,17 @@
+The visualization is arranged in a vertical linear layout, focusing on chromosome 1 of the hg19 assembly. It includes the following tracks:
+
+1. **Ideogram Track:** Displays the chromosomal bands with rectangles and triangles, colored based on categories like 'gneg,' 'gpos,' and 'acen.' It features genomic intervals on the x-axis.
+
+2. **Text Track:** Annotates genes along chromosome 1. Text labels indicate gene names, black in color, and are organized by rows corresponding to different categories.
+
+3. **Vertical Lines Track:** Contains several tracks with lightgray vertical lines indicating specific genomic positions across the chromosome.
+
+4. **Genomic Range Annotation Track:** Text annotations over genomic intervals on the x-axis.
+
+5. **Scatter Plot:** Plots mutations as points on the y-axis against genomic positions on the x-axis. Points are colored based on mutation subtypes.
+
+6. **Rectangles Track:** Includes multiple tracks with rectangle marks illustrating various genomic attributes, such as 'Insertion' and 'Deletion,' in distinct colors.
+
+7. **Connection Track:** Displays connections (lines) across genomic intervals, representing structural variants like 'Gain,' 'LOH,' 'Translocation,' and others. These connections are color-coded, providing a visual distinction among different types.
+
+The visualization effectively combines different types of genomic data in an integrated view, using both spatial and color encoding to convey complex genetic information.

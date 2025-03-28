@@ -1,0 +1,16 @@
+The visualization consists of two horizontally arranged panels, each with three main sections. They depict genomic data for chromosome 7, spanning from positions 77,700,000 to 81,000,000.
+
+1. **Bar Charts**: 
+   - In each panel, there are three bar charts showing different genomic data types:
+     - The first chart displays data from a bigWig file, representing genomic peaks in purple bars.
+     - The second chart uses dark green bars to represent another genomic dataset, also derived from a bigWig file.
+     - The third chart overlays two datasets: orange bars from a CTCF bigWig file, and genomic annotations visualized with pink right and green left triangles indicating strand direction from a beddb file.
+
+2. **Matrices**:
+   - Below the bar charts, matrices display interaction data:
+     - The matrices use a warm color scheme to encode contact strengths, with genome positions on both the x- and y-axes.
+
+3. **Multivec Tracks**:
+   - At the bottom, multivec tracks show annotations with specific categories using distinct colors, representing various genomic features like active TSS, enhancers, and heterochromatin in bar form.
+
+This detailed genomic visualization integrates diverse data types and color schemes to highlight structural and functional elements within the specified chromosomal region.

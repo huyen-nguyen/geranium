@@ -1,0 +1,18 @@
+The visualization is a comprehensive linear layout chart displaying genomic data on chromosome 3 from base pairs 52,168,000 to 52,890,000. It consists of multiple bar charts and annotation tracks, each focusing on distinct datasets:
+
+1. **Bar Charts**: 
+   - **Excitatory Neurons**: Depicted in orange bars, showcasing peaks of genomic position data.
+   - **Inhibitory Neurons**: Illustrated with green bars.
+   - **Dopa Neurons**: Shown in blue.
+   - **Microglia**: Displayed in sky blue bars.
+   - **Oligodendrocytes**: Represented in purple.
+   - **Astrocytes**: Indicated with dark orange bars.
+   - **OPCs**: Marked in violet.
+
+2. **Genomic Range Annotation Track**:
+   - Visualizes genes on both positive and negative strands using text labels and rectangles, with the positive strand in blue and the negative strand in red. Exons are shown as thicker rectangles, while genes have vertical connecting lines.
+
+3. **Connection Tracks**:
+   - Illustrate connections within the genomic data, using light transparent curves to denote overlapping or related genomic regions, with strokes in different colors to increase visibility.
+
+Each dataset's expression is depicted along the y-axis, while the genome is laid out on the x-axis. The design incorporates different colors for clarity, emphasizing the variety of neuronal and glial cell types
