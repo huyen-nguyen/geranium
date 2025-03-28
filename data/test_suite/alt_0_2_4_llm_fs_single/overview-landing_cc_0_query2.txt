@@ -1,0 +1,13 @@
+The visualization consists of five linear tracks arranged vertically, focusing on chromosome 1 from position 1 to 3,000,500. 
+
+1. **Scatter Plot (Top Track)**: Displays genomic positions on the x-axis and quantitative peak values on the y-axis, stratified by four samples. Each sample is represented by differently colored points, and point size varies with peak value. The chart includes a top axis and tooltip information providing start and end genomic positions.
+
+2. **Scatter Plot (Second Track)**: Similar to the top track but includes grid lines. Different colors represent samples, enhancing category distinction through a legend.
+
+3. **Area Plot**: Shows genomic positions with peak values visualized as filled areas, stratified by samples and distinguished by color. Includes tooltip information and white stroke outlining the areas.
+
+4. **Bar Chart**: Represents genomic intervals with bars indicating peak minimum and maximum values. Data is divided into rows by sample categories, with color coding and tooltip details.
+
+5. **Connection Chart**: Displays connections between genomic positions as curved links, with categories shown through color variations. The track provides additional genomic context with a focus on a different segment of chromosome 1.
+
+Overall, the visualization offers a multifaceted view of genomic data using diverse chart types to illustrate peak expression across samples, with interactive features like tooltips for detailed exploration.

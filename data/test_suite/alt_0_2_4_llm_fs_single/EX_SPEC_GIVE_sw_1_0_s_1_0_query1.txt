@@ -1,0 +1,7 @@
+A vertical layout visualization displays genomic data across multiple tracks for chromosome 17. The top track is an overlay track showing gene structures, with rectangles indicating gene regions on both positive and negative strands, highlighted in navy blue. Smaller rectangles represent exons, while connecting lines depict gene segments.
+
+Three subsequent bar charts illustrate quantitative data from various genomic positions, each bar reflecting peak values represented in purple.
+
+An ideogram track follows, displaying cytogenetic bands of chromosome 17, with rects and triangles denoting distinct regions and centromere location.
+
+The final track overlays genomic segment duplications, with the opacity of rectangles indicating overlapping regions, and different colors representing connections between different chromosomes. The entire setup effectively maps structural genomic variations and annotations for the specified interval on chromosome 17.

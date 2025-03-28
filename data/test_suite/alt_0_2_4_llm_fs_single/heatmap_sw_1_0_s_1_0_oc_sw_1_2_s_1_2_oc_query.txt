@@ -1,0 +1,1 @@
+A heat map in a linear layout visualizes a matrix file, displaying the genome of hg38 on both the x and y axes. Genomic intervals on these axes are encoded using color intensity, with a warm color range representing quantitative expression values. The visualization is rendered with rectangular marks.

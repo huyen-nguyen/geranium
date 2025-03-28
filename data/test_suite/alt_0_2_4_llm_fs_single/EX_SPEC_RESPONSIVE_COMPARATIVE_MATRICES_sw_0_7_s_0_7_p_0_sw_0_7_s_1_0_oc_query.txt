@@ -1,0 +1,3 @@
+**Description**: 
+
+A comparative matrix visualization of genomic data across chromosome 10, showing two overlaid heatmap tracks arranged in a horizontal layout. The x and y axes represent genomic positions, with intervals marked at 50,000,000 and 100,000,000 base pairs. The lower-left matrix uses a hot color scheme, while the upper-right matrix uses a grey color scheme to encode quantitative expression values. The heatmaps are overlaid to reveal patterns and correlations between genomic regions. This responsive visualization adjusts to wide screen widths over 1000 pixels, maintaining matrix visibility and interpretation clarity.

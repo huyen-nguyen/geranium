@@ -1,0 +1,11 @@
+The visualization consists of four distinct charts arranged vertically in a linear layout, spanning the genomic interval of chromosome 1 from 1 to 3,000,500. 
+
+1. **Heat Map**: This chart shows genomic data as color-encoded rectangles, where regions of varying expression intensities are distinguished by color. It includes four samples labeled from 'sample 1' to 'sample 4,' stratified across rows. The color intensity represents the peak values. 
+
+2. **Bar Chart (Track 2)**: Displays peaks along the genomic position on the x-axis and peak values on the y-axis. It's stratified by samples, with each sample's data distinguished by color, offering a clear overview of expression levels.
+
+3. **Bar Chart (Track 3)**: Similar to the second track but includes a grid for enhanced readability. The bar heights depict quantitative values of peaks for each sample and are color-coded to highlight different samples.
+
+4. **Overlay of Line Chart and Scatter Plot**: Combines lines and points representing genomic data, where lines show trends across chromosome 1, and the size of the points indicates peak expression. Both elements are color-coded based on sample categories, providing insight into data variability across samples.
+
+Tooltip functionality provides detailed information about genomic positions and values upon interaction, enhancing data exploration and analysis capabilities. This visualization effectively encapsulates complex genomic data into comprehensible visual formats for easier interpretation.

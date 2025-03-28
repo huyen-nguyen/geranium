@@ -1,0 +1,1 @@
+A linear scatter plot visualizes a multivec file showing the entire genome of hg38. Points represent genomic positions on the x-axis and quantitative values on the y-axis, with their size also reflecting the y-values. All points are colored green to encode a specific data field, and the chart spans a width of 672 and a height of 156 pixels.

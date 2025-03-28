@@ -1,0 +1,1 @@
+A linear layout displays a multivec file, visualizing the hg38 genome. The x-axis represents genomic positions, and the y-axis shows quantitative expression values. A purple line encodes the peak values across the genome. The chart width is 672 pixels, with a height of 246 pixels.

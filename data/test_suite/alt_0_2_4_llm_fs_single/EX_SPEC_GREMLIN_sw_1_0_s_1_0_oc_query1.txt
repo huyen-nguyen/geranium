@@ -1,0 +1,5 @@
+The visualization consists of three tracks in a linear layout showcasing chromosome 5. The first track is an ideogram, where chromosome bands are represented as rectangles in shades of grey, black, and pink for centromeric regions. Names of significant regions are annotated in black text above and below the bands, with a blue interactive brush linking to another view.
+
+The second track shows a set of overlaid rectangles representing genomic data from three chromosomes (hs5, hs4, hs6), differentiated by color: blue, orange, and green. The rectangles are arranged in rows and correspond to data from these chromosomes, with a brush linking to an alternative view.
+
+The third track visualizes genomic connections. WithinLink marks illustrate relationships within chromosome 5, depicted as curved connections in green. These are styled with an elliptical link style and semi-transparent strokes. Overall, the visualization provides a layered insight into segmental duplications and connections within chromosome 5.

@@ -1,0 +1,1 @@
+A line chart in a linear layout visualizes a multivec file, representing the entire genome of hg38. The x-axis displays genomic positions, and the y-axis shows quantitative data named 'peak.' Lines in the chart are colored sky blue and have a thickness of 2 units. The visualization covers the entire range from chromosome 1 to chromosome Y.

@@ -1,0 +1,1 @@
+A multi-row bar chart in a linear layout visualizes a multivec file, showing chromosome 1 from position 1 to 3,000,500. The chart displays four samples named 'sample 1', 'sample 2', 'sample 3', and 'sample 4' in blue, orange, green, and red, respectively. The y-axis represents quantitative values using 'peak_min' and 'peak_max'. The title and subtitles are not specified.

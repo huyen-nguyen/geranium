@@ -1,0 +1,5 @@
+This visualization features two horizontally arranged linear bar charts representing genomic data from multivec files. Each track spans specific genomic intervals with separate x-domains: the top track displays chromosome 9 from 5,000,000 to 15,000,000, and the bottom track displays chromosome 12 within the same range.
+
+In both tracks, the genomic positions are plotted on the x-axis and the quantitative values of "peak" on the y-axis. The top track features bars colored in orange, while the bottom track uses dark yellow bars, each with a white stroke. Both tracks have fixed widths of 294 pixels and heights set at 91 pixels, providing a compact visualization display.
+
+Configured to adapt to responsive sizing, the chart transitions to a vertical layout if the screen width is less than 1200 pixels. Both tracks are linked by a responsive identifier, allowing synchronized navigation and improved interactivity across the dataset.

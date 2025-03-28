@@ -1,0 +1,13 @@
+The visualization is an overlaid genomic matrix with annotations and points using the hg38 assembly. It includes multiple tracks:
+
+1. **Matrix Overlay**: The matrix track displays genomic data with both x- and y-axes showing genomic intervals. Expression values are encoded using a viridis color scale, helping to visualize the density of genomic features.
+
+2. **Vertical Lines Track**: Red vertical lines are annotated on the x-axis, indicating significant genomic positions such as specified positions on chromosomes 2, 5, and 10.
+
+3. **Horizontal Lines Track**: Blue horizontal lines on the y-axis provide additional genomic annotations, corresponding to the same positions as the vertical lines.
+
+4. **Bar Track**: Genomic data is also represented in a bar format, with each bar's color representing different quantitative values (v). This track highlights the interval and position relationships between genomic features across chromosomes 6, 7, and 8.
+
+5. **Point Chart**: A point chart is overlaid, showing genomic data with both the x- and y-axes representing genomic intervals. Points are colored steel blue where the size of each point corresponds to quantitative values (v) and reveals specific genomic data points, adding depth to the data visualization.
+
+Overall, this chart provides a comprehensive view of genomic interactions, using different visual encodings to highlight the relationships and density of genomic data across various chromosomes.

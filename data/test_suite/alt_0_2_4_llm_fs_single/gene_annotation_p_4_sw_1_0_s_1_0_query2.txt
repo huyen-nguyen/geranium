@@ -1,0 +1,9 @@
+The visualization presents a linear layout displaying genomic data for chromosome 3 between positions 52,168,000 and 52,890,000. It consists of three vertical panels:
+
+1. **Top Panel**: Genomic range annotation with text labels for gene names along the x-axis. Exons are shown as purple rectangles with gray outlines. Forward and reverse strands are represented by right and left gray triangles, respectively.
+
+2. **Middle Panel**: Genomic range annotation shows genes along the x-axis, differentiated by strand. Forward strands are blue and reverse strands are red. Exons are represented as small rectangles, while introns are depicted as thin lines.
+
+3. **Bottom Panel**: A simple genomic range annotation displays gene positions with gray rectangles for the entire gene, red for exons, and cyan for introns.
+
+Each panel is stratified by strand orientation, emphasizing the genomic structure and intervals of genes within the specified region.
