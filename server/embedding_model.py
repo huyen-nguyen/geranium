@@ -91,24 +91,43 @@ class VisRAGModel:
         
         return embeddings
 
-    def rag_infer(self, query, top_k=5):
+    def rag_infer(self, query, desc_embedding, name_dict, top_k=5):
+        """
+        Perform inference using the RAG model to find the top-k most similar items.
+
+        Args:
+            query (str): The input query string.
+            desc_embedding (torch.Tensor): The precomputed description embeddings.
+            name_dict (dict): A dictionary mapping indices to item names.
+            top_k (int): The number of top results to return.
+
+        Returns:
+            list: A list of top-k most similar item names.
+        """
         if self.rag_model is None:
             print("Model not loaded. Cannot perform inference.")
             return []
-            
-        torch.cuda.empty_cache()
+        
+        if desc_embedding is None or not name_dict:
+            print("Description embeddings or name dictionary are not provided.")
+            return []
+
+        # Encode the query
         queries = [query]
         query_embeddings = self.rag_model.encode(
-            queries, prompt="", normalize_embeddings=True
+            queries, normalize_embeddings=True
         )
-        if self.desc_embedding is None:
-            print("No desc_embedding")
-            exit()
-        scores = self.rag_model.similarity(
-            query_embeddings, self.desc_embedding)
-        top_k = min(top_k, len(self.name))
-        top_k_indices = torch.topk(scores, top_k).indices.tolist()[0]
-        top_k_names = [self.name[i] for i in top_k_indices]
+
+        # Calculate similarity scores
+        scores = torch.matmul(
+            torch.tensor(query_embeddings), torch.tensor(desc_embedding).T
+        )
+
+        # Get top-k indices and corresponding names
+        top_k = min(top_k, len(name_dict))
+        top_k_indices = torch.topk(scores[0], top_k).indices.tolist()
+        top_k_names = [name_dict[i] for i in top_k_indices]
+
         return top_k_names
     
 def save_embeddings(query_list, reference_list, rag_model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"):
