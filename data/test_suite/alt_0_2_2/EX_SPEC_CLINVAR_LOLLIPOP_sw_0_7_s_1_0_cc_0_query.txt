@@ -1,0 +1,1 @@
+Genomic visualization with right and left triangles, ideogram, text, and vertical lines; HiGlass chart stratified by category with genomic intervals and lightgray bars.

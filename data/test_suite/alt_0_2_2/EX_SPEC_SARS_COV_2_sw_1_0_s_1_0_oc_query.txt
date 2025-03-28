@@ -1,0 +1,1 @@
+Genomic visualization figure with multiple charts showing NC_045512.2 genes, S protein annotation, sequence bars, and TRS-L-dependent recombination events with connections in navy blue.
