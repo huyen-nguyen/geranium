@@ -1,0 +1,7 @@
+The visualization consists of two horizontally arranged tracks displaying genomic range annotations for chromosome 3 between positions 52,168,000 and 52,890,000. 
+
+The top track uses triangular markers, text, and lines to denote gene locations and orientations. The genes on the positive strand are marked with right-pointing triangles and colored in blue (#7585FF), whereas those on the negative strand use left-pointing triangles and are colored in red (#FF8A85). Gene names are annotated above the corresponding genomic locations.
+
+The second track similarly represents gene locations with smaller text annotations and rectangular markers. The genes are again differentiated by strand: blue for the positive strand and red for the negative strand. Larger rectangles mark exons within the gene regions, and small rectangles or lines indicate the start or end of gene sequences.
+
+Both tracks are aligned in a linear view, displaying detailed gene annotations over the specified genomic interval.

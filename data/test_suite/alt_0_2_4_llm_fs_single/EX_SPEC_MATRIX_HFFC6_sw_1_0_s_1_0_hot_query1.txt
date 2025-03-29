@@ -1,0 +1,9 @@
+A horizontal genome visualization divided into two sections: a vertical track and a horizontal track. The vertical track displays a bar chart of H3K4me3 bigWig data on chromosome 7 between 77,700,000 and 81,000,000, presented as dark green bars showing expression levels. The horizontal track contains three sub-tracks:
+
+1. Overlaid bar charts showing expression from three bigWig files: H3K4me3 (dark green bars), Atacseq (orange bars), and CTCF (navy blue bars), along with genomic position annotation using right (pink) and left (green) triangles.
+   
+2. A heatmap matrix visualizing a genomic Hi-C matrix file. The diagonal orange gradient indicates genomic interactions, with both axes representing genomic intervals.
+
+3. A multivector file displaying various genomic features categorized and color-coded (e.g., Active TSS in red, Enhancers in yellow).
+
+The layout emphasizes genomic data interactions across a specified interval on chromosome 7 while utilizing a consistent color scheme and clear contrast.

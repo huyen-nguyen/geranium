@@ -1,0 +1,5 @@
+The visualization consists of a circular view with two primary tracks. The top track is a circular bar chart displaying genomic intervals on the x-axis and quantitative expressions on the y-axis, represented with colored bars. The chart is organized into four rows, each corresponding to different sample categories ('sample 1' to 'sample 4'), with each category distinguished by a specific color.
+
+The second track is a circular chart featuring connections between different genomic positions, showcasing interactions or rearrangements. The connections are color-coded, with pink denoting shared categories of deletion, inversion, translocation, and tandem-duplication. The circular layout provides a comprehensive overview, with interactive blue and red brushes allowing for detailed exploration by linking to other charts.
+
+This visualization uses genomic datasets in multivec and CSV formats, focusing on specific chromosomes and their interactions. The circular design accentuates the connectivity and complexity of genomic data across different samples and categories.

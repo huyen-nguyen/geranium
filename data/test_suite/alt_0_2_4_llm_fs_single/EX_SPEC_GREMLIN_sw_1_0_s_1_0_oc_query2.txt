@@ -1,0 +1,5 @@
+A linear visualization with two stacked views showcases genomic connections. The top chart spans chromosome 5 from 68,000,000 to 71,000,000, divided into three categories: "hs5," "hs4," and "hs6," visualized with elliptical link connections. The rows are colored by stroke, featuring blue, tan, and green hues for different categories, while opacity is set to 0.4 and stroke width to 2. The visualization's layout is linear with a width of 800 and a height of 230.
+
+The bottom chart is a more detailed view of a section within chromosome 5, from 69,276,000 to 69,282,000. It retains the same elliptical link style but focuses only on category "hs5," highlighted with a bold blue stroke of 6 width and the same opacity. This segment is presented with a width of 600 and height of 230. 
+
+Overall, this visualization uses the elliptical style to delineate genomic connections across specified chromosomal regions, emphasizing diverse genomic interactions using distinct row separation and color coding based on category.

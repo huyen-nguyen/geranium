@@ -1,0 +1,18 @@
+The visualization consists of three stacked linear charts spanning the region of chromosome 1 from base 1 to 3,000,500. 
+
+1. **Scatter Plot:**
+   - The top chart visualizes genomic data using points, where the x-axis represents genomic positions and the y-axes show quantitative "peak" values.
+   - Colors of the points differentiate among four samples ('sample 1' to 'sample 4').
+   - The size and color of each point correlate to its "peak" value and sample category, respectively.
+
+2. **Area Chart:**
+   - The middle chart displays an area plot, with genomic positions on the x-axis and quantitative "peak" values on the y-axes.
+   - This chart is stratified by rows for each sample, with color filling differentiating among the four samples.
+   - White lines outline each area plot, enhancing visibility.
+
+3. **Connection Plot:**
+   - The bottom chart illustrates connections within chromosome 1 between specified genomic intervals.
+   - Curved lines represent links between genomic positions, colored based on categories defined by starting positions (field 's1').
+   - This chart focuses on the extensive interval between bases 103,900,000 and 104,100,000, illustrating complex interconnections within this segment.
+
+Overall, this visualization provides a comprehensive view of genomic data from multiple samples, using point and area representations for quantitative values and connections for positional relationships.

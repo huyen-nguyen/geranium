@@ -1,0 +1,3 @@
+### Description
+
+A scatter plot in a linear layout visualizes a multivec file along chromosome 1, ranging from 1 to 3,000,500. The plot displays genomic positions on the x-axis and peak values on the y-axis. Points represent peaks, with size and color encoded by quantitative values and categorical sample names, respectively. Categories include 'sample 1', 'sample 2', 'sample 3', and 'sample 4'. The opacity of points is set to 0.5. The visualization is interactive, providing tooltips for start and end positions, peak values, and sample names.
