@@ -1,4 +1,4 @@
-query	groundtruth
+query	original
 AREA_sw_0_7_s_0_7_cc_0_query	AREA_sw_0_7_s_0_7_cc_0
 AREA_sw_0_7_s_1_0_cc_1_query	AREA_sw_0_7_s_1_0_cc_1
 AREA_sw_0_7_s_1_2_cc_3_query	AREA_sw_0_7_s_1_2_cc_3
@@ -203,3 +203,4 @@ stratified-point_p_0_sw_0_7_s_0_7_cc_0_query	stratified-point_p_0_sw_0_7_s_0_7_c
 stratified-point_p_0_sw_1_2_s_1_2_oc_query	stratified-point_p_0_sw_1_2_s_1_2_oc
 viridis-heatmap_p_0_sw_0_7_s_0_7_cc_0_query	viridis-heatmap_p_0_sw_0_7_s_0_7_cc_0
 viridis-heatmap_p_0_sw_1_2_s_1_0_oc_query	viridis-heatmap_p_0_sw_1_2_s_1_0_oc
+	
