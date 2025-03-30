@@ -1,0 +1,11 @@
+The visualization is a circular plot representing genomic data. It includes several layered tracks displaying different aspects of chromosome structure and variations:
+
+1. **Circular Ideogram**: Displays the genome in intervals along the circular x-axis. The ideogram uses color-coded rectangles to denote different chromosomal banding patterns such as gneg, gpos25, and others. A blue brush links it to another chart.
+
+2. **Text Annotation**: Stratified by rows for categorical data, the circular chart uses black text to annotate genomic positions with combined labels derived from genetic and biallelic data.
+
+3. **Gain and Loss of Heterozygosity (LOH) Tracks**: Two separate tracks display chromosomal regions with color-coded rectangles. Gains are shown in light blue rectangles, while LOH regions are in dark orange.
+
+4. **Structural Variations (SV) Connections**: Links within the circular chart illustrate genomic relationships. Lines are colored and stroked based on categories of structural variants, including translocations, duplications, deletions, and inversions, depicted in various colors such as light grey, green, and dark blue.
+
+This comprehensive circular layout enables the examination of chromosomal structures and variation types using a color-coded, multi-track approach.

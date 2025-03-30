@@ -1,0 +1,3 @@
+### Description
+
+This visualization is a heat map with a linear layout that displays genomic interactions. It utilizes a matrix file to show interactions across the entire human genome assembly hg38. Both the x-axis and y-axis represent genomic intervals, and the data is shown as rectangular marks. The color intensity of each rectangle corresponds to a quantitative value, revealing patterns of genomic interactions through varying shades of grey. The visualization has dimensions of 606 by 510 pixels and presents static data with no interactive elements.

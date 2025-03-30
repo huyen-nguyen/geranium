@@ -1,0 +1,3 @@
+**Description:**
+
+A circular visualization shows genomic data from chromosome 1 using a two-track layout. The outer track is a multivec bar chart where expression values (peaks) are visually represented by the height of bars, which are grouped into four categories ('sample 1' to 'sample 4') and colored accordingly for differentiation. The inner track is a circular ideogram representing genomic intervals from a human genome (HG38), using rectangles colored by staining patterns ('gneg', 'gpos25', etc.) to indicate different genomic regions. The layout consists of chromosomal arrangement around the circle's circumference, integrating both quantitative data (peaks) and qualitative genomic features (stain color).

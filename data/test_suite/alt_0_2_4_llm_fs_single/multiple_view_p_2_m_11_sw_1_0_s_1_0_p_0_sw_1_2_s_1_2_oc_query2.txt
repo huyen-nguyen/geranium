@@ -1,0 +1,7 @@
+The visualization presents two distinct charts arranged horizontally, each focusing on chromosome 3 data from a multivec dataset. 
+
+On the left, a linear area chart displays genomic intervals along the x-axis with quantitative peaks on the y-axis. The data is categorized into four samples—samples 1 through 4—each represented by distinct colors across four stratified rows. An interactive brush links this chart to the right chart.
+
+The right chart is a circular line chart, offering another view of the same genomic data. Here, the chromosomal positions are similarly displayed on the x-axis, with quantitative peaks plotted as lines along the y-axis. The chart is divided into concentric rows matching the categories of the linear chart, maintaining the color coding to indicate different samples. This chart also features an interactive brush linking back to the left chart.
+
+As a whole, this visualization facilitates comparative genomic analysis by showing both linear and circular representations of the data, with an interactive element to explore different genomic regions in detail.

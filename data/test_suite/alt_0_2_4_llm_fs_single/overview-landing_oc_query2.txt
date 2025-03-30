@@ -1,0 +1,11 @@
+The visualization displays four charts in a linear layout arranged vertically, focusing on chromosome 1 between positions 1 and 3,000,500.
+
+1. **Scatter Plot**: The first chart presents a scatter plot where genomic positions are on the x-axis, and expression values, shown by points on the y-axis, reflect their magnitude and significance through size and color. The color differentiates categories among samples 1 to 4. 
+
+2. **Area Chart**: The second chart is an area chart, stratified by rows for each sample category. It represents expression values with colored areas, showcasing variations across the genomic range. The layout highlights individual contributions by each sample.
+
+3. **Bar Chart**: The third chart illustrates a bar chart that represents expression ranges between `peak_min` and `peak_max`. The chart is stratified by row categories with distinct colors for samples, showing the distribution over the genomic range.
+
+4. **Association Connections**: The final chart uses connection lines to indicate genomic associations. It spans from position 103,900,000 to 104,100,000 on chromosome 1, with connections color-coded to emphasize different segments.
+
+The entire visualization is set within the genomic context of the human genome assembly hg38, maintaining alignment and consistency across views. The color legend and interactive tooltips enhance data exploration by providing detailed annotations and categorical insights.

@@ -1,0 +1,11 @@
+A circular visualization showing genomic data on chromosome 1, ranging from position 1 to 3,000,500. The figure consists of four circular charts arranged vertically, each illustrating different aspects of the genomic data.
+
+1. **Circular Scatter Plot**: Displays genomic positions on the x-axis and expression values as points on the y-axis, sized according to the 'peak' field. The plot is stratified by 'sample' rows, with colors representing different samples: sample 1 (blue), sample 2 (orange), sample 3 (green), and sample 4 (red). The plot includes tooltips for start and end positions, peak value, and sample name.
+
+2. **Circular Scatter Plot with Grid**: Similar to the first scatter plot, but with grid lines for better visibility. Points are colored by sample categories and have a consistent opacity of 0.5.
+
+3. **Circular Chart with Connections**: Illustrates connections between genomic intervals on the x-axis, colored by starting position. Each connection is semi-transparent with a stroke color of black and a width of 0.5.
+
+4. **Circular Area Chart**: Displays genomic positions on the x-axis and expression values as areas on the y-axis. The areas are stratified by 'sample', with colors indicating different samples, and have white strokes around them.
+
+This visualization provides a comprehensive view of genomic data, utilizing various types of circular plots to convey information about expression levels, sample differences, and genomic connections
