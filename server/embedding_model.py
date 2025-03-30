@@ -40,7 +40,8 @@ class VisRAGModel:
     def load_desc_embedding(self, desc_dict, name):
         keys = list(desc_dict.keys())
         all_value_str = [desc_dict[key] for key in keys]
-        md5_value = get_md5(json.dumps(keys, sort_keys=True))
+        combined_key_value = {key: desc_dict[key] for key in keys}
+        md5_value = get_md5(json.dumps(combined_key_value, sort_keys=True))
         print("get the md5 value of keys:", md5_value)
         embedding_path = self.rag_model_name.split(
             '/')[-1] + "embedding_" + name + '_' + md5_value + ".pt"
@@ -130,14 +131,14 @@ class VisRAGModel:
 
         return top_k_names
     
-def save_embeddings(query_list, reference_list, rag_model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"):
+def save_embeddings(query_list, reference_list, rag_model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac03270324-txt-bs256-8ep"):
     embedding_model = VisRAGModel(rag_model_name)
     query_embedding = embedding_model.load_desc_embedding(query_list, name='query')
     reference_embedding = embedding_model.load_desc_embedding(reference_list, name='reference')
     return query_embedding, reference_embedding
 
 # Example usage of class method for loading embeddings
-def load_saved_embeddings(query_dict, reference_dict, model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"):
+def load_saved_embeddings(query_dict, reference_dict, model_name="/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac03270324-txt-bs256-8ep"):
     """Helper function to load saved embeddings using the class method without loading the model"""
     # Initialize with load_model=False to skip model loading
     embedding_model = VisRAGModel(model_name, load_model=False)
@@ -229,39 +230,41 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
     # Calculate summary statistics
     total_queries = len(evaluation_result)
     queries_with_match = sum(1 for result in evaluation_result if result['smallest_k_matched'] is not None)
-    top_1_matches = sum(1 for result in evaluation_result if result['smallest_k_matched'] == 1)
-    top_5_matches = sum(1 for result in evaluation_result if result['smallest_k_matched'] is not None and result['smallest_k_matched'] <= 5)
-    
+
+    top_k_matches = {}
+    for k in range(1, 6):
+        top_k_matches[k] = sum(
+            1 for result in evaluation_result
+            if result['smallest_k_matched'] is not None and result['smallest_k_matched'] <= k
+        )
+
+    # Print results
     print(f"Total Queries: {total_queries}")
     print(f"Queries with at least one match: {queries_with_match}")
-    print(f"Top-1 Accuracy: {top_1_matches/total_queries:.4f}")
-    print(f"Top-5 Accuracy: {top_5_matches/total_queries:.4f}")
-    
+    for k in range(1, 6):
+        accuracy = top_k_matches[k] / total_queries if total_queries > 0 else 0
+        print(f"Top-{k} Accuracy: {accuracy:.4f}")
+
+    # Return summary
     return {
         "total_queries": total_queries,
         "queries_with_match": queries_with_match,
-        "top_1_accuracy": top_1_matches/total_queries if total_queries > 0 else 0,
-        "top_5_accuracy": top_5_matches/total_queries if total_queries > 0 else 0,
+        **{f"top_{k}_accuracy": (top_k_matches[k] / total_queries if total_queries > 0 else 0) for k in range(1, 6)},
         # "detailed_results": evaluation_result
     }
 
+
 # Example usage
-text_dict = transform_files_to_dict('../data/test_suite/alt', '.txt')
+text_dict_alt = transform_files_to_dict('../data/test_suite/alt', '.txt')
+text_dict_alt_llm = transform_files_to_dict('../data/test_suite/alt_0_2_4_llm_fs_single', '.txt')
 spec_dict = transform_files_to_dict('../data/test_suite/specs', '.json')
 
-# Choose one of these options:
+# Generate embeddings for both text dictionaries
+print("\n=== Generating embeddings for alt dataset ===")
+text_embedding_alt, spec_embedding_alt = save_embeddings(text_dict_alt, spec_dict)
 
-# Option 1: Generate embeddings by loading the model (default behavior)
-# text_embedding, spec_embedding = save_embeddings(text_dict, spec_dict)
-
-# Option 2: Load pre-computed embeddings without loading the model
-model_name = "/n/holylfs06/LABS/mzitnik_lab/Lab/shgao/bioagent/vis/rag_train/gte-Qwen2-1.5B-spac-txt-bs256"
-embedding_model = VisRAGModel(model_name, load_model=False)  # Skip loading the actual model
-embeddings = embedding_model.load_embeddings_from_disk(
-    [text_dict.keys(), spec_dict.keys()], 
-    ['query', 'reference']
-)
-text_embedding, spec_embedding = embeddings
+print("\n=== Generating embeddings for alt_0_2_4_llm_fs_single dataset ===")
+text_embedding_alt_llm, spec_embedding_alt_llm = save_embeddings(text_dict_alt_llm, spec_dict)
 
 # Load ground truth data - URL can't be opened directly, need to download the file first
 import requests
@@ -273,12 +276,34 @@ except:
     print("Could not load ground truth data from URL. Please download the file manually.")
     gt_data = {}
 
-# Run evaluation in both directions
-if text_embedding is not None and spec_embedding is not None:
-    evaluation_summary = evaluate_embeddings(text_embedding, spec_embedding, gt_data, text_dict, spec_dict)
-    print("Text to Spec Evaluation Summary:", evaluation_summary)
+# Evaluate the first dataset (alt)
+if text_embedding_alt is not None and spec_embedding_alt is not None:
+    print("\n=== Results for alt dataset ===")
+    evaluation_summary_alt = evaluate_embeddings(text_embedding_alt, spec_embedding_alt, gt_data, text_dict_alt, spec_dict)
+    print("Text to Spec Evaluation Summary (alt):", evaluation_summary_alt)
 
-    evaluation_summary = evaluate_embeddings(spec_embedding, text_embedding, gt_data, spec_dict, text_dict)
-    print("Spec to Text Evaluation Summary:", evaluation_summary)
+    evaluation_summary_alt_reverse = evaluate_embeddings(spec_embedding_alt, text_embedding_alt, gt_data, spec_dict, text_dict_alt)
+    print("Spec to Text Evaluation Summary (alt):", evaluation_summary_alt_reverse)
 else:
-    print("Embeddings could not be loaded. Please generate them first using save_embeddings().")
+    print("Embeddings for alt dataset could not be loaded.")
+
+# Evaluate the second dataset (alt_0_2_4_llm_fs_single)
+if text_embedding_alt_llm is not None and spec_embedding_alt_llm is not None:
+    print("\n=== Results for alt_0_2_4_llm_fs_single dataset ===")
+    evaluation_summary_alt_llm = evaluate_embeddings(text_embedding_alt_llm, spec_embedding_alt_llm, gt_data, text_dict_alt_llm, spec_dict)
+    print("Text to Spec Evaluation Summary (alt_llm):", evaluation_summary_alt_llm)
+
+    evaluation_summary_alt_llm_reverse = evaluate_embeddings(spec_embedding_alt_llm, text_embedding_alt_llm, gt_data, spec_dict, text_dict_alt_llm)
+    print("Spec to Text Evaluation Summary (alt_llm):", evaluation_summary_alt_llm_reverse)
+else:
+    print("Embeddings for alt_0_2_4_llm_fs_single dataset could not be loaded.")
+
+# Compare results
+print("\n=== Comparison of Top-k Accuracy between datasets ===")
+if 'evaluation_summary_alt' in locals() and 'evaluation_summary_alt_llm' in locals():
+    print("Text to Spec direction:")
+    for k in range(1, 6):
+        alt_accuracy = evaluation_summary_alt.get(f"top_{k}_accuracy", 0)
+        alt_llm_accuracy = evaluation_summary_alt_llm.get(f"top_{k}_accuracy", 0)
+        diff = alt_llm_accuracy - alt_accuracy
+        print(f"Top-{k}: alt={alt_accuracy:.4f}, alt_llm={alt_llm_accuracy:.4f}, diff={diff:.4f}")
