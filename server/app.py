@@ -55,11 +55,17 @@ def get_inference():
 
     # Inference
     if search_type == "Text":
-        text_embeddings = text_query_top_k(
-            model, tokenizer, device, search_content, text_embeddings
+        text_0_2_4_llm_fs_single_embeddings = text_query_top_k(
+            model,
+            tokenizer,
+            device,
+            search_content,
+            text_0_2_4_llm_fs_single_embeddings,
         )
         top_k_file_names = (
-            text_embeddings.sort_values(by="similarity", ascending=False)
+            text_0_2_4_llm_fs_single_embeddings.sort_values(
+                by="similarity", ascending=False
+            )
             .head(k)
             .file_name.tolist()
         )
@@ -152,7 +158,9 @@ def get_all_modalities(file_names):
 
     for file_name in file_names_wo_extensions:
         # text
-        text_base_path = os.path.join("../data/unified/alt_0_2_2/", file_name)
+        text_base_path = os.path.join(
+            "../data/unified/alt_0_2_4_llm_fs_single/", file_name
+        )
         text = open(text_base_path + ".txt", "r").read()
         texts.append(text)
 
