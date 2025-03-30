@@ -46,7 +46,7 @@ def get_inference():
     (
         text_embeddings,
         image_embeddings,
-        spec_embeddings,
+        spec_freq_embeddings,
         text_0_2_4_embeddings,
         text_0_2_4_llm_fs_single_embeddings,
         spec_onhot_embeddings,
@@ -87,9 +87,9 @@ def get_inference():
         top_k = get_all_modalities(top_k_file_names)
         return jsonify({"data": top_k})
     elif search_type == "Spec":
-        spec_embeddings = spec_query_top_k(search_content, spec_embeddings)
+        spec_freq_embeddings = spec_query_top_k(search_content, spec_freq_embeddings)
         top_k_file_names = (
-            spec_embeddings.sort_values(by="similarity", ascending=False)
+            spec_freq_embeddings.sort_values(by="similarity", ascending=False)
             .head(k)
             .file_name.tolist()
         )
