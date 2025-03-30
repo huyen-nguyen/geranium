@@ -270,7 +270,7 @@ text_embedding_alt_llm, spec_embedding_alt_llm = save_embeddings(text_dict_alt_l
 import requests
 try:
     # This is just an example approach - in practice you would download the file first
-    response = requests.get("https://raw.githubusercontent.com/huyen-nguyen/geranium/evaluation/evaluation/siblings.json")
+    response = requests.get("https://raw.githubusercontent.com/huyen-nguyen/geranium/main/evaluation/siblings.json")
     gt_data = response.json()
 except:
     print("Could not load ground truth data from URL. Please download the file manually.")
