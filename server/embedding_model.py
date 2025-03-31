@@ -45,6 +45,16 @@ class VisRAGModel:
         print("get the md5 value of keys:", md5_value)
         embedding_path = self.rag_model_name.split(
             '/')[-1] + "embedding_" + name + '_' + md5_value + ".pt"
+
+        desc_embedding = None
+        # print("\033[92mInferring the desc_embedding.\033[0m")
+        # desc_embedding = self.rag_model.encode(
+        #     all_value_str, prompt="", normalize_embeddings=True
+        # )
+        # torch.save(desc_embedding, embedding_path)
+        
+        # print("\033[92mFinished inferring the desc_embedding.\033[0m")
+
         try:
             desc_embedding = torch.load(
                 embedding_path, weights_only=False)
@@ -168,7 +178,7 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
     if query_embedding is None or reference_embedding is None:
         print("Embeddings are not loaded properly.")
         return
-
+    # print(query_embedding.shape)
     # Calculate similarity scores
     similarity_scores = torch.matmul(
         torch.tensor(query_embedding), torch.tensor(reference_embedding).T
@@ -185,13 +195,13 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
         ground_truth = query_file_name.split('_query')[0] if '_query' in query_file_name else query_file_name.split('.')[0]
         
         # Get siblings for this ground truth
-        ground_truths = [ground_truth]
+        ground_truths = []
         if ground_truth in gt_data:
             ground_truths.extend(gt_data[ground_truth])
         
         # Get similarities for this query
         scores = similarity_scores[i]
-        
+
         # Create dataframe-like structure for sorting
         embeddings = []
         for j, reference_key in enumerate(reference_keys):
@@ -254,18 +264,6 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
     }
 
 
-# Example usage
-text_dict_alt = transform_files_to_dict('../data/test_suite/alt', '.txt')
-text_dict_alt_llm = transform_files_to_dict('../data/test_suite/alt_0_2_4_llm_fs_single', '.txt')
-spec_dict = transform_files_to_dict('../data/test_suite/specs', '.json')
-
-# Generate embeddings for both text dictionaries
-print("\n=== Generating embeddings for alt dataset ===")
-text_embedding_alt, spec_embedding_alt = save_embeddings(text_dict_alt, spec_dict)
-
-print("\n=== Generating embeddings for alt_0_2_4_llm_fs_single dataset ===")
-text_embedding_alt_llm, spec_embedding_alt_llm = save_embeddings(text_dict_alt_llm, spec_dict)
-
 # Load ground truth data - URL can't be opened directly, need to download the file first
 import requests
 try:
@@ -276,34 +274,125 @@ except:
     print("Could not load ground truth data from URL. Please download the file manually.")
     gt_data = {}
 
-# Evaluate the first dataset (alt)
-if text_embedding_alt is not None and spec_embedding_alt is not None:
-    print("\n=== Results for alt dataset ===")
-    evaluation_summary_alt = evaluate_embeddings(text_embedding_alt, spec_embedding_alt, gt_data, text_dict_alt, spec_dict)
-    print("Text to Spec Evaluation Summary (alt):", evaluation_summary_alt)
 
-    evaluation_summary_alt_reverse = evaluate_embeddings(spec_embedding_alt, text_embedding_alt, gt_data, spec_dict, text_dict_alt)
-    print("Spec to Text Evaluation Summary (alt):", evaluation_summary_alt_reverse)
-else:
-    print("Embeddings for alt dataset could not be loaded.")
+def get_results(query_dict, reference_dict):
+    # Generate embeddings for both text dictionaries
+    print("\n=== Generating embeddings for alt dataset ===")
+    query_embedding, reference_embedding = save_embeddings(query_dict, reference_dict)
 
-# Evaluate the second dataset (alt_0_2_4_llm_fs_single)
-if text_embedding_alt_llm is not None and spec_embedding_alt_llm is not None:
-    print("\n=== Results for alt_0_2_4_llm_fs_single dataset ===")
-    evaluation_summary_alt_llm = evaluate_embeddings(text_embedding_alt_llm, spec_embedding_alt_llm, gt_data, text_dict_alt_llm, spec_dict)
-    print("Text to Spec Evaluation Summary (alt_llm):", evaluation_summary_alt_llm)
+    evaluation_summary_alt_reverse = evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dict, reference_dict)
+    
 
-    evaluation_summary_alt_llm_reverse = evaluate_embeddings(spec_embedding_alt_llm, text_embedding_alt_llm, gt_data, spec_dict, text_dict_alt_llm)
-    print("Spec to Text Evaluation Summary (alt_llm):", evaluation_summary_alt_llm_reverse)
-else:
-    print("Embeddings for alt_0_2_4_llm_fs_single dataset could not be loaded.")
+# Example usage
+text_dict_alt = transform_files_to_dict('../data/test_suite/alt', '.txt')
+text_dict_alt_llm = transform_files_to_dict('../data/test_suite/alt_0_2_4_llm_fs_single', '.txt')
+spec_dict = transform_files_to_dict('../data/test_suite/specs', '.json')
 
-# Compare results
-print("\n=== Comparison of Top-k Accuracy between datasets ===")
-if 'evaluation_summary_alt' in locals() and 'evaluation_summary_alt_llm' in locals():
-    print("Text to Spec direction:")
-    for k in range(1, 6):
-        alt_accuracy = evaluation_summary_alt.get(f"top_{k}_accuracy", 0)
-        alt_llm_accuracy = evaluation_summary_alt_llm.get(f"top_{k}_accuracy", 0)
-        diff = alt_llm_accuracy - alt_accuracy
-        print(f"Top-{k}: alt={alt_accuracy:.4f}, alt_llm={alt_llm_accuracy:.4f}, diff={diff:.4f}")
+big_text_dict_alt = transform_files_to_dict('../data/unified/alt_0_2_4', '.txt')
+big_text_dict_alt_llm = transform_files_to_dict('../data/unified/alt_0_2_4_llm_fs_single', '.txt')
+big_spec_dict = transform_files_to_dict('../data/unified/specs', '.json')
+
+
+
+print("Text-Big-Text:")
+get_results(text_dict_alt, big_text_dict_alt)
+
+print("Text-Big-LLM:")
+get_results(text_dict_alt, big_text_dict_alt_llm)
+
+print("Text-Big-Spec:")
+get_results(text_dict_alt, big_spec_dict)
+
+print("LLM-Big-Text:")
+get_results(text_dict_alt_llm, big_text_dict_alt)
+
+print("LLM-Big-LLM:")
+get_results(text_dict_alt_llm, big_text_dict_alt_llm)
+
+print("LLM-Big-Spec:")
+get_results(text_dict_alt_llm, big_spec_dict)
+
+print("Spec-Big-Text:")
+get_results(spec_dict, big_text_dict_alt)
+
+print("Spec-Big-LLM:")
+get_results(spec_dict, big_text_dict_alt_llm)
+
+print("Spec-Big-Spec:")
+get_results(spec_dict, big_spec_dict)
+
+
+exit()
+
+# # Evaluate the first dataset (alt)
+# if text_embedding_alt is not None and spec_embedding_alt is not None:
+#     print("\n=== Results for alt dataset ===")
+#     evaluation_summary_alt = evaluate_embeddings(text_embedding_alt, spec_embedding_alt, gt_data, text_dict_alt, spec_dict)
+#     print("Text to Spec Evaluation Summary (alt):", evaluation_summary_alt)
+
+#     evaluation_summary_alt_reverse = evaluate_embeddings(spec_embedding_alt, text_embedding_alt, gt_data, spec_dict, text_dict_alt)
+#     print("Spec to Text Evaluation Summary (alt):", evaluation_summary_alt_reverse)
+# else:
+#     print("Embeddings for alt dataset could not be loaded.")
+
+# # Evaluate the second dataset (alt_0_2_4_llm_fs_single)
+# if text_embedding_alt_llm is not None and spec_embedding_alt_llm is not None:
+#     print("\n=== Results for alt_0_2_4_llm_fs_single dataset ===")
+#     evaluation_summary_alt_llm = evaluate_embeddings(text_embedding_alt_llm, spec_embedding_alt_llm, gt_data, text_dict_alt_llm, spec_dict)
+#     print("Text to Spec Evaluation Summary (alt_llm):", evaluation_summary_alt_llm)
+
+#     evaluation_summary_alt_llm_reverse = evaluate_embeddings(spec_embedding_alt_llm, text_embedding_alt_llm, gt_data, spec_dict, text_dict_alt_llm)
+#     print("Spec to Text Evaluation Summary (alt_llm):", evaluation_summary_alt_llm_reverse)
+# else:
+#     print("Embeddings for alt_0_2_4_llm_fs_single dataset could not be loaded.")
+
+# # Add text-to-text evaluation
+# if text_embedding_alt is not None and text_embedding_alt_llm is not None:
+#     print("\n=== Results for text-to-text evaluation ===")
+#     # Text alt to Text alt_llm
+#     evaluation_summary_text_text = evaluate_embeddings(text_embedding_alt, text_embedding_alt_llm, gt_data, text_dict_alt, text_dict_alt_llm)
+#     print("Text alt to Text alt_llm Evaluation Summary:", evaluation_summary_text_text)
+
+#     # Text alt_llm to Text alt
+#     evaluation_summary_text_text_reverse = evaluate_embeddings(text_embedding_alt_llm, text_embedding_alt, gt_data, text_dict_alt_llm, text_dict_alt)
+#     print("Text alt_llm to Text alt Evaluation Summary:", evaluation_summary_text_text_reverse)
+# else:
+#     print("Embeddings for text-to-text evaluation could not be loaded.")
+
+# # Add text-to-text self-evaluation
+# if text_embedding_alt is not None:
+#     print("\n=== Results for text-to-text self-evaluation ===")
+#     # Text alt to itself
+#     evaluation_summary_text_self_alt = evaluate_embeddings(text_embedding_alt, text_embedding_alt, gt_data, text_dict_alt, text_dict_alt)
+#     print("Text alt to Text alt Self-Evaluation Summary:", evaluation_summary_text_self_alt)
+
+#     # Text alt_llm to itself
+#     if text_embedding_alt_llm is not None:
+#         evaluation_summary_text_self_alt_llm = evaluate_embeddings(text_embedding_alt_llm, text_embedding_alt_llm, gt_data, text_dict_alt_llm, text_dict_alt_llm)
+#         print("Text alt_llm to Text alt_llm Self-Evaluation Summary:", evaluation_summary_text_self_alt_llm)
+# else:
+#     print("Embeddings for text-to-text self-evaluation could not be loaded.")
+
+# # Add spec-to-spec evaluation (self-evaluation)
+# if spec_embedding_alt is not None:
+#     print("\n=== Results for spec-to-spec evaluation ===")
+#     # Spec to itself using alt embeddings
+#     evaluation_summary_spec_spec_alt = evaluate_embeddings(spec_embedding_alt, spec_embedding_alt, gt_data, spec_dict, spec_dict)
+#     print("Spec to Spec Evaluation Summary (using alt embeddings):", evaluation_summary_spec_spec_alt)
+
+#     # Spec to itself using alt_llm embeddings
+#     if spec_embedding_alt_llm is not None:
+#         evaluation_summary_spec_spec_alt_llm = evaluate_embeddings(spec_embedding_alt_llm, spec_embedding_alt_llm, gt_data, spec_dict, spec_dict)
+#         print("Spec to Spec Evaluation Summary (using alt_llm embeddings):", evaluation_summary_spec_spec_alt_llm)
+# else:
+#     print("Embeddings for spec-to-spec evaluation could not be loaded.")
+
+# # Compare results
+# print("\n=== Comparison of Top-k Accuracy between datasets ===")
+# if 'evaluation_summary_alt' in locals() and 'evaluation_summary_alt_llm' in locals():
+#     print("Text to Spec direction:")
+#     for k in range(1, 6):
+#         alt_accuracy = evaluation_summary_alt.get(f"top_{k}_accuracy", 0)
+#         alt_llm_accuracy = evaluation_summary_alt_llm.get(f"top_{k}_accuracy", 0)
+#         diff = alt_llm_accuracy - alt_accuracy
+#         print(f"Top-{k}: alt={alt_accuracy:.4f}, alt_llm={alt_llm_accuracy:.4f}, diff={diff:.4f}")
