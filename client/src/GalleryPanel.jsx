@@ -4,9 +4,13 @@ import './GalleryPanel.css'
 import { LuExpand } from "react-icons/lu";
 import { IoCopy } from "react-icons/io5";
 
-async function copyToClipboard(spec) {
+async function copyToClipboard(spec, setCopyNotification) {
   try {
     await navigator.clipboard.writeText(spec);
+    // Show notification
+    setCopyNotification(true);
+    // Hide notification after 2 seconds
+    setTimeout(() => setCopyNotification(false), 1500);
   } catch (e) {
     throw new Error('Failure to copy a Gosling specification to the clipboard');
   }
@@ -16,6 +20,7 @@ export default function GalleryPanel(props) {
   /* eslint-disable react/prop-types */
   const { data } = props;
   const [selected, setSelected] = useState();
+  const [copyNotification, setCopyNotification] = useState(false);
 
   const modalDetailView = useMemo(() => {
     if (selected) {
@@ -32,10 +37,17 @@ export default function GalleryPanel(props) {
               </div>
               <h3>
                 Specification
+                <div style={{ display: 'inline-block', position: 'relative' }}>
                 <IoCopy
-                  style={{ marginLeft: '0.5rem', color: '#4a4644' }}
-                  onClick={() => copyToClipboard(JSON.stringify(JSON.parse(selected.spec), null, 2))}
-                />
+                  style={{ marginLeft: '0.5rem', color: '#4a4644', cursor: 'pointer' }}
+                  onClick={() => copyToClipboard(JSON.stringify(JSON.parse(selected.spec), null, 2), setCopyNotification)}
+                  />
+                  {copyNotification && (
+                      <div className="copy-notification">
+                        Copied to clipboard!
+                      </div>
+                  )}
+                </div>
               </h3>
               <div className='gallery-item-spec'>
                 <textarea>{JSON.stringify(JSON.parse(selected.spec), null, 2)}</textarea>
@@ -46,7 +58,7 @@ export default function GalleryPanel(props) {
         </div>
       );
     }
-  }, [selected]);
+  }, [selected, copyNotification]);
 
   return (
     <div className='gallery-panel'>
