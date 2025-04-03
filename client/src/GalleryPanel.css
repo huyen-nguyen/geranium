@@ -109,23 +109,27 @@
   width: calc(100% - 2rem);
 }
 
-.copy-notification {
-  position: absolute;
-  top: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  animation: fadeInOut 2s ease;
-  white-space: nowrap;
+h3 div[style*="display: inline-block"] {
+  margin-left: 10px;
 }
 
+/* Update the copy notification positioning */
+.copy-notification {
+  position: absolute;
+  top: -30px;
+  right: -50px; /* Position to the right instead of centering */
+  transform: none; /* Remove the transform that was centering it */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  animation: fadeInOut 1.5s ease;
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+/* Add the animation if it's not already present */
 @keyframes fadeInOut {
   0% { opacity: 0; }
   15% { opacity: 1; }

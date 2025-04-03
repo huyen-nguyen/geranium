@@ -50,9 +50,9 @@ export default function GalleryPanel(props) {
                 </div>
               </h3>
               <div className='gallery-item-spec'>
-                <textarea>{JSON.stringify(JSON.parse(selected.spec), null, 2)}</textarea>
+                <textarea defaultValue={JSON.stringify(JSON.parse(selected.spec), null, 2)}
+                 readOnly/>
               </div>
-
             </div>
           </div>
         </div>
@@ -81,7 +81,10 @@ export default function GalleryPanel(props) {
                 {d.text}
               </div>
               <div className='gallery-item-spec'>
-                <textarea>{JSON.stringify(JSON.parse(d.spec), null, 2)}</textarea>
+               <textarea
+                   defaultValue={JSON.stringify(JSON.parse(d.spec), null, 2)}
+                   readOnly
+               />
               </div>
             </div>
           </div>

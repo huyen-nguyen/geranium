@@ -21,15 +21,15 @@ export default function SearchBySpecPanel(props) {
 
   const specPreview = useMemo(() => {
     return (
-      <textarea className='spec-preview' value={inputSpec ?? ''} onChange={(e) => setInputSpec(e.target.value)} />
+        <textarea className='spec-preview' value={inputSpec ?? ''} onChange={(e) => setInputSpec(e.target.value)} />
     );
   }, [inputSpec]);
 
   return (
-    <div className='search-by-spec-panel'>
-      <input type="file" accept="application/JSON" className='image-upload-button' onChange={(e) => { setInputFile(e.currentTarget.files[0]) }} />
-      {inputFile ? <h3>Preview</h3> : null}
-      {specPreview}
-    </div>
+      <div className='search-by-spec-panel'>
+        <input type="file" accept="application/JSON" className='image-upload-button' onChange={(e) => { setInputFile(e.currentTarget.files[0]) }} />
+        {inputFile ? <h3>Preview</h3> : null}
+        {specPreview}
+      </div>
   );
 }
