@@ -17,3 +17,19 @@
   background: #00000099;
 }
 
+.database-panel {
+  padding: 2rem;
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+}
+
+.database-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 16px;
+}
+
+.database-item {
+  padding: 12px;
+}

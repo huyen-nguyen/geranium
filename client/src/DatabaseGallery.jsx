@@ -19,7 +19,19 @@ export default function DatabaseGallery() {
       return(
         <div id='database' className='database-panel-dark-background' onClick={(e) => e.target.id === 'database' ? setShowDatabase(false) : null}>
           <div className='database-panel'>
-            hello
+            <h2>Gallery</h2>
+            <div className="database-grid">
+              {indexData.length > 0 ?
+              (indexData.map(d => {
+                const title = d.name.split('_')[0].replaceAll('-', ' ').titleCase();
+                return (
+                  <div className="database-item" key={d.name}>
+                    {title}
+                    <img className='gallery-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
+                  </div>
+                )
+              })) : <p>There are no examples to show.</p>}
+            </div>
           </div>
         </div>
       )
