@@ -1,4 +1,5 @@
 .header {
+  display: flex;
   height: 3em;
   width: 100%;
   border-bottom: 1px solid #D3CABD;
@@ -10,4 +11,10 @@
   line-height: 3rem;
   margin: 0;
   margin-left: 1rem;
+  width: 500px;
+  display: inline;
+}
+
+.header > button {
+  align-self: center;
 }
