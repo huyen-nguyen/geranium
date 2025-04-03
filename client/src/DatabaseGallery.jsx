@@ -7,17 +7,10 @@ import ExampleDetailView from './ExampleDetailView';
 import { prettierName } from './utils';
 
 
-export default function DatabaseGallery() {
-
+export default function DatabaseGallery(props) {
+  const { databaseGallery } = props;
   const [showDataBase, setShowDatabase] = useState();
-  const [indexData, setIndexData] = useState([]);
   const [selected, setSelected] = useState();
-
-  const onIndexData = async () => {
-    const results = await axios.get('http://127.0.0.1:5000/api/get_db');
-    console.warn('Database Gallery', results);
-    setIndexData(results.data.data);
-  };
 
   const dataBase = useMemo(() => {
     if (showDataBase) {
@@ -27,8 +20,8 @@ export default function DatabaseGallery() {
             <div className='database-panel-content'>
               <h2>Gallery Overview: Selected Examples</h2>
               <div className='database-grid'>
-                {indexData.length > 0 ?
-                (indexData.map(d => {
+                {databaseGallery.length > 0 ?
+                (databaseGallery.map(d => {
                   const title = prettierName(d.name);
                   return (
                     <div className='database-item' key={d.name}>
@@ -49,16 +42,11 @@ export default function DatabaseGallery() {
         </div>
       )
     }
-  }, [showDataBase, indexData])
+  }, [showDataBase])
 
   return (
     <div>
-      <button onClick={() => {
-        if (indexData.length === 0) {
-          onIndexData();
-        }
-        setShowDatabase(true);
-      }}>Gallery</button>
+      <button onClick={() => setShowDatabase(true)}>Gallery</button>
       {dataBase}
       <ExampleDetailView selected={selected} setSelected={setSelected}/>
     </div>
