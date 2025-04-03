@@ -2,7 +2,15 @@ import { useState } from 'react';
 import { useMemo } from 'react';
 import './GalleryPanel.css'
 import { LuExpand } from "react-icons/lu";
-import { AiTwotoneCloseCircle } from "react-icons/ai";
+import { IoCopy } from "react-icons/io5";
+
+async function copyToClipboard(spec) {
+  try {
+    await navigator.clipboard.writeText(spec);
+  } catch (e) {
+    throw new Error('Failure to copy a Gosling specification to the clipboard');
+  }
+}
 
 export default function GalleryPanel(props) {
   /* eslint-disable react/prop-types */
@@ -22,7 +30,13 @@ export default function GalleryPanel(props) {
               <div className='gallery-item-text'>
                 {selected.text}
               </div>
-              <h3>Specification</h3>
+              <h3>
+                Specification
+                <IoCopy
+                  style={{ marginLeft: '0.5rem', color: '#4a4644' }}
+                  onClick={() => copyToClipboard(JSON.stringify(JSON.parse(selected.spec), null, 2))}
+                />
+              </h3>
               <div className='gallery-item-spec'>
                 <textarea>{JSON.stringify(JSON.parse(selected.spec), null, 2)}</textarea>
               </div>
