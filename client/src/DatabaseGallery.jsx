@@ -11,9 +11,9 @@ export default function DatabaseGallery() {
   const [indexData, setIndexData] = useState([]);
   const [selected, setSelected] = useState();
 
-  const onIndexData = async (type, Text, Image, Spec) => {
+  const onIndexData = async () => {
     const results = await axios.get('http://127.0.0.1:5000/api/get_db');
-    console.warn('New query results', results);
+    console.warn('Database Gallery', results);
     setIndexData(results.data.data);
   };
 
@@ -48,24 +48,26 @@ export default function DatabaseGallery() {
       return(
         <div id='database' className='database-panel-dark-background' onClick={(e) => e.target.id === 'database' ? setShowDatabase(false) : null}>
           <div className='database-panel'>
-            <h2>Gallery</h2>
-            <div className='database-grid'>
-              {indexData.length > 0 ?
-              (indexData.map(d => {
-                const title = prettierName(d.name);
-                return (
-                  <div className='database-item' key={d.name}>
-                    <div className='database-item-title' onClick={() => setSelected(d)}>{title}
-                      <LuExpand style={{
-                        color: '#4a4644',
-                        verticalAlign: 'middle',
-                        marginLeft: '1rem'
-                      }} />
+            <div className='database-panel-content'>
+              <h2>Gallery Overview: Selected Examples</h2>
+              <div className='database-grid'>
+                {indexData.length > 0 ?
+                (indexData.map(d => {
+                  const title = prettierName(d.name);
+                  return (
+                    <div className='database-item' key={d.name}>
+                      <div className='database-item-title' onClick={() => setSelected(d)}>{title}
+                        <LuExpand style={{
+                          color: '#4a4644',
+                          verticalAlign: 'middle',
+                          marginLeft: '1rem'
+                        }} />
+                      </div>
+                      <img className='database-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
                     </div>
-                    <img className='database-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
-                  </div>
-                )
-              })) : <p>There are no examples to show.</p>}
+                  )
+                })) : <p>There are no examples to show.</p>}
+              </div>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@
   background: #00000099;
 }
 
-.database-panel {
+.database-panel-content {
   padding: 2rem;
   height: calc(100% - 4rem);
   overflow-y: auto;
@@ -28,10 +28,15 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
 }
-/* 
+
 .database-item {
-  padding: 12px;
-} */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
 
 .database-item-title {
   color: #4A4644;
@@ -41,7 +46,8 @@
 }
 
 .database-item-thumbnail {
-  width: 400px;
+  width: 100%;
+  height: 300px;
   border: 1px solid #4A4644;
-  height: 100%;
+  object-fit: contain;
 }
