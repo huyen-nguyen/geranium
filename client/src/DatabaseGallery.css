@@ -26,10 +26,22 @@
 .database-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  padding: 16px;
+  gap: 50px;
 }
-
+/* 
 .database-item {
   padding: 12px;
+} */
+
+.database-item-title {
+  color: #4A4644;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.database-item-thumbnail {
+  width: 400px;
+  border: 1px solid #4A4644;
+  height: 100%;
 }
