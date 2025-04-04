@@ -213,8 +213,9 @@ def load_embeddings():
 
 @app.route("/api/get_db", methods=["GET"])
 def get_index_database():
-    index_db_file_names = os.listdir("../data/indexed/imgs")
-    index_db = get_all_modalities(index_db_file_names)
+    index_db_file_names_single = os.listdir("../data/indexed/single_chart")
+    index_db_file_names_multiple = os.listdir("../data/indexed/multiple_chart/imgs")
+    index_db = get_all_modalities(index_db_file_names_single + index_db_file_names_multiple)
     return jsonify({"data": index_db})
 
 
