@@ -15,7 +15,7 @@
 }
 
 .gallery-item:nth-child(odd) {
-    background-color: #bdc4ad;
+    background-color: #D6C8B5;
 }
 
 .gallery-item:nth-child(even) {
@@ -103,7 +103,7 @@
 
 /* Left borders */
 .gallery-item:nth-child(odd) .gallery-item-text {
-    border-left: 0.5rem solid #666E52;
+    border-left: 0.5rem solid #8f725b;
 }
 
 .gallery-item:nth-child(even) .gallery-item-text {
