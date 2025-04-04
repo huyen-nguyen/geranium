@@ -77,31 +77,27 @@
     box-sizing: border-box; /* Include padding in the height calculation */
 }
 
-/* Create inner scrollable container */
-.gallery-item-text::before {
+.gallery-item-text::after {
     content: "";
+    display: block;
     position: absolute;
-    top: 1rem;       /* Same as padding-top */
-    right: 1rem;     /* Same as padding-right */
-    bottom: 1rem;    /* Same as padding-bottom */
-    left: 1rem;      /* Same as padding-left */
-    overflow-y: auto;
-    pointer-events: none; /* Let clicks pass through */
+    inset: 0;
+    pointer-events: none; /* Allow clicking through to content */
+    z-index: 1;
+    border: 1rem solid transparent; /* Creates a non-interactive padding area */
 }
 
-/* Make the actual content scrollable within the padding area */
 .gallery-item-text > * {
-    max-height: calc(30rem - 2rem); /* Account for top and bottom padding */
     overflow-y: auto;
+    max-height: calc(30rem - 2rem); /* Account for padding */
+    margin: 0; /* Reset any margins */
     position: relative;
-    z-index: 1;
-    margin: 0;
+    z-index: 0;
 }
 
 .gallery-item-spec {
     box-sizing: border-box;
 }
-
 
 /* Keep the selected example content display as block */
 .selected-example-content > .gallery-item-text {
