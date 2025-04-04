@@ -144,6 +144,24 @@
     overflow: visible;
 }
 
+.textarea-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4a4644;
+  z-index: 5;
+  padding: 0;
+}
+
 .selected-example-content > .gallery-item-text > * {
     overflow: visible;
     max-height: none;
