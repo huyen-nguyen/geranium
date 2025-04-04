@@ -25,7 +25,7 @@
 /* Gallery layout */
 .gallery-image-text-group {
     display: flex;
-    align-items: stretch;
+    align-items: stretch; /* Ensures all children stretch to match the tallest */
     width: 100%;
 }
 
@@ -45,14 +45,22 @@
     cursor: pointer;
 }
 
+/* Image container */
+.gallery-image-text-group > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the image to the top */
+}
+
 /* Thumbnails */
 .gallery-item-thumbnail {
     width: 100%;
-    height: 100%;
+    max-height: none; /* Remove max-height constraint */
     border: 1px solid #4A4644;
     cursor: pointer;
     object-fit: contain;
     transition: all 0.1s ease;
+    align-self: flex-start; /* Align the image to the top */
 }
 
 .gallery-item-thumbnail:hover {
@@ -68,7 +76,8 @@
 /* Text & spec containers */
 .gallery-item-text,
 .gallery-item-spec {
-    max-height: 30rem;
+    min-height: 0; /* Allow shrinking below default min-height */
+    max-height: none; /* Remove max-height constraint - will be limited by flex parent */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -78,6 +87,7 @@
     background-color: #f5f3ef;
     margin: 0;
     position: relative;
+    flex: 1; /* Allow equal growing */
 }
 
 .gallery-item-text {
@@ -145,21 +155,21 @@
 }
 
 .textarea-copy-btn {
-  position: absolute;
-  top: 10px;
-  right: 40px;
-  background: rgba(255, 255, 255, 0.85);
-  border: none;
-  border-radius: 4px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #4a4644;
-  z-index: 5;
-  padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4a4644;
+    z-index: 5;
+    padding: 0;
 }
 
 .selected-example-content > .gallery-item-text > * {
@@ -356,4 +366,23 @@ h3 div[style*="display: inline-block"] {
     15% { opacity: 1; }
     85% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+/* Set a minimum height for all three sections */
+.gallery-image-text-group > div {
+    min-height: 20rem;
+}
+
+/* Allow scroll when content exceeds container height */
+.gallery-item-text > *,
+.gallery-item-spec > * {
+    max-height: 100%;
+    overflow: auto;
+}
+
+/* Specifically style the first column (image container) to not have a background */
+.gallery-image-text-group > div:first-child {
+    background: none;
+    border: none;
+    padding: 0;
 }
