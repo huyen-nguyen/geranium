@@ -1,11 +1,11 @@
-/* Main layout */
+/* Layout */
 .gallery-panel {
     width: calc(100% - 400px);
     padding: 1rem;
     overflow-y: scroll;
 }
 
-/* Gallery items styling */
+/* Gallery items */
 .gallery-item {
     margin-bottom: 1rem;
     padding: 1rem;
@@ -14,7 +14,6 @@
     border-bottom: 1px solid #D3CABD;
 }
 
-/* Alternating colors for gallery items */
 .gallery-item:nth-child(odd) {
     background-color: #bdc4ad;
 }
@@ -23,14 +22,13 @@
     background-color: #D6C8B5;
 }
 
-/* Gallery image and text layout */
+/* Gallery layout */
 .gallery-image-text-group {
     display: flex;
     align-items: stretch;
     width: 100%;
 }
 
-/* Make columns equal width */
 .gallery-image-text-group > * {
     flex: 1;
     min-width: 0;
@@ -38,7 +36,7 @@
     flex-direction: column;
 }
 
-/* Item titles styling */
+/* Titles */
 .gallery-item-title {
     color: #4A4644;
     font-weight: 600;
@@ -47,7 +45,7 @@
     cursor: pointer;
 }
 
-/* Thumbnails styling */
+/* Thumbnails */
 .gallery-item-thumbnail {
     width: 100%;
     height: 100%;
@@ -61,14 +59,13 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Selected thumbnail in modal */
 .selected-example-content > .gallery-item-thumbnail {
     width: auto;
     height: auto;
     border: 0;
 }
 
-/* Text and spec containers base styles */
+/* Text & spec containers */
 .gallery-item-text,
 .gallery-item-spec {
     max-height: 30rem;
@@ -83,20 +80,18 @@
     position: relative;
 }
 
-/* Text container specific styles */
 .gallery-item-text {
     margin-left: 1rem;
     margin-right: 1rem;
     overflow: auto;
 }
 
-/* Spec container specific styles */
 .gallery-item-spec {
     overflow: visible;
     font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-/* Left border colors for text containers */
+/* Left borders */
 .gallery-item:nth-child(odd) .gallery-item-text {
     border-left: 0.5rem solid #666E52;
 }
@@ -105,7 +100,7 @@
     border-left: 0.5rem solid #8f725b;
 }
 
-/* Padding area for text container */
+/* Padding layer */
 .gallery-item-text::after {
     content: "";
     display: block;
@@ -116,7 +111,7 @@
     border: 1rem solid transparent;
 }
 
-/* Children of text and spec containers */
+/* Child elements inside text/spec blocks */
 .gallery-item-text > *,
 .gallery-item-spec > * {
     overflow: auto;
@@ -125,6 +120,7 @@
     margin: 0;
 }
 
+/* Textareas inside spec */
 .gallery-item-spec textarea {
     width: 100%;
     height: 100%;
@@ -138,7 +134,7 @@
     font-size: 0.8rem;
 }
 
-/* Modal view styling for text container */
+/* Modal view - text container */
 .selected-example-content > .gallery-item-text {
     margin: 0;
     display: block;
@@ -153,7 +149,7 @@
     max-height: none;
 }
 
-/* Modal view styling for spec container */
+/* Modal view - spec container */
 .selected-example-content .gallery-item-spec {
     display: block;
     height: auto !important;
@@ -161,7 +157,7 @@
     overflow: visible;
 }
 
-/* Textarea styling for both containers */
+/* Textareas */
 .gallery-item-text textarea,
 .gallery-item-spec textarea {
     width: 100%;
@@ -174,7 +170,7 @@
     flex-grow: 1;
 }
 
-/* Wrapper containers for textarea with copy button */
+/* Textarea with copy button */
 .gallery-item-text .textarea-with-copy,
 .gallery-item-spec .textarea-with-copy,
 .textarea-with-copy {
@@ -187,7 +183,7 @@
     overflow: visible !important;
 }
 
-/* Textarea styling */
+/* Textarea style */
 .textarea-with-copy textarea {
     width: 100%;
     height: 100%;
@@ -201,11 +197,19 @@
 
 /* Modal view textarea */
 .selected-example-content .textarea-with-copy textarea {
-    width: 100%;
+    width: 100%; /* Full width in modal */
     max-height: 100%;
+    field-sizing: content;
 }
 
-/* Gosling visualization containers */
+.selected-example-content .textarea-with-copy {
+    position: relative;
+    /*width: calc(100% - 2rem); !* Full width minus padding for modal *!*/
+    height: 100%;
+    display: block;
+}
+
+/* Gosling container */
 .gosling-viz-container {
     width: 100%;
     min-height: 200px;
@@ -222,20 +226,18 @@
     margin-bottom: 30px;
 }
 
-/* Modal panel styling */
+/* Modal panel */
 .selected-example-panel {
     position: fixed;
+    top: 10%;
+    left: 10%;
     width: 80%;
     height: 80%;
-    max-width: 90%;
-    max-height: 90vh;
     background: white;
-    left: 10%;
-    top: 10%;
-    border-radius: 0.5rem;
-    z-index: 1000;
     overflow-y: auto;
-    padding: 20px;
+    padding: 2rem;
+    z-index: 1000;
+    border-radius: 0.5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -251,10 +253,12 @@
 
 .selected-example-content {
     padding: 2rem;
-    height: auto;
+    height: calc(100% - 4rem);
     overflow-y: auto;
+    display: block;
 }
 
+/* Modal close button */
 .selected-example-panel-close-button {
     width: 1.5rem;
     height: 1.5rem;
@@ -264,7 +268,7 @@
     cursor: pointer;
 }
 
-/* Headings in modal */
+/* Modal headings */
 .selected-example-content h3 {
     margin-top: 30px;
     border-top: 1px solid #eee;
@@ -279,7 +283,7 @@ h3 div[style*="display: inline-block"] {
     margin-left: 10px;
 }
 
-/* Copy button styling */
+/* Copy button */
 .textarea-copy-btn {
     position: absolute;
     top: 0px;
@@ -327,7 +331,7 @@ h3 div[style*="display: inline-block"] {
     pointer-events: none;
 }
 
-/* Animation for notifications */
+/* Animation */
 @keyframes fadeInOut {
     0% { opacity: 0; }
     15% { opacity: 1; }
