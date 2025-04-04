@@ -7,7 +7,7 @@
 
 /* Alternating colors for gallery items */
 .gallery-item:nth-child(odd) {
-    background-color: #b3b9a2;
+    background-color: #bdc4ad;
 }
 
 .gallery-item:nth-child(even) {
