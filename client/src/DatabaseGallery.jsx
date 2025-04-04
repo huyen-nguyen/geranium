@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import { useMemo } from 'react';
-import axios from 'axios'
+import { useState, useMemo, useEffect } from 'react';
+import axios from 'axios';
 import { LuExpand } from "react-icons/lu";
-import './DatabaseGallery.css'
+import './DatabaseGallery.css';
 import ExampleDetailView from './ExampleDetailView';
 import { prettierName } from './utils';
 
@@ -11,6 +10,14 @@ export default function DatabaseGallery(props) {
   const { databaseGallery } = props;
   const [showDataBase, setShowDatabase] = useState();
   const [selected, setSelected] = useState();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setShowDatabase(false);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const dataBase = useMemo(() => {
     if (showDataBase) {

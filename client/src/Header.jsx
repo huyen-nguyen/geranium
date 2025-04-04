@@ -6,8 +6,13 @@ export default function Header(props) {
 
   return (
     <div className="header">
-      <div className="header-title">
-          <img src="/logo.svg" alt="Geranium Logo" className="logo" />
+      <div 
+        className="header-title" 
+        onClick={() => window.location.reload()} 
+        onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && window.location.reload()}
+        tabIndex="0"
+      >
+        <img src="/logo.svg" alt="Geranium Logo" className="logo" />
         <p>Geranium</p>
       </div>
       <DatabaseGallery databaseGallery={databaseGallery} />
