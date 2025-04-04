@@ -46,7 +46,9 @@ export default function DatabaseGallery(props) {
 
   return (
     <div>
-      <button onClick={() => setShowDatabase(true)}>Gallery</button>
+      <div className="gallery-button">
+        <button onClick={() => setShowDatabase(true)}>Gallery</button>
+      </div>
       {dataBase}
       <ExampleDetailView selected={selected} setSelected={setSelected}/>
     </div>

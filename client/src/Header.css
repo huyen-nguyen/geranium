@@ -1,16 +1,29 @@
 .header {
   display: flex;
-  height: 3em;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid #D3CABD;
+  padding: 0 10px;
 }
 
-.header>p {
+.header-title {
+  width: 480px;
+  display: flex;
+}
+
+.header-title:hover {
+  cursor: pointer;
+}
+
+.header-title>p {
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 3rem;
   margin: 0;
-  margin-left: 1rem;
-  width: 500px;
+  margin-left: 0.5rem;
   display: inline;
+}
+
+.logo {
+  height: 3rem;
 }

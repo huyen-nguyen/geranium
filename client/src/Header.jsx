@@ -6,7 +6,10 @@ export default function Header(props) {
 
   return (
     <div className="header">
-      <p>Geranium</p>
+      <div className="header-title">
+          <img src="/logo.svg" alt="Geranium Logo" className="logo" />
+        <p>Geranium</p>
+      </div>
       <DatabaseGallery databaseGallery={databaseGallery} />
     </div>
   )
