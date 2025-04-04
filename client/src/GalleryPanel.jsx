@@ -16,7 +16,7 @@ export default function GalleryPanel(props) {
   return (
     <div className='gallery-panel'>
       <ExampleDetailView selected={selected} setSelected={setSelected} copyNotification={copyNotification} setCopyNotification={setCopyNotification} />
-      {data.length > 0 ? 
+      {data.length > 0 ?
       <>
         <h2 style={{ marginTop: 0 }}>Search Results</h2>
         {data.map((d, index) => {
@@ -31,7 +31,7 @@ export default function GalleryPanel(props) {
                 }} />
               </div>
               <div className='gallery-image-text-group'>
-                <img className='gallery-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
+                <img className='gallery-item-thumbnail' onClick={() => setSelected(d)} src={`data:image/png;base64,${d.image}` } />
                 <div className='gallery-item-text'>
                   {d.text}
                 </div>
@@ -62,8 +62,8 @@ export default function GalleryPanel(props) {
               </div>
             </div>
           );
-        })} 
-      </> : 
+        })}
+      </> :
       <>
         <h2 style={{ marginTop: 0 }}>Gallery Overview: Selected Examples</h2>
         <div className='landing-page-database'>

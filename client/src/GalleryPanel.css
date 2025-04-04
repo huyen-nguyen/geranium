@@ -14,12 +14,8 @@
     border-bottom: 1px solid #D3CABD;
 }
 
-.gallery-item:nth-child(odd) {
-    background-color: #D6C8B5;
-}
-
-.gallery-item:nth-child(even) {
-    background-color: #D6C8B5;
+.gallery-item {
+    background-color: #dcd2c3;
 }
 
 /* Gallery layout */
@@ -242,6 +238,12 @@
     width: 100%;
     min-height: 200px;
     position: relative;
+}
+
+/* Add border to visualization in modal */
+.selected-example-content .gosling-component {
+    /*border: 1px solid #9f8c72 !important;*/
+    /*border-radius: 0.5rem;*/
 }
 
 .gosling-visualization-wrapper {

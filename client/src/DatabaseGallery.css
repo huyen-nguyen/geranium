@@ -53,6 +53,7 @@
   border: 1px solid #4A4644;
   background-color: white;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .landing-page-database {
