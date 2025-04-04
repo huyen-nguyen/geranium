@@ -3,11 +3,26 @@ import './GalleryPanel.css'
 import ExampleDetailView from './ExampleDetailView';
 import { LuExpand } from "react-icons/lu";
 import { prettierName } from './utils.js'
+import { IoCopy } from "react-icons/io5";
+
+async function copyToClipboard(spec, setCopyNotification) {
+  try {
+    await navigator.clipboard.writeText(spec);
+    // Show notification
+    setCopyNotification(true);
+    // Hide notification after 1.5 seconds
+    setTimeout(() => setCopyNotification(false), 1500);
+  } catch (e) {
+    throw new Error('Failure to copy a Gosling specification to the clipboard');
+  }
+}
 
 export default function GalleryPanel(props) {
   /* eslint-disable react/prop-types */
   const { data, databaseGallery } = props;
   const [selected, setSelected] = useState();
+  const [copyNotification, setCopyNotification] = useState(false);
+  const [itemCopyId, setItemCopyId] = useState(null);
 
   return (
     <div className='gallery-panel'>
@@ -32,7 +47,29 @@ export default function GalleryPanel(props) {
                   {d.text}
                 </div>
                 <div className='gallery-item-spec'>
-                  <textarea>{JSON.stringify(JSON.parse(d.spec), null, 2)}</textarea>
+                    <div className="textarea-with-copy">
+                  <textarea
+                      defaultValue={JSON.stringify(JSON.parse(d.spec), null, 2)}
+                      readOnly
+                  />
+                      <button
+                          className="textarea-copy-btn"
+                          onClick={() => {
+                            const specJson = JSON.stringify(JSON.parse(d.spec), null, 2);
+                            navigator.clipboard.writeText(specJson);
+                            setItemCopyId(index);
+                            setTimeout(() => setItemCopyId(null), 1500);
+                          }}
+                      >
+                        <IoCopy />
+                      </button>
+                      {itemCopyId === index && (
+                          <div className="textarea-copy-notification">
+                            Copied to clipboard!
+                          </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
