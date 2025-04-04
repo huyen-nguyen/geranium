@@ -11,8 +11,13 @@
   },
   "dependencies": {
     "axios": "^1.8.3",
+    "gosling.js": "^1.0.0",
+    "higlass": "^1.13.4",
+    "higlass-text": "^0.1.6",
+    "pixi.js": "^6.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-error-boundary": "^5.0.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
