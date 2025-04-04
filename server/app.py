@@ -157,24 +157,27 @@ def get_all_modalities(file_names):
     file_names_wo_extensions = [os.path.splitext(x)[0] for x in file_names]
 
     for file_name in file_names_wo_extensions:
-        # text
-        text_base_path = os.path.join(
-            "../data/unified/alt_0_2_4_llm_fs_single/", file_name
-        )
-        text = open(text_base_path + ".txt", "r").read()
-        texts.append(text)
+        try:
+            # text
+            text_base_path = os.path.join(
+                "../data/unified/alt_0_2_4_llm_fs_single/", file_name
+            )
+            text = open(text_base_path + ".txt", "r").read()
+            texts.append(text)
 
-        # image
-        image_base_path = os.path.join("../data/unified/imgs/", file_name)
-        image = base64.b64encode(open(image_base_path + ".png", "rb").read()).decode(
-            "utf-8"
-        )
-        images.append(image)
+            # image
+            image_base_path = os.path.join("../data/unified/imgs/", file_name)
+            image = base64.b64encode(open(image_base_path + ".png", "rb").read()).decode(
+                "utf-8"
+            )
+            images.append(image)
 
-        # spec
-        spec_base_path = os.path.join("../data/unified/specs/", file_name)
-        spec = open(spec_base_path + ".json", "r").read()
-        specs.append(spec)
+            # spec
+            spec_base_path = os.path.join("../data/unified/specs/", file_name)
+            spec = open(spec_base_path + ".json", "r").read()
+            specs.append(spec)
+        except:
+            pass
 
     dumped = [
         {"name": name, "text": text, "image": image, "spec": spec}
@@ -216,6 +219,7 @@ def get_index_database():
     index_db_file_names_single = os.listdir("../data/indexed/single_chart")
     index_db_file_names_multiple = os.listdir("../data/indexed/multiple_chart/imgs")
     index_db_file_names = index_db_file_names_single + index_db_file_names_multiple
+    index_db_file_names = [f for f in index_db_file_names if f.endswith(".png")]
 
     index_db_file_names = sort_list(
         index_db_file_names,
