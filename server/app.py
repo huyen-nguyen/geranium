@@ -213,10 +213,37 @@ def load_embeddings():
 
 @app.route("/api/get_db", methods=["GET"])
 def get_index_database():
-    index_db_file_names = os.listdir("../data/indexed/imgs")
+    index_db_file_names_single = os.listdir("../data/indexed/single_chart")
+    index_db_file_names_multiple = os.listdir("../data/indexed/multiple_chart/imgs")
+    index_db_file_names = index_db_file_names_single + index_db_file_names_multiple
+
+    index_db_file_names = sort_list(
+        index_db_file_names,
+        [
+            "gene_annotation_p_4_sw_1_0_s_1_0.png",
+            "EX_SPEC_SARS_COV_2_sw_1_0_s_1_0_oc.png",
+            "EX_SPEC_CIRCULAR_OVERVIEW_LINEAR_DETAIL_sw_0_7_s_1_0_cc_0.png",
+            "EX_SPEC_MATRIX_HFFC6_sw_1_0_s_1_0_hot.png",
+            "EX_SPEC_CLINVAR_LOLLIPOP_sw_1_2_s_1_2_oc.png",
+            "EX_SPEC_CIRCOS_BETWEEN_LINK_sw_1_0_s_1_0_oc.png",
+            "EX_SPEC_RESPONSIVE_COMPARATIVE_MATRICES_sw_0_7_s_0_7_oc.png",
+            "EX_SPEC_MOUSE_EVENT_sw_1_2_s_1_2_oc.png",
+            "EX_SPEC_RESPONSIVE_COMPARATIVE_MATRICES_sw_0_7_s_0_7_p_0_sw_1_0_s_1_0_cc_0.png",
+            "TEXT_sw_1_2_s_1_2_oc.png",
+            "responsive-multivec_p_0_sw_0_7_s_0_7_cc_0.png",
+            "breast_cancer_circular_s_2_0_oc.png",
+            "band_connection_p_0_sw_1_2_s_1_0_cc_1.png",
+            "circular-heat_p_0_sw_1_0_s_1_0_cc_0.png",
+            "EX_SPEC_CIRCULR_RANGE_sw_1_0_s_1_0_cc_2.png",
+        ],
+    )
+
     index_db = get_all_modalities(index_db_file_names)
     return jsonify({"data": index_db})
 
+def sort_list(lst, order):
+    order_dict = {val: idx for idx, val in enumerate(order)}
+    return sorted(lst, key=lambda x: order_dict.get(x, float('inf')))
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
