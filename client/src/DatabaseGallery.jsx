@@ -10,6 +10,7 @@ export default function DatabaseGallery(props) {
   const { databaseGallery } = props;
   const [showDataBase, setShowDatabase] = useState();
   const [selected, setSelected] = useState();
+  const [copyNotification, setCopyNotification] = useState(false);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -57,7 +58,7 @@ export default function DatabaseGallery(props) {
         <button onClick={() => setShowDatabase(true)}>Gallery</button>
       </div>
       {dataBase}
-      <ExampleDetailView selected={selected} setSelected={setSelected}/>
+      <ExampleDetailView selected={selected} setSelected={setSelected} copyNotification={copyNotification} setCopyNotification={setCopyNotification} />
     </div>
   )
 }

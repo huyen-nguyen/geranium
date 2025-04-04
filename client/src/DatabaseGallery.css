@@ -6,6 +6,7 @@
   left: 10%;
   top: 10%;
   border-radius: 0.5rem;
+  z-index: 1000;
 }
 
 .database-panel-dark-background {
@@ -15,6 +16,7 @@
   left: 0;
   top: 0;
   background: #00000099;
+  z-index: 999;
 }
 
 .database-panel-content {
