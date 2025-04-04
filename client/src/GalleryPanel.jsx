@@ -122,7 +122,7 @@ export default function GalleryPanel(props) {
                   }} />
                 </div>
                 <div className='gallery-image-text-group'>
-                  <img className='gallery-item-thumbnail' src={`data:image/png;base64,${d.image}`}/>
+                  <img className='gallery-item-thumbnail' src={`data:image/png;base64,${d.image}`}  onClick={() => setSelected(d)}/>
                   <div className='gallery-item-text'>
                     {d.text}
                   </div>

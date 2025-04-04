@@ -67,6 +67,7 @@
   width: 400px;
   border: 1px solid #4A4644;
   height: 100%;
+  cursor: pointer;
 }
 
 .selected-example-content>.gallery-item-thumbnail {
