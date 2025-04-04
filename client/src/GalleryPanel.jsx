@@ -4,35 +4,6 @@ import ExampleDetailView from './ExampleDetailView';
 import { LuExpand } from "react-icons/lu";
 import { prettierName } from './utils.js'
 import { IoCopy } from "react-icons/io5";
-import React from 'react';
-import { GoslingComponent } from "gosling.js";
-import { ErrorBoundary } from 'react-error-boundary';
-
-function GoslingViz({ spec, className = '' }) {
-  if (!spec) return null;
-
-  const parsedSpec = useMemo(() => {
-    try {
-      return typeof spec === 'string' ? JSON.parse(spec) : spec;
-    } catch (e) {
-      console.error('Failed to parse Gosling spec:', e);
-      return null;
-    }
-  }, [spec]);
-
-  if (!parsedSpec) return <div>Invalid specification format</div>;
-
-  return (
-      <ErrorBoundary fallback={<div>Failed to render visualization</div>}>
-        <div className={`gosling-viz-container ${className}`}>
-          <GoslingComponent
-              spec={parsedSpec}
-              experimental={{ reactive: true }}
-          />
-        </div>
-      </ErrorBoundary>
-  );
-}
 
 
 export default function GalleryPanel(props) {

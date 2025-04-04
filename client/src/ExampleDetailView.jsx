@@ -1,6 +1,34 @@
 import { useMemo, useEffect } from 'react';
 import './GalleryPanel.css'
 import { IoCopy } from "react-icons/io5";
+import { GoslingComponent } from "gosling.js";
+import { ErrorBoundary } from 'react-error-boundary';
+
+function GoslingViz({ spec, className = '' }) {
+  if (!spec) return null;
+
+  const parsedSpec = useMemo(() => {
+    try {
+      return typeof spec === 'string' ? JSON.parse(spec) : spec;
+    } catch (e) {
+      console.error('Failed to parse Gosling spec:', e);
+      return null;
+    }
+  }, [spec]);
+
+  if (!parsedSpec) return <div>Invalid specification format</div>;
+
+  return (
+      <ErrorBoundary fallback={<div>Failed to render visualization</div>}>
+        <div className={`gosling-viz-container ${className}`}>
+          <GoslingComponent
+              spec={parsedSpec}
+              experimental={{ reactive: true }}
+          />
+        </div>
+      </ErrorBoundary>
+  );
+}
 
 async function copyToClipboard(spec, setCopyNotification) {
   try {
@@ -34,8 +62,12 @@ export default function ExampleDetailView(props) {
         <div className='selected-example-panel'>
           <div className='selected-example-content'>
             <h2>Selected Example (<code>{selected.name}</code>)</h2>
-            <h3>Image</h3>
-            <img className='gallery-item-thumbnail' src={`data:image/png;base64,${selected.image}`} />
+            <div className="gosling-visualization-section">
+              <h3>Visualization</h3>
+              <div className="gosling-visualization-wrapper">
+                <GoslingViz spec={selected.spec} />
+              </div>
+            </div>
             <h3>Textual Description</h3>
             <div className='gallery-item-text'>
               {selected.text}
