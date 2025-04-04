@@ -31,8 +31,8 @@ export default function DatabaseGallery(props) {
                 (databaseGallery.map(d => {
                   const title = prettierName(d.name);
                   return (
-                    <div className='database-item' key={d.name}>
-                      <div className='database-item-title' onClick={() => setSelected(d)}>{title}
+                    <div className='database-item' key={d.name} onClick={() => setSelected(d)} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setSelected(d)} tabIndex={0}>
+                      <div className='database-item-title'>{title}
                         <LuExpand style={{
                           color: '#4a4644',
                           verticalAlign: 'middle',

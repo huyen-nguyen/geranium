@@ -1,10 +1,19 @@
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 import './GalleryPanel.css'
 
 export default function ExampleDetailView(props) {
   const { selected, setSelected } = props;
 
   if (!selected) return null;
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setSelected(undefined);
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
+  
   
   return useMemo(() => {
     return (
