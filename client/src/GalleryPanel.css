@@ -54,9 +54,10 @@
 .gallery-item-text,
 .gallery-item-spec {
     min-height: 20rem;
-    max-height: 40rem;
+    max-height: 30rem;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .gallery-item-text {
@@ -66,20 +67,55 @@
     padding: 1rem;
     background: #D3CABD55;
 
-    /* For truncating text in gallery view */
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /* Adjust actual dimensions to account for padding and borders */
+    min-height: calc(20rem - 2rem); /* 20rem - 2rem (top and bottom padding) */
+    max-height: calc(30rem - 2rem); /* 30rem - 2rem (top and bottom padding) */
+
+    /* Make content scrollable when it exceeds the max-height */
+    overflow-y: auto;
+    position: relative;
+    box-sizing: border-box; /* Include padding in the height calculation */
 }
 
-/* Selected example view for text */
+/* Create inner scrollable container */
+.gallery-item-text::before {
+    content: "";
+    position: absolute;
+    top: 1rem;       /* Same as padding-top */
+    right: 1rem;     /* Same as padding-right */
+    bottom: 1rem;    /* Same as padding-bottom */
+    left: 1rem;      /* Same as padding-left */
+    overflow-y: auto;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+/* Make the actual content scrollable within the padding area */
+.gallery-item-text > * {
+    max-height: calc(30rem - 2rem); /* Account for top and bottom padding */
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+.gallery-item-spec {
+    box-sizing: border-box;
+}
+
+
+/* Keep the selected example content display as block */
 .selected-example-content > .gallery-item-text {
     margin: 0;
     display: block;
     min-height: auto;
     max-height: 100%;
+    /* Reset scrolling for full view in modal */
+    overflow: visible;
+}
+
+.selected-example-content > .gallery-item-text > * {
+    overflow: visible;
+    max-height: none;
 }
 
 /* Textarea and copy button */
