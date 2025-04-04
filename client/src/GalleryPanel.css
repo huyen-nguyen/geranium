@@ -5,6 +5,15 @@
     overflow-y: scroll;
 }
 
+/* Gallery items styling */
+.gallery-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    min-height: 10rem;
+    border-radius: 0.5rem;
+    border-bottom: 1px solid #D3CABD;
+}
+
 /* Alternating colors for gallery items */
 .gallery-item:nth-child(odd) {
     background-color: #bdc4ad;
@@ -14,37 +23,22 @@
     background-color: #D6C8B5;
 }
 
-/* Add some padding to gallery items to make the background color visible */
-.gallery-item {
-    border-bottom: 1px solid #D3CABD;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    min-height: 10rem;
-    border-radius: 0.5rem; /* Optional: rounded corners */
-}
-
-.gallery-item {
-    border-bottom: 1px solid #D3CABD;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    min-height: 10rem;
-}
-
+/* Gallery image and text layout */
 .gallery-image-text-group {
     display: flex;
     align-items: stretch;
     width: 100%;
 }
 
-/* Make all three columns equal width */
+/* Make columns equal width */
 .gallery-image-text-group > * {
     flex: 1;
-    min-width: 0; /* Prevents flex items from overflowing */
+    min-width: 0;
     display: flex;
     flex-direction: column;
 }
 
-/* Item titles and thumbnails */
+/* Item titles styling */
 .gallery-item-title {
     color: #4A4644;
     font-weight: 600;
@@ -53,6 +47,7 @@
     cursor: pointer;
 }
 
+/* Thumbnails styling */
 .gallery-item-thumbnail {
     width: 100%;
     height: 100%;
@@ -63,20 +58,20 @@
 }
 
 .gallery-item-thumbnail:hover {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Equal shadow on all sides */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Selected example view for thumbnail */
+/* Selected thumbnail in modal */
 .selected-example-content > .gallery-item-thumbnail {
     width: auto;
-    border: 0;
     height: auto;
+    border: 0;
 }
 
-/* Text and spec containers - make them consistent */
+/* Text and spec containers base styles */
 .gallery-item-text,
 .gallery-item-spec {
-    max-height: 30rem; /* Set exact height instead of min/max */
+    max-height: 30rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -84,70 +79,72 @@
     border-radius: 0.5rem;
     padding: 1rem;
     background-color: #f5f3ef;
-    margin: 0; /* Remove any default margins */
+    margin: 0;
     position: relative;
 }
 
+/* Text container specific styles */
 .gallery-item-text {
     margin-left: 1rem;
     margin-right: 1rem;
-    position: relative;
-    box-sizing: border-box; /* Include padding in the height calculation */
     overflow: auto;
 }
 
-.gallery-item-spec{
+/* Spec container specific styles */
+.gallery-item-spec {
     overflow: visible;
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-/* For odd gallery items, style their text element's left border */
+/* Left border colors for text containers */
 .gallery-item:nth-child(odd) .gallery-item-text {
-    border-left: 0.5rem solid #666E52; /* green-ish color to complement the odd background */
+    border-left: 0.5rem solid #666E52;
 }
 
-/* For even gallery items, style their text element's left border */
 .gallery-item:nth-child(even) .gallery-item-text {
-    border-left: 0.5rem solid #8f725b; /* brown-ish color to complement the even background */
+    border-left: 0.5rem solid #8f725b;
 }
 
+/* Padding area for text container */
 .gallery-item-text::after {
     content: "";
     display: block;
     position: absolute;
     inset: 0;
-    pointer-events: none; /* Allow clicking through to content */
+    pointer-events: none;
     z-index: 1;
-    border: 1rem solid transparent; /* Creates a non-interactive padding area */
+    border: 1rem solid transparent;
 }
 
-.gallery-item-text > * {
-    overflow-y: auto;
-    margin: 0; /* Reset any margins */
-    position: relative;
-    z-index: 0;
-}
-
+/* Children of text and spec containers */
 .gallery-item-text > *,
 .gallery-item-spec > * {
-    overflow: auto; /* Keep scrolling for content */
+    overflow: auto;
     position: relative;
     z-index: 1;
+    margin: 0;
 }
 
 .gallery-item-spec textarea {
-    border: none; /* Remove the textarea border */
-    padding: 0; /* Adjust padding as needed */
-    background: transparent; /* Make background transparent */
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    box-sizing: border-box;
+    flex-grow: 1;
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.8rem;
 }
 
-/* Keep the selected example content display as block */
+/* Modal view styling for text container */
 .selected-example-content > .gallery-item-text {
     margin: 0;
     display: block;
     min-height: auto;
     max-height: 100%;
     height: auto;
-    /* Reset scrolling for full view in modal */
     overflow: visible;
 }
 
@@ -156,19 +153,20 @@
     max-height: none;
 }
 
+/* Modal view styling for spec container */
 .selected-example-content .gallery-item-spec {
-    display: block; /* Override flex display */
-    height: auto;  /* Auto height instead of fixed */
-    max-height: none;
+    display: block;
+    height: auto !important;
+    max-height: none !important;
     overflow: visible;
 }
 
-/* Ensure the textareas inside both containers behave identically */
+/* Textarea styling for both containers */
 .gallery-item-text textarea,
 .gallery-item-spec textarea {
     width: 100%;
     height: 100%;
-    min-height: 0; /* Override other min-height values */
+    min-height: 0;
     border: none;
     background: transparent;
     padding: 0;
@@ -176,19 +174,12 @@
     flex-grow: 1;
 }
 
-/* Fix the wrapper containers to be identical */
+/* Wrapper containers for textarea with copy button */
 .gallery-item-text .textarea-with-copy,
-.gallery-item-spec .textarea-with-copy {
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Textarea and copy button */
+.gallery-item-spec .textarea-with-copy,
 .textarea-with-copy {
     position: relative;
+    width: 100%;
     height: 100%;
     flex-grow: 1;
     display: flex;
@@ -196,11 +187,7 @@
     overflow: visible !important;
 }
 
-.gallery-item .textarea-with-copy {
-    width: 100%;
-    height: 100%;
-}
-
+/* Textarea styling */
 .textarea-with-copy textarea {
     width: 100%;
     height: 100%;
@@ -216,7 +203,6 @@
 .selected-example-content .textarea-with-copy textarea {
     width: 100%;
     max-height: 100%;
-    field-sizing: content;
 }
 
 /* Gosling visualization containers */
@@ -236,7 +222,7 @@
     margin-bottom: 30px;
 }
 
-/* Selected example panel styling */
+/* Modal panel styling */
 .selected-example-panel {
     position: fixed;
     width: 80%;
@@ -259,13 +245,13 @@
     height: 100%;
     left: 0;
     top: 0;
-    background: #00000099;
+    background: rgba(0, 0, 0, 0.6);
     z-index: 999;
 }
 
 .selected-example-content {
     padding: 2rem;
-    height: calc(100% - 4rem);
+    height: auto;
     overflow-y: auto;
 }
 
@@ -278,6 +264,7 @@
     cursor: pointer;
 }
 
+/* Headings in modal */
 .selected-example-content h3 {
     margin-top: 30px;
     border-top: 1px solid #eee;
@@ -334,12 +321,13 @@ h3 div[style*="display: inline-block"] {
 
 .textarea-with-copy .textarea-copy-notification {
     position: absolute;
-    top: -35px; /* Position above the textarea */
+    top: -35px;
     right: 0;
-    z-index: 2000; /* Higher z-index to ensure visibility */
+    z-index: 2000;
     pointer-events: none;
 }
 
+/* Animation for notifications */
 @keyframes fadeInOut {
     0% { opacity: 0; }
     15% { opacity: 1; }
