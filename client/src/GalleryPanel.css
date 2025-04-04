@@ -85,7 +85,6 @@
     padding: 1rem;
     background-color: #f5f3ef;
     margin: 0; /* Remove any default margins */
-    overflow: visible; /* Allow scrolling for overflow content */
     position: relative;
 }
 
@@ -94,6 +93,11 @@
     margin-right: 1rem;
     position: relative;
     box-sizing: border-box; /* Include padding in the height calculation */
+    overflow: auto;
+}
+
+.gallery-item-spec{
+    overflow: visible;
 }
 
 /* For odd gallery items, style their text element's left border */
