@@ -43,6 +43,13 @@
     object-fit: contain;
 }
 
+/* Selected example view for thumbnail */
+.selected-example-content > .gallery-item-thumbnail {
+    width: auto;
+    border: 0;
+    height: auto;
+}
+
 /* Text and spec containers - make them consistent */
 .gallery-item-text,
 .gallery-item-spec {
@@ -58,6 +65,21 @@
     margin-right: 1rem;
     padding: 1rem;
     background: #D3CABD55;
+
+    /* For truncating text in gallery view */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Selected example view for text */
+.selected-example-content > .gallery-item-text {
+    margin: 0;
+    display: block;
+    min-height: auto;
+    max-height: 100%;
 }
 
 /* Textarea and copy button */
@@ -83,32 +105,74 @@
     font-size: 1rem;
     box-sizing: border-box;
     flex-grow: 1;
+    min-height: 20rem;
+    max-height: 40rem;
 }
 
+/* Modal view textarea */
+.selected-example-content .textarea-with-copy textarea {
+    width: 100%;
+    max-height: 100%;
+    field-sizing: content;
+}
+
+/* Gosling visualization containers */
 .gosling-viz-container {
     width: 100%;
     min-height: 200px;
     position: relative;
 }
 
-.selected-example-panel {
-    max-width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.gosling-visualization-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    overflow: visible;
 }
 
 .selected-example-content .gosling-visualization-section {
     margin-bottom: 30px;
 }
 
-.gosling-visualization-wrapper {
+/* Selected example panel styling */
+.selected-example-panel {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    max-width: 90%;
+    max-height: 90vh;
+    background: white;
+    left: 10%;
+    top: 10%;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selected-example-panel-dark-background {
+    position: fixed;
     width: 100%;
-    margin: 0 auto;
-    overflow: visible;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #00000099;
+    z-index: 999;
+}
+
+.selected-example-content {
+    padding: 2rem;
+    height: calc(100% - 4rem);
+    overflow-y: auto;
+}
+
+.selected-example-panel-close-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
 }
 
 .selected-example-content h3 {
@@ -121,6 +185,11 @@
     border-top: none;
 }
 
+h3 div[style*="display: inline-block"] {
+    margin-left: 10px;
+}
+
+/* Copy button styling */
 .textarea-copy-btn {
     position: absolute;
     top: 10px;
@@ -137,4 +206,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.textarea-copy-btn:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+}
+
+/* Copy notifications */
+.copy-notification,
+.textarea-copy-notification {
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    animation: fadeInOut 1.5s ease;
+    z-index: 100;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
 }
