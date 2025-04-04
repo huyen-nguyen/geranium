@@ -5,6 +5,24 @@
     overflow-y: scroll;
 }
 
+/* Alternating colors for gallery items */
+.gallery-item:nth-child(odd) {
+    background-color: #b3b9a2;
+}
+
+.gallery-item:nth-child(even) {
+    background-color: #D6C8B5;
+}
+
+/* Add some padding to gallery items to make the background color visible */
+.gallery-item {
+    border-bottom: 1px solid #D3CABD;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    min-height: 10rem;
+    border-radius: 0.5rem; /* Optional: rounded corners */
+}
+
 .gallery-item {
     border-bottom: 1px solid #D3CABD;
     margin-bottom: 1rem;
@@ -53,28 +71,33 @@
 /* Text and spec containers - make them consistent */
 .gallery-item-text,
 .gallery-item-spec {
-    min-height: 20rem;
-    max-height: 30rem;
+    max-height: 30rem; /* Set exact height instead of min/max */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    border: 1px solid #D3CABD;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: #f5f3ef;
+    margin: 0; /* Remove any default margins */
+    overflow: auto; /* Allow scrolling for overflow content */
 }
 
 .gallery-item-text {
-    border-left: 0.5rem solid #D3CABD;
     margin-left: 1rem;
     margin-right: 1rem;
-    padding: 1rem;
-    background: #D3CABD55;
-
-    /* Adjust actual dimensions to account for padding and borders */
-    min-height: calc(20rem - 2rem); /* 20rem - 2rem (top and bottom padding) */
-    max-height: calc(30rem - 2rem); /* 30rem - 2rem (top and bottom padding) */
-
-    /* Make content scrollable when it exceeds the max-height */
-    overflow-y: auto;
     position: relative;
     box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+/* For odd gallery items, style their text element's left border */
+.gallery-item:nth-child(odd) .gallery-item-text {
+    border-left: 0.5rem solid #666E52; /* green-ish color to complement the odd background */
+}
+
+/* For even gallery items, style their text element's left border */
+.gallery-item:nth-child(even) .gallery-item-text {
+    border-left: 0.5rem solid #8f725b; /* brown-ish color to complement the even background */
 }
 
 .gallery-item-text::after {
@@ -89,14 +112,15 @@
 
 .gallery-item-text > * {
     overflow-y: auto;
-    max-height: calc(30rem - 2rem); /* Account for padding */
     margin: 0; /* Reset any margins */
     position: relative;
     z-index: 0;
 }
 
-.gallery-item-spec {
-    box-sizing: border-box;
+.gallery-item-spec textarea {
+    border: none; /* Remove the textarea border */
+    padding: 0; /* Adjust padding as needed */
+    background: transparent; /* Make background transparent */
 }
 
 /* Keep the selected example content display as block */
@@ -105,6 +129,7 @@
     display: block;
     min-height: auto;
     max-height: 100%;
+    height: auto;
     /* Reset scrolling for full view in modal */
     overflow: visible;
 }
@@ -112,6 +137,36 @@
 .selected-example-content > .gallery-item-text > * {
     overflow: visible;
     max-height: none;
+}
+
+.selected-example-content .gallery-item-spec {
+    display: block; /* Override flex display */
+    height: auto;  /* Auto height instead of fixed */
+    max-height: none;
+    overflow: visible;
+}
+
+/* Ensure the textareas inside both containers behave identically */
+.gallery-item-text textarea,
+.gallery-item-spec textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 0; /* Override other min-height values */
+    border: none;
+    background: transparent;
+    padding: 0;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+/* Fix the wrapper containers to be identical */
+.gallery-item-text .textarea-with-copy,
+.gallery-item-spec .textarea-with-copy {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Textarea and copy button */
@@ -132,13 +187,11 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 10px;
     border-radius: 0.5rem;
     font-size: 1rem;
     box-sizing: border-box;
     flex-grow: 1;
-    min-height: 20rem;
-    max-height: 40rem;
+    background: #f5f3ef;
 }
 
 /* Modal view textarea */
@@ -224,8 +277,8 @@ h3 div[style*="display: inline-block"] {
 /* Copy button styling */
 .textarea-copy-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0px;
+    right: 0px;
     width: 30px;
     height: 30px;
     background: rgba(255, 255, 255, 0.85);

@@ -1,7 +1,7 @@
 html,
 body,
 #root {
-  background: #EDE8DE;
+  background: #EFECE3;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -21,14 +21,14 @@ body,
 }
 
 button {
-  background: #D3CABD;
-  border: 1px solid #4A4644;
+  background: #D6C8B5;
+  border: 1px solid #75553C;
   cursor: pointer;
   height: 2rem;
 }
 
 button:hover {
-  background: #4a4644;
+  background: #75553C;
   color: white;
 }
 
