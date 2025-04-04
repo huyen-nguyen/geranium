@@ -31,6 +31,7 @@ export default function DatabaseGallery(props) {
                 {databaseGallery.length > 0 ?
                 (databaseGallery.map(d => {
                   const title = prettierName(d.name);
+                  console.log(title)
                   return (
                     <div className='database-item' key={d.name} onClick={() => setSelected(d)} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setSelected(d)} tabIndex={0}>
                       <div className='database-item-title'>{title}

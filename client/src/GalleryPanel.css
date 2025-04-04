@@ -98,11 +98,7 @@
 }
 
 /* Left borders */
-.gallery-item:nth-child(odd) .gallery-item-text {
-    border-left: 0.5rem solid #8f725b;
-}
-
-.gallery-item:nth-child(even) .gallery-item-text {
+.gallery-item .gallery-item-text {
     border-left: 0.5rem solid #8f725b;
 }
 

@@ -32,7 +32,35 @@ function getPrefix(filename) {
 }
 
 export function prettierName(filename) {
-  const prefix = getPrefix(filename);
-  const title = prefix.replaceAll('-', ' ').replaceAll('_', ' ').replaceAll("EX SPEC ", "").titleCase()
-  return title;
+    const nameChange= {
+        'Text': 'Sequence Logo',
+        'Sars Cov 2': 'SARS CoV 2',
+        'Hic': 'Hi-C Contact Matrix',
+        'Matrix': 'Hi-C Contact Matrix',
+        'Sequence Track': 'Genome Semantic Zooming',
+        'Matrix Hffc6': 'HFFc6 Comparative Matrix',
+        'Mouse Event': 'Custom Mouse Event',
+        'Circulr Range': 'Circular Range',
+        'Stratified Bar Alt': 'Stratified Bar Chart',
+        'Line': 'Line Chart',
+        'Circular Point First': 'Stratified Circular Point Chart',
+        'Overview Landing': 'Linear Layout Combination',
+        'Vcf Indels': 'VCF Indels',
+        'Bed Demo': 'BED6 and BED12 Demo',
+        'Circulars': 'Circular Layout Combination',
+        'Boca Uk': 'Breast Cancer Variants',
+        'Single Cell Epi Corces': 'Single-cell Epigenomic Analysis',
+        'Brush': 'Brushing and Linking',
+        'gray_heatmap': 'Hi-C Matrix',
+        'Cancer Variant Prototype': 'Cancer Variant + Pileup',
+        'Viridis Heatmap': 'Heatmap',
+        'Pileup': 'BAM Pileup Track'
+    }
+    const prefix = getPrefix(filename);
+    const basicTitle = prefix
+        .replace(/[-_]/g, ' ')
+        .replace(/EX SPEC /g, '')
+        .titleCase();
+
+    return nameChange[basicTitle] || basicTitle;
 }
