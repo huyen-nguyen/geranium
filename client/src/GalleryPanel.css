@@ -189,7 +189,7 @@
     height: 100%;
     margin: 0;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: .9rem;
     box-sizing: border-box;
     flex-grow: 1;
     background: #f5f3ef;
@@ -329,6 +329,7 @@ h3 div[style*="display: inline-block"] {
     right: 0;
     z-index: 2000;
     pointer-events: none;
+    font-family: sans-serif;
 }
 
 /* Animation */
