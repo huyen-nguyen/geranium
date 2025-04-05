@@ -1,7 +1,7 @@
 .search-panel {
   height: 100%;
   width: 500px;
-  border-right: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border-light);
   padding: 1rem;
 }
 

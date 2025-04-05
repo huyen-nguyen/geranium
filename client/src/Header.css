@@ -7,7 +7,7 @@
   width: 100%;
   border-bottom: 1px solid #d3d3d3;
   padding: .4rem;
-  background: var(--color-accent);
+  background: var(--color-navbar);
 }
 
 .header-title {
@@ -56,13 +56,12 @@
   border-radius: 4px;
   height: 2.2rem;
   padding: 0 0.75rem;
-  color: var(--color-accent);
 }
 
 .header-right button:hover,
 .theme-switcher:hover {
   background: var(--color-primary);
-  color: var(--color-secondary);
+  color: black;
   transition: 0.4s;
 }
 
@@ -75,7 +74,6 @@
 .theme-switcher select {
   border: none;
   background: transparent;
-  color: var(--color-accent);
   outline: none;
 }
 

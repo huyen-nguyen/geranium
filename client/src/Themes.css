@@ -2,22 +2,23 @@
 
 :root {
     /* Default theme (current brown theme) */
-    --color-primary: #c8d2c1;
+    --color-primary: #c9d2c3;
     --color-secondary: #30462a;
-    --color-accent: #424f3f;
+    --color-accent: #72886c;
     --color-background: #ecefe6;
     --color-border: #7f968b;
     --color-text-primary: #444E4A;
     --color-surface: white;
     --color-hover-text: #e2e4da;
-    --color-border-light: #deede3;
+    --color-border-light: #8fab8d;
     --color-surface-secondary: white;
-    --color-title: #e7f6e3;
+    --color-title: #eef8ec;
+    --color-navbar: #424f3f;
 }
 
 /* Define additional themes */
 .theme-blue {
-    --color-primary: #c3d2dc;
+    --color-primary: #dee8ef;
     --color-secondary: #3c5575;
     --color-accent: #5b728f;
     --color-background: #E3ECEF;
@@ -28,10 +29,11 @@
     --color-border-light: #DEE8ED;
     --color-surface-secondary: #eff3f5;
     --color-title: white;
+    --color-navbar: #5b728f;
 }
 
 .theme-brown {
-    --color-primary: #dcd2c3;
+    --color-primary: #ece5da;
     --color-secondary: #75553C;
     --color-accent: #8f725b;
     --color-background: #EFECE3;
@@ -42,4 +44,5 @@
     --color-border-light: #EDE8DE;
     --color-surface-secondary: #f5f3ef;
     --color-title: white;
+    --color-navbar: #8f725b;
 }
