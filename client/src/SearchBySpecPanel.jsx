@@ -18,6 +18,27 @@ export default function SearchBySpecPanel(props) {
     onUpdate(inputSpec);
   }, [onUpdate, inputSpec]);
 
+  // Debounce and auto-format JSON upon typing.
+  useEffect(() => {
+    // Set a timer to format after the user stops typing.
+    const timer = setTimeout(() => {
+      try {
+        // Try to parse and format the JSON.
+        const formatted = JSON.stringify(JSON.parse(inputSpec), null, 2);
+        // Only update if formatting changes the string.
+        if (formatted !== inputSpec) {
+          setInputSpec(formatted);
+        }
+      } catch (error) {
+        // If JSON is invalid, skip formatting.
+      }
+    }, 800); // Adjust delay (in ms) as needed.
+
+    // Clear the timer if inputSpec changes before the delay finishes.
+    return () => clearTimeout(timer);
+  }, [inputSpec]);
+
+  // Memoize the Monaco Editor component.
   const specPreview = useMemo(() => {
     return (
         <Editor
@@ -32,6 +53,7 @@ export default function SearchBySpecPanel(props) {
               insertSpaces: true,          // Uses spaces for indentation.
               detectIndentation: false,
               fontSize: 14,
+              wordWrap: "on",
             }}
         />
     );
