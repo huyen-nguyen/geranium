@@ -26,20 +26,15 @@ export default function DatabaseGallery(props) {
         <div id='database' className='database-panel-dark-background' onClick={(e) => e.target.id === 'database' ? setShowDatabase(false) : null}>
           <div className='database-panel'>
             <div className='database-panel-content'>
-              <h2>Gallery Overview: Selected Examples</h2>
+              <h2>Gallery Overview: Selected Examples
+                <span className="subtitle">Click to explore</span></h2>
               <div className='database-grid'>
                 {databaseGallery.length > 0 ?
                 (databaseGallery.map(d => {
                   const title = prettierName(d.name);
-                  console.log(title)
                   return (
                     <div className='database-item' key={d.name} onClick={() => setSelected(d)} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setSelected(d)} tabIndex={0}>
                       <div className='database-item-title'>{title}
-                        <LuExpand style={{
-                          color: '#4a4644',
-                          verticalAlign: 'middle',
-                          marginLeft: '1rem'
-                        }} />
                       </div>
                       <img className='database-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
                     </div>

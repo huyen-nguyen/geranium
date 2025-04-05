@@ -34,7 +34,7 @@ function getPrefix(filename) {
 export function prettierName(filename) {
     const nameChange= {
         'Text': 'Sequence Logo',
-        'Sars Cov 2': 'SARS CoV 2',
+        'Sars Cov 2': 'SARS-CoV-2',
         'Hic': 'Hi-C Contact Matrix',
         'Matrix': 'Hi-C Contact Matrix',
         'Sequence Track': 'Genome Semantic Zooming',
@@ -54,7 +54,9 @@ export function prettierName(filename) {
         'gray_heatmap': 'Hi-C Matrix',
         'Cancer Variant Prototype': 'Cancer Variant + Pileup',
         'Viridis Heatmap': 'Heatmap',
-        'Pileup': 'BAM Pileup Track'
+        'Pileup': 'BAM Pileup Track',
+        'Circular Overview Linear Detail': 'Overview and Detail',
+        'Circular Heat': 'Circular Heatmap',
     }
     const prefix = getPrefix(filename);
     const basicTitle = prefix

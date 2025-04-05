@@ -31,7 +31,7 @@ export default function GalleryPanel(props) {
                 }} />
               </div>
               <div className='gallery-image-text-group'>
-                <img className='gallery-item-thumbnail' onClick={() => setSelected(d)} src={`data:image/png;base64,${d.image}` } />
+                <img className='gallery-item-thumbnail' onClick={() => setSelected(d)} src={`data:image/png;base64,${d.image}`} />
                 <div className='gallery-item-text'>
                   {d.text}
                 </div>
@@ -65,7 +65,7 @@ export default function GalleryPanel(props) {
         })}
       </> :
       <>
-        <h2 style={{ marginTop: 0 }}>Gallery Overview: Selected Examples</h2>
+        <h2 style={{ marginTop: 0 }}>Gallery Overview: Selected Examples<span className="subtitle">Click to explore</span></h2>
         <div className='landing-page-database'>
           <div className='database-grid'>
             {databaseGallery.length > 0 ?
@@ -74,11 +74,6 @@ export default function GalleryPanel(props) {
               return (
                   <div className='database-item' key={d.name} onClick={() => setSelected(d)} onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && setSelected(d)} tabIndex={0}>
                   <div className='database-item-title'>{title}
-                    <LuExpand style={{
-                      color: '#4a4644',
-                      verticalAlign: 'middle',
-                      marginLeft: '1rem'
-                    }} />
                   </div>
                   <img className='database-item-thumbnail' src={`data:image/png;base64,${d.image}`} />
                 </div>

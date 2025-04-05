@@ -1,7 +1,7 @@
 .search-panel {
   height: 100%;
   width: 500px;
-  border-right: 1px solid #D3CABD;
+  border-right: 1px solid var(--color-border);
   padding: 1rem;
 }
 
@@ -14,13 +14,17 @@
 }
 
 .search-by-button-group button {
-  border: none;
-  border-right: 1px solid #EDE8DE;
+  border: 1px solid var(--color-border);
+}
+
+.search-by-button-group button:hover{
+  transition: 0.3s;
 }
 
 .search-by-button-group button.selected {
-  background: #75553C;
-  color: white;
+  background: var(--color-secondary);
+  color: var(--color-hover-text);
+  border: 3px;
 }
 
 .search-button {
