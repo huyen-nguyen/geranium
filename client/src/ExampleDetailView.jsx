@@ -3,6 +3,7 @@ import './GalleryPanel.css'
 import { IoCopy } from "react-icons/io5";
 import { GoslingComponent } from "gosling.js";
 import { ErrorBoundary } from 'react-error-boundary';
+import Editor from "@monaco-editor/react";
 
 function GoslingViz({ spec, className = '' }) {
   if (!spec) return null;
@@ -54,8 +55,8 @@ export default function ExampleDetailView(props) {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
-  
-  
+
+
   return useMemo(() => {
     return (
       <div id='selected-example-modal' className='selected-example-panel-dark-background' onClick={(e) => e.target.id === 'selected-example-modal' ? setSelected(undefined) : null}>
@@ -75,23 +76,38 @@ export default function ExampleDetailView(props) {
             <h3>Specification</h3>
             <div className='gallery-item-spec'>
               <div className="textarea-with-copy">
-                <textarea
-                    defaultValue={JSON.stringify(JSON.parse(selected.spec), null, 2)}
-                    readOnly
+                <Editor
+                    height="500px"
+                    language="json"
+                    value={JSON.stringify(JSON.parse(selected.spec), null, 2)}
+                    theme="light"
+                    options={{
+                      minimap: { enabled: true },
+                      tabSize: 2,
+                      insertSpaces: true,
+                      detectIndentation: false,
+                      fontSize: 13,
+                      wordWrap: "on",
+                      readOnly: true
+                    }}
                 />
-                <button
+                {/*<textarea*/}
+                {/*    defaultValue={JSON.stringify(JSON.parse(selected.spec), null, 2)}*/}
+                {/*    readOnly*/}
+                {/*/>*/}
+              </div>
+              <button
                   className="textarea-copy-btn"
                   onClick={() => {
                     copyToClipboard(JSON.stringify(JSON.parse(selected.spec), null, 2), setCopyNotification)}}
-                >
-                  <IoCopy />
-                </button>
-                {copyNotification && (
+              >
+                <IoCopy />
+              </button>
+              {copyNotification && (
                   <div className="textarea-copy-notification">
                     Copied to clipboard!
                   </div>
-                )}
-              </div>
+              )}
             </div>
           </div>
         </div>
