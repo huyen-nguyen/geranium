@@ -4,6 +4,7 @@ import { IoCopy } from "react-icons/io5";
 import { GoslingComponent } from "gosling.js";
 import { ErrorBoundary } from 'react-error-boundary';
 import Editor from "@monaco-editor/react";
+import {LuExpand} from "react-icons/lu";
 
 function GoslingViz({ spec, className = '' }) {
   if (!spec) return null;

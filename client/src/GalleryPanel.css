@@ -146,13 +146,13 @@
 }
 
 /* Copy button */
-.textarea-copy-btn {
+.textarea-copy-btn,
+.expand-wrapper {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: -2.2rem;
     width: 30px;
     height: 30px;
-    background: var(--color-background);
+    background: white;
     color: var(--color-text-primary);
     border: none;
     border-radius: 4px;
@@ -164,10 +164,19 @@
     justify-content: center;
 }
 
-.textarea-copy-btn:hover {
-    background: var(--color-primary);
+.textarea-copy-btn:hover,
+.expand-wrapper:hover {
+    background: var(--color-background);
     color: #000;
     transition: 0.4s;
+}
+
+.textarea-copy-btn {
+    right: 0px;
+}
+
+.expand-wrapper{
+    right: 2.2rem
 }
 
 .selected-example-content > .gallery-item-text > * {
@@ -323,11 +332,10 @@ h3 div[style*="display: inline-block"] {
 }
 
 /* Copy notifications */
-.copy-notification,
 .textarea-copy-notification {
     position: absolute;
-    top: -30px;
-    right: 10px;
+    top: -4.2rem;
+    right: 0px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px 10px;
@@ -340,7 +348,6 @@ h3 div[style*="display: inline-block"] {
 
 .textarea-with-copy .textarea-copy-notification {
     position: absolute;
-    top: -35px;
     right: 0;
     z-index: 2000;
     pointer-events: none;
