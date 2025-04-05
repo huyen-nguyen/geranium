@@ -70,7 +70,7 @@
 .gallery-item-text,
 .gallery-item-spec {
     /*min-height: 0;*/
-    max-height: 22rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -164,7 +164,7 @@
 }
 
 .textarea-copy-btn:hover {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-primary);
     color: #000;
     transition: 0.4s;
 }
