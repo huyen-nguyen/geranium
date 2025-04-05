@@ -181,7 +181,7 @@
     height: auto !important;
     max-height: none !important;
     overflow: visible;
-    background: var(--color-background);
+    background: white;
 }
 
 /* Textareas */
@@ -238,7 +238,8 @@
 }
 
 .selected-example-content .textarea-copy-btn{
-    background: white;
+    background: var(--color-background);
+    color: var(--color-text-primary);
 }
 
 /* Gosling container */
