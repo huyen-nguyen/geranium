@@ -4,8 +4,3 @@
   resize: vertical;
   font-family: Consolas, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
-.editor-wrapper{
-  padding: 1rem 0;
-  background: white;
-}

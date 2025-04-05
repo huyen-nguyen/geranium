@@ -16,7 +16,7 @@ export default function SearchPanel(props) {
   const [inputSpec, setInputSpec] = useState('');
 
   const SearchByButtons = useMemo(() => {
-    return ['Image', 'Text', 'Spec'].map(d => {
+    return ['Text', 'Image', 'Spec'].map(d => {
       return (
         <button
           key={d}
