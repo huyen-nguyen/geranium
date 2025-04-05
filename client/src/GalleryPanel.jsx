@@ -80,21 +80,7 @@ export default function GalleryPanel(props) {
                         <div className='gallery-item-text'>{d.text}</div>
                         <div className='gallery-item-spec'>
                           <div className="textarea-with-copy">
-                            <Editor
-                                height="500px"
-                                language="json"
-                                value={JSON.stringify(JSON.parse(d.spec), null, 2)}
-                                theme="light"
-                                options={{
-                                  minimap: { enabled: true },
-                                  tabSize: 2,
-                                  insertSpaces: true,
-                                  detectIndentation: false,
-                                  fontSize: 13,
-                                  wordWrap: "on",
-                                  readOnly: true
-                                }}
-                            />
+
                             {/*<textarea*/}
                             {/*    defaultValue={JSON.stringify(JSON.parse(d.spec), null, 2)}*/}
                             {/*    readOnly*/}
