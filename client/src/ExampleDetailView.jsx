@@ -184,7 +184,7 @@ export default function ExampleDetailView(props) {
                             }
                         />
                         <div className="textual-description-section">
-                            <h3>Textual Description</h3>
+                            <h3>Text Description</h3>
                             <div className="gallery-item-text">{selected.text}</div>
                         </div>
                     </div>

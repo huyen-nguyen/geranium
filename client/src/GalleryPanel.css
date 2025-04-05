@@ -92,7 +92,7 @@
 .gallery-item-spec {
     font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
     padding: 1rem 0;
-    overflow: auto;
+    overflow: visible;
 }
 
 /* Left borders */
@@ -441,4 +441,8 @@ h3 div[style*="display: inline-block"] {
     top: 7px;
     z-index: 99999;
     cursor: pointer;
+}
+
+.gallery-item-spec .textarea-with-copy, .textarea-with-copy section{
+    overflow: auto;
 }
