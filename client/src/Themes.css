@@ -1,0 +1,48 @@
+/* Themes.css */
+
+:root {
+    /* Default theme (current brown theme) */
+    --color-primary: #c9d2c3;
+    --color-secondary: #30462a;
+    --color-accent: #72886c;
+    --color-background: #ecefe6;
+    --color-border: #7f968b;
+    --color-text-primary: #444E4A;
+    --color-surface: white;
+    --color-hover-text: #e2e4da;
+    --color-border-light: #8fab8d;
+    --color-surface-secondary: white;
+    --color-title: #eef8ec;
+    --color-navbar: #424f3f;
+}
+
+/* Define additional themes */
+.theme-blue {
+    --color-primary: #dee8ef;
+    --color-secondary: #3c5575;
+    --color-accent: #5b728f;
+    --color-background: #E3ECEF;
+    --color-border: #BDC7D3;
+    --color-text-primary: #444A4E;
+    --color-surface: #F0F7FA;
+    --color-hover-text: white;
+    --color-border-light: #DEE8ED;
+    --color-surface-secondary: #eff3f5;
+    --color-title: white;
+    --color-navbar: #5b728f;
+}
+
+.theme-brown {
+    --color-primary: #ece5da;
+    --color-secondary: #75553C;
+    --color-accent: #8f725b;
+    --color-background: #EFECE3;
+    --color-border: #D3CABD;
+    --color-text-primary: #4A4644;
+    --color-surface: #FAF7F0;
+    --color-hover-text: white;
+    --color-border-light: #EDE8DE;
+    --color-surface-secondary: #f5f3ef;
+    --color-title: white;
+    --color-navbar: #8f725b;
+}

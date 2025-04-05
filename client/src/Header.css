@@ -1,29 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid #D3CABD;
-  padding: 0 10px;
+  border-bottom: 1px solid #d3d3d3;
+  padding: .4rem;
+  background: var(--color-navbar);
 }
 
 .header-title {
-  width: 500px;
   display: flex;
+  align-items: center;
 }
 
 .header-title:hover {
   cursor: pointer;
 }
 
-.header-title>p {
-  font-weight: bold;
-  font-size: 1.4rem;
+.header-title > p {
+  color: var(--color-title);
+  font-size: 1.6rem;
   line-height: 3rem;
-  margin: 0;
-  margin-left: 0.5rem;
+  margin: 0 0 0 0.5rem;
   display: inline;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-title > p:hover {
+  color: var(--color-primary);
 }
 
 .logo {
-  height: 3rem;
+  height: 3.5rem;
+  padding-left: 1rem;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+/* Simple consistent styling for both elements */
+.header-right button,
+.theme-switcher {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  height: 2.2rem;
+  padding: 0 0.75rem;
+}
+
+.header-right button:hover,
+.theme-switcher:hover {
+  background: var(--color-primary);
+  color: black;
+  transition: 0.4s;
+}
+
+/* Clean up the select element */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher select {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+/* Hide the label text */
+.theme-switcher label {
+  display: none;
 }
