@@ -90,9 +90,9 @@
 }
 
 .gallery-item-spec {
-    overflow: visible;
     font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
     padding: 1rem 0;
+    overflow: auto;
 }
 
 /* Left borders */
@@ -246,11 +246,6 @@
     display: block;
 }
 
-.selected-example-content .textarea-copy-btn{
-    background: var(--color-background);
-    color: var(--color-text-primary);
-}
-
 /* Gosling container */
 .gosling-viz-container {
     width: 100%;
@@ -395,7 +390,7 @@ h3 div[style*="display: inline-block"] {
     display: flex;
     gap: 1rem;
     width: 100%;
-    height: 80%; /* Panels take 80% of the modal height */
+    height: 70%; /* Panels take 80% of the modal height */
     position: relative;
 }
 
@@ -415,15 +410,35 @@ h3 div[style*="display: inline-block"] {
     background-color: #ccc;
     cursor: col-resize;
     user-select: none;
-    /* Optional: add hover effect */
 }
 
 .divider:hover {
     background-color: #aaa;
 }
 
-/* Textual description section */
 .textual-description-section {
     margin-top: 1rem;
 }
 
+.spec-header {
+    position: relative;
+    z-index: 1;
+}
+
+.selected-example-content .textarea-copy-btn{
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.selected-example-content .textarea-copy-notification{
+    position: absolute;
+    right: 45px;
+    top: 7px;
+    z-index: 99999;
+    cursor: pointer;
+}

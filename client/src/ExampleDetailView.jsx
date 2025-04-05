@@ -41,7 +41,7 @@ async function copyToClipboard(spec, setCopyNotification) {
     }
 }
 
-/* New ResizablePanels Component */
+// ResizablePanels
 function ResizablePanels({ leftPanel, rightPanel }) {
     const containerRef = useRef(null);
     const [leftWidth, setLeftWidth] = useState(50); // initial percentage
@@ -91,9 +91,32 @@ function ResizablePanels({ leftPanel, rightPanel }) {
 export default function ExampleDetailView(props) {
     const { selected, setSelected, copyNotification, setCopyNotification } = props;
 
-    if (!selected) return null;
+    // State for the editable specification text
+    const [editorSpec, setEditorSpec] = useState(selected ? selected.spec : '');
 
+    // When a new example is selected, update the editor's spec
+    useEffect(() => {
+        if (selected) {
+            setEditorSpec(selected.spec);
+
+            // Debounce for auto-format JSON upon typing.
+            const timer = setTimeout(() => {
+                try {
+                    const formatted = JSON.stringify(JSON.parse(selected.spec), null, 2);
+                    if (formatted !== selected.spec) {
+                        setEditorSpec(formatted);
+                    }
+                } catch (error) {
+                }
+            }, 500);
+            return () => clearTimeout(timer);
+        }
+    }, [selected]);
+
+    // Always call useMemo and do conditional rendering inside it
     return useMemo(() => {
+        if (!selected) return null; // Conditional rendering inside useMemo
+
         return (
             <div id="selected-example-modal" className="selected-example-panel-dark-background">
                 <div className="selected-example-panel">
@@ -105,49 +128,57 @@ export default function ExampleDetailView(props) {
                     </button>
                     <div className="selected-example-content">
                         <h2>
-                            Selected Example (<code>{selected.name}</code>)
+                            Selected Example: <code>{selected.name}</code>
                         </h2>
                         <ResizablePanels
                             leftPanel={
                                 <>
-                                    <h3>Specification</h3>
+                                    <div className="spec-header">
+                                        {copyNotification && (
+                                            <div className="textarea-copy-notification">
+                                                Copied to clipboard!
+                                            </div>
+                                        )}
+                                        <div>
+                                            <button
+                                                className="textarea-copy-btn"
+                                                onClick={() => {
+                                                    copyToClipboard(editorSpec, setCopyNotification);
+                                                }}
+                                            >
+                                                <IoCopy />
+                                            </button>
+                                        </div>
+                                        <h3>Specification</h3>
+                                    </div>
+
                                     <div className="textarea-with-copy">
                                         <Editor
                                             height="100%"
                                             language="json"
-                                            value={JSON.stringify(JSON.parse(selected.spec), null, 2)}
+                                            value={editorSpec}
                                             theme="light"
+                                            onChange={(value) => setEditorSpec(value)}
                                             options={{
                                                 minimap: { enabled: true },
                                                 tabSize: 2,
                                                 insertSpaces: true,
                                                 detectIndentation: false,
                                                 fontSize: 13,
-                                                wordWrap: "on",
-                                                readOnly: true
+                                                wordWrap: "on"
                                             }}
                                         />
                                     </div>
-                                    <button
-                                        className="textarea-copy-btn"
-                                        onClick={() => {
-                                            copyToClipboard(JSON.stringify(JSON.parse(selected.spec), null, 2), setCopyNotification);
-                                        }}
-                                    >
-                                        <IoCopy />
-                                    </button>
-                                    {copyNotification && (
-                                        <div className="textarea-copy-notification">
-                                            Copied to clipboard!
-                                        </div>
-                                    )}
+
                                 </>
                             }
+
                             rightPanel={
                                 <>
                                     <h3>Visualization</h3>
                                     <div className="gosling-visualization-wrapper">
-                                        <GoslingViz spec={selected.spec} />
+                                        <GoslingViz spec={editorSpec}
+                                        />
                                     </div>
                                 </>
                             }
@@ -160,5 +191,6 @@ export default function ExampleDetailView(props) {
                 </div>
             </div>
         );
-    }, [selected, copyNotification]);
+    }, [selected, copyNotification, editorSpec, setSelected, setCopyNotification]);
 }
+
