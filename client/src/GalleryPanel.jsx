@@ -4,6 +4,7 @@ import ExampleDetailView from './ExampleDetailView';
 import { LuExpand } from "react-icons/lu";
 import { prettierName } from './utils.js';
 import { IoCopy } from "react-icons/io5";
+import Editor from '@monaco-editor/react';
 
 export default function GalleryPanel(props) {
   /* eslint-disable react/prop-types */
@@ -14,11 +15,8 @@ export default function GalleryPanel(props) {
 
   useEffect(() => {
     const adjustHeights = () => {
-      // Loop through each gallery item in the panel
       const galleryItems = document.querySelectorAll('.gallery-item');
       galleryItems.forEach(item => {
-        // Select the image, text, and spec elements.
-        // (Adjust the selector for the image if your actual class is different.)
         const image = item.querySelector('.gallery-item-thumbnail');
         const text = item.querySelector('.gallery-item-text');
         const spec = item.querySelector('.gallery-item-spec');
@@ -28,7 +26,7 @@ export default function GalleryPanel(props) {
           const textHeight = text.clientHeight;
           const specHeight = spec.clientHeight;
 
-          // If the image is taller, update the height of text and spec to match
+          // If the image is diff, update the height of text and spec to match
           if (imageHeight !== textHeight) {
             text.style.height = `${imageHeight}px`;
           }
@@ -82,27 +80,42 @@ export default function GalleryPanel(props) {
                         <div className='gallery-item-text'>{d.text}</div>
                         <div className='gallery-item-spec'>
                           <div className="textarea-with-copy">
-                      <textarea
-                          defaultValue={JSON.stringify(JSON.parse(d.spec), null, 2)}
-                          readOnly
-                      />
-                            <button
-                                className="textarea-copy-btn"
-                                onClick={() => {
-                                  const specJson = JSON.stringify(JSON.parse(d.spec), null, 2);
-                                  navigator.clipboard.writeText(specJson);
-                                  setItemCopyId(index);
-                                  setTimeout(() => setItemCopyId(null), 1500);
+                            <Editor
+                                height="500px"
+                                language="json"
+                                value={JSON.stringify(JSON.parse(d.spec), null, 2)}
+                                theme="light"
+                                options={{
+                                  minimap: { enabled: true },
+                                  tabSize: 2,
+                                  insertSpaces: true,
+                                  detectIndentation: false,
+                                  fontSize: 13,
+                                  wordWrap: "on",
+                                  readOnly: true
                                 }}
-                            >
-                              <IoCopy />
-                            </button>
-                            {itemCopyId === index && (
-                                <div className="textarea-copy-notification">
-                                  Copied to clipboard!
-                                </div>
-                            )}
+                            />
+                            {/*<textarea*/}
+                            {/*    defaultValue={JSON.stringify(JSON.parse(d.spec), null, 2)}*/}
+                            {/*    readOnly*/}
+                            {/*/>*/}
                           </div>
+                          <button
+                              className="textarea-copy-btn"
+                              onClick={() => {
+                                const specJson = JSON.stringify(JSON.parse(d.spec), null, 2);
+                                navigator.clipboard.writeText(specJson);
+                                setItemCopyId(index);
+                                setTimeout(() => setItemCopyId(null), 1500);
+                              }}
+                          >
+                            <IoCopy />
+                          </button>
+                          {itemCopyId === index && (
+                              <div className="textarea-copy-notification">
+                                Copied to clipboard!
+                              </div>
+                          )}
                         </div>
                       </div>
                     </div>

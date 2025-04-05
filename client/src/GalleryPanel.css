@@ -76,7 +76,6 @@
     box-sizing: border-box;
     border: 1px solid var(--color-border);
     border-radius: 0.5rem;
-    padding: 1rem;
     background-color: var(--color-surface-secondary);
     margin: 0;
     position: relative;
@@ -87,11 +86,13 @@
     margin-left: 1rem;
     margin-right: 1rem;
     overflow: auto;
+    padding: 1rem;
 }
 
 .gallery-item-spec {
     overflow: visible;
     font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    padding: 1rem 0;
 }
 
 /* Left borders */
