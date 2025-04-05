@@ -4,7 +4,6 @@ import SearchPanel from './SearchPanel.jsx'
 import GalleryPanel from './GalleryPanel.jsx'
 import axios from "axios"
 import './utils.js'
-import ThemeSwitcher from './ThemeSwitcher';
 import { prettierName } from './utils.js'
 import { LuExpand } from "react-icons/lu";
 
