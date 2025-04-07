@@ -13,15 +13,26 @@
 
 Geranium is a multimodal retrieval system that helps researchers efficiently find genomics visualization examples using image, text, or specification-based queries. Search results function as adaptable templates/scaffolds that researchers can modify with their own data and design preferences.
 
-## Features
+<img width="1795" alt="image" src="https://github.com/user-attachments/assets/1d7be5b0-9a9a-40e4-9d56-ba67279895c0" />
 
-- **Integrated live editor**: Edit and customize retrieved visualizations directly within the application
+
+## Features
 
 - **Flexible query approaches**: Choose your preferred search method - example images, natural language queries, or partial Gosling specification queries for precise visualization retrieval
 
 - **Adaptable visualization scaffolds**: Search results function as modifiable templates, not just static examples
 
+- **Integrated live editor**: Edit and customize retrieved visualizations directly within the application
+
+- **Triplet output**: Each resulting visualization is returned as a triplet of image, text, and its corresponding Gosling specification
+
 - **Diverse Collection**: The collection spans single-view to multi-view visualizations for specialized genomic applications like epigenomics and structural variation analysis
+
+<img width="2371" alt="image" src="https://github.com/user-attachments/assets/74ad67ab-59b7-447e-9a5b-8e1fdef67584" />
+
+
+<img width="2371" alt="image" src="https://github.com/user-attachments/assets/a02469e8-9878-494d-b751-e87171f945bf" />
+
 
 ## Installation
 
@@ -94,3 +105,5 @@ After both the server and client are running, open your browser and navigate to 
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute, please open an issue or submit a pull request.
+
+
