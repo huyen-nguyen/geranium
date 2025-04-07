@@ -16,9 +16,12 @@ Geranium is a tool designed for multimodal retrieval of genomics data visualizat
 ## Features
 
 - **Integrated live editor**: Edit and customize retrieved visualizations directly within the application
+
 - **Flexible query approaches**: Choose your preferred search method - example images, natural language queries, or partial Gosling specification queries for precise visualization retrieval
+
 - **Adaptable visualization scaffolds**: Search results function as modifiable templates, not just static examples
 
+- **Diverse Collection**: The collection spans single-view to multi-view visualizations for specialized genomic applications like epigenomics and structural variation analysis
 
 ## Installation
 
@@ -86,3 +89,8 @@ After both the server and client are running, open your browser and navigate to 
 - Make sure the server is running before accessing the client.
 
 - The client will attempt to interact with the backend hosted by Flask on its default port.
+
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please open an issue or submit a pull request.
