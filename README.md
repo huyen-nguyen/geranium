@@ -42,54 +42,53 @@ The application consists of two components: a server and a client that need to b
 
 1. Navigate to the server directory:
    
- ```
-     cd server
- ```
+    ```
+    cd server
+    ```
 2. Create and activate a Python virtual environment:
    
- ```
-     python3 -m venv .venv
-     source .venv/bin/activate
- ```
+    ```
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
 
 3. Install the required dependencies:
-```
-   python3 -m pip install -r requirements.txt
-```
+    ```
+    python3 -m pip install -r requirements.txt
+    ```
 
 Alternatively, if using uv package manager:
-
-```
+    ```
     uv pip install -r requirements.txt
-```
+    ```
 
 4. Start the server:
 
-```
+    ```
     flask --app app.py run
-```
+    ```
 
 The server will start on http://localhost:5000 by default.
 
 ### Client Installation
 
 1. Open a new terminal and navigate to the client directory:
-
-```
+    
+    ```
     cd client
-```
+    ```
 
 2. Install the necessary dependencies:
 
-```
+    ```
     npm install
-```
+    ```
 
 3. Start the client application:
 
-```
+    ```
     npm run dev
-```
+    ```
 
 Once started, the client will be available at http://localhost:5173/
 
