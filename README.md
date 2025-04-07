@@ -1,33 +1,88 @@
+# Geranium
+
 <h1 align="center">
   <img src="./assets/logo-mag.svg" alt="geranium logo" width="120">
   <br>geranium
 </h1>
 
 <p align="center">
-  <i>genomic data visualization retrieval for authoring with multimodality</i>
+  <i>Genomic data visualization retrieval for authoring with multimodality</i>
 </p>
 
-### Server
+## Overview
+
+Geranium is a tool designed for multimodal retrieval of genomics data visualizations. It enables researchers and scientists to efficiently retrieve and author genomics data visualization through an intuitive interface.
+
+## Features
+
+- **Integrated live editor**: Edit and customize retrieved visualizations directly within the application
+- **Flexible query approaches**: Choose your preferred search method - example images, natural language queries, or partial Gosling specification queries for precise visualization retrieval
+- **Adaptable visualization scaffolds**: Search results function as modifiable templates, not just static examples
+
+
+## Installation
+
+The application consists of two components: a server and a client that need to be run separately.
+
+### Server Installation
+
+1. Navigate to the server directory:
+   
+ ```
+     cd server
+ ```
+2. Create and activate a Python virtual environment:
+   
+ ```
+     python3 -m venv .venv
+     source .venv/bin/activate
+ ```
+
+3. Install the required dependencies:
+```
+   python3 -m pip install -r requirements.txt
+```
+
+Alternatively, if using uv package manager:
 
 ```
-    cd server
-
-    # create virtual environment (if haven't already)
-    python3 -m venv .venv
-
-    # activate virtual environment and install package requirements
-    source .venv/bin/activate
-    python3 -m pip install -r requirements.txt
+    uv pip install -r requirements.txt
 ```
 
-Alternatively, if you use `uv`:
+4. Start the server:
 
 ```
-uv pip install -r requirements.txt
+    flask --app app.py run
 ```
 
-Run the server:
+The server will start on http://localhost:5000 by default.
+
+### Client Installation
+
+1. Open a new terminal and navigate to the client directory:
 
 ```
-flask --app app.py run
+    cd client
 ```
+
+2. Install the necessary dependencies:
+
+```
+    npm install
+```
+
+3. Start the client application:
+
+```
+    npm run dev
+```
+
+Once started, the client will be available at http://localhost:5173/
+
+## Usage
+
+After both the server and client are running, open your browser and navigate to http://localhost:5173/ to start using Geranium.
+
+- Make sure the server is running before accessing the client.
+
+- The client will attempt to interact with the backend hosted by Flask on its default port.
