@@ -11,7 +11,7 @@
 
 ## Overview
 
-Geranium is a tool designed for multimodal retrieval of genomics data visualizations. It enables researchers and scientists to efficiently retrieve and author genomics data visualization through an intuitive interface.
+Geranium is a multimodal retrieval system that helps researchers efficiently find genomics visualization examples using image, text, or specification-based queries. Search results function as adaptable templates/scaffolds that researchers can modify with their own data and design preferences.
 
 ## Features
 
