@@ -157,24 +157,27 @@ def get_all_modalities(file_names):
     file_names_wo_extensions = [os.path.splitext(x)[0] for x in file_names]
 
     for file_name in file_names_wo_extensions:
-        # text
-        text_base_path = os.path.join(
-            "../data/unified/alt_0_2_4_llm_fs_single/", file_name
-        )
-        text = open(text_base_path + ".txt", "r").read()
-        texts.append(text)
+        try:
+            # text
+            text_base_path = os.path.join(
+                "../data/unified/alt_0_2_4_llm_fs_single/", file_name
+            )
+            text = open(text_base_path + ".txt", "r").read()
+            texts.append(text)
 
-        # image
-        image_base_path = os.path.join("../data/unified/imgs/", file_name)
-        image = base64.b64encode(open(image_base_path + ".png", "rb").read()).decode(
-            "utf-8"
-        )
-        images.append(image)
+            # image
+            image_base_path = os.path.join("../data/unified/imgs/", file_name)
+            image = base64.b64encode(open(image_base_path + ".png", "rb").read()).decode(
+                "utf-8"
+            )
+            images.append(image)
 
-        # spec
-        spec_base_path = os.path.join("../data/unified/specs/", file_name)
-        spec = open(spec_base_path + ".json", "r").read()
-        specs.append(spec)
+            # spec
+            spec_base_path = os.path.join("../data/unified/specs/", file_name)
+            spec = open(spec_base_path + ".json", "r").read()
+            specs.append(spec)
+        except:
+            pass
 
     dumped = [
         {"name": name, "text": text, "image": image, "spec": spec}
@@ -216,25 +219,48 @@ def get_index_database():
     index_db_file_names_single = os.listdir("../data/indexed/single_chart")
     index_db_file_names_multiple = os.listdir("../data/indexed/multiple_chart/imgs")
     index_db_file_names = index_db_file_names_single + index_db_file_names_multiple
+    index_db_file_names = [f for f in index_db_file_names if f.endswith(".png")]
 
     index_db_file_names = sort_list(
         index_db_file_names,
         [
-            "gene_annotation_p_4_sw_1_0_s_1_0.png",
-            "EX_SPEC_SARS_COV_2_sw_1_0_s_1_0_oc.png",
-            "EX_SPEC_CIRCULAR_OVERVIEW_LINEAR_DETAIL_sw_0_7_s_1_0_cc_0.png",
-            "EX_SPEC_MATRIX_HFFC6_sw_1_0_s_1_0_hot.png",
-            "EX_SPEC_CLINVAR_LOLLIPOP_sw_1_2_s_1_2_oc.png",
-            "EX_SPEC_CIRCOS_BETWEEN_LINK_sw_1_0_s_1_0_oc.png",
-            "EX_SPEC_RESPONSIVE_COMPARATIVE_MATRICES_sw_0_7_s_0_7_oc.png",
-            "EX_SPEC_MOUSE_EVENT_sw_1_2_s_1_2_oc.png",
-            "EX_SPEC_RESPONSIVE_COMPARATIVE_MATRICES_sw_0_7_s_0_7_p_0_sw_1_0_s_1_0_cc_0.png",
-            "TEXT_sw_1_2_s_1_2_oc.png",
-            "responsive-multivec_p_0_sw_0_7_s_0_7_cc_0.png",
-            "breast_cancer_circular_s_2_0_oc.png",
-            "band_connection_p_0_sw_1_2_s_1_0_cc_1.png",
-            "circular-heat_p_0_sw_1_0_s_1_0_cc_0.png",
-            "EX_SPEC_CIRCULR_RANGE_sw_1_0_s_1_0_cc_2.png",
+"gene_annotation_p_4_sw_1_0_s_1_0.png",
+"EX_SPEC_SARS_COV_2_sw_1_0_s_1_0_oc.png",
+"EX_SPEC_MATRIX_sw_0_7_s_0_7_cc_1.png",
+"EX_SPEC_CLINVAR_LOLLIPOP_sw_1_2_s_1_2_oc.png",
+
+"EX_SPEC_CYTOBANDS_sw_1_2_s_1_2_oc.png",
+"EX_SPEC_MATRIX_HFFC6_sw_1_2_s_1_2_recolor.png",
+"EX_SPEC_PILEUP_sw_1_0_s_1_0_oc.png",
+"EX_SPEC_SEQUENCE_TRACK_sw_1_2_s_1_2_oc.png",
+
+"EX_SPEC_ALIGNMENT_CHART_sw_1_0_s_1_0_oc.png",
+"EX_SPEC_MARK_DISPLACEMENT_sw_1_0_s_1_0_oc.png",
+"BOCA-UK-f83fc777-5416-c3e9-e040-11ac0d482c8e.png",
+"EX_SPEC_GREMLIN_sw_1_0_s_1_0_oc.png",
+
+"VCF_INDELS_sw_1_0_s_1_0_oc.png",
+"stratified-area_p_0_sw_0_7_s_0_7_cc_0.png",
+"gene_annotation_single_1_s_1_0_oc.png",
+"TEXT_sw_1_2_s_1_2_oc.png",
+
+"multi_view_circular_ideograms_m_3_sw_1_0_s_1_0_oc_oc.png",
+"band_connection_p_0_sw_1_0_s_1_0_oc.png",
+"EX_SPEC_RESPONSIVE_COMPARATIVE_MATRICES_sw_0_7_s_0_7_p_0_sw_1_0_s_1_0_cc_0.png",
+"circular-heat_p_0_sw_1_0_s_1_0_cc_0.png",
+
+"BRUSH_sw_1_2_s_1_0_oc.png",
+"EX_SPEC_CIRCULAR_OVERVIEW_LINEAR_DETAIL_sw_1_2_s_1_2_oc.png",
+"multi_view_circular_ideograms_m_2_sw_1_0_s_1_0_oc_oc",
+"BED_DEMO_sw_0_7_s_0_7_oc_p_0_sw_1_2_s_1_2_oc.png",
+"EX_SPEC_MOUSE_EVENT_sw_1_2_s_1_2_oc.png",
+"breast_cancer_circular_s_2_0_oc.png",
+"EX_SPEC_MATRIX_sw_0_7_s_0_7_oc_bupu.png",
+"EX_SPEC_CIRCOS_BETWEEN_LINK_sw_1_0_s_1_0_oc.png",
+"multi_layer_circular_m_1_sw_0_7_s_0_7_cc_0.png"
+"EX_SPEC_CIRCULR_RANGE_sw_1_0_s_1_0_cc_2.png",
+"viridis-heatmap_p_0_sw_1_2_s_1_0_oc.png",
+
         ],
     )
 
