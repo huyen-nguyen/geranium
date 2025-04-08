@@ -1,448 +1,230 @@
-/* Layout */
 .gallery-panel {
-    width: calc(100% - 400px);
-    padding: 1rem;
-    overflow-y: scroll;
+  width: calc(100% - 400px);
+  padding: 1rem;
+  overflow-y: scroll;
 }
 
-/* Gallery items */
 .gallery-item {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    min-height: 10rem;
-    border-radius: 0.5rem;
-    /*border-bottom: 1px solid var(--color-border);*/
-    background-color: var(--color-primary);
+  border-bottom: 1px solid #D3CABD;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  min-height: 10rem;
 }
 
-/* Gallery layout */
+.selected-example-panel {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  background: white;
+  left: 10%;
+  top: 10%;
+  border-radius: 0.5rem;
+  /* Increase modal z-index to ensure it's above all other elements */
+  z-index: 1000;
+}
+
+.selected-example-panel-dark-background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #00000099;
+  /* Ensure dark background is also above textareas */
+  z-index: 999;
+}
+
+.selected-example-content {
+  padding: 2rem;
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+}
+
+.selected-example-panel-close-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+.gallery-item:nth-child(odd) {}
+
 .gallery-image-text-group {
-    display: flex;
-    align-items: stretch;
-    width: 100%;
+  display: flex;
 }
 
-.gallery-image-text-group > * {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Titles */
 .gallery-item-title {
-    color: var(--color-text-primary);
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
+  color: #4A4644;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
-/* Image container */
-.gallery-image-text-group > div:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align the image to the top */
-}
-
-/* Thumbnails */
 .gallery-item-thumbnail {
-    width: 100%;
-    max-height: none;
-    border: 1px solid var(--color-accent);
-    cursor: pointer;
-    object-fit: contain;
-    align-self: flex-start;
+  width: 400px;
+  border: 1px solid #4A4644;
+  height: 100%;
 }
 
-.gallery-item-thumbnail:hover {
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.1s ease;
-}
-
-.selected-example-content > .gallery-item-thumbnail {
-    width: auto;
-    height: auto;
-    border: 0;
-}
-
-/* Text & spec containers */
-.gallery-item-text,
-.gallery-item-spec {
-    /*min-height: 0;*/
-    height: 22rem;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid var(--color-border);
-    border-radius: 0.5rem;
-    background-color: var(--color-surface-secondary);
-    margin: 0;
-    position: relative;
-    flex: 1; /* Allow equal growing */
+.selected-example-content>.gallery-item-thumbnail {
+  width: auto;
+  border: 0;
+  height: auto;
 }
 
 .gallery-item-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    overflow: auto;
-    padding: 1rem;
+  border-left: 0.5rem solid #D3CABD;
+  margin-left: 1rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  background: #D3CABD55;
+  min-height: 20rem;
+  max-height: 40rem;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.selected-example-content>.gallery-item-text {
+  margin: 0;
+  display: block;
+  min-height: auto;
+  max-height: 100%;
+}
+
+/* Ensure gallery-item-spec maintains original styling */
 .gallery-item-spec {
-    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-    padding: 1rem 0;
-    overflow: visible;
+  display: block;
+  /*width: 500px; !* Keep original width *!*/
+  max-height: calc(40rem);
 }
 
-/* Left borders */
-.gallery-item .gallery-item-text {
-    border-left: 0.5rem solid var(--color-accent);
+/* Result page textarea container */
+.gallery-item .textarea-with-copy {
+  position: relative;
+  width: 500px; /* Fixed width for result page */
+  height: calc(100% - 2rem);
+  display: block;
 }
 
-/* Padding layer */
-.gallery-item-text::after {
-    content: "";
-    display: block;
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    border: 1rem solid transparent;
+/* Modal textarea container */
+.selected-example-content .textarea-with-copy {
+  position: relative;
+  /*width: calc(100% - 2rem); !* Full width minus padding for modal *!*/
+  height: 100%;
+  display: block;
 }
 
-/* Child elements inside text/spec blocks */
-.gallery-item-text > *,
-.gallery-item-spec > * {
-    overflow: auto;
-    position: relative;
-    z-index: 1;
-    margin: 0;
-}
-
-/* Textareas inside spec */
-.gallery-item-spec textarea {
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    border: none;
-    background: transparent;
-    padding: 0;
-    box-sizing: border-box;
-    flex-grow: 1;
-    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 0.8rem;
-}
-
-/* Modal view - text container */
-.selected-example-content > .textual-description-section > .gallery-item-text {
-    margin: 0;
-    display: block;
-    min-height: auto;
-    max-height: 100%;
-    height: auto;
-    overflow: visible;
-    background: var(--color-background);
-}
-
-/* Copy button */
-.textarea-copy-btn,
-.expand-wrapper {
-    position: absolute;
-    top: -2.2rem;
-    width: 30px;
-    height: 30px;
-    background: var(--color-background);
-    color: var(--color-text-primary);
-    border: none;
-    border-radius: 4px;
-    padding: 0;
-    z-index: 5;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.textarea-copy-btn:hover,
-.expand-wrapper:hover {
-    background: var(--color-border);
-    color: #000;
-    transition: 0.3s;
-}
-
-.expand-wrapper {
-    right: 0px;
-}
-
-.textarea-copy-btn{
-    right: 2.2rem
-}
-
-.selected-example-content > .gallery-item-text > * {
-    overflow: visible;
-    max-height: none;
-}
-
-/* Modal view - spec container */
-.selected-example-content .gallery-item-spec {
-    display: block;
-    height: auto !important;
-    max-height: none !important;
-    overflow: visible;
-    background: white;
-}
-
-/* Textareas */
-.gallery-item-text textarea,
-.gallery-item-spec textarea {
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    border: none;
-    background: transparent;
-    padding: 0;
-    box-sizing: border-box;
-    flex-grow: 1;
-}
-
-/* Textarea with copy button */
-.gallery-item-text .textarea-with-copy,
-.gallery-item-spec .textarea-with-copy,
-.textarea-with-copy {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: visible !important;
-}
-
-/* Textarea style */
+/* Default textarea styles */
 .textarea-with-copy textarea {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-radius: 0.5rem;
-    font-size: .9rem;
-    box-sizing: border-box;
-    flex-grow: 1;
-    background: var(--color-surface-secondary);
+  border-radius: 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-height: calc(40rem);
 }
 
 /* Modal view textarea */
 .selected-example-content .textarea-with-copy textarea {
-    width: 100%; /* Full width in modal */
-    max-height: 100%;
-    field-sizing: content;
-    background: var(--color-background);
-}
-
-.selected-example-content .textarea-with-copy {
-    position: relative;
-    /*width: calc(100% - 2rem); !* Full width minus padding for modal *!*/
-    height: 100%;
-    display: block;
-}
-
-/* Gosling container */
-.gosling-viz-container {
-    width: 100%;
-    min-height: 200px;
-    position: relative;
-}
-
-/* Add border to visualization in modal */
-.selected-example-content .gosling-component {
-    /*border: 1px solid #9f8c72 !important;*/
-    /*border-radius: 0.5rem;*/
-}
-
-.gosling-visualization-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    overflow: visible;
-}
-
-.selected-example-content .gosling-visualization-section {
-    margin-bottom: 30px;
-}
-
-/* Modal panel */
-.selected-example-panel {
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    background: white;
-    overflow-y: auto;
-    padding: 1rem;
-    z-index: 1000;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.selected-example-panel-dark-background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 999;
-}
-
-.selected-example-content {
-    padding: 2rem;
-    height: calc(100% - 4rem);
-    overflow-y: auto;
-    display: block;
-}
-
-/* Modal close button */
-.modal-close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    outline: none;
-    color: grey;
-}
-
-.modal-close-button:hover {
-    background: white;
-    color: black;
-    transition: .3s;
-}
-
-/* Modal headings */
-/*.selected-example-content h3 {*/
-/*    margin-top: 30px;*/
-/*    border-top: 1px solid #eee;*/
-/*    padding-top: 20px;*/
-/*}*/
-
-.selected-example-content h3:first-of-type {
-    border-top: none;
+  width: 100%; /* Full width in modal */
+  max-height: 100%;
+  field-sizing: content;
 }
 
 h3 div[style*="display: inline-block"] {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
-/* Copy notifications */
-.textarea-copy-notification {
-    position: absolute;
-    top: -4.2rem;
-    right: 0px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    animation: fadeInOut 1.5s ease;
-    z-index: 2000;
+/* Update the copy notification positioning */
+.copy-notification {
+  position: absolute;
+  top: -30px;
+  right: -50px; /* Position to the right instead of centering */
+  transform: none; /* Remove the transform that was centering it */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  animation: fadeInOut 1.5s ease;
+  z-index: 100; /* Ensure it's above other elements */
 }
 
-.textarea-with-copy .textarea-copy-notification {
-    position: absolute;
-    right: 0;
-    z-index: 2000;
-    pointer-events: none;
-    font-family: sans-serif;
-}
-
-/* Animation */
+/* Add the animation if it's not already present */
 @keyframes fadeInOut {
-    0% { opacity: 0; }
-    15% { opacity: 1; }
-    85% { opacity: 1; }
-    100% { opacity: 0; }
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
-/* Set a minimum height for all three sections */
-.gallery-image-text-group > div {
-    min-height: 20rem;
+.textarea-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4a4644;
+  z-index: 5;
+  padding: 0;
 }
 
-/* Allow scroll when content exceeds container height */
-.gallery-item-text > *,
-.gallery-item-spec > * {
-    max-height: 100%;
-    overflow: auto;
+.textarea-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #000;
 }
 
-/* Specifically style the first column (image container) to not have a background */
-.gallery-image-text-group > div:first-child {
-    background: none;
-    border: none;
-    padding: 0;
+.textarea-copy-notification {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  animation: fadeInOut 1.5s ease;
+  z-index: 100;
 }
 
-/* New container for spec and visualization panels */
-.spec-vis-container {
+
+.gallery-image-text-group {
     display: flex;
-    gap: 1rem;
+    align-items: stretch;
+}
+
+.gallery-item .textarea-with-copy {
+    position: relative;
+    width: 500px;
+    height: 100%; /* Fill the full height of parent */
+    display: block;
+}
+
+.textarea-with-copy textarea {
+    border-radius: 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
     width: 100%;
-    height: 70%; /* Panels take 80% of the modal height */
-    position: relative;
-}
-
-/* Left panel: Specification */
-.spec-panel {
-    overflow: auto;
-}
-
-/* Right panel: Visualization */
-.viz-panel {
-    overflow: auto;
-}
-
-/* Movable divider */
-.divider {
-    width: 5px;
-    background-color: #ccc;
-    cursor: col-resize;
-    user-select: none;
-}
-
-.divider:hover {
-    background-color: #aaa;
-}
-
-.textual-description-section {
-    margin-top: 1rem;
-}
-
-.spec-header {
-    position: relative;
-    z-index: 1;
-}
-
-.selected-example-content .textarea-copy-btn{
-    background: var(--color-background);
-    color: var(--color-text-primary);
-    position: absolute;
-    top: 25%;
-    right: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.selected-example-content .textarea-copy-notification{
-    position: absolute;
-    right: 45px;
-    top: 7px;
-    z-index: 99999;
-    cursor: pointer;
-}
-
-.gallery-item-spec .textarea-with-copy, .textarea-with-copy section{
-    overflow: auto;
+    height: 100%; /* Fill the container */
+    min-height: 20rem; /* Match the min-height of gallery-item-text */
+    display: block;
 }
