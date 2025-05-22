@@ -118,5 +118,5 @@ After both the server and client are running, open your browser and navigate to 
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute, please open an issue or submit a pull request.
+Contributions are welcome! If you'd like to contribute, please open a [new issue](https://github.com/gosling-lang/geranium/issues/new) or submit a [pull request](https://github.com/gosling-lang/geranium/pulls). Please read [CONTRIBUTING.md](/CONTRIBUTING.md) to find more guidelines.
 
