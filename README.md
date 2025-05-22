@@ -6,12 +6,12 @@
 </h1>
 
 <p align="center">
-  <i><u>Ge</u>nomics Data Visualization <u>R</u>etrieval for <u>A</u>uthori<u>n</u>g w<u>i</u>th M<u>u</u>lti<u>m</u>odality</i>
+  <i><ins>Ge</ins>nomics Data Visualization <ins>R</ins>etrieval for <ins>A</ins>uthori<ins>n</ins>g w<ins>i</ins>th M<ins>u</ins>lti<ins>m</ins>odality</i>
 </p>
 
 ## Citation
 
-[Nguyen, Huyen N., et al. “Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9_v1)
+Preprint: [Nguyen, Huyen N., et al. “Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9_v1)
 
 ```bib
 @article{nguyen2025multimodal,
