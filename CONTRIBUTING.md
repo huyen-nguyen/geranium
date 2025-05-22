@@ -71,5 +71,4 @@ The server will start on http://localhost:5000 by default.
     npm run dev
     ```
 
-Once started, the client will be available at http://localhost:5173/
-
+Once started, you can open http://localhost:5173/ in a web browser to run the search engine.
