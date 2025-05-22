@@ -2,12 +2,27 @@
 
 <h1 align="center">
   <img src="./assets/logo-mag.svg" alt="geranium logo" width="120">
-  <br>geranium
+  <br>Geranium
 </h1>
 
 <p align="center">
-  <i>Genomic data visualization retrieval for authoring with multimodality</i>
+  <i><u>Ge</u>nomics Data Visualization <u>R</u>etrieval for <u>A</u>uthori<u>n</u>g w<u>i</u>th M<u>u</u>lti<u>m</u>odality</i>
 </p>
+
+## Citation
+
+[Nguyen, Huyen N., et al. “Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9_v1)
+
+```bib
+@article{nguyen2025multimodal,
+  title={Multimodal Retrieval of Genomics Data Visualizations},
+  author={Nguyen, Huyen N and L’Yi, Sehi and Smits, Thomas C and Gao, Shanghua and Zitnik, Marinka and Gehlenborg, Nils},
+  year={2025},
+  publisher={OSF Preprints},
+  url={https://osf.io/zatw9_v1},
+  doi={10.31219/osf.io/zatw9_v1},
+}
+```
 
 ## Overview
 
