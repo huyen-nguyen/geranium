@@ -107,7 +107,7 @@ The server will start on http://localhost:5000 by default.
 
 Once started, the client will be available at http://localhost:5173/.
 
-## Usage
+### Usage
 
 After both the server and client are running, open your browser and navigate to http://localhost:5173/ to start using Geranium.
 
@@ -115,6 +115,30 @@ After both the server and client are running, open your browser and navigate to 
 
 - The client will attempt to interact with the backend hosted by Flask on its default port.
 
+### Troubleshooting
+
+If the client does not run properly, you may need to update your Node.js and/or Vite versions.
+
+- **Current Node.js version used:** `v22.8.0`
+
+#### Check your Node.js version
+
+    node -v
+
+If you are using an older version, consider updating Node.js.
+
+#### Reinstall dependencies
+
+Sometimes deleting the `node_modules` folder and reinstalling dependencies can resolve issues:
+
+    rm -rf node_modules
+    npm install
+
+#### Update Vite
+
+To update Vite to the latest version, run:
+
+    npm update vite
 
 ## Contributing
 
