@@ -67,6 +67,10 @@ Alternatively, if using uv package manager:
     ```
     flask --app app.py run
     ```
+   
+Alternatively, to allow auto-refresh upon changes in server code:
+
+    flask --app app.py --debug run
 
 The server will start on http://localhost:5000 by default.
 
@@ -92,9 +96,11 @@ The server will start on http://localhost:5000 by default.
 
 Once started, the client will be available at http://localhost:5173/
 
-## Usage
+### Usage ⚠️
 
 After both the server and client are running, open your browser and navigate to http://localhost:5173/ to start using Geranium.
+
+- Make sure to enable virtual environment first at the `server` folder: `source .venv/bin/activate`
 
 - Make sure the server is running before accessing the client.
 
