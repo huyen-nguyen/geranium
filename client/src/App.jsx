@@ -15,7 +15,7 @@ function App() {
 
   const onSearch = async (type, Text, Image, Spec) => {
     const results = await axios.post('http://127.0.0.1:5000/api/get_inference', {
-      k: 10,
+      k: 20,
       type,
       content: { Text, Image, Spec }[type]
     });
@@ -38,7 +38,7 @@ function App() {
     return (
       <GalleryPanel data={topK} databaseGallery={databaseGallery} />
     );
-  }, [topK, databaseGallery]);
+  }, [topK, databaseGallery]); // only re-renders when either topK or databaseGallery changes
 
   return (
     <>
