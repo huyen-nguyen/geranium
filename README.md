@@ -11,7 +11,7 @@
 
 ## Citation
 
-Preprint: [Nguyen, Huyen N., et al. “Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9_v1)
+Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka Zitnik, and Nils Gehlenborg. “Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9_v1)
 
 ```bib
 @article{nguyen2025multimodal,
@@ -119,7 +119,7 @@ After both the server and client are running, open your browser and navigate to 
 
 If the client does not run properly, you may need to update your Node.js and/or Vite versions.
 
-- **Current Node.js version used:** `v22.8.0`
+- Current Node.js version used: `v22.8.0`
 
 #### Check your Node.js version
 
