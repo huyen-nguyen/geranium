@@ -272,4 +272,4 @@ def sort_list(lst, order):
     return sorted(lst, key=lambda x: order_dict.get(x, float('inf')))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=5000)
