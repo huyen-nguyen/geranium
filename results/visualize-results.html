@@ -6,6 +6,9 @@
     }
 </style>
 <body>
+
+<h3>Retrieval Result</h3>
+<p>Observable Notebook: <a href="https://observablehq.com/d/5b11050b890f078b" target="_blank">https://observablehq.com/d/5b11050b890f078b</a></p>
 <svg width="1200" height="400"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
@@ -192,7 +195,6 @@
         const legend = svg.append("g")
             .attr("transform", `translate(${width + margin.left + 25},${margin.top})`);
 
-        console.log(bestByQueryModality)
         const fixedOrder = ['Spec', 'Image', 'Text (AltGosling + LLM)', 'Text (AltGosling)'];
 
         bestByQueryModality.sort((a, b) => {
