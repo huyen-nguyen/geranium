@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body{
+        font-family: sans-serif;
+    }
+</style>
+<body>
+
+<h3>Retrieval Result</h3>
+<p>Observable Notebook: <a href="https://observablehq.com/d/5b11050b890f078b" target="_blank">https://observablehq.com/d/5b11050b890f078b</a></p>
+<svg width="1200" height="400"></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    d3.csv("result-table.csv", d => ({
+        accuracy_1: +d["k=1"],
+        accuracy_2: +d["k=2"],
+        accuracy_3: +d["k=3"],
+        accuracy_4: +d["k=4"],
+        accuracy_5: +d["k=5"],
+        query_modality: d["Query Modality"],
+        document_modality: d["Document Modality"],
+        embedding_method: d["Embedding Method"],
+    })).then(rawData => {
+        // Reshape data from wide to long format
+        const data = [];
+        rawData.forEach(row => {
+            const category = `${row.query_modality} - ${row.document_modality} - ${row.embedding_method}`;
+
+            for (let k = 1; k <= 5; k++) {
+                data.push({
+                    category: category,
+                    query_modality: row.query_modality,
+                    document_modality: row.document_modality,
+                    embedding_method: row.embedding_method,
+                    k: k,
+                    accuracy: row[`accuracy_${k}`]
+                });
+            }
+        });
+
+        // Find best performing category for each query_modality
+        const queryModalities = Array.from(new Set(data.map(d => d.query_modality)));
+        const bestByQueryModality = [];
+
+        queryModalities.forEach(queryMod => {
+            const categoriesForQuery = Array.from(new Set(
+                data.filter(d => d.query_modality === queryMod).map(d => d.category)
+            ));
+
+            const categoryStats = categoriesForQuery.map(cat => {
+                const catData = data.filter(d => d.category === cat);
+                const avgAccuracy = d3.mean(catData, d => d.accuracy);
+                return { category: cat, avgAccuracy, query_modality: queryMod };
+            });
+
+            const best = categoryStats.reduce((max, current) =>
+                current.avgAccuracy > max.avgAccuracy ? current : max
+            );
+
+            bestByQueryModality.push({
+                category: best.category,
+                query_modality: queryMod,
+                avgAccuracy: best.avgAccuracy
+            });
+        });
+
+        // Create the chart
+        const svg = d3.select('svg'),
+            margin = {top: 20, right: 400, bottom: 40, left: 50},
+            width = +svg.attr('width') - margin.left - margin.right,
+            height = +svg.attr('height') - margin.top - margin.bottom;
+
+        const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+        // Scales
+        const x = d3.scaleLinear()
+            .domain([1, 5])
+            .range([0, width]);
+
+        const y = d3.scaleLinear()
+            .domain([0, 1])
+            .range([height, 0]);
+
+        // Custom color palette
+        const customColors = ["#0072B2", "#E69F00", "#009E73", "#CC79A7"];
+        const colorScale = d3.scaleOrdinal()
+            .domain(queryModalities)
+            .range(customColors);
+
+        // Draw axes
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).ticks(5).tickFormat(d3.format('d')))
+            .append("text")
+            .attr("fill", "#000")
+            .attr("x", width / 2)
+            .attr("y", 35)
+            .attr("text-anchor", "middle")
+            .attr("font-weight", "bold")
+            .text("k");
+
+        g.append("g")
+            .call(d3.axisLeft(y).ticks(10))
+            .append("text")
+            .attr("fill", "#000")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -40)
+            .attr("text-anchor", "middle")
+            .attr("font-weight", "bold")
+            .text("Accuracy");
+
+        const line = d3.line()
+            .x(d => x(d.k))
+            .y(d => y(d.accuracy));
+
+        const categories = Array.from(new Set(data.map(d => d.category)));
+        const bestCategoryNames = bestByQueryModality.map(d => d.category);
+
+        // STEP 1: Draw all grey (non-highlighted) lines and dots first
+        categories.forEach((cat, i) => {
+            const catData = data.filter(d => d.category === cat);
+            const isBest = bestCategoryNames.includes(cat);
+
+            if (!isBest) {  // Only draw grey ones first
+                // Draw grey line
+                g.append("path")
+                    .datum(catData)
+                    .attr("fill", "none")
+                    .attr("stroke", "#c7c7c7")
+                    .attr("stroke-width", 1)
+                    .attr("d", line);
+
+                // Draw grey dots
+                g.selectAll(`.dot-grey-${i}`)
+                    .data(catData)
+                    .join("circle")
+                    .attr("class", `dot-grey-${i}`)
+                    .attr("cx", d => x(d.k))
+                    .attr("cy", d => y(d.accuracy))
+                    .attr("r", 2)
+                    .attr("fill", "lightgrey");
+            }
+        });
+
+        // STEP 2: Draw highlighted lines and dots on top
+        categories.forEach((cat, i) => {
+            const catData = data.filter(d => d.category === cat);
+            const queryMod = catData[0].query_modality;
+            const isBest = bestCategoryNames.includes(cat);
+
+            if (isBest) {  // Only draw highlighted ones second
+                const color = colorScale(queryMod);
+
+                // Draw highlighted line
+                g.append("path")
+                    .datum(catData)
+                    .attr("fill", "none")
+                    .attr("stroke", color)
+                    .attr("stroke-width", 3)
+                    .attr("d", line);
+
+                // Draw highlighted dots
+                g.selectAll(`.dot-highlight-${i}`)
+                    .data(catData)
+                    .join("circle")
+                    .attr("class", `dot-highlight-${i}`)
+                    .attr("cx", d => x(d.k))
+                    .attr("cy", d => y(d.accuracy))
+                    .attr("r", 4)
+                    .attr("fill", color);
+
+                // Add numbers on top
+                g.selectAll(`.label-${i}`)
+                    .data(catData)
+                    .join("text")
+                    .attr("class", `label-${i}`)
+                    .attr("x", d => x(d.k) + (d.k === 1 ? 20 : 0)) // k=1
+                    .attr("y", d => y(d.accuracy) +                             // Position above the dot
+                        (d.query_modality === 'Text (AltGosling)' ? 16 : -6)  +
+                        (d.k === 1 && d.query_modality === 'Spec' ? 20 : 0) +
+                        (d.k === 2 && d.query_modality === 'Image' ? 25 : 0)
+                    )
+                    .attr("text-anchor", "middle")
+                    .attr("font-size", "11px")
+                    .attr("font-weight", "bold")
+                    .attr("font-family", "sans-serif")
+                    .attr("fill", color)
+                    .text(d => d.accuracy.toFixed(3));  // Show accuracy with 3 decimal places
+            }
+        });
+
+        // Add legend
+        const legend = svg.append("g")
+            .attr("transform", `translate(${width + margin.left + 25},${margin.top})`);
+
+        const fixedOrder = ['Spec', 'Image', 'Text (AltGosling + LLM)', 'Text (AltGosling)'];
+
+        bestByQueryModality.sort((a, b) => {
+            const indexA = fixedOrder.findIndex(prefix => a.query_modality.startsWith(prefix));
+            const indexB = fixedOrder.findIndex(prefix => b.query_modality.startsWith(prefix));
+
+            const orderA = indexA === -1 ? Infinity : indexA;
+            const orderB = indexB === -1 ? Infinity : indexB;
+
+            return orderA - orderB;
+        });
+
+        bestByQueryModality.forEach((best, i) => {
+            legend.append("rect")
+                .attr("x", 0)
+                .attr("y", i * 50)
+                .attr("width", 15)
+                .attr("height", 15)
+                .attr("fill", colorScale(best.query_modality));
+
+            legend.append("text")
+                .attr("x", 22)
+                .attr("y", i * 50 + 8)
+                .text(`${best.query_modality}`)
+                .attr("alignment-baseline", "middle")
+                .style("font-size", "13px")
+                .style("font-weight", "bold");
+
+            legend.append("text")
+                .attr("x", 22)
+                .attr("y", i * 50 + 24)
+                // .text(`Best: ${best.category.replace(best.query_modality + ' - ' + best.query_modality + ' - ', '')}`)
+                .text(`${best.category}`)
+                .attr("alignment-baseline", "middle")
+                .style("font-size", "12px")
+                .style("fill", "#666");
+
+            // No need for avg
+            // legend.append("text")
+            //     .attr("x", 22)
+            //     .attr("y", i * 50 + 36)
+            //     .text(`Avg: ${best.avgAccuracy.toFixed(3)}`)
+            //     .attr("alignment-baseline", "middle")
+            //     .style("font-size", "10px")
+            //     .style("fill", "#888");
+        });
+
+    }).catch(error => {
+        console.error("Error loading CSV:", error);
+    });
+
+</script>
+</body>
+</html>
