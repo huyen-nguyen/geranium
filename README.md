@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <i><ins>Ge</ins>nomics Visualization <ins>R</ins>etrieval for <ins>A</ins>uthori<ins>n</ins>g w<ins>i</ins>th M<ins>u</ins>lti<ins>m</ins>odality</i>
+  <i><b>Ge</b>nomics Visualization <b>R</b>etrieval for <b>A</b>uthori<b>n</b>g w<b>i</b>th M<b>u</b>lti<b>m</b>odality</i>
 </p>
 
 ## Citation
