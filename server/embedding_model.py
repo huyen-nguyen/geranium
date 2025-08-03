@@ -242,7 +242,7 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
     queries_with_match = sum(1 for result in evaluation_result if result['smallest_k_matched'] is not None)
 
     top_k_matches = {}
-    for k in range(1, 6):
+    for k in range(1, 11):
         top_k_matches[k] = sum(
             1 for result in evaluation_result
             if result['smallest_k_matched'] is not None and result['smallest_k_matched'] <= k
@@ -251,7 +251,7 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
     # Print results
     print(f"Total Queries: {total_queries}")
     print(f"Queries with at least one match: {queries_with_match}")
-    for k in range(1, 6):
+    for k in range(1, 11):
         accuracy = top_k_matches[k] / total_queries if total_queries > 0 else 0
         print(f"Top-{k} Accuracy: {accuracy:.4f}")
 
@@ -259,7 +259,7 @@ def evaluate_embeddings(query_embedding, reference_embedding, gt_data, query_dic
     return {
         "total_queries": total_queries,
         "queries_with_match": queries_with_match,
-        **{f"top_{k}_accuracy": (top_k_matches[k] / total_queries if total_queries > 0 else 0) for k in range(1, 6)},
+        **{f"top_{k}_accuracy": (top_k_matches[k] / total_queries if total_queries > 0 else 0) for k in range(1, 10)},
         # "detailed_results": evaluation_result
     }
 
