@@ -14,8 +14,8 @@
 <script>
 <!-- Check data compatibility -->
     Promise.all([
-        d3.csv("formatted_results_v1.csv"),
-        d3.csv("raw_results_p2.csv")
+        d3.csv("result_table_v1.csv"),
+        d3.csv("results_p1.csv")
     ]).then(function([formatted, raw]){
         console.log("Formatted: ", formatted, "\nRaw full k=10: ", raw);
         raw.forEach(raw_row => {
@@ -24,7 +24,7 @@
                 f_row["embedding_method"] === raw_row["embedding_method"])
 
             for (let i = 1; i <= 5; i++){
-                console.log(raw_row["k_" + i].includes(foundRecord["k=" + i]))
+                console.log(raw_row["k=" + i].includes(foundRecord["k=" + i]))
             }
         })
     });
