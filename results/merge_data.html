@@ -12,14 +12,15 @@
 <svg width="1200" height="400"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
+<!-- Check data compatibility -->
     Promise.all([
         d3.csv("formatted_results_v1.csv"),
-        d3.csv("raw_results_p1.csv")
+        d3.csv("raw_results_p2.csv")
     ]).then(function([formatted, raw]){
         console.log("Formatted: ", formatted, "\nRaw full k=10: ", raw);
         raw.forEach(raw_row => {
-            const foundRecord = formatted.find(f_row => f_row["query_modality"] === raw_row["source_query_type"] &&
-                f_row["document_modality"] === raw_row["target_embedding_type"] &&
+            const foundRecord = formatted.find(f_row => f_row["query_modality"] === raw_row["query_modality"] &&
+                f_row["document_modality"] === raw_row["document_modality"] &&
                 f_row["embedding_method"] === raw_row["embedding_method"])
 
             for (let i = 1; i <= 5; i++){
@@ -27,7 +28,6 @@
             }
         })
     });
-
 
 </script>
 </body>

@@ -12,15 +12,15 @@
 <svg width="1200" height="400"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-    d3.csv("result-table.csv", d => ({
+    d3.csv("result_table_v1.csv", d => ({
         accuracy_1: +d["k=1"],
         accuracy_2: +d["k=2"],
         accuracy_3: +d["k=3"],
         accuracy_4: +d["k=4"],
         accuracy_5: +d["k=5"],
-        query_modality: d["Query Modality"],
-        document_modality: d["Document Modality"],
-        embedding_method: d["Embedding Method"],
+        query_modality: d["query_modality"],
+        document_modality: d["document_modality"],
+        embedding_method: d["embedding_method"],
     })).then(rawData => {
         // Reshape data from wide to long format
         const data = [];

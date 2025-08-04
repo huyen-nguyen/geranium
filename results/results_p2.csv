@@ -1,0 +1,10 @@
+,query_modality,document_modality,embedding_method,k=1,k=2,k=3,k=4,k=5,k=6,k=7,k=8,k=9,k=10
+0,Spec,Spec,Text Model,0.5882,0.6029,0.6225,0.6373,0.6373,0.6569,0.6667,0.6667,0.6667,0.6961
+1,Spec,Text (AltGosling + LLM),Text Model,0.3627,0.4706,0.5294,0.5637,0.5784,0.5931,0.6176,0.6471,0.652,0.6667
+2,Spec,Text (AltGosling),Text Model,0.2353,0.3186,0.4069,0.4461,0.4559,0.4657,0.4657,0.4755,0.4755,0.4853
+3,Text (AltGosling + LLM),Spec,Text Model,0.3529,0.3824,0.4069,0.4412,0.451,0.451,0.4804,0.4853,0.4902,0.5441
+4,Text (AltGosling + LLM),Text (AltGosling + LLM),Text Model,0.3824,0.4755,0.5147,0.5637,0.598,0.6324,0.652,0.6765,0.6765,0.6814
+5,Text (AltGosling + LLM),Text (AltGosling),Text Model,0.2598,0.3627,0.451,0.4657,0.4706,0.4804,0.4853,0.4853,0.4853,0.5
+6,Text (AltGosling),Spec,Text Model,0.1667,0.2059,0.2353,0.25,0.2549,0.2549,0.2892,0.2892,0.2941,0.3824
+7,Text (AltGosling),Text (AltGosling + LLM),Text Model,0.1961,0.2745,0.3186,0.3529,0.3824,0.4069,0.4216,0.4265,0.4314,0.4559
+8,Text (AltGosling),Text (AltGosling),Text Model,0.2696,0.3578,0.4608,0.4804,0.4951,0.4951,0.4951,0.4951,0.4951,0.4951
