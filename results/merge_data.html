@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body{
+        font-family: sans-serif;
+    }
+</style>
+<body>
+
+<h3>Retrieval Result</h3>
+<p>Observable Notebook: <a href="https://observablehq.com/d/5b11050b890f078b" target="_blank">https://observablehq.com/d/5b11050b890f078b</a></p>
+<svg width="1200" height="400"></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    Promise.all([
+        d3.csv("formatted_results_v1.csv"),
+        d3.csv("raw_results_p1.csv")
+    ]).then(function([formatted, raw]){
+        console.log("Formatted: ", formatted, "\nRaw full k=10: ", raw);
+        raw.forEach(raw_row => {
+            const foundRecord = formatted.find(f_row => f_row["query_modality"] === raw_row["source_query_type"] &&
+                f_row["document_modality"] === raw_row["target_embedding_type"] &&
+                f_row["embedding_method"] === raw_row["embedding_method"])
+
+            for (let i = 1; i <= 5; i++){
+                console.log(raw_row["k_" + i].includes(foundRecord["k=" + i]))
+            }
+        })
+    });
+
+
+</script>
+</body>
+</html>
