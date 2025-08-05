@@ -12,22 +12,28 @@
 <svg width="1200" height="400"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
-    d3.csv("result_table_v1.csv", d => ({
+    d3.csv("result_table_v2.csv", d => ({
         accuracy_1: +d["k=1"],
         accuracy_2: +d["k=2"],
         accuracy_3: +d["k=3"],
         accuracy_4: +d["k=4"],
         accuracy_5: +d["k=5"],
+        accuracy_6: +d["k=6"],
+        accuracy_7: +d["k=7"],
+        accuracy_8: +d["k=8"],
+        accuracy_9: +d["k=9"],
+        accuracy_10: +d["k=10"],
         query_modality: d["query_modality"],
         document_modality: d["document_modality"],
         embedding_method: d["embedding_method"],
     })).then(rawData => {
         // Reshape data from wide to long format
         const data = [];
+        const topK = 10;
         rawData.forEach(row => {
             const category = `${row.query_modality} - ${row.document_modality} - ${row.embedding_method}`;
 
-            for (let k = 1; k <= 5; k++) {
+            for (let k = 1; k <= topK; k++) {
                 data.push({
                     category: category,
                     query_modality: row.query_modality,
@@ -75,7 +81,7 @@
 
         // Scales
         const x = d3.scaleLinear()
-            .domain([1, 5])
+            .domain([1, topK])
             .range([0, width]);
 
         const y = d3.scaleLinear()
@@ -83,7 +89,7 @@
             .range([height, 0]);
 
         // Custom color palette
-        const customColors = ["#0072B2", "#E69F00", "#009E73", "#CC79A7"];
+        const customColors = ["#CC79A7", "#0072B2", "#009E73", "#E69F00"];
         const colorScale = d3.scaleOrdinal()
             .domain(queryModalities)
             .range(customColors);
@@ -91,7 +97,7 @@
         // Draw axes
         g.append("g")
             .attr("transform", `translate(0,${height})`)
-            .call(d3.axisBottom(x).ticks(5).tickFormat(d3.format('d')))
+            .call(d3.axisBottom(x).ticks(topK).tickFormat(d3.format('d')))
             .append("text")
             .attr("fill", "#000")
             .attr("x", width / 2)
