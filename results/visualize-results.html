@@ -7,7 +7,7 @@
 </style>
 <body>
 
-<h3>Retrieval Result</h3>
+<h3>Retrieval Result per Query Modality</h3>
 <p>Observable Notebook: <a href="https://observablehq.com/d/5b11050b890f078b" target="_blank">https://observablehq.com/d/5b11050b890f078b</a></p>
 <svg width="1200" height="400"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -127,28 +127,33 @@
         // STEP 1: Draw all grey (non-highlighted) lines and dots first
         categories.forEach((cat, i) => {
             const catData = data.filter(d => d.category === cat);
+            const queryMod = catData[0].query_modality;
             const isBest = bestCategoryNames.includes(cat);
+            const color = colorScale(queryMod);
+            const lineWidth = isBest ? 3 : 1.5;
+            const dotRadius = isBest ? 4 : 2.5;
+            const dotOpacity = isBest ? 1 : 0.3;
 
-            if (!isBest) {  // Only draw grey ones first
-                // Draw grey line
-                g.append("path")
-                    .datum(catData)
-                    .attr("fill", "none")
-                    .attr("stroke", "#c7c7c7")
-                    .attr("stroke-width", 1)
-                    .attr("d", line);
+            // Draw colored line for each category using query_modality color
+            g.append("path")
+                .datum(catData)
+                .attr("fill", "none")
+                .attr("stroke", color)
+                .attr("stroke-width", lineWidth)
+                .attr("opacity", dotOpacity)
+                .attr("d", line);
 
-                // Draw grey dots
-                g.selectAll(`.dot-grey-${i}`)
-                    .data(catData)
-                    .join("circle")
-                    .attr("class", `dot-grey-${i}`)
-                    .attr("cx", d => x(d.k))
-                    .attr("cy", d => y(d.accuracy))
-                    .attr("r", 2)
-                    .attr("fill", "lightgrey");
-            }
-        });
+            // Draw colored dots for each category
+            g.selectAll(`.dot-${i}`)
+                .data(catData)
+                .join("circle")
+                .attr("class", `dot-${i}`)
+                .attr("cx", d => x(d.k))
+                .attr("cy", d => y(d.accuracy))
+                .attr("r", dotRadius)
+                .attr("fill", color)
+                .attr("opacity", dotOpacity);
+                });
 
         // STEP 2: Draw highlighted lines and dots on top
         categories.forEach((cat, i) => {
@@ -237,15 +242,6 @@
                 .attr("alignment-baseline", "middle")
                 .style("font-size", "12px")
                 .style("fill", "#666");
-
-            // No need for avg
-            // legend.append("text")
-            //     .attr("x", 22)
-            //     .attr("y", i * 50 + 36)
-            //     .text(`Avg: ${best.avgAccuracy.toFixed(3)}`)
-            //     .attr("alignment-baseline", "middle")
-            //     .style("font-size", "10px")
-            //     .style("fill", "#888");
         });
 
     }).catch(error => {
