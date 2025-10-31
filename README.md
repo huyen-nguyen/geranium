@@ -19,8 +19,8 @@ Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka
   author={Nguyen, Huyen N and L’Yi, Sehi and Smits, Thomas C and Gao, Shanghua and Zitnik, Marinka and Gehlenborg, Nils},
   year={2025},
   publisher={OSF Preprints},
-  url={https://osf.io/zatw9_v1},
-  doi={10.31219/osf.io/zatw9_v1},
+  url={https://osf.io/zatw9},
+  doi={10.31219/osf.io/zatw9_v5},
 }
 ```
 
