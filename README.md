@@ -20,7 +20,7 @@ Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka
   year={2025},
   publisher={OSF Preprints},
   url={https://osf.io/zatw9},
-  doi={10.31219/osf.io/zatw9_v5},
+  doi={10.31219/osf.io/zatw9_v6},
 }
 ```
 
