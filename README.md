@@ -11,7 +11,7 @@
 
 ## Citation
 
-Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka Zitnik, and Nils Gehlenborg. “Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9_v1)
+Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka Zitnik, and Nils Gehlenborg. “Geranium: Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9)
 
 ```bib
 @article{nguyen2025multimodal,
