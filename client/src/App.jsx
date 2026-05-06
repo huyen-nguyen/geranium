@@ -14,7 +14,7 @@ function App() {
   const [databaseGallery, setDatabaseGallery] = useState([]);
 
   const onSearch = async (type, Text, Image, Spec) => {
-    const results = await axios.post('http://127.0.0.1:5000/api/get_inference', {
+    const results = await axios.post('http://127.0.0.1:5001/api/get_inference', {
       k: 10,
       type,
       content: { Text, Image, Spec }[type]
@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   const getDatabaseGallery = async () => {
-    const results = await axios.get('http://127.0.0.1:5000/api/get_db');
+    const results = await axios.get('http://127.0.0.1:5001/api/get_db');
     console.warn('Database Gallery', results);
     setDatabaseGallery(results.data.data);
   };
