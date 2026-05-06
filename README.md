@@ -11,17 +11,20 @@
 
 ## Citation
 
-Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka Zitnik, and Nils Gehlenborg. “Geranium: Multimodal Retrieval of Genomics Data Visualizations.” OSF Preprints, 2025.](https://osf.io/zatw9)
+Publication: [H. N. Nguyen, S. L'Yi, T. C. Smits, S. Gao, M. Zitnik and N. Gehlenborg, "Geranium: Multimodal Retrieval of Genomics Data Visualizations," in IEEE Transactions on Visualization and Computer Graphics, doi: 10.1109/TVCG.2026.3683429](https://ieeexplore.ieee.org/document/11480764).
+
+Preprint [on OSF](https://osf.io/preprints/osf/zatw9_v7).
 
 ```bib
 @article{nguyen2025multimodal,
-  title={Multimodal Retrieval of Genomics Data Visualizations},
-  author={Nguyen, Huyen N and L’Yi, Sehi and Smits, Thomas C and Gao, Shanghua and Zitnik, Marinka and Gehlenborg, Nils},
-  year={2025},
-  publisher={OSF Preprints},
-  url={https://osf.io/zatw9},
-  doi={10.31219/osf.io/zatw9_v7},
-}
+  author={Nguyen, Huyen N. and L'Yi, Sehi and Smits, Thomas C. and Gao, Shanghua and Zitnik, Marinka and Gehlenborg, Nils},
+  journal={IEEE Transactions on Visualization and Computer Graphics}, 
+  title={Geranium: Multimodal Retrieval of Genomics Data Visualizations}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-17},
+  doi={10.1109/TVCG.2026.3683429}}
 ```
 
 ## Overview
