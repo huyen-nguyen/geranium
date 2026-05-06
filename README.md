@@ -16,7 +16,7 @@ Publication: [H. N. Nguyen, S. L'Yi, T. C. Smits, S. Gao, M. Zitnik and N. Gehle
 Preprint [on OSF](https://osf.io/preprints/osf/zatw9_v7).
 
 ```bib
-@article{nguyen2025multimodal,
+@article{nguyen2026multimodal,
   author={Nguyen, Huyen N. and L'Yi, Sehi and Smits, Thomas C. and Gao, Shanghua and Zitnik, Marinka and Gehlenborg, Nils},
   journal={IEEE Transactions on Visualization and Computer Graphics}, 
   title={Geranium: Multimodal Retrieval of Genomics Data Visualizations}, 
@@ -80,7 +80,7 @@ Alternatively, if using uv package manager:
     uv pip install -r requirements.txt
     ```
 
-4. Start the server on part `5001`:
+4. Start the server on port `5001`:
 
     ```
     flask --app app.py run --debug --port 5001
