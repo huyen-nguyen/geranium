@@ -20,7 +20,7 @@ Preprint: [Nguyen, Huyen N., Sehi L’Yi, Thomas C. Smits, Shanghua Gao, Marinka
   year={2025},
   publisher={OSF Preprints},
   url={https://osf.io/zatw9},
-  doi={10.31219/osf.io/zatw9_v6},
+  doi={10.31219/osf.io/zatw9_v7},
 }
 ```
 
@@ -77,13 +77,13 @@ Alternatively, if using uv package manager:
     uv pip install -r requirements.txt
     ```
 
-4. Start the server:
+4. Start the server on part `5001`:
 
     ```
-    flask --app app.py run
+    flask --app app.py run --debug --port 5001
     ```
 
-The server will start on http://localhost:5000 by default.
+The server will start on http://localhost:5001.
 
 ### Client Installation
 

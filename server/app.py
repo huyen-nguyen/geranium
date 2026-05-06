@@ -31,10 +31,16 @@ def init():
 app = Flask(__name__)
 cors = CORS(app, origins="*")
 
+# Load model once at startup — not per-request.
+# BiomedCLIP is large; reloading it on every call causes timeouts.
+print("Loading BiomedCLIP model...")
+_model, _preprocess, _tokenizer, _device = init()
+print("Model ready.")
+
 
 @app.route("/api/get_inference", methods=["POST"])
 def get_inference():
-    (model, preprocess, tokenizer, device) = init()
+    (model, preprocess, tokenizer, device) = (_model, _preprocess, _tokenizer, _device)
 
     rq = request.get_json()
 
@@ -102,6 +108,12 @@ def get_inference():
 
 
 def text_query_top_k(model, tokenizer, device, search_content, embeddings):
+    # BiomedCLIP's text encoder has a hard 256-token context window.
+    # Long descriptive queries from LLMs can exceed this and cause a server error.
+    # Truncate to the first 200 words as a safe guard before tokenizing.
+    words = search_content.split()
+    if len(words) > 200:
+        search_content = " ".join(words[:200])
     text_input = tokenizer([search_content], context_length=256).to(device)
 
     with torch.no_grad():
@@ -257,7 +269,7 @@ def get_index_database():
 "breast_cancer_circular_s_2_0_oc.png",
 "EX_SPEC_MATRIX_sw_0_7_s_0_7_oc_bupu.png",
 "EX_SPEC_CIRCOS_BETWEEN_LINK_sw_1_0_s_1_0_oc.png",
-"multi_layer_circular_m_1_sw_0_7_s_0_7_cc_0.png"
+"multi_layer_circular_m_1_sw_0_7_s_0_7_cc_0.png",
 "EX_SPEC_CIRCULR_RANGE_sw_1_0_s_1_0_cc_2.png",
 "viridis-heatmap_p_0_sw_1_2_s_1_0_oc.png",
 
@@ -272,4 +284,4 @@ def sort_list(lst, order):
     return sorted(lst, key=lambda x: order_dict.get(x, float('inf')))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)
