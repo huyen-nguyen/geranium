@@ -93,19 +93,114 @@
 
   function doiUrl(doi) { return has(doi) ? ("https://doi.org/" + doi) : "#"; }
 
-  /* ---------- author byline (hero) ---------- */
+  /* ---------- author byline (hero) with Nature-style popovers ---------- */
   safe(function () {
     var line = $("#authorline");
     if (!line || !Array.isArray(C.authors)) return;
+
+    function closeAll() {
+      $all(".byline-author.is-open").forEach(function (sp) {
+        sp.classList.remove("is-open");
+        var b = $(".byline-author__name", sp), p = $(".author-pop", sp);
+        if (b) b.setAttribute("aria-expanded", "false");
+        if (p) p.hidden = true;
+      });
+    }
+
     C.authors.forEach(function (au, i) {
-      var a = el("a"); a.textContent = au.name;
-      a.href = has(au.website) ? au.website : (has(au.scholar) ? au.scholar : "#");
-      line.appendChild(a);
+      var span = el("span", "byline-author");
+
+      // clickable name (button → toggles the card instead of navigating)
+      var btn = el("button", "byline-author__name");
+      btn.type = "button";
+      btn.textContent = au.name;
+      btn.setAttribute("aria-expanded", "false");
+      span.appendChild(btn);
+
+      // superscript affiliation numbers
       if (Array.isArray(au.aff) && au.aff.length) {
-        var sup = el("sup"); sup.textContent = au.aff.join(","); line.appendChild(sup);
+        var sup = el("sup"); sup.textContent = au.aff.join(","); span.appendChild(sup);
       }
+
+      // popover card
+      var pop = el("div", "author-pop");
+      pop.hidden = true;
+
+      var close = el("button", "author-pop__close", "&times;");
+      close.type = "button"; close.setAttribute("aria-label", "Close");
+      pop.appendChild(close);
+
+      pop.appendChild(el("h3", "author-pop__name", escapeHtml(au.name)));
+
+      // full affiliation names, looked up from C.affiliations
+      var affNames = (au.aff || []).map(function (n) { return (C.affiliations || [])[n - 1]; }).filter(Boolean);
+      if (affNames.length) {
+        var affBox = el("div", "author-pop__affs");
+        affNames.forEach(function (name) { affBox.appendChild(el("div", "author-pop__aff", escapeHtml(name))); });
+        pop.appendChild(affBox);
+      }
+
+// Website + ORCID on one row (each shown only if provided)
+      var profBits = [];
+      if (has(au.website)) profBits.push(["Website", au.website]);
+      if (has(au.orcid))   profBits.push(["View ORCID profile", au.orcid]);
+      if (profBits.length) {
+        var profBox = el("div", "author-pop__links");
+        profBits.forEach(function (b, idx) {
+          var a = el("a", null, b[0]); a.href = b[1]; a.target = "_blank"; a.rel = "noopener";
+          profBox.appendChild(a);
+          if (idx < profBits.length - 1) profBox.appendChild(document.createTextNode("  ·  "));
+        });
+        pop.appendChild(profBox);
+      }
+
+      // "Find author on:" row — PubMed + Google Scholar
+      var search = el("div", "author-pop__search");
+      search.appendChild(document.createTextNode("Find author on: "));
+      var bits = [
+        ["PubMed", "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(au.name)],
+        ["Google Scholar", has(au.scholar) ? au.scholar
+            : "https://scholar.google.com/scholar?q=" + encodeURIComponent(au.name)]
+      ];
+      bits.forEach(function (b, idx) {
+        var a = el("a", null, b[0]); a.href = b[1]; a.target = "_blank"; a.rel = "noopener";
+        search.appendChild(a);
+        if (idx < bits.length - 1) search.appendChild(document.createTextNode("  ·  "));
+      });
+      pop.appendChild(search);
+
+      span.appendChild(pop);
+
+      // toggle
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var willOpen = !span.classList.contains("is-open");
+        closeAll();
+        if (willOpen) {
+          span.classList.add("is-open");
+          btn.setAttribute("aria-expanded", "true");
+          pop.hidden = false;
+          // keep the card within the viewport, and keep the arrow under the name
+          pop.style.left = "0px";
+          pop.style.setProperty("--arrow-left", "22px");
+          var rect = pop.getBoundingClientRect();
+          var over = rect.right - (window.innerWidth - 12);
+          if (over > 0) {
+            pop.style.left = (-over) + "px";
+            pop.style.setProperty("--arrow-left", (22 + over) + "px");
+          }
+        }
+      });
+      close.addEventListener("click", function (e) { e.stopPropagation(); closeAll(); });
+      pop.addEventListener("click", function (e) { e.stopPropagation(); });
+
+      line.appendChild(span);
       if (i < C.authors.length - 1) line.appendChild(document.createTextNode(", "));
     });
+
+    // click anywhere else / Escape closes
+    document.addEventListener("click", closeAll);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeAll(); });
   });
 
   /* ---------- nav + hero CTA links ---------- */
@@ -326,7 +421,11 @@
         var card = el("article", "author reveal");
         var initials = au.name.split(/\s+/).map(function (w) { return w[0]; }).join("").slice(0, 2).toUpperCase();
         card.appendChild(el("div", "author__avatar", initials));
-        card.appendChild(el("h3", "author__name", escapeHtml(au.name)));
+        var nameEl = el("h3", "author__name", escapeHtml(au.name));
+        if (Array.isArray(au.aff) && au.aff.length) {
+          nameEl.appendChild(el("sup", null, au.aff.join(",")));
+        }
+        card.appendChild(nameEl);
         var affNames = (au.aff || []).map(function (n) { return (C.affiliations || [])[n - 1]; }).filter(Boolean);
         card.appendChild(el("p", "author__aff", escapeHtml(affNames.join(" · "))));
         var links = el("div", "author__links");
@@ -469,4 +568,14 @@
     try { document.execCommand("copy"); cb(); } catch (e) {}
     document.body.removeChild(ta);
   }
+  /* ---------- force external links to open in a new tab ---------- */
+  safe(function () {
+    $all("a[href]").forEach(function (a) {
+      var href = a.getAttribute("href") || "";
+      if (/^https?:\/\//i.test(href)) {
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+      }
+    });
+  });
 })();

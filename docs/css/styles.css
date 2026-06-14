@@ -396,7 +396,7 @@ section[id] {
 }
 
 .btn--primary:hover {
-    background: var(--accent);
+    background: var(--primary-dark);
     color: #fff;
     box-shadow: var(--shadow-md);
 }
@@ -417,7 +417,8 @@ section[id] {
 .hero {
     position: relative;
     isolation: isolate;
-    overflow: hidden;
+    overflow: visible; /* was hidden — allow author popovers to extend past the hero */
+    z-index: 5;        /* and paint above the following sections (e.g. Abstract) */
     padding: clamp(3rem, 6vw, 4.6rem) 0 clamp(2.4rem, 5vw, 3.4rem);
     background: transparent;
 }
@@ -500,7 +501,7 @@ section[id] {
     line-height: 1.12;
     letter-spacing: -.005em;
     margin-top: 1.3rem;
-    max-width: 20ch;
+    max-width: 24ch;
     color: #333;
 }
 
@@ -539,6 +540,111 @@ section[id] {
 .hero__authors sup {
     color: var(--ink-faint);
     font-weight: 400;
+}
+
+/* ---- author byline popovers (Nature-style) ---- */
+.byline-author {
+    position: relative;
+    display: inline-block;
+}
+
+.byline-author__name {
+    font: inherit;
+    color: var(--ink);
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line);
+    transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+
+.byline-author__name:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.byline-author.is-open .byline-author__name {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.author-pop {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    z-index: 60;
+    width: max-content;
+    max-width: min(420px, 86vw);
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    padding: 1.1rem 1.2rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.55;
+    cursor: default;
+}
+
+/* pointer arrow (kept under the name via --arrow-left set in JS) */
+.author-pop::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: var(--arrow-left, 22px);
+    width: 12px;
+    height: 12px;
+    background: var(--paper-card);
+    border-left: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    transform: rotate(45deg);
+}
+
+.author-pop__close {
+    position: absolute;
+    top: .5rem;
+    right: .6rem;
+    background: none;
+    border: 0;
+    font-size: 1.3rem;
+    line-height: 1;
+    color: var(--ink-faint);
+    cursor: pointer;
+    padding: .1rem .3rem;
+}
+
+.author-pop__close:hover { color: var(--ink); }
+
+.author-pop__name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: .6rem;
+    padding-right: 1.4rem;
+}
+
+.author-pop__aff {
+    font-size: .92rem;
+    color: var(--ink-soft);
+}
+
+.author-pop__aff + .author-pop__aff { margin-top: .5rem; }
+
+.author-pop__links,
+.author-pop__search {
+    margin-top: .8rem;
+    padding-top: .8rem;
+    border-top: 1px solid var(--line-soft);
+    font-size: .9rem;
+    color: var(--ink-soft);
+}
+
+.author-pop__links a,
+.author-pop__search a {
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .hero__cta {
@@ -781,8 +887,8 @@ section[id] {
 
 .cite__bibtex code {
     font-family: var(--font-mono);
-    font-size: .8rem;
-    line-height: 1.65;
+    font-size: .9rem;
+    line-height: 1.5;
     color: #d7e6e2;
     white-space: pre;
 }
@@ -977,6 +1083,14 @@ section[id] {
     color: #333;
 }
 
+.author__name sup {
+    color: var(--secondary);
+    font-size: .62em;
+    font-weight: 600;
+    margin-left: .12em;
+    vertical-align: super;
+}
+
 .author__aff {
     color: var(--ink-soft);
     font-size: .9rem;
@@ -1035,7 +1149,7 @@ section[id] {
 .logos__slot {
     width: 130px;
     height: 56px;
-    border: 1px dashed var(--line);
+    border: 1px solid var(--line);
     border-radius: var(--radius-sm);
     display: grid;
     place-items: center;
