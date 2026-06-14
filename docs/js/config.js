@@ -47,9 +47,9 @@ const CONFIG = {
   authors: [
     { name: "Huyen N. Nguyen",   aff: [1],    website: "https://huyennguyen.com/", scholar: "https://scholar.google.com/citations?user=tsrO-ZgAAAAJ&hl=en", orcid: "https://orcid.org/0000-0001-6554-2327" },
     { name: "Sehi L'Yi",   aff: [1],    website: "https://sehilyi.com/", scholar: "", orcid: "" },
-    { name: "Thomas C. Smits", aff: [1, 2], website: "", scholar: "", orcid: "" },
-    { name: "Shanghua Gao", aff: [1],},
-    { name: "Marinka Zitnik", aff: [1],},
+    { name: "Thomas C. Smits", aff: [1, 2], website: "https://thomcsmits.github.io/", scholar: "", orcid: "" },
+    { name: "Shanghua Gao", aff: [1], website: "https://shgao.site/"},
+    { name: "Marinka Zitnik", aff: [1], website: "https://dbmi.hms.harvard.edu/people/marinka-zitnik"},
     { name: "Nils Gehlenborg", aff: [1], website: "https://hidivelab.org/"},
 
   ],
