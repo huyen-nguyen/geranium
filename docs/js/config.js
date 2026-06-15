@@ -50,7 +50,7 @@ const CONFIG = {
     { name: "Thomas C. Smits", aff: [1, 2], website: "https://thomcsmits.github.io/", scholar: "", orcid: "" },
     { name: "Shanghua Gao", aff: [1], website: "https://shgao.site/"},
     { name: "Marinka Zitnik", aff: [1], website: "https://dbmi.hms.harvard.edu/people/marinka-zitnik"},
-    { name: "Nils Gehlenborg", aff: [1], website: "https://hidivelab.org/"},
+    { name: "Nils Gehlenborg", aff: [1], website: "https://hidivelab.org/team/members/nils-gehlenborg/", scholar: "https://scholar.google.com/citations?user=YEcBVFAAAAAJ&hl=en", orcid: "https://orcid.org/0000-0003-0327-8297",}
 
   ],
   affiliations: [
@@ -60,16 +60,14 @@ const CONFIG = {
 
   /* ---------- 3. LINKS  (leave "" to hide the button) --------- */
   links: {
-    // The main preprint link used by the "Download preprint" buttons AND, by
-    // default, by the PDF Preprint viewer below. It can be:
-    //   • an arxiv link   -> "https://arxiv.org/pdf/2407.20571"  (embeds natively)
-    //   • an OSF link     -> "https://osf.io/preprints/osf/zatw9_v7"  (see note in §10)
-    //   • a local file    -> "assets/preprint.pdf"
     pdf:        "https://osf.io/preprints/osf/zatw9_v7",
     code:       "https://github.com/gosling-lang/geranium",   // GitHub repository
     pubmed:     "https://pubmed.ncbi.nlm.nih.gov/41973568/",   // PubMed entry
     ieeexplore: "https://ieeexplore.ieee.org/document/11480764",   // IEEE Xplore publication page
-    ieeevis:    "https://ieeexplore.ieee.org/document/11480764",   // IEEE VIS 2026 presentation details
+    ieeevis:    "",   // IEEE VIS 2026 presentation details
+    ismb: "http://biovis.net/2025/program_ismb/#:~:text=A%20Multimodal%20Search%20and%20Authoring%20System%20for%20Genomics%20Data%20Visualizations",
+    supplement: "https://osf.io/f4y5a",
+    video: "https://www.youtube.com/watch?v=h_Qm7L_C4CA",
 
     // OPTIONAL override for ONLY the embedded viewer (the download buttons still
     // use `pdf` above). Set this to a local copy when the remote host won't embed
@@ -78,15 +76,9 @@ const CONFIG = {
   },
 
   /* ---------- 3b. CUSTOM CHIPS  (extra quick-link buttons) ---- */
-  // Add your own chips to the quick-links row (between the built-in links and
-  // the "Cite" button). Each item: { icon, label, href }.
-  //   icon  – an icon name from js/icons.js (e.g. "youtube", "video", "website",
-  //           "blog", "dataset", "colab", "huggingface", "x", "email", "star"),
-  //           OR raw inline SVG markup (anything starting with "<svg ...>"),
-  //           OR "" for no icon.
-  // Remove the examples or set the list to []  to show no custom chips.
   customChips: [
-    { icon: "youtube", label: "Video", href: "https://www.youtube.com/watch?v=XXYk3Xz73Dk" },
+    // { icon: "slides", label: "ISMB BioVis", href: "http://biovis.net/2025/program_ismb/#:~:text=A%20Multimodal%20Search%20and%20Authoring%20System%20for%20Genomics%20Data%20Visualizations" },
+    // { icon: "youtube", label: "Video", href: "https://www.youtube.com/watch?v=XXYk3Xz73Dk" },
     // { icon: "website", label: "Project page", href: "https://your-lab.org/project" },
     // List of icons: https://huyen-nguyen.github.io/iframe/icons
     // No matching icon in icons.js? Paste raw SVG instead:
@@ -97,7 +89,7 @@ const CONFIG = {
   abstract: [
     "Effective visualization is essential for interpreting genomics data, yet researchers often face challenges in finding relevant, reusable examples. Existing tools offer limited support for searching the vast landscape of genomics visualizations, making the process of authoring new visualizations time-consuming and inefficient. To address this gap, we introduce Geranium, a data visualization retrieval system for searching and authoring genomics visualizations.",
 
-    "Geranium supports multimodal retrieval, enabling users to query with images, text, or grammar-based specifications. Retrieved examples serve as scaffolds for authoring, providing templates that researchers can adapt with their own data, thereby streamlining the mechanics of visualization construction. Geranium integrates three embedding methods to combine specialized and general knowledge: grammar-based embeddings tailored to genomics visualizations, multimodal embeddings from a biomedical vision-language foundation model, and text embeddings from a fine-tuned large language model. For each visualization, we construct a multimodal representation that includes a Gosling specification, a pixel-based rendering, and natural language descriptions.",
+    "Geranium supports multimodal retrieval, enabling users to query with images, text, or grammar-based specifications. Retrieved examples serve as **scaffolds for authoring**, providing templates that researchers can adapt with their own data, thereby streamlining the mechanics of visualization construction. Geranium integrates three embedding methods to combine specialized and general knowledge: grammar-based embeddings tailored to genomics visualizations, multimodal embeddings from a biomedical vision-language foundation model, and text embeddings from a fine-tuned large language model. For each visualization, we construct a multimodal representation that includes a Gosling specification, a pixel-based rendering, and natural language descriptions.",
 
     "We evaluate embedding strategies to maximize top-k retrieval accuracy and conduct user studies with domain collaborators to gather feedback on usability. Our collection comprises 3,200 visualizations across 50 categories, ranging from single-view to coordinated multi-view designs and supporting applications from single-cell epigenomics to structural variation analysis."],
 
@@ -123,6 +115,10 @@ const CONFIG = {
     { title: "Scaffold-driven authoring", text: "Retrieved visualizations serve as adaptable code templates, enabling users to plug in their own data and bypass building complex charts from scratch." },
     { title: "Validated with domain experts", text: "Combines specialized grammar and vision-language embeddings for accurate retrieval, validated through hands-on user studies with genomics experts." }
   ],
+
+  aboutName:
+      "Geranium stands for ***Ge**nomics Visualization **R**etrieval for **A**uthori**n**g w**i**th M**u**lti**m**odality*. The Geranium logo has a pink geranium flower beside a magnifying glass, with the lens looks into a [linear genomic view](https://gosling.js.org/?example=LINKING) with stacked chromosome tracks.",
+
 
   /* ---------- 6b. TEASER FIGURE  (shown under Highlights) ----- */
   // A single overview / method figure. Drop the image in assets/.

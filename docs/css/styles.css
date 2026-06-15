@@ -1395,3 +1395,47 @@ section[id] {
 .teaser__caption:empty {
     display: none;
 }
+/* Nav logo grows on hover (3x) */
+.nav__brand .brand-logo {
+    transition: transform .5s var(--ease);
+    transform-origin: right center; /* anchor left so it grows into the page */
+    position: relative;
+    z-index: 20;                   /* float above neighbouring nav items */
+    will-change: transform;
+}
+
+.nav__brand:hover .brand-logo,
+.nav__brand:focus-visible .brand-logo {
+    transform: scale(1.5);
+}
+
+/* Keep inline links inside the footer tagline inline (override .footer__col a) */
+.footer__tag a {
+    display: inline;
+    padding: 0;
+}
+
+/* Name-origin note at the end of the Highlights section */
+.highlights__note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.1rem;
+    margin-top: 1.6rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line-soft);
+    max-width: 72ch;
+}
+
+.highlights__note-logo {
+    flex: none;
+    width: 80px;
+    height: auto;
+    margin-top: .1rem;
+}
+
+.highlights__note-text {
+    margin: 0;
+    font-size: .95rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+}
