@@ -50,7 +50,7 @@ const CONFIG = {
     { name: "Thomas C. Smits", aff: [1, 2], website: "https://thomcsmits.github.io/", scholar: "", orcid: "" },
     { name: "Shanghua Gao", aff: [1], website: "https://shgao.site/"},
     { name: "Marinka Zitnik", aff: [1], website: "https://dbmi.hms.harvard.edu/people/marinka-zitnik"},
-    { name: "Nils Gehlenborg", aff: [1], website: "https://hidivelab.org/"},
+    { name: "Nils Gehlenborg", aff: [1], website: "https://hidivelab.org/team/members/nils-gehlenborg/", scholar: "https://scholar.google.com/citations?user=YEcBVFAAAAAJ&hl=en", orcid: "https://orcid.org/0000-0003-0327-8297",}
 
   ],
   affiliations: [
