@@ -54,7 +54,7 @@ const CONFIG = {
 
   ],
   affiliations: [
-    "Dept. of Biomedical Informatics, Harvard Medical School, Harvard University",   // 1
+    "Harvard Medical School, Harvard University",   // 1
     "Radboud University Medical Center in Nijmegen, the Netherlands",  // 2
   ],
 
