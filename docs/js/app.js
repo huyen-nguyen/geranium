@@ -83,9 +83,9 @@
   safe(function () {
     setText("[data-brand]", C.brand);
     setText("[data-badge]", C.badge);
-    setText("[data-title]", C.title);
+    $all("[data-title]").forEach(function (n) { n.innerHTML = C.title; });
     var em = $("[data-title-em]");
-    if (em) { if (has(C.titleEm)) { em.textContent = C.titleEm; } else { em.remove(); } }
+    if (em) { if (has(C.titleEm)) { em.innerHTML = C.titleEm; } else { em.remove(); } }
     $all("[data-tagline]").forEach(function (n) { n.innerHTML = inlineMd(C.tagline); });
     $all("[data-tagline-short]").forEach(function (n) { n.innerHTML = inlineMd(C.tagline); });
 
@@ -234,13 +234,14 @@
 
     var defs = [
       { icon: "dataset",    label: "Data",          href: L.data },
-      { icon: "demo",    label: "Demo",          href: demoHref },
+      // { icon: "demo",    label: "Demo",          href: demoHref },
       { icon: "pdf",   label: "IEEE Xplore",   href: L.ieeexplore },
       { icon: "arxiv", label: "PubMed",        href: L.pubmed },
+      { icon: "arxiv", label: "PubMed Central",        href: L.pubmedCentral },
       { icon: "slides",  label: "IEEE VIS", href: L.ieeevis },
       { icon: "slides",  label: "ISMB BioVis",   href: L.ismb },
       { icon: "results", label: "Supplement",    href: L.supplement },
-      { icon: "video", label: "Video",         href: L.video,}
+      { icon: "video", label: "Demo Video",         href: L.video,}
     ];
 
     // User-defined chips from config (e.g. a YouTube link). Inserted before the
@@ -378,7 +379,16 @@
     var hasVideo = frame && has(d.youtubeId);
     var hasGifs = gbox && gbox.children.length;
     if (section && !hasVideo && !hasGifs) section.hidden = true;
+
+    var hasDemo = has(d.youtubeId) || ((d.gifs || []).length > 0);
+    if (hasDemo) return;
+    // Remove any nav/menu link pointing at #demo (desktop nav + mobile menu).
+    $all('.nav__links a[href="#demo"], #mobileMenu a[href="#demo"]').forEach(function (a) {
+      var li = a.closest("li");
+      (li || a).remove();
+    });
   });
+
 
   /* ---------- PDF preprint viewer ---------- */
   safe(function () {
@@ -413,13 +423,6 @@
     if (wrap) wrap.hidden = false;
   });
 
-  // Turn a user-supplied PDF / landing-page URL into something embeddable.
-  //   • arxiv abs|pdf links        -> direct https://arxiv.org/pdf/<id>  (frames natively)
-  //   • OSF preprint/landing links -> Google Docs Viewer wrapping the OSF /download URL
-  //       (OSF forces a file download and blocks framing, so a bare iframe shows
-  //        nothing; the Docs Viewer renders it server-side in a frame-friendly page)
-  //   • local files / direct .pdf  -> used as-is (frames natively)
-  // engine: "auto" (default) | "direct" (always native iframe) | "google" (always Docs Viewer)
   function resolvePreprint(url, engine) {
     var u = String(url).trim();
 
@@ -494,9 +497,12 @@
   /* ---------- footer ---------- */
   safe(function () {
     var L = C.links || {};
+    var d = C.demo || {};
+    var hasDemo = has(d.youtubeId) || ((d.gifs || []).length > 0);
+    var demoHref = hasDemo ? "#demo" : "";
     var fl = $("#footerLinks");
     if (fl) {
-      [["Preprint PDF", L.pdf], ["Source code", L.code], ["Demo video", "#demo"],
+      [["Preprint PDF", L.pdf], ["Source code", L.code], ["Supplement", L.supplement], ["Demo video", demoHref],
         ["PubMed", L.pubmed], ["IEEE Xplore", L.ieeexplore]].forEach(function (pair) {
         if (!has(pair[1])) return;
         var a = el("a", null, pair[0]); a.href = pair[1]; fl.appendChild(a);
@@ -506,7 +512,9 @@
     if (fa && Array.isArray(C.authors)) {
       C.authors.forEach(function (au) {
         var a = el("a", null, escapeHtml(au.name));
-        a.href = has(au.website) ? au.website : (has(au.scholar) ? au.scholar : "#");
+        // website → ORCID → the Authors section on this page
+        a.href = has(au.website) ? au.website
+            : (has(au.orcid) ? au.orcid : "#authors");
         fa.appendChild(a);
       });
     }

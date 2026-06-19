@@ -63,11 +63,12 @@ const CONFIG = {
     pdf:        "https://osf.io/preprints/osf/zatw9_v7",
     code:       "https://github.com/gosling-lang/geranium",   // GitHub repository
     pubmed:     "https://pubmed.ncbi.nlm.nih.gov/41973568/",   // PubMed entry
+    pubmedCentral:     "https://pmc.ncbi.nlm.nih.gov/articles/PMC13275142/",   // PubMed entry
     ieeexplore: "https://ieeexplore.ieee.org/document/11480764",   // IEEE Xplore publication page
     ieeevis:    "",   // IEEE VIS 2026 presentation details
     ismb: "http://biovis.net/2025/program_ismb/#:~:text=A%20Multimodal%20Search%20and%20Authoring%20System%20for%20Genomics%20Data%20Visualizations",
     supplement: "https://osf.io/f4y5a",
-    video: "https://www.youtube.com/watch?v=h_Qm7L_C4CA",
+    video: "https://www.youtube.com/watch?v=XXYk3Xz73Dk",
 
     // OPTIONAL override for ONLY the embedded viewer (the download buttons still
     // use `pdf` above). Set this to a local copy when the remote host won't embed
