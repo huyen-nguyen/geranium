@@ -512,6 +512,9 @@ section[id] {
     font-weight: 700;
 }
 
+.hero__title .thin,
+.hero__title-em .thin { font-weight: 400; }
+
 .hero__desc {
     font-size: clamp(1.02rem, 1.6vw, 1.18rem);
     color: var(--ink-soft);
